@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://docs.evolynt.com/schemas/offer.json",
+  "title": "Evolynt::Commerce::Offer",
+  "description": "JSON Schema for Evolynt::Commerce::Offer Blueprint resource",
+  "type": "object",
+  "properties": {
+    "Type": {
+      "type": "string",
+      "const": "Evolynt::Commerce::Offer"
+    },
+    "Properties": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Description": {
+          "type": "string"
+        },
+        "DefaultPortal": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "__type": {
+                  "type": "string",
+                  "const": "Ref"
+                },
+                "slug": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "__type",
+                "slug"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "OnboardingFlowSlug": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "__type": {
+                  "type": "string",
+                  "const": "Ref"
+                },
+                "slug": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "__type",
+                "slug"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "Items": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Product": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "__type": {
+                        "type": "string",
+                        "const": "Ref"
+                      },
+                      "slug": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "__type",
+                      "slug"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              }
+            },
+            "required": [
+              "Product"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "PricingPlans": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "__type": {
+                    "type": "string",
+                    "const": "Ref"
+                  },
+                  "slug": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "__type",
+                  "slug"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          }
+        }
+      },
+      "required": [
+        "Name",
+        "DefaultPortal",
+        "Items",
+        "PricingPlans"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "Type",
+    "Properties"
+  ],
+  "additionalProperties": false
+}

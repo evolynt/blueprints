@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://docs.evolynt.com/schemas/pricing-plan.json",
+  "title": "Evolynt::Commerce::PricingPlan",
+  "description": "JSON Schema for Evolynt::Commerce::PricingPlan Blueprint resource",
+  "type": "object",
+  "properties": {
+    "Type": {
+      "type": "string",
+      "const": "Evolynt::Commerce::PricingPlan"
+    },
+    "Properties": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Description": {
+          "type": "string"
+        },
+        "Amount": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "Currency": {
+          "default": "USD",
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        "BillingType": {
+          "type": "string",
+          "enum": [
+            "one_time",
+            "subscription",
+            "split_pay"
+          ]
+        },
+        "BillingInterval": {
+          "type": "string",
+          "enum": [
+            "daily",
+            "weekly",
+            "biweekly",
+            "monthly",
+            "yearly"
+          ]
+        },
+        "NumberOfPayments": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "Name",
+        "Amount",
+        "Currency",
+        "BillingType"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "Type",
+    "Properties"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://docs.evolynt.com/schemas/workflow.json",
+  "title": "Evolynt::Automation::Workflow",
+  "description": "JSON Schema for Evolynt::Automation::Workflow Blueprint resource",
+  "type": "object",
+  "properties": {
+    "Type": {
+      "type": "string",
+      "const": "Evolynt::Automation::Workflow"
+    },
+    "Properties": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Description": {
+          "type": "string"
+        },
+        "Triggers": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "EventType": {
+                "type": "string",
+                "enum": [
+                  "FormSubmitted",
+                  "PaymentSucceeded",
+                  "PaymentFailed",
+                  "PaymentPartiallyRefunded",
+                  "PaymentFullyRefunded",
+                  "OfferGranted",
+                  "OfferRevoked",
+                  "AppointmentConfirmed",
+                  "AgreementSigned"
+                ]
+              },
+              "FilterConfig": {
+                "$ref": "#/$defs/__schema0"
+              }
+            },
+            "required": [
+              "EventType"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "Steps": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/__schema1"
+          }
+        }
+      },
+      "required": [
+        "Name",
+        "Triggers",
+        "Steps"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "Type",
+    "Properties"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "__schema0": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "Field": {
+              "type": "string",
+              "minLength": 1
+            },
+            "Operator": {
+              "type": "string",
+              "enum": [
+                "EQUALS",
+                "NOT_EQUALS",
+                "CONTAINS",
+                "NOT_CONTAINS",
+                "GREATER_THAN",
+                "LESS_THAN",
+                "GREATER_THAN_OR_EQUALS",
+                "LESS_THAN_OR_EQUALS",
+                "INCLUDES",
+                "NOT_INCLUDES",
+                "IS_EMPTY",
+                "IS_NOT_EMPTY"
+              ]
+            },
+            "Value": {}
+          },
+          "required": [
+            "Field",
+            "Operator"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "AND": {
+              "minItems": 1,
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/__schema0"
+              }
+            }
+          },
+          "required": [
+            "AND"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "OR": {
+              "minItems": 1,
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/__schema0"
+              }
+            }
+          },
+          "required": [
+            "OR"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "__schema1": {
+      "type": "object",
+      "properties": {
+        "Type": {
+          "type": "string",
+          "enum": [
+            "send_email",
+            "update_deal",
+            "enroll_sequence",
+            "add_tag",
+            "remove_tag",
+            "grant_offer",
+            "revoke_offer",
+            "move_deal_stage",
+            "wait_duration",
+            "wait_until_time",
+            "wait_relative_to_appointment",
+            "if_else"
+          ]
+        },
+        "Order": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "Config": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {}
+        },
+        "Then": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/__schema1"
+          }
+        },
+        "Else": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/__schema1"
+          }
+        }
+      },
+      "required": [
+        "Type",
+        "Order"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

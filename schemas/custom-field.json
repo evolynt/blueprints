@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://docs.evolynt.com/schemas/custom-field.json",
+  "title": "Evolynt::CRM::CustomField",
+  "description": "JSON Schema for Evolynt::CRM::CustomField Blueprint resource",
+  "type": "object",
+  "properties": {
+    "Type": {
+      "type": "string",
+      "const": "Evolynt::CRM::CustomField"
+    },
+    "Properties": {
+      "type": "object",
+      "properties": {
+        "Label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "FieldType": {
+          "type": "string",
+          "enum": [
+            "text",
+            "email",
+            "phone",
+            "number",
+            "textarea",
+            "select",
+            "multi_select",
+            "checkbox",
+            "date",
+            "url"
+          ]
+        },
+        "Options": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "DefaultValue": {
+          "type": "string"
+        },
+        "Placeholder": {
+          "type": "string"
+        },
+        "HelpText": {
+          "type": "string"
+        },
+        "DisplayOrder": {
+          "default": 0,
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "Label",
+        "FieldType",
+        "DisplayOrder"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "Type",
+    "Properties"
+  ],
+  "additionalProperties": false
+}

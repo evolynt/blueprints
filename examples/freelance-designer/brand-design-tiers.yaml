@@ -1,0 +1,1185 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFERS
+  # ============================================
+  bdt-logo-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Logo Design Package"
+      Description: "Professional logo with variations and basic guidelines"
+      DefaultPortal: !Ref bdt-logo-portal
+      OnboardingFlowSlug: !Ref bdt-logo-onboarding
+      Items:
+        - Product: !Ref bdt-logo-product
+        - Product: !Ref bdt-logo-guidelines
+      PricingPlans:
+        - !Ref bdt-logo-pif
+        - !Ref bdt-logo-split
+
+  bdt-identity-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Brand Identity Package"
+      Description: "Complete visual identity with logo, colors, typography, and guidelines"
+      DefaultPortal: !Ref bdt-identity-portal
+      OnboardingFlowSlug: !Ref bdt-identity-onboarding
+      Items:
+        - Product: !Ref bdt-logo-product
+        - Product: !Ref bdt-identity-system
+        - Product: !Ref bdt-brand-guidelines
+      PricingPlans:
+        - !Ref bdt-identity-pif
+        - !Ref bdt-identity-split
+
+  bdt-suite-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Full Brand Suite"
+      Description: "Premium brand package with identity, stationery, templates, and collateral"
+      DefaultPortal: !Ref bdt-suite-portal
+      OnboardingFlowSlug: !Ref bdt-suite-onboarding
+      Items:
+        - Product: !Ref bdt-logo-product
+        - Product: !Ref bdt-identity-system
+        - Product: !Ref bdt-brand-guidelines
+        - Product: !Ref bdt-stationery
+        - Product: !Ref bdt-templates
+        - Product: !Ref bdt-collateral
+      PricingPlans:
+        - !Ref bdt-suite-pif
+        - !Ref bdt-suite-split
+
+  # ============================================
+  # 📦 PRODUCTS
+  # ============================================
+  bdt-logo-product:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Logo Design"
+      ProductType: page
+      Description: "Professional logo design"
+      Page:
+        Title: "Your Logo Design"
+        Content: |
+          ## Logo Design Deliverables
+          
+          Your logo design project includes:
+          
+          ---
+          
+          ## Concepts & Revisions
+          
+          - 3 unique logo concepts
+          - 3 rounds of revisions on selected concept
+          - Final approved logo
+          
+          ---
+          
+          ## Logo Variations
+          
+          - Primary logo (full color)
+          - Horizontal lockup
+          - Stacked/vertical lockup
+          - Icon/mark only
+          - Black version
+          - White/reversed version
+          
+          ---
+          
+          ## File Formats
+          
+          - AI (Adobe Illustrator source)
+          - EPS (vector)
+          - PDF (print-ready)
+          - SVG (web vector)
+          - PNG (transparent background)
+          - JPG (web use)
+
+  bdt-logo-guidelines:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Basic Logo Guidelines"
+      ProductType: page
+      Description: "Essential logo usage guidelines"
+      Page:
+        Title: "Logo Usage Guidelines"
+        Content: |
+          ## Basic Logo Guidelines
+          
+          This document covers essential logo usage rules.
+          
+          ---
+          
+          ## Included
+          
+          - Minimum size requirements
+          - Clear space rules
+          - Color specifications
+          - Basic do's and don'ts
+
+  bdt-identity-system:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Visual Identity System"
+      ProductType: page
+      Description: "Color palette and typography system"
+      Page:
+        Title: "Visual Identity System"
+        Content: |
+          ## Your Visual Identity
+          
+          Your complete visual identity system.
+          
+          ---
+          
+          ## Color Palette
+          
+          - Primary colors (2-3)
+          - Secondary colors (2-3)
+          - Neutral colors
+          - Color codes: HEX, RGB, CMYK, Pantone
+          
+          ---
+          
+          ## Typography
+          
+          - Primary typeface (headings)
+          - Secondary typeface (body)
+          - Font weights and sizes
+          - Hierarchy guidelines
+
+  bdt-brand-guidelines:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Brand Guidelines Document"
+      ProductType: page
+      Description: "Comprehensive brand guidelines"
+      Page:
+        Title: "Brand Guidelines"
+        Content: |
+          ## Comprehensive Brand Guidelines
+          
+          Your complete brand guidelines document (20+ pages).
+          
+          ---
+          
+          ## Included Sections
+          
+          - Brand story and positioning
+          - Logo usage and variations
+          - Color palette specifications
+          - Typography system
+          - Imagery style guidelines
+          - Application examples
+          - Do's and don'ts
+
+  bdt-stationery:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Stationery Design"
+      ProductType: page
+      Description: "Business stationery suite"
+      Page:
+        Title: "Stationery Suite"
+        Content: |
+          ## Business Stationery
+          
+          Your branded stationery designs.
+          
+          ---
+          
+          ## Included Items
+          
+          - Business card (front + back)
+          - Letterhead
+          - Envelope design
+          - Email signature
+          - Invoice template
+
+  bdt-templates:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Social Media Templates"
+      ProductType: page
+      Description: "Branded social media templates"
+      Page:
+        Title: "Social Media Templates"
+        Content: |
+          ## Social Media Templates
+          
+          Your branded social media assets.
+          
+          ---
+          
+          ## Included Templates
+          
+          **Instagram**
+          - 6 post templates
+          - 4 story templates
+          - Highlight covers
+          
+          **LinkedIn**
+          - Banner image
+          - Post templates
+          
+          **Facebook**
+          - Cover photo
+          - Post templates
+
+  bdt-collateral:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Brand Collateral"
+      ProductType: page
+      Description: "Additional brand materials"
+      Page:
+        Title: "Brand Collateral"
+        Content: |
+          ## Brand Collateral
+          
+          Extended brand materials for your business.
+          
+          ---
+          
+          ## Included Items
+          
+          - Presentation template (10 slides)
+          - Proposal template
+          - Flyer/one-pager design
+          - Icon set (10 custom icons)
+          - Pattern/texture library
+
+  # ============================================
+  # 💰 PRICING PLANS
+  # ============================================
+  bdt-logo-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Logo - Pay in Full"
+      Description: "One-time payment"
+      Amount: 150000
+      Currency: USD
+      BillingType: one_time
+
+  bdt-logo-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Logo - 2 Payments"
+      Description: "Split into 2 payments"
+      Amount: 159400
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 2
+
+  bdt-identity-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Identity - Pay in Full"
+      Description: "One-time payment"
+      Amount: 350000
+      Currency: USD
+      BillingType: one_time
+
+  bdt-identity-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Identity - 3 Payments"
+      Description: "Split into 3 payments"
+      Amount: 389700
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  bdt-suite-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Suite - Pay in Full"
+      Description: "One-time payment"
+      Amount: 750000
+      Currency: USD
+      BillingType: one_time
+
+  bdt-suite-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Suite - 4 Payments"
+      Description: "Split into 4 payments"
+      Amount: 829600
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 4
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  bdt-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Brand Design Services"
+      Description: "Inquiry funnel for tiered brand design"
+      Steps:
+        - Name: "Overview"
+          Slug: overview
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Professional Brand Design Services"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "From logo to complete brand suite - choose your level"
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "See Packages"
+                    Action: next_step
+        - Name: "Compare"
+          Slug: compare
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Choose Your Package"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      **LOGO DESIGN - $1,500** (4-5 weeks)
+                      - 3 logo concepts, 3 revision rounds
+                      - All logo variations and file formats
+                      - Basic usage guidelines
+                      
+                      *Best for: Businesses that need a professional logo*
+                      
+                      ---
+                      
+                      **BRAND IDENTITY - $3,500** (6-8 weeks)
+                      Everything in Logo Design, PLUS:
+                      - Full color palette with specifications
+                      - Typography system (2 fonts)
+                      - Comprehensive brand guidelines (20+ pages)
+                      
+                      *Best for: Businesses ready for a cohesive visual identity*
+                      
+                      ---
+                      
+                      **FULL BRAND SUITE - $7,500** (10-12 weeks)
+                      Everything in Brand Identity, PLUS:
+                      - Business stationery (cards, letterhead, envelope)
+                      - Social media templates (20+ designs)
+                      - Brand collateral (presentation, flyer, icons)
+                      
+                      *Best for: Businesses wanting complete brand implementation*
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Start Your Project"
+                    Action: next_step
+        - Name: "Inquiry"
+          Slug: inquiry
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Tell Me About Your Project"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Fill out this form and I'll reach out to schedule a discovery call.
+            - Type: form
+              Order: 2
+              Elements:
+                - Type: form
+                  Order: 1
+                  Content:
+                    FormSlug: !Ref bdt-inquiry-form
+        - Name: "Book"
+          Slug: book
+          Order: 4
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Book Your Discovery Call"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Let's discuss your project and find the right package for your needs.
+                - Type: booking_link
+                  Order: 3
+                  Content:
+                    BookingLinkSlug: !Ref bdt-discovery-call
+        - Name: "Confirmed"
+          Slug: confirmed
+          Order: 5
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're Booked!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Check your email for the calendar invite. Looking forward to discussing your brand!
+
+  # ============================================
+  # 📋 FORMS
+  # ============================================
+  bdt-inquiry-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Brand Design Inquiry"
+      Description: "Initial inquiry for brand design"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@company.com"
+        - Type: custom
+          CustomFieldSlug: !Ref bdt-cf-business-name
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref bdt-cf-tier-interest
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref bdt-cf-timeline
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref bdt-cf-about
+          Required: true
+      SubmitButton:
+        Text: "Submit Inquiry"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+
+  bdt-discovery-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Brand Discovery"
+      Description: "Brand discovery questionnaire"
+      Fields:
+        - Type: custom
+          CustomFieldSlug: !Ref bdt-cf-business-description
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref bdt-cf-target-audience
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref bdt-cf-personality
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref bdt-cf-inspiration
+          Required: false
+      SubmitButton:
+        Text: "Submit"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 600
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  bdt-cf-business-name:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Business name"
+      FieldType: text
+      Placeholder: "Your company name"
+      HelpText: "The name for your brand"
+
+  bdt-cf-tier-interest:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Which package interests you?"
+      FieldType: select
+      Options:
+        - "Logo Design ($1,500)"
+        - "Brand Identity ($3,500)"
+        - "Full Brand Suite ($7,500)"
+        - "Not sure - help me decide"
+      HelpText: "We can discuss on our call"
+
+  bdt-cf-timeline:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Timeline"
+      FieldType: select
+      Options:
+        - "ASAP"
+        - "Within 1-2 months"
+        - "Within 3-4 months"
+        - "Flexible"
+      HelpText: "When do you need this completed?"
+
+  bdt-cf-about:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Tell me about your project"
+      FieldType: textarea
+      Placeholder: "What do you need? Any specific goals?"
+      HelpText: "Brief overview of your project"
+
+  bdt-cf-business-description:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "About your business"
+      FieldType: textarea
+      Placeholder: "What does your business do?"
+      HelpText: "Help me understand your business"
+
+  bdt-cf-target-audience:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Target audience"
+      FieldType: textarea
+      Placeholder: "Who are your ideal customers?"
+      HelpText: "Demographics and psychographics"
+
+  bdt-cf-personality:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Brand personality"
+      FieldType: textarea
+      Placeholder: "How should your brand feel?"
+      HelpText: "3-5 words that describe your brand"
+
+  bdt-cf-inspiration:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Inspiration"
+      FieldType: textarea
+      Placeholder: "Brands or designs you admire"
+      HelpText: "Links or descriptions welcome"
+
+  # ============================================
+  # 📅 BOOKING LINKS
+  # ============================================
+  bdt-discovery-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Brand Design Discovery Call"
+      OwnerUserEmail: "hello@sarahdesigns.co"
+      Description: "30-minute discovery call"
+      DurationMinutes: 30
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 14
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  bdt-strategy-session:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Brand Strategy Session"
+      OwnerUserEmail: "hello@sarahdesigns.co"
+      Description: "60-minute strategy session"
+      DurationMinutes: 60
+      BufferAfterMinutes: 30
+      MinNoticeHours: 48
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTALS
+  # ============================================
+  bdt-logo-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Logo Design Portal"
+      Description: "Portal for Logo tier clients"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  bdt-identity-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Brand Identity Portal"
+      Description: "Portal for Identity tier clients"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  bdt-suite-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Brand Suite Portal"
+      Description: "Portal for Suite tier clients"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 📜 AGREEMENTS
+  # ============================================
+  bdt-logo-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Logo Design Agreement"
+      Title: "LOGO DESIGN AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Agreement is between Sarah Designs LLC ("Designer") and the undersigned ("Client").
+        
+        ## LOGO DESIGN PACKAGE INCLUDES
+        
+        - 3 unique logo concepts
+        - 3 rounds of revisions
+        - Logo variations (primary, horizontal, stacked, icon)
+        - Color versions (full color, black, white)
+        - All file formats (AI, EPS, PDF, SVG, PNG, JPG)
+        - Basic usage guidelines
+        
+        ## TERMS
+        
+        - Timeline: 4-5 weeks
+        - Payment: $1,500 (PIF or 2 payments)
+        - Additional revisions: $150/hour
+        - Full copyright transfers on final payment
+        
+        By signing, Client agrees to these terms.
+
+  bdt-identity-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Brand Identity Agreement"
+      Title: "BRAND IDENTITY AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Agreement is between Sarah Designs LLC ("Designer") and the undersigned ("Client").
+        
+        ## BRAND IDENTITY PACKAGE INCLUDES
+        
+        Everything in Logo Design, PLUS:
+        - 60-minute brand strategy session
+        - Full color palette with specifications
+        - Typography system (2 font families)
+        - Comprehensive brand guidelines (20+ pages)
+        
+        ## TERMS
+        
+        - Timeline: 6-8 weeks
+        - Payment: $3,500 (PIF or 3 payments)
+        - Additional revisions: $150/hour
+        - Full copyright transfers on final payment
+        
+        By signing, Client agrees to these terms.
+
+  bdt-suite-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Brand Suite Agreement"
+      Title: "FULL BRAND SUITE AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Agreement is between Sarah Designs LLC ("Designer") and the undersigned ("Client").
+        
+        ## FULL BRAND SUITE INCLUDES
+        
+        Everything in Brand Identity, PLUS:
+        - Business stationery (card, letterhead, envelope, email signature)
+        - Social media templates (20+ designs)
+        - Brand collateral (presentation, proposal, flyer, icons)
+        
+        ## TERMS
+        
+        - Timeline: 10-12 weeks
+        - Payment: $7,500 (PIF or 4 payments)
+        - Additional revisions: $150/hour
+        - Full copyright transfers on final payment
+        
+        By signing, Client agrees to these terms.
+
+  # ============================================
+  # 🎓 ONBOARDING FLOWS
+  # ============================================
+  bdt-logo-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Logo Onboarding"
+      Description: "Onboarding for Logo tier"
+      Steps:
+        - Name: "Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to Your Logo Project!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Please review and sign the agreement."
+                - Type: agreement
+                  Order: 3
+                  Content:
+                    AgreementSlug: !Ref bdt-logo-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Discovery"
+          Slug: discovery
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Brand Discovery"
+                - Type: form
+                  Order: 2
+                  Content:
+                    FormSlug: !Ref bdt-discovery-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Ready"
+          Slug: ready
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "I'll begin working on your logo concepts. Check your email for updates!"
+
+  bdt-identity-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Identity Onboarding"
+      Description: "Onboarding for Identity tier"
+      Steps:
+        - Name: "Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to Your Brand Identity Project!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Please review and sign the agreement."
+                - Type: agreement
+                  Order: 3
+                  Content:
+                    AgreementSlug: !Ref bdt-identity-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Discovery"
+          Slug: discovery
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Brand Discovery"
+                - Type: form
+                  Order: 2
+                  Content:
+                    FormSlug: !Ref bdt-discovery-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Ready"
+          Slug: ready
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "I'll schedule your brand strategy session. Check your email!"
+
+  bdt-suite-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Suite Onboarding"
+      Description: "Onboarding for Suite tier"
+      Steps:
+        - Name: "Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to Your Full Brand Suite!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Please review and sign the agreement."
+                - Type: agreement
+                  Order: 3
+                  Content:
+                    AgreementSlug: !Ref bdt-suite-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Discovery"
+          Slug: discovery
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Brand Discovery"
+                - Type: form
+                  Order: 2
+                  Content:
+                    FormSlug: !Ref bdt-discovery-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Ready"
+          Slug: ready
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "I'll schedule your brand strategy session. This is going to be great!"
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  bdt-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Brand Design Leads"
+      Description: "Track brand design inquiries"
+      Stages:
+        - Name: "Inquiry"
+          Slug: inquiry
+          Order: 1
+          Description: "Submitted inquiry"
+        - Name: "Call Scheduled"
+          Slug: scheduled
+          Order: 2
+          Description: "Discovery call booked"
+        - Name: "Call Complete"
+          Slug: complete
+          Order: 3
+          Description: "Call finished"
+        - Name: "Won"
+          Slug: won
+          Order: 4
+          Description: "Signed and paid"
+        - Name: "Lost"
+          Slug: lost
+          Order: 5
+          Description: "Did not proceed"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  bdt-tag-inquiry:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Brand Design Inquiry"
+      Description: "Submitted inquiry"
+
+  bdt-tag-logo:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Logo Client"
+      Description: "Purchased Logo package"
+
+  bdt-tag-identity:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Identity Client"
+      Description: "Purchased Identity package"
+
+  bdt-tag-suite:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Suite Client"
+      Description: "Purchased Suite package"
+
+  bdt-tag-active:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Active Project"
+      Description: "Project in progress"
+
+  bdt-tag-complete:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Project Complete"
+      Description: "Project finished"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  bdt-workflow-inquiry:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Brand Design Inquiry"
+      Description: "Triggers on inquiry"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref bdt-inquiry-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref bdt-tag-inquiry
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref bdt-seq-inquiry
+
+  bdt-workflow-logo:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Logo Purchase"
+      Description: "Triggers on Logo purchase"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref bdt-logo-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref bdt-tag-logo
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref bdt-tag-active
+
+  bdt-workflow-identity:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Identity Purchase"
+      Description: "Triggers on Identity purchase"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref bdt-identity-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref bdt-tag-identity
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref bdt-tag-active
+
+  bdt-workflow-suite:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Suite Purchase"
+      Description: "Triggers on Suite purchase"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref bdt-suite-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref bdt-tag-suite
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref bdt-tag-active
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCES
+  # ============================================
+  bdt-seq-inquiry:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Brand Design Inquiry"
+      Description: "Follow-up for inquiries"
+      Steps:
+        - TemplateSlug: !Ref bdt-email-inquiry
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref bdt-email-reminder
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  bdt-email-inquiry:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Inquiry Received"
+      Subject: "Let's discuss your brand project!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Thanks for Reaching Out!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thanks for your interest in my brand design services! I'd love to learn more about your project.
+              
+              **Next step:** Book a free 30-minute discovery call.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Discovery Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Talk soon!
+              
+              Sarah
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  bdt-email-reminder:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Call Reminder"
+      Subject: "Still thinking about your brand?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Quick Reminder"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Just checking in - did you book your discovery call yet?
+              
+              I have limited spots available each month. Let's chat about your brand project!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book a Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Sarah
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"

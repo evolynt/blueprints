@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://docs.evolynt.com/schemas/onboarding-flow.json",
+  "title": "Evolynt::Portal::OnboardingFlow",
+  "description": "JSON Schema for Evolynt::Portal::OnboardingFlow Blueprint resource",
+  "type": "object",
+  "properties": {
+    "Type": {
+      "type": "string",
+      "const": "Evolynt::Portal::OnboardingFlow"
+    },
+    "Properties": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Description": {
+          "type": "string"
+        },
+        "Steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "Slug": {
+                "type": "string",
+                "minLength": 1
+              },
+              "Order": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 9007199254740991
+              },
+              "Sections": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Order": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 9007199254740991
+                    },
+                    "Settings": {
+                      "type": "object",
+                      "properties": {
+                        "BackgroundColor": {
+                          "type": "string"
+                        },
+                        "FullWidth": {
+                          "type": "boolean"
+                        },
+                        "Padding": {
+                          "type": "string"
+                        },
+                        "Columns": {
+                          "type": "integer",
+                          "minimum": 1,
+                          "maximum": 4
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "Elements": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Type": {
+                            "type": "string",
+                            "enum": [
+                              "headline",
+                              "subheadline",
+                              "text",
+                              "image",
+                              "video",
+                              "button",
+                              "spacer",
+                              "divider",
+                              "testimonial",
+                              "feature_card",
+                              "faq_item",
+                              "form",
+                              "checkout",
+                              "claim_offer",
+                              "booking_link",
+                              "agreement"
+                            ]
+                          },
+                          "Order": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 9007199254740991
+                          },
+                          "Content": {
+                            "type": "object",
+                            "propertyNames": {
+                              "type": "string"
+                            },
+                            "additionalProperties": {}
+                          },
+                          "Settings": {
+                            "type": "object",
+                            "properties": {
+                              "Alignment": {
+                                "type": "string",
+                                "enum": [
+                                  "left",
+                                  "center",
+                                  "right"
+                                ]
+                              },
+                              "FontSize": {
+                                "type": "string"
+                              },
+                              "FontWeight": {
+                                "type": "string"
+                              },
+                              "TextColor": {
+                                "type": "string"
+                              },
+                              "Margin": {
+                                "type": "string"
+                              }
+                            },
+                            "additionalProperties": false
+                          }
+                        },
+                        "required": [
+                          "Type",
+                          "Order"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "required": [
+                    "Order"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "Name",
+              "Slug",
+              "Order"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "Name"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "Type",
+    "Properties"
+  ],
+  "additionalProperties": false
+}

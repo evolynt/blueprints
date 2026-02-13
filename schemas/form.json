@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://docs.evolynt.com/schemas/form.json",
+  "title": "Evolynt::Funnel::Form",
+  "description": "JSON Schema for Evolynt::Funnel::Form Blueprint resource",
+  "type": "object",
+  "properties": {
+    "Type": {
+      "type": "string",
+      "const": "Evolynt::Funnel::Form"
+    },
+    "Properties": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Description": {
+          "type": "string"
+        },
+        "Fields": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "Type": {
+                    "type": "string",
+                    "const": "standard"
+                  },
+                  "FieldName": {
+                    "type": "string",
+                    "enum": [
+                      "email",
+                      "name",
+                      "phone"
+                    ]
+                  },
+                  "Required": {
+                    "default": false,
+                    "type": "boolean"
+                  },
+                  "LabelOverride": {
+                    "type": "string"
+                  },
+                  "Placeholder": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "Type",
+                  "FieldName",
+                  "Required"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "Type": {
+                    "type": "string",
+                    "const": "custom"
+                  },
+                  "CustomFieldSlug": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "__type": {
+                            "type": "string",
+                            "const": "Ref"
+                          },
+                          "slug": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "__type",
+                          "slug"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "Required": {
+                    "default": false,
+                    "type": "boolean"
+                  },
+                  "LabelOverride": {
+                    "type": "string"
+                  },
+                  "Placeholder": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "Type",
+                  "CustomFieldSlug",
+                  "Required"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "SubmitButton": {
+          "type": "object",
+          "properties": {
+            "Text": {
+              "default": "Submit",
+              "type": "string",
+              "minLength": 1
+            },
+            "BackgroundColor": {
+              "type": "string"
+            },
+            "TextColor": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "Text"
+          ],
+          "additionalProperties": false
+        },
+        "Settings": {
+          "type": "object",
+          "properties": {
+            "BackgroundColor": {
+              "type": "string"
+            },
+            "MaxWidth": {
+              "type": "integer",
+              "minimum": 200,
+              "maximum": 9007199254740991
+            },
+            "Padding": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "BorderRadius": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "Name",
+        "Fields",
+        "SubmitButton"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "Type",
+    "Properties"
+  ],
+  "additionalProperties": false
+}

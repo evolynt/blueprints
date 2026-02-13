@@ -1,0 +1,1091 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFER
+  # ============================================
+  ccm-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Creator Club Membership"
+      Description: "Monthly membership with access to templates, collaboration opportunities, weekly Q&A calls, and a network of serious creators"
+      DefaultPortal: !Ref ccm-portal
+      OnboardingFlowSlug: !Ref ccm-onboarding
+      Items:
+        - Product: !Ref ccm-community
+      PricingPlans:
+        - !Ref ccm-monthly
+
+  # ============================================
+  # 📦 PRODUCT
+  # ============================================
+  ccm-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Creator Club Community"
+      ProductType: community
+      Description: "Private community for serious content creators"
+      Community:
+        Name: "Creator Club"
+        Description: "Templates, collaborations, weekly Q&A, and networking with serious creators"
+        Spaces:
+          - Name: "Templates"
+            Slug: templates
+            Description: "Monthly template drops and creative resources"
+            Order: 1
+          - Name: "Collabs"
+            Slug: collabs
+            Description: "Find collaboration partners and cross-promotion opportunities"
+            Order: 2
+          - Name: "Q&A"
+            Slug: qa
+            Description: "Ask questions and get answers from experienced creators"
+            Order: 3
+          - Name: "Wins"
+            Slug: wins
+            Description: "Celebrate your milestones and successes"
+            Order: 4
+          - Name: "Resources"
+            Slug: resources
+            Description: "Tools, guides, and resources shared by the community"
+            Order: 5
+        Events:
+          - Title: "Weekly Creator Q&A Call"
+            Description: "Live Q&A session covering growth strategies, algorithm updates, and member questions"
+            StartAt: "2025-02-06T19:00:00Z"
+            EndAt: "2025-02-06T20:00:00Z"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/creator-club-qa"
+            HostUserEmail: "host@creatorclub.co"
+            RecurrenceRule:
+              Frequency: weekly
+              Interval: 1
+              DaysOfWeek: [4]
+              EndType: never
+
+  # ============================================
+  # 💰 PRICING PLAN
+  # ============================================
+  ccm-monthly:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Creator Club - Monthly"
+      Description: "Monthly membership to the Creator Club"
+      Amount: 9700
+      Currency: USD
+      BillingType: subscription
+      BillingInterval: monthly
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  ccm-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Creator Club Application"
+      Description: "Application funnel for the Creator Club membership"
+      Steps:
+        - Name: "Learn More"
+          Slug: interest
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Grow Faster with a Community of Serious Creators"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Join a private network of creators who share templates, collaborate on content, and help each other hit the algorithm"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=CCM_VSL_PLACEHOLDER"
+                    Provider: youtube
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Tired of growing alone?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You've been grinding. Uploading consistently. Trying every strategy you read about.
+                      
+                      But growth feels slow. The algorithm is unpredictable. And you're stuck in the "creator grind" with nobody to bounce ideas off.
+                      
+                      Meanwhile, you see other creators blowing up. Getting millions of views. Landing brand deals. And they all seem to know each other.
+                      
+                      What's their secret? They have a network.
+                      
+                      Not just followers - a real network of creators who share strategies, collaborate on content, and help each other win.
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "What if you had a team behind you?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Imagine getting a DM that a member wants to collab - and they have an audience that's perfect for cross-promotion.
+                      
+                      Or downloading this month's template pack and creating scroll-stopping content in half the time.
+                      
+                      Or hopping on a weekly call where experienced creators break down exactly what's working right now.
+                      
+                      That's what Creator Club provides: real templates, real connections, and real support from people who are actually growing.
+            - Type: content
+              Order: 4
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's what you get as a member"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      ✓ **Monthly Template Drops**
+                      Fresh thumbnails, titles, hooks, and content frameworks every month. Stop staring at a blank screen and start creating.
+                      
+                      ✓ **Collaboration Opportunities**
+                      Find collab partners, cross-promotion opportunities, and creators in complementary niches. Grow together instead of alone.
+                      
+                      ✓ **Weekly Live Q&A Calls**
+                      Every Thursday at 7pm ET, we hop on a live call to discuss strategies, algorithm updates, and answer your specific questions.
+                      
+                      ✓ **Creator Networking**
+                      Connect with YouTubers, podcasters, TikTokers, and Instagram creators. Find your people and build real relationships.
+                      
+                      ✓ **Resource Library**
+                      Access scripts, templates, checklists, and tools that members have battle-tested on their channels.
+            - Type: content
+              Order: 5
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Who this is for"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Creator Club is for serious creators who:
+                      
+                      ✓ Have an active channel or account (any size)
+                      ✓ Are posting content consistently
+                      ✓ Want to grow faster through collaboration
+                      ✓ Are willing to help other members succeed
+                      ✓ Are ready to invest in their creator journey
+                      
+                      **This is NOT for:**
+                      - People who just want to "learn about" content creation
+                      - Those who aren't actively creating
+                      - Anyone who wants everything handed to them
+                      
+                      We keep the community small and curated. Every member is vetted to ensure they bring value.
+            - Type: testimonials
+              Order: 6
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "Found a collab partner in my first week. Our video together got 500K views and I gained 12K subscribers. The membership paid for itself 100x over."
+                    Author: "Marcus T., Tech Reviewer (85K subs)"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "The monthly template drops alone are worth it. I used to spend 3 hours on thumbnails. Now I create scroll-stoppers in 20 minutes."
+                    Author: "Jasmine C., Lifestyle Creator (200K followers)"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 3
+                  Content:
+                    Quote: "As a small creator, this community gave me access to strategies that bigger creators use. My views tripled in 3 months."
+                    Author: "Derek L., Gaming Channel (25K subs)"
+                    Rating: 5
+            - Type: cta
+              Order: 7
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Ready to Grow Faster with a Community?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Apply now and we'll schedule a quick discovery call to see if you're a good fit for Creator Club."
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Apply for Membership"
+                    Action: next_step
+                  Settings:
+                    Alignment: center
+        - Name: "Apply"
+          Slug: apply
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Apply for Creator Club"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=CCM_APPLICATION_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      We keep the community small and curated to ensure every member gets value. Please answer a few questions so we can see if you're a good fit.
+                      
+                      **This takes about 3 minutes.**
+            - Type: form
+              Order: 2
+              Elements:
+                - Type: form
+                  Order: 1
+                  Content:
+                    FormSlug: !Ref ccm-application
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Book Your Call"
+          Slug: book
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Great! Let's Chat."
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=CCM_BOOKING_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Thanks for applying to Creator Club!
+                      
+                      **Next Step: Book Your Discovery Call**
+                      
+                      On this 30-minute call, we'll:
+                      
+                      ✓ Learn about your channel and content goals
+                      ✓ Discuss what you're looking for in a community
+                      ✓ Explain how the club works in detail
+                      ✓ Determine if you're a good fit for the network
+                      ✓ Answer any questions you have
+                      
+                      **Please come prepared to discuss:**
+                      - Your current content and channel stats
+                      - What's working (and what's not)
+                      - Your growth goals for the next year
+                      - What you can contribute to other members
+                - Type: booking_link
+                  Order: 4
+                  Content:
+                    BookingLinkSlug: !Ref ccm-discovery-call
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're Booked"
+          Slug: confirmed
+          Order: 4
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=CCM_CONFIRMATION_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Your discovery call is booked. Check your email for calendar details and a Zoom link.
+                      
+                      **Before our call, think about:**
+                      
+                      1. **Your recent content** - What's been performing well (or not)?
+                      2. **Your current challenges** - Where are you stuck?
+                      3. **Your goals** - What do you want to achieve in the next year?
+                      4. **Your value** - What can you bring to other members?
+                      
+                      We're selective about who we let in because the quality of the community depends on the quality of the members.
+                      
+                      **Questions before our call?** Reply to your confirmation email.
+                      
+                      Talk soon!
+
+  # ============================================
+  # 📋 FORMS
+  # ============================================
+  ccm-application:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Creator Club Application"
+      Description: "Qualifying application for club membership"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your full name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@example.com"
+        - Type: standard
+          FieldName: phone
+          Required: true
+          Placeholder: "(555) 123-4567"
+        - Type: custom
+          CustomFieldSlug: !Ref ccm-cf-channel-size
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref ccm-cf-niche
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref ccm-cf-content-type
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref ccm-cf-goals
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref ccm-cf-collab-interest
+          Required: true
+      SubmitButton:
+        Text: "Submit Application"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  ccm-onboarding-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Creator Club Member Profile"
+      Description: "Capture member profile information for community matching"
+      Fields:
+        - Type: custom
+          CustomFieldSlug: !Ref ccm-cf-niche
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref ccm-cf-content-type
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref ccm-cf-collab-interest
+          Required: false
+      SubmitButton:
+        Text: "Complete Profile"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  ccm-cf-channel-size:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your current audience size?"
+      FieldType: select
+      Options:
+        - "Just starting (under 1,000)"
+        - "1,000 - 10,000"
+        - "10,000 - 50,000"
+        - "50,000 - 100,000"
+        - "100,000+"
+      HelpText: "Combined across all platforms"
+
+  ccm-cf-niche:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What niche is your content in?"
+      FieldType: select
+      Options:
+        - "Tech/Reviews"
+        - "Gaming"
+        - "Lifestyle/Vlog"
+        - "Education/How-To"
+        - "Fitness/Health"
+        - "Business/Finance"
+        - "Entertainment/Comedy"
+        - "Beauty/Fashion"
+        - "Food/Cooking"
+        - "Travel"
+        - "Other"
+      HelpText: "Select the category that best describes your content"
+
+  ccm-cf-content-type:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What platforms do you create for?"
+      FieldType: multi_select
+      Options:
+        - "YouTube (long-form)"
+        - "YouTube Shorts"
+        - "TikTok"
+        - "Instagram Reels"
+        - "Instagram Feed"
+        - "Podcast"
+        - "Twitter/X"
+        - "LinkedIn"
+        - "Blog/Newsletter"
+      HelpText: "Select all that apply"
+
+  ccm-cf-goals:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What are your creator goals for the next 12 months?"
+      FieldType: textarea
+      Placeholder: "Tell us about your goals and what you want to achieve..."
+      HelpText: "Be specific about subscriber/follower goals, revenue, or content milestones"
+
+  ccm-cf-collab-interest:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What kind of collaborations interest you?"
+      FieldType: multi_select
+      Options:
+        - "Guest appearances (podcasts, videos)"
+        - "Co-created content"
+        - "Cross-promotion/shoutouts"
+        - "Joint live streams"
+        - "Group challenges/series"
+        - "Resource sharing"
+      HelpText: "Select all that apply"
+
+  # ============================================
+  # 📅 BOOKING LINKS
+  # ============================================
+  ccm-discovery-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Creator Club Discovery Call"
+      OwnerUserEmail: "host@creatorclub.co"
+      Description: "30-minute call to discuss your content and see if you're a fit for the club"
+      DurationMinutes: 30
+      BufferAfterMinutes: 10
+      MinNoticeHours: 24
+      MaxAdvanceDays: 14
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  ccm-weekly-qa:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Weekly Creator Q&A"
+      OwnerUserEmail: "host@creatorclub.co"
+      Description: "Weekly live Q&A session for club members"
+      DurationMinutes: 60
+      MinNoticeHours: 1
+      MaxAdvanceDays: 7
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  ccm-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Creator Club Portal"
+      Description: "Member portal for the Creator Club"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 📜 AGREEMENT
+  # ============================================
+  ccm-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Creator Club Agreement"
+      Title: "CREATOR CLUB MEMBERSHIP AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Membership Agreement ("Agreement") is entered into between Creator Club LLC ("Club") and the undersigned member ("Member").
+        
+        ## 1. COMMUNITY GUIDELINES
+        
+        By joining Creator Club, Member agrees to:
+        
+        - Treat all members with respect and professionalism
+        - Provide constructive feedback when reviewing others' content
+        - Not spam, self-promote excessively, or solicit members for unrelated products/services
+        - Maintain a positive and supportive attitude
+        - Report any harassment or inappropriate behavior to the Club
+        - Follow all applicable laws and platform terms of service
+        
+        Violation of these guidelines may result in immediate termination of membership without refund.
+        
+        ## 2. CONTENT SHARING RULES
+        
+        Member acknowledges and agrees that:
+        
+        - Content strategies, templates, and resources shared in the Club are for personal use only
+        - Member shall not share Club templates or resources publicly or with non-members
+        - Member shall not screenshot or share private conversations without permission
+        - Member may share their own experiences and learnings but not proprietary Club materials
+        - Member retains full ownership of their own content created using Club resources
+        
+        **CLUB MATERIALS ARE FOR MEMBER USE ONLY AND SHALL NOT BE REDISTRIBUTED.**
+        
+        ## 3. COLLABORATION TERMS
+        
+        When collaborating with other members, Member agrees to:
+        
+        - Communicate clearly about expectations, timelines, and deliverables
+        - Give proper credit to collaborators in published content
+        - Honor any revenue-sharing agreements made in writing
+        - Not disparage or speak negatively about collaborators publicly
+        - Resolve disputes professionally and, if needed, with Club mediation
+        
+        The Club is not responsible for disputes between members regarding collaborations.
+        
+        ## 4. INTELLECTUAL PROPERTY
+        
+        Member acknowledges and agrees that:
+        
+        - Member retains full ownership of all content they create
+        - The Club retains ownership of templates, frameworks, and resources provided
+        - Member grants the Club permission to use their testimonials and success stories (with approval)
+        - Member shall not copy or recreate Club proprietary systems for commercial resale
+        
+        **MEMBERS OWN THEIR CONTENT. THE CLUB OWNS ITS MATERIALS.**
+        
+        ## 5. CANCELLATION POLICY
+        
+        - Membership is billed monthly on the anniversary of sign-up
+        - Member may cancel at any time through their portal account settings
+        - Cancellation takes effect at the end of the current billing period
+        - No partial refunds are provided for unused portions of a billing period
+        - Member loses access to the community and resources upon cancellation
+        
+        ## 6. ACKNOWLEDGMENT
+        
+        By signing below, Member acknowledges that they have read, understood, and agree to all terms of this Agreement.
+        
+        Member represents that they are of legal age and have the authority to enter into this Agreement.
+        
+        ---
+        
+        **Member Signature:**
+
+  # ============================================
+  # 🎓 ONBOARDING FLOW
+  # ============================================
+  ccm-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Creator Club Onboarding"
+      Description: "Onboarding flow for new club members"
+      Steps:
+        - Name: "Sign Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to Creator Club!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Before you access the community, please review and sign our membership agreement.
+                      
+                      This agreement covers:
+                      - Community guidelines and conduct expectations
+                      - Content sharing rules
+                      - Collaboration terms
+                      - Intellectual property
+                      - Cancellation policy
+                      
+                      We take these seriously to protect all members and maintain a high-quality community.
+                - Type: agreement
+                  Order: 3
+                  Content:
+                    AgreementSlug: !Ref ccm-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Complete Profile"
+          Slug: profile
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Complete Your Creator Profile"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Help us and other members get to know you better. This information helps us match you with the right collaboration partners and resources.
+                - Type: form
+                  Order: 3
+                  Content:
+                    FormSlug: !Ref ccm-onboarding-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're In!"
+          Slug: complete
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Welcome to Creator Club! You now have full access to:
+                      
+                      ✓ **Templates** - Browse this month's template drops
+                      ✓ **Collabs** - Find collaboration partners in your niche
+                      ✓ **Q&A** - Ask questions and learn from experienced creators
+                      ✓ **Wins** - Share your milestones and celebrate with the community
+                      ✓ **Resources** - Access tools, guides, and member-shared resources
+                      ✓ **Weekly Calls** - Join our live Q&A every Thursday at 7pm ET
+                      
+                      **Your first steps:**
+                      
+                      1. Introduce yourself in the Collabs space
+                      2. Browse the Templates for this month's drops
+                      3. Add the weekly Q&A call to your calendar
+                      
+                      Welcome aboard!
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  ccm-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Creator Club Applications"
+      Description: "Track club applicants through the sales process"
+      Stages:
+        - Name: "Applied"
+          Slug: applied
+          Order: 1
+          Description: "Submitted application form"
+        - Name: "Call Scheduled"
+          Slug: call-scheduled
+          Order: 2
+          Description: "Discovery call booked"
+        - Name: "Call Complete"
+          Slug: call-complete
+          Order: 3
+          Description: "Discovery call finished"
+        - Name: "Won"
+          Slug: won
+          Order: 4
+          Description: "Joined the club"
+        - Name: "Lost"
+          Slug: lost
+          Order: 5
+          Description: "Did not proceed"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  ccm-tag-member:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Creator Club Member"
+      Description: "Active member of Creator Club"
+
+  ccm-tag-active:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Creator Club Active"
+      Description: "Member who is actively engaging in the community"
+
+  ccm-tag-engaged:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Creator Club Engaged"
+      Description: "Member who completed the onboarding flow"
+
+  ccm-tag-at-risk:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Creator Club At-Risk"
+      Description: "Member who may be at risk of cancellation"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  ccm-workflow-application:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Creator Club Application Submitted"
+      Description: "Triggers when someone submits the club application"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref ccm-application
+      Steps:
+        - Type: enroll_sequence
+          Order: 1
+          Config:
+            SequenceSlug: !Ref ccm-seq-applicant
+
+  ccm-workflow-subscription:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Creator Club Member Onboarding"
+      Description: "Triggers when someone is granted access to Creator Club"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref ccm-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref ccm-tag-member
+        - Type: send_email
+          Order: 2
+          Config:
+            TemplateSlug: !Ref ccm-email-welcome
+
+  ccm-workflow-engagement:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Creator Club Onboarding Complete"
+      Description: "Triggers when a member completes the onboarding form"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref ccm-onboarding-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref ccm-tag-engaged
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCE
+  # ============================================
+  ccm-seq-applicant:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Creator Club Applicant"
+      Description: "Follow-up sequence for club applicants"
+      Steps:
+        - TemplateSlug: !Ref ccm-email-application-received
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref ccm-email-check-in
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref ccm-email-engagement
+          DelayAmount: 5
+          DelayUnit: days
+          Order: 3
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  ccm-email-application-received:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Creator Club Application Received"
+      Subject: "We received your Creator Club application"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Thanks for Applying!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thanks for applying to Creator Club. We review every 
+              application personally to make sure you're a good fit 
+              for the community.
+              
+              **What happens next:**
+              
+              1. Book your discovery call (if you haven't already)
+              2. We hop on a 30-minute call to discuss your content
+              3. If you're a good fit, we'll get you started right away
+              
+              If you haven't booked your call yet, do that now. Our 
+              calendar fills up fast.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Discovery Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Questions before our call?**
+              
+              Just reply to this email.
+              
+              Looking forward to chatting!
+              
+              - The Creator Club Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  ccm-email-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Creator Club Welcome"
+      Subject: "Welcome to Creator Club - Let's get you started"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to the Club!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Welcome to Creator Club! You're now part of a curated 
+              community of serious creators.
+              
+              **Your first step:** Log in to your portal and complete the 
+              quick onboarding flow. You'll need to:
+              
+              1. Sign the membership agreement
+              2. Complete your creator profile
+              
+              This takes about 5 minutes and gives you full access to 
+              everything.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Complete Onboarding"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Once you're in, here's what to do:**
+              
+              1. Introduce yourself in the Collabs space
+              2. Browse this month's template drops
+              3. Add the weekly Q&A to your calendar (Thursdays, 7pm ET)
+              
+              The more you engage, the more value you'll get. Don't be 
+              a lurker - this community thrives on participation!
+              
+              Welcome aboard!
+              
+              - The Creator Club Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  ccm-email-check-in:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Creator Club Check-In"
+      Subject: "Quick reminder: Book your discovery call"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Don't Forget to Book Your Call"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I noticed you applied for Creator Club but haven't booked 
+              your discovery call yet.
+              
+              Just a reminder - we keep the community small and curated, 
+              so spots do fill up.
+              
+              If you're serious about:
+              - Getting monthly template drops
+              - Finding collaboration partners
+              - Learning from experienced creators
+              
+              Book your call and let's chat.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Call Now"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              If the timing isn't right, no worries. Just reply and let 
+              me know.
+              
+              - The Creator Club Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  ccm-email-engagement:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Creator Club Engagement"
+      Subject: "Still interested in Creator Club?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Still Interested?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I wanted to check in one more time about your application 
+              to Creator Club.
+              
+              I know life gets busy (especially when you're creating 
+              content!), so I understand if the timing isn't right. 
+              But if you're still interested in:
+              
+              - Monthly template drops to speed up content creation
+              - Finding collab partners to grow faster together
+              - Weekly Q&A calls with experienced creators
+              - A supportive community of serious creators
+              
+              ...then let's get you scheduled for a quick call.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Discovery Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              If you've decided the club isn't for you, no hard 
+              feelings. Just reply and let me know so I can update 
+              your application.
+              
+              Either way, I wish you success in your creator journey!
+              
+              - The Creator Club Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  ccm-business:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "Creator Club LLC"
+      Email: "hello@creatorclub.co"
+      Phone: "+1-555-CREATE"
+      Timezone: "America/New_York"
+      BusinessType: "LLC"
+      Industry: "Content Creator Education"
+      SignatureText: "The Creator Club Team"

@@ -1,0 +1,918 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFER
+  # ============================================
+  creative-retainer-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Creative Retainer"
+      Description: "Monthly subscription for 10-15 fresh ad creatives delivered to your inbox"
+      DefaultPortal: !Ref creative-portal
+      Items:
+        - Product: !Ref creative-library-product
+      PricingPlans:
+        - !Ref creative-monthly
+
+  # ============================================
+  # 📦 PRODUCT
+  # ============================================
+  creative-library-product:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Creative Library"
+      ProductType: page
+      Description: "Your creative library where you'll access current month creatives, your creative archive, submit new requests, and manage brand assets."
+      Page:
+        Title: "Your Creative Library"
+        Content: |
+          ## Current Month Creatives
+          
+          Your latest batch of ad creatives will appear here once delivered. Each month you'll receive 10-15 fresh creatives including static images, video ads, and carousel formats.
+          
+          **Delivery schedule:**
+          - First batch: Within 7 days of your creative brief submission
+          - Revisions: 48-hour turnaround
+          - Additional batches: Every 2 weeks throughout the month
+          
+          ## Creative Archive
+          
+          All your previous creatives are stored here for easy access. Download, reuse, or reference past work anytime.
+          
+          ## Submit New Request
+          
+          Ready for your next batch? Contact us with any updates to your brand assets, new campaigns, or specific requests.
+          
+          ## Brand Assets
+          
+          Keep your brand assets up to date so every creative matches your brand perfectly.
+          
+          **Current brand settings:**
+          - Logo and brand colors on file
+          - Target audience profile saved
+          - Creative format preferences recorded
+          
+          Need to update your brand assets? Contact us with your changes.
+
+  # ============================================
+  # 💰 PRICING PLAN
+  # ============================================
+  creative-monthly:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Creative Retainer Monthly"
+      Description: "Monthly subscription for ongoing ad creative production"
+      Amount: 99700
+      Currency: USD
+      BillingType: subscription
+      BillingInterval: monthly
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  creative-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Creative Retainer Application"
+      Description: "Application funnel for the Creative Retainer subscription"
+      Steps:
+        - Name: "Learn More"
+          Slug: interest
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Never Run Out of Fresh Ad Creative"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Get 10-15 scroll-stopping ad creatives delivered every month. No hiring. No managing. No creative fatigue."
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                    Provider: youtube
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Your ads are dying. And you know it."
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Creative fatigue is silently killing your ad performance.
+                      
+                      Your audiences have seen the same images and videos dozens of times. CTRs are dropping. CPAs are climbing. And Meta's algorithm is punishing you for it.
+                      
+                      You know you need fresh creatives. But...
+                      
+                      - Hiring a full-time designer costs $50K+/year (and they might not even understand ads)
+                      - Freelancers are unreliable and require constant management
+                      - DIY means spending hours in Canva when you should be running your business
+                      - Creative agencies charge $5K+ for a single campaign
+                      
+                      Meanwhile, your competitors are pumping out fresh creatives every week while your ads get stale.
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "What if fresh creatives just showed up in your inbox?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Imagine this:
+                      
+                      Every month, you receive 10-15 brand-new ad creatives. Static images, video ads, carousel formats. All designed specifically for your brand and ready to upload.
+                      
+                      You submit a brief. We deliver. You test. Your ads stay fresh.
+                      
+                      No hiring. No managing. No creative bottlenecks.
+                      
+                      Just a predictable monthly package of high-quality creatives that keep your ads performing.
+            - Type: content
+              Order: 4
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's exactly what you get"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      ✓ **10-15 Ad Creatives Per Month**
+                      A mix of static images, short-form videos, and carousel ads designed for Meta and TikTok.
+                      
+                      ✓ **Multiple Format Variations**
+                      Each creative delivered in sizes optimized for feed, stories, and reels.
+                      
+                      ✓ **Unlimited Revisions**
+                      Not quite right? We'll revise until you love it. 48-hour turnaround on all revisions.
+                      
+                      ✓ **Brand Asset Management**
+                      We store your logos, colors, fonts, and style preferences so every creative is on-brand.
+                      
+                      ✓ **Priority Turnaround**
+                      First batch delivered within 7 days. Ongoing batches every 2 weeks.
+                      
+                      ✓ **Creative Strategy Suggestions**
+                      We don't just make what you ask for. We suggest hooks, angles, and formats based on what's working.
+            - Type: content
+              Order: 5
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Is this right for you?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      The Creative Retainer is perfect for businesses that:
+                      
+                      ✓ Run paid ads on Meta, TikTok, or LinkedIn
+                      ✓ Need consistent, fresh creative to fight ad fatigue
+                      ✓ Want to focus on strategy, not design
+                      ✓ Are ready to invest in professional creative production
+                      
+                      **Not sure if it's a fit?** Apply below and we'll hop on a quick call to discuss your needs.
+            - Type: testimonials
+              Order: 6
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "We were spending $3K/month on a creative agency for half the output. The Creative Retainer gives us more creatives, faster turnaround, and better results. Our CTR is up 40% since switching."
+                    Author: "David R., E-commerce Brand Owner"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "I used to dread having to brief freelancers and chase them for deliverables. Now I submit a brief and creatives just appear. It's honestly a relief."
+                    Author: "Amanda S., Marketing Director"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 3
+                  Content:
+                    Quote: "The creative suggestions have been game-changers. They suggested a UGC-style format I never would have tried. It's now our best-performing ad."
+                    Author: "Jason K., DTC Founder"
+                    Rating: 5
+            - Type: cta
+              Order: 7
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Ready to Stop Creative Fatigue?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Apply now and we'll schedule a quick discovery call to see if we're a good fit."
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Apply for the Creative Retainer"
+                    Action: next_step
+                  Settings:
+                    Alignment: center
+        - Name: "Apply"
+          Slug: apply
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Apply for the Creative Retainer"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=APPLICATION_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      We work with a limited number of clients to ensure quality and turnaround times. Please answer a few questions so we can see if we're a good fit.
+                      
+                      **This takes about 2 minutes.**
+            - Type: form
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Tell us about your business:"
+                - Type: form
+                  Order: 2
+                  Content:
+                    FormSlug: !Ref creative-application-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Book Your Call"
+          Slug: book
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Great! Let's Chat."
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=BOOKING_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Thank you for applying to the Creative Retainer.
+                      
+                      **Next Step: Book Your Discovery Call**
+                      
+                      On this 60-minute call, we'll:
+                      
+                      ✓ Review your current ad creative situation
+                      ✓ Understand your brand and creative needs
+                      ✓ Discuss volume, formats, and turnaround requirements
+                      ✓ Determine if the Creative Retainer is the right fit
+                      ✓ Answer any questions you have
+                      
+                      **Please come prepared to discuss:**
+                      - Your current ad spend and platforms
+                      - Examples of creatives you like (or don't like)
+                      - Your brand guidelines (if you have them)
+                - Type: booking_link
+                  Order: 4
+                  Content:
+                    BookingLinkSlug: !Ref creative-discovery-call
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're Booked"
+          Slug: confirmed
+          Order: 4
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=CONFIRMATION_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Your discovery call is booked. Check your email for calendar details and a Zoom link.
+                      
+                      **Before our call, please:**
+                      
+                      1. **Gather 3-5 ad examples** you like (competitors, other brands, anything that catches your eye)
+                      2. **Note your current ad spend** and which platforms you're running on
+                      3. **Have your logo and brand colors** handy (if you have brand guidelines, even better)
+                      4. **Think about your biggest creative challenges** (what's not working, what you've tried)
+                      
+                      The more prepared you are, the more productive our call will be.
+                      
+                      **Questions before our call?** Reply to your confirmation email and we'll get back to you.
+                      
+                      See you soon!
+
+  # ============================================
+  # 📋 FORM
+  # ============================================
+  creative-application-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Creative Retainer Application"
+      Description: "Qualifying application for the Creative Retainer subscription"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your full name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@company.com"
+        - Type: custom
+          CustomFieldSlug: !Ref cf-business-name
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-website-url
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-monthly-ad-spend
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-creatives-per-month
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-existing-brand-assets
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-investment-readiness
+          Required: true
+      SubmitButton:
+        Text: "Submit Application"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  # ============================================
+  # 🔧 CUSTOM FIELD
+  # ============================================
+  cf-business-name:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What is your business name?"
+      FieldType: text
+      Placeholder: "Your company or brand name"
+
+  cf-website-url:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What is your website URL?"
+      FieldType: text
+      Placeholder: "https://yourcompany.com"
+
+  cf-monthly-ad-spend:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "How much are you currently spending on ads per month?"
+      FieldType: select
+      Options:
+        - "Under $5,000"
+        - "$5,000 - $10,000"
+        - "$10,000 - $25,000"
+        - "$25,000+"
+      HelpText: "This helps us understand the volume of creatives you might need"
+
+  cf-creatives-per-month:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "How many ad creatives do you need per month?"
+      FieldType: select
+      Options:
+        - "5-10 creatives"
+        - "10-20 creatives"
+        - "20+ creatives"
+      HelpText: "Our standard retainer includes 10-15 creatives per month"
+
+  cf-existing-brand-assets:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Do you have existing brand assets?"
+      FieldType: select
+      Options:
+        - "Yes, complete brand guidelines"
+        - "Partial (logo and colors only)"
+        - "No, starting from scratch"
+      HelpText: "Logo, colors, fonts, style guidelines, etc."
+
+  cf-investment-readiness:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Are you ready to invest $997/month in professional creative production?"
+      FieldType: select
+      Options:
+        - "Yes, I'm ready to invest"
+        - "Need to discuss on the call"
+        - "Not sure yet"
+      HelpText: "Be honest - this helps us determine if we're a good fit"
+
+  # ============================================
+  # 📅 BOOKING LINK
+  # ============================================
+  creative-discovery-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Creative Retainer Discovery Call"
+      OwnerUserEmail: "team@adscaleagency.com"
+      Description: "60-minute discovery call to discuss your creative needs and see if the Creative Retainer is right for you"
+      DurationMinutes: 60
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  creative-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "AdScale Client Portal"
+      Description: "Client portal for Creative Retainer subscribers"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  creative-retainer-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Creative Retainer Sales"
+      Description: "Track Creative Retainer prospects through the sales process"
+      Stages:
+        - Name: "Lead"
+          Slug: lead
+          Order: 1
+          Description: "Visited interest page but hasn't applied"
+        - Name: "Applied"
+          Slug: applied
+          Order: 2
+          Description: "Submitted application form"
+        - Name: "Call Booked"
+          Slug: call-booked
+          Order: 3
+          Description: "Discovery call scheduled"
+        - Name: "Call Completed"
+          Slug: call-completed
+          Order: 4
+          Description: "Discovery call finished"
+        - Name: "Proposal Sent"
+          Slug: proposal-sent
+          Order: 5
+          Description: "Proposal or agreement sent"
+        - Name: "Won"
+          Slug: won
+          Order: 6
+          Description: "Signed up for Creative Retainer"
+        - Name: "Lost"
+          Slug: lost
+          Order: 7
+          Description: "Did not proceed"
+
+  # ============================================
+  # 🏷️ TAG
+  # ============================================
+  creative-retainer-applicant-tag:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Creative Retainer Applicant"
+      Description: "Applied for the Creative Retainer"
+
+  creative-retainer-client-tag:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Creative Retainer Client"
+      Description: "Active Creative Retainer subscriber"
+
+  # ============================================
+  # ⚡ WORKFLOW
+  # ============================================
+  creative-application-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Creative Retainer Application Submitted"
+      Description: "Triggers when someone submits the Creative Retainer application"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref creative-application-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref creative-retainer-applicant-tag
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref creative-applicant-sequence
+
+  creative-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Creative Retainer Client Onboarding"
+      Description: "Triggers when someone is granted access to the Creative Retainer"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref creative-retainer-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref creative-retainer-client-tag
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref creative-onboarding-sequence
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCE
+  # ============================================
+  creative-applicant-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Creative Retainer Applicant"
+      Description: "Follow-up sequence for Creative Retainer applicants"
+      Steps:
+        - TemplateSlug: !Ref creative-application-received-email
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref creative-call-reminder-email
+          DelayAmount: 1
+          DelayUnit: days
+          Order: 2
+
+  creative-onboarding-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Creative Retainer Onboarding"
+      Description: "Welcome and onboarding sequence for new Creative Retainer clients"
+      Steps:
+        - TemplateSlug: !Ref creative-welcome-email
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref creative-first-batch-email
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref creative-monthly-rhythm-email
+          DelayAmount: 14
+          DelayUnit: days
+          Order: 3
+
+  # ============================================
+  # 📧 EMAIL TEMPLATE
+  # ============================================
+  creative-application-received-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Creative Retainer Application Received"
+      Subject: "We received your Creative Retainer application"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Thanks for Applying!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thank you for applying to the Creative Retainer. We review 
+              every application personally to make sure we're a good fit 
+              for each other.
+              
+              **What happens next:**
+              
+              1. You book a discovery call (if you haven't already)
+              2. We hop on a 60-minute call to discuss your needs
+              3. If we're a good fit, we'll get you started right away
+              
+              If you haven't booked your discovery call yet, make sure to 
+              do that now. Spots fill up quickly!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Discovery Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Questions before our call?**
+              
+              Just reply to this email and we'll get back to you.
+              
+              Looking forward to chatting!
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  creative-call-reminder-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Creative Retainer Call Reminder"
+      Subject: "Quick reminder: Book your discovery call"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Don't Forget to Book Your Call"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I noticed you applied for the Creative Retainer but haven't 
+              booked your discovery call yet.
+              
+              I wanted to check in because:
+              
+              - We have limited spots available each month
+              - The sooner we chat, the sooner you can get fresh creatives
+              - I have some questions about your application I'd love to discuss
+              
+              If you're serious about solving your creative fatigue problem, 
+              book a time and let's talk.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Call Now"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              If the timing isn't right, no worries. Just reply and let 
+              me know.
+              
+              Talk soon!
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  creative-welcome-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Creative Retainer Welcome"
+      Subject: "Welcome to the Creative Retainer - Let's get started!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to the Creative Retainer!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Welcome to the Creative Retainer! We're excited to start 
+              creating scroll-stopping ad creatives for your brand.
+              
+              **Your next step:** Submit your creative brief so we have 
+              everything we need to get started.
+              
+              Log in to your client portal and you'll find a simple form 
+              to capture:
+              
+              - Your brand name and logo
+              - Brand colors
+              - Target audience description
+              - Creative format preferences
+              - Any inspiration links (optional)
+              
+              Once you submit your brief, we'll deliver your first batch 
+              within 7 days.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Your Client Portal"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **What happens next:**
+              
+              1. You submit your creative brief (today!)
+              2. We review your brand and start creating
+              3. First batch delivered within 7 days
+              4. You request revisions if needed (unlimited!)
+              5. New batch every 2 weeks throughout the month
+              
+              Questions? Just reply to this email.
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  creative-first-batch-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "First Batch Preview"
+      Subject: "Your first batch of creatives is ready!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Your First Batch is Ready!"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Great news! Your first batch of ad creatives is ready for 
+              review in your client portal.
+              
+              **What's included:**
+              - Multiple static image variations
+              - Short-form video ads
+              - Carousel format options
+              - All sizes for feed, stories, and reels
+              
+              **What to expect going forward:**
+              - New batch every 2 weeks
+              - Unlimited revisions on any creative
+              - 48-hour turnaround on revision requests
+              
+              Log in to your portal to download your creatives and 
+              request any revisions.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "View Your Creatives"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Quick tip:** Test multiple creatives at once. We recommend 
+              running 3-5 ad variations to see what resonates best with 
+              your audience.
+              
+              Questions or feedback? Just reply to this email!
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  creative-monthly-rhythm-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Monthly Creative Rhythm"
+      Subject: "Here's how your monthly creative delivery works"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Your Monthly Creative Rhythm"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Now that you've received your first batch, here's how the 
+              ongoing rhythm works:
+              
+              **Week 1:** Submit your brief (or update it)
+              **Week 2:** First batch delivered
+              **Week 3:** Second batch + revisions
+              **Week 4:** Final batch + prep for next month
+              
+              **Need changes?** Request unlimited revisions anytime 
+              through your portal. We turn them around in 48 hours.
+              
+              **New campaign coming up?** Submit an updated brief with 
+              new messaging, offers, or creative direction.
+              
+              **Feedback on what's working?** Let us know which creatives 
+              are performing and we'll create more in that style.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Go to Your Portal"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Here's to fresh creatives every month!
+              
+              The AdScale Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  business-profile:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "AdScale Agency LLC"
+      Email: "team@adscaleagency.com"
+      Phone: "+1-555-234-5678"
+      Timezone: "America/New_York"
+      BusinessType: "LLC"
+      Industry: "Marketing & Advertising"
+      SignatureText: "The AdScale Team"

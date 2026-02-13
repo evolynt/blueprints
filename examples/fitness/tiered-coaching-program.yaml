@@ -1,0 +1,1466 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFERS
+  # ============================================
+  silver-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Transform Silver"
+      Description: "Group coaching program with community access, weekly group calls, and foundational training"
+      DefaultPortal: !Ref transform-portal
+      Items:
+        - Product: !Ref transform-community
+        - Product: !Ref transform-course
+        - Product: !Ref transform-resources
+      PricingPlans:
+        - !Ref silver-pif
+        - !Ref silver-split
+
+  gold-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Transform Gold"
+      Description: "Group coaching plus 6 private 1:1 coaching sessions for personalized support"
+      DefaultPortal: !Ref transform-portal
+      Items:
+        - Product: !Ref gold-coaching-sessions
+        - Product: !Ref transform-community
+        - Product: !Ref transform-course
+        - Product: !Ref transform-resources
+      PricingPlans:
+        - !Ref gold-pif
+        - !Ref gold-split
+
+  platinum-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Transform Platinum"
+      Description: "The ultimate transformation experience with 12 private 1:1 sessions, group coaching, and full program access"
+      DefaultPortal: !Ref transform-portal
+      Items:
+        - Product: !Ref platinum-coaching-sessions
+        - Product: !Ref transform-community
+        - Product: !Ref transform-course
+        - Product: !Ref transform-resources
+      PricingPlans:
+        - !Ref platinum-pif
+        - !Ref platinum-split
+
+  # ============================================
+  # 📦 PRODUCTS
+  # ============================================
+  gold-coaching-sessions:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Gold Coaching Sessions"
+      ProductType: coaching
+      Description: "6 private 1:1 coaching calls for personalized programming and accountability"
+      Coaching:
+        Title: "1:1 Coaching Session"
+        Description: "45-minute private coaching call with personalized program review, form analysis, and strategy adjustments"
+        Quantity: 6
+        BookingLink: !Ref coaching-call
+        ExpirationDays: 120
+
+  platinum-coaching-sessions:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Platinum Coaching Sessions"
+      ProductType: coaching
+      Description: "12 private 1:1 coaching calls for the ultimate personalized transformation experience"
+      Coaching:
+        Title: "1:1 Coaching Session"
+        Description: "45-minute private coaching call with personalized program review, form analysis, and strategy adjustments"
+        Quantity: 12
+        BookingLink: !Ref coaching-call
+        ExpirationDays: 180
+
+  transform-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Transform Community"
+      ProductType: community
+      Description: "Private community with weekly group coaching calls and peer accountability"
+      Community:
+        Name: "Transform Fitness Academy"
+        Description: "Your private community for group coaching, accountability, and support"
+        Spaces:
+          - Name: "Announcements"
+            Slug: announcements
+            Description: "Program updates and important information"
+            Order: 1
+          - Name: "Wins & Progress"
+            Slug: wins
+            Description: "Share your victories and transformation photos"
+            Order: 2
+          - Name: "Q&A"
+            Slug: qa
+            Description: "Ask questions and get answers from coaches and members"
+            Order: 3
+          - Name: "Accountability Partners"
+            Slug: accountability
+            Description: "Find your accountability partner and check in daily"
+            Order: 4
+          - Name: "Nutrition Talk"
+            Slug: nutrition
+            Description: "Meal ideas, recipes, and nutrition questions"
+            Order: 5
+        Events:
+          - Title: "Weekly Group Coaching Call"
+            Description: "Live Q&A, hot seats, and group coaching with Coach Marcus. Bring your questions!"
+            StartAt: "2025-01-08T12:00:00-05:00"
+            EndAt: "2025-01-08T13:00:00-05:00"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/transform-group"
+            HostUserEmail: "coach@transformfitness.com"
+            RecurrenceRule:
+              Frequency: weekly
+              Interval: 1
+              DaysOfWeek: [3]
+              EndType: never
+
+  transform-course:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Transform Foundations Course"
+      ProductType: course
+      Description: "Complete training system covering movement, nutrition, mindset, and lifestyle optimization"
+      Course:
+        Title: "Transform Foundations"
+        Description: "Your complete blueprint for lasting transformation"
+        Modules:
+          - Title: "Welcome & Getting Started"
+            Order: 1
+            Lessons:
+              - Title: "Welcome to Transform"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/transform-welcome"
+              - Title: "How to Get the Most From This Program"
+                Order: 2
+                ContentType: text
+                TextContent: |
+                  Welcome to the Transform Fitness Academy!
+                  
+                  This program is designed to give you everything you need 
+                  for a complete body and lifestyle transformation.
+                  
+                  **How to use this course:**
+                  
+                  1. Start with this Welcome module and watch every video
+                  2. Complete each module in order before moving on
+                  3. Take action on what you learn before consuming more
+                  4. Post in the community when you have questions
+                  5. Show up to the weekly group calls for live coaching
+                  
+                  **Your success formula:**
+                  
+                  Knowledge + Action + Accountability = Results
+                  
+                  You have the knowledge in this course. The community 
+                  provides accountability. Your job is to take action.
+                  
+                  Let's get started!
+              - Title: "Setting Your Transformation Goals"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/transform-goals"
+          - Title: "Movement Foundations"
+            Order: 2
+            Lessons:
+              - Title: "The 5 Essential Movement Patterns"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/movement-patterns"
+              - Title: "Building Your Weekly Training Schedule"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/training-schedule"
+              - Title: "Progressive Overload Explained"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/progressive-overload"
+              - Title: "Recovery and Rest Days"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/recovery"
+          - Title: "Nutrition for Transformation"
+            Order: 3
+            Lessons:
+              - Title: "Nutrition Fundamentals"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/nutrition-fundamentals"
+              - Title: "Calculating Your Calories and Macros"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/macros"
+              - Title: "Meal Planning Made Simple"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/meal-planning"
+              - Title: "Eating Out and Social Situations"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/eating-out"
+          - Title: "Mindset Mastery"
+            Order: 4
+            Lessons:
+              - Title: "The Psychology of Change"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/psychology-change"
+              - Title: "Building Habits That Stick"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/habits"
+              - Title: "Overcoming Plateaus and Setbacks"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/plateaus"
+              - Title: "The Identity Shift"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/identity"
+          - Title: "Lifestyle Optimization"
+            Order: 5
+            Lessons:
+              - Title: "Sleep for Performance and Recovery"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/sleep"
+              - Title: "Stress Management Strategies"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/stress"
+              - Title: "Time Management for Busy People"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/time-management"
+              - Title: "Maintaining Your Results Long-Term"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/maintenance"
+
+  transform-resources:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Transform Resources"
+      ProductType: page
+      Description: "Program resources, guides, and materials for Transform members"
+      Page:
+        Title: "Client Resources"
+        Content: |
+          ## Welcome to Transform Fitness Academy
+          
+          This page contains everything you need to succeed in your transformation journey.
+          
+          ### Getting Started Checklist
+          
+          ✓ Watch the Welcome module in the course
+          ✓ Introduce yourself in the community
+          ✓ Set your transformation goals
+          ✓ Add the weekly group call to your calendar (Wednesdays 12pm ET)
+          ✓ Find an accountability partner in the community
+          
+          ### Weekly Group Coaching Calls
+          
+          **When:** Every Wednesday at 12pm Eastern Time
+          **Where:** Zoom (link posted in Announcements before each call)
+          **What:** Live Q&A, hot seats, coaching, and community connection
+          
+          Can't make it live? Replays are posted in the community within 24 hours.
+          
+          ### For Gold & Platinum Members
+          
+          You have private 1:1 coaching sessions included in your program!
+          
+          **Gold Members:** 6 sessions (use within 120 days)
+          **Platinum Members:** 12 sessions (use within 180 days)
+          
+          To book your sessions:
+          1. Click "Coaching Sessions" in your portal sidebar
+          2. Select an available time that works for you
+          3. You'll receive a confirmation with your Zoom link
+          
+          **Tip:** Book your sessions in advance to secure your preferred times!
+          
+          ### Need Help?
+          
+          - **Quick questions:** Post in the Q&A community space
+          - **Session questions:** Reply to your booking confirmation
+          - **Technical issues:** Email coach@transformfitness.com
+
+  # ============================================
+  # 💰 PRICING PLANS
+  # ============================================
+  silver-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Silver - Pay in Full"
+      Description: "One-time payment for Transform Silver"
+      Amount: 200000
+      Currency: USD
+      BillingType: one_time
+
+  silver-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Silver - Payment Plan"
+      Description: "3 monthly payments for Transform Silver"
+      Amount: 210000
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  gold-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Gold - Pay in Full"
+      Description: "One-time payment for Transform Gold"
+      Amount: 350000
+      Currency: USD
+      BillingType: one_time
+
+  gold-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Gold - Payment Plan"
+      Description: "3 monthly payments for Transform Gold"
+      Amount: 367500
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  platinum-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Platinum - Pay in Full"
+      Description: "One-time payment for Transform Platinum"
+      Amount: 500000
+      Currency: USD
+      BillingType: one_time
+
+  platinum-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Platinum - Payment Plan"
+      Description: "3 monthly payments for Transform Platinum"
+      Amount: 525000
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  transform-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Transform Fitness Academy Application"
+      Description: "High-ticket funnel with free training, application, and booking"
+      Steps:
+        - Name: "Free Training"
+          Slug: optin
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Free Training: The 3 Pillars of Lasting Transformation"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Discover why most fitness programs fail and the proven system that creates permanent change"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=TRANSFORM_OPTIN_VIDEO"
+                    Provider: youtube
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: text
+                  Order: 1
+                  Content:
+                    Text: |
+                      In this free training, you'll discover:
+                      
+                      ✓ Why 95% of fitness programs fail (and what actually works)
+                      ✓ The 3-pillar system used by successful transformations
+                      ✓ How to build habits that stick for life
+                      ✓ The accountability secret that changes everything
+            - Type: form
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Enter your details to watch the free training:"
+                - Type: form
+                  Order: 2
+                  Content:
+                    FormSlug: !Ref optin-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Watch Training"
+          Slug: training
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "The 3 Pillars of Lasting Transformation"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=TRANSFORM_MASTERCLASS"
+                    Provider: youtube
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "If this resonated with you, here's your next step"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      What you just learned is the foundation of the Transform Fitness Academy.
+                      
+                      But watching a video won't change your body. Taking action will.
+                      
+                      **Transform Fitness Academy** is a complete coaching program designed for people who are serious about results. Not another app. Not another generic program. A real coaching experience with multiple levels to fit your needs.
+                      
+                      We offer three tiers:
+                      
+                      **Silver** - Group coaching with weekly calls, community access, and our complete training system
+                      
+                      **Gold** - Everything in Silver PLUS 6 private 1:1 coaching sessions
+                      
+                      **Platinum** - The ultimate experience with 12 private 1:1 sessions and our highest level of support
+                      
+                      Ready to transform? Fill out an application to see which tier is right for you.
+            - Type: cta
+              Order: 3
+              Elements:
+                - Type: button
+                  Order: 1
+                  Content:
+                    Text: "Apply Now"
+                    Action: next_step
+        - Name: "Apply"
+          Slug: apply
+          Order: 3
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Apply to Transform Fitness Academy"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Tell us about your goals so we can recommend the right program for you"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=TRANSFORM_APPLICATION_VIDEO"
+                    Provider: youtube
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: text
+                  Order: 1
+                  Content:
+                    Text: |
+                      **Who this is for:**
+                      
+                      ✓ Busy professionals who want a proven system
+                      ✓ People who are done with cookie-cutter programs
+                      ✓ Those ready to invest in themselves and their results
+                      ✓ Anyone committed to making a permanent change
+                      
+                      **Who this is NOT for:**
+                      
+                      ✗ People looking for the cheapest option
+                      ✗ Those not ready to commit to the process
+                      ✗ Anyone who wants results without putting in work
+            - Type: form
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Fill out your application:"
+                - Type: form
+                  Order: 2
+                  Content:
+                    FormSlug: !Ref transform-application-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Book Your Call"
+          Slug: book
+          Order: 4
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Application Received!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=TRANSFORM_BOOKING_VIDEO"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Thank you for applying to Transform Fitness Academy.
+                      
+                      **Next Step: Book Your Strategy Call**
+                      
+                      This is a 30-minute call where we'll:
+                      
+                      ✓ Discuss your transformation goals
+                      ✓ Review your current situation and challenges
+                      ✓ Determine which tier (Silver, Gold, or Platinum) is right for you
+                      ✓ Answer any questions you have about the program
+                      
+                      Please come prepared to discuss your goals, timeline, and commitment level.
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Select a time that works for you:"
+                - Type: booking_link
+                  Order: 2
+                  Content:
+                    BookingLinkSlug: !Ref strategy-call
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're Booked"
+          Slug: confirmed
+          Order: 5
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Your Strategy Call is Confirmed!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=TRANSFORM_CONFIRMED_VIDEO"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      You're one step closer to your transformation.
+                      
+                      **Check your email for:**
+                      - Calendar invitation with Zoom link
+                      - Call details and what to expect
+                      
+                      **How to prepare for your call:**
+                      
+                      1. **Know your goals** - What do you want to achieve in the next 90 days? Be specific.
+                      
+                      2. **Understand your why** - Why is this transformation important to you right now?
+                      
+                      3. **Be honest about your situation** - Current fitness level, time constraints, past attempts.
+                      
+                      4. **Prepare questions** - What do you want to know about the program?
+                      
+                      5. **Be ready to commit** - If we're a good fit, be prepared to make a decision.
+                      
+                      I'm looking forward to speaking with you!
+
+  # ============================================
+  # 📋 FORMS
+  # ============================================
+  optin-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Transform Optin Form"
+      Description: "Captures leads for the free training"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your full name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@example.com"
+      SubmitButton:
+        Text: "Get Free Training"
+        BackgroundColor: "#059669"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 400
+        Padding: 24
+        BorderRadius: 8
+
+  transform-application-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Transform Application Form"
+      Description: "Qualifying application for Transform Fitness Academy"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your full name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@example.com"
+        - Type: standard
+          FieldName: phone
+          Required: true
+          Placeholder: "+1 (555) 123-4567"
+        - Type: custom
+          CustomFieldSlug: !Ref fitness-goals
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref experience-level
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref weekly-availability
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref commitment-level
+          Required: true
+      SubmitButton:
+        Text: "Submit Application"
+        BackgroundColor: "#059669"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 600
+        Padding: 24
+        BorderRadius: 8
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  transform-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Transform Fitness Academy"
+      Description: "Client portal for Transform Fitness Academy members"
+      ThemeConfig:
+        PrimaryColor: "#059669"
+
+  # ============================================
+  # 📅 BOOKING LINKS
+  # ============================================
+  strategy-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Strategy Call"
+      OwnerUserEmail: "coach@transformfitness.com"
+      Description: "30-minute strategy call to discuss your transformation goals and find the right program for you"
+      DurationMinutes: 30
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  coaching-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "1:1 Coaching Session"
+      OwnerUserEmail: "coach@transformfitness.com"
+      Description: "45-minute private coaching session for Gold and Platinum members"
+      DurationMinutes: 45
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 60
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  transform-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Transform Sales Pipeline"
+      Description: "Track high-ticket coaching prospects through the sales process"
+      Stages:
+        - Name: "Lead"
+          Slug: lead
+          Order: 1
+          Description: "Opted in for free training"
+        - Name: "Applied"
+          Slug: applied
+          Order: 2
+          Description: "Submitted application form"
+        - Name: "Call Scheduled"
+          Slug: call-scheduled
+          Order: 3
+          Description: "Strategy call booked"
+        - Name: "Call Completed"
+          Slug: call-completed
+          Order: 4
+          Description: "Strategy call finished"
+        - Name: "Proposal Sent"
+          Slug: proposal-sent
+          Order: 5
+          Description: "Payment link sent"
+        - Name: "Closed Won"
+          Slug: closed-won
+          Order: 6
+          Description: "Enrolled in program"
+        - Name: "Closed Lost"
+          Slug: closed-lost
+          Order: 7
+          Description: "Did not enroll"
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  fitness-goals:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What are your primary fitness goals?"
+      FieldType: textarea
+      Placeholder: "Describe what you want to achieve in the next 90 days..."
+      HelpText: "Be specific about what transformation looks like for you"
+
+  experience-level:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What is your current fitness experience level?"
+      FieldType: select
+      Options:
+        - "Complete beginner - never worked out consistently"
+        - "Some experience - worked out on and off"
+        - "Intermediate - consistent for 1+ years"
+        - "Advanced - training seriously for 3+ years"
+      HelpText: "This helps us recommend the right program tier for you"
+
+  weekly-availability:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "How many hours per week can you dedicate to training?"
+      FieldType: select
+      Options:
+        - "3-4 hours per week"
+        - "5-6 hours per week"
+        - "7-10 hours per week"
+        - "10+ hours per week"
+      HelpText: "Include workout time, meal prep, and program work"
+
+  commitment-level:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Are you ready to invest in yourself and commit to the process?"
+      FieldType: select
+      Options:
+        - "Yes, I'm fully committed and ready to invest in my transformation"
+        - "I'm interested but need more information"
+        - "I'm exploring my options"
+      HelpText: "Be honest about where you are in your decision process"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  transform-lead:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Transform Lead"
+      Description: "Opted in for free training"
+
+  transform-applicant:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Transform Applicant"
+      Description: "Submitted application form"
+
+  silver-client:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Silver Client"
+      Description: "Active Transform Silver member"
+
+  gold-client:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Gold Client"
+      Description: "Active Transform Gold member"
+
+  platinum-client:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Platinum Client"
+      Description: "Active Transform Platinum member"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  optin-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Transform Optin"
+      Description: "Triggers when someone opts in for the free training"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref optin-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref transform-lead
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref lead-nurture-sequence
+
+  application-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Transform Application Submitted"
+      Description: "Triggers when someone submits the Transform application"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref transform-application-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref transform-applicant
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref applicant-sequence
+
+  silver-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Silver Purchase"
+      Description: "Triggers when someone purchases Transform Silver"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref silver-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref silver-client
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref onboarding-sequence
+
+  gold-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Gold Purchase"
+      Description: "Triggers when someone purchases Transform Gold"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref gold-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref gold-client
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref onboarding-sequence
+
+  platinum-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Platinum Purchase"
+      Description: "Triggers when someone purchases Transform Platinum"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref platinum-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref platinum-client
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref onboarding-sequence
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCES
+  # ============================================
+  lead-nurture-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Transform Lead Nurture"
+      Description: "Nurture sequence for leads who opted in for free training"
+      Steps:
+        - TemplateSlug: !Ref training-access-email
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref nurture-followup-email
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref apply-reminder-email
+          DelayAmount: 5
+          DelayUnit: days
+          Order: 3
+
+  applicant-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Transform Applicant Sequence"
+      Description: "Follow-up sequence for applicants"
+      Steps:
+        - TemplateSlug: !Ref application-received-email
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref book-call-reminder-email
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+
+  onboarding-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Transform Client Onboarding"
+      Description: "Welcome sequence for new Transform clients"
+      Steps:
+        - TemplateSlug: !Ref client-welcome-email
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref week1-checkin-email
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref community-reminder-email
+          DelayAmount: 14
+          DelayUnit: days
+          Order: 3
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  training-access-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Training Access"
+      Subject: "Your free training is ready, {{contact.name}}"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Your Free Training is Ready!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thanks for signing up! Your free training "The 3 Pillars of 
+              Lasting Transformation" is ready to watch.
+              
+              In this training, you'll discover:
+              
+              ✓ Why 95% of fitness programs fail
+              ✓ The 3-pillar system that creates permanent change
+              ✓ How to build habits that stick for life
+              
+              Click below to watch now.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Watch Free Training"
+            LinkUrl: "https://your-funnel-url.com/transform/training"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#059669"
+        - Type: spacer
+          Order: 4
+          Settings:
+            Height: 20
+        - Type: text
+          Order: 5
+          Content:
+            Text: "Talk soon!"
+        - Type: divider
+          Order: 6
+        - Type: text
+          Order: 7
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  nurture-followup-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Nurture Follow-up"
+      Subject: "Did you watch the training?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Quick check-in"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I wanted to follow up and see if you had a chance to watch 
+              the free training.
+              
+              If you haven't yet, I get it. Life is busy.
+              
+              But here's the thing: the strategies in that training have 
+              helped hundreds of people finally break through their fitness 
+              plateaus.
+              
+              And the people who watch it and take action? They're the ones 
+              who end up transforming their bodies and their lives.
+              
+              Take 20 minutes today to watch it. You might be surprised 
+              what clicks.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Watch the Training"
+            LinkUrl: "https://your-funnel-url.com/transform/training"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#059669"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  apply-reminder-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Apply Reminder"
+      Subject: "Are you ready to transform?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Still thinking about it?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              A few days ago, you signed up to learn about lasting 
+              transformation.
+              
+              I'm curious: what's holding you back?
+              
+              Maybe you've tried programs before that didn't work. Maybe 
+              you're not sure if now is the right time. Maybe you're 
+              wondering if this is any different from everything else 
+              out there.
+              
+              I get it. Those are valid concerns.
+              
+              Here's what I can tell you:
+              
+              Transform Fitness Academy isn't a workout app or a generic 
+              PDF program. It's real coaching with real accountability.
+              
+              We offer three tiers to fit different needs and budgets:
+              
+              - Silver: Group coaching with weekly calls and community
+              - Gold: Group coaching plus 6 private 1:1 sessions
+              - Platinum: The full experience with 12 private sessions
+              
+              If you're serious about making a change, fill out an 
+              application. We'll hop on a call and figure out together 
+              if this is right for you.
+              
+              No pressure. Just a conversation.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Apply Now"
+            LinkUrl: "https://your-funnel-url.com/transform/apply"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#059669"
+        - Type: spacer
+          Order: 4
+          Settings:
+            Height: 20
+        - Type: text
+          Order: 5
+          Content:
+            Text: "Talk soon!"
+        - Type: divider
+          Order: 6
+        - Type: text
+          Order: 7
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  application-received-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Application Received"
+      Subject: "Your Transform application has been received"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Application Received!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thank you for applying to Transform Fitness Academy. I 
+              review every application personally, and I appreciate you 
+              taking the time to share your goals with me.
+              
+              **What happens next:**
+              
+              1. Book your Strategy Call (if you haven't already)
+              2. We'll discuss your goals and determine which tier is 
+                 right for you
+              3. If we're a good fit, you'll have the opportunity to 
+                 join the program
+              
+              **Important:** If you haven't booked your Strategy Call yet, 
+              make sure to do that now. This is your next step.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Strategy Call"
+            LinkUrl: "https://your-funnel-url.com/transform/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#059669"
+        - Type: spacer
+          Order: 4
+          Settings:
+            Height: 20
+        - Type: text
+          Order: 5
+          Content:
+            Text: "I'm looking forward to speaking with you!"
+        - Type: divider
+          Order: 6
+        - Type: text
+          Order: 7
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  book-call-reminder-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Book Call Reminder"
+      Subject: "Don't forget to book your call"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Quick Reminder"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I noticed you applied to Transform Fitness Academy but 
+              haven't booked your Strategy Call yet.
+              
+              I want to make sure you don't miss this opportunity.
+              
+              **Why book the call:**
+              
+              ✓ Get clarity on which tier (Silver, Gold, or Platinum) is 
+                right for your goals
+              ✓ Ask any questions you have about the program
+              ✓ Find out if we're a good fit to work together
+              
+              The call is 30 minutes. No obligation. Just a conversation.
+              
+              But I can only take a limited number of clients, and spots 
+              do fill up. Don't wait too long.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Call Now"
+            LinkUrl: "https://your-funnel-url.com/transform/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#059669"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  client-welcome-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Client Welcome"
+      Subject: "Welcome to Transform Fitness Academy, {{contact.name}}!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to the Transform Family!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Welcome to Transform Fitness Academy! You just made one of 
+              the best decisions of your life.
+              
+              **Here's what to do right now:**
+              
+              **1. Access Your Portal**
+              Click the button below to log in. You'll find your course, 
+              community, and resources all in one place.
+              
+              **2. Watch the Welcome Module**
+              Start with the "Welcome & Getting Started" module in the 
+              course. This sets you up for success.
+              
+              **3. Introduce Yourself**
+              Head to the community and post an introduction. Tell us 
+              about your goals and what you're excited about!
+              
+              **4. Add the Weekly Call to Your Calendar**
+              Every Wednesday at 12pm ET, we meet for live group coaching. 
+              This is where the magic happens.
+              
+              **5. (Gold & Platinum) Book Your First Session**
+              If you have 1:1 coaching sessions, book your first one this 
+              week! Click "Coaching Sessions" in your portal.
+              
+              I can't wait to see your transformation!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Your Portal"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#059669"
+        - Type: spacer
+          Order: 4
+          Settings:
+            Height: 30
+        - Type: text
+          Order: 5
+          Content:
+            Text: "Questions? Reply to this email or post in the community. We're here for you."
+        - Type: divider
+          Order: 6
+        - Type: text
+          Order: 7
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  week1-checkin-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Week 1 Check-in"
+      Subject: "How's your first week going?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Week 1 Check-in"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've been part of Transform Fitness Academy for a week now. 
+              How's it going?
+              
+              Quick check-in:
+              
+              ✓ Have you started the course modules?
+              ✓ Have you introduced yourself in the community?
+              ✓ Did you make it to the weekly group call?
+              ✓ (Gold/Platinum) Have you booked your first 1:1 session?
+              
+              If you answered "no" to any of these, don't stress. But do 
+              take action today.
+              
+              The people who get the best results from this program are 
+              the ones who engage fully. They watch the content, show up 
+              to calls, post in the community, and use their sessions.
+              
+              You invested in yourself. Now it's time to get the most 
+              out of that investment.
+              
+              What's one action you can take today?
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Go to Your Portal"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#059669"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  community-reminder-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Community Reminder"
+      Subject: "Are you using the community?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "The Power of Community"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Two weeks into your transformation! Let me ask you something:
+              
+              Are you using the community?
+              
+              I've noticed that the members who get the BEST results are 
+              the ones who engage in the community regularly.
+              
+              Why? Because fitness isn't just about reps and calories. 
+              It's about accountability. Support. Having people who get it.
+              
+              Here are a few ways to get more from the community:
+              
+              **1. Post your workouts** - Share what you did today. Others 
+              will cheer you on.
+              
+              **2. Share your wins** - Big or small, celebrate them. And 
+              celebrate others' wins too.
+              
+              **3. Ask questions** - Stuck on something? Post it. Someone's 
+              been there.
+              
+              **4. Find an accountability partner** - Use the Accountability 
+              Partners space to connect with someone on a similar journey.
+              
+              You're not alone in this. Lean into the community.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Check the Community"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#059669"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  business-profile:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "Transform Fitness Academy LLC"
+      Email: "coach@transformfitness.com"
+      Phone: "+1-555-TRANSFORM"
+      Timezone: "America/New_York"
+      BusinessType: "LLC"

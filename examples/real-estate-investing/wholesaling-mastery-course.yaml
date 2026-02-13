@@ -1,0 +1,1348 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFER
+  # ============================================
+  wmc-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Wholesaling Mastery Course"
+      Description: "The complete A-Z system for finding, analyzing, and closing wholesale deals - plus lifetime community access"
+      DefaultPortal: !Ref wmc-portal
+      OnboardingFlowSlug: !Ref wmc-onboarding
+      Items:
+        - Product: !Ref wmc-course
+        - Product: !Ref wmc-community
+      PricingPlans:
+        - !Ref wmc-pif
+        - !Ref wmc-split
+
+  # ============================================
+  # 📦 PRODUCTS
+  # ============================================
+  wmc-course:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Wholesaling Mastery Course"
+      ProductType: course
+      Description: "6-module comprehensive wholesaling program"
+      Course:
+        Title: "Wholesaling Mastery"
+        Description: "The complete A-Z system for wholesale real estate deals"
+        Modules:
+          - Title: "Module 1: Wholesaling Foundations"
+            Order: 1
+            Lessons:
+              - Title: "Welcome & Course Overview"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-welcome"
+              - Title: "How Wholesaling Works (The Basics)"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-how-it-works"
+              - Title: "Legal Basics You Need to Know"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-legal-basics"
+              - Title: "Wholesaling Mindset for Success"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-mindset"
+              - Title: "Setting Up Your Wholesaling Business"
+                Order: 5
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-setup"
+          - Title: "Module 2: Finding Deals"
+            Order: 2
+            Lessons:
+              - Title: "Overview: Where Deals Come From"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-finding-overview"
+              - Title: "Driving for Dollars"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-driving-dollars"
+              - Title: "Building and Using Lists"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-lists"
+              - Title: "Direct Mail Campaigns That Work"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-direct-mail"
+              - Title: "Cold Calling and SMS Strategies"
+                Order: 5
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-cold-calling"
+              - Title: "Online Marketing for Motivated Sellers"
+                Order: 6
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-online-marketing"
+          - Title: "Module 3: Analyzing Deals"
+            Order: 3
+            Lessons:
+              - Title: "The Deal Analysis Framework"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-analysis-framework"
+              - Title: "How to Calculate ARV (After Repair Value)"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-arv"
+              - Title: "Estimating Repairs Without Being a Contractor"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-repairs"
+              - Title: "The MAO Formula (Maximum Allowable Offer)"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-mao"
+              - Title: "Using the Deal Analyzer Spreadsheet"
+                Order: 5
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-deal-analyzer"
+              - Title: "Red Flags: When to Walk Away"
+                Order: 6
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-red-flags"
+          - Title: "Module 4: Making Offers"
+            Order: 4
+            Lessons:
+              - Title: "Talking to Motivated Sellers"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-seller-calls"
+              - Title: "The Perfect Offer Script"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-offer-script"
+              - Title: "Negotiation Tactics That Work"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-negotiation"
+              - Title: "Purchase Contracts Explained"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-contracts"
+              - Title: "Getting Contracts Signed"
+                Order: 5
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-signing"
+              - Title: "Handling Objections"
+                Order: 6
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-objections"
+          - Title: "Module 5: Finding Buyers"
+            Order: 5
+            Lessons:
+              - Title: "Building Your Cash Buyer List"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-buyer-list"
+              - Title: "Where to Find Cash Buyers"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-find-buyers"
+              - Title: "Networking for Buyers"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-networking"
+              - Title: "Marketing Your Deals to Buyers"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-marketing-deals"
+              - Title: "Qualifying Buyers (Avoid Tire-Kickers)"
+                Order: 5
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-qualify-buyers"
+              - Title: "Building Long-Term Buyer Relationships"
+                Order: 6
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-buyer-relationships"
+          - Title: "Module 6: Closing Deals"
+            Order: 6
+            Lessons:
+              - Title: "Assignment vs Double Close"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-assignment-vs-double"
+              - Title: "How to Assign a Contract"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-assign-contract"
+              - Title: "Working with Title Companies"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-title-companies"
+              - Title: "Common Closing Problems (And How to Fix Them)"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-closing-problems"
+              - Title: "Getting Paid: Collecting Your Assignment Fee"
+                Order: 5
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-getting-paid"
+              - Title: "Scaling to Multiple Deals Per Month"
+                Order: 6
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/wmc-scaling"
+
+  wmc-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Wholesaling Mastery Community"
+      ProductType: community
+      Description: "Private student community for support and deal reviews"
+      Community:
+        Name: "Wholesaling Mastery Students"
+        Description: "Connect with fellow students, get deal feedback, and celebrate wins"
+        Spaces:
+          - Name: "Announcements"
+            Slug: announcements
+            Description: "Course updates and important news"
+            Order: 1
+          - Name: "Introductions"
+            Slug: introductions
+            Description: "Introduce yourself and meet fellow students"
+            Order: 2
+          - Name: "Deal Reviews"
+            Slug: deal-reviews
+            Description: "Post your deals for feedback and analysis"
+            Order: 3
+          - Name: "Wins & Progress"
+            Slug: wins
+            Description: "Celebrate your successes and milestones"
+            Order: 4
+          - Name: "Q&A"
+            Slug: qa
+            Description: "Ask questions and get help from the community"
+            Order: 5
+          - Name: "Resources"
+            Slug: resources
+            Description: "Scripts, templates, and tools shared by the community"
+            Order: 6
+        Events:
+          - Title: "Weekly Office Hours"
+            Description: "Live Q&A session to review deals and answer questions"
+            StartAt: "2025-02-05T19:00:00Z"
+            EndAt: "2025-02-05T20:00:00Z"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/wmc-office-hours"
+            HostUserEmail: "coach@wholesalingmastery.com"
+            RecurrenceRule:
+              Frequency: weekly
+              Interval: 1
+              DaysOfWeek: [3]
+              EndType: never
+
+  # ============================================
+  # 💰 PRICING PLANS
+  # ============================================
+  wmc-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Wholesaling Mastery - Pay in Full"
+      Description: "One-time payment for full course access"
+      Amount: 99700
+      Currency: USD
+      BillingType: one_time
+
+  wmc-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Wholesaling Mastery - 3-Pay"
+      Description: "Split into 3 monthly payments"
+      Amount: 119100
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  wmc-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Wholesaling Mastery Sales Page"
+      Description: "Long-form sales page for the Wholesaling Mastery Course"
+      Steps:
+        - Name: "Sales Page"
+          Slug: sales
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "The Complete A-Z Wholesaling System That's Generated 100+ Deals"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Learn the exact step-by-step process I use to find, analyze, and close wholesale deals - even if you're starting from scratch"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=WMC_VSL_PLACEHOLDER"
+                    Provider: youtube
+                - Type: checkout
+                  Order: 4
+                  Content:
+                    OfferSlug: !Ref wmc-offer
+                    ButtonText: "Enroll Now - $997 (or 3 payments of $397)"
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Does this sound familiar?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You've heard wholesaling is the fastest way to get started in real estate without needing your own money or credit.
+                      
+                      You've watched the YouTube videos. You've read the books. Maybe you've even tried making some offers.
+                      
+                      But something's not clicking:
+                      
+                      - You don't know where to find motivated sellers who will actually sell below market value
+                      - You're not sure how to analyze deals to know if there's enough margin
+                      - You're terrified of making an offer and getting stuck with a property you can't sell
+                      - You don't have a buyer list, and you don't know where to find cash buyers
+                      - You've heard horror stories of deals falling apart at closing
+                      
+                      The information is out there, but it's scattered across a hundred different sources. And most of it is theory from people who've never actually done a deal.
+                      
+                      **What if you could learn from someone who's done 100+ wholesale deals and still does them every month?**
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's What Separates Students Who Close Deals From Those Who Don't"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      After coaching hundreds of students, I've noticed a pattern.
+                      
+                      The students who close deals quickly have three things:
+                      
+                      1. **A proven system** - Not theory, but actual step-by-step processes they can follow
+                      2. **Real examples** - Seeing how actual deals were found, analyzed, and closed
+                      3. **Support when they get stuck** - Someone to ask when they hit roadblocks
+                      
+                      That's exactly why I created Wholesaling Mastery.
+                      
+                      This isn't another course full of motivational fluff and vague advice.
+                      
+                      It's the exact system I use in my own wholesaling business, broken down into clear steps you can follow, with real deal breakdowns showing you how it works in practice.
+            - Type: content
+              Order: 4
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's What You'll Learn Inside Wholesaling Mastery"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      **Module 1: Wholesaling Foundations**
+                      Understand exactly how wholesaling works, the legal basics you need to know, and how to set up your business the right way from day one.
+                      
+                      **Module 2: Finding Deals**
+                      Master the marketing channels that generate motivated seller leads: driving for dollars, direct mail, cold calling, SMS, and online marketing. You'll know exactly where deals come from.
+                      
+                      **Module 3: Analyzing Deals**
+                      Learn to calculate ARV, estimate repairs, and use the MAO formula to know exactly what to offer. Includes the same Deal Analyzer spreadsheet I use on every deal.
+                      
+                      **Module 4: Making Offers**
+                      Get my proven scripts for talking to sellers, making offers, handling objections, and getting contracts signed. No more freezing up on seller calls.
+                      
+                      **Module 5: Finding Buyers**
+                      Build a cash buyer list from scratch, learn where to find serious buyers, and how to market your deals so they sell fast.
+                      
+                      **Module 6: Closing Deals**
+                      Understand assignment vs. double close, work smoothly with title companies, and avoid the common problems that kill deals at the finish line.
+            - Type: content
+              Order: 5
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Plus: Lifetime Access to the Student Community"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You won't be learning alone.
+                      
+                      When you enroll, you also get lifetime access to our private student community where you can:
+                      
+                      ✓ **Post deals for review** - Get feedback on your numbers before making offers
+                      ✓ **Ask questions** - Stuck on something? Get answers from students and coaches
+                      ✓ **Join weekly office hours** - Live Q&A every Wednesday to review deals and answer questions
+                      ✓ **Celebrate wins** - Share your progress and get motivated by others' success
+                      ✓ **Access resources** - Scripts, templates, and tools shared by the community
+                      
+                      Having a community of people doing the same thing makes all the difference.
+            - Type: testimonials
+              Order: 6
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "I closed my first deal 47 days after starting the course. Made $8,500 on a simple assignment. The deal analyzer alone was worth the price - I would have way underestimated my offer without it."
+                    Author: "Marcus T., Charlotte, NC"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "I'd tried wholesaling before this course and failed. The difference was having a real system to follow. Module 4 on making offers completely changed my approach. I've now closed 6 deals in my first year."
+                    Author: "Jennifer L., Phoenix, AZ"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 3
+                  Content:
+                    Quote: "The weekly office hours are incredible. I posted a deal I was nervous about and got detailed feedback within 24 hours. Turns out I was leaving $5K on the table with my offer price."
+                    Author: "David R., Houston, TX"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 4
+                  Content:
+                    Quote: "Finally, a course by someone who actually does deals. The real deal breakdowns showing actual contracts and numbers gave me the confidence to make my first offer. Closed 3 weeks later."
+                    Author: "Sarah M., Columbus, OH"
+                    Rating: 5
+            - Type: content
+              Order: 7
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Everything You Get With Wholesaling Mastery"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      ✓ **The Complete Wholesaling Mastery Course** (Value: $1,997)
+                      6 modules with 35+ video lessons covering every step from finding deals to closing
+                      
+                      ✓ **Deal Analyzer Spreadsheet** (Value: $97)
+                      The same tool I use to analyze every deal - calculate ARV, repairs, and MAO instantly
+                      
+                      ✓ **Scripts & Templates Library** (Value: $297)
+                      Seller scripts, offer templates, assignment contracts, and more
+                      
+                      ✓ **Real Deal Breakdowns** (Value: $197)
+                      See actual deals from start to finish with real numbers and contracts
+                      
+                      ✓ **Lifetime Community Access** (Value: $497)
+                      Private community with deal reviews, Q&A, and weekly office hours
+                      
+                      **Total Value: $3,085**
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      **Your Investment Today:**
+                      
+                      - **Pay in Full:** $997 (best value)
+                      - **Payment Plan:** 3 payments of $397/month
+            - Type: faq
+              Order: 8
+              Elements:
+                - Type: faq_item
+                  Order: 1
+                  Content:
+                    Question: "I'm a complete beginner. Will this work for me?"
+                    Answer: "Absolutely. The course is designed to take you from zero to closing deals. We start with the foundations and build from there. Many of our most successful students started with no real estate experience."
+                - Type: faq_item
+                  Order: 2
+                  Content:
+                    Question: "Do I need money or credit to wholesale?"
+                    Answer: "No. That's the beauty of wholesaling. You're not buying properties - you're assigning contracts. The only costs are your marketing to find deals (which can start at just $100-200/month) and the course investment."
+                - Type: faq_item
+                  Order: 3
+                  Content:
+                    Question: "How long until I can close my first deal?"
+                    Answer: "It depends on your effort and market, but students who follow the system typically close their first deal within 60-90 days. Some have done it faster. The key is taking consistent action on what you learn."
+                - Type: faq_item
+                  Order: 4
+                  Content:
+                    Question: "Is wholesaling legal in my state?"
+                    Answer: "Wholesaling is legal in all 50 states, but some states have specific requirements. Module 1 covers the legal basics, and our community can help you understand your local requirements."
+                - Type: faq_item
+                  Order: 5
+                  Content:
+                    Question: "How much can I make from wholesaling?"
+                    Answer: "Assignment fees typically range from $5,000-$20,000 per deal, depending on your market and the deal size. Students doing 1-2 deals per month are common after getting started. Results vary based on your effort and market conditions."
+                - Type: faq_item
+                  Order: 6
+                  Content:
+                    Question: "What if I have questions while going through the course?"
+                    Answer: "You'll have access to our private community where you can post questions anytime. Plus, we have weekly live office hours every Wednesday where you can get direct feedback on your deals and questions."
+            - Type: cta
+              Order: 9
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Ready to Close Your First (or Next) Wholesale Deal?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Stop piecing together information from random YouTube videos.
+                      
+                      Get a proven system from someone who's done 100+ deals and is still actively wholesaling.
+                      
+                      Join the Wholesaling Mastery community and get the support you need to succeed.
+                - Type: checkout
+                  Order: 3
+                  Content:
+                    OfferSlug: !Ref wmc-offer
+                    ButtonText: "Enroll Now - $997 (or 3 payments of $397)"
+        - Name: "Thank You"
+          Slug: thank-you
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to Wholesaling Mastery!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=WMC_THANKYOU_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Congratulations on investing in yourself and your wholesaling business!
+                      
+                      **What happens next:**
+                      
+                      1. Check your email for your portal login details
+                      2. Complete the quick onboarding flow (sign agreement + profile)
+                      3. Start with Module 1 - watch the first 3 videos today
+                      4. Introduce yourself in the community
+                      5. Join us at the next weekly office hours (Wednesdays 7pm ET)
+                      
+                      **Your first goal:** Find your first motivated seller lead within 2 weeks.
+                      
+                      You've got this. Let's close some deals!
+
+  # ============================================
+  # 📋 FORMS
+  # ============================================
+  wmc-lead-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Wholesaling Mastery Lead Form"
+      Description: "Capture leads for webinar or waitlist"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your full name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@example.com"
+        - Type: custom
+          CustomFieldSlug: !Ref wmc-cf-experience
+          Required: true
+      SubmitButton:
+        Text: "Get Access"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  wmc-onboarding-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Wholesaling Mastery Student Profile"
+      Description: "Capture student profile for personalized experience"
+      Fields:
+        - Type: custom
+          CustomFieldSlug: !Ref wmc-cf-target-market
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref wmc-cf-goals
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref wmc-cf-budget
+          Required: false
+      SubmitButton:
+        Text: "Complete Profile"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  wmc-cf-experience:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your experience level with wholesaling?"
+      FieldType: select
+      Options:
+        - "Complete beginner - never done a deal"
+        - "Learning - have done research but no deals yet"
+        - "Tried - made offers but haven't closed"
+        - "Some experience - closed 1-5 deals"
+        - "Experienced - closed 6+ deals"
+      HelpText: "This helps us tailor your experience"
+
+  wmc-cf-target-market:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What market(s) will you be wholesaling in?"
+      FieldType: text
+      Placeholder: "e.g., Dallas-Fort Worth, TX"
+      HelpText: "City/metro area where you'll focus your efforts"
+
+  wmc-cf-goals:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your goal for the next 12 months?"
+      FieldType: select
+      Options:
+        - "Close my first deal"
+        - "Close 1-2 deals per month"
+        - "Replace my income with wholesaling"
+        - "Build a wholesaling business/team"
+        - "Add wholesaling to my existing REI business"
+      HelpText: "We'll help you create a plan to get there"
+
+  wmc-cf-budget:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Monthly marketing budget for finding deals"
+      FieldType: select
+      Options:
+        - "Under $500"
+        - "$500 - $1,000"
+        - "$1,000 - $2,500"
+        - "$2,500 - $5,000"
+        - "$5,000+"
+      HelpText: "How much can you invest in marketing each month?"
+
+  # ============================================
+  # 📅 BOOKING LINK
+  # ============================================
+  wmc-office-hours:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Wholesaling Mastery Office Hours"
+      OwnerUserEmail: "coach@wholesalingmastery.com"
+      Description: "Weekly office hours for students - deal reviews and Q&A"
+      DurationMinutes: 60
+      MinNoticeHours: 1
+      MaxAdvanceDays: 7
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  wmc-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Wholesaling Mastery Student Portal"
+      Description: "Student portal for Wholesaling Mastery Course members"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 📜 AGREEMENT
+  # ============================================
+  wmc-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Wholesaling Mastery Student Agreement"
+      Title: "WHOLESALING MASTERY STUDENT AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Student Agreement ("Agreement") is entered into between Wholesaling Mastery LLC ("Company") and the undersigned student ("Student").
+        
+        ## 1. EDUCATIONAL DISCLAIMER
+        
+        Student acknowledges and agrees that:
+        
+        - This course is for **educational purposes only**
+        - The content does not constitute legal, financial, tax, or investment advice
+        - Student should consult qualified professionals (attorneys, CPAs, etc.) before taking action
+        - The Company is not a licensed real estate broker, attorney, or financial advisor
+        - Local laws and regulations vary; Student is responsible for understanding their market's requirements
+        
+        **THE COMPANY EXPRESSLY DISCLAIMS ANY RESPONSIBILITY FOR STUDENT'S BUSINESS DECISIONS.**
+        
+        ## 2. NO INCOME OR RESULTS GUARANTEES
+        
+        Student acknowledges and agrees that:
+        
+        - Results vary based on effort, market conditions, skills, and execution
+        - The Company makes no guarantees about income, profits, or deal volume
+        - Testimonials and case studies represent individual results, not typical outcomes
+        - Past performance of other students does not guarantee future results
+        - Student may not close any deals or may lose money on attempted deals
+        - Success requires significant time, effort, and potentially financial investment in marketing
+        
+        **THERE IS NO GUARANTEE THAT STUDENT WILL MAKE ANY MONEY USING THESE TECHNIQUES.**
+        
+        ## 3. COMMUNITY GUIDELINES
+        
+        When participating in the Wholesaling Mastery community, Student agrees to:
+        
+        - Treat all members with respect and professionalism
+        - Provide honest and accurate information when posting deals for review
+        - Maintain confidentiality of deals and strategies shared by other members
+        - Not spam, solicit, or promote unrelated products/services
+        - Not share login credentials or course materials with non-members
+        - Report any suspicious activity to the Company
+        
+        Violation of community guidelines may result in removal from the community without refund.
+        
+        ## 4. REFUND POLICY
+        
+        Student acknowledges and agrees that:
+        
+        - This is a **digital product** with immediate access upon purchase
+        - Due to the nature of digital content, **all sales are final**
+        - No refunds will be issued after access is granted
+        - Student has reviewed the sales page and course description before purchasing
+        
+        ## 5. ACKNOWLEDGMENT OF INVESTMENT RISK
+        
+        Student acknowledges and agrees that:
+        
+        - Real estate investing, including wholesaling, involves risk
+        - Student could lose money on deals, marketing, and other business expenses
+        - The Company is not responsible for any losses Student may incur
+        - Student accepts full responsibility for their own investment decisions
+        - Student will conduct their own due diligence before pursuing any deal
+        
+        **STUDENT ACCEPTS FULL RESPONSIBILITY FOR THEIR BUSINESS AND INVESTMENT DECISIONS.**
+        
+        ## 6. INTELLECTUAL PROPERTY
+        
+        Student agrees not to:
+        
+        - Share, distribute, or resell course materials
+        - Record, download, or redistribute video content
+        - Create derivative works based on course content
+        - Share course access with anyone not enrolled
+        
+        Course materials remain the intellectual property of Wholesaling Mastery LLC.
+        
+        ---
+        
+        **Student Signature:**
+
+  # ============================================
+  # 🎓 ONBOARDING FLOW
+  # ============================================
+  wmc-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Wholesaling Mastery Student Onboarding"
+      Description: "Onboarding flow for new Wholesaling Mastery students"
+      Steps:
+        - Name: "Sign Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to Wholesaling Mastery!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Before you dive into the course, please review and sign our student agreement.
+                      
+                      This agreement covers:
+                      - Educational disclaimer (this is education, not advice)
+                      - No income guarantees (results depend on your effort)
+                      - Community guidelines (how we treat each other)
+                      - Refund policy (digital products, all sales final)
+                      - Acknowledgment of investment risk
+                      
+                      We take these seriously to ensure everyone has a great experience.
+                - Type: agreement
+                  Order: 3
+                  Content:
+                    AgreementSlug: !Ref wmc-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Complete Profile"
+          Slug: profile
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Tell Us About Your Goals"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Help us personalize your experience by sharing a bit about your situation and goals.
+                      
+                      This information helps us:
+                      - Tailor recommendations to your market
+                      - Connect you with students in similar situations
+                      - Track your progress and celebrate wins
+                - Type: form
+                  Order: 3
+                  Content:
+                    FormSlug: !Ref wmc-onboarding-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Let's Get Started!"
+          Slug: complete
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set - Let's Close Some Deals!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Welcome to the Wholesaling Mastery family! You now have full access to:
+                      
+                      ✓ **6-Module Course** - Start with Module 1 and work through sequentially
+                      ✓ **Deal Analyzer** - Download it from Module 3 resources
+                      ✓ **Scripts & Templates** - Available in each module
+                      ✓ **Student Community** - Introduce yourself and start connecting
+                      ✓ **Weekly Office Hours** - Wednesdays at 7pm ET
+                      
+                      **Your first action steps:**
+                      
+                      1. Watch the first 3 videos in Module 1 (takes about 45 minutes)
+                      2. Post an introduction in the community
+                      3. Start driving for dollars or building a list this week
+                      
+                      The students who succeed are the ones who take action immediately.
+                      
+                      Let's go close some deals!
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Start Module 1"
+                    Action: next_step
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  wmc-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Wholesaling Mastery Students"
+      Description: "Track students through course progress"
+      Stages:
+        - Name: "Enrolled"
+          Slug: enrolled
+          Order: 1
+          Description: "Just enrolled, hasn't started yet"
+        - Name: "Module 1"
+          Slug: module-1
+          Order: 2
+          Description: "Working through Wholesaling Foundations"
+        - Name: "Module 2"
+          Slug: module-2
+          Order: 3
+          Description: "Working through Finding Deals"
+        - Name: "Module 3"
+          Slug: module-3
+          Order: 4
+          Description: "Working through Analyzing Deals"
+        - Name: "Module 4"
+          Slug: module-4
+          Order: 5
+          Description: "Working through Making Offers"
+        - Name: "Module 5"
+          Slug: module-5
+          Order: 6
+          Description: "Working through Finding Buyers"
+        - Name: "Module 6"
+          Slug: module-6
+          Order: 7
+          Description: "Working through Closing Deals"
+        - Name: "Completed"
+          Slug: completed
+          Order: 8
+          Description: "Finished all modules"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  wmc-tag-student:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "WMC Student"
+      Description: "Enrolled in Wholesaling Mastery Course"
+
+  wmc-tag-onboarded:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "WMC Onboarded"
+      Description: "Completed onboarding (agreement + profile)"
+
+  wmc-tag-completed:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "WMC Completed"
+      Description: "Finished all course modules"
+
+  wmc-tag-first-deal:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "WMC First Deal"
+      Description: "Closed their first wholesale deal"
+
+  wmc-tag-active:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "WMC Active"
+      Description: "Actively engaging in community and course"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  wmc-workflow-purchase:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Wholesaling Mastery Purchase"
+      Description: "Triggers when someone purchases the Wholesaling Mastery Course"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref wmc-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref wmc-tag-student
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref wmc-seq-onboarding
+
+  wmc-workflow-onboarding-complete:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Wholesaling Mastery Onboarding Complete"
+      Description: "Triggers when a student completes the onboarding profile form"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref wmc-onboarding-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref wmc-tag-onboarded
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCE
+  # ============================================
+  wmc-seq-onboarding:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Wholesaling Mastery Onboarding"
+      Description: "5-email onboarding sequence for new students"
+      Steps:
+        - TemplateSlug: !Ref wmc-email-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref wmc-email-module1
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref wmc-email-module2
+          DelayAmount: 5
+          DelayUnit: days
+          Order: 3
+        - TemplateSlug: !Ref wmc-email-community
+          DelayAmount: 8
+          DelayUnit: days
+          Order: 4
+        - TemplateSlug: !Ref wmc-email-progress
+          DelayAmount: 14
+          DelayUnit: days
+          Order: 5
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  wmc-email-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "WMC Welcome Email"
+      Subject: "Welcome to Wholesaling Mastery - Start Here"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Wholesaling Mastery!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Congratulations on joining Wholesaling Mastery! You just made 
+              a great decision for your wholesaling business.
+              
+              **Here's how to get started:**
+              
+              1. Log in to your student portal (link below)
+              2. Complete the quick onboarding (agreement + profile)
+              3. Start Module 1 - watch the first 3 videos today
+              4. Introduce yourself in the community
+              
+              The students who succeed are the ones who take action 
+              immediately. Don't wait - start today!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Your Course"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Your first week goal:** Complete Module 1 and start driving 
+              for dollars or building a list.
+              
+              See you inside!
+              
+              - The Wholesaling Mastery Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  wmc-email-module1:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "WMC Module 1 Prompt"
+      Subject: "Have you started Module 1 yet?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Module 1: Wholesaling Foundations"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Quick check-in: Have you started Module 1 yet?
+              
+              If not, I get it. Life gets busy. But here's the thing...
+              
+              **The longer you wait, the longer until your first deal.**
+              
+              Module 1 covers the foundations you need:
+              
+              - How wholesaling actually works (the mechanics)
+              - Legal basics to protect yourself
+              - Setting up your business the right way
+              
+              It's only 5 videos. You can knock it out in about an hour.
+              
+              Make time this week. Your future self will thank you.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Start Module 1"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Already finished Module 1?** Nice work! Move on to Module 2 
+              and start learning how to find deals.
+              
+              Keep pushing forward!
+              
+              - The Wholesaling Mastery Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  wmc-email-module2:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "WMC Module 2 Prompt"
+      Subject: "The #1 reason new wholesalers fail (and how to avoid it)"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Why Most New Wholesalers Fail"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Want to know the #1 reason new wholesalers fail?
+              
+              **They don't generate enough leads.**
+              
+              They learn the theory. They set up their business. They even 
+              analyze a few deals. But they never build a consistent 
+              pipeline of motivated sellers.
+              
+              That's why Module 2 (Finding Deals) is so important.
+              
+              In Module 2, you'll learn:
+              
+              - Driving for dollars (the cheapest way to start)
+              - Building and using seller lists
+              - Direct mail campaigns that actually work
+              - Cold calling and SMS strategies
+              - Online marketing for motivated sellers
+              
+              **Pick ONE marketing channel and commit to it for 30 days.**
+              
+              Consistency beats complexity. One focused channel will 
+              outperform five half-hearted efforts every time.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Start Module 2"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Challenge:** Drive for dollars for 2 hours this week and 
+              build a list of at least 20 distressed properties.
+              
+              Then post your results in the community. I want to see it!
+              
+              - The Wholesaling Mastery Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  wmc-email-community:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "WMC Community Reminder"
+      Subject: "You're not using this (and it could cost you deals)"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Are You Using the Community?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Quick question: Have you posted in the community yet?
+              
+              I ask because the students who engage in the community 
+              close deals faster. It's not even close.
+              
+              **Here's why:**
+              
+              - They get feedback on deals before making offers
+              - They learn from others' mistakes (and successes)
+              - They stay accountable and motivated
+              - They build connections that lead to JV opportunities
+              
+              If you haven't already:
+              
+              1. Introduce yourself in the Introductions space
+              2. Post a deal in Deal Reviews (even if you're not sure about it)
+              3. Join us at office hours this Wednesday (7pm ET)
+              
+              Don't be a lurker. The community works when you participate.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Join the Conversation"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **This week's office hours topic:** How to analyze deals and 
+              know your maximum offer. Bring a deal you're working on!
+              
+              See you there.
+              
+              - The Wholesaling Mastery Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  wmc-email-progress:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "WMC Progress Check-In"
+      Subject: "2 weeks in - how's it going?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "2-Week Check-In"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've been in Wholesaling Mastery for about 2 weeks now.
+              
+              **Quick gut check:** Are you taking action?
+              
+              By now, you should have:
+              
+              ✓ Completed at least Modules 1-2
+              ✓ Chosen a marketing channel and started generating leads
+              ✓ Introduced yourself in the community
+              ✓ Analyzed at least one potential deal
+              
+              If you're on track - amazing! Keep pushing. Your first deal 
+              is closer than you think.
+              
+              If you're behind - no judgment. But let's fix it.
+              
+              **The biggest obstacle isn't knowledge. It's action.**
+              
+              You have everything you need in the course. The question is 
+              whether you're willing to do the work.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Get Back on Track"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Feeling stuck?** Reply to this email and tell me where 
+              you're struggling. I read every response.
+              
+              Or jump into office hours this Wednesday and let's work 
+              through it together.
+              
+              You've got this!
+              
+              - The Wholesaling Mastery Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  wmc-business:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "Wholesaling Mastery LLC"
+      Email: "support@wholesalingmastery.com"
+      Phone: "+1-555-WHL-DEAL"
+      Timezone: "America/New_York"
+      BusinessType: "LLC"
+      Industry: "Real Estate Education"
+      SignatureText: "The Wholesaling Mastery Team"

@@ -1,0 +1,714 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFER
+  # ============================================
+  audit-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Ad Account Audit"
+      Description: "Comprehensive audit of your Meta/Instagram/TikTok ad account with personalized recommendations"
+      DefaultPortal: !Ref audit-portal
+      Items:
+        - Product: !Ref audit-product
+      PricingPlans:
+        - !Ref audit-price
+
+  # ============================================
+  # 📦 PRODUCT
+  # ============================================
+  audit-product:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Ad Account Audit Deliverables"
+      ProductType: page
+      Description: "Your audit deliverables and walkthrough booking"
+      Page:
+        Title: "Your Ad Account Audit"
+        Content: |
+          ## Welcome to Your Ad Account Audit
+          
+          Thanks for purchasing your Ad Account Audit! Here's what happens next:
+          
+          **Step 1: Complete Your Intake Form**
+          Fill out the form in your portal so we have everything we need to audit your account.
+          
+          **Step 2: We Review Your Account**
+          Our team will conduct a thorough audit of your ad account within 3-5 business days.
+          
+          **Step 3: Book Your Walkthrough Call**
+          Once your report is ready, you'll receive an email with a link to book your 30-minute walkthrough call where we'll review findings and recommendations together.
+          
+          ---
+          
+          ## Book Your Audit Walkthrough
+          
+          Once you've received your audit report, use the booking link in your welcome email to schedule your 30-minute walkthrough call.
+
+  # ============================================
+  # 💰 PRICING PLAN
+  # ============================================
+  audit-price:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Ad Account Audit"
+      Amount: 29700
+      Currency: USD
+      BillingType: one_time
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  audit-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Ad Account Audit Sales Page"
+      Description: "Sales page for the Ad Account Audit service"
+      Steps:
+        - Name: "Sales Page"
+          Slug: sales
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Find Out Exactly Why Your Ads Aren't Converting (And How to Fix It)"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Get a comprehensive audit of your Meta, Instagram, or TikTok ad account with specific, actionable recommendations from a media buying expert"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                    Provider: youtube
+                - Type: checkout
+                  Order: 4
+                  Content:
+                    OfferSlug: !Ref audit-offer
+                    PricingPlanSlug: !Ref audit-price
+                    ButtonText: "Get Your Audit - $297"
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Does this sound familiar?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You're spending money on ads every month, but you have no idea if you're doing it right.
+                      
+                      Your cost per lead keeps creeping up. Your ROAS is inconsistent at best. You've watched YouTube tutorials and tried different strategies, but nothing seems to stick.
+                      
+                      You suspect there are problems in your account, but you don't know what you don't know.
+                      
+                      Meanwhile, you're watching competitors scale while you're stuck wondering:
+                      - Is my targeting all wrong?
+                      - Are my creatives the problem?
+                      - Is my pixel even firing correctly?
+                      - Am I wasting money on the wrong campaign objectives?
+                      
+                      The worst part? Every day you run ads without knowing what's broken is another day of wasted budget.
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "What if you knew exactly what to fix?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Imagine having a media buying expert look under the hood of your ad account and tell you:
+                      
+                      "Here's what's working. Here's what's broken. And here's exactly how to fix it."
+                      
+                      That's what you get with an Ad Account Audit.
+                      
+                      We'll analyze your account structure, targeting, creatives, conversion tracking, and more. Then we'll give you a prioritized list of fixes that will have the biggest impact on your results.
+                      
+                      No fluff. No generic advice. Just specific recommendations based on YOUR account.
+            - Type: content
+              Order: 4
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's exactly what you get"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      ✓ Complete Account Structure Review (Value: $150)
+                      We'll analyze your campaigns, ad sets, and ads to identify structural issues that hurt performance.
+                      
+                      ✓ Targeting & Audience Analysis (Value: $150)
+                      Are you reaching the right people? We'll audit your audiences, lookalikes, and exclusions.
+                      
+                      ✓ Creative Performance Breakdown (Value: $150)
+                      Which ads are working and why? Which should you kill? We'll tell you.
+                      
+                      ✓ Conversion Tracking Audit (Value: $100)
+                      Is your pixel set up correctly? Are you tracking the right events? We'll verify everything.
+                      
+                      ✓ Prioritized Recommendations Report (Value: $200)
+                      A clear, actionable document with fixes ranked by impact and difficulty.
+                      
+                      ✓ 30-Minute Walkthrough Call (Value: $150)
+                      We'll go through the report together and answer all your questions live.
+                      
+                      Total Value: $900
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: "Your investment: Just $297"
+            - Type: testimonials
+              Order: 5
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "I thought my ads were fine. The audit revealed I was burning $800/month on a broken pixel. Fixed it in 20 minutes and immediately saw my cost per lead drop by 40%."
+                    Author: "Marcus T., E-commerce Store Owner"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "The targeting recommendations alone were worth 10x what I paid. I had no idea I was excluding my best-converting audience."
+                    Author: "Sarah K., Course Creator"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 3
+                  Content:
+                    Quote: "Finally, someone who speaks human and not ad jargon. The walkthrough call made everything crystal clear. Now I actually understand my ad account."
+                    Author: "James L., Local Business Owner"
+                    Rating: 5
+            - Type: faq
+              Order: 6
+              Elements:
+                - Type: faq_item
+                  Order: 1
+                  Content:
+                    Question: "Which platforms do you audit?"
+                    Answer: "We audit Meta (Facebook/Instagram) and TikTok ad accounts. If you're running ads on either platform, we can help."
+                - Type: faq_item
+                  Order: 2
+                  Content:
+                    Question: "How long does the audit take?"
+                    Answer: "You'll receive your audit report within 3-5 business days of submitting your intake form. Then we'll schedule your 30-minute walkthrough call."
+                - Type: faq_item
+                  Order: 3
+                  Content:
+                    Question: "What if my account is really small?"
+                    Answer: "We audit accounts of all sizes. Even if you're only spending $500/month, we can identify quick wins that will improve your results."
+                - Type: faq_item
+                  Order: 4
+                  Content:
+                    Question: "Do you also manage ads?"
+                    Answer: "Yes! If you want us to implement the recommendations and manage your ads ongoing, we offer management packages. Many audit clients upgrade after seeing the results."
+            - Type: cta
+              Order: 7
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Stop Guessing. Start Knowing."
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "For less than what most businesses waste on bad ads in a single week, get expert eyes on your account and a clear roadmap to better results."
+                - Type: checkout
+                  Order: 3
+                  Content:
+                    OfferSlug: !Ref audit-offer
+                    PricingPlanSlug: !Ref audit-price
+                    ButtonText: "Get Your Audit - $297"
+        - Name: "Thank You"
+          Slug: thank-you
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're In! Let's Audit Your Account."
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Thanks for purchasing your Ad Account Audit!
+                      
+                      Check your email for login details to your client portal.
+                      
+                      **Your next step:** Complete the intake form in your portal so we have everything we need to audit your account.
+                      
+                      We'll have your audit report ready within 3-5 business days.
+
+  # ============================================
+  # 📋 FORM
+  # ============================================
+  audit-intake-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Ad Account Audit Intake"
+      Description: "Intake form to gather client ad account details"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+        - Type: standard
+          FieldName: email
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-business-name
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-website
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-ad-account-link
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-monthly-spend
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-primary-goal
+          Required: true
+      SubmitButton:
+        Text: "Submit Intake Form"
+
+  # ============================================
+  # 🔧 CUSTOM FIELD
+  # ============================================
+  cf-business-name:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Business Name"
+      FieldType: text
+      HelpText: "The name of your business"
+
+  cf-website:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Website URL"
+      FieldType: url
+      HelpText: "Your business website URL"
+
+  cf-ad-account-link:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Ad Account Link"
+      FieldType: url
+      HelpText: "Link to your Meta Business Suite or TikTok Ads Manager"
+
+  cf-monthly-spend:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Monthly Ad Spend"
+      FieldType: select
+      HelpText: "Your approximate monthly ad spend"
+      Options:
+        - "Under $1,000"
+        - "$1,000 - $5,000"
+        - "$5,000 - $10,000"
+        - "$10,000 - $25,000"
+        - "$25,000+"
+
+  cf-primary-goal:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Primary Goal"
+      FieldType: select
+      HelpText: "What's your main goal with paid ads?"
+      Options:
+        - "Generate more leads"
+        - "Increase online sales"
+        - "Lower cost per acquisition"
+        - "Scale existing campaigns"
+        - "Not sure / Need guidance"
+
+  # ============================================
+  # 📅 BOOKING LINK
+  # ============================================
+  audit-walkthrough-booking:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Audit Walkthrough"
+      OwnerUserEmail: "team@adscaleagency.com"
+      Description: "30-minute call to review your ad account audit findings"
+      DurationMinutes: 30
+      BufferBeforeMinutes: 5
+      BufferAfterMinutes: 5
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  audit-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "AdScale Client Portal"
+      Description: "Client portal for Ad Account Audit customers"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  audit-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Audit Clients"
+      Description: "Track ad account audit clients through delivery stages"
+      Stages:
+        - Name: "Purchased"
+          Slug: purchased
+          Order: 1
+          Description: "Client has purchased the audit, awaiting intake form"
+        - Name: "Intake Received"
+          Slug: intake-received
+          Order: 2
+          Description: "Intake form submitted, ready to begin audit"
+        - Name: "In Review"
+          Slug: in-review
+          Order: 3
+          Description: "Audit in progress"
+        - Name: "Report Sent"
+          Slug: report-sent
+          Order: 4
+          Description: "Audit report delivered, awaiting walkthrough call"
+        - Name: "Complete"
+          Slug: complete
+          Order: 5
+          Description: "Walkthrough call completed, audit fulfilled"
+
+  # ============================================
+  # 🏷️ TAG
+  # ============================================
+  audit-client-tag:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Audit Client"
+      Description: "Purchased the Ad Account Audit"
+
+  upsell-candidate-tag:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Upsell Candidate"
+      Description: "Good fit for ad management services"
+
+  # ============================================
+  # ⚡ WORKFLOW
+  # ============================================
+  audit-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Audit Purchase"
+      Description: "Triggers when someone purchases the Ad Account Audit"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref audit-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref audit-client-tag
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref audit-sequence
+
+  audit-intake-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Audit Intake Submitted"
+      Description: "Triggers when a client submits their audit intake form"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref audit-intake-form
+      Steps:
+        - Type: move_deal_stage
+          Order: 1
+          Config:
+            PipelineSlug: !Ref audit-pipeline
+            StageSlug: intake-received
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCE
+  # ============================================
+  audit-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Audit Client Sequence"
+      Description: "Welcome, reminder, delivery, and upsell emails for audit clients"
+      Steps:
+        - TemplateSlug: !Ref audit-welcome-email
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref audit-reminder-email
+          DelayAmount: 1
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref audit-delivered-email
+          DelayAmount: 5
+          DelayUnit: days
+          Order: 3
+        - TemplateSlug: !Ref audit-upsell-email
+          DelayAmount: 10
+          DelayUnit: days
+          Order: 4
+
+  # ============================================
+  # 📧 EMAIL TEMPLATE
+  # ============================================
+  audit-welcome-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Audit Welcome"
+      Subject: "Your Ad Account Audit - Next Steps Inside"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome! Let's Audit Your Ad Account"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thanks for purchasing your Ad Account Audit! I'm excited to 
+              dig into your account and find opportunities to improve your 
+              results.
+              
+              **Your next step:** Complete the intake form in your client 
+              portal. This gives us the access and information we need to 
+              conduct a thorough audit.
+              
+              Here's what happens after you submit:
+              
+              1. We'll review your account within 3-5 business days
+              2. You'll receive your detailed audit report via email
+              3. We'll schedule your 30-minute walkthrough call
+              
+              The sooner you complete the intake form, the sooner we can 
+              get started!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Complete Intake Form"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: spacer
+          Order: 4
+          Settings:
+            Height: 30
+        - Type: text
+          Order: 5
+          Content:
+            Text: "Questions? Just reply to this email."
+        - Type: divider
+          Order: 6
+        - Type: text
+          Order: 7
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  audit-reminder-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Audit Intake Reminder"
+      Subject: "Quick reminder: Complete your intake form"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Don't Forget Your Intake Form"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Just a quick reminder that we're ready to start your Ad 
+              Account Audit as soon as you complete the intake form.
+              
+              It only takes about 5 minutes and includes:
+              - Your business name and website
+              - Link to your ad account
+              - Your current monthly spend
+              - Your primary advertising goal
+              
+              Once we have this info, we can dive into your account and 
+              start finding opportunities to improve your results.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Complete Intake Form"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  audit-delivered-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Audit Report Delivered"
+      Subject: "Your Ad Account Audit Report is Ready"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Your Audit Report is Ready!"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Great news! Your Ad Account Audit report is complete and 
+              ready for review.
+              
+              We've identified several opportunities to improve your ad 
+              performance, including:
+              
+              - Account structure recommendations
+              - Targeting optimizations
+              - Creative insights
+              - Tracking verification results
+              - Prioritized action items
+              
+              **Next step:** Book your 30-minute walkthrough call so we 
+              can review everything together and answer your questions.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Walkthrough Call"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              During the call, we'll:
+              - Walk through each finding in detail
+              - Prioritize fixes based on your goals
+              - Answer any questions you have
+              - Discuss next steps if you want help implementing
+              
+              Looking forward to chatting!
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  audit-upsell-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Audit Upsell"
+      Subject: "Want us to implement your audit recommendations?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Want Help Implementing?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Now that you've seen your audit results, you might be 
+              wondering: "How do I actually implement all this?"
+              
+              You have two options:
+              
+              **Option 1: DIY Implementation**
+              Use your audit report as a roadmap and make the changes 
+              yourself. You've got all the information you need.
+              
+              **Option 2: Let Us Handle It**
+              If you'd rather have experts implement the recommendations 
+              and manage your ads ongoing, we offer done-for-you ad 
+              management packages.
+              
+              Our clients typically see:
+              - 30-50% reduction in cost per lead
+              - More consistent ROAS
+              - Time back to focus on their business
+              
+              If you're interested in learning more about our management 
+              services, just reply to this email and I'll send over the 
+              details.
+              
+              Either way, I'm rooting for your success!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Reply to Learn More"
+            LinkUrl: "mailto:team@adscaleagency.com"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  business-profile:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "AdScale Agency LLC"
+      Email: "team@adscaleagency.com"
+      Phone: "+1-555-234-5678"
+      Timezone: "America/New_York"
+      BusinessType: "LLC"
+      Industry: "Marketing & Advertising"
+      SignatureText: "The AdScale Team"

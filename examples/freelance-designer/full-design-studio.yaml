@@ -1,0 +1,1320 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFERS
+  # ============================================
+  fds-audit-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Brand Audit Checklist"
+      Description: "DIY brand assessment toolkit"
+      DefaultPortal: !Ref fds-starter-portal
+      Items:
+        - Product: !Ref fds-audit-product
+      PricingPlans:
+        - !Ref fds-audit-price
+
+  fds-logo-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Logo Design Package"
+      Description: "Professional logo with variations and guidelines"
+      DefaultPortal: !Ref fds-logo-portal
+      OnboardingFlowSlug: !Ref fds-logo-onboarding
+      Items:
+        - Product: !Ref fds-logo-product
+        - Product: !Ref fds-logo-guidelines
+      PricingPlans:
+        - !Ref fds-logo-pif
+        - !Ref fds-logo-split
+
+  fds-identity-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Brand Identity Package"
+      Description: "Complete visual identity system"
+      DefaultPortal: !Ref fds-identity-portal
+      OnboardingFlowSlug: !Ref fds-identity-onboarding
+      Items:
+        - Product: !Ref fds-logo-product
+        - Product: !Ref fds-identity-system
+        - Product: !Ref fds-brand-guidelines
+      PricingPlans:
+        - !Ref fds-identity-pif
+        - !Ref fds-identity-split
+
+  fds-suite-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Full Brand Suite"
+      Description: "Premium brand package with all deliverables"
+      DefaultPortal: !Ref fds-suite-portal
+      OnboardingFlowSlug: !Ref fds-suite-onboarding
+      Items:
+        - Product: !Ref fds-logo-product
+        - Product: !Ref fds-identity-system
+        - Product: !Ref fds-brand-guidelines
+        - Product: !Ref fds-stationery
+        - Product: !Ref fds-templates
+        - Product: !Ref fds-collateral
+      PricingPlans:
+        - !Ref fds-suite-pif
+        - !Ref fds-suite-split
+
+  # ============================================
+  # 📦 PRODUCTS
+  # ============================================
+  fds-audit-product:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Brand Audit Checklist"
+      ProductType: page
+      Description: "DIY brand assessment toolkit"
+      Page:
+        Title: "Your Brand Audit Checklist"
+        Content: |
+          ## Brand Audit Toolkit
+          
+          Use this toolkit to evaluate your current brand.
+          
+          ---
+          
+          ## Downloads
+          
+          **[Brand Audit Checklist (PDF)](https://drive.google.com/audit-checklist)**
+          
+          **[Scoring Worksheet](https://docs.google.com/scoring)**
+          
+          **[Action Plan Template](https://drive.google.com/action-plan)**
+          
+          ---
+          
+          ## Video Walkthrough
+          
+          Watch the 15-minute walkthrough explaining each section.
+
+  fds-logo-product:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Logo Design"
+      ProductType: page
+      Description: "Professional logo design"
+      Page:
+        Title: "Your Logo Design"
+        Content: |
+          ## Logo Deliverables
+          
+          - 3 logo concepts
+          - 3 revision rounds
+          - All variations and file formats
+          
+          Files will be uploaded here as completed.
+
+  fds-logo-guidelines:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Logo Guidelines"
+      ProductType: page
+      Description: "Basic logo usage guidelines"
+      Page:
+        Title: "Logo Guidelines"
+        Content: |
+          ## Logo Usage Guidelines
+          
+          Basic guidelines for using your new logo.
+
+  fds-identity-system:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Visual Identity System"
+      ProductType: page
+      Description: "Color palette and typography"
+      Page:
+        Title: "Visual Identity"
+        Content: |
+          ## Your Visual Identity
+          
+          - Full color palette
+          - Typography system
+          - Pattern elements
+
+  fds-brand-guidelines:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Brand Guidelines"
+      ProductType: page
+      Description: "Comprehensive brand guidelines"
+      Page:
+        Title: "Brand Guidelines"
+        Content: |
+          ## Brand Guidelines Document
+          
+          Your comprehensive 20+ page brand guidelines.
+
+  fds-stationery:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Stationery Suite"
+      ProductType: page
+      Description: "Business stationery designs"
+      Page:
+        Title: "Stationery Suite"
+        Content: |
+          ## Business Stationery
+          
+          - Business cards
+          - Letterhead
+          - Envelope
+          - Email signature
+
+  fds-templates:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Social Templates"
+      ProductType: page
+      Description: "Social media templates"
+      Page:
+        Title: "Social Media Templates"
+        Content: |
+          ## Social Media Templates
+          
+          20+ branded templates for all platforms.
+
+  fds-collateral:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Brand Collateral"
+      ProductType: page
+      Description: "Additional brand materials"
+      Page:
+        Title: "Brand Collateral"
+        Content: |
+          ## Brand Collateral
+          
+          - Presentation template
+          - Proposal template
+          - Flyer design
+          - Icon set
+
+  # ============================================
+  # 💰 PRICING PLANS
+  # ============================================
+  fds-audit-price:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Brand Audit"
+      Amount: 4700
+      Currency: USD
+      BillingType: one_time
+
+  fds-logo-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Logo - Pay in Full"
+      Amount: 150000
+      Currency: USD
+      BillingType: one_time
+
+  fds-logo-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Logo - 2 Payments"
+      Amount: 159400
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 2
+
+  fds-identity-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Identity - Pay in Full"
+      Amount: 350000
+      Currency: USD
+      BillingType: one_time
+
+  fds-identity-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Identity - 3 Payments"
+      Amount: 389700
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  fds-suite-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Suite - Pay in Full"
+      Amount: 750000
+      Currency: USD
+      BillingType: one_time
+
+  fds-suite-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Suite - 4 Payments"
+      Amount: 829600
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 4
+
+  # ============================================
+  # 🚀 FUNNELS
+  # ============================================
+  fds-audit-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Brand Audit Sales"
+      Description: "Sales page for brand audit"
+      Steps:
+        - Name: "Sales"
+          Slug: sales
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Is Your Brand Working Against You?"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Find out in 30 minutes with the Brand Audit Checklist"
+                - Type: checkout
+                  Order: 3
+                  Content:
+                    OfferSlug: !Ref fds-audit-offer
+                    PricingPlanSlug: !Ref fds-audit-price
+                    ButtonText: "Get the Checklist - $47"
+
+  fds-services-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Design Services"
+      Description: "Main services inquiry funnel"
+      Steps:
+        - Name: "Services"
+          Slug: services
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Professional Brand Design Services"
+                - Type: button
+                  Order: 2
+                  Content:
+                    Text: "See Packages"
+                    Action: next_step
+        - Name: "Packages"
+          Slug: packages
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Choose Your Package"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      **LOGO DESIGN - $1,500**
+                      Logo with variations and basic guidelines
+                      
+                      ---
+                      
+                      **BRAND IDENTITY - $3,500**
+                      Logo + colors + typography + brand guidelines
+                      
+                      ---
+                      
+                      **FULL BRAND SUITE - $7,500**
+                      Complete brand package with all deliverables
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Start Your Project"
+                    Action: next_step
+        - Name: "Inquiry"
+          Slug: inquiry
+          Order: 3
+          Sections:
+            - Type: form
+              Order: 1
+              Elements:
+                - Type: form
+                  Order: 1
+                  Content:
+                    FormSlug: !Ref fds-inquiry-form
+        - Name: "Book"
+          Slug: book
+          Order: 4
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Book Your Discovery Call"
+                - Type: booking_link
+                  Order: 2
+                  Content:
+                    BookingLinkSlug: !Ref fds-discovery-call
+
+  # ============================================
+  # 📋 FORMS
+  # ============================================
+  fds-lead-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Lead Capture"
+      Description: "Lead capture form"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+        - Type: standard
+          FieldName: email
+          Required: true
+      SubmitButton:
+        Text: "Get Free Tips"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        MaxWidth: 400
+
+  fds-inquiry-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Service Inquiry"
+      Description: "Inquiry for design services"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+        - Type: standard
+          FieldName: email
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref fds-cf-business-name
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref fds-cf-package
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref fds-cf-about
+          Required: true
+      SubmitButton:
+        Text: "Submit"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        MaxWidth: 500
+
+  fds-discovery-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Brand Discovery"
+      Description: "Brand discovery questionnaire"
+      Fields:
+        - Type: custom
+          CustomFieldSlug: !Ref fds-cf-description
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref fds-cf-audience
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref fds-cf-personality
+          Required: true
+      SubmitButton:
+        Text: "Submit"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        MaxWidth: 600
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  fds-cf-business-name:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Business name"
+      FieldType: text
+      Placeholder: "Your company"
+      HelpText: "Company name"
+
+  fds-cf-package:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Package interest"
+      FieldType: select
+      Options:
+        - "Logo ($1,500)"
+        - "Identity ($3,500)"
+        - "Suite ($7,500)"
+        - "Not sure"
+      HelpText: "Which package?"
+
+  fds-cf-about:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "About your project"
+      FieldType: textarea
+      Placeholder: "Tell me about your project"
+      HelpText: "Brief description"
+
+  fds-cf-description:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Business description"
+      FieldType: textarea
+      Placeholder: "What does your business do?"
+      HelpText: "About your business"
+
+  fds-cf-audience:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Target audience"
+      FieldType: textarea
+      Placeholder: "Who are your customers?"
+      HelpText: "Ideal customer"
+
+  fds-cf-personality:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Brand personality"
+      FieldType: textarea
+      Placeholder: "3-5 words describing your brand"
+      HelpText: "Brand feel"
+
+  # ============================================
+  # 📅 BOOKING LINKS
+  # ============================================
+  fds-discovery-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Discovery Call"
+      OwnerUserEmail: "hello@sarahdesignstudio.com"
+      Description: "30-minute discovery call"
+      DurationMinutes: 30
+      MinNoticeHours: 24
+      MaxAdvanceDays: 14
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  fds-strategy-session:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Strategy Session"
+      OwnerUserEmail: "hello@sarahdesignstudio.com"
+      Description: "60-minute strategy session"
+      DurationMinutes: 60
+      MinNoticeHours: 48
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTALS
+  # ============================================
+  fds-starter-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Starter Portal"
+      Description: "Portal for audit buyers"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  fds-logo-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Logo Client Portal"
+      Description: "Portal for logo clients"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  fds-identity-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Identity Client Portal"
+      Description: "Portal for identity clients"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  fds-suite-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Suite Client Portal"
+      Description: "Portal for suite clients"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 📜 AGREEMENTS
+  # ============================================
+  fds-logo-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Logo Agreement"
+      Title: "LOGO DESIGN AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        ## Logo Design Package
+        
+        - 3 logo concepts
+        - 3 revision rounds
+        - All file formats
+        - Basic guidelines
+        
+        **Investment:** $1,500
+        
+        By signing, you agree to these terms.
+
+  fds-identity-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Identity Agreement"
+      Title: "BRAND IDENTITY AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        ## Brand Identity Package
+        
+        Everything in Logo, plus:
+        - Strategy session
+        - Color palette
+        - Typography system
+        - Brand guidelines
+        
+        **Investment:** $3,500
+        
+        By signing, you agree to these terms.
+
+  fds-suite-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Suite Agreement"
+      Title: "FULL BRAND SUITE AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        ## Full Brand Suite
+        
+        Everything in Identity, plus:
+        - Stationery suite
+        - Social templates
+        - Brand collateral
+        
+        **Investment:** $7,500
+        
+        By signing, you agree to these terms.
+
+  # ============================================
+  # 🎓 ONBOARDING FLOWS
+  # ============================================
+  fds-logo-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Logo Onboarding"
+      Description: "Onboarding for logo clients"
+      Steps:
+        - Name: "Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome!"
+                - Type: agreement
+                  Order: 2
+                  Content:
+                    AgreementSlug: !Ref fds-logo-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Discovery"
+          Slug: discovery
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Brand Discovery"
+                - Type: form
+                  Order: 2
+                  Content:
+                    FormSlug: !Ref fds-discovery-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Ready"
+          Slug: ready
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Check your email for next steps!"
+
+  fds-identity-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Identity Onboarding"
+      Description: "Onboarding for identity clients"
+      Steps:
+        - Name: "Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome!"
+                - Type: agreement
+                  Order: 2
+                  Content:
+                    AgreementSlug: !Ref fds-identity-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Discovery"
+          Slug: discovery
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Brand Discovery"
+                - Type: form
+                  Order: 2
+                  Content:
+                    FormSlug: !Ref fds-discovery-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Ready"
+          Slug: ready
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "I'll schedule your strategy session!"
+
+  fds-suite-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Suite Onboarding"
+      Description: "Onboarding for suite clients"
+      Steps:
+        - Name: "Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to Your Brand Suite!"
+                - Type: agreement
+                  Order: 2
+                  Content:
+                    AgreementSlug: !Ref fds-suite-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Discovery"
+          Slug: discovery
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Brand Discovery"
+                - Type: form
+                  Order: 2
+                  Content:
+                    FormSlug: !Ref fds-discovery-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Ready"
+          Slug: ready
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "This is going to be amazing! Check your email."
+
+  # ============================================
+  # 🔄 PIPELINES
+  # ============================================
+  fds-client-journey:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Client Journey"
+      Description: "Track clients through value ladder"
+      Stages:
+        - Name: "Lead"
+          Slug: lead
+          Order: 1
+          Description: "New lead"
+        - Name: "Audit Buyer"
+          Slug: audit
+          Order: 2
+          Description: "Purchased audit"
+        - Name: "Logo Client"
+          Slug: logo
+          Order: 3
+          Description: "Logo project"
+        - Name: "Identity Client"
+          Slug: identity
+          Order: 4
+          Description: "Identity project"
+        - Name: "Suite Client"
+          Slug: suite
+          Order: 5
+          Description: "Suite project"
+
+  fds-sales-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Sales Pipeline"
+      Description: "Track service inquiries"
+      Stages:
+        - Name: "Inquiry"
+          Slug: inquiry
+          Order: 1
+          Description: "Submitted inquiry"
+        - Name: "Call Scheduled"
+          Slug: scheduled
+          Order: 2
+          Description: "Call booked"
+        - Name: "Call Complete"
+          Slug: complete
+          Order: 3
+          Description: "Call done"
+        - Name: "Won"
+          Slug: won
+          Order: 4
+          Description: "Signed"
+        - Name: "Lost"
+          Slug: lost
+          Order: 5
+          Description: "Did not proceed"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  fds-tag-lead:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Lead"
+      Description: "Captured lead"
+
+  fds-tag-audit:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Audit Buyer"
+      Description: "Purchased brand audit"
+
+  fds-tag-logo:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Logo Client"
+      Description: "Logo package client"
+
+  fds-tag-identity:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Identity Client"
+      Description: "Identity package client"
+
+  fds-tag-suite:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Suite Client"
+      Description: "Suite package client"
+
+  fds-tag-active:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Active Project"
+      Description: "Project in progress"
+
+  fds-tag-complete:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Project Complete"
+      Description: "Project finished"
+
+  fds-tag-upsell-logo:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Upsell: Logo"
+      Description: "Ready for logo upsell"
+
+  fds-tag-upsell-identity:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Upsell: Identity"
+      Description: "Ready for identity upsell"
+
+  fds-tag-upsell-suite:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Upsell: Suite"
+      Description: "Ready for suite upsell"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  fds-workflow-audit:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Audit Purchase"
+      Description: "Triggers on audit purchase"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref fds-audit-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref fds-tag-audit
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref fds-seq-audit
+
+  fds-workflow-logo:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Logo Purchase"
+      Description: "Triggers on logo purchase"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref fds-logo-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref fds-tag-logo
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref fds-tag-active
+        - Type: enroll_sequence
+          Order: 3
+          Config:
+            SequenceSlug: !Ref fds-seq-welcome
+
+  fds-workflow-identity:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Identity Purchase"
+      Description: "Triggers on identity purchase"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref fds-identity-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref fds-tag-identity
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref fds-tag-active
+
+  fds-workflow-suite:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Suite Purchase"
+      Description: "Triggers on suite purchase"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref fds-suite-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref fds-tag-suite
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref fds-tag-active
+
+  fds-workflow-inquiry:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Service Inquiry"
+      Description: "Triggers on service inquiry"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref fds-inquiry-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref fds-tag-lead
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref fds-seq-inquiry
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCES
+  # ============================================
+  fds-seq-audit:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Audit Welcome"
+      Description: "Welcome for audit buyers"
+      Steps:
+        - TemplateSlug: !Ref fds-email-audit-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref fds-email-audit-tip
+          DelayAmount: 3
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref fds-email-upsell-logo
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 3
+
+  fds-seq-inquiry:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Inquiry Follow-up"
+      Description: "Follow-up for inquiries"
+      Steps:
+        - TemplateSlug: !Ref fds-email-inquiry
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref fds-email-reminder
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+
+  fds-seq-welcome:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Client Welcome"
+      Description: "Welcome for new clients"
+      Steps:
+        - TemplateSlug: !Ref fds-email-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  fds-email-audit-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Audit Welcome"
+      Subject: "Your Brand Audit is ready!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Your Brand Audit is Ready!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Your Brand Audit Checklist is ready! Log in to access your toolkit.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Your Audit"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fds-email-audit-tip:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Audit Tip"
+      Subject: "Quick brand tip"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Brand Tip"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              The #1 brand mistake I see? Inconsistency. Your logo, colors, and fonts should look the same everywhere.
+              
+              How did your audit go? I'd love to hear what you discovered!
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fds-email-upsell-logo:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Upsell Logo"
+      Subject: "Need help with your brand?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Ready for Professional Help?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              How did your brand audit go? If you discovered your brand needs more than a few tweaks, I can help.
+              
+              My Logo Design Package ($1,500) includes:
+              - 3 logo concepts
+              - 3 rounds of revisions
+              - All file formats
+              - Basic guidelines
+              
+              Interested? Book a free discovery call!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Learn More"
+            LinkUrl: "{{funnel.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fds-email-inquiry:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Inquiry Received"
+      Subject: "Got your inquiry!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Thanks for Reaching Out!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thanks for your interest! Book a discovery call so we can discuss your project.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Discovery Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fds-email-reminder:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Call Reminder"
+      Subject: "Still thinking about your brand?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Quick Reminder"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Did you book your discovery call yet? I have limited spots available!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book a Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fds-email-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Client Welcome"
+      Subject: "Welcome! Let's get started"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Excited to work with you! Please complete your onboarding in the client portal.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Go to Portal"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  fds-business:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "Sarah Design Studio LLC"
+      Email: "hello@sarahdesignstudio.com"
+      Phone: "+1-555-DESIGN"
+      Timezone: "America/New_York"
+      BusinessType: "LLC"
+      Industry: "Graphic Design"
+      SignatureText: "Sarah Design Studio"

@@ -1,0 +1,996 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFER
+  # ============================================
+  bip-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Brand Identity Package"
+      Description: "Complete visual identity: logo, colors, typography, guidelines"
+      DefaultPortal: !Ref bip-portal
+      OnboardingFlowSlug: !Ref bip-onboarding
+      Items:
+        - Product: !Ref bip-identity
+        - Product: !Ref bip-guidelines
+        - Product: !Ref bip-templates
+      PricingPlans:
+        - !Ref bip-pif
+        - !Ref bip-split
+
+  # ============================================
+  # 📦 PRODUCTS
+  # ============================================
+  bip-identity:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Brand Identity System"
+      ProductType: page
+      Description: "Complete brand identity deliverables"
+      Page:
+        Title: "Your Brand Identity"
+        Content: |
+          ## Welcome to Your Brand Identity Project!
+          
+          This is your hub for all brand identity deliverables.
+          
+          ---
+          
+          ## Project Timeline
+          
+          **Week 1-2:** Brand strategy and research
+          - Brand strategy session (60 min)
+          - Competitor and market research
+          - Mood board development
+          
+          **Week 3-4:** Logo design
+          - 3 unique logo concepts
+          - Refinement of selected concept
+          - Logo variations finalized
+          
+          **Week 5-6:** Brand system
+          - Color palette development
+          - Typography selection
+          - Pattern/texture exploration
+          
+          **Week 7-8:** Deliverables
+          - Brand guidelines document
+          - Social media templates
+          - Business card design
+          - Final file delivery
+          
+          ---
+          
+          ## Your Deliverables
+          
+          Files will appear here as they're completed:
+          
+          - [ ] Logo files (coming Week 4)
+          - [ ] Color palette (coming Week 5)
+          - [ ] Typography guide (coming Week 6)
+          - [ ] Brand guidelines PDF (coming Week 7)
+          - [ ] Social templates (coming Week 8)
+          - [ ] Business cards (coming Week 8)
+
+  bip-guidelines:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Brand Guidelines Document"
+      ProductType: page
+      Description: "Comprehensive brand guidelines"
+      Page:
+        Title: "Brand Guidelines"
+        Content: |
+          ## Your Brand Guidelines
+          
+          Your comprehensive brand guidelines document will be uploaded here upon completion.
+          
+          ---
+          
+          ## What's Included
+          
+          - Brand story and positioning
+          - Logo usage rules and clear space
+          - Color palette with hex, RGB, CMYK codes
+          - Typography hierarchy and usage
+          - Photography and imagery style
+          - Do's and don'ts
+          - Application examples
+
+  bip-templates:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Brand Templates"
+      ProductType: page
+      Description: "Social media and business card templates"
+      Page:
+        Title: "Your Brand Templates"
+        Content: |
+          ## Brand Templates
+          
+          Your branded templates will be uploaded here upon completion.
+          
+          ---
+          
+          ## Included Templates
+          
+          **Social Media**
+          - Instagram post templates (5 layouts)
+          - Instagram story templates (3 layouts)
+          - LinkedIn banner
+          - Facebook cover
+          
+          **Business Materials**
+          - Business card design (front + back)
+          - Email signature template
+
+  # ============================================
+  # 💰 PRICING PLANS
+  # ============================================
+  bip-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Brand Identity - Pay in Full"
+      Description: "One-time payment"
+      Amount: 350000
+      Currency: USD
+      BillingType: one_time
+
+  bip-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Brand Identity - 3 Payments"
+      Description: "Split into 3 monthly payments"
+      Amount: 389700
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  bip-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Brand Identity Inquiry"
+      Description: "Inquiry funnel for brand identity services"
+      Steps:
+        - Name: "Services"
+          Slug: services
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Complete Brand Identity Design"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "More than a logo - a complete visual system for your brand"
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: text
+                  Order: 1
+                  Content:
+                    Text: |
+                      ## What's Included
+                      
+                      **Brand Strategy**
+                      - 60-minute brand strategy session
+                      - Competitor and market research
+                      - Brand positioning statement
+                      
+                      **Logo Design**
+                      - 3 unique logo concepts
+                      - 3 rounds of revisions
+                      - Logo variations (horizontal, stacked, icon)
+                      - All file formats
+                      
+                      **Visual Identity**
+                      - Full color palette with codes
+                      - Typography system (2 fonts)
+                      - Pattern/texture elements
+                      
+                      **Deliverables**
+                      - 20+ page brand guidelines PDF
+                      - Social media templates
+                      - Business card design
+                      
+                      ---
+                      
+                      ## Investment: $3,500
+                      
+                      Payment plans available. Timeline: 6-8 weeks.
+                - Type: button
+                  Order: 2
+                  Content:
+                    Text: "Start Your Brand Project"
+                    Action: next_step
+        - Name: "Inquiry"
+          Slug: inquiry
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Tell Me About Your Brand"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Fill out this form and I'll reach out to schedule a discovery call.
+            - Type: form
+              Order: 2
+              Elements:
+                - Type: form
+                  Order: 1
+                  Content:
+                    FormSlug: !Ref bip-inquiry-form
+        - Name: "Book Call"
+          Slug: book
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Book Your Discovery Call"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Let's chat about your brand vision and goals. This 30-minute call helps me understand if we're a good fit.
+                - Type: booking_link
+                  Order: 3
+                  Content:
+                    BookingLinkSlug: !Ref bip-discovery-call
+        - Name: "Confirmed"
+          Slug: confirmed
+          Order: 4
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're Booked!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Check your email for the calendar invite.
+                      
+                      **Before our call, think about:**
+                      - Your brand's personality and values
+                      - Brands you admire (and why)
+                      - Your target audience
+                      - What makes your business unique
+
+  # ============================================
+  # 📋 FORMS
+  # ============================================
+  bip-inquiry-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Brand Identity Inquiry"
+      Description: "Initial inquiry for brand identity"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@company.com"
+        - Type: custom
+          CustomFieldSlug: !Ref bip-cf-business-name
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref bip-cf-industry
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref bip-cf-current-brand
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref bip-cf-timeline
+          Required: true
+      SubmitButton:
+        Text: "Submit Inquiry"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+
+  bip-discovery-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Brand Discovery Form"
+      Description: "In-depth brand discovery questionnaire"
+      Fields:
+        - Type: custom
+          CustomFieldSlug: !Ref bip-cf-business-story
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref bip-cf-target-audience
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref bip-cf-brand-personality
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref bip-cf-competitors
+          Required: false
+        - Type: custom
+          CustomFieldSlug: !Ref bip-cf-inspiration
+          Required: false
+        - Type: custom
+          CustomFieldSlug: !Ref bip-cf-avoid
+          Required: false
+      SubmitButton:
+        Text: "Submit Discovery Form"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 600
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  bip-cf-business-name:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Business name"
+      FieldType: text
+      Placeholder: "Your company name"
+      HelpText: "The name for your brand identity"
+
+  bip-cf-industry:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Industry"
+      FieldType: select
+      Options:
+        - "Professional Services"
+        - "Creative / Design"
+        - "Technology / SaaS"
+        - "Health / Wellness"
+        - "Food / Beverage"
+        - "Retail / E-commerce"
+        - "Real Estate"
+        - "Finance / Consulting"
+        - "Education / Coaching"
+        - "Non-profit"
+        - "Other"
+      HelpText: "Select your industry"
+
+  bip-cf-current-brand:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Current brand situation"
+      FieldType: select
+      Options:
+        - "Starting fresh - no existing brand"
+        - "Have a logo but need full identity"
+        - "Full rebrand - replacing everything"
+        - "Refresh - updating existing brand"
+      HelpText: "Where are you starting from?"
+
+  bip-cf-timeline:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Timeline"
+      FieldType: select
+      Options:
+        - "ASAP (rush fee may apply)"
+        - "Within 2 months"
+        - "Within 3-4 months"
+        - "Flexible"
+      HelpText: "Standard timeline is 6-8 weeks"
+
+  bip-cf-business-story:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Tell me your brand story"
+      FieldType: textarea
+      Placeholder: "How did your business start? What's your mission?"
+      HelpText: "Share your origin story and what drives you"
+
+  bip-cf-target-audience:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Who is your ideal customer?"
+      FieldType: textarea
+      Placeholder: "Demographics, psychographics, pain points..."
+      HelpText: "Be as specific as possible"
+
+  bip-cf-brand-personality:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Brand personality traits"
+      FieldType: textarea
+      Placeholder: "Pick 3-5 words that describe your brand"
+      HelpText: "E.g., Bold, Innovative, Approachable, Trustworthy"
+
+  bip-cf-competitors:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Main competitors"
+      FieldType: textarea
+      Placeholder: "List 3-5 competitors with websites"
+      HelpText: "Helps me understand your market positioning"
+
+  bip-cf-inspiration:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Brand inspiration"
+      FieldType: textarea
+      Placeholder: "Brands you admire and why"
+      HelpText: "Can be inside or outside your industry"
+
+  bip-cf-avoid:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What to avoid"
+      FieldType: textarea
+      Placeholder: "Styles, colors, or approaches you don't want"
+      HelpText: "Knowing what you don't like is just as helpful"
+
+  # ============================================
+  # 📅 BOOKING LINKS
+  # ============================================
+  bip-discovery-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Brand Identity Discovery Call"
+      OwnerUserEmail: "hello@sarahdesigns.co"
+      Description: "30-minute call to discuss your brand project"
+      DurationMinutes: 30
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 14
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  bip-strategy-session:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Brand Strategy Session"
+      OwnerUserEmail: "hello@sarahdesigns.co"
+      Description: "60-minute brand strategy deep-dive"
+      DurationMinutes: 60
+      BufferAfterMinutes: 30
+      MinNoticeHours: 48
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  bip-review-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Brand Review Call"
+      OwnerUserEmail: "hello@sarahdesigns.co"
+      Description: "30-minute call to review brand concepts"
+      DurationMinutes: 30
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  bip-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Brand Identity Client Portal"
+      Description: "Portal for brand identity clients"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 📜 AGREEMENT
+  # ============================================
+  bip-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Brand Identity Agreement"
+      Title: "BRAND IDENTITY SERVICES AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Design Services Agreement is between Sarah Designs LLC ("Designer") and the undersigned ("Client").
+        
+        ## SCOPE OF WORK
+        
+        Designer agrees to provide comprehensive brand identity services:
+        
+        **Brand Strategy**
+        - 60-minute brand strategy session
+        - Competitor and market research
+        - Brand positioning development
+        
+        **Logo Design**
+        - 3 unique logo concepts
+        - 3 rounds of revisions
+        - Logo variations (horizontal, stacked, icon-only)
+        - All file formats (AI, EPS, PDF, PNG, JPG, SVG)
+        
+        **Visual Identity System**
+        - Full color palette with specifications
+        - Typography system (2 font families)
+        - Optional pattern/texture elements
+        
+        **Deliverables**
+        - Comprehensive brand guidelines (20+ pages)
+        - Social media templates (Instagram, LinkedIn, Facebook)
+        - Business card design
+        
+        ## TIMELINE
+        
+        Estimated project duration: 6-8 weeks from strategy session.
+        
+        ## PAYMENT
+        
+        Total investment: $3,500 USD
+        
+        - Pay in full, or
+        - 3 monthly payments of $1,299
+        
+        First payment due before project begins.
+        
+        ## REVISIONS
+        
+        Package includes 3 rounds of revisions per deliverable. Additional revisions billed at $150/hour.
+        
+        ## COPYRIGHT
+        
+        Upon final payment, Client receives full copyright ownership of all approved deliverables. Designer retains portfolio rights.
+        
+        ## CANCELLATION
+        
+        - Before strategy session: Full refund minus $350 admin fee
+        - After strategy session: 50% of total due
+        - After logo concepts presented: 75% of total due
+        
+        By signing, Client agrees to these terms.
+
+  # ============================================
+  # 🎓 ONBOARDING FLOW
+  # ============================================
+  bip-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Brand Identity Onboarding"
+      Description: "Onboarding for brand identity clients"
+      Steps:
+        - Name: "Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to Your Brand Identity Project!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Please review and sign the design services agreement to get started."
+                - Type: agreement
+                  Order: 3
+                  Content:
+                    AgreementSlug: !Ref bip-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Discovery"
+          Slug: discovery
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Brand Discovery Form"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "This form helps me understand your brand deeply. Take your time - detailed answers lead to better results!"
+                - Type: form
+                  Order: 3
+                  Content:
+                    FormSlug: !Ref bip-discovery-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Ready"
+          Slug: ready
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Thanks for completing your onboarding! Here's what happens next:
+                      
+                      **This week:** I'll review your discovery form and schedule our brand strategy session
+                      
+                      **Strategy session:** We'll deep-dive into your brand vision (60 min)
+                      
+                      **Following weeks:** Logo concepts, refinement, and brand system development
+                      
+                      Check your email for strategy session scheduling. Questions? Just reply to any email.
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  bip-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Brand Identity Leads"
+      Description: "Track brand identity inquiries"
+      Stages:
+        - Name: "Inquiry"
+          Slug: inquiry
+          Order: 1
+          Description: "Submitted inquiry form"
+        - Name: "Call Scheduled"
+          Slug: call-scheduled
+          Order: 2
+          Description: "Discovery call booked"
+        - Name: "Call Complete"
+          Slug: call-complete
+          Order: 3
+          Description: "Call finished"
+        - Name: "Proposal Sent"
+          Slug: proposal-sent
+          Order: 4
+          Description: "Proposal sent"
+        - Name: "Won"
+          Slug: won
+          Order: 5
+          Description: "Client signed and paid"
+        - Name: "Lost"
+          Slug: lost
+          Order: 6
+          Description: "Did not proceed"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  bip-tag-inquiry:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Brand Identity Inquiry"
+      Description: "Submitted brand identity inquiry"
+
+  bip-tag-client:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Brand Identity Client"
+      Description: "Purchased brand identity package"
+
+  bip-tag-in-progress:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Brand Project Active"
+      Description: "Brand identity project in progress"
+
+  bip-tag-complete:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Brand Project Complete"
+      Description: "Brand identity project completed"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  bip-workflow-inquiry:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Brand Identity Inquiry"
+      Description: "Triggers on inquiry submission"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref bip-inquiry-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref bip-tag-inquiry
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref bip-seq-inquiry
+
+  bip-workflow-purchase:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Brand Identity Purchased"
+      Description: "Triggers on purchase"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref bip-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref bip-tag-client
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref bip-tag-in-progress
+        - Type: enroll_sequence
+          Order: 3
+          Config:
+            SequenceSlug: !Ref bip-seq-welcome
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCES
+  # ============================================
+  bip-seq-inquiry:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Brand Identity Inquiry Follow-up"
+      Description: "Follow-up for brand identity inquiries"
+      Steps:
+        - TemplateSlug: !Ref bip-email-inquiry
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref bip-email-reminder
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+
+  bip-seq-welcome:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Brand Identity Welcome"
+      Description: "Welcome sequence for new clients"
+      Steps:
+        - TemplateSlug: !Ref bip-email-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref bip-email-kickoff
+          DelayAmount: 1
+          DelayUnit: days
+          Order: 2
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  bip-email-inquiry:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Brand Identity Inquiry Received"
+      Subject: "Let's create your brand identity!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Thanks for Reaching Out!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I'm excited to learn about your brand identity project! A complete brand system is a significant investment in your business - let's make sure we're a great fit.
+              
+              **Next step:** Book a free 30-minute discovery call so we can discuss your vision.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Discovery Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Talk soon!
+              
+              Sarah
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  bip-email-reminder:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Brand Identity Call Reminder"
+      Subject: "Ready to build your brand?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Quick Follow-up"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Just checking in on your brand identity project. Have you had a chance to book your discovery call?
+              
+              I have limited availability for new projects, so if you're serious about investing in your brand, let's chat soon!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book a Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Not ready yet? No worries - just reply and let me know where you're at.
+              
+              Sarah
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  bip-email-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Brand Identity Client Welcome"
+      Subject: "Welcome! Your brand identity journey begins"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Your Brand Identity Project!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I'm thrilled to be working with you! Your payment is confirmed and your brand identity project is officially underway.
+              
+              **First step:** Complete your onboarding in the client portal:
+              
+              1. Sign the design agreement
+              2. Fill out the brand discovery form (this is important!)
+              
+              Once I receive your discovery form, I'll reach out to schedule your 60-minute brand strategy session.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Complete Onboarding"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Let's create something amazing!
+              
+              Sarah
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  bip-email-kickoff:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Brand Identity Kickoff"
+      Subject: "Your 6-8 week brand journey"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Your Brand Identity Timeline"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Here's what to expect over the next 6-8 weeks:
+              
+              **Weeks 1-2: Strategy**
+              - Brand strategy session (60 min)
+              - Research and mood boards
+              
+              **Weeks 3-4: Logo Design**
+              - 3 logo concepts presented
+              - Refinement and revisions
+              
+              **Weeks 5-6: Brand System**
+              - Color palette finalized
+              - Typography selected
+              
+              **Weeks 7-8: Deliverables**
+              - Brand guidelines completed
+              - Templates and files delivered
+              
+              Have you completed your brand discovery form yet? I need it before we can schedule your strategy session!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Go to Portal"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Excited to dive in!
+              
+              Sarah
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"

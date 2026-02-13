@@ -1,0 +1,1103 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFERS
+  # ============================================
+  starter-tier-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Growth Starter"
+      Description: "Ad management for businesses spending up to $10k/month on ads"
+      DefaultPortal: !Ref tiered-portal
+      Items:
+        - Product: !Ref starter-dashboard
+      PricingPlans:
+        - !Ref starter-monthly
+
+  growth-tier-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Growth Pro"
+      Description: "Ad management for businesses spending $10k-$30k/month on ads"
+      DefaultPortal: !Ref tiered-portal
+      Items:
+        - Product: !Ref growth-dashboard
+        - Product: !Ref creative-library
+      PricingPlans:
+        - !Ref growth-monthly
+
+  scale-tier-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Growth Scale"
+      Description: "Full-service ad management for businesses spending $30k+/month on ads"
+      DefaultPortal: !Ref tiered-portal
+      Items:
+        - Product: !Ref scale-dashboard
+        - Product: !Ref creative-library
+      PricingPlans:
+        - !Ref scale-monthly
+
+  # ============================================
+  # 📦 PRODUCTS
+  # ============================================
+  starter-dashboard:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Growth Starter Dashboard"
+      ProductType: page
+      Description: "Client dashboard for Growth Starter tier"
+      Page:
+        Title: "Growth Starter Dashboard"
+        Content: |
+          ## Welcome to Growth Starter
+          
+          Your ad management dashboard with everything you need to track your campaign performance.
+          
+          ### What's Included in Your Plan
+          
+          - **Platforms:** 1 platform (Meta OR TikTok)
+          - **Ad Spend:** Up to $10,000/month
+          - **Reports:** Weekly performance reports
+          - **Strategy Calls:** Monthly 30-minute strategy call
+          - **Support:** Email support (24-48hr response)
+          
+          ### Weekly Reports
+          
+          Your performance reports are delivered every Monday. They include:
+          - Spend breakdown
+          - Key metrics (CPA, ROAS, CTR)
+          - What we tested this week
+          - What we're testing next week
+          
+          ### Monthly Strategy Calls
+          
+          Your monthly call is where we:
+          - Review the previous month's performance
+          - Discuss upcoming promotions or offers
+          - Align on strategy for the next month
+          - Answer your questions
+          
+          [Book your monthly call here](/booking/starter-strategy)
+          
+          ### Questions?
+          
+          Email us at team@adscaleagency.com
+
+  growth-dashboard:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Growth Pro Dashboard"
+      ProductType: page
+      Description: "Client dashboard for Growth Pro tier"
+      Page:
+        Title: "Growth Pro Dashboard"
+        Content: |
+          ## Welcome to Growth Pro
+          
+          Your ad management dashboard with expanded services for scaling brands.
+          
+          ### What's Included in Your Plan
+          
+          - **Platforms:** 2 platforms (Meta AND TikTok)
+          - **Ad Spend:** $10,000 - $30,000/month
+          - **Reports:** Weekly performance reports
+          - **Strategy Calls:** Bi-weekly 30-minute strategy calls
+          - **Creative:** Fresh ad creatives included monthly
+          - **Support:** Priority email support (same-day response)
+          
+          ### Weekly Reports
+          
+          Your performance reports are delivered every Monday. They include:
+          - Spend breakdown by platform
+          - Key metrics (CPA, ROAS, CTR, CPM)
+          - Creative performance analysis
+          - Testing results and learnings
+          - Recommendations for next week
+          
+          ### Bi-Weekly Strategy Calls
+          
+          Every two weeks, we meet to:
+          - Deep-dive into performance data
+          - Review new creative concepts
+          - Adjust strategy based on results
+          - Plan upcoming campaigns
+          
+          [Book your bi-weekly call here](/booking/growth-strategy)
+          
+          ### Creative Refresh
+          
+          Access your new ad creatives in the Creative Library section below.
+          Request new creatives anytime through the portal.
+          
+          ### Questions?
+          
+          Email us at team@adscaleagency.com - priority response guaranteed.
+
+  scale-dashboard:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Growth Scale Dashboard"
+      ProductType: page
+      Description: "Client dashboard for Growth Scale tier"
+      Page:
+        Title: "Growth Scale Dashboard"
+        Content: |
+          ## Welcome to Growth Scale
+          
+          Your full-service ad management command center with premium support.
+          
+          ### What's Included in Your Plan
+          
+          - **Platforms:** All platforms (Meta, TikTok, Google, YouTube)
+          - **Ad Spend:** $30,000+/month
+          - **Reports:** Weekly performance reports + real-time dashboard
+          - **Strategy Calls:** Weekly 30-minute strategy calls
+          - **Creative:** Unlimited creative refresh
+          - **Dedicated Strategist:** Your personal account strategist
+          - **Support:** Dedicated Slack channel (instant response)
+          
+          ### Your Dedicated Strategist
+          
+          **Sarah Mitchell** is your dedicated account strategist.
+          - Direct Slack access for instant communication
+          - She knows your business inside and out
+          - Available for ad-hoc calls when needed
+          
+          ### Weekly Reports
+          
+          Your comprehensive reports include:
+          - Full cross-platform performance analysis
+          - Creative performance and fatigue metrics
+          - Audience insights and opportunities
+          - Competitive intelligence
+          - Strategic recommendations
+          
+          ### Weekly Strategy Calls
+          
+          Every week, we cover:
+          - Performance review and optimization updates
+          - Creative pipeline and upcoming launches
+          - Strategic initiatives and testing roadmap
+          - Business goals alignment
+          
+          [Book your weekly call here](/booking/scale-strategy)
+          
+          ### Slack Channel
+          
+          Your dedicated Slack channel: #adscale-yourcompany
+          - Instant access to your strategist
+          - Quick questions and approvals
+          - Real-time campaign updates
+          - Emergency support when needed
+          
+          ### Questions?
+          
+          Message us on Slack or email team@adscaleagency.com
+
+  creative-library:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Creative Library"
+      ProductType: page
+      Description: "Access to ad creative assets and request new creatives"
+      Page:
+        Title: "Creative Library"
+        Content: |
+          ## Your Ad Creative Library
+          
+          All your ad creatives organized and ready to use.
+          
+          ### Current Creatives
+          
+          Your latest ad creatives are organized by campaign and date:
+          
+          **Active Creatives**
+          - View all currently running ad creatives
+          - Performance metrics for each creative
+          - Easy download for your records
+          
+          **Creative Archive**
+          - All previous creatives organized by month
+          - Historical performance data
+          - Reference for future creative direction
+          
+          ### Request New Creatives
+          
+          Need fresh creatives? Here's how:
+          
+          1. **Slack (Scale tier):** Message your dedicated channel
+          2. **Email:** Send requests to team@adscaleagency.com
+          3. **Strategy Call:** Discuss creative direction on your next call
+          
+          **Turnaround Times:**
+          - Growth Pro: 5-7 business days
+          - Growth Scale: 3-5 business days (priority)
+          
+          ### Creative Guidelines
+          
+          For best results, include:
+          - Campaign objective (awareness, leads, sales)
+          - Target audience description
+          - Key messages or offers to highlight
+          - Any brand guidelines or preferences
+          - Reference examples you like
+
+  # ============================================
+  # 💰 PRICING PLANS
+  # ============================================
+  starter-monthly:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Growth Starter - Monthly"
+      Description: "Ad management for up to $10k/month ad spend"
+      Amount: 300000
+      Currency: USD
+      BillingType: subscription
+      BillingInterval: monthly
+
+  growth-monthly:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Growth Pro - Monthly"
+      Description: "Ad management for $10k-$30k/month ad spend"
+      Amount: 500000
+      Currency: USD
+      BillingType: subscription
+      BillingInterval: monthly
+
+  scale-monthly:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Growth Scale - Monthly"
+      Description: "Full-service ad management for $30k+/month ad spend"
+      Amount: 1000000
+      Currency: USD
+      BillingType: subscription
+      BillingInterval: monthly
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  tiered-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Ad Management Tiers Application"
+      Description: "Application funnel for tiered ad management services"
+      Steps:
+        - Name: "Learn More"
+          Slug: tiers
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Done-For-You Ad Management"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Stop wasting money on underperforming ads. Our team manages your campaigns daily so you can focus on running your business."
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                    Provider: youtube
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Choose the Right Tier for Your Business"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      **Growth Starter - $3,000/month**
+                      Best for: Businesses spending up to $10k/month on ads
+                      
+                      - 1 platform (Meta or TikTok)
+                      - Weekly performance reports
+                      - Monthly strategy call
+                      - Email support
+                      
+                      ---
+                      
+                      **Growth Pro - $5,000/month**
+                      Best for: Businesses spending $10k-$30k/month on ads
+                      
+                      - 2 platforms (Meta + TikTok)
+                      - Weekly performance reports
+                      - Bi-weekly strategy calls
+                      - Creative refresh included
+                      - Priority email support
+                      
+                      ---
+                      
+                      **Growth Scale - $10,000/month**
+                      Best for: Businesses spending $30k+/month on ads
+                      
+                      - All platforms (Meta, TikTok, Google, YouTube)
+                      - Weekly performance reports + real-time dashboard
+                      - Weekly strategy calls
+                      - Unlimited creative refresh
+                      - Dedicated account strategist
+                      - Private Slack channel
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      **Not sure which tier is right for you?**
+                      
+                      Apply below and we'll recommend the best fit on our discovery call.
+                - Type: button
+                  Order: 4
+                  Content:
+                    Text: "Apply Now"
+                    Action: next_step
+                  Settings:
+                    Alignment: center
+        - Name: "Apply"
+          Slug: apply
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Apply for Ad Management"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Tell us about your business so we can recommend the right tier for you."
+            - Type: form
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Tell us about your business:"
+                - Type: form
+                  Order: 2
+                  Content:
+                    FormSlug: !Ref tiered-application-form
+        - Name: "Book Call"
+          Slug: book
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Book Your Discovery Call"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Great! Let's schedule a 60-minute discovery call to:
+                      
+                      - Review your current ad performance
+                      - Understand your business goals
+                      - Recommend the right tier for you
+                      - Answer any questions you have
+                      
+                      Pick a time that works for you:
+                - Type: booking_link
+                  Order: 3
+                  Content:
+                    BookingLinkSlug: !Ref tiered-discovery-call
+        - Name: "Confirmed"
+          Slug: confirmed
+          Order: 4
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=CONFIRMATION_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Your discovery call is confirmed! Check your email for the calendar invite.
+                      
+                      **Before our call, please:**
+                      
+                      1. Have access to your ad accounts (or be ready to grant us access)
+                      2. Know your current monthly ad spend
+                      3. Have a sense of your growth goals for the next 90 days
+                      
+                      **What to expect on the call:**
+                      
+                      - We'll review your current ad performance
+                      - Discuss what's working and what's not
+                      - Recommend the right tier for your business
+                      - Answer all your questions
+                      - Discuss next steps if there's a fit
+                      
+                      See you soon!
+                      
+                      *The AdScale Team*
+
+  # ============================================
+  # 📋 FORM
+  # ============================================
+  tiered-application-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Tiered Management Application"
+      Description: "Application form for tiered ad management services"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your full name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@company.com"
+        - Type: custom
+          CustomFieldSlug: !Ref cf-tiered-business-name
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-tiered-website
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-tiered-ad-spend
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-tiered-platforms
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-tiered-goals
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-tiered-challenge
+          Required: false
+        - Type: custom
+          CustomFieldSlug: !Ref cf-tiered-investment
+          Required: true
+      SubmitButton:
+        Text: "Submit Application"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  cf-tiered-business-name:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Business Name"
+      FieldType: text
+      Placeholder: "Your company name"
+      HelpText: "The name of your business"
+
+  cf-tiered-website:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Website URL"
+      FieldType: text
+      Placeholder: "https://yourwebsite.com"
+      HelpText: "Your main business website"
+
+  cf-tiered-ad-spend:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Current Monthly Ad Spend"
+      FieldType: select
+      HelpText: "How much do you currently spend on ads per month?"
+      Options:
+        - "Under $5,000/month"
+        - "$5,000 - $10,000/month"
+        - "$10,000 - $30,000/month"
+        - "$30,000 - $50,000/month"
+        - "$50,000+/month"
+
+  cf-tiered-platforms:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Which Platforms Are You Advertising On?"
+      FieldType: select
+      HelpText: "Select all platforms you currently use or want to use"
+      Options:
+        - "Meta (Facebook/Instagram) only"
+        - "TikTok only"
+        - "Meta + TikTok"
+        - "Meta + TikTok + Google"
+        - "Other platforms"
+
+  cf-tiered-goals:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What Are Your Goals for the Next 90 Days?"
+      FieldType: textarea
+      Placeholder: "Tell us about your growth goals..."
+      HelpText: "What do you want to achieve with your advertising?"
+
+  cf-tiered-challenge:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's Your Biggest Advertising Challenge?"
+      FieldType: textarea
+      Placeholder: "What's not working with your current ads?"
+      HelpText: "Help us understand what problems you're facing"
+
+  cf-tiered-investment:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Investment Range"
+      FieldType: select
+      HelpText: "Which investment level fits your budget?"
+      Options:
+        - "$3,000/month (Growth Starter)"
+        - "$5,000/month (Growth Pro)"
+        - "$10,000/month (Growth Scale)"
+        - "Need to discuss budget"
+
+  # ============================================
+  # 📅 BOOKING LINKS
+  # ============================================
+  tiered-discovery-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Ad Management Discovery Call"
+      OwnerUserEmail: "team@adscaleagency.com"
+      Description: "60-minute discovery call to discuss your ad management needs"
+      DurationMinutes: 60
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 14
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  starter-strategy-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Starter Monthly Strategy Call"
+      OwnerUserEmail: "team@adscaleagency.com"
+      Description: "30-minute monthly strategy call for Growth Starter clients"
+      DurationMinutes: 30
+      BufferAfterMinutes: 10
+      MinNoticeHours: 24
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  growth-strategy-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Growth Pro Bi-Weekly Strategy Call"
+      OwnerUserEmail: "team@adscaleagency.com"
+      Description: "30-minute bi-weekly strategy call for Growth Pro clients"
+      DurationMinutes: 30
+      BufferAfterMinutes: 10
+      MinNoticeHours: 24
+      MaxAdvanceDays: 14
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  scale-strategy-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Growth Scale Weekly Strategy Call"
+      OwnerUserEmail: "team@adscaleagency.com"
+      Description: "30-minute weekly strategy call for Growth Scale clients"
+      DurationMinutes: 30
+      BufferAfterMinutes: 10
+      MinNoticeHours: 24
+      MaxAdvanceDays: 7
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  tiered-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "AdScale Growth Portal"
+      Description: "Client portal for ad management clients"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  tiered-sales-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Tiered Management Sales"
+      Description: "Track tiered ad management sales opportunities"
+      Stages:
+        - Name: "Lead"
+          Slug: lead
+          Order: 1
+          Description: "New lead from website or referral"
+        - Name: "Applied"
+          Slug: applied
+          Order: 2
+          Description: "Submitted application form"
+        - Name: "Call Booked"
+          Slug: call-booked
+          Order: 3
+          Description: "Discovery call scheduled"
+        - Name: "Call Completed"
+          Slug: call-completed
+          Order: 4
+          Description: "Discovery call completed"
+        - Name: "Proposal Sent"
+          Slug: proposal-sent
+          Order: 5
+          Description: "Proposal or agreement sent"
+        - Name: "Won"
+          Slug: won
+          Order: 6
+          Description: "Client signed up for a tier"
+        - Name: "Lost"
+          Slug: lost
+          Order: 7
+          Description: "Did not proceed"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  tiered-applicant-tag:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Tiered Applicant"
+      Description: "Applied for tiered ad management"
+
+  starter-client-tag:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Starter Client"
+      Description: "Growth Starter tier client"
+
+  growth-client-tag:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Growth Client"
+      Description: "Growth Pro tier client"
+
+  scale-client-tag:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Scale Client"
+      Description: "Growth Scale tier client"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  tiered-application-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Tiered Application Submitted"
+      Description: "Triggered when someone submits the tiered management application"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref tiered-application-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref tiered-applicant-tag
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref tiered-applicant-sequence
+
+  starter-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Starter Tier Purchased"
+      Description: "Triggered when someone purchases Growth Starter"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref starter-tier-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref starter-client-tag
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref tiered-onboarding-sequence
+
+  growth-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Growth Tier Purchased"
+      Description: "Triggered when someone purchases Growth Pro"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref growth-tier-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref growth-client-tag
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref tiered-onboarding-sequence
+
+  scale-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Scale Tier Purchased"
+      Description: "Triggered when someone purchases Growth Scale"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref scale-tier-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref scale-client-tag
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref tiered-onboarding-sequence
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCES
+  # ============================================
+  tiered-applicant-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Tiered Applicant Nurture"
+      Description: "Nurture sequence for tiered management applicants"
+      Steps:
+        - TemplateSlug: !Ref tiered-application-received-email
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref tiered-call-reminder-email
+          DelayAmount: 1
+          DelayUnit: days
+          Order: 2
+
+  tiered-onboarding-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Tiered Client Onboarding"
+      Description: "Onboarding sequence for new tiered management clients"
+      Steps:
+        - TemplateSlug: !Ref tiered-welcome-email
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref tiered-week-one-email
+          DelayAmount: 3
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref tiered-first-report-email
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 3
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  tiered-application-received-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Tiered Application Received"
+      Subject: "We received your application"
+      Elements:
+        - Type: text
+          Order: 1
+          Content:
+            Text: "Hi {{contact.firstName}},"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Thanks for applying to work with AdScale Agency!
+              
+              We've reviewed your application and we're excited to learn more 
+              about your business and advertising goals.
+              
+              **Next step:** Book your discovery call so we can:
+              
+              - Review your current ad performance
+              - Understand your goals and challenges
+              - Recommend the right tier for your business
+              - Answer any questions you have
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Discovery Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Questions before the call?**
+              
+              Just reply to this email and we'll get back to you.
+              
+              Talk soon!
+              
+              The AdScale Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  tiered-call-reminder-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Tiered Call Reminder"
+      Subject: "Don't forget to book your call"
+      Elements:
+        - Type: text
+          Order: 1
+          Content:
+            Text: "Hi {{contact.firstName}},"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Quick reminder: have you booked your discovery call yet?
+              
+              Spots fill up fast and I'd hate for you to miss out on 
+              getting expert eyes on your ad account.
+              
+              Our discovery calls are completely free and there's no 
+              obligation. We'll give you actionable insights even if 
+              you decide not to work with us.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Call Now"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              If the timing isn't right, no worries. Just reply and let 
+              me know.
+              
+              Talk soon!
+              
+              The AdScale Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  tiered-welcome-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Tiered Client Welcome"
+      Subject: "Welcome to AdScale! Let's get started"
+      Elements:
+        - Type: text
+          Order: 1
+          Content:
+            Text: "Hi {{contact.firstName}},"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Welcome to AdScale Agency! We're thrilled to have you on board.
+              
+              **Here's what happens next:**
+              
+              1. **Today:** You'll receive a separate email to schedule your 
+                 kickoff call with your account manager
+              
+              2. **Within 24 hours:** We'll request access to your ad accounts 
+                 and any existing assets
+              
+              3. **Within 48 hours:** Your account manager will complete their 
+                 initial audit
+              
+              4. **Kickoff call:** We'll review findings and align on strategy
+              
+              **Access your client portal:**
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Go to Your Dashboard"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Questions? Just reply to this email.
+              
+              Let's build something great together!
+              
+              The AdScale Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  tiered-week-one-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Tiered Week One Check-In"
+      Subject: "How's your first week going?"
+      Elements:
+        - Type: text
+          Order: 1
+          Content:
+            Text: "Hi {{contact.firstName}},"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              It's been a few days since we started working together and 
+              I wanted to check in.
+              
+              By now, your account manager should have:
+              
+              ✓ Completed the initial account audit
+              ✓ Set up tracking and reporting
+              ✓ Started implementing the initial strategy
+              
+              **Questions or concerns?**
+              
+              We're here to help. Just reply to this email or reach out 
+              to your account manager directly.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "View Your Dashboard"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Your first performance report will arrive soon!
+              
+              The AdScale Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  tiered-first-report-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Tiered First Report"
+      Subject: "Your first performance report is ready"
+      Elements:
+        - Type: text
+          Order: 1
+          Content:
+            Text: "Hi {{contact.firstName}},"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Your first weekly performance report is ready!
+              
+              Log in to your dashboard to see:
+              
+              - Current campaign performance
+              - Key metrics and trends
+              - What we've optimized
+              - What we're testing next
+              
+              This is just the beginning. Performance typically improves 
+              significantly over the first 30-60 days as we learn what 
+              works best for your audience.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "View Your Report"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Have questions about the report?**
+              
+              Bring them to your next strategy call or reply to this email.
+              
+              Here's to great results!
+              
+              The AdScale Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+

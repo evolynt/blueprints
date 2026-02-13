@@ -1,0 +1,2018 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFERS
+  # ============================================
+  dct-starter-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Deal Coaching - Starter"
+      Description: "3-month coaching program with 6 sessions, student community access, and essential resources"
+      DefaultPortal: !Ref dct-starter-portal
+      OnboardingFlowSlug: !Ref dct-starter-onboarding
+      Items:
+        - Product: !Ref dct-starter-coaching
+        - Product: !Ref dct-student-community
+        - Product: !Ref dct-resources
+      PricingPlans:
+        - !Ref dct-starter-pif
+        - !Ref dct-starter-split
+
+  dct-accel-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Deal Coaching - Accelerator"
+      Description: "6-month intensive program with 12 sessions, VIP community access, personal deal reviews, and buyer/contractor rolodex"
+      DefaultPortal: !Ref dct-accel-portal
+      OnboardingFlowSlug: !Ref dct-accel-onboarding
+      Items:
+        - Product: !Ref dct-accel-coaching
+        - Product: !Ref dct-vip-community
+        - Product: !Ref dct-resources
+      PricingPlans:
+        - !Ref dct-accel-pif
+        - !Ref dct-accel-split
+
+  dct-inner-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Deal Coaching - Inner Circle"
+      Description: "12-month elite program with 24 sessions, Inner Circle community, JV deal opportunities, quarterly retreats, and direct phone access"
+      DefaultPortal: !Ref dct-inner-portal
+      OnboardingFlowSlug: !Ref dct-inner-onboarding
+      Items:
+        - Product: !Ref dct-inner-coaching
+        - Product: !Ref dct-inner-community
+        - Product: !Ref dct-resources
+      PricingPlans:
+        - !Ref dct-inner-pif
+        - !Ref dct-inner-split
+
+  # ============================================
+  # 📦 PRODUCTS - COACHING
+  # ============================================
+  dct-starter-coaching:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Starter Coaching Sessions"
+      ProductType: coaching
+      Description: "6 private coaching sessions over 3 months"
+      Coaching:
+        Title: "Starter Coaching Session"
+        Description: "60-minute 1:1 coaching call to review deals and strategize"
+        Quantity: 6
+        BookingLink: !Ref dct-coaching-session
+        ExpirationDays: 120
+
+  dct-accel-coaching:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Accelerator Coaching Sessions"
+      ProductType: coaching
+      Description: "12 private coaching sessions over 6 months"
+      Coaching:
+        Title: "Accelerator Coaching Session"
+        Description: "60-minute 1:1 coaching call with personal deal reviews and advanced strategies"
+        Quantity: 12
+        BookingLink: !Ref dct-coaching-session
+        ExpirationDays: 210
+
+  dct-inner-coaching:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Inner Circle Coaching Sessions"
+      ProductType: coaching
+      Description: "24 private VIP coaching sessions over 12 months"
+      Coaching:
+        Title: "Inner Circle VIP Session"
+        Description: "60-minute VIP coaching call with priority scheduling and JV deal review"
+        Quantity: 24
+        BookingLink: !Ref dct-vip-session
+        ExpirationDays: 400
+
+  # ============================================
+  # 📦 PRODUCTS - COMMUNITIES
+  # ============================================
+  dct-student-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Student Community"
+      ProductType: community
+      Description: "Private community for Starter coaching clients"
+      Community:
+        Name: "Deal Coaching Students"
+        Description: "Connect with fellow students, get support, and celebrate wins"
+        Spaces:
+          - Name: "Announcements"
+            Slug: announcements
+            Description: "Updates and important news"
+            Order: 1
+          - Name: "Introductions"
+            Slug: introductions
+            Description: "Introduce yourself and meet fellow students"
+            Order: 2
+          - Name: "Q&A"
+            Slug: qa
+            Description: "Ask questions and get answers"
+            Order: 3
+          - Name: "Wins"
+            Slug: wins
+            Description: "Celebrate your progress and closed deals"
+            Order: 4
+        Events:
+          - Title: "Monthly Group Q&A"
+            Description: "Live group Q&A session for Starter clients"
+            StartAt: "2025-02-15T19:00:00Z"
+            EndAt: "2025-02-15T20:00:00Z"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/dct-monthly-qa"
+            HostUserEmail: "coach@reicoachingpro.com"
+            RecurrenceRule:
+              Frequency: monthly
+              DayOfMonth: 15
+              EndType: never
+
+  dct-vip-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "VIP Community"
+      ProductType: community
+      Description: "Private VIP community for Accelerator coaching clients"
+      Community:
+        Name: "Deal Coaching VIP"
+        Description: "Exclusive community for Accelerator members with deal flow and networking"
+        Spaces:
+          - Name: "Announcements"
+            Slug: announcements
+            Description: "VIP updates and opportunities"
+            Order: 1
+          - Name: "Deal Flow"
+            Slug: deal-flow
+            Description: "Off-market deals and opportunities"
+            Order: 2
+          - Name: "Deal Reviews"
+            Slug: deal-reviews
+            Description: "Post deals for community feedback"
+            Order: 3
+          - Name: "Networking"
+            Slug: networking
+            Description: "Connect with VIP members for partnerships"
+            Order: 4
+          - Name: "Resources"
+            Slug: resources
+            Description: "Buyer lists, contractor contacts, and tools"
+            Order: 5
+          - Name: "Wins"
+            Slug: wins
+            Description: "Celebrate your success"
+            Order: 6
+        Events:
+          - Title: "Bi-Weekly VIP Call"
+            Description: "Live Q&A and deal review session for VIP members"
+            StartAt: "2025-02-06T19:00:00Z"
+            EndAt: "2025-02-06T20:00:00Z"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/dct-vip-call"
+            HostUserEmail: "coach@reicoachingpro.com"
+            RecurrenceRule:
+              Frequency: weekly
+              Interval: 2
+              DaysOfWeek: [4]
+              EndType: never
+
+  dct-inner-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Inner Circle Community"
+      ProductType: community
+      Description: "Elite Inner Circle community with JV opportunities and direct access"
+      Community:
+        Name: "Deal Coaching Inner Circle"
+        Description: "Elite community for Inner Circle members with JV deals and exclusive access"
+        Spaces:
+          - Name: "Announcements"
+            Slug: announcements
+            Description: "Inner Circle updates and opportunities"
+            Order: 1
+          - Name: "JV Opportunities"
+            Slug: jv-opportunities
+            Description: "Joint venture deals and partnership opportunities"
+            Order: 2
+          - Name: "Deal Flow"
+            Slug: deal-flow
+            Description: "First access to off-market deals"
+            Order: 3
+          - Name: "Deal Reviews"
+            Slug: deal-reviews
+            Description: "Get detailed feedback on your deals"
+            Order: 4
+          - Name: "Private Network"
+            Slug: private-network
+            Description: "Connect with Inner Circle members and my personal network"
+            Order: 5
+          - Name: "Retreat Planning"
+            Slug: retreat-planning
+            Description: "Quarterly retreat coordination and updates"
+            Order: 6
+          - Name: "Wins"
+            Slug: wins
+            Description: "Celebrate big wins and milestones"
+            Order: 7
+        Events:
+          - Title: "Weekly Inner Circle Call"
+            Description: "Private weekly call with JV deal review and market updates"
+            StartAt: "2025-02-04T18:00:00Z"
+            EndAt: "2025-02-04T19:00:00Z"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/dct-inner-call"
+            HostUserEmail: "coach@reicoachingpro.com"
+            RecurrenceRule:
+              Frequency: weekly
+              Interval: 1
+              DaysOfWeek: [2]
+              EndType: never
+
+  # ============================================
+  # 📦 PRODUCTS - RESOURCES
+  # ============================================
+  dct-resources:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Deal Coaching Resource Library"
+      ProductType: page
+      Description: "Templates, contracts, and resources for all coaching clients"
+      Page:
+        Title: "Your Resource Library"
+        Content: |
+          ## Welcome to Your Resource Library!
+          
+          This page contains all the tools, templates, and resources you need to analyze and close deals.
+          
+          ---
+          
+          ## Deal Analysis Tools
+          
+          **[Deal Analyzer Spreadsheet](https://docs.google.com/spreadsheets/deal-analyzer)**
+          Comprehensive spreadsheet for analyzing wholesale, flip, and rental deals.
+          
+          **[Repair Cost Estimator](https://docs.google.com/spreadsheets/repair-estimator)**
+          Detailed repair cost calculator with line items for common rehab projects.
+          
+          **[Rental Property Calculator](https://docs.google.com/spreadsheets/rental-calc)**
+          Cash flow analysis tool for buy-and-hold investments.
+          
+          ---
+          
+          ## Contract Templates
+          
+          **[Purchase Agreement Template](https://docs.google.com/document/purchase-agreement)**
+          Standard purchase agreement for acquiring properties.
+          
+          **[Assignment Contract Template](https://docs.google.com/document/assignment-contract)**
+          For wholesale assignments to your buyers.
+          
+          **[JV Agreement Template](https://docs.google.com/document/jv-agreement)**
+          Joint venture agreement for partnership deals.
+          
+          ---
+          
+          ## Scripts & Guides
+          
+          **[Seller Call Script](https://docs.google.com/document/seller-script)**
+          Word-for-word script for talking to motivated sellers.
+          
+          **[Negotiation Playbook](https://docs.google.com/document/negotiation)**
+          Tactics for negotiating better deals with sellers.
+          
+          ---
+          
+          ## Questions?
+          
+          Contact us at support@reicoachingpro.com
+
+  # ============================================
+  # 💰 PRICING PLANS
+  # ============================================
+  dct-starter-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Starter - Pay in Full"
+      Description: "One-time payment for Starter coaching program"
+      Amount: 500000
+      Currency: USD
+      BillingType: one_time
+
+  dct-starter-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Starter - 3-Pay"
+      Description: "Split into 3 monthly payments"
+      Amount: 599100
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  dct-accel-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Accelerator - Pay in Full"
+      Description: "One-time payment for Accelerator coaching program"
+      Amount: 1000000
+      Currency: USD
+      BillingType: one_time
+
+  dct-accel-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Accelerator - 3-Pay"
+      Description: "Split into 3 monthly payments"
+      Amount: 1199100
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  dct-inner-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Inner Circle - Pay in Full"
+      Description: "One-time payment for Inner Circle coaching program"
+      Amount: 2500000
+      Currency: USD
+      BillingType: one_time
+
+  dct-inner-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Inner Circle - 6-Pay"
+      Description: "Split into 6 monthly payments"
+      Amount: 2698200
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 6
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  dct-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Deal Coaching Tiers Application"
+      Description: "Application funnel showcasing all coaching tiers"
+      Steps:
+        - Name: "Overview"
+          Slug: overview
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Close More Deals with Expert 1:1 Real Estate Coaching"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Personalized guidance from an investor who's done 200+ deals - choose the level of support that fits your goals"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=DCT_VSL_PLACEHOLDER"
+                    Provider: youtube
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Are you stuck between learning and doing?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You've done the research. You know real estate investing works. But when it comes to actually pulling the trigger on deals, something holds you back.
+                      
+                      Maybe you're not sure if your numbers are right. Maybe you're afraid of making a costly mistake. Maybe you just need someone experienced to guide you through your first (or next) deals.
+                      
+                      **That's exactly what Deal Coaching provides.**
+                      
+                      I work with investors at all levels - from those looking for basic guidance to close their first deal, to experienced investors scaling their portfolios who want JV partnerships and direct access to my network.
+                      
+                      Whatever level you're at, there's a coaching tier designed for your goals.
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Who this is for"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Deal Coaching is for serious investors who:
+                      
+                      ✓ Have done basic education (courses, books, podcasts)
+                      ✓ Have capital or access to funding for deals
+                      ✓ Are ready to take action, not just learn more
+                      ✓ Want personalized guidance, not generic advice
+                      ✓ Are committed to doing the work between sessions
+                      
+                      **This is NOT for:**
+                      
+                      - Complete beginners who haven't done any research
+                      - People looking for get-rich-quick schemes
+                      - Anyone who wants someone to do the work for them
+            - Type: cta
+              Order: 4
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Ready to See Your Options?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Compare the three coaching tiers and find the right fit for your goals."
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Compare Coaching Tiers"
+                    Action: next_step
+                  Settings:
+                    Alignment: center
+        - Name: "Compare Tiers"
+          Slug: compare
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Choose Your Coaching Level"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=DCT_COMPARE_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      I offer three coaching tiers to match different goals and commitment levels. Each tier includes progressively more support, access, and exclusive benefits.
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "🥉 STARTER - Get the Foundations"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      **Duration:** 3 months | **Sessions:** 6 (60-min each)
+                      
+                      Perfect for investors who want basic guidance to close their first deals.
+                      
+                      **What's Included:**
+                      
+                      ✓ 6 private 1:1 coaching sessions
+                      ✓ Deal Analyzer spreadsheet and templates
+                      ✓ Student community access
+                      ✓ Monthly group Q&A call
+                      ✓ Email support between sessions
+                      
+                      **Best For:** New investors who need guidance on the fundamentals - finding deals, analyzing numbers, and making offers.
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "🥈 ACCELERATOR - Scale Faster"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      **Duration:** 6 months | **Sessions:** 12 (60-min each)
+                      
+                      For investors ready to build momentum and close more deals.
+                      
+                      **Everything in Starter, PLUS:**
+                      
+                      ✓ 12 private 1:1 coaching sessions (2x the support)
+                      ✓ VIP community with deal flow and networking
+                      ✓ Personal deal reviews before you make offers
+                      ✓ Access to my buyer and contractor rolodex
+                      ✓ Bi-weekly VIP group calls
+                      ✓ Priority email support
+                      
+                      **Best For:** Investors who have done a few deals and want intensive support to build a consistent pipeline.
+            - Type: content
+              Order: 4
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "🥇 INNER CIRCLE - Elite Partnership"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      **Duration:** 12 months | **Sessions:** 24 (60-min each)
+                      
+                      For serious investors who want VIP access and deal partnership opportunities.
+                      
+                      **Everything in Accelerator, PLUS:**
+                      
+                      ✓ 24 VIP coaching sessions with priority scheduling
+                      ✓ Inner Circle community with JV opportunities
+                      ✓ Joint venture deal opportunities with me
+                      ✓ Quarterly in-person retreats (travel not included)
+                      ✓ Direct phone/text access to me
+                      ✓ First access to off-market deals from my network
+                      ✓ Weekly Inner Circle calls
+                      
+                      **Best For:** Experienced investors who want JV partnerships, network access, and the highest level of support.
+            - Type: testimonials
+              Order: 5
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "Started with Starter and upgraded to Accelerator after my third deal. Having someone review every deal before I commit has completely changed my confidence level."
+                    Author: "Marcus T., Wholesaler"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "The Inner Circle JV opportunities alone have made this the best investment I've made. We've partnered on three flips this year."
+                    Author: "Jennifer R., Investor"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 3
+                  Content:
+                    Quote: "I was skeptical about the VIP community, but the deal flow and contractor contacts have saved me thousands. Worth every penny."
+                    Author: "David L., Flipper"
+                    Rating: 5
+            - Type: cta
+              Order: 6
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Ready to Apply?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Complete a quick application and we'll schedule a discovery call to discuss which tier is right for you."
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Apply Now"
+                    Action: next_step
+                  Settings:
+                    Alignment: center
+        - Name: "Apply"
+          Slug: apply
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Apply for Deal Coaching"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=DCT_APPLICATION_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Thanks for your interest in Deal Coaching!
+                      
+                      I work with a limited number of clients at each tier to ensure everyone gets the attention they need. Please answer a few questions so I can understand your situation and goals.
+                      
+                      **This takes about 3 minutes.**
+            - Type: form
+              Order: 2
+              Elements:
+                - Type: form
+                  Order: 1
+                  Content:
+                    FormSlug: !Ref dct-application
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Book Your Call"
+          Slug: book
+          Order: 4
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Great! Let's Talk."
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=DCT_BOOKING_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Thanks for applying to Deal Coaching!
+                      
+                      **Next Step: Book Your Discovery Call**
+                      
+                      On this 30-minute call, we'll:
+                      
+                      ✓ Discuss your investing experience and current situation
+                      ✓ Understand your goals for the next 3-12 months
+                      ✓ Talk through which coaching tier fits your needs
+                      ✓ Answer any questions you have about the programs
+                      ✓ Determine if we're a good fit to work together
+                      
+                      **Please come prepared to discuss:**
+                      
+                      - Your investing background and recent activity
+                      - What's holding you back from closing more deals
+                      - Your goals and timeline
+                      - Which tier you're most interested in
+                - Type: booking_link
+                  Order: 4
+                  Content:
+                    BookingLinkSlug: !Ref dct-discovery-call
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're Booked"
+          Slug: confirmed
+          Order: 5
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Your Call is Confirmed!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=DCT_CONFIRMATION_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Your discovery call is booked. Check your email for calendar details and a Zoom link.
+                      
+                      **Before our call, think about:**
+                      
+                      1. **Your experience** - What deals have you done (or tried to do)?
+                      2. **Your challenges** - What's stopping you from closing more deals?
+                      3. **Your goals** - What do you want to achieve in the next year?
+                      4. **Your tier interest** - Which coaching level appeals to you most?
+                      
+                      I review every application before our call, so I'll already know a bit about your situation.
+                      
+                      **Questions before our call?** Reply to your confirmation email.
+                      
+                      Talk soon!
+
+  # ============================================
+  # 📋 FORMS
+  # ============================================
+  dct-application:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Deal Coaching Tiers Application"
+      Description: "Qualifying application for coaching programs"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your full name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@example.com"
+        - Type: standard
+          FieldName: phone
+          Required: true
+          Placeholder: "(555) 123-4567"
+        - Type: custom
+          CustomFieldSlug: !Ref dct-cf-experience
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref dct-cf-capital
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref dct-cf-deals-done
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref dct-cf-goals
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref dct-cf-tier-interest
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref dct-cf-timeline
+          Required: true
+      SubmitButton:
+        Text: "Submit Application"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  dct-onboarding-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Deal Coaching Client Intake"
+      Description: "Capture client details for personalized coaching"
+      Fields:
+        - Type: custom
+          CustomFieldSlug: !Ref dct-cf-experience
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref dct-cf-deals-done
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref dct-cf-goals
+          Required: true
+      SubmitButton:
+        Text: "Complete Intake"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  dct-cf-experience:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your real estate investing experience?"
+      FieldType: select
+      Options:
+        - "Beginner - done research but no deals yet"
+        - "Some experience - done 1-5 deals"
+        - "Intermediate - done 6-20 deals"
+        - "Experienced - done 20+ deals"
+      HelpText: "Be honest - this helps me tailor our sessions"
+
+  dct-cf-capital:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What capital do you have available for deals?"
+      FieldType: select
+      Options:
+        - "Under $25,000"
+        - "$25,000 - $50,000"
+        - "$50,000 - $100,000"
+        - "$100,000 - $250,000"
+        - "$250,000+"
+        - "I have access to private money or hard money"
+      HelpText: "Cash, credit lines, or access to funding"
+
+  dct-cf-deals-done:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "How many deals have you closed in the last 12 months?"
+      FieldType: select
+      Options:
+        - "0 - haven't closed any yet"
+        - "1-2 deals"
+        - "3-5 deals"
+        - "6-10 deals"
+        - "More than 10 deals"
+      HelpText: "Any type of deal counts"
+
+  dct-cf-goals:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What are your main goals for the next 12 months?"
+      FieldType: textarea
+      Placeholder: "Tell me what you want to achieve..."
+      HelpText: "Be specific about deal volume, income goals, or portfolio growth"
+
+  dct-cf-tier-interest:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Which coaching tier interests you most?"
+      FieldType: select
+      Options:
+        - "Starter - Basic guidance to close my first deals"
+        - "Accelerator - Intensive support to scale faster"
+        - "Inner Circle - VIP access with JV opportunities"
+        - "Not sure - I'd like to discuss options on our call"
+      HelpText: "We can discuss fit on our discovery call"
+
+  dct-cf-timeline:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "When do you want to get started?"
+      FieldType: select
+      Options:
+        - "As soon as possible - I'm ready now"
+        - "Within the next 2 weeks"
+        - "Within the next month"
+        - "Just exploring options for now"
+      HelpText: "This helps me understand your urgency"
+
+  # ============================================
+  # 📅 BOOKING LINKS
+  # ============================================
+  dct-discovery-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Deal Coaching Discovery Call"
+      OwnerUserEmail: "coach@reicoachingpro.com"
+      Description: "30-minute call to discuss your goals and find the right coaching tier"
+      DurationMinutes: 30
+      BufferAfterMinutes: 10
+      MinNoticeHours: 24
+      MaxAdvanceDays: 14
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  dct-coaching-session:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Coaching Session"
+      OwnerUserEmail: "coach@reicoachingpro.com"
+      Description: "60-minute coaching session for Starter and Accelerator clients"
+      DurationMinutes: 60
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  dct-vip-session:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "VIP Coaching Session"
+      OwnerUserEmail: "coach@reicoachingpro.com"
+      Description: "60-minute VIP coaching session for Inner Circle clients with priority scheduling"
+      DurationMinutes: 60
+      BufferAfterMinutes: 15
+      MinNoticeHours: 12
+      MaxAdvanceDays: 45
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTALS
+  # ============================================
+  dct-starter-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Starter Client Portal"
+      Description: "Client portal for Starter coaching members"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  dct-accel-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Accelerator Client Portal"
+      Description: "Client portal for Accelerator coaching members"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  dct-inner-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Inner Circle Portal"
+      Description: "Client portal for Inner Circle coaching members"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 📜 AGREEMENTS
+  # ============================================
+  dct-starter-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Starter Coaching Agreement"
+      Title: "STARTER COACHING AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Coaching Agreement ("Agreement") is entered into between REI Coaching Pro LLC ("Coach") and the undersigned client ("Client").
+        
+        ## 1. PROGRAM SCOPE
+        
+        Coach agrees to provide Client with the **Starter Coaching Program**:
+        
+        - **6 private coaching sessions** (60 minutes each) over 3 months
+        - **Deal Analyzer spreadsheet** and templates
+        - **Student community access** for peer support
+        - **Monthly group Q&A call** participation
+        - **Email support** for quick questions between sessions
+        
+        Sessions must be used within **120 days** of enrollment. Unused sessions expire and are not refundable.
+        
+        ## 2. CLIENT EXPECTATIONS
+        
+        To get the most from coaching, Client agrees to:
+        
+        - Come **prepared** to each session with specific questions or deals
+        - **Do the work** between sessions (marketing, analyzing deals, talking to sellers)
+        - Be **honest** about their situation, challenges, and progress
+        - **Communicate** if they need to reschedule or have concerns
+        - **Take action** on the strategies discussed
+        
+        ## 3. COACH EXPECTATIONS
+        
+        Coach agrees to:
+        
+        - Provide **guidance** based on experience with 200+ real estate deals
+        - **Review deals** and help Client analyze opportunities
+        - **Answer questions** via email between sessions (within 48 hours)
+        - Be **prepared** for each session
+        - Maintain **confidentiality** of Client's information
+        
+        ## 4. PAYMENT TERMS
+        
+        - **Pay in Full:** One-time payment due before the first session
+        - **Payment Plan:** 3 monthly payments; all must be completed per the agreed schedule
+        - Failure to make scheduled payments may result in suspension of coaching access
+        - Coaching fees are **non-refundable** once sessions have begun
+        
+        ## 5. CANCELLATION AND RESCHEDULING
+        
+        - Client must provide **24-hour notice** to reschedule a session
+        - Sessions cancelled with less than 24-hour notice are **forfeited**
+        - No-shows are counted as completed sessions
+        
+        ## 6. LIABILITY AND DISCLAIMER
+        
+        Client acknowledges and agrees that:
+        
+        - Coach provides **educational guidance only**, not legal, financial, or tax advice
+        - **All investment decisions** are made solely by Client
+        - Real estate investing involves **substantial risk** and Client may lose money
+        - Coach is **not liable** for any losses from Client's investments
+        - Coach makes **no guarantees** about income, profits, or deal volume
+        
+        **CLIENT ACCEPTS FULL RESPONSIBILITY FOR THEIR OWN INVESTMENT DECISIONS.**
+        
+        ## 7. CONFIDENTIALITY
+        
+        Both parties agree to keep confidential all deal details, strategies, and personal information shared during coaching.
+        
+        ---
+        
+        **Client Signature:**
+
+  dct-accel-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Accelerator Coaching Agreement"
+      Title: "ACCELERATOR COACHING AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Coaching Agreement ("Agreement") is entered into between REI Coaching Pro LLC ("Coach") and the undersigned client ("Client").
+        
+        ## 1. PROGRAM SCOPE
+        
+        Coach agrees to provide Client with the **Accelerator Coaching Program**:
+        
+        - **12 private coaching sessions** (60 minutes each) over 6 months
+        - **Deal Analyzer spreadsheet** and templates
+        - **VIP community access** with deal flow and networking
+        - **Personal deal reviews** before making offers
+        - **Buyer and contractor rolodex** access
+        - **Bi-weekly VIP group calls** participation
+        - **Priority email support** (within 24 hours)
+        
+        Sessions must be used within **210 days** of enrollment. Unused sessions expire and are not refundable.
+        
+        ## 2. CLIENT EXPECTATIONS
+        
+        To get the most from coaching, Client agrees to:
+        
+        - Come **prepared** to each session with specific questions or deals
+        - **Do the work** between sessions (marketing, analyzing deals, talking to sellers)
+        - Be **honest** about their situation, challenges, and progress
+        - **Participate** in the VIP community and group calls
+        - **Take action** on the strategies discussed
+        
+        ## 3. COACH EXPECTATIONS
+        
+        Coach agrees to:
+        
+        - Provide **guidance** based on experience with 200+ real estate deals
+        - **Review deals** with personalized feedback before Client makes offers
+        - **Share resources** including buyer lists and contractor contacts
+        - **Answer questions** via email within 24 hours
+        - Be **prepared** for each session
+        - Maintain **confidentiality** of Client's information
+        
+        ## 4. PAYMENT TERMS
+        
+        - **Pay in Full:** One-time payment due before the first session
+        - **Payment Plan:** 3 monthly payments; all must be completed per the agreed schedule
+        - Failure to make scheduled payments may result in suspension of coaching access
+        - Coaching fees are **non-refundable** once sessions have begun
+        
+        ## 5. CANCELLATION AND RESCHEDULING
+        
+        - Client must provide **24-hour notice** to reschedule a session
+        - Sessions cancelled with less than 24-hour notice are **forfeited**
+        - No-shows are counted as completed sessions
+        
+        ## 6. LIABILITY AND DISCLAIMER
+        
+        Client acknowledges and agrees that:
+        
+        - Coach provides **educational guidance only**, not legal, financial, or tax advice
+        - **All investment decisions** are made solely by Client
+        - Real estate investing involves **substantial risk** and Client may lose money
+        - Coach is **not liable** for any losses from Client's investments
+        - Coach makes **no guarantees** about income, profits, or deal volume
+        - **Rolodex contacts** are shared for informational purposes only; Client must conduct their own due diligence
+        
+        **CLIENT ACCEPTS FULL RESPONSIBILITY FOR THEIR OWN INVESTMENT DECISIONS.**
+        
+        ## 7. CONFIDENTIALITY
+        
+        Both parties agree to keep confidential all deal details, strategies, rolodex contacts, and personal information shared during coaching.
+        
+        ---
+        
+        **Client Signature:**
+
+  dct-inner-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Inner Circle Coaching Agreement"
+      Title: "INNER CIRCLE COACHING AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Coaching Agreement ("Agreement") is entered into between REI Coaching Pro LLC ("Coach") and the undersigned client ("Client").
+        
+        ## 1. PROGRAM SCOPE
+        
+        Coach agrees to provide Client with the **Inner Circle Coaching Program**:
+        
+        - **24 VIP coaching sessions** (60 minutes each) over 12 months
+        - **Priority scheduling** for sessions
+        - **Deal Analyzer spreadsheet** and templates
+        - **Inner Circle community access** with JV opportunities
+        - **Joint venture deal opportunities** with Coach (see Section 2)
+        - **Quarterly in-person retreats** (travel and accommodation not included)
+        - **Direct phone/text access** to Coach
+        - **First access** to off-market deals from Coach's network
+        - **Weekly Inner Circle calls** participation
+        
+        Sessions must be used within **400 days** of enrollment. Unused sessions expire and are not refundable.
+        
+        ## 2. JOINT VENTURE DEAL TERMS
+        
+        Inner Circle membership provides **opportunity** for joint venture deals with Coach. Client acknowledges:
+        
+        - JV deals are offered at Coach's **sole discretion** and are not guaranteed
+        - Each JV deal will have a **separate written agreement** specifying terms, profit splits, and responsibilities
+        - Typical profit splits range from 50/50 to 70/30 depending on capital and effort contribution
+        - Client must have **adequate capital** and **perform due diligence** before entering any JV
+        - Coach is **not obligated** to offer any specific number of JV opportunities
+        - JV participation is **separate** from coaching fees; coaching fees are non-refundable regardless of JV outcomes
+        
+        **JV DEALS INVOLVE SUBSTANTIAL RISK. CLIENT MAY LOSE SOME OR ALL INVESTED CAPITAL.**
+        
+        ## 3. QUARTERLY RETREAT EXPECTATIONS
+        
+        Client agrees to:
+        
+        - Make **reasonable efforts** to attend quarterly retreats
+        - Arrange and pay for their own **travel and accommodation**
+        - Treat fellow Inner Circle members with **respect and professionalism**
+        - Keep retreat content and discussions **confidential**
+        
+        Retreats are held in locations announced at least 60 days in advance.
+        
+        ## 4. DIRECT ACCESS BOUNDARIES
+        
+        Client receives direct phone/text access to Coach. Client agrees to:
+        
+        - Use direct access for **time-sensitive matters** (not routine questions)
+        - Respect Coach's **personal time** (emergencies excepted, avoid contact before 8am or after 9pm Coach's time)
+        - Keep direct communications **brief and focused**
+        - Use scheduled sessions for **in-depth discussions**
+        
+        ## 5. CLIENT EXPECTATIONS
+        
+        To get the most from Inner Circle, Client agrees to:
+        
+        - Come **prepared** to each session with specific questions or deals
+        - **Actively participate** in the community and weekly calls
+        - Be **honest** about their situation and progress
+        - **Take action** on strategies discussed
+        - **Contribute** to the community and help fellow members
+        
+        ## 6. COACH EXPECTATIONS
+        
+        Coach agrees to:
+        
+        - Provide **VIP-level guidance** based on 200+ deal experience
+        - Offer **JV opportunities** when appropriate deals arise
+        - Host **quarterly retreats** for Inner Circle members
+        - Respond to direct communications **within 4 hours** during business hours
+        - Share **first access** to off-market deals
+        - Maintain **confidentiality** of Client's information
+        
+        ## 7. PAYMENT TERMS
+        
+        - **Pay in Full:** One-time payment due before the first session
+        - **Payment Plan:** 6 monthly payments; all must be completed per the agreed schedule
+        - Failure to make scheduled payments may result in suspension of coaching access
+        - Coaching fees are **non-refundable** once sessions have begun
+        
+        ## 8. CANCELLATION AND RESCHEDULING
+        
+        - Client must provide **12-hour notice** to reschedule a session (VIP scheduling)
+        - Sessions cancelled with less than 12-hour notice are **forfeited**
+        - No-shows are counted as completed sessions
+        
+        ## 9. LIABILITY AND DISCLAIMER
+        
+        Client acknowledges and agrees that:
+        
+        - Coach provides **educational guidance only**, not legal, financial, or tax advice
+        - **All investment decisions**, including JV deals, are made solely by Client
+        - Real estate investing involves **substantial risk** and Client may lose money
+        - Coach is **not liable** for any losses from Client's investments or JV deals
+        - Coach makes **no guarantees** about income, profits, or deal volume
+        - **JV opportunities** are not guaranteed and outcomes vary
+        
+        **CLIENT ACCEPTS FULL RESPONSIBILITY FOR THEIR OWN INVESTMENT DECISIONS, INCLUDING JV DEALS.**
+        
+        ## 10. CONFIDENTIALITY
+        
+        Both parties agree to keep confidential all deal details, JV terms, strategies, network contacts, retreat content, and personal information shared during the program.
+        
+        ---
+        
+        **Client Signature:**
+
+  # ============================================
+  # 🎓 ONBOARDING FLOWS
+  # ============================================
+  dct-starter-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Starter Coaching Onboarding"
+      Description: "Onboarding flow for Starter coaching clients"
+      Steps:
+        - Name: "Sign Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to Starter Coaching!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      I'm excited to work with you over the next 3 months.
+                      
+                      Before we begin, please review and sign the coaching agreement. This covers:
+                      
+                      - Program scope (6 sessions, community access, resources)
+                      - Expectations for both of us
+                      - Payment and cancellation terms
+                      - Liability and confidentiality
+                - Type: agreement
+                  Order: 3
+                  Content:
+                    AgreementSlug: !Ref dct-starter-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Client Intake"
+          Slug: intake
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Tell Me About Your Situation"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Please complete this quick intake so I can prepare for our first session.
+                - Type: form
+                  Order: 3
+                  Content:
+                    FormSlug: !Ref dct-onboarding-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're Ready!"
+          Slug: complete
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Let's Close Some Deals!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You're all set! Welcome to Starter Coaching.
+                      
+                      **What to do now:**
+                      
+                      1. **Book your first session** using the scheduler in your portal
+                      2. **Download the resources** (Deal Analyzer, templates)
+                      3. **Join the student community** and introduce yourself
+                      4. **Prepare for our call** with any deals you're working on
+                      
+                      I'm looking forward to helping you close deals!
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Enter Your Portal"
+                    Action: next_step
+
+  dct-accel-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Accelerator Coaching Onboarding"
+      Description: "Onboarding flow for Accelerator coaching clients"
+      Steps:
+        - Name: "Sign Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to Accelerator Coaching!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      I'm excited to work intensively with you over the next 6 months.
+                      
+                      Before we begin, please review and sign the coaching agreement. This covers:
+                      
+                      - Program scope (12 sessions, VIP community, deal reviews, rolodex access)
+                      - Expectations for both of us
+                      - Payment and cancellation terms
+                      - Liability and confidentiality
+                - Type: agreement
+                  Order: 3
+                  Content:
+                    AgreementSlug: !Ref dct-accel-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Client Intake"
+          Slug: intake
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Tell Me About Your Situation"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Please complete this quick intake so I can prepare for our first session and connect you with the right resources.
+                - Type: form
+                  Order: 3
+                  Content:
+                    FormSlug: !Ref dct-onboarding-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're Ready!"
+          Slug: complete
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Let's Scale Your Investing!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You're all set! Welcome to Accelerator Coaching.
+                      
+                      **What to do now:**
+                      
+                      1. **Book your first session** using the scheduler in your portal
+                      2. **Download the resources** (Deal Analyzer, templates)
+                      3. **Join the VIP community** and introduce yourself
+                      4. **Check out the Deal Flow space** for current opportunities
+                      5. **Browse the rolodex** for buyers and contractors in your market
+                      
+                      Let's build your deal pipeline!
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Enter Your Portal"
+                    Action: next_step
+
+  dct-inner-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Inner Circle Coaching Onboarding"
+      Description: "Onboarding flow for Inner Circle coaching clients"
+      Steps:
+        - Name: "Sign Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to the Inner Circle!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      I'm thrilled to have you join our elite Inner Circle program.
+                      
+                      Before we begin, please review and sign the coaching agreement. This covers:
+                      
+                      - Program scope (24 sessions, JV opportunities, retreats, direct access)
+                      - Joint venture deal terms and expectations
+                      - Quarterly retreat participation
+                      - Direct access boundaries
+                      - Payment, liability, and confidentiality terms
+                      
+                      Please read the JV section carefully, as it outlines how deal partnerships work.
+                - Type: agreement
+                  Order: 3
+                  Content:
+                    AgreementSlug: !Ref dct-inner-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Client Intake"
+          Slug: intake
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Tell Me About Your Situation"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Please complete this intake so I can prepare for our first session and identify potential JV opportunities for you.
+                - Type: form
+                  Order: 3
+                  Content:
+                    FormSlug: !Ref dct-onboarding-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're Ready!"
+          Slug: complete
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to the Inner Circle!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You're now part of an elite group. Welcome to the Inner Circle.
+                      
+                      **What to do now:**
+                      
+                      1. **Book your first VIP session** using the scheduler
+                      2. **Save my direct number** (sent to your email) for time-sensitive matters
+                      3. **Join the Inner Circle community** and introduce yourself
+                      4. **Check the JV Opportunities space** for current partnership deals
+                      5. **Save the retreat dates** (details in your welcome email)
+                      
+                      I'm looking forward to partnering on deals with you!
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Enter Your Portal"
+                    Action: next_step
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  dct-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Deal Coaching Applications"
+      Description: "Track coaching applicants through the sales process"
+      Stages:
+        - Name: "Applied"
+          Slug: applied
+          Order: 1
+          Description: "Submitted application form"
+        - Name: "Call Booked"
+          Slug: call-booked
+          Order: 2
+          Description: "Discovery call scheduled"
+        - Name: "Call Complete"
+          Slug: call-complete
+          Order: 3
+          Description: "Discovery call finished"
+        - Name: "Proposal Sent"
+          Slug: proposal-sent
+          Order: 4
+          Description: "Sent tier recommendation"
+        - Name: "Won"
+          Slug: won
+          Order: 5
+          Description: "Enrolled in coaching"
+        - Name: "Lost"
+          Slug: lost
+          Order: 6
+          Description: "Did not proceed"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  dct-tag-applicant:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "DCT Applicant"
+      Description: "Applied for Deal Coaching Tiers"
+
+  dct-tag-starter-client:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "DCT Starter Client"
+      Description: "Enrolled in Starter coaching"
+
+  dct-tag-accel-client:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "DCT Accelerator Client"
+      Description: "Enrolled in Accelerator coaching"
+
+  dct-tag-inner-client:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "DCT Inner Circle Client"
+      Description: "Enrolled in Inner Circle coaching"
+
+  dct-tag-active:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "DCT Active"
+      Description: "Currently in active coaching"
+
+  dct-tag-completed:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "DCT Completed"
+      Description: "Completed their coaching program"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  dct-workflow-application:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Deal Coaching Application Submitted"
+      Description: "Triggers when someone submits the coaching application"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref dct-application
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref dct-tag-applicant
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref dct-seq-applicant
+
+  dct-workflow-starter-enrollment:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Starter Coaching Enrollment"
+      Description: "Triggers when someone is granted access to Starter coaching"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref dct-starter-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref dct-tag-starter-client
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref dct-tag-active
+        - Type: send_email
+          Order: 3
+          Config:
+            TemplateSlug: !Ref dct-email-welcome-starter
+
+  dct-workflow-accel-enrollment:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Accelerator Coaching Enrollment"
+      Description: "Triggers when someone is granted access to Accelerator coaching"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref dct-accel-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref dct-tag-accel-client
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref dct-tag-active
+        - Type: send_email
+          Order: 3
+          Config:
+            TemplateSlug: !Ref dct-email-welcome-accel
+
+  dct-workflow-inner-enrollment:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Inner Circle Coaching Enrollment"
+      Description: "Triggers when someone is granted access to Inner Circle coaching"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref dct-inner-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref dct-tag-inner-client
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref dct-tag-active
+        - Type: send_email
+          Order: 3
+          Config:
+            TemplateSlug: !Ref dct-email-welcome-inner
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCE
+  # ============================================
+  dct-seq-applicant:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Deal Coaching Applicant Nurture"
+      Description: "Follow-up sequence for coaching applicants"
+      Steps:
+        - TemplateSlug: !Ref dct-email-application-received
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref dct-email-reminder
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref dct-email-last-chance
+          DelayAmount: 5
+          DelayUnit: days
+          Order: 3
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  dct-email-application-received:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "DCT Application Received"
+      Subject: "Your Deal Coaching application is in"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Thanks for Applying!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thanks for applying to Deal Coaching. I review every 
+              application personally to understand your situation and goals.
+              
+              **What happens next:**
+              
+              1. Book your discovery call (if you haven't already)
+              2. We hop on a 30-minute call to discuss your goals
+              3. I'll recommend the best coaching tier for your situation
+              4. If we're a good fit, we can get started right away
+              
+              If you haven't booked your call yet, do that now. I only 
+              work with a limited number of clients at each tier.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Discovery Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Looking forward to chatting!
+              
+              - REI Coaching Pro
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  dct-email-reminder:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "DCT Call Reminder"
+      Subject: "Quick reminder: Book your discovery call"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Don't Forget to Book Your Call"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I noticed you applied for Deal Coaching but haven't 
+              booked your discovery call yet.
+              
+              Just a reminder - I work with a limited number of clients 
+              at each tier to ensure everyone gets the attention they need.
+              
+              If you're serious about closing more deals and want 
+              personalized guidance, let's chat.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Call Now"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              If the timing isn't right, no worries. Just reply and let 
+              me know.
+              
+              - REI Coaching Pro
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  dct-email-last-chance:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "DCT Last Chance"
+      Subject: "Still interested in Deal Coaching?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Still Interested?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I wanted to check in one more time about your Deal 
+              Coaching application.
+              
+              I know life gets busy, so I understand if the timing 
+              isn't right. But if you're still interested in:
+              
+              - Personalized guidance on YOUR specific deals
+              - An experienced investor in your corner
+              - Closing more deals in the next 3-12 months
+              
+              ...then let's schedule a discovery call.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Discovery Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              If you've decided coaching isn't for you, no hard feelings. 
+              Just reply and let me know.
+              
+              Either way, I wish you success in your investing!
+              
+              - REI Coaching Pro
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  dct-email-welcome-starter:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "DCT Welcome - Starter"
+      Subject: "Welcome to Starter Coaching - Let's get started"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Starter Coaching!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Welcome to the Starter Coaching program! I'm excited to 
+              work with you over the next 3 months.
+              
+              **Your first step:** Log in to your client portal and 
+              complete the quick onboarding:
+              
+              1. Sign the coaching agreement
+              2. Complete the client intake form
+              
+              This takes about 5 minutes and helps me prepare for our 
+              first session.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Complete Onboarding"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Once you're set up:**
+              
+              1. Book your first coaching session
+              2. Download the Deal Analyzer and templates
+              3. Join the student community and introduce yourself
+              
+              Let's close some deals!
+              
+              - REI Coaching Pro
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  dct-email-welcome-accel:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "DCT Welcome - Accelerator"
+      Subject: "Welcome to Accelerator Coaching - Let's scale"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Accelerator Coaching!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Welcome to the Accelerator Coaching program! I'm excited to 
+              work intensively with you over the next 6 months.
+              
+              **Your first step:** Log in to your client portal and 
+              complete the quick onboarding:
+              
+              1. Sign the coaching agreement
+              2. Complete the client intake form
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Complete Onboarding"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Once you're set up:**
+              
+              1. Book your first coaching session
+              2. Download the resources and templates
+              3. Join the VIP community
+              4. Check the Deal Flow space for opportunities
+              5. Browse the buyer/contractor rolodex
+              
+              Let's build your deal pipeline!
+              
+              - REI Coaching Pro
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  dct-email-welcome-inner:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "DCT Welcome - Inner Circle"
+      Subject: "Welcome to the Inner Circle - Your VIP access starts now"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to the Inner Circle!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Welcome to the Inner Circle! You're now part of an elite 
+              group, and I'm thrilled to have you.
+              
+              **Your first step:** Log in to your client portal and 
+              complete the onboarding:
+              
+              1. Sign the coaching agreement (includes JV terms)
+              2. Complete the client intake form
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Complete Onboarding"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Your VIP access includes:**
+              
+              ✓ 24 private VIP sessions with priority scheduling
+              ✓ Direct phone/text access (number below)
+              ✓ Inner Circle community with JV opportunities
+              ✓ Quarterly in-person retreats
+              ✓ First access to off-market deals
+              
+              **My direct number:** [Sent in separate secure message]
+              
+              Please save it and use it for time-sensitive matters.
+              
+              **Next retreat:** [Date and location in portal]
+              
+              I'm looking forward to partnering on deals with you!
+              
+              - REI Coaching Pro
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  dct-business:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "REI Coaching Pro LLC"
+      Email: "support@reicoachingpro.com"
+      Phone: "+1-555-REI-COACH"
+      Timezone: "America/New_York"
+      BusinessType: "LLC"
+      Industry: "Real Estate Education"
+      SignatureText: "REI Coaching Pro"

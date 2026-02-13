@@ -1,0 +1,1096 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFER
+  # ============================================
+  rin-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "REI Investor Network"
+      Description: "Monthly membership with access to off-market deals, weekly Q&A calls, and a network of serious investors"
+      DefaultPortal: !Ref rin-portal
+      OnboardingFlowSlug: !Ref rin-onboarding
+      Items:
+        - Product: !Ref rin-community
+      PricingPlans:
+        - !Ref rin-monthly
+
+  # ============================================
+  # 📦 PRODUCT
+  # ============================================
+  rin-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "REI Investor Network Community"
+      ProductType: community
+      Description: "Private community for serious real estate investors"
+      Community:
+        Name: "REI Investor Network"
+        Description: "Off-market deals, weekly Q&A, and networking with serious investors"
+        Spaces:
+          - Name: "Deal Flow"
+            Slug: deal-flow
+            Description: "Off-market deals and opportunities shared by members"
+            Order: 1
+          - Name: "Q&A"
+            Slug: qa
+            Description: "Ask questions and get answers from experienced investors"
+            Order: 2
+          - Name: "Networking"
+            Slug: networking
+            Description: "Connect with other investors for partnerships and referrals"
+            Order: 3
+          - Name: "Resources"
+            Slug: resources
+            Description: "Templates, contracts, and tools shared by the community"
+            Order: 4
+        Events:
+          - Title: "Weekly Investor Q&A Call"
+            Description: "Live Q&A session covering deals, strategies, and market updates"
+            StartAt: "2025-02-06T20:00:00Z"
+            EndAt: "2025-02-06T21:00:00Z"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/rei-weekly-qa"
+            HostUserEmail: "network@reiinvestornetwork.com"
+            RecurrenceRule:
+              Frequency: weekly
+              Interval: 1
+              DaysOfWeek: [4]
+              EndType: never
+
+  # ============================================
+  # 💰 PRICING PLAN
+  # ============================================
+  rin-monthly:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "REI Investor Network - Monthly"
+      Description: "Monthly membership to the REI Investor Network"
+      Amount: 19700
+      Currency: USD
+      BillingType: subscription
+      BillingInterval: monthly
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  rin-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "REI Investor Network Application"
+      Description: "Application funnel for the REI Investor Network membership"
+      Steps:
+        - Name: "Learn More"
+          Slug: interest
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Access Off-Market Deals Most Investors Never See"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Join a private network of serious investors who share deal flow, collaborate on opportunities, and build wealth together"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                    Provider: youtube
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Tired of fighting over the same MLS deals?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You've done a few deals. You know real estate works. But finding quality opportunities is getting harder.
+                      
+                      The MLS is picked over. Wholesalers are sending you the same deals they blast to everyone. And when you do find something good, you're competing against 20 other offers.
+                      
+                      Meanwhile, experienced investors seem to have an endless pipeline of off-market opportunities. They're closing deals you never even knew existed.
+                      
+                      What's their secret? They have a network.
+                      
+                      Not just contacts - a real network of investors who share deals, collaborate on opportunities, and help each other win.
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "What if you had access to real deal flow?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Imagine getting a notification that a member just posted a wholesale deal in your target market. Before it hits any list.
+                      
+                      Or connecting with an investor who has capital but needs boots on the ground - and that's exactly what you bring to the table.
+                      
+                      Or getting your question about a tricky rehab answered by someone who's done 50 of them.
+                      
+                      That's what the REI Investor Network provides: real deal flow, real connections, and real support from people who are actually doing deals.
+            - Type: content
+              Order: 4
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's what you get as a member"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      ✓ **Deal Flow Access**
+                      Members post off-market deals, wholesale opportunities, and JV partnerships before they go anywhere else. First look at deals most investors never see.
+                      
+                      ✓ **Weekly Live Q&A Calls**
+                      Every Thursday at 8pm ET, we hop on a live call to discuss deals, strategy, market conditions, and answer your specific questions.
+                      
+                      ✓ **Investor Networking**
+                      Connect with wholesalers, flippers, landlords, private lenders, and contractors. Find JV partners, referral sources, and deal partners.
+                      
+                      ✓ **Resource Library**
+                      Access contracts, spreadsheets, scripts, and templates that members have battle-tested on real deals.
+                      
+                      ✓ **Private Community**
+                      A curated group of serious investors (no tire-kickers) where you can ask questions, share wins, and get feedback on deals.
+            - Type: content
+              Order: 5
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Who this is for"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      The REI Investor Network is for serious investors who:
+                      
+                      ✓ Have done at least one deal (or are actively working on their first)
+                      ✓ Have capital ready to deploy (or access to funding)
+                      ✓ Are willing to share deal flow and help other members
+                      ✓ Understand that investing involves risk
+                      ✓ Are ready to invest in their network
+                      
+                      **This is NOT for:**
+                      - People who just want to "learn about" real estate
+                      - Those who aren't ready to take action
+                      - Anyone who wants everything handed to them
+                      
+                      We keep the community small and curated. Every member is vetted to ensure they bring value.
+            - Type: testimonials
+              Order: 6
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "Found a JV partner in my first week who brought $150K in private money. We've now done three flips together. The membership paid for itself 100x over."
+                    Author: "Jason M., Flipper"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "The deal flow alone is worth it. I picked up two wholesale assignments from members that weren't posted anywhere else. Clean deals, smooth closings."
+                    Author: "Maria C., Wholesaler"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 3
+                  Content:
+                    Quote: "As a passive investor with capital, this network connected me with operators I can trust. I've funded four deals with members so far."
+                    Author: "David L., Private Lender"
+                    Rating: 5
+            - Type: cta
+              Order: 7
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Ready to Access Real Deal Flow?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Apply now and we'll schedule a quick discovery call to see if you're a good fit for the network."
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Apply for Membership"
+                    Action: next_step
+                  Settings:
+                    Alignment: center
+        - Name: "Apply"
+          Slug: apply
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Apply for REI Investor Network"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=APPLICATION_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      We keep the network small and curated to ensure every member gets value. Please answer a few questions so we can see if you're a good fit.
+                      
+                      **This takes about 3 minutes.**
+            - Type: form
+              Order: 2
+              Elements:
+                - Type: form
+                  Order: 1
+                  Content:
+                    FormSlug: !Ref rin-application
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Book Your Call"
+          Slug: book
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Great! Let's Chat."
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=BOOKING_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Thanks for applying to the REI Investor Network!
+                      
+                      **Next Step: Book Your Discovery Call**
+                      
+                      On this 30-minute call, we'll:
+                      
+                      ✓ Learn about your investing experience and goals
+                      ✓ Discuss what you're looking for in a network
+                      ✓ Explain how the community works in detail
+                      ✓ Determine if you're a good fit for the network
+                      ✓ Answer any questions you have
+                      
+                      **Please come prepared to discuss:**
+                      - Your investing experience and recent deals
+                      - What markets and deal types you focus on
+                      - What you hope to get from the network
+                      - What you can contribute to other members
+                - Type: booking_link
+                  Order: 4
+                  Content:
+                    BookingLinkSlug: !Ref rin-discovery-call
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're Booked"
+          Slug: confirmed
+          Order: 4
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=CONFIRMATION_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Your discovery call is booked. Check your email for calendar details and a Zoom link.
+                      
+                      **Before our call, think about:**
+                      
+                      1. **Your recent deals** - What have you done in the last 12 months?
+                      2. **Your current challenges** - Where are you stuck?
+                      3. **Your goals** - What do you want to achieve in the next year?
+                      4. **Your value** - What can you bring to other members?
+                      
+                      We're selective about who we let in because the quality of the network depends on the quality of the members.
+                      
+                      **Questions before our call?** Reply to your confirmation email.
+                      
+                      Talk soon!
+
+  # ============================================
+  # 📋 FORMS
+  # ============================================
+  rin-application:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "REI Investor Network Application"
+      Description: "Qualifying application for network membership"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your full name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@example.com"
+        - Type: standard
+          FieldName: phone
+          Required: true
+          Placeholder: "(555) 123-4567"
+        - Type: custom
+          CustomFieldSlug: !Ref rin-cf-experience
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref rin-cf-capital
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref rin-cf-target-market
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref rin-cf-deal-types
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref rin-cf-investment-goals
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref rin-cf-timeline
+          Required: true
+      SubmitButton:
+        Text: "Submit Application"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  rin-onboarding-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "REI Investor Network Member Profile"
+      Description: "Capture member profile information for community insights"
+      Fields:
+        - Type: custom
+          CustomFieldSlug: !Ref rin-cf-target-market
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref rin-cf-deal-types
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref rin-cf-investment-goals
+          Required: false
+      SubmitButton:
+        Text: "Complete Profile"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  rin-cf-experience:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "How many real estate deals have you completed?"
+      FieldType: select
+      Options:
+        - "None yet (working on first deal)"
+        - "1-5 deals"
+        - "6-20 deals"
+        - "21-50 deals"
+        - "50+ deals"
+      HelpText: "Any type of deal counts: wholesale, flip, rental, etc."
+
+  rin-cf-capital:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "How much capital do you have available to invest?"
+      FieldType: select
+      Options:
+        - "Under $25,000"
+        - "$25,000 - $50,000"
+        - "$50,000 - $100,000"
+        - "$100,000 - $250,000"
+        - "$250,000+"
+      HelpText: "Cash, lines of credit, or access to private money"
+
+  rin-cf-target-market:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What markets do you invest in?"
+      FieldType: text
+      Placeholder: "e.g., Dallas-Fort Worth, TX"
+      HelpText: "List your primary target markets"
+
+  rin-cf-deal-types:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What deal types are you focused on?"
+      FieldType: multi_select
+      Options:
+        - "Wholesaling"
+        - "Fix and Flip"
+        - "Buy and Hold Rentals"
+        - "BRRRR"
+        - "Commercial"
+        - "Multifamily"
+        - "Private Lending"
+      HelpText: "Select all that apply"
+
+  rin-cf-investment-goals:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What are your investing goals for the next 12 months?"
+      FieldType: textarea
+      Placeholder: "Tell us about your goals and what you want to achieve..."
+      HelpText: "Be specific about deal volume, revenue, or portfolio growth"
+
+  rin-cf-timeline:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "When do you plan to do your next deal?"
+      FieldType: select
+      Options:
+        - "Actively looking now"
+        - "Within 30 days"
+        - "Within 90 days"
+        - "Within 6 months"
+      HelpText: "This helps us understand your urgency"
+
+  # ============================================
+  # 📅 BOOKING LINKS
+  # ============================================
+  rin-discovery-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "REI Network Discovery Call"
+      OwnerUserEmail: "network@reiinvestornetwork.com"
+      Description: "30-minute call to discuss your investing experience and see if you're a fit for the network"
+      DurationMinutes: 30
+      BufferAfterMinutes: 10
+      MinNoticeHours: 24
+      MaxAdvanceDays: 14
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  rin-weekly-qa:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Weekly Investor Q&A"
+      OwnerUserEmail: "network@reiinvestornetwork.com"
+      Description: "Weekly live Q&A session for network members"
+      DurationMinutes: 60
+      MinNoticeHours: 1
+      MaxAdvanceDays: 7
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  rin-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "REI Investor Network Portal"
+      Description: "Member portal for the REI Investor Network"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 📜 AGREEMENT
+  # ============================================
+  rin-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "REI Investor Network Agreement"
+      Title: "REI INVESTOR NETWORK MEMBERSHIP AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Membership Agreement ("Agreement") is entered into between REI Investor Network LLC ("Network") and the undersigned member ("Member").
+        
+        ## 1. COMMUNITY RULES AND CONDUCT
+        
+        By joining the REI Investor Network, Member agrees to:
+        
+        - Treat all members with respect and professionalism
+        - Share deal information in good faith and with accurate details
+        - Maintain confidentiality of proprietary deal information shared by other members
+        - Not spam, solicit, or promote unrelated products/services
+        - Report any suspicious activity or potential scams to the Network
+        - Follow all applicable laws and regulations in their investing activities
+        
+        Violation of these rules may result in immediate termination of membership without refund.
+        
+        ## 2. INVESTMENT RISK ACKNOWLEDGMENT
+        
+        Member acknowledges and agrees that:
+        
+        - Real estate investing involves substantial risk of loss
+        - Past performance of other members does not guarantee future results
+        - Member may lose some or all of their invested capital
+        - The Network does not guarantee any specific returns or outcomes
+        - Member is solely responsible for their investment decisions
+        - Deals shared in the community are not vetted or endorsed by the Network
+        
+        **MEMBER ACKNOWLEDGES THAT THEY COULD LOSE MONEY ON ANY INVESTMENT AND ACCEPTS THIS RISK.**
+        
+        ## 3. NO FINANCIAL ADVICE DISCLAIMER
+        
+        Member acknowledges and agrees that:
+        
+        - The Network is NOT a licensed financial advisor, investment advisor, or broker
+        - Information shared in the community is for educational and networking purposes only
+        - Nothing in the Network constitutes financial, legal, or tax advice
+        - Member should consult qualified professionals before making investment decisions
+        - The Network does not recommend specific investments or deal structures
+        
+        **THE NETWORK EXPRESSLY DISCLAIMS ANY RESPONSIBILITY FOR MEMBER'S INVESTMENT DECISIONS.**
+        
+        ## 4. CONFIDENTIALITY OF SHARED DEALS
+        
+        Member agrees to keep all deal information shared by other members confidential, including but not limited to:
+        
+        - Property addresses and details
+        - Asking prices and terms
+        - Seller contact information
+        - Financial projections and analysis
+        - JV partnership structures
+        
+        Member shall not share deal information outside the Network without express permission from the member who posted it.
+        
+        ## 5. MEMBER LIABILITY WAIVER
+        
+        Member hereby releases, waives, and discharges the Network, its owners, employees, and affiliates from any and all liability, claims, demands, or causes of action arising from:
+        
+        - Investment losses or damages
+        - Disputes with other members
+        - Failed deals or partnerships
+        - Any information or advice received through the Network
+        - Any other activities related to membership
+        
+        **MEMBER ASSUMES ALL RISK ASSOCIATED WITH THEIR PARTICIPATION IN THE NETWORK.**
+        
+        ## 6. ACKNOWLEDGMENT
+        
+        By signing below, Member acknowledges that they have read, understood, and agree to all terms of this Agreement.
+        
+        Member represents that they are of legal age and have the authority to enter into this Agreement.
+        
+        ---
+        
+        **Member Signature:**
+
+  # ============================================
+  # 🎓 ONBOARDING FLOW
+  # ============================================
+  rin-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "REI Investor Network Onboarding"
+      Description: "Onboarding flow for new network members"
+      Steps:
+        - Name: "Sign Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to the Network!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Before you access the community, please review and sign our membership agreement.
+                      
+                      This agreement covers:
+                      - Community rules and conduct expectations
+                      - Investment risk acknowledgment
+                      - Confidentiality of shared deals
+                      - Liability waiver
+                      
+                      We take these seriously to protect all members and maintain a high-quality community.
+                - Type: agreement
+                  Order: 3
+                  Content:
+                    AgreementSlug: !Ref rin-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Complete Profile"
+          Slug: profile
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Complete Your Member Profile"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Help us and other members get to know you better. This information helps us connect you with the right opportunities and members.
+                - Type: form
+                  Order: 3
+                  Content:
+                    FormSlug: !Ref rin-onboarding-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're In!"
+          Slug: complete
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Welcome to the REI Investor Network! You now have full access to:
+                      
+                      ✓ **Deal Flow** - Browse and post off-market opportunities
+                      ✓ **Q&A** - Ask questions and learn from experienced investors
+                      ✓ **Networking** - Connect with wholesalers, flippers, lenders, and more
+                      ✓ **Resources** - Access templates, contracts, and tools
+                      ✓ **Weekly Calls** - Join our live Q&A every Thursday at 8pm ET
+                      
+                      **Your first steps:**
+                      
+                      1. Introduce yourself in the Networking space
+                      2. Browse the Deal Flow to see current opportunities
+                      3. Add the weekly Q&A call to your calendar
+                      
+                      Welcome aboard!
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Enter the Community"
+                    Action: next_step
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  rin-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "REI Network Applications"
+      Description: "Track network applicants through the sales process"
+      Stages:
+        - Name: "Applied"
+          Slug: applied
+          Order: 1
+          Description: "Submitted application form"
+        - Name: "Call Scheduled"
+          Slug: call-scheduled
+          Order: 2
+          Description: "Discovery call booked"
+        - Name: "Call Complete"
+          Slug: call-complete
+          Order: 3
+          Description: "Discovery call finished"
+        - Name: "Won"
+          Slug: won
+          Order: 4
+          Description: "Joined the network"
+        - Name: "Lost"
+          Slug: lost
+          Order: 5
+          Description: "Did not proceed"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  rin-tag-member:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "REI Network Member"
+      Description: "Active member of the REI Investor Network"
+
+  rin-tag-active:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "REI Network Active"
+      Description: "Member who is actively engaging in the community"
+
+  rin-tag-onboarded:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "REI Network Onboarded"
+      Description: "Member who completed the onboarding flow"
+
+  rin-tag-at-risk:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "REI Network At-Risk"
+      Description: "Member who may be at risk of cancellation"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  rin-workflow-application:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "REI Network Application Submitted"
+      Description: "Triggers when someone submits the network application"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref rin-application
+      Steps:
+        - Type: enroll_sequence
+          Order: 1
+          Config:
+            SequenceSlug: !Ref rin-seq-applicant
+
+  rin-workflow-subscription:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "REI Network Member Onboarding"
+      Description: "Triggers when someone is granted access to the REI Network"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref rin-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref rin-tag-member
+        - Type: send_email
+          Order: 2
+          Config:
+            TemplateSlug: !Ref rin-email-welcome
+
+  rin-workflow-onboarding-complete:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "REI Network Onboarding Complete"
+      Description: "Triggers when a member completes the onboarding form"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref rin-onboarding-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref rin-tag-onboarded
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCE
+  # ============================================
+  rin-seq-applicant:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "REI Network Applicant"
+      Description: "Follow-up sequence for network applicants"
+      Steps:
+        - TemplateSlug: !Ref rin-email-application-received
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref rin-email-check-in
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref rin-email-at-risk
+          DelayAmount: 5
+          DelayUnit: days
+          Order: 3
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  rin-email-application-received:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "REI Network Application Received"
+      Subject: "We received your REI Investor Network application"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Thanks for Applying!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thanks for applying to the REI Investor Network. We review 
+              every application personally to make sure you're a good fit 
+              for the community.
+              
+              **What happens next:**
+              
+              1. Book your discovery call (if you haven't already)
+              2. We hop on a 30-minute call to discuss your investing
+              3. If you're a good fit, we'll get you started right away
+              
+              If you haven't booked your call yet, do that now. Our 
+              calendar fills up fast.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Discovery Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Questions before our call?**
+              
+              Just reply to this email.
+              
+              Looking forward to chatting!
+              
+              - The REI Investor Network Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  rin-email-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "REI Network Welcome"
+      Subject: "Welcome to the REI Investor Network - Let's get you started"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to the Network!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Welcome to the REI Investor Network! You're now part of a 
+              curated community of serious investors.
+              
+              **Your first step:** Log in to your portal and complete the 
+              quick onboarding flow. You'll need to:
+              
+              1. Sign the membership agreement
+              2. Complete your member profile
+              
+              This takes about 5 minutes and gives you full access to 
+              everything.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Complete Onboarding"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Once you're in, here's what to do:**
+              
+              1. Introduce yourself in the Networking space
+              2. Browse the Deal Flow for current opportunities
+              3. Add the weekly Q&A to your calendar (Thursdays, 8pm ET)
+              
+              The more you engage, the more value you'll get. Don't be 
+              a lurker - this community thrives on participation!
+              
+              Welcome aboard!
+              
+              - The REI Investor Network Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  rin-email-check-in:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "REI Network Check-In"
+      Subject: "Quick reminder: Book your discovery call"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Don't Forget to Book Your Call"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I noticed you applied for the REI Investor Network but 
+              haven't booked your discovery call yet.
+              
+              Just a reminder - we keep the network small and curated, 
+              so spots do fill up.
+              
+              If you're serious about:
+              - Accessing off-market deal flow
+              - Connecting with active investors
+              - Building partnerships and JV opportunities
+              
+              Book your call and let's chat.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Call Now"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              If the timing isn't right, no worries. Just reply and let 
+              me know.
+              
+              - The REI Investor Network Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  rin-email-at-risk:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "REI Network At-Risk"
+      Subject: "Still interested in the REI Investor Network?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Still Interested?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I wanted to check in one more time about your application 
+              to the REI Investor Network.
+              
+              I know life gets busy, so I understand if the timing isn't 
+              right. But if you're still interested in:
+              
+              - Getting access to off-market deals
+              - Connecting with other serious investors
+              - Finding JV partners and private lenders
+              - Joining our weekly Q&A calls
+              
+              ...then let's get you scheduled for a quick call.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Discovery Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              If you've decided the network isn't for you, no hard 
+              feelings. Just reply and let me know so I can update 
+              your application.
+              
+              Either way, I wish you success in your investing!
+              
+              - The REI Investor Network Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  rin-business:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "REI Investor Network LLC"
+      Email: "network@reiinvestornetwork.com"
+      Phone: "+1-555-REI-NETW"
+      Timezone: "America/New_York"
+      BusinessType: "LLC"
+      Industry: "Real Estate Education"
+      SignatureText: "The REI Investor Network Team"

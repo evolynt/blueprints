@@ -1,0 +1,608 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFER
+  # ============================================
+  foundations-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Strength Training Foundations"
+      Description: "Learn proper form for the 5 essential lifting movements"
+      DefaultPortal: !Ref foundations-portal
+      Items:
+        - Product: !Ref foundations-course
+      PricingPlans:
+        - !Ref foundations-price
+
+  # ============================================
+  # 📦 PRODUCT
+  # ============================================
+  foundations-course:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Strength Training Foundations"
+      ProductType: course
+      Description: "A 2-week beginner program teaching proper form for fundamental barbell and dumbbell movements"
+      Course:
+        Title: "Strength Training Foundations"
+        Description: "Master the 5 essential lifts with step-by-step video instruction"
+        Modules:
+          - Title: "Welcome & Program Overview"
+            Order: 1
+            Lessons:
+              - Title: "How to Use This Course"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/welcome"
+              - Title: "Equipment You'll Need"
+                Order: 2
+                ContentType: text
+                TextContent: |
+                  For this program, you'll need access to:
+                  
+                  - A barbell (standard 45lb/20kg Olympic bar is ideal)
+                  - Weight plates (start light - you can always add more)
+                  - A squat rack or power cage
+                  - A flat bench
+                  
+                  Most commercial gyms have all of this equipment. If you're 
+                  training at home, we'll cover alternatives in each lesson.
+              - Title: "Safety First: Gym Etiquette & Injury Prevention"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/safety"
+          - Title: "The Squat"
+            Order: 2
+            Lessons:
+              - Title: "Squat: Proper Setup & Stance"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/squat-setup"
+              - Title: "Squat: The Movement Pattern"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/squat-movement"
+              - Title: "Squat: Common Mistakes & How to Fix Them"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/squat-mistakes"
+          - Title: "The Deadlift"
+            Order: 3
+            Lessons:
+              - Title: "Deadlift: Proper Setup & Grip"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/deadlift-setup"
+              - Title: "Deadlift: The Movement Pattern"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/deadlift-movement"
+              - Title: "Deadlift: Common Mistakes & How to Fix Them"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/deadlift-mistakes"
+          - Title: "The Bench Press"
+            Order: 4
+            Lessons:
+              - Title: "Bench Press: Proper Setup & Positioning"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/bench-setup"
+              - Title: "Bench Press: The Movement Pattern"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/bench-movement"
+              - Title: "Bench Press: Common Mistakes & How to Fix Them"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/bench-mistakes"
+          - Title: "The Overhead Press"
+            Order: 5
+            Lessons:
+              - Title: "Overhead Press: Proper Setup & Grip"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/ohp-setup"
+              - Title: "Overhead Press: The Movement Pattern"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/ohp-movement"
+              - Title: "Overhead Press: Common Mistakes & How to Fix Them"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/ohp-mistakes"
+          - Title: "The Barbell Row"
+            Order: 6
+            Lessons:
+              - Title: "Barbell Row: Proper Setup & Grip"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/row-setup"
+              - Title: "Barbell Row: The Movement Pattern"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/row-movement"
+              - Title: "Barbell Row: Common Mistakes & How to Fix Them"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/row-mistakes"
+          - Title: "Putting It All Together"
+            Order: 7
+            Lessons:
+              - Title: "Your First 2-Week Training Schedule"
+                Order: 1
+                ContentType: text
+                TextContent: |
+                  Now that you know the movements, here's how to structure 
+                  your first two weeks of training:
+                  
+                  **Week 1: Learning Phase**
+                  - Day 1: Squat & Bench Press (3 sets of 8, light weight)
+                  - Day 2: Rest
+                  - Day 3: Deadlift & Overhead Press (3 sets of 8, light weight)
+                  - Day 4: Rest
+                  - Day 5: Squat & Barbell Row (3 sets of 8, light weight)
+                  
+                  **Week 2: Building Confidence**
+                  - Repeat the same schedule
+                  - Add small amounts of weight if form feels solid
+                  - Focus on consistency, not intensity
+                  
+                  Remember: The goal these two weeks is to build movement 
+                  patterns, not to lift heavy. Keep the weight light enough 
+                  that your form stays perfect on every rep.
+              - Title: "What's Next: Continuing Your Strength Journey"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/whats-next"
+
+  # ============================================
+  # 💰 PRICING PLAN
+  # ============================================
+  foundations-price:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Strength Training Foundations"
+      Amount: 4700
+      Currency: USD
+      BillingType: one_time
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  foundations-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Strength Foundations Sales Page"
+      Description: "Sales page for Strength Training Foundations course"
+      Steps:
+        - Name: "Sales Page"
+          Slug: sales
+          Order: 1
+          Sections:
+            # Hero - VSL video + headline + CTA
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Finally Learn Proper Lifting Form (Without Hiring a $150/Hour Personal Trainer)"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "The exact technique breakdown I use with my 1:1 clients, now available as a self-paced course for beginners who want to lift confidently and safely"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                    Provider: youtube
+                - Type: checkout
+                  Order: 4
+                  Content:
+                    OfferSlug: !Ref foundations-offer
+                    PricingPlanSlug: !Ref foundations-price
+                    ButtonText: "Get Instant Access - $47"
+            # Pain amplification - specific frustrations
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Sound familiar?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You walk into the gym, head over to the free weights section, and immediately feel lost.
+                      
+                      You've watched YouTube videos, but when you're actually standing in front of the barbell, you have no idea if you're about to build muscle or destroy your lower back.
+                      
+                      You see other people lifting with confidence and wonder: "What do they know that I don't?"
+                      
+                      Maybe you've even tried lifting before, but that nagging voice in your head keeps asking: "Am I doing this right? Is this going to hurt me?"
+                      
+                      So you stick to the machines. Or the treadmill. Or you skip the gym entirely.
+                      
+                      Every week that passes is another week of wasted potential.
+                - Type: spacer
+                  Order: 3
+                  Content:
+                    Height: 20
+            # Solution - why this is different
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's the problem nobody talks about"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Most fitness content shows you WHAT to do, but never teaches you HOW to know if you're doing it right.
+                      
+                      You can watch a hundred squat tutorials, but if you don't understand what "right" actually feels like in YOUR body, you'll never have confidence in your form.
+                      
+                      That's why I created Strength Training Foundations.
+                      
+                      This isn't just another "here's how to squat" video. It's a complete system that teaches you to feel the difference between good form and bad form, so you can self-correct without needing a trainer watching your every rep.
+            # Value stack - what they get with perceived value
+            - Type: content
+              Order: 4
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's everything you get today"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      ✓ The Squat Masterclass (Value: $97)
+                      Complete breakdown of the king of all exercises. Setup, descent, depth, and drive. Plus the 3 cues that fix 90% of squat problems.
+                      
+                      ✓ The Deadlift Masterclass (Value: $97)
+                      How to pick heavy things off the floor without destroying your back. Includes conventional and sumo variations.
+                      
+                      ✓ The Bench Press Masterclass (Value: $97)
+                      Proper arch, grip width, bar path, and how to never get stuck under the bar.
+                      
+                      ✓ The Overhead Press Masterclass (Value: $97)
+                      The forgotten lift that builds boulder shoulders. Most people do this wrong. You won't.
+                      
+                      ✓ The Barbell Row Masterclass (Value: $97)
+                      Build a back that fills out your shirts. Includes the "chest to bar" cue that changes everything.
+                      
+                      ✓ BONUS: 2-Week Starter Program (Value: $47)
+                      Exactly what to do in the gym your first 14 days. No guessing required.
+                      
+                      Total Value: $532
+                - Type: spacer
+                  Order: 3
+                  Content:
+                    Height: 10
+                - Type: text
+                  Order: 4
+                  Content:
+                    Text: "Your investment today: Just $47"
+            # Social proof - specific results
+            - Type: testimonials
+              Order: 5
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "I was terrified of deadlifts for years. After watching the setup video twice, I pulled 185lbs with zero back pain. The hip hinge cue changed everything for me."
+                    Author: "Mark R., 42, Software Engineer"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "Spent 3 years doing machines because barbells intimidated me. This course gave me the confidence to finally step into the squat rack. Now I'm squatting 135lbs and actually enjoying leg day."
+                    Author: "Jennifer T., 34, Mom of 2"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 3
+                  Content:
+                    Quote: "I thought I knew how to bench press. Turns out I'd been flaring my elbows for a decade. Fixed my form in one session and my shoulder pain disappeared."
+                    Author: "David K., 51, Business Owner"
+                    Rating: 5
+            # FAQ - objection handling
+            - Type: faq
+              Order: 6
+              Elements:
+                - Type: faq_item
+                  Order: 1
+                  Content:
+                    Question: "What if I don't have access to a gym?"
+                    Answer: "Each movement includes home alternatives using dumbbells or a basic barbell setup. You don't need a fancy commercial gym to learn proper form."
+                - Type: faq_item
+                  Order: 2
+                  Content:
+                    Question: "I'm a complete beginner. Will this be too advanced?"
+                    Answer: "This course was built specifically for beginners. I assume zero prior knowledge and break down every movement from scratch. If you've never touched a barbell, you're exactly who this is for."
+                - Type: faq_item
+                  Order: 3
+                  Content:
+                    Question: "What if I'm older or have injuries?"
+                    Answer: "The principles of good form apply regardless of age. In fact, proper technique becomes MORE important as we age. Each video covers modifications and what to watch out for if you have limitations."
+                - Type: faq_item
+                  Order: 4
+                  Content:
+                    Question: "How is this different from free YouTube videos?"
+                    Answer: "YouTube shows you what to do. This course teaches you how to FEEL what's right, so you can self-correct without a trainer. It's the difference between watching someone cook and understanding why each step matters."
+            # Final CTA with checkout (goes directly to Stripe)
+            - Type: cta
+              Order: 7
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Stop Guessing. Start Lifting."
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "For less than a single personal training session, you'll have lifetime access to the technique foundation that every serious lifter needs."
+                - Type: checkout
+                  Order: 3
+                  Content:
+                    OfferSlug: !Ref foundations-offer
+                    PricingPlanSlug: !Ref foundations-price
+                    ButtonText: "Get Instant Access - $47"
+        - Name: "Thank You"
+          Slug: thank-you
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're In. Let's Build Your Foundation."
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Check your email for login details.
+                      
+                      I recommend starting with the Welcome module, then working through one movement per day. By this time next week, you'll have a solid grasp of all 5 essential lifts.
+                      
+                      See you inside.
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  foundations-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Strength Foundations Portal"
+
+  # ============================================
+  # 🏷️ TAG
+  # ============================================
+  foundations-buyer:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Foundations Buyer"
+
+  # ============================================
+  # ⚡ WORKFLOW
+  # ============================================
+  foundations-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Foundations Purchase"
+      Description: "Triggers when someone purchases Strength Training Foundations"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref foundations-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref foundations-buyer
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref foundations-sequence
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCE
+  # ============================================
+  foundations-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Foundations 2-Week Drip"
+      Description: "Welcome and check-in emails for the Foundations course"
+      Steps:
+        - TemplateSlug: !Ref foundations-welcome-email
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref foundations-week1-email
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref foundations-completion-email
+          DelayAmount: 14
+          DelayUnit: days
+          Order: 3
+
+  # ============================================
+  # 📧 EMAIL TEMPLATE
+  # ============================================
+  foundations-welcome-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Foundations Welcome"
+      Subject: "Your Strength Training Foundations course is ready"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Strength Training Foundations"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thanks for joining Strength Training Foundations. You now have 
+              access to complete video instruction for the 5 essential 
+              barbell movements.
+              
+              Here's how to get the most out of this course:
+              
+              1. Start with the Welcome module to understand the program
+              2. Work through one movement per day
+              3. Practice with light weight before adding load
+              
+              Take your time. There's no rush. The goal is to build a 
+              foundation you can rely on for years to come.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Start the Course"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#3b82f6"
+        - Type: spacer
+          Order: 4
+          Settings:
+            Height: 30
+        - Type: text
+          Order: 5
+          Content:
+            Text: "If you have any questions, just reply to this email."
+        - Type: divider
+          Order: 6
+        - Type: text
+          Order: 7
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  foundations-week1-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Foundations Week 1 Check-in"
+      Subject: "How's your first week going?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Week 1 Check-in"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've had a week with the Strength Training Foundations 
+              course. How's it going?
+              
+              By now, you should have worked through at least a few of the 
+              movement tutorials. If you haven't had a chance yet, that's 
+              okay. Life happens. The course isn't going anywhere.
+              
+              A few things to keep in mind as you practice:
+              
+              - Light weight is your friend right now
+              - Film yourself if you can to check your form
+              - Feeling awkward is normal when learning new movements
+              
+              Keep at it. You're building skills that will serve you for 
+              the rest of your life.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Continue the Course"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#3b82f6"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  foundations-completion-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Foundations Completion"
+      Subject: "What's next for your strength training?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "You've Got the Foundations"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              It's been two weeks since you started Strength Training 
+              Foundations. By now, you should have a solid understanding 
+              of the 5 essential barbell movements.
+              
+              So what's next?
+              
+              The foundation you've built is exactly that: a foundation. 
+              Now it's time to build on it with progressive programming, 
+              nutrition guidance, and ongoing accountability.
+              
+              If you're ready to take your training to the next level, 
+              I offer 1:1 coaching where I design a personalized program 
+              based on your goals and schedule.
+              
+              Reply to this email if you'd like to learn more.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Review the Course"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#3b82f6"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  business-profile:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "Iron Path Coaching LLC"
+      Email: "coach@ironpathcoaching.com"
+      Phone: "+1-555-123-4567"
+      Timezone: "America/Chicago"
+      BusinessType: "LLC"
+      Industry: "Fitness & Health"
+      SignatureText: "Coach Mike, Iron Path Coaching"

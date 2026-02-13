@@ -1,0 +1,2873 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFERS
+  # ============================================
+  empire-spreadsheet-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Deal Analyzer Spreadsheet"
+      Description: "The exact spreadsheet used to analyze 200+ deals - instant download with video tutorial"
+      DefaultPortal: !Ref empire-starter-portal
+      Items:
+        - Product: !Ref empire-spreadsheet
+      PricingPlans:
+        - !Ref empire-spreadsheet-price
+
+  empire-community-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "REI Investor Network"
+      Description: "Monthly membership with off-market deal flow, weekly Q&A calls, and networking with serious investors"
+      DefaultPortal: !Ref empire-starter-portal
+      OnboardingFlowSlug: !Ref empire-community-onboarding
+      Items:
+        - Product: !Ref empire-community
+        - Product: !Ref empire-resources
+      PricingPlans:
+        - !Ref empire-community-monthly
+
+  empire-course-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Wholesaling Mastery Course"
+      Description: "The complete A-Z wholesaling system with 6 modules, student community, and weekly office hours"
+      DefaultPortal: !Ref empire-student-portal
+      OnboardingFlowSlug: !Ref empire-community-onboarding
+      Items:
+        - Product: !Ref empire-course
+        - Product: !Ref empire-community
+        - Product: !Ref empire-resources
+      PricingPlans:
+        - !Ref empire-course-pif
+        - !Ref empire-course-split
+
+  empire-coaching-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "1:1 Deal Coaching"
+      Description: "Personalized coaching with 10 sessions over 3 months, deal reviews, and direct access"
+      DefaultPortal: !Ref empire-vip-portal
+      OnboardingFlowSlug: !Ref empire-coaching-onboarding
+      Items:
+        - Product: !Ref empire-coaching
+        - Product: !Ref empire-community
+        - Product: !Ref empire-resources
+      PricingPlans:
+        - !Ref empire-coaching-pif
+        - !Ref empire-coaching-split
+
+  empire-inner-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Inner Circle Mastermind"
+      Description: "Elite 12-month program with 24 VIP sessions, JV opportunities, quarterly retreats, and direct phone access"
+      DefaultPortal: !Ref empire-vip-portal
+      OnboardingFlowSlug: !Ref empire-coaching-onboarding
+      Items:
+        - Product: !Ref empire-inner-coaching
+        - Product: !Ref empire-community
+        - Product: !Ref empire-resources
+      PricingPlans:
+        - !Ref empire-inner-pif
+        - !Ref empire-inner-split
+
+  # ============================================
+  # 📦 PRODUCTS
+  # ============================================
+  empire-spreadsheet:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Deal Analyzer Spreadsheet"
+      ProductType: page
+      Description: "Spreadsheet with video tutorial for analyzing wholesale, flip, and rental deals"
+      Page:
+        Title: "Your Deal Analyzer Spreadsheet"
+        Content: |
+          ## Welcome to the Deal Analyzer Spreadsheet!
+          
+          Congratulations on getting the same tool I use to analyze every single deal that crosses my desk.
+          
+          ---
+          
+          ## Download Your Spreadsheet
+          
+          **[Download Deal Analyzer Spreadsheet (Google Sheets)](https://docs.google.com/spreadsheets/your-link-here)**
+          
+          Click the link to make a copy to your own Google Drive.
+          
+          ---
+          
+          ## Video Tutorial
+          
+          Watch this 15-minute tutorial where I walk you through exactly how to use every section:
+          
+          **[Watch Tutorial Video](https://your-video-link-here)**
+          
+          ---
+          
+          ## Quick Start Guide
+          
+          1. **Make a copy** of the spreadsheet to your Google Drive
+          2. **Watch the tutorial** to understand each section
+          3. **Input your first deal** to see the numbers
+          4. **Use the decision framework** to know if it's a go or no-go
+          
+          ---
+          
+          ## Ready for More?
+          
+          Join our REI Investor Network for weekly deal flow, live Q&A calls, and networking with serious investors.
+          
+          ---
+          
+          ## Questions?
+          
+          Contact us at support@reieducationempire.com
+
+  empire-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "REI Investor Network Community"
+      ProductType: community
+      Description: "Private community for serious real estate investors"
+      Community:
+        Name: "REI Investor Network"
+        Description: "Off-market deals, weekly Q&A, and networking with serious investors"
+        Spaces:
+          - Name: "Announcements"
+            Slug: announcements
+            Description: "Updates and important news"
+            Order: 1
+          - Name: "Deal Flow"
+            Slug: deal-flow
+            Description: "Off-market deals and opportunities"
+            Order: 2
+          - Name: "Q&A"
+            Slug: qa
+            Description: "Ask questions and get answers"
+            Order: 3
+          - Name: "Networking"
+            Slug: networking
+            Description: "Connect with other investors for partnerships"
+            Order: 4
+          - Name: "Wins"
+            Slug: wins
+            Description: "Celebrate your progress and closed deals"
+            Order: 5
+          - Name: "Resources"
+            Slug: resources
+            Description: "Templates, contracts, and tools"
+            Order: 6
+        Events:
+          - Title: "Weekly Investor Q&A"
+            Description: "Live Q&A session covering deals, strategies, and market updates"
+            StartAt: "2025-02-06T20:00:00Z"
+            EndAt: "2025-02-06T21:00:00Z"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/empire-weekly-qa"
+            HostUserEmail: "coach@reieducationempire.com"
+            RecurrenceRule:
+              Frequency: weekly
+              Interval: 1
+              DaysOfWeek: [4]
+              EndType: never
+
+  empire-course:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Wholesaling Mastery Course"
+      ProductType: course
+      Description: "6-module comprehensive wholesaling program"
+      Course:
+        Title: "Wholesaling Mastery"
+        Description: "The complete A-Z system for wholesale real estate deals"
+        Modules:
+          - Title: "Module 1: Wholesaling Foundations"
+            Order: 1
+            Lessons:
+              - Title: "Welcome & Course Overview"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m1-welcome"
+              - Title: "How Wholesaling Works"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m1-how-it-works"
+              - Title: "Legal Basics You Need to Know"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m1-legal"
+              - Title: "Setting Up Your Business"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m1-setup"
+          - Title: "Module 2: Finding Deals"
+            Order: 2
+            Lessons:
+              - Title: "Where Deals Come From"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m2-overview"
+              - Title: "Driving for Dollars"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m2-driving"
+              - Title: "Building and Using Lists"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m2-lists"
+              - Title: "Direct Mail Campaigns"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m2-mail"
+              - Title: "Cold Calling and SMS"
+                Order: 5
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m2-calling"
+          - Title: "Module 3: Analyzing Deals"
+            Order: 3
+            Lessons:
+              - Title: "The Deal Analysis Framework"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m3-framework"
+              - Title: "Calculating ARV"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m3-arv"
+              - Title: "Estimating Repairs"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m3-repairs"
+              - Title: "The MAO Formula"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m3-mao"
+              - Title: "Using the Deal Analyzer"
+                Order: 5
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m3-spreadsheet"
+          - Title: "Module 4: Making Offers"
+            Order: 4
+            Lessons:
+              - Title: "Talking to Motivated Sellers"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m4-sellers"
+              - Title: "The Perfect Offer Script"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m4-script"
+              - Title: "Negotiation Tactics"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m4-negotiation"
+              - Title: "Getting Contracts Signed"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m4-contracts"
+          - Title: "Module 5: Finding Buyers"
+            Order: 5
+            Lessons:
+              - Title: "Building Your Buyer List"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m5-list"
+              - Title: "Where to Find Cash Buyers"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m5-find"
+              - Title: "Marketing Your Deals"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m5-marketing"
+              - Title: "Qualifying Buyers"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m5-qualify"
+          - Title: "Module 6: Closing Deals"
+            Order: 6
+            Lessons:
+              - Title: "Assignment vs Double Close"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m6-assignment"
+              - Title: "How to Assign a Contract"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m6-assign"
+              - Title: "Working with Title Companies"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m6-title"
+              - Title: "Getting Paid"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m6-paid"
+              - Title: "Scaling to Multiple Deals"
+                Order: 5
+                ContentType: video
+                VideoEmbedUrl: "https://vimeo.com/empire-m6-scaling"
+
+  empire-coaching:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "1:1 Deal Coaching Sessions"
+      ProductType: coaching
+      Description: "10 private coaching sessions over 3 months"
+      Coaching:
+        Title: "Deal Coaching Session"
+        Description: "60-minute 1:1 coaching call to review deals and strategize"
+        Quantity: 10
+        BookingLink: !Ref empire-coaching-session
+        ExpirationDays: 120
+
+  empire-inner-coaching:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Inner Circle VIP Sessions"
+      ProductType: coaching
+      Description: "24 VIP coaching sessions over 12 months with priority scheduling"
+      Coaching:
+        Title: "Inner Circle VIP Session"
+        Description: "60-minute VIP coaching call with JV deal review and priority scheduling"
+        Quantity: 24
+        BookingLink: !Ref empire-vip-session
+        ExpirationDays: 400
+
+  empire-resources:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Resource Library"
+      ProductType: page
+      Description: "Templates, contracts, and tools for all members"
+      Page:
+        Title: "Resource Library"
+        Content: |
+          ## Your Resource Library
+          
+          This page contains all the tools, templates, and resources you need.
+          
+          ---
+          
+          ## Deal Analysis Tools
+          
+          **[Deal Analyzer Spreadsheet](https://docs.google.com/spreadsheets/deal-analyzer)**
+          Comprehensive spreadsheet for wholesale, flip, and rental deals.
+          
+          **[Repair Cost Estimator](https://docs.google.com/spreadsheets/repair-estimator)**
+          Detailed repair calculator with line items.
+          
+          ---
+          
+          ## Contract Templates
+          
+          **[Purchase Agreement](https://docs.google.com/document/purchase-agreement)**
+          Standard purchase agreement.
+          
+          **[Assignment Contract](https://docs.google.com/document/assignment-contract)**
+          For wholesale assignments.
+          
+          **[JV Agreement](https://docs.google.com/document/jv-agreement)**
+          Joint venture agreement.
+          
+          ---
+          
+          ## Scripts & Guides
+          
+          **[Seller Call Script](https://docs.google.com/document/seller-script)**
+          Word-for-word script for seller calls.
+          
+          **[Negotiation Playbook](https://docs.google.com/document/negotiation)**
+          Tactics for negotiating better deals.
+
+  # ============================================
+  # 💰 PRICING PLANS
+  # ============================================
+  empire-spreadsheet-price:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Deal Analyzer - One-Time"
+      Description: "Instant access to the Deal Analyzer Spreadsheet"
+      Amount: 4700
+      Currency: USD
+      BillingType: one_time
+
+  empire-community-monthly:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "REI Network - Monthly"
+      Description: "Monthly membership to the REI Investor Network"
+      Amount: 19700
+      Currency: USD
+      BillingType: subscription
+      BillingInterval: monthly
+
+  empire-course-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Wholesaling Mastery - Pay in Full"
+      Description: "One-time payment for full course access"
+      Amount: 99700
+      Currency: USD
+      BillingType: one_time
+
+  empire-course-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Wholesaling Mastery - 3-Pay"
+      Description: "Split into 3 monthly payments"
+      Amount: 119100
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  empire-coaching-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "1:1 Coaching - Pay in Full"
+      Description: "One-time payment for coaching program"
+      Amount: 500000
+      Currency: USD
+      BillingType: one_time
+
+  empire-coaching-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "1:1 Coaching - 3-Pay"
+      Description: "Split into 3 monthly payments"
+      Amount: 599100
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  empire-inner-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Inner Circle - Pay in Full"
+      Description: "One-time payment for Inner Circle mastermind"
+      Amount: 2500000
+      Currency: USD
+      BillingType: one_time
+
+  empire-inner-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Inner Circle - 6-Pay"
+      Description: "Split into 6 monthly payments"
+      Amount: 2698200
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 6
+
+  # ============================================
+  # 🚀 FUNNELS
+  # ============================================
+  empire-value-ladder-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "REI Empire Value Ladder"
+      Description: "Main funnel showcasing the full value ladder with entry-point checkout"
+      Steps:
+        - Name: "Sales Page"
+          Slug: sales
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Stop Guessing on Real Estate Deals. Start Knowing."
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Get the same Deal Analyzer spreadsheet used on 200+ deals - yours for just $47"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=EMPIRE_VSL_PLACEHOLDER"
+                    Provider: youtube
+                - Type: checkout
+                  Order: 4
+                  Content:
+                    OfferSlug: !Ref empire-spreadsheet-offer
+                    PricingPlanSlug: !Ref empire-spreadsheet-price
+                    ButtonText: "Get Instant Access - $47"
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Sound familiar?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You found a property that looks like a good deal. The numbers look okay... maybe?
+                      
+                      But then the doubt creeps in:
+                      
+                      - Is the ARV estimate realistic?
+                      - Did I account for ALL the repair costs?
+                      - What about holding costs and closing costs?
+                      - Is there actually profit here?
+                      
+                      **The difference between successful investors and struggling ones? They know their numbers BEFORE they make offers.**
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "What if you could analyze any deal in 5 minutes?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Imagine plugging in a few numbers and instantly knowing:
+                      
+                      ✓ Your maximum allowable offer (MAO)
+                      ✓ Projected profit on a flip
+                      ✓ Cash-on-cash return for a rental
+                      ✓ Assignment fee potential for wholesale
+                      ✓ Whether to pursue or pass
+                      
+                      That's exactly what the Deal Analyzer Spreadsheet does.
+            - Type: content
+              Order: 4
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's what you get"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      ✓ **Deal Analyzer Spreadsheet** (Value: $97)
+                      ✓ **Repair Cost Estimator** (Value: $47)
+                      ✓ **ARV Calculator** (Value: $47)
+                      ✓ **15-Minute Video Tutorial** (Value: $47)
+                      ✓ **Decision Framework** (Value: $27)
+                      
+                      **Total Value: $265**
+                      
+                      **Your Investment: Just $47**
+            - Type: testimonials
+              Order: 5
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "I was about to put an offer on a house that looked great. Ran it through the spreadsheet and realized I'd be underwater. This thing paid for itself 100x over."
+                    Author: "Marcus J., Wholesaler"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "Finally, a spreadsheet that accounts for EVERYTHING. Holding costs, closing costs - it's all there. No more surprises."
+                    Author: "Rachel T., Flipper"
+                    Rating: 5
+            - Type: cta
+              Order: 6
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Stop Losing Money on Bad Deals"
+                - Type: checkout
+                  Order: 2
+                  Content:
+                    OfferSlug: !Ref empire-spreadsheet-offer
+                    PricingPlanSlug: !Ref empire-spreadsheet-price
+                    ButtonText: "Get Instant Access - $47"
+        - Name: "Thank You"
+          Slug: thank-you
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're In! Check Your Email."
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=EMPIRE_THANKYOU_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Congratulations on getting the Deal Analyzer!
+                      
+                      Check your email for login details to access:
+                      
+                      - Your spreadsheet download
+                      - The tutorial video
+                      - Getting started guide
+                      
+                      **Your first step:** Download the spreadsheet and run your first deal through it today!
+
+  empire-high-ticket-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "REI Empire High-Ticket Application"
+      Description: "Application funnel for coaching and Inner Circle"
+      Steps:
+        - Name: "Learn More"
+          Slug: interest
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Close More Deals with Expert 1:1 Real Estate Coaching"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Personalized guidance from an investor who's done 200+ deals - choose the level of support that fits your goals"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=EMPIRE_COACHING_VSL"
+                    Provider: youtube
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Are you stuck between learning and doing?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You've done the research. You know real estate works. But when it comes to pulling the trigger, something holds you back.
+                      
+                      Maybe you're not sure if your numbers are right. Maybe you need someone experienced to guide you through your deals.
+                      
+                      **That's exactly what our coaching provides.**
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Choose Your Level"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      **1:1 Deal Coaching**
+                      3 months with 10 private sessions. Perfect for closing your first deals with expert guidance.
+                      
+                      **Inner Circle Mastermind**
+                      12 months with 24 VIP sessions, JV opportunities, quarterly retreats, and direct phone access. For serious investors ready to scale.
+            - Type: cta
+              Order: 4
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Ready to Apply?"
+                - Type: button
+                  Order: 2
+                  Content:
+                    Text: "Apply for Coaching"
+                    Action: next_step
+                  Settings:
+                    Alignment: center
+        - Name: "Apply"
+          Slug: apply
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Apply for Coaching"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=EMPIRE_APPLICATION_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Thanks for your interest! Please answer a few questions so I can understand your situation.
+                      
+                      **This takes about 3 minutes.**
+            - Type: form
+              Order: 2
+              Elements:
+                - Type: form
+                  Order: 1
+                  Content:
+                    FormSlug: !Ref empire-application
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Book Your Call"
+          Slug: book
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Great! Let's Talk."
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=EMPIRE_BOOKING_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      **Next Step: Book Your Strategy Call**
+                      
+                      On this 30-minute call, we'll:
+                      
+                      ✓ Discuss your experience and goals
+                      ✓ Talk through any deals you're working on
+                      ✓ Determine which coaching level fits your needs
+                      ✓ Answer your questions
+                - Type: booking_link
+                  Order: 4
+                  Content:
+                    BookingLinkSlug: !Ref empire-strategy-call
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're Booked"
+          Slug: confirmed
+          Order: 4
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Your Call is Confirmed!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=EMPIRE_CONFIRMATION_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Check your email for calendar details and Zoom link.
+                      
+                      **Before our call, think about:**
+                      
+                      1. Your investing experience
+                      2. What's holding you back
+                      3. Your goals for the next year
+                      4. Your commitment level
+                      
+                      Talk soon!
+
+  # ============================================
+  # 📋 FORMS
+  # ============================================
+  empire-lead-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "REI Empire Lead Form"
+      Description: "Capture leads for webinar or free training"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your full name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@example.com"
+        - Type: custom
+          CustomFieldSlug: !Ref empire-cf-experience
+          Required: true
+      SubmitButton:
+        Text: "Get Access"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  empire-application:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "REI Empire Coaching Application"
+      Description: "Qualifying application for coaching programs"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your full name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@example.com"
+        - Type: standard
+          FieldName: phone
+          Required: true
+          Placeholder: "(555) 123-4567"
+        - Type: custom
+          CustomFieldSlug: !Ref empire-cf-experience
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref empire-cf-deals-done
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref empire-cf-capital
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref empire-cf-goals
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref empire-cf-timeline
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref empire-cf-commitment
+          Required: true
+      SubmitButton:
+        Text: "Submit Application"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  empire-onboarding-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "REI Empire Client Onboarding"
+      Description: "Capture client details for personalized experience"
+      Fields:
+        - Type: custom
+          CustomFieldSlug: !Ref empire-cf-market
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref empire-cf-strategy
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref empire-cf-goals
+          Required: true
+      SubmitButton:
+        Text: "Complete Profile"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  empire-cf-experience:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your real estate investing experience?"
+      FieldType: select
+      Options:
+        - "Beginner - done research but no deals yet"
+        - "Some experience - done 1-5 deals"
+        - "Intermediate - done 6-20 deals"
+        - "Experienced - done 20+ deals"
+      HelpText: "Be honest - this helps us tailor your experience"
+
+  empire-cf-deals-done:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "How many deals have you closed in the last 12 months?"
+      FieldType: select
+      Options:
+        - "0 - haven't closed any yet"
+        - "1-2 deals"
+        - "3-5 deals"
+        - "6-10 deals"
+        - "More than 10 deals"
+      HelpText: "Any type of deal counts"
+
+  empire-cf-capital:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What capital do you have available for deals?"
+      FieldType: select
+      Options:
+        - "Under $25,000"
+        - "$25,000 - $50,000"
+        - "$50,000 - $100,000"
+        - "$100,000 - $250,000"
+        - "$250,000+"
+      HelpText: "Cash, credit lines, or access to funding"
+
+  empire-cf-goals:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What are your main goals for the next 12 months?"
+      FieldType: textarea
+      Placeholder: "Tell me what you want to achieve..."
+      HelpText: "Be specific about deal volume, income, or portfolio growth"
+
+  empire-cf-strategy:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What deal types are you focused on?"
+      FieldType: multi_select
+      Options:
+        - "Wholesaling"
+        - "Fix and Flip"
+        - "Buy and Hold Rentals"
+        - "BRRRR"
+        - "Commercial"
+        - "Multifamily"
+      HelpText: "Select all that apply"
+
+  empire-cf-market:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What market(s) do you invest in?"
+      FieldType: text
+      Placeholder: "e.g., Dallas-Fort Worth, TX"
+      HelpText: "City/metro area where you focus"
+
+  empire-cf-timeline:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "When do you want to close your next deal?"
+      FieldType: select
+      Options:
+        - "As soon as possible - I'm ready now"
+        - "Within 30 days"
+        - "Within 60 days"
+        - "Within 90 days"
+      HelpText: "This helps us understand your urgency"
+
+  empire-cf-commitment:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Are you ready to invest in yourself and take action?"
+      FieldType: select
+      Options:
+        - "Yes - I'm committed and ready to do the work"
+        - "Mostly - I need some guidance first"
+        - "Not sure - I'm still exploring options"
+      HelpText: "Coaching works best when you're fully committed"
+
+  # ============================================
+  # 📅 BOOKING LINKS
+  # ============================================
+  empire-strategy-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Strategy Call"
+      OwnerUserEmail: "coach@reieducationempire.com"
+      Description: "30-minute discovery call to discuss your goals and find the right fit"
+      DurationMinutes: 30
+      BufferAfterMinutes: 10
+      MinNoticeHours: 24
+      MaxAdvanceDays: 14
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  empire-coaching-session:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Coaching Session"
+      OwnerUserEmail: "coach@reieducationempire.com"
+      Description: "60-minute 1:1 coaching call to review deals and strategize"
+      DurationMinutes: 60
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  empire-vip-session:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "VIP Coaching Session"
+      OwnerUserEmail: "coach@reieducationempire.com"
+      Description: "60-minute VIP session with priority scheduling"
+      DurationMinutes: 60
+      BufferAfterMinutes: 15
+      MinNoticeHours: 12
+      MaxAdvanceDays: 45
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  empire-office-hours:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Weekly Office Hours"
+      OwnerUserEmail: "coach@reieducationempire.com"
+      Description: "Weekly group Q&A for community members"
+      DurationMinutes: 60
+      MinNoticeHours: 1
+      MaxAdvanceDays: 7
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTALS
+  # ============================================
+  empire-starter-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "REI Empire Starter Portal"
+      Description: "Portal for spreadsheet and community members"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  empire-student-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "REI Empire Student Portal"
+      Description: "Portal for course students"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  empire-vip-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "REI Empire VIP Portal"
+      Description: "Portal for coaching and Inner Circle members"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 📜 AGREEMENTS
+  # ============================================
+  empire-community-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Community Agreement"
+      Title: "REI EDUCATION EMPIRE COMMUNITY AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Community Agreement ("Agreement") is entered into between REI Education Empire LLC ("Company") and the undersigned member ("Member").
+        
+        ## 1. COMMUNITY RULES AND CONDUCT
+        
+        Member agrees to:
+        
+        - Treat all members with respect and professionalism
+        - Share deal information in good faith and with accurate details
+        - Maintain confidentiality of proprietary information shared by others
+        - Not spam, solicit, or promote unrelated products/services
+        - Report any suspicious activity
+        
+        Violation may result in removal without refund.
+        
+        ## 2. INVESTMENT RISK ACKNOWLEDGMENT
+        
+        Member acknowledges:
+        
+        - Real estate investing involves substantial risk of loss
+        - Past performance does not guarantee future results
+        - Member may lose some or all invested capital
+        - Company does not guarantee any returns or outcomes
+        - Member is solely responsible for investment decisions
+        - Deals shared in the community are not vetted by Company
+        
+        **MEMBER ACKNOWLEDGES THEY COULD LOSE MONEY AND ACCEPTS THIS RISK.**
+        
+        ## 3. NO FINANCIAL ADVICE DISCLAIMER
+        
+        Member acknowledges:
+        
+        - Company is NOT a licensed financial advisor
+        - Information is for educational purposes only
+        - Nothing constitutes financial, legal, or tax advice
+        - Member should consult qualified professionals
+        
+        **COMPANY DISCLAIMS ANY RESPONSIBILITY FOR MEMBER'S INVESTMENT DECISIONS.**
+        
+        ## 4. ACKNOWLEDGMENT
+        
+        By signing, Member acknowledges they have read and agree to all terms.
+        
+        ---
+        
+        **Member Signature:**
+
+  empire-coaching-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Coaching Agreement"
+      Title: "COACHING SERVICES AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Coaching Agreement ("Agreement") is entered into between REI Education Empire LLC ("Coach") and the undersigned client ("Client").
+        
+        ## 1. COACHING SCOPE
+        
+        Coach agrees to provide:
+        
+        - Private coaching sessions as specified in the purchased program
+        - Deal analysis and review guidance
+        - Strategy guidance and support
+        - Resource library access
+        - Email support between sessions
+        
+        Sessions must be used within the specified expiration period.
+        
+        ## 2. CLIENT EXPECTATIONS
+        
+        Client agrees to:
+        
+        - Come prepared to sessions with specific questions or deals
+        - Do the work between sessions
+        - Be honest about situation and progress
+        - Communicate scheduling needs
+        - Take action on strategies discussed
+        
+        ## 3. LIABILITY AND DISCLAIMER
+        
+        Client acknowledges:
+        
+        - Coach provides educational guidance only, not legal/financial/tax advice
+        - All investment decisions are made solely by Client
+        - Real estate investing involves substantial risk
+        - Coach is not liable for any losses from Client's investments
+        - Coach makes no guarantees about income, profits, or deal volume
+        
+        **CLIENT ACCEPTS FULL RESPONSIBILITY FOR THEIR INVESTMENT DECISIONS.**
+        
+        ## 4. PAYMENT AND REFUND TERMS
+        
+        - Payment is required before first session
+        - Coaching fees are non-refundable once sessions begin
+        - Client must provide 24-hour notice to reschedule
+        
+        ## 5. CONFIDENTIALITY
+        
+        Both parties agree to keep confidential all deal details, strategies, and personal information.
+        
+        ---
+        
+        **Client Signature:**
+
+  # ============================================
+  # 🎓 ONBOARDING FLOWS
+  # ============================================
+  empire-community-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Community Onboarding"
+      Description: "Onboarding for community and course members"
+      Steps:
+        - Name: "Sign Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Before you access the community, please review and sign our membership agreement.
+                      
+                      This covers community rules, investment risk acknowledgment, and guidelines.
+                - Type: agreement
+                  Order: 3
+                  Content:
+                    AgreementSlug: !Ref empire-community-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Complete Profile"
+          Slug: profile
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Complete Your Profile"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Help us personalize your experience by sharing your investing goals.
+                - Type: form
+                  Order: 3
+                  Content:
+                    FormSlug: !Ref empire-onboarding-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're In!"
+          Slug: complete
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Welcome! You now have full access.
+                      
+                      **Your first steps:**
+                      
+                      1. Introduce yourself in the community
+                      2. Browse the resources
+                      3. Join the weekly Q&A call
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Enter the Community"
+                    Action: next_step
+
+  empire-coaching-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Coaching Onboarding"
+      Description: "Onboarding for coaching clients"
+      Steps:
+        - Name: "Sign Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to Coaching!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      I'm excited to work with you!
+                      
+                      Before we begin, please review and sign the coaching agreement covering scope, expectations, and terms.
+                - Type: agreement
+                  Order: 3
+                  Content:
+                    AgreementSlug: !Ref empire-coaching-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Client Intake"
+          Slug: intake
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Tell Me About Your Situation"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Please complete this intake so I can prepare for our first session.
+                - Type: form
+                  Order: 3
+                  Content:
+                    FormSlug: !Ref empire-onboarding-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're Ready!"
+          Slug: complete
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Let's Close Some Deals!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You're all set!
+                      
+                      **What to do now:**
+                      
+                      1. Book your first coaching session
+                      2. Download the resources
+                      3. Join the community
+                      4. Prepare deals to discuss
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Enter Your Portal"
+                    Action: next_step
+
+  # ============================================
+  # 🔄 PIPELINES
+  # ============================================
+  empire-customer-journey:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Customer Journey"
+      Description: "Track customers through the value ladder"
+      Stages:
+        - Name: "Lead"
+          Slug: lead
+          Order: 1
+          Description: "Captured lead"
+        - Name: "Spreadsheet Buyer"
+          Slug: spreadsheet-buyer
+          Order: 2
+          Description: "Purchased spreadsheet"
+        - Name: "Community Member"
+          Slug: community-member
+          Order: 3
+          Description: "Active community member"
+        - Name: "Course Student"
+          Slug: course-student
+          Order: 4
+          Description: "Enrolled in course"
+        - Name: "Coaching Client"
+          Slug: coaching-client
+          Order: 5
+          Description: "Active coaching client"
+        - Name: "Inner Circle"
+          Slug: inner-circle
+          Order: 6
+          Description: "Inner Circle member"
+
+  empire-high-ticket-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "High-Ticket Sales"
+      Description: "Track coaching and Inner Circle applicants"
+      Stages:
+        - Name: "Applied"
+          Slug: applied
+          Order: 1
+          Description: "Submitted application"
+        - Name: "Call Booked"
+          Slug: call-booked
+          Order: 2
+          Description: "Strategy call scheduled"
+        - Name: "Call Complete"
+          Slug: call-complete
+          Order: 3
+          Description: "Strategy call finished"
+        - Name: "Proposal"
+          Slug: proposal
+          Order: 4
+          Description: "Sent proposal"
+        - Name: "Won"
+          Slug: won
+          Order: 5
+          Description: "Enrolled"
+        - Name: "Lost"
+          Slug: lost
+          Order: 6
+          Description: "Did not proceed"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  empire-tag-lead:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Lead"
+      Description: "Captured lead"
+
+  empire-tag-spreadsheet-buyer:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Spreadsheet Buyer"
+      Description: "Purchased the Deal Analyzer"
+
+  empire-tag-community-member:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Community Member"
+      Description: "Active REI Network member"
+
+  empire-tag-course-student:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Course Student"
+      Description: "Enrolled in Wholesaling Mastery"
+
+  empire-tag-course-complete:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Course Complete"
+      Description: "Completed Wholesaling Mastery course"
+
+  empire-tag-coaching-client:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Coaching Client"
+      Description: "Active 1:1 coaching client"
+
+  empire-tag-first-deal:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "First Deal"
+      Description: "Closed their first deal"
+
+  empire-tag-inner-circle:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Inner Circle"
+      Description: "Inner Circle mastermind member"
+
+  empire-tag-upsell-community:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Upsell - Community"
+      Description: "Ready for community upsell"
+
+  empire-tag-upsell-course:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Upsell - Course"
+      Description: "Ready for course upsell"
+
+  empire-tag-upsell-coaching:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Upsell - Coaching"
+      Description: "Ready for coaching upsell"
+
+  empire-tag-upsell-inner:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Upsell - Inner Circle"
+      Description: "Ready for Inner Circle upsell"
+
+  empire-tag-engaged:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Engaged"
+      Description: "Highly engaged customer"
+
+  empire-tag-at-risk:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "At Risk"
+      Description: "At risk of churn"
+
+  empire-tag-vip:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "VIP"
+      Description: "VIP customer"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  empire-workflow-spreadsheet-purchase:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Spreadsheet Purchase"
+      Description: "Triggers when someone purchases the spreadsheet"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref empire-spreadsheet-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref empire-tag-spreadsheet-buyer
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref empire-seq-spreadsheet
+
+  empire-workflow-community-purchase:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Community Purchase"
+      Description: "Triggers when someone joins the community"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref empire-community-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref empire-tag-community-member
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref empire-seq-community
+
+  empire-workflow-course-purchase:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Course Purchase"
+      Description: "Triggers when someone enrolls in the course"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref empire-course-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref empire-tag-course-student
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref empire-seq-course
+
+  empire-workflow-coaching-purchase:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Coaching Purchase"
+      Description: "Triggers when someone enrolls in coaching"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref empire-coaching-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref empire-tag-coaching-client
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref empire-seq-coaching
+
+  empire-workflow-inner-purchase:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Inner Circle Purchase"
+      Description: "Triggers when someone joins Inner Circle"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref empire-inner-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref empire-tag-inner-circle
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref empire-tag-vip
+        - Type: enroll_sequence
+          Order: 3
+          Config:
+            SequenceSlug: !Ref empire-seq-inner
+
+  empire-workflow-upsell-to-community:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Upsell - Spreadsheet to Community"
+      Description: "Tags engaged spreadsheet buyers for community upsell"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref empire-onboarding-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref empire-tag-engaged
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref empire-tag-upsell-community
+
+  empire-workflow-upsell-to-course:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Upsell - Community to Course"
+      Description: "Tags active community members for course upsell"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref empire-lead-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref empire-tag-upsell-course
+
+  empire-workflow-upsell-to-coaching:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Upsell - Course to Coaching"
+      Description: "Tags course completers for coaching upsell"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref empire-application
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref empire-tag-upsell-coaching
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCES
+  # ============================================
+  empire-seq-spreadsheet:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Spreadsheet Onboarding"
+      Description: "5-email onboarding for spreadsheet buyers with community upsell"
+      Steps:
+        - TemplateSlug: !Ref empire-email-spreadsheet-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref empire-email-spreadsheet-tip1
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref empire-email-spreadsheet-tip2
+          DelayAmount: 4
+          DelayUnit: days
+          Order: 3
+        - TemplateSlug: !Ref empire-email-spreadsheet-tip3
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 4
+        - TemplateSlug: !Ref empire-email-spreadsheet-upsell
+          DelayAmount: 10
+          DelayUnit: days
+          Order: 5
+
+  empire-seq-community:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Community Welcome"
+      Description: "5-email welcome for community members with course upsell"
+      Steps:
+        - TemplateSlug: !Ref empire-email-community-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref empire-email-community-tip1
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref empire-email-community-tip2
+          DelayAmount: 5
+          DelayUnit: days
+          Order: 3
+        - TemplateSlug: !Ref empire-email-community-engage
+          DelayAmount: 8
+          DelayUnit: days
+          Order: 4
+        - TemplateSlug: !Ref empire-email-community-upsell
+          DelayAmount: 14
+          DelayUnit: days
+          Order: 5
+
+  empire-seq-course:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Course Onboarding"
+      Description: "7-email onboarding for course students with coaching upsell"
+      Steps:
+        - TemplateSlug: !Ref empire-email-course-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref empire-email-course-module1
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref empire-email-course-module2
+          DelayAmount: 5
+          DelayUnit: days
+          Order: 3
+        - TemplateSlug: !Ref empire-email-course-community
+          DelayAmount: 8
+          DelayUnit: days
+          Order: 4
+        - TemplateSlug: !Ref empire-email-course-progress
+          DelayAmount: 14
+          DelayUnit: days
+          Order: 5
+        - TemplateSlug: !Ref empire-email-course-complete
+          DelayAmount: 30
+          DelayUnit: days
+          Order: 6
+        - TemplateSlug: !Ref empire-email-course-upsell
+          DelayAmount: 45
+          DelayUnit: days
+          Order: 7
+
+  empire-seq-coaching:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Coaching Welcome"
+      Description: "5-email welcome for coaching clients"
+      Steps:
+        - TemplateSlug: !Ref empire-email-coaching-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref empire-email-coaching-prep
+          DelayAmount: 1
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref empire-email-coaching-resources
+          DelayAmount: 3
+          DelayUnit: days
+          Order: 3
+        - TemplateSlug: !Ref empire-email-coaching-checkin
+          DelayAmount: 14
+          DelayUnit: days
+          Order: 4
+        - TemplateSlug: !Ref empire-email-coaching-upsell
+          DelayAmount: 60
+          DelayUnit: days
+          Order: 5
+
+  empire-seq-inner:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Inner Circle Welcome"
+      Description: "3-email VIP welcome for Inner Circle members"
+      Steps:
+        - TemplateSlug: !Ref empire-email-inner-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref empire-email-inner-vip
+          DelayAmount: 1
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref empire-email-inner-retreat
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 3
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  empire-email-spreadsheet-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Spreadsheet Welcome"
+      Subject: "Your Deal Analyzer is Ready"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome! Your Deal Analyzer is Ready"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thanks for getting the Deal Analyzer! You now have the same 
+              tool I use to analyze every deal.
+              
+              **Here's how to get started:**
+              
+              1. Log in to your portal
+              2. Download the spreadsheet
+              3. Watch the 15-minute tutorial
+              4. Run your first deal through it TODAY
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Your Spreadsheet"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              The sooner you use it, the sooner you'll make confident decisions.
+              
+              - REI Education Empire
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-spreadsheet-tip1:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Spreadsheet Tip 1"
+      Subject: "The #1 ARV mistake (and how to avoid it)"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Don't Make This ARV Mistake"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              The biggest mistake I see? Overestimating ARV.
+              
+              **Here's what I do instead:**
+              
+              1. Find 3-5 SOLD comps within 0.5 miles
+              2. Adjust for differences
+              3. Use the AVERAGE, not the highest
+              4. Subtract 5% safety margin
+              
+              The Deal Analyzer has an ARV calculator built in. Make sure 
+              you're using it!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Open Your Spreadsheet"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-spreadsheet-tip2:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Spreadsheet Tip 2"
+      Subject: "How to estimate repairs without being a contractor"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Repair Estimates Made Simple"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Not a contractor? No problem.
+              
+              **My simple system:**
+              
+              - Light cosmetic: $10-15/sq ft
+              - Medium rehab: $25-35/sq ft
+              - Heavy rehab: $45-60/sq ft
+              
+              The Deal Analyzer has a repair estimator. Use it as your 
+              starting point.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Try the Repair Estimator"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-spreadsheet-tip3:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Spreadsheet Tip 3"
+      Subject: "Hidden costs that kill deals"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Hidden Costs That Kill Deals"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Costs most beginners forget:
+              
+              - **Holding costs:** $1,500-3,000/month
+              - **Closing costs (buy):** 1-2% of purchase
+              - **Closing costs (sell):** 8-10% of sale
+              - **Contingency:** Always add 10-15%
+              
+              The Deal Analyzer accounts for ALL of these. Fill in every 
+              section!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Review Your Numbers"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-spreadsheet-upsell:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Spreadsheet Upsell"
+      Subject: "Want more deal flow?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Ready for More Deal Flow?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Now that you can analyze deals, where do you find them?
+              
+              That's where the **REI Investor Network** comes in.
+              
+              Members share off-market deals, connect for partnerships, 
+              and join weekly Q&A calls.
+              
+              It's $197/month and many members say one deal from the 
+              network paid for years of membership.
+              
+              Interested? Reply to this email and I'll share more details.
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-community-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Community Welcome"
+      Subject: "Welcome to the REI Network!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to the Network!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Welcome to the REI Investor Network!
+              
+              **Complete your onboarding:**
+              
+              1. Sign the membership agreement
+              2. Complete your profile
+              3. Introduce yourself in the community
+              
+              This takes about 5 minutes.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Complete Onboarding"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-community-tip1:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Community Tip 1"
+      Subject: "How to get the most from the network"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Get More From the Network"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              The members who get the most value are the ones who:
+              
+              1. **Introduce themselves** and share what they're looking for
+              2. **Post deals** for feedback before making offers
+              3. **Attend weekly Q&A** calls
+              4. **Help other members** when they can
+              
+              Don't be a lurker! The community thrives on participation.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Join the Conversation"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-community-tip2:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Community Tip 2"
+      Subject: "Don't miss the weekly Q&A"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Join the Weekly Q&A"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Every Thursday at 8pm ET, we hop on a live call to:
+              
+              - Review deals members are working on
+              - Answer your specific questions
+              - Discuss market conditions
+              - Share what's working right now
+              
+              Bring your questions and deals!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Join the Community"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-community-engage:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Community Engagement"
+      Subject: "Are you using the network?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Are You Using the Network?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Quick check-in: Have you posted in the community yet?
+              
+              The members who close deals faster are the ones who engage.
+              
+              Post a deal for review. Ask a question. Share a win.
+              
+              We're here to help you succeed!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Post Now"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-community-upsell:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Community Upsell"
+      Subject: "Ready to go deeper?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Ready to Go Deeper?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've been in the network for a couple weeks. 
+              
+              If you're serious about scaling your wholesaling business, 
+              check out **Wholesaling Mastery** - our complete A-Z course.
+              
+              It's the system behind 100+ deals, with weekly office hours 
+              where I review deals personally.
+              
+              Interested? Reply and I'll share more details.
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-course-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Course Welcome"
+      Subject: "Welcome to Wholesaling Mastery!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Wholesaling Mastery!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Congratulations on joining Wholesaling Mastery!
+              
+              **Get started:**
+              
+              1. Complete onboarding (agreement + profile)
+              2. Start Module 1 - watch the first 3 videos today
+              3. Introduce yourself in the community
+              4. Join us at weekly office hours
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Your Course"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-course-module1:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Course Module 1"
+      Subject: "Have you started Module 1?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Module 1: Foundations"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Have you started Module 1 yet?
+              
+              The longer you wait, the longer until your first deal.
+              
+              Module 1 is only 4 videos. Knock it out this week!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Start Module 1"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-course-module2:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Course Module 2"
+      Subject: "The #1 reason wholesalers fail"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Why Most Wholesalers Fail"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              The #1 reason? Not enough leads.
+              
+              Module 2 covers all the ways to find deals. Pick ONE 
+              channel and commit to it for 30 days.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Start Module 2"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-course-community:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Course Community"
+      Subject: "Are you using the community?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Use the Community!"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Students who engage in the community close deals faster.
+              
+              Post deals for review. Ask questions. Join office hours.
+              
+              Don't learn alone!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Join the Conversation"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-course-progress:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Course Progress"
+      Subject: "2 weeks in - how's it going?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "2-Week Check-In"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Quick check: Are you taking action?
+              
+              By now you should have:
+              
+              ✓ Completed Modules 1-2
+              ✓ Chosen a marketing channel
+              ✓ Started generating leads
+              
+              Feeling stuck? Reply to this email.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Get Back on Track"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-course-complete:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Course Complete Check"
+      Subject: "How's the course going?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "One Month In"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've been in Wholesaling Mastery for about a month.
+              
+              Have you:
+              
+              ✓ Completed all 6 modules?
+              ✓ Made any offers?
+              ✓ Talked to motivated sellers?
+              
+              Let me know how it's going!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Continue Your Course"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-course-upsell:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Course Upsell"
+      Subject: "Want 1:1 help with your deals?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Ready for 1:1 Help?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've been through the course. You have the knowledge.
+              
+              But if you want personalized guidance on YOUR specific deals, 
+              consider 1:1 coaching.
+              
+              I work with a handful of clients, reviewing their deals and 
+              helping them close faster.
+              
+              Interested? Reply and I'll share details.
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-coaching-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Welcome"
+      Subject: "Welcome to 1:1 Coaching!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Coaching!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I'm excited to work with you!
+              
+              **First step:** Complete onboarding:
+              
+              1. Sign the coaching agreement
+              2. Complete the client intake
+              
+              Then book your first session!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Complete Onboarding"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-coaching-prep:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Prep"
+      Subject: "Preparing for your first session"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Prepare for Your Session"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Before our first session, gather:
+              
+              - Any deals you're analyzing
+              - Your biggest questions
+              - Your marketing plan
+              
+              Come prepared and we'll make the most of our time!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Session"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-coaching-resources:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Resources"
+      Subject: "Don't forget your resources"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Your Resources Are Ready"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Reminder: You have access to the full resource library.
+              
+              Download the Deal Analyzer, templates, and scripts. 
+              They'll help you get more from our sessions.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Resources"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-coaching-checkin:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Check-In"
+      Subject: "How's coaching going?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "2-Week Check-In"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've been in coaching for a couple weeks.
+              
+              How's it going? Are you:
+              
+              - Making progress on deals?
+              - Getting your questions answered?
+              - Using the resources?
+              
+              Let me know if you need anything!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Next Session"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-coaching-upsell:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Upsell"
+      Subject: "Ready for the Inner Circle?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Ready for the Next Level?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've been crushing it in coaching.
+              
+              If you're ready for:
+              
+              - JV deal opportunities
+              - Quarterly in-person retreats
+              - Direct phone access
+              - 24 VIP sessions over 12 months
+              
+              The Inner Circle might be your next step.
+              
+              Interested? Reply and let's talk.
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-inner-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Inner Circle Welcome"
+      Subject: "Welcome to the Inner Circle!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to the Inner Circle!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You're now part of an elite group. Welcome!
+              
+              **Complete onboarding:**
+              
+              1. Sign the coaching agreement
+              2. Complete the intake
+              
+              Then book your first VIP session!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Complete Onboarding"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-inner-vip:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Inner Circle VIP"
+      Subject: "Your VIP access details"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Your VIP Access"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Your Inner Circle access includes:
+              
+              ✓ 24 VIP sessions with priority scheduling
+              ✓ Direct phone access (number sent separately)
+              ✓ Inner Circle community with JV opportunities
+              ✓ Quarterly retreats
+              ✓ First access to off-market deals
+              
+              Check the community for current JV opportunities!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Inner Circle"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  empire-email-inner-retreat:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Inner Circle Retreat"
+      Subject: "About the quarterly retreats"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Quarterly Retreats"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              As an Inner Circle member, you're invited to our quarterly 
+              in-person retreats.
+              
+              These are intimate gatherings where we:
+              
+              - Deep-dive on advanced strategies
+              - Review JV opportunities
+              - Build relationships with other VIPs
+              - Plan your next quarter
+              
+              Next retreat details are in your portal. Save the date!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "View Retreat Details"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  empire-business:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "REI Education Empire LLC"
+      Email: "support@reieducationempire.com"
+      Phone: "+1-555-REI-EMPIRE"
+      Timezone: "America/New_York"
+      BusinessType: "LLC"
+      Industry: "Real Estate Education"
+      SignatureText: "REI Education Empire"

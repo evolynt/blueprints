@@ -1,0 +1,1230 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFER
+  # ============================================
+  dc-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "1:1 Deal Coaching"
+      Description: "Personalized coaching to help you close your first (or next) real estate deal with expert guidance"
+      DefaultPortal: !Ref dc-portal
+      OnboardingFlowSlug: !Ref dc-onboarding
+      Items:
+        - Product: !Ref dc-coaching
+        - Product: !Ref dc-resources
+      PricingPlans:
+        - !Ref dc-pif
+        - !Ref dc-split
+
+  # ============================================
+  # 📦 PRODUCTS
+  # ============================================
+  dc-coaching:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "1:1 Deal Coaching Sessions"
+      ProductType: coaching
+      Description: "10 private coaching sessions over 3 months"
+      Coaching:
+        Title: "Deal Coaching Session"
+        Description: "60-minute 1:1 coaching call to review deals, analyze opportunities, and strategize your next steps"
+        Quantity: 10
+        BookingLink: !Ref dc-coaching-session
+        ExpirationDays: 120
+
+  dc-resources:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Deal Coaching Resource Library"
+      ProductType: page
+      Description: "Templates, contracts, and resources for your deals"
+      Page:
+        Title: "Your Deal Coaching Resources"
+        Content: |
+          ## Welcome to Your Resource Library!
+          
+          This page contains all the tools, templates, and resources you need to analyze and close deals. Use these alongside your coaching sessions.
+          
+          ---
+          
+          ## Deal Analysis Tools
+          
+          **[Deal Analyzer Spreadsheet](https://docs.google.com/spreadsheets/your-link-here)**
+          The same spreadsheet we use to analyze every deal together. Make a copy to your own Google Drive.
+          
+          **[Repair Cost Estimator](https://docs.google.com/spreadsheets/repair-estimator)**
+          Detailed repair cost calculator with line items for common rehab projects.
+          
+          **[Rental Property Calculator](https://docs.google.com/spreadsheets/rental-calc)**
+          Cash flow analysis tool for buy-and-hold investments.
+          
+          ---
+          
+          ## Contract Templates
+          
+          **[Purchase Agreement Template](https://docs.google.com/document/purchase-agreement)**
+          Standard purchase agreement for acquiring properties.
+          
+          **[Assignment Contract Template](https://docs.google.com/document/assignment-contract)**
+          For wholesale assignments to your buyers.
+          
+          **[JV Agreement Template](https://docs.google.com/document/jv-agreement)**
+          Joint venture agreement for partnership deals.
+          
+          ---
+          
+          ## Scripts & Guides
+          
+          **[Seller Call Script](https://docs.google.com/document/seller-script)**
+          Word-for-word script for talking to motivated sellers.
+          
+          **[Buyer Qualification Script](https://docs.google.com/document/buyer-script)**
+          How to qualify cash buyers and build your list.
+          
+          **[Negotiation Playbook](https://docs.google.com/document/negotiation)**
+          Tactics for negotiating better deals with sellers.
+          
+          ---
+          
+          ## Book Your Next Session
+          
+          Ready to review a deal or strategize your next move? Book your coaching session below.
+          
+          ---
+          
+          ## Questions?
+          
+          Reply to any email or contact us at support@dealcoachingpro.com
+
+  # ============================================
+  # 💰 PRICING PLANS
+  # ============================================
+  dc-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Deal Coaching - Pay in Full"
+      Description: "One-time payment for full coaching program"
+      Amount: 500000
+      Currency: USD
+      BillingType: one_time
+
+  dc-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Deal Coaching - 3-Pay"
+      Description: "Split into 3 monthly payments"
+      Amount: 599100
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  dc-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "1:1 Deal Coaching Application"
+      Description: "Application funnel for 1:1 Deal Coaching program"
+      Steps:
+        - Name: "Learn More"
+          Slug: interest
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Close Your First (or Next) Real Estate Deal with Expert 1:1 Guidance"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Get personalized coaching from an investor who's done 200+ deals - we'll work through YOUR specific deals together"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=DC_VSL_PLACEHOLDER"
+                    Provider: youtube
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Are you stuck in learning mode?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You've taken the courses. You've watched the YouTube videos. You know the theory.
+                      
+                      But when it comes to pulling the trigger on an actual deal, something holds you back:
+                      
+                      - Is this ARV realistic, or am I being too optimistic?
+                      - Did I estimate repairs correctly?
+                      - What if I miss something and lose money?
+                      - How do I negotiate with this specific seller?
+                      - Is this deal actually as good as it looks?
+                      
+                      **The gap between learning and doing is where most investors get stuck.**
+                      
+                      You don't need another course. You need someone who's done hundreds of deals to look at YOUR specific situation and tell you exactly what to do.
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "What if you had a deal partner in your corner?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Imagine having an experienced investor review every deal before you make an offer.
+                      
+                      Someone who can:
+                      
+                      ✓ Analyze your deals and tell you if the numbers work
+                      ✓ Help you negotiate with sellers
+                      ✓ Review contracts before you sign
+                      ✓ Walk you through the closing process
+                      ✓ Answer your questions when you're stuck
+                      
+                      That's what 1:1 Deal Coaching provides.
+                      
+                      Over 3 months and 10 coaching sessions, we work through your specific deals together. Not generic advice - real guidance on the actual opportunities in front of you.
+            - Type: content
+              Order: 4
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's how it works"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      **10 Private Coaching Sessions (60 minutes each)**
+                      
+                      We meet via Zoom to work through whatever you need:
+                      
+                      - Analyzing specific deals you're considering
+                      - Reviewing your marketing and lead generation
+                      - Role-playing seller conversations
+                      - Walking through offers and contracts
+                      - Problem-solving when deals get complicated
+                      - Strategizing your next moves
+                      
+                      **Resource Library Access**
+                      
+                      You get my personal templates, contracts, and tools:
+                      
+                      - Deal analyzer spreadsheet
+                      - Repair cost estimator
+                      - Contract templates
+                      - Scripts and negotiation guides
+                      
+                      **3-Month Timeline**
+                      
+                      Most clients close their first (or next) deal within the coaching period. The goal is action, not endless learning.
+            - Type: content
+              Order: 5
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Who this is for"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      1:1 Deal Coaching is for serious investors who:
+                      
+                      ✓ Have done the basic education (courses, books, podcasts)
+                      ✓ Have capital or access to funding for deals
+                      ✓ Are ready to take action in the next 90 days
+                      ✓ Are committed to doing the work between sessions
+                      ✓ Want personalized guidance, not generic advice
+                      
+                      **This is NOT for:**
+                      
+                      - Complete beginners who haven't done any research yet
+                      - People looking for get-rich-quick schemes
+                      - Those who aren't ready to invest time and money
+                      - Anyone who just wants someone to do the work for them
+                      
+                      I work with a limited number of coaching clients to ensure everyone gets the attention they need.
+            - Type: testimonials
+              Order: 6
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "I'd been paralyzed for months, afraid to make an offer. In our first session, we analyzed a deal together and I made an offer that same day. Closed my first wholesale deal 6 weeks later for $12,000."
+                    Author: "Michael R., Austin, TX"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "Having someone review my deals before I commit changed everything. I avoided two bad deals and confidently closed three good ones during our 3 months together."
+                    Author: "Angela P., Atlanta, GA"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 3
+                  Content:
+                    Quote: "The coaching paid for itself on my first flip. I was going to offer way too much until we analyzed the deal together. That single conversation saved me at least $15K."
+                    Author: "Chris T., Phoenix, AZ"
+                    Rating: 5
+            - Type: faq
+              Order: 7
+              Elements:
+                - Type: faq_item
+                  Order: 1
+                  Content:
+                    Question: "What types of deals do you help with?"
+                    Answer: "I help with all residential real estate strategies: wholesaling, fix-and-flip, BRRRR, and buy-and-hold rentals. My experience is primarily in single-family and small multifamily (2-4 units)."
+                - Type: faq_item
+                  Order: 2
+                  Content:
+                    Question: "How do the coaching sessions work?"
+                    Answer: "Sessions are 60 minutes via Zoom. You book them through your client portal whenever you need them. Most clients do 1-2 sessions per week, but you can pace them however works for your deal flow."
+                - Type: faq_item
+                  Order: 3
+                  Content:
+                    Question: "What if I don't have any deals to work on yet?"
+                    Answer: "That's totally fine. We'll work on your lead generation strategy, help you find deals, and analyze opportunities as they come up. Many clients close their first deal within the coaching period."
+                - Type: faq_item
+                  Order: 4
+                  Content:
+                    Question: "Do you invest in my deals or provide funding?"
+                    Answer: "No. This is coaching and guidance only. I don't JV on client deals or provide financing. My role is to help you analyze and execute your own deals."
+                - Type: faq_item
+                  Order: 5
+                  Content:
+                    Question: "What's the time commitment between sessions?"
+                    Answer: "That depends on your goals. If you want to close deals quickly, expect to spend 10-20 hours per week on your investing business (marketing, analyzing deals, talking to sellers, etc.). I'll help you prioritize."
+            - Type: cta
+              Order: 8
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Ready to Stop Learning and Start Closing?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      I only work with a handful of coaching clients at a time.
+                      
+                      If you're serious about closing deals in the next 90 days and want personalized guidance from someone who's done 200+ deals, apply below.
+                      
+                      We'll hop on a quick discovery call to see if we're a good fit.
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Apply for 1:1 Coaching"
+                    Action: next_step
+                  Settings:
+                    Alignment: center
+        - Name: "Apply"
+          Slug: apply
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Apply for 1:1 Deal Coaching"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=DC_APPLICATION_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Thanks for your interest in 1:1 Deal Coaching!
+                      
+                      I work with a limited number of clients to ensure everyone gets the attention they need. Please answer a few questions so I can see if we're a good fit.
+                      
+                      **This takes about 3 minutes.**
+            - Type: form
+              Order: 2
+              Elements:
+                - Type: form
+                  Order: 1
+                  Content:
+                    FormSlug: !Ref dc-application
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Book Your Call"
+          Slug: book
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Great! Let's Talk."
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=DC_BOOKING_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Thanks for applying to 1:1 Deal Coaching!
+                      
+                      **Next Step: Book Your Discovery Call**
+                      
+                      On this 30-minute call, we'll:
+                      
+                      ✓ Discuss your investing experience and current situation
+                      ✓ Understand your goals for the next 90 days
+                      ✓ Talk through any deals you're currently working on
+                      ✓ See if 1:1 coaching is the right fit for you
+                      ✓ Answer any questions you have about the program
+                      
+                      **Please come prepared to discuss:**
+                      - Your investing background and experience
+                      - What's holding you back from closing deals
+                      - Your goals and timeline
+                      - Your current deal pipeline (if any)
+                - Type: booking_link
+                  Order: 4
+                  Content:
+                    BookingLinkSlug: !Ref dc-discovery-call
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're Booked"
+          Slug: confirmed
+          Order: 4
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Your Call is Confirmed!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=DC_CONFIRMATION_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Your discovery call is booked. Check your email for calendar details and a Zoom link.
+                      
+                      **Before our call, think about:**
+                      
+                      1. **Your experience** - What deals have you done (or tried to do)?
+                      2. **Your roadblocks** - What's stopping you from closing deals?
+                      3. **Your goals** - What do you want to achieve in the next 90 days?
+                      4. **Your commitment** - Are you ready to take action?
+                      
+                      I'm looking forward to learning about your situation and seeing if I can help.
+                      
+                      **Questions before our call?** Reply to your confirmation email.
+                      
+                      Talk soon!
+
+  # ============================================
+  # 📋 FORMS
+  # ============================================
+  dc-application:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "1:1 Deal Coaching Application"
+      Description: "Qualifying application for coaching program"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your full name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@example.com"
+        - Type: standard
+          FieldName: phone
+          Required: true
+          Placeholder: "(555) 123-4567"
+        - Type: custom
+          CustomFieldSlug: !Ref dc-cf-experience
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref dc-cf-deals-done
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref dc-cf-capital
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref dc-cf-goals
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref dc-cf-timeline
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref dc-cf-commitment
+          Required: true
+      SubmitButton:
+        Text: "Submit Application"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  dc-onboarding-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Deal Coaching Client Intake"
+      Description: "Capture client details for personalized coaching"
+      Fields:
+        - Type: custom
+          CustomFieldSlug: !Ref dc-cf-experience
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref dc-cf-deals-done
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref dc-cf-goals
+          Required: true
+      SubmitButton:
+        Text: "Complete Intake"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  dc-cf-experience:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your real estate investing experience?"
+      FieldType: select
+      Options:
+        - "Beginner - done research but no deals yet"
+        - "Some experience - done 1-5 deals"
+        - "Intermediate - done 6-20 deals"
+        - "Experienced - done 20+ deals"
+      HelpText: "Be honest - this helps me tailor our sessions"
+
+  dc-cf-deals-done:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "How many deals have you closed in the last 12 months?"
+      FieldType: select
+      Options:
+        - "0 - haven't closed any yet"
+        - "1-2 deals"
+        - "3-5 deals"
+        - "6-10 deals"
+        - "More than 10 deals"
+      HelpText: "Any type of deal counts"
+
+  dc-cf-capital:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What capital do you have available for deals?"
+      FieldType: select
+      Options:
+        - "Under $25,000"
+        - "$25,000 - $50,000"
+        - "$50,000 - $100,000"
+        - "$100,000 - $250,000"
+        - "$250,000+"
+        - "I have access to private money or hard money"
+      HelpText: "Cash, credit lines, or access to funding"
+
+  dc-cf-goals:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your main goal for the next 90 days?"
+      FieldType: textarea
+      Placeholder: "Tell me what you want to achieve..."
+      HelpText: "Be specific - what does success look like for you?"
+
+  dc-cf-timeline:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "How soon do you want to close your next deal?"
+      FieldType: select
+      Options:
+        - "As soon as possible - I'm ready now"
+        - "Within 30 days"
+        - "Within 60 days"
+        - "Within 90 days"
+        - "No specific timeline"
+      HelpText: "This helps me understand your urgency"
+
+  dc-cf-commitment:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Are you ready to invest in yourself and take action?"
+      FieldType: select
+      Options:
+        - "Yes - I'm committed and ready to do the work"
+        - "Mostly - I need some guidance first"
+        - "Not sure - I'm still exploring options"
+      HelpText: "Coaching works best when you're fully committed"
+
+  # ============================================
+  # 📅 BOOKING LINKS
+  # ============================================
+  dc-discovery-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Deal Coaching Discovery Call"
+      OwnerUserEmail: "coach@dealcoachingpro.com"
+      Description: "30-minute call to discuss your investing goals and see if coaching is a good fit"
+      DurationMinutes: 30
+      BufferAfterMinutes: 10
+      MinNoticeHours: 24
+      MaxAdvanceDays: 14
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  dc-coaching-session:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Deal Coaching Session"
+      OwnerUserEmail: "coach@dealcoachingpro.com"
+      Description: "60-minute coaching session to review deals and strategize"
+      DurationMinutes: 60
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  dc-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Deal Coaching Client Portal"
+      Description: "Client portal for 1:1 Deal Coaching members"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 📜 AGREEMENT
+  # ============================================
+  dc-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "1:1 Deal Coaching Agreement"
+      Title: "1:1 DEAL COACHING AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Coaching Agreement ("Agreement") is entered into between Deal Coaching Pro LLC ("Coach") and the undersigned client ("Client").
+        
+        ## 1. COACHING SCOPE
+        
+        Coach agrees to provide Client with:
+        
+        - **10 private coaching sessions** (60 minutes each) over a 3-month period
+        - **Deal analysis and review** - reviewing Client's specific deals and opportunities
+        - **Strategy guidance** - helping Client develop their investing approach
+        - **Resource library access** - templates, contracts, and tools
+        - **Email support** for quick questions between sessions
+        
+        Sessions are conducted via Zoom video call. Client books sessions through the client portal.
+        
+        **Sessions must be used within 120 days of enrollment.** Unused sessions expire and are not refundable.
+        
+        ## 2. CLIENT EXPECTATIONS
+        
+        To get the most from coaching, Client agrees to:
+        
+        - **Come prepared** to each session with specific questions, deals, or topics
+        - **Do the work** between sessions (marketing, analyzing deals, talking to sellers)
+        - **Be honest** about their situation, challenges, and progress
+        - **Communicate** if they need to reschedule or have concerns
+        - **Take action** on the strategies and guidance discussed
+        
+        Coaching works best when Client is fully committed and engaged.
+        
+        ## 3. COACH EXPECTATIONS
+        
+        Coach agrees to:
+        
+        - **Provide guidance** based on their experience with 200+ real estate deals
+        - **Review deals** and help Client analyze opportunities
+        - **Answer questions** and provide support between sessions via email
+        - **Be prepared** for each session and give Client full attention
+        - **Maintain confidentiality** of Client's deals and personal information
+        
+        ## 4. PAYMENT TERMS
+        
+        - Payment is required **before the first coaching session**
+        - For payment plans, all scheduled payments must be completed per the agreed schedule
+        - Failure to make scheduled payments may result in suspension of coaching access
+        - Coaching fees are **non-refundable** once sessions have begun
+        
+        ## 5. CANCELLATION AND RESCHEDULING
+        
+        - Client must provide **24-hour notice** to reschedule a session
+        - Sessions cancelled with less than 24-hour notice are forfeited
+        - No-shows are counted as completed sessions
+        - Coach will make reasonable efforts to accommodate Client's schedule
+        
+        ## 6. LIABILITY AND DISCLAIMER
+        
+        Client acknowledges and agrees that:
+        
+        - Coach provides **educational guidance only**, not legal, financial, or tax advice
+        - Coach is **not a licensed** broker, attorney, or financial advisor
+        - **All investment decisions** are made solely by Client
+        - Real estate investing involves **substantial risk** and Client may lose money
+        - Coach is **not liable** for any losses, damages, or outcomes from Client's investments
+        - **Results vary** based on Client's effort, market conditions, and execution
+        - Coach makes **no guarantees** about income, profits, or deal volume
+        
+        **CLIENT ACCEPTS FULL RESPONSIBILITY FOR THEIR OWN INVESTMENT DECISIONS AND OUTCOMES.**
+        
+        ## 7. CONFIDENTIALITY
+        
+        Both parties agree to keep confidential:
+        
+        - Deal details, addresses, and financial information shared during coaching
+        - Business strategies and proprietary methods
+        - Personal information shared during sessions
+        
+        Neither party will share confidential information with third parties without written consent.
+        
+        ## 8. ACKNOWLEDGMENT
+        
+        By signing below, Client acknowledges that they have read, understood, and agree to all terms of this Agreement.
+        
+        Client represents that they are of legal age and have the authority to enter into this Agreement.
+        
+        ---
+        
+        **Client Signature:**
+
+  # ============================================
+  # 🎓 ONBOARDING FLOW
+  # ============================================
+  dc-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Deal Coaching Client Onboarding"
+      Description: "Onboarding flow for new coaching clients"
+      Steps:
+        - Name: "Sign Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to 1:1 Deal Coaching!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      I'm excited to work with you over the next 3 months.
+                      
+                      Before we dive in, please review and sign the coaching agreement. This covers:
+                      
+                      - Coaching scope (what's included)
+                      - Expectations for both of us
+                      - Payment terms
+                      - Cancellation policy
+                      - Liability and disclaimer
+                      
+                      This ensures we're aligned on how we'll work together.
+                - Type: agreement
+                  Order: 3
+                  Content:
+                    AgreementSlug: !Ref dc-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Client Intake"
+          Slug: intake
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Tell Me More About Your Situation"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Please complete this quick intake so I can prepare for our first session.
+                      
+                      The more detail you provide, the better I can tailor our coaching to your specific needs.
+                - Type: form
+                  Order: 3
+                  Content:
+                    FormSlug: !Ref dc-onboarding-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're Ready!"
+          Slug: complete
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Let's Close Some Deals!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You're all set! Welcome to 1:1 Deal Coaching.
+                      
+                      **What to do now:**
+                      
+                      1. **Book your first session** - Use the booking link in your portal
+                      2. **Download the resources** - Get the deal analyzer and templates
+                      3. **Prepare for our call** - Bring any deals you're currently working on
+                      
+                      **Before our first session, think about:**
+                      
+                      - What deals are you currently analyzing or considering?
+                      - What's your biggest challenge or roadblock right now?
+                      - What would make this coaching a success for you?
+                      
+                      I'm looking forward to helping you close deals!
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Book Your First Session"
+                    Action: next_step
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  dc-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Deal Coaching Applications"
+      Description: "Track coaching applicants through the sales process"
+      Stages:
+        - Name: "Applied"
+          Slug: applied
+          Order: 1
+          Description: "Submitted application form"
+        - Name: "Call Booked"
+          Slug: call-booked
+          Order: 2
+          Description: "Discovery call scheduled"
+        - Name: "Call Complete"
+          Slug: call-complete
+          Order: 3
+          Description: "Discovery call finished"
+        - Name: "Proposal"
+          Slug: proposal
+          Order: 4
+          Description: "Sent coaching proposal"
+        - Name: "Won"
+          Slug: won
+          Order: 5
+          Description: "Enrolled in coaching"
+        - Name: "Lost"
+          Slug: lost
+          Order: 6
+          Description: "Did not proceed"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  dc-tag-applicant:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "DC Applicant"
+      Description: "Applied for 1:1 Deal Coaching"
+
+  dc-tag-qualified:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "DC Qualified"
+      Description: "Qualified lead for Deal Coaching"
+
+  dc-tag-client:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "DC Client"
+      Description: "Enrolled in 1:1 Deal Coaching"
+
+  dc-tag-active:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "DC Active"
+      Description: "Currently in active coaching"
+
+  dc-tag-completed:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "DC Completed"
+      Description: "Completed the coaching program"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  dc-workflow-application:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Deal Coaching Application Submitted"
+      Description: "Triggers when someone submits the coaching application"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref dc-application
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref dc-tag-applicant
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref dc-seq-applicant
+
+  dc-workflow-call-booked:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Deal Coaching Call Booked"
+      Description: "Triggers when someone books a discovery call"
+      Triggers:
+        - EventType: AppointmentConfirmed
+          FilterConfig:
+            Field: bookingLink.slug
+            Operator: EQUALS
+            Value: !Ref dc-discovery-call
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref dc-tag-qualified
+
+  dc-workflow-enrollment:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Deal Coaching Enrollment"
+      Description: "Triggers when someone is granted access to Deal Coaching"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref dc-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref dc-tag-client
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref dc-tag-active
+        - Type: send_email
+          Order: 3
+          Config:
+            TemplateSlug: !Ref dc-email-welcome
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCE
+  # ============================================
+  dc-seq-applicant:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Deal Coaching Applicant"
+      Description: "Follow-up sequence for coaching applicants"
+      Steps:
+        - TemplateSlug: !Ref dc-email-application-received
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref dc-email-call-reminder
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref dc-email-last-chance
+          DelayAmount: 5
+          DelayUnit: days
+          Order: 3
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  dc-email-application-received:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "DC Application Received"
+      Subject: "Your Deal Coaching application is in"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Thanks for Applying!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thanks for applying to 1:1 Deal Coaching. I review every 
+              application personally to make sure we're a good fit.
+              
+              **What happens next:**
+              
+              1. Book your discovery call (if you haven't already)
+              2. We hop on a 30-minute call to discuss your situation
+              3. If we're a good fit, I'll share how we can work together
+              
+              If you haven't booked your call yet, do that now. I only 
+              work with a handful of coaching clients at a time.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Discovery Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Questions before our call?**
+              
+              Just reply to this email.
+              
+              Looking forward to chatting!
+              
+              - Deal Coaching Pro
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  dc-email-call-reminder:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "DC Call Reminder"
+      Subject: "Quick reminder: Book your discovery call"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Don't Forget to Book Your Call"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I noticed you applied for 1:1 Deal Coaching but haven't 
+              booked your discovery call yet.
+              
+              Just a friendly reminder - I only work with a limited number 
+              of coaching clients to ensure everyone gets the attention 
+              they need.
+              
+              If you're serious about closing deals in the next 90 days 
+              and want personalized guidance, let's chat.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Call Now"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              If the timing isn't right, no worries. Just reply and let 
+              me know.
+              
+              - Deal Coaching Pro
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  dc-email-last-chance:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "DC Last Chance"
+      Subject: "Still interested in 1:1 coaching?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Still Interested?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I wanted to check in one more time about your application 
+              to 1:1 Deal Coaching.
+              
+              I know life gets busy, so I understand if the timing isn't 
+              right. But if you're still interested in:
+              
+              - Getting personalized guidance on your specific deals
+              - Having an experienced investor in your corner
+              - Closing your first (or next) deal in the next 90 days
+              
+              ...then let's get you scheduled for a discovery call.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Discovery Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              If you've decided coaching isn't for you, no hard feelings. 
+              Just reply and let me know so I can close out your 
+              application.
+              
+              Either way, I wish you success in your investing!
+              
+              - Deal Coaching Pro
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  dc-email-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "DC Welcome Email"
+      Subject: "Welcome to 1:1 Deal Coaching - Let's get started"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to 1:1 Deal Coaching!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Welcome to 1:1 Deal Coaching! I'm excited to work with you 
+              over the next 3 months.
+              
+              **Your first step:** Log in to your client portal and 
+              complete the quick onboarding. You'll need to:
+              
+              1. Sign the coaching agreement
+              2. Complete the client intake form
+              
+              This takes about 5 minutes and helps me prepare for our 
+              first session.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Complete Onboarding"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Once you're set up:**
+              
+              1. Book your first coaching session
+              2. Download the resources (deal analyzer, templates)
+              3. Prepare any deals you want to discuss
+              
+              I'm looking forward to helping you close deals!
+              
+              - Deal Coaching Pro
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  dc-business:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "Deal Coaching Pro LLC"
+      Email: "support@dealcoachingpro.com"
+      Phone: "+1-555-DEAL-PRO"
+      Timezone: "America/New_York"
+      BusinessType: "LLC"
+      Industry: "Real Estate Education"
+      SignatureText: "Deal Coaching Pro"

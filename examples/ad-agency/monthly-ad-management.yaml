@@ -1,0 +1,1029 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFER
+  # ============================================
+  ad-management-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Monthly Ad Management"
+      Description: "Full done-for-you ad account management with daily optimization and weekly reporting"
+      DefaultPortal: !Ref ad-management-portal
+      Items:
+        - Product: !Ref ad-management-dashboard
+      PricingPlans:
+        - !Ref ad-management-monthly
+
+  # ============================================
+  # 📦 PRODUCT
+  # ============================================
+  ad-management-dashboard:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Client Dashboard"
+      ProductType: page
+      Description: "Your ad management dashboard with reports, strategy calls, and campaign documentation"
+      Page:
+        Title: "Your Ad Management Dashboard"
+        Content: |
+          ## Welcome to Your Ad Management Dashboard
+          
+          This is your central hub for everything related to your ad campaigns. Here you'll find performance reports, book your monthly strategy calls, and access all campaign documentation.
+          
+          ---
+          
+          ## Weekly Performance Reports
+          
+          Every Monday, you'll receive a detailed performance report covering:
+          - Campaign spend vs. budget
+          - Key metrics (impressions, clicks, conversions, ROAS/CPA)
+          - What's working and what we're testing
+          - Optimizations made during the week
+          - Recommendations for the coming week
+          
+          **Latest reports will be emailed to you and archived here.**
+          
+          ---
+          
+          ## Monthly Strategy Call
+          
+          Each month, we hop on a 30-minute call to review performance, discuss upcoming promotions, and align on strategy.
+          
+          **Book your next monthly strategy call below:**
+          
+          [Book Strategy Call →](#)
+          
+          ---
+          
+          ## Campaign Documentation
+          
+          All documentation for your campaigns is stored here:
+          - Account structure overview
+          - Audience targeting breakdown
+          - Current creative assets
+          - Tracking and pixel setup
+          - Historical performance data
+          
+          ---
+          
+          ## Creative Assets Library
+          
+          Access all current and past ad creatives:
+          - Static images
+          - Video ads
+          - Carousel assets
+          - Copy variations
+          
+          Need new creatives? Let us know during your strategy call or email us anytime.
+          
+          ---
+          
+          ## Questions?
+          
+          Your dedicated account manager is always available. Email us at team@adscaleagency.com or reply to any weekly report.
+
+  # ============================================
+  # 💰 PRICING PLAN
+  # ============================================
+  ad-management-monthly:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Monthly Ad Management"
+      Description: "Monthly subscription for full ad account management"
+      Amount: 300000
+      Currency: USD
+      BillingType: subscription
+      BillingInterval: monthly
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  ad-management-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Ad Management Application"
+      Description: "Application funnel for Monthly Ad Management service"
+      Steps:
+        - Name: "Learn More"
+          Slug: interest
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Stop Managing Ads. Start Scaling Your Business."
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Hand your ad accounts to experts who manage millions in ad spend. We handle everything - you focus on running your business."
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                    Provider: youtube
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Running ads is a full-time job. Is that really how you want to spend your time?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You started running ads because you needed customers. But now ads are running you.
+                      
+                      Every day it's the same cycle:
+                      - Check Ads Manager first thing in the morning
+                      - Stress about rising CPAs and inconsistent ROAS
+                      - Wonder if you should kill that campaign or give it more time
+                      - Spend hours creating new audiences and creatives
+                      - Fall behind on actually running your business
+                      
+                      You've thought about hiring someone, but...
+                      
+                      - Full-time media buyers cost $60K-$100K+ per year
+                      - Freelancers are hit-or-miss and require constant management
+                      - Agencies want 15-20% of ad spend (that's $3K-$6K/month on a $30K budget)
+                      
+                      What if there was a better way?
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "What if you never had to log into Ads Manager again?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Imagine this:
+                      
+                      Every morning, you wake up to results - not tasks. Your campaigns are running, optimizing, and scaling while you sleep.
+                      
+                      Every week, you get a clear report showing exactly what's happening with your ads. No jargon. No confusion. Just results.
+                      
+                      Every month, you hop on a strategy call to discuss what's working and what's next. Then you go back to running your business.
+                      
+                      That's what full ad management looks like.
+            - Type: content
+              Order: 4
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's what's included"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      ✓ **Full Ad Account Management**
+                      We take over your Meta, TikTok, or both. You give us access, we handle the rest.
+                      
+                      ✓ **Daily Monitoring & Optimization**
+                      Our team checks your campaigns every single day. We catch issues before they become problems and capitalize on opportunities as they emerge.
+                      
+                      ✓ **Weekly Performance Reports**
+                      Every Monday, you get a clear breakdown of performance, optimizations made, and recommendations for the week ahead.
+                      
+                      ✓ **Monthly Strategy Calls (30 min)**
+                      Once a month, we review performance together, discuss upcoming promotions, and align on strategy.
+                      
+                      ✓ **Creative Refresh as Needed**
+                      When creatives start fatiguing, we produce fresh ads to keep performance strong. No extra charge.
+                      
+                      ✓ **A/B Testing & Experimentation**
+                      We're constantly testing new audiences, creatives, and angles to improve results over time.
+                      
+                      ✓ **Dedicated Account Manager**
+                      You have one point of contact who knows your business inside and out.
+            - Type: content
+              Order: 5
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Is this right for your business?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Monthly Ad Management is perfect for businesses that:
+                      
+                      ✓ Already spend at least $5,000/month on ads
+                      ✓ Have a proven offer that converts
+                      ✓ Want to scale but don't have time to manage ads
+                      ✓ Are ready for a long-term partnership (not a quick fix)
+                      ✓ Value expertise and are ready to invest accordingly
+                      
+                      **Not sure if you're a fit?** Apply below and we'll discuss on a discovery call.
+            - Type: testimonials
+              Order: 6
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "I used to spend 2 hours a day in Ads Manager. Now I spend 30 minutes a month on a strategy call. Our ROAS actually improved because I'm not constantly second-guessing and making emotional changes."
+                    Author: "Jennifer M., E-commerce Brand Owner"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "Best business decision I made this year. The weekly reports are clear, the strategy calls are valuable, and I finally have time to work ON my business instead of IN my ad account."
+                    Author: "Michael R., Course Creator"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 3
+                  Content:
+                    Quote: "We went from $15K/month to $45K/month in ad spend in 6 months. I couldn't have managed that growth myself. Having a team that knows what they're doing is worth every penny."
+                    Author: "Sarah L., DTC Founder"
+                    Rating: 5
+            - Type: faq
+              Order: 7
+              Elements:
+                - Type: faq_item
+                  Order: 1
+                  Content:
+                    Question: "Which platforms do you manage?"
+                    Answer: "We specialize in Meta (Facebook/Instagram) and TikTok. We can manage one or both depending on where your audience is."
+                - Type: faq_item
+                  Order: 2
+                  Content:
+                    Question: "What's the minimum ad spend requirement?"
+                    Answer: "We work best with businesses spending at least $5,000/month on ads. This gives us enough data and budget to optimize effectively."
+                - Type: faq_item
+                  Order: 3
+                  Content:
+                    Question: "How long is the commitment?"
+                    Answer: "We ask for a 3-month minimum commitment. Ads take time to optimize, and we want to make sure we can deliver results. After that, it's month-to-month."
+                - Type: faq_item
+                  Order: 4
+                  Content:
+                    Question: "Do you charge a percentage of ad spend?"
+                    Answer: "No. Our fee is a flat monthly rate regardless of your ad spend. This means our incentives are aligned - we want to make your ads more efficient, not encourage you to spend more."
+                - Type: faq_item
+                  Order: 5
+                  Content:
+                    Question: "What if I need to pause my campaigns?"
+                    Answer: "Life happens. If you need to pause for a month, let us know. We'll put your account on hold and resume when you're ready."
+            - Type: cta
+              Order: 8
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Ready to Hand Off Your Ads?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Apply now and we'll schedule a discovery call to discuss your business and see if we're a good fit."
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Apply for Ad Management"
+                    Action: next_step
+                  Settings:
+                    Alignment: center
+        - Name: "Apply"
+          Slug: apply
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Apply for Monthly Ad Management"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=APPLICATION_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      We work with a limited number of clients to ensure quality and attention. Please answer a few questions so we can see if we're a good fit for each other.
+                      
+                      **This takes about 5 minutes.**
+            - Type: form
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Tell us about your business:"
+                - Type: form
+                  Order: 2
+                  Content:
+                    FormSlug: !Ref ad-management-application-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Book Your Call"
+          Slug: book
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Great! Let's Talk."
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=BOOKING_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Thank you for applying for Monthly Ad Management.
+                      
+                      **Next Step: Book Your Discovery Call**
+                      
+                      On this 60-minute call, we'll:
+                      
+                      ✓ Review your current ad performance and account structure
+                      ✓ Understand your business goals and growth targets
+                      ✓ Discuss your current challenges and what's not working
+                      ✓ Determine if we're a good fit for each other
+                      ✓ Answer all your questions about how we work
+                      
+                      **Please come prepared to discuss:**
+                      - Your current monthly ad spend and results
+                      - Access to your ad account (we may do a quick review)
+                      - Your goals for the next 90 days
+                      - Any upcoming promotions or launches
+                - Type: booking_link
+                  Order: 4
+                  Content:
+                    BookingLinkSlug: !Ref ad-management-discovery-call
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're Booked"
+          Slug: confirmed
+          Order: 4
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=CONFIRMATION_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Your discovery call is booked. Check your email for calendar details and a Zoom link.
+                      
+                      **Before our call, please:**
+                      
+                      1. **Have your ad account ready** - We may take a quick look during the call
+                      2. **Know your numbers** - Current monthly spend, average ROAS/CPA, lifetime customer value
+                      3. **List your goals** - What does success look like in 30/60/90 days?
+                      4. **Note your challenges** - What's frustrating you about your current ads?
+                      5. **Think about commitment** - Are you ready to invest in a long-term partnership?
+                      
+                      The more prepared you are, the more productive our call will be.
+                      
+                      **Questions before our call?** Reply to your confirmation email and we'll get back to you.
+                      
+                      See you soon!
+
+  # ============================================
+  # 📋 FORM
+  # ============================================
+  ad-management-application-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Ad Management Application"
+      Description: "Qualifying application for Monthly Ad Management service"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your full name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@company.com"
+        - Type: custom
+          CustomFieldSlug: !Ref cf-mgmt-business-name
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-mgmt-website
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-mgmt-monthly-spend
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-mgmt-platforms
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-mgmt-current-performance
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-mgmt-biggest-challenge
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-mgmt-90-day-goals
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-mgmt-investment-readiness
+          Required: true
+      SubmitButton:
+        Text: "Submit Application"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  # ============================================
+  # 🔧 CUSTOM FIELD
+  # ============================================
+  cf-mgmt-business-name:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What is your business name?"
+      FieldType: text
+      Placeholder: "Your company or brand name"
+
+  cf-mgmt-website:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What is your website URL?"
+      FieldType: text
+      Placeholder: "https://yourcompany.com"
+
+  cf-mgmt-monthly-spend:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What is your current monthly ad spend?"
+      FieldType: select
+      Options:
+        - "Under $5,000"
+        - "$5,000 - $10,000"
+        - "$10,000 - $25,000"
+        - "$25,000 - $50,000"
+        - "$50,000+"
+      HelpText: "We work best with businesses spending $5K+/month"
+
+  cf-mgmt-platforms:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Which ad platforms are you running on?"
+      FieldType: select
+      Options:
+        - "Meta only (Facebook/Instagram)"
+        - "TikTok only"
+        - "Both Meta and TikTok"
+      HelpText: "Select all that apply"
+
+  cf-mgmt-current-performance:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your current ROAS or CPA?"
+      FieldType: text
+      Placeholder: "e.g., 2.5x ROAS or $45 CPA"
+      HelpText: "Approximate numbers are fine"
+
+  cf-mgmt-biggest-challenge:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your biggest challenge with ads right now?"
+      FieldType: textarea
+      Placeholder: "Tell us what's not working or what's frustrating you..."
+      HelpText: "Be as specific as possible"
+
+  cf-mgmt-90-day-goals:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What are your goals for the next 90 days?"
+      FieldType: textarea
+      Placeholder: "e.g., Scale from $10K to $25K/month spend while maintaining 3x ROAS..."
+      HelpText: "What does success look like?"
+
+  cf-mgmt-investment-readiness:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Are you ready to invest in professional ad management?"
+      FieldType: select
+      Options:
+        - "Yes, I'm ready to make a significant investment"
+        - "Need to discuss budget and options"
+        - "Exploring options for the future"
+      HelpText: "Be honest - this helps us determine if we're a good fit"
+
+  # ============================================
+  # 📅 BOOKING LINK
+  # ============================================
+  ad-management-discovery-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Ad Management Discovery Call"
+      OwnerUserEmail: "team@adscaleagency.com"
+      Description: "60-minute discovery call to discuss your ad management needs"
+      DurationMinutes: 60
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  monthly-strategy-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Monthly Strategy Call"
+      OwnerUserEmail: "team@adscaleagency.com"
+      Description: "30-minute monthly strategy call for ad management clients"
+      DurationMinutes: 30
+      BufferAfterMinutes: 10
+      MinNoticeHours: 24
+      MaxAdvanceDays: 60
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  ad-management-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "AdScale Management Portal"
+      Description: "Client portal for Monthly Ad Management subscribers"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  ad-management-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Ad Management Sales"
+      Description: "Track Ad Management prospects through the sales process"
+      Stages:
+        - Name: "Lead"
+          Slug: lead
+          Order: 1
+          Description: "Visited interest page but hasn't applied"
+        - Name: "Applied"
+          Slug: applied
+          Order: 2
+          Description: "Submitted application form"
+        - Name: "Call Booked"
+          Slug: call-booked
+          Order: 3
+          Description: "Discovery call scheduled"
+        - Name: "Call Completed"
+          Slug: call-completed
+          Order: 4
+          Description: "Discovery call finished"
+        - Name: "Proposal Sent"
+          Slug: proposal-sent
+          Order: 5
+          Description: "Proposal or agreement sent"
+        - Name: "Won"
+          Slug: won
+          Order: 6
+          Description: "Signed up for Ad Management"
+        - Name: "Lost"
+          Slug: lost
+          Order: 7
+          Description: "Did not proceed"
+
+  # ============================================
+  # 🏷️ TAG
+  # ============================================
+  ad-management-applicant-tag:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Ad Management Applicant"
+      Description: "Applied for Monthly Ad Management"
+
+  ad-management-client-tag:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Ad Management Client"
+      Description: "Active Monthly Ad Management subscriber"
+
+  # ============================================
+  # ⚡ WORKFLOW
+  # ============================================
+  ad-management-application-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Ad Management Application Submitted"
+      Description: "Triggers when someone submits the Ad Management application"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref ad-management-application-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref ad-management-applicant-tag
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref ad-management-applicant-sequence
+
+  ad-management-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Ad Management Client Onboarding"
+      Description: "Triggers when someone is granted access to Monthly Ad Management"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref ad-management-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref ad-management-client-tag
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref ad-management-onboarding-sequence
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCE
+  # ============================================
+  ad-management-applicant-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Ad Management Applicant"
+      Description: "Follow-up sequence for Ad Management applicants"
+      Steps:
+        - TemplateSlug: !Ref ad-management-application-received-email
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref ad-management-call-reminder-email
+          DelayAmount: 1
+          DelayUnit: days
+          Order: 2
+
+  ad-management-onboarding-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Ad Management Onboarding"
+      Description: "Welcome and onboarding sequence for new Ad Management clients"
+      Steps:
+        - TemplateSlug: !Ref ad-management-welcome-email
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref ad-management-first-week-email
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref ad-management-first-month-email
+          DelayAmount: 30
+          DelayUnit: days
+          Order: 3
+
+  # ============================================
+  # 📧 EMAIL TEMPLATE
+  # ============================================
+  ad-management-application-received-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Ad Management Application Received"
+      Subject: "We received your Ad Management application"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Thanks for Applying!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thank you for applying for Monthly Ad Management. We review 
+              every application personally to make sure we can deliver 
+              great results for your business.
+              
+              **What happens next:**
+              
+              1. You book a discovery call (if you haven't already)
+              2. We hop on a 60-minute call to discuss your business
+              3. If we're a good fit, we'll create a custom proposal
+              
+              If you haven't booked your call yet, make sure to do that 
+              now. We only take on a limited number of new clients each 
+              month.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Discovery Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Questions before our call?**
+              
+              Just reply to this email and we'll get back to you.
+              
+              Looking forward to learning about your business!
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  ad-management-call-reminder-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Ad Management Call Reminder"
+      Subject: "Quick reminder: Book your discovery call"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Don't Forget to Book Your Call"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I noticed you applied for Monthly Ad Management but haven't 
+              booked your discovery call yet.
+              
+              I wanted to reach out because:
+              
+              - We only take on 2-3 new management clients each month
+              - Discovery calls fill up quickly
+              - The sooner we chat, the sooner we can start improving 
+                your results
+              
+              If you're serious about handing off your ad management to 
+              experts, book a time and let's talk.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Call Now"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              If the timing isn't right, no worries. Just reply and let 
+              me know what's going on.
+              
+              Talk soon!
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  ad-management-welcome-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Ad Management Welcome"
+      Subject: "Welcome! Let's take over your ad accounts"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Monthly Ad Management!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Welcome aboard! We're excited to take over your ad 
+              management and help you scale your business.
+              
+              **Here's what happens next:**
+              
+              1. **Onboarding call** - We'll schedule a call to get 
+                 access to your accounts and understand your business
+              2. **Account audit** - We review your current setup and 
+                 identify quick wins
+              3. **Optimization begins** - We start making improvements 
+                 immediately
+              4. **First weekly report** - You'll receive your first 
+                 performance report next Monday
+              
+              **Your next step:** Check your inbox for a separate email 
+              to schedule your onboarding call.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Your Client Dashboard"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **What you can expect:**
+              
+              - Daily monitoring of your campaigns
+              - Weekly performance reports (every Monday)
+              - Monthly strategy calls
+              - Creative refresh as needed
+              - Direct access to your account manager
+              
+              Questions? Just reply to this email.
+              
+              Here's to better ads!
+              
+              The AdScale Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  ad-management-first-week-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Ad Management First Week Check-in"
+      Subject: "Your first week: Here's what we've done"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Your First Week Update"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've been with us for a week now, and we wanted to give 
+              you a quick update on what's happened.
+              
+              **What we've done:**
+              ✓ Completed full account audit
+              ✓ Implemented initial optimizations
+              ✓ Set up tracking verification
+              ✓ Established baseline metrics
+              ✓ Started daily monitoring
+              
+              **What you should see:**
+              - Your first weekly report arrived Monday
+              - Early optimization signals (it takes 2-4 weeks for 
+                full impact)
+              - Clear communication on what we're testing
+              
+              **Reminder:** Your monthly strategy call is available 
+              to book anytime. We recommend scheduling it for the 
+              end of month one to review initial results.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Monthly Strategy Call"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Questions about your reports or anything else? 
+              Just reply to this email.
+              
+              The AdScale Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  ad-management-first-month-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Ad Management First Month Review"
+      Subject: "Your first month: Let's review results"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Month One Complete!"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Congratulations on completing your first month of ad 
+              management with us!
+              
+              **It's time for your monthly strategy call.**
+              
+              On this call, we'll review:
+              - Performance vs. your starting baseline
+              - What's working and what we're testing
+              - Creative performance and refresh plans
+              - Goals and strategy for month two
+              - Any questions you have
+              
+              If you haven't already, book your monthly strategy call 
+              using the link below.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Strategy Call"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Looking ahead:**
+              
+              Month one is about stabilization and quick wins. Month 
+              two is where we start scaling what's working and testing 
+              new angles.
+              
+              We're excited about your progress and looking forward 
+              to our strategy call!
+              
+              The AdScale Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  business-profile:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "AdScale Agency LLC"
+      Email: "team@adscaleagency.com"
+      Phone: "+1-555-234-5678"
+      Timezone: "America/New_York"
+      BusinessType: "LLC"
+      Industry: "Marketing & Advertising"
+      SignatureText: "The AdScale Team"

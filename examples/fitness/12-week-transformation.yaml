@@ -1,0 +1,1001 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFER
+  # ============================================
+  transformation-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "12-Week Body Transformation"
+      Description: "Complete 12-week transformation program with structured training, nutrition guidance, and community accountability"
+      DefaultPortal: !Ref transformation-portal
+      Items:
+        - Product: !Ref transformation-course
+        - Product: !Ref transformation-community
+      PricingPlans:
+        - !Ref transformation-pif
+        - !Ref transformation-split
+
+  # ============================================
+  # 📦 PRODUCT (Course)
+  # ============================================
+  transformation-course:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "12-Week Body Transformation Program"
+      ProductType: course
+      Description: "A structured 12-week program covering training, nutrition, and mindset for lasting body transformation"
+      Course:
+        Title: "12-Week Body Transformation"
+        Description: "Your complete roadmap to transforming your body in 12 weeks"
+        Modules:
+          - Title: "Welcome & Getting Started"
+            Order: 1
+            Lessons:
+              - Title: "Welcome to Your Transformation Journey"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/welcome-transformation"
+              - Title: "How to Use This Program"
+                Order: 2
+                ContentType: text
+                TextContent: |
+                  Welcome to the 12-Week Body Transformation Program!
+                  
+                  Here's how to get the most out of this program:
+                  
+                  **Follow the weekly structure:**
+                  - Each 2-week phase builds on the previous one
+                  - Don't skip ahead - the progression is intentional
+                  - Complete each module before moving to the next
+                  
+                  **Track your progress:**
+                  - Take before photos (front, side, back)
+                  - Record your starting measurements
+                  - Weigh yourself weekly at the same time
+                  
+                  **Stay accountable:**
+                  - Post in the community daily
+                  - Share your wins (and struggles)
+                  - Support your fellow transformation members
+              - Title: "Setting Your Transformation Goals"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/goals-setting"
+          - Title: "Week 1-2: Foundation Phase"
+            Order: 2
+            Lessons:
+              - Title: "Building Your Training Foundation"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/foundation-training"
+              - Title: "Nutrition Fundamentals for Fat Loss"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/nutrition-fundamentals"
+              - Title: "Week 1-2 Training Program"
+                Order: 3
+                ContentType: text
+                TextContent: |
+                  ## Foundation Phase Training (Week 1-2)
+                  
+                  **Goal:** Establish movement patterns, build exercise habit
+                  
+                  **Schedule:** 3 days per week (Mon/Wed/Fri or Tue/Thu/Sat)
+                  
+                  ### Day 1: Full Body A
+                  - Goblet Squat: 3x12
+                  - Dumbbell Bench Press: 3x12
+                  - Dumbbell Row: 3x12 each arm
+                  - Plank: 3x30 seconds
+                  
+                  ### Day 2: Full Body B
+                  - Romanian Deadlift: 3x12
+                  - Overhead Press: 3x12
+                  - Lat Pulldown: 3x12
+                  - Dead Bug: 3x10 each side
+                  
+                  ### Day 3: Full Body C
+                  - Lunges: 3x10 each leg
+                  - Push-ups: 3x as many as possible
+                  - Cable Face Pull: 3x15
+                  - Bird Dog: 3x10 each side
+                  
+                  **Rest:** 60-90 seconds between sets
+          - Title: "Week 3-4: Building Momentum"
+            Order: 3
+            Lessons:
+              - Title: "Progressive Overload Explained"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/progressive-overload"
+              - Title: "Meal Prep Strategies That Work"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/meal-prep"
+              - Title: "Week 3-4 Training Program"
+                Order: 3
+                ContentType: text
+                TextContent: |
+                  ## Building Momentum Training (Week 3-4)
+                  
+                  **Goal:** Increase intensity, introduce progressive overload
+                  
+                  **Schedule:** 4 days per week
+                  
+                  ### Day 1: Upper Body
+                  - Dumbbell Bench Press: 4x10
+                  - Dumbbell Row: 4x10 each arm
+                  - Overhead Press: 3x12
+                  - Tricep Dips: 3x as many as possible
+                  - Bicep Curls: 3x12
+                  
+                  ### Day 2: Lower Body
+                  - Barbell Squat: 4x10
+                  - Romanian Deadlift: 4x10
+                  - Leg Press: 3x12
+                  - Leg Curl: 3x12
+                  - Calf Raise: 3x15
+                  
+                  ### Day 3: Push
+                  - Incline Dumbbell Press: 4x10
+                  - Cable Fly: 3x12
+                  - Lateral Raise: 3x15
+                  - Tricep Pushdown: 3x12
+                  
+                  ### Day 4: Pull
+                  - Lat Pulldown: 4x10
+                  - Seated Cable Row: 4x10
+                  - Face Pull: 3x15
+                  - Hammer Curl: 3x12
+                  
+                  **Note:** Increase weight by 5% from Week 1-2
+          - Title: "Week 5-6: Intensity Phase"
+            Order: 4
+            Lessons:
+              - Title: "Pushing Through Plateaus"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/plateaus"
+              - Title: "Advanced Nutrition Strategies"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/advanced-nutrition"
+              - Title: "Week 5-6 Training Program"
+                Order: 3
+                ContentType: text
+                TextContent: |
+                  ## Intensity Phase Training (Week 5-6)
+                  
+                  **Goal:** Increase training intensity with supersets
+                  
+                  **Schedule:** 4 days per week
+                  
+                  ### Day 1: Upper Body Supersets
+                  - A1: Dumbbell Bench Press 4x8
+                  - A2: Dumbbell Row 4x8
+                  - B1: Overhead Press 3x10
+                  - B2: Lat Pulldown 3x10
+                  - C1: Tricep Dips 3xAMRAP
+                  - C2: Bicep Curls 3x12
+                  
+                  ### Day 2: Lower Body Supersets
+                  - A1: Barbell Squat 4x8
+                  - A2: Leg Curl 4x10
+                  - B1: Romanian Deadlift 4x8
+                  - B2: Leg Extension 4x10
+                  - C: Calf Raise 4x15
+                  
+                  ### Day 3: Push Supersets
+                  - A1: Incline DB Press 4x8
+                  - A2: Cable Fly 4x12
+                  - B1: Arnold Press 3x10
+                  - B2: Lateral Raise 3x15
+                  - C: Tricep Pushdown 3x12
+                  
+                  ### Day 4: Pull Supersets
+                  - A1: Weighted Pulldown 4x8
+                  - A2: Face Pull 4x15
+                  - B1: Seated Row 4x10
+                  - B2: Rear Delt Fly 4x12
+                  - C: Hammer Curl 3x12
+                  
+                  **Supersets:** Perform A1, rest 30s, perform A2, rest 60s, repeat
+          - Title: "Week 7-8: Peak Performance"
+            Order: 5
+            Lessons:
+              - Title: "Training at Your Peak"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/peak-training"
+              - Title: "Recovery and Sleep Optimization"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/recovery-sleep"
+              - Title: "Week 7-8 Training Program"
+                Order: 3
+                ContentType: text
+                TextContent: |
+                  ## Peak Performance Training (Week 7-8)
+                  
+                  **Goal:** Maximize strength gains with heavier loads
+                  
+                  **Schedule:** 5 days per week
+                  
+                  ### Day 1: Heavy Upper
+                  - Barbell Bench Press: 5x5
+                  - Barbell Row: 5x5
+                  - Overhead Press: 4x6
+                  - Weighted Dips: 3x8
+                  
+                  ### Day 2: Heavy Lower
+                  - Barbell Squat: 5x5
+                  - Deadlift: 5x3
+                  - Leg Press: 4x8
+                  - Calf Raise: 4x15
+                  
+                  ### Day 3: Volume Upper
+                  - Incline DB Press: 4x10
+                  - Cable Row: 4x10
+                  - Lateral Raise: 4x15
+                  - Tricep/Bicep Superset: 3x12 each
+                  
+                  ### Day 4: Volume Lower
+                  - Front Squat: 4x8
+                  - Romanian Deadlift: 4x10
+                  - Leg Curl: 4x12
+                  - Leg Extension: 4x12
+                  
+                  ### Day 5: Full Body Pump
+                  - Light compound movements 3x15 each
+                  - Focus on mind-muscle connection
+                  - Active recovery pace
+          - Title: "Week 9-10: Final Push"
+            Order: 6
+            Lessons:
+              - Title: "The Home Stretch Mindset"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/home-stretch"
+              - Title: "Fine-Tuning Your Nutrition"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/fine-tuning-nutrition"
+              - Title: "Week 9-10 Training Program"
+                Order: 3
+                ContentType: text
+                TextContent: |
+                  ## Final Push Training (Week 9-10)
+                  
+                  **Goal:** Maximum effort while managing fatigue
+                  
+                  **Schedule:** 5 days per week
+                  
+                  ### Training Structure
+                  Follow the Week 7-8 structure with these modifications:
+                  
+                  **Heavy Days (Day 1 & 2):**
+                  - Attempt to increase weight by 2.5-5%
+                  - If you fail a rep, reduce by 10% and finish the set
+                  - Focus on perfect form
+                  
+                  **Volume Days (Day 3 & 4):**
+                  - Add 1 additional set to each exercise
+                  - Reduce rest periods to 45-60 seconds
+                  - Push close to failure on last set
+                  
+                  **Pump Day (Day 5):**
+                  - Increase to 4x20 for all exercises
+                  - Minimal rest (30 seconds)
+                  - Focus on the squeeze
+                  
+                  **Recovery Priority:**
+                  - Sleep 8+ hours
+                  - Stay hydrated (1 gallon water daily)
+                  - Consider deload if feeling worn down
+          - Title: "Week 11-12: Transformation Complete"
+            Order: 7
+            Lessons:
+              - Title: "Final Week Protocol"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/final-week"
+              - Title: "Maintaining Your Results"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/maintaining-results"
+              - Title: "Celebrating Your Transformation"
+                Order: 3
+                ContentType: text
+                TextContent: |
+                  ## Congratulations! You Made It!
+                  
+                  You've completed the 12-Week Body Transformation program.
+                  
+                  **Week 11-12 Focus:**
+                  - Take your after photos (same angles as before)
+                  - Record your final measurements
+                  - Reflect on your journey
+                  
+                  **What You've Accomplished:**
+                  - Built consistent training habits
+                  - Learned proper nutrition principles
+                  - Transformed your body composition
+                  - Proved what you're capable of
+                  
+                  **What's Next:**
+                  - Transition to maintenance phase
+                  - Continue tracking progress monthly
+                  - Stay active in the community
+                  - Consider the advanced program for continued gains
+                  
+                  **Share Your Results:**
+                  Post your transformation in the community! You've earned it.
+
+  # ============================================
+  # 📦 PRODUCT (Community)
+  # ============================================
+  transformation-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Transformation Community"
+      ProductType: community
+      Description: "Private accountability community for transformation program members"
+      Community:
+        Name: "Transformation Tribe"
+        Description: "Your support system for the 12-week journey"
+        Spaces:
+          - Name: "Announcements"
+            Slug: announcements
+            Description: "Program updates and important information"
+            Order: 1
+          - Name: "Daily Check-ins"
+            Slug: daily-checkins
+            Description: "Post your daily wins, meals, and workouts"
+            Order: 2
+          - Name: "Wins & Progress"
+            Slug: wins-progress
+            Description: "Share your victories and transformation photos"
+            Order: 3
+          - Name: "Q&A"
+            Slug: qa
+            Description: "Ask questions and get support from the community"
+            Order: 4
+
+  # ============================================
+  # 💰 PRICING PLAN
+  # ============================================
+  transformation-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Pay in Full"
+      Description: "One-time payment for full program access"
+      Amount: 49700
+      Currency: USD
+      BillingType: one_time
+
+  transformation-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "3-Month Payment Plan"
+      Description: "Split into 3 monthly payments"
+      Amount: 59100
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  transformation-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "12-Week Transformation Funnel"
+      Description: "Mid-ticket funnel with free training and application"
+      Steps:
+        - Name: "Free Training"
+          Slug: optin
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Free Training: The 3 Mistakes Keeping You From Your Dream Body"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Discover why 90% of people fail their fitness goals (and the simple fix that changes everything)"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=OPTIN_HOOK_VIDEO"
+                    Provider: youtube
+            - Type: form
+              Order: 2
+              Elements:
+                - Type: text
+                  Order: 1
+                  Content:
+                    Text: "Enter your details below to watch the free training:"
+                - Type: form
+                  Order: 2
+                  Content:
+                    FormSlug: !Ref transformation-lead-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Watch Training"
+          Slug: training
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "The 3 Mistakes Keeping You From Your Dream Body"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=MASTERCLASS_VIDEO"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      In this training, you discovered:
+                      
+                      ✓ Why willpower-based fitness always fails (and what works instead)
+                      ✓ The "progressive adaptation" secret that guarantees results
+                      ✓ How accountability beats motivation every single time
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Sound familiar?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You've tried before. Maybe dozens of times.
+                      
+                      You start strong. The first week feels great. You meal prep, hit the gym, feel motivated.
+                      
+                      Then... life happens.
+                      
+                      - A stressful week at work and you skip a few workouts
+                      - A social event derails your nutrition
+                      - The scale stops moving and you lose motivation
+                      
+                      Before you know it, you're back where you started. Again.
+                      
+                      Here's the truth nobody tells you:
+                      
+                      **The problem isn't you. It's the approach.**
+                      
+                      Random workouts don't create transformations. Strict diets don't create lasting change. Motivation fades.
+                      
+                      What DOES work? A proven system with built-in accountability.
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Introducing: The 12-Week Body Transformation"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      This isn't another workout program you'll forget about.
+                      
+                      It's a complete transformation system that combines:
+                      
+                      **Structured Programming** - No guessing what to do. Every workout is planned for the full 12 weeks, progressively building on the previous phase.
+                      
+                      **Nutrition That Works** - Not a restrictive diet. Real strategies you can follow for life.
+                      
+                      **Community Accountability** - A private group of people on the same journey. Daily check-ins. Shared wins. Support when you need it.
+                      
+                      The result? People who follow this system don't just get results. They keep them.
+            - Type: content
+              Order: 4
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's everything you get:"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      ✓ **12-Week Transformation Course** (Value: $997)
+                      Complete video training covering every phase of your transformation. Workouts, nutrition, mindset - everything you need.
+                      
+                      ✓ **Private Accountability Community** (Value: $297)
+                      Daily check-ins with fellow transformation members. Share your journey, get support, stay accountable.
+                      
+                      ✓ **Weekly Workout Templates** (Value: $197)
+                      Print-ready workout sheets for every week. Take them to the gym and know exactly what to do.
+                      
+                      ✓ **Nutrition Guide & Meal Plans** (Value: $147)
+                      No more guessing what to eat. Simple, flexible meal strategies that fit your lifestyle.
+                      
+                      **Total Value: $1,638**
+                - Type: spacer
+                  Order: 3
+                  Content:
+                    Height: 10
+                - Type: text
+                  Order: 4
+                  Content:
+                    Text: |
+                      **Your Investment Today:**
+                      
+                      💰 Pay in Full: **$497** (save $94)
+                      
+                      📅 Payment Plan: **3 payments of $197**
+            - Type: testimonials
+              Order: 5
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "I've done every program out there. This is the first one that actually worked. Down 28 pounds and I've kept it off for 6 months now. The community was the game-changer for me."
+                    Author: "Michael R., 39, Project Manager"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "I was skeptical about another fitness program, but the structure made all the difference. I knew exactly what to do every single day. Lost 4 inches off my waist and finally have visible abs at 45!"
+                    Author: "Lisa K., 45, Business Owner"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 3
+                  Content:
+                    Quote: "The daily check-ins kept me accountable in a way I've never experienced. When you know people are rooting for you, you show up. Gained 12 pounds of muscle and feel stronger than I did in my 20s."
+                    Author: "David T., 52, Sales Director"
+                    Rating: 5
+            - Type: faq
+              Order: 6
+              Elements:
+                - Type: faq_item
+                  Order: 1
+                  Content:
+                    Question: "How much time do I need to commit each day?"
+                    Answer: "The workouts are 45-60 minutes, 3-5 days per week depending on the phase. Meal prep takes about 2 hours on Sunday. Daily community check-ins take 5 minutes. Most members find this fits easily into a busy schedule."
+                - Type: faq_item
+                  Order: 2
+                  Content:
+                    Question: "What equipment do I need?"
+                    Answer: "Access to a basic gym with dumbbells, barbells, and cable machines is ideal. If you're training at home, we include modifications for minimal equipment setups (dumbbells and resistance bands)."
+                - Type: faq_item
+                  Order: 3
+                  Content:
+                    Question: "I'm a complete beginner. Is this too advanced for me?"
+                    Answer: "Not at all! The program starts with a Foundation Phase specifically designed for beginners. Every exercise includes video demonstrations and form cues. Many of our best transformations come from complete beginners."
+                - Type: faq_item
+                  Order: 4
+                  Content:
+                    Question: "What if I can't complete the program?"
+                    Answer: "Life happens, and we understand. If you need to pause, you keep access forever. Plus, if you complete the program and don't see results, we offer a full refund. We're confident in this system."
+            - Type: cta
+              Order: 7
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Your Transformation Starts Today"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "In 12 weeks, you can be in the best shape of your life. Or you can be in the same place you are now. The choice is yours."
+                - Type: two_step_checkout
+                  Order: 3
+                  Content:
+                    OfferSlug: !Ref transformation-offer
+                    ButtonText: "Start My Transformation - $497"
+        - Name: "Thank You"
+          Slug: thank-you
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to Your Transformation!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You just made one of the best decisions of your life.
+                      
+                      Check your email for login details to access your portal.
+                      
+                      **Your first steps:**
+                      
+                      1. Log into your portal and watch the Welcome video
+                      2. Take your "before" photos and measurements
+                      3. Introduce yourself in the community
+                      4. Start the Foundation Phase on Monday
+                      
+                      The next 12 weeks are going to change everything.
+                      
+                      See you inside!
+
+  # ============================================
+  # 📋 FORM
+  # ============================================
+  transformation-lead-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Transformation Lead Capture"
+      Description: "Captures leads for the free training"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your full name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@example.com"
+      SubmitButton:
+        Text: "Get Free Training"
+        BackgroundColor: "#16a34a"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 400
+        Padding: 24
+        BorderRadius: 8
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  transformation-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Transformation Portal"
+      Description: "Member portal for 12-Week Body Transformation"
+      ThemeConfig:
+        PrimaryColor: "#16a34a"
+
+  # ============================================
+  # 🏷️ TAG
+  # ============================================
+  transformation-buyer:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Transformation Buyer"
+      Description: "Purchased the 12-Week Body Transformation program"
+
+  transformation-lead:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Transformation Lead"
+      Description: "Opted in for free training but hasn't purchased"
+
+  # ============================================
+  # ⚡ WORKFLOW
+  # ============================================
+  transformation-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Transformation Purchase"
+      Description: "Triggers when someone purchases the 12-Week Body Transformation"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref transformation-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref transformation-buyer
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref transformation-sequence
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCE
+  # ============================================
+  transformation-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Transformation 12-Week Journey"
+      Description: "Welcome and check-in emails throughout the 12-week program"
+      Steps:
+        - TemplateSlug: !Ref transformation-welcome-email
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref transformation-week1-email
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref transformation-midpoint-email
+          DelayAmount: 42
+          DelayUnit: days
+          Order: 3
+        - TemplateSlug: !Ref transformation-completion-email
+          DelayAmount: 84
+          DelayUnit: days
+          Order: 4
+
+  # ============================================
+  # 📧 EMAIL TEMPLATE
+  # ============================================
+  transformation-welcome-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Transformation Welcome"
+      Subject: "Your 12-Week Transformation starts NOW"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Your Transformation, {{contact.name}}!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              You just made a decision that's going to change your life.
+              
+              Over the next 12 weeks, you're going to build habits, 
+              strength, and confidence that will last a lifetime.
+              
+              Here's how to get started right now:
+              
+              **Step 1: Access Your Portal**
+              Click the button below to log in and watch the Welcome video.
+              
+              **Step 2: Take Your "Before" Photos**
+              Front, side, and back. You'll thank yourself in 12 weeks.
+              
+              **Step 3: Introduce Yourself**
+              Post in the community and meet your fellow transformation 
+              members. They're your accountability partners now.
+              
+              **Step 4: Start the Foundation Phase**
+              Don't wait until Monday. Start today.
+              
+              The transformation begins the moment you decide to show up.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Your Program"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#16a34a"
+        - Type: spacer
+          Order: 4
+          Settings:
+            Height: 30
+        - Type: text
+          Order: 5
+          Content:
+            Text: "Reply to this email anytime if you have questions. We're here for you."
+        - Type: divider
+          Order: 6
+        - Type: text
+          Order: 7
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  transformation-week1-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Transformation Week 1 Check-in"
+      Subject: "Week 1 complete - how's it going?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Week 1 Check-in"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hey {{contact.name}},
+              
+              You've got one week under your belt. That's huge!
+              
+              The first week is often the hardest. You're building new 
+              habits, learning new movements, and pushing through the 
+              initial discomfort. If you made it through, you're already 
+              ahead of most people who try to get in shape.
+              
+              Quick check-in questions:
+              
+              1. Did you complete all your workouts this week?
+              2. Have you been posting in the community?
+              3. Are you following the nutrition guidelines?
+              
+              If you answered "no" to any of these, that's okay. Don't 
+              beat yourself up. Just recommit right now.
+              
+              The people who transform aren't the ones who never miss a 
+              day. They're the ones who get back on track quickly.
+              
+              Week 2 is where momentum starts to build. Keep going!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Continue Your Program"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#16a34a"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  transformation-midpoint-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Transformation Midpoint"
+      Subject: "You're HALFWAY there 🎉"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Week 6: The Halfway Point!"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              {{contact.name}}, you're HALFWAY through your transformation!
+              
+              Take a moment to appreciate how far you've come:
+              
+              - 6 weeks of consistent training
+              - Dozens of workouts completed
+              - New habits that are becoming automatic
+              - A community of people who've watched you grow
+              
+              This is usually where the magic starts to happen.
+              
+              The foundation is built. The momentum is rolling. The 
+              second half is where the visible transformation accelerates.
+              
+              **Time for a progress check:**
+              
+              1. Take new photos (same angles as your "before" shots)
+              2. Record your current measurements
+              3. Compare to where you started
+              
+              Even if the changes feel small, put them side by side. 
+              You'll be surprised at what 6 weeks of consistency creates.
+              
+              The finish line is in sight. Let's make these final 6 weeks 
+              the strongest yet.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Continue to Week 7"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#16a34a"
+        - Type: spacer
+          Order: 4
+          Settings:
+            Height: 20
+        - Type: text
+          Order: 5
+          Content:
+            Text: |
+              P.S. Share your midpoint progress in the community! Your 
+              journey inspires others who are just getting started.
+        - Type: divider
+          Order: 6
+        - Type: text
+          Order: 7
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  transformation-completion-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Transformation Completion"
+      Subject: "YOU DID IT! 🏆 12 weeks complete"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Congratulations, {{contact.name}}!"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              You did it. 12 weeks. A complete transformation.
+              
+              Most people quit after week 2. You didn't.
+              Most people make excuses. You showed up.
+              Most people stay the same. You transformed.
+              
+              Take a moment to be proud of yourself. Seriously. 
+              What you just accomplished is rare.
+              
+              **Your final steps:**
+              
+              1. Take your "after" photos
+              2. Record your final measurements
+              3. Share your transformation in the community
+              
+              **What's next?**
+              
+              The program is complete, but your journey isn't over. 
+              You've built habits that will serve you for life.
+              
+              To maintain your results:
+              - Keep training 3-4 days per week
+              - Stay active in the community
+              - Use what you've learned about nutrition
+              
+              And if you're ready to take it to the next level, we have 
+              advanced programs designed for people exactly where you are 
+              now. Reply to this email if you want to learn more.
+              
+              Thank you for trusting us with your transformation.
+              
+              You proved what's possible.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Share Your Transformation"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#16a34a"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  business-profile:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "Peak Performance Fitness LLC"
+      Email: "coach@peakperformancefitness.com"
+      Phone: "+1-555-456-7890"
+      Timezone: "America/Denver"
+      BusinessType: "LLC"
+      Industry: "Fitness & Health"
+      SignatureText: "Coach Alex, Peak Performance Fitness"

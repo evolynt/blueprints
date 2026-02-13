@@ -1,0 +1,930 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFER
+  # ============================================
+  ytt-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "YouTube Thumbnail Templates"
+      Description: "20 proven thumbnail templates that get 10%+ CTR - instant download with tutorial"
+      DefaultPortal: !Ref ytt-portal
+      Items:
+        - Product: !Ref ytt-product
+      PricingPlans:
+        - !Ref ytt-price
+
+  # ============================================
+  # 📦 PRODUCT
+  # ============================================
+  ytt-product:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "YouTube Thumbnail Templates"
+      ProductType: page
+      Description: "Your complete thumbnail template pack with tutorial and bonus resources"
+      Page:
+        Title: "Your YouTube Thumbnail Templates"
+        Content: |
+          ## Welcome to Your Thumbnail Templates!
+          
+          Congratulations on getting the same templates I use to create thumbnails that consistently get 10%+ click-through rates. These templates have helped my channels get over 100 million views combined.
+          
+          ---
+          
+          ## Download Your Templates
+          
+          ### Canva Templates (10 Templates)
+          
+          **[Download Canva Template Pack](https://www.canva.com/your-template-link-here)**
+          
+          Click the link above to add all 10 Canva templates to your account. These work with Canva Free or Pro.
+          
+          Templates included:
+          1. The "Before/After" Split
+          2. The "Big Reaction" Face
+          3. The "Curiosity Gap" Mystery
+          4. The "Number Stack" List
+          5. The "Versus" Comparison
+          6. The "Transformation" Journey
+          7. The "Question" Hook
+          8. The "Shocking Stat" Reveal
+          9. The "Tutorial Preview" How-To
+          10. The "Story" Narrative
+          
+          ### Photoshop Templates (10 Templates)
+          
+          **[Download Photoshop Template Pack (ZIP)](https://your-download-link/photoshop-templates.zip)**
+          
+          Same 10 templates in Photoshop format (PSD files). Requires Photoshop CC 2020 or later.
+          
+          ---
+          
+          ## How to Use These Templates
+          
+          Watch this 20-minute tutorial where I walk you through exactly how to customize each template for your niche:
+          
+          **[Watch Tutorial Video](https://your-video-link-here)**
+          
+          In this video, you'll learn:
+          - How to swap in your own photos and text
+          - Color psychology for maximum clicks
+          - Font combinations that work for each template
+          - How to A/B test thumbnails for best results
+          - My personal workflow for creating thumbnails in under 10 minutes
+          
+          ---
+          
+          ## Quick Start Guide
+          
+          1. **Choose your platform** - Canva (easier) or Photoshop (more control)
+          2. **Pick a template** - Match it to your video topic/style
+          3. **Watch the tutorial** - Learn customization best practices
+          4. **Create your first thumbnail** - Start with your next video
+          5. **Track your CTR** - Compare to your previous thumbnails
+          
+          ---
+          
+          ## BONUS: CTR Optimization Checklist
+          
+          **[Download CTR Checklist (PDF)](https://your-download-link/ctr-checklist.pdf)**
+          
+          Use this checklist before publishing any thumbnail to make sure you're hitting all the elements that drive clicks:
+          
+          ✓ Face showing emotion (if applicable)
+          ✓ Text is readable on mobile
+          ✓ High contrast colors
+          ✓ Clear focal point
+          ✓ Curiosity gap created
+          ✓ Consistent with your brand
+          ✓ Different from recent thumbnails
+          
+          ---
+          
+          ## Complete Your Profile
+          
+          Help us personalize your experience by filling out a quick form about your channel. This helps us send you relevant tips and resources based on your niche and goals.
+          
+          ---
+          
+          ## Book a Strategy Call
+          
+          Want personalized help improving your thumbnails and overall YouTube strategy? Book a free 30-minute strategy call where we can:
+          
+          - Review your current thumbnails
+          - Identify quick wins for your channel
+          - Discuss your growth goals
+          - See if our coaching program is a good fit
+          
+          ---
+          
+          ## Questions?
+          
+          Reply to any of our emails or contact us at support@thumbnailpro.academy
+
+  # ============================================
+  # 💰 PRICING PLAN
+  # ============================================
+  ytt-price:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Thumbnail Templates - One-Time"
+      Description: "Instant access to 20 YouTube thumbnail templates"
+      Amount: 4700
+      Currency: USD
+      BillingType: one_time
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  ytt-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "YouTube Thumbnail Templates Sales Page"
+      Description: "Sales page for the YouTube Thumbnail Templates"
+      Steps:
+        - Name: "Sales Page"
+          Slug: sales
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Stop Guessing Why Your Videos Aren't Getting Clicked"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Get 20 proven thumbnail templates that consistently hit 10%+ CTR - the same ones I use on my million-subscriber channels"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                    Provider: youtube
+                - Type: checkout
+                  Order: 4
+                  Content:
+                    OfferSlug: !Ref ytt-offer
+                    PricingPlanSlug: !Ref ytt-price
+                    ButtonText: "Get Instant Access - $47"
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Sound familiar?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You spend hours making a great video. The content is solid. The editing is tight.
+                      
+                      You hit publish... and crickets.
+                      
+                      Your impressions are decent, but nobody's clicking. Your CTR is stuck at 2-4%, while you watch other creators in your niche get 10%+ on every video.
+                      
+                      You've tried:
+                      
+                      - Copying what big creators do (but it doesn't look right)
+                      - Using bright colors and big text (still no clicks)
+                      - Making faces at the camera (feels awkward, doesn't work)
+                      - Spending hours in Canva trying different designs (still guessing)
+                      
+                      The frustrating part? You KNOW your content is good. But the algorithm won't push it if people don't click.
+                      
+                      **What if you had templates that were already proven to get clicks?**
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "The Thumbnail Problem Nobody Talks About"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Here's what I've learned from growing multiple channels to over 1 million subscribers combined:
+                      
+                      **Your thumbnail is 80% of whether someone clicks.**
+                      
+                      Not your title. Not your topic. Your thumbnail.
+                      
+                      YouTube shows your video to a small test audience first. If they click, you get shown to more people. If they don't, your video dies.
+                      
+                      The difference between a 3% CTR and a 10% CTR can be the difference between 10,000 views and 100,000 views. On the same video.
+                      
+                      But here's the thing most creators get wrong: good thumbnails follow patterns.
+                      
+                      There are specific layouts, color combinations, and psychological triggers that consistently drive clicks. Once you know them, you can use them over and over.
+                      
+                      That's exactly what these templates give you.
+            - Type: content
+              Order: 4
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's What You Get"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      ✓ **10 Canva Templates** (Value: $97)
+                      Ready to customize in Canva Free or Pro - no design skills needed
+                      
+                      ✓ **10 Photoshop Templates** (Value: $97)
+                      Same templates in PSD format for advanced customization
+                      
+                      ✓ **20-Minute Tutorial Video** (Value: $47)
+                      Watch me customize each template and explain WHY it works
+                      
+                      ✓ **CTR Optimization Checklist** (Value: $27)
+                      Use before every upload to make sure you're hitting all the click triggers
+                      
+                      ✓ **Template Style Guide** (Value: $27)
+                      Font pairings, color combinations, and best practices for each template
+                      
+                      **Total Value: $295**
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: "**Your Investment: Just $47**"
+            - Type: testimonials
+              Order: 5
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "My CTR went from 3.2% to 8.7% on my very next video using the 'Curiosity Gap' template. These templates just work."
+                    Author: "Alex C., Tech Reviews (45K subs)"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "I used to spend 2 hours on thumbnails and still wasn't happy with them. Now I can create scroll-stopping thumbnails in 15 minutes."
+                    Author: "Sarah M., Lifestyle Vlogger (120K subs)"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 3
+                  Content:
+                    Quote: "The tutorial alone was worth the price. Understanding WHY these templates work changed how I think about thumbnails completely."
+                    Author: "David L., Gaming Channel (80K subs)"
+                    Rating: 5
+            - Type: faq
+              Order: 6
+              Elements:
+                - Type: faq_item
+                  Order: 1
+                  Content:
+                    Question: "Do I need Photoshop, or can I use just Canva?"
+                    Answer: "You can use either! The Canva templates work perfectly in Canva Free (no Pro subscription needed). The Photoshop templates are included for creators who prefer more advanced editing."
+                - Type: faq_item
+                  Order: 2
+                  Content:
+                    Question: "Will these work for my niche?"
+                    Answer: "Yes! These templates are based on psychological principles that work across all niches - tech, gaming, lifestyle, education, fitness, and more. The tutorial shows you how to adapt each template to your specific content style."
+                - Type: faq_item
+                  Order: 3
+                  Content:
+                    Question: "I'm a complete beginner. Can I use these?"
+                    Answer: "Absolutely. The templates are designed to be beginner-friendly. Just swap in your photos and text. The tutorial walks you through every step, and Canva makes it easy even if you've never designed anything before."
+                - Type: faq_item
+                  Order: 4
+                  Content:
+                    Question: "How is this different from free templates online?"
+                    Answer: "These aren't generic templates - they're the exact designs I use on my own channels that have generated over 100 million views. Plus, you get the tutorial explaining the psychology behind each template, so you understand WHY they work."
+            - Type: cta
+              Order: 7
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Stop Leaving Views on the Table"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "For less than the cost of a month of editing software, get templates that can dramatically increase your click-through rate on every video you publish."
+                - Type: checkout
+                  Order: 3
+                  Content:
+                    OfferSlug: !Ref ytt-offer
+                    PricingPlanSlug: !Ref ytt-price
+                    ButtonText: "Get Instant Access - $47"
+        - Name: "Thank You"
+          Slug: thank-you
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're In! Check Your Email."
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=THANKYOU_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Congratulations on getting the YouTube Thumbnail Templates!
+                      
+                      Check your email for login details to your client portal where you can:
+                      
+                      - Download your Canva and Photoshop templates
+                      - Watch the tutorial video
+                      - Grab the CTR optimization checklist
+                      - Complete your creator profile
+                      - Book a strategy call (optional)
+                      
+                      **Your first step:** Log in and download the templates. Then create a thumbnail for your next video using one of the templates TODAY.
+                      
+                      The sooner you use them, the sooner you'll see the difference in your CTR.
+
+  # ============================================
+  # 📋 FORM
+  # ============================================
+  ytt-intake-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Thumbnail Templates Intake"
+      Description: "Capture creator profile information"
+      Fields:
+        - Type: custom
+          CustomFieldSlug: !Ref ytt-cf-channel-size
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref ytt-cf-niche
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref ytt-cf-goals
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref ytt-cf-experience
+          Required: true
+      SubmitButton:
+        Text: "Submit Profile"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  ytt-cf-channel-size:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "How many subscribers do you have?"
+      FieldType: select
+      Options:
+        - "Just starting (under 1,000)"
+        - "1,000 - 10,000"
+        - "10,000 - 50,000"
+        - "50,000 - 100,000"
+        - "100,000+"
+      HelpText: "This helps us send relevant tips for your stage"
+
+  ytt-cf-niche:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your channel niche?"
+      FieldType: select
+      Options:
+        - "Tech/Reviews"
+        - "Gaming"
+        - "Lifestyle/Vlog"
+        - "Education/How-To"
+        - "Fitness/Health"
+        - "Business/Finance"
+        - "Entertainment/Comedy"
+        - "Other"
+      HelpText: "Select the category that best describes your content"
+
+  ytt-cf-goals:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your main goal for the next 12 months?"
+      FieldType: select
+      Options:
+        - "Reach monetization (1,000 subs, 4,000 hours)"
+        - "Grow to 10,000 subscribers"
+        - "Grow to 100,000 subscribers"
+        - "Make YouTube my full-time income"
+        - "Improve engagement on existing audience"
+      HelpText: "We'll send tips relevant to your goal"
+
+  ytt-cf-experience:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "How long have you been creating on YouTube?"
+      FieldType: select
+      Options:
+        - "Just getting started (under 6 months)"
+        - "6 months - 1 year"
+        - "1 - 2 years"
+        - "2 - 5 years"
+        - "5+ years"
+      HelpText: "This helps us tailor our recommendations"
+
+  # ============================================
+  # 📅 BOOKING LINK
+  # ============================================
+  ytt-strategy-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "YouTube Strategy Call"
+      OwnerUserEmail: "coach@thumbnailpro.academy"
+      Description: "30-minute call to review your channel and discuss growth strategies"
+      DurationMinutes: 30
+      BufferAfterMinutes: 10
+      MinNoticeHours: 24
+      MaxAdvanceDays: 14
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  ytt-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Thumbnail Pro Academy Portal"
+      Description: "Client portal for YouTube Thumbnail Template customers"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  ytt-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Template Buyers"
+      Description: "Track YouTube Thumbnail Template buyers through engagement stages"
+      Stages:
+        - Name: "New"
+          Slug: new
+          Order: 1
+          Description: "Just purchased, hasn't engaged yet"
+        - Name: "Engaged"
+          Slug: engaged
+          Order: 2
+          Description: "Completed intake form or watched tutorial"
+        - Name: "Upsell Candidate"
+          Slug: upsell-candidate
+          Order: 3
+          Description: "Good fit for coaching or course"
+        - Name: "Converted"
+          Slug: converted
+          Order: 4
+          Description: "Purchased higher-ticket offer"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  ytt-tag-buyer:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Template Buyer"
+      Description: "Purchased the YouTube Thumbnail Templates"
+
+  ytt-tag-small-creator:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Small Creator"
+      Description: "Creator with under 10,000 subscribers"
+
+  ytt-tag-growing-creator:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Growing Creator"
+      Description: "Creator with 10,000+ subscribers actively growing"
+
+  ytt-tag-upsell-ready:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Upsell Ready"
+      Description: "Ready for higher-ticket coaching or course offer"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  ytt-workflow-purchase:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Template Purchase"
+      Description: "Triggers when someone purchases the YouTube Thumbnail Templates"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref ytt-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref ytt-tag-buyer
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref ytt-seq-onboarding
+
+  ytt-workflow-upsell-tag:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Template Intake Submitted"
+      Description: "Triggers when buyer completes intake form - marks as engaged"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref ytt-intake-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref ytt-tag-upsell-ready
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCE
+  # ============================================
+  ytt-seq-onboarding:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Template Onboarding"
+      Description: "5-email onboarding sequence for YouTube Thumbnail Template buyers"
+      Steps:
+        - TemplateSlug: !Ref ytt-email-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref ytt-email-tip1
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref ytt-email-tip2
+          DelayAmount: 4
+          DelayUnit: days
+          Order: 3
+        - TemplateSlug: !Ref ytt-email-tip3
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 4
+        - TemplateSlug: !Ref ytt-email-upsell
+          DelayAmount: 10
+          DelayUnit: days
+          Order: 5
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  ytt-email-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Template Welcome"
+      Subject: "Your Thumbnail Templates Are Ready - Here's How to Use Them"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome! Your Templates Are Ready"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thanks for getting the YouTube Thumbnail Templates! You now have 
+              the same templates I use on my million-subscriber channels.
+              
+              **Here's how to get started:**
+              
+              1. Log in to your portal (link below)
+              2. Download the Canva or Photoshop templates
+              3. Watch the 20-minute tutorial video
+              4. Create a thumbnail for your next video TODAY
+              
+              The sooner you use them, the sooner you'll see your CTR improve.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Your Templates"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Quick tip:** Complete your creator profile in the portal. 
+              This helps me send you relevant tips based on your niche 
+              and channel size.
+              
+              Let's get those clicks!
+              
+              - The Thumbnail Pro Academy Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  ytt-email-tip1:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Template Tip 1 - The Face Rule"
+      Subject: "The #1 thumbnail element that increases CTR (backed by data)"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "This One Element Can Double Your CTR"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              After analyzing thousands of thumbnails across my channels 
+              and my students' channels, one element stands out above all 
+              others:
+              
+              **Faces with strong emotion.**
+              
+              Thumbnails with expressive faces get 2-3x more clicks than 
+              thumbnails without faces. It's not even close.
+              
+              Why? Our brains are wired to notice faces. It's evolution. 
+              When we see a face showing surprise, excitement, or curiosity, 
+              we can't help but look.
+              
+              **Here's how to do it right:**
+              
+              1. Use a photo where your eyes are visible (no sunglasses)
+              2. Exaggerate your expression (what feels "too much" on camera 
+                 looks normal in a thumbnail)
+              3. Make sure your face takes up at least 25% of the thumbnail
+              4. Position your face off-center for visual interest
+              
+              The "Big Reaction" and "Curiosity Gap" templates in your pack 
+              are specifically designed for this. Try one on your next video!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Review Your Templates"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              More tips coming soon!
+              
+              - The Thumbnail Pro Academy Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  ytt-email-tip2:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Template Tip 2 - Text That Works"
+      Subject: "How much text should be on your thumbnail? (The answer might surprise you)"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "The Truth About Thumbnail Text"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              One of the most common mistakes I see creators make:
+              
+              **Putting too much text on their thumbnails.**
+              
+              Remember, most people see your thumbnail on their phone 
+              at a tiny size. If you can't read your text at phone-screen 
+              size, it's not helping you.
+              
+              **The rules I follow:**
+              
+              1. Maximum 3-4 words on a thumbnail (ideally 1-2)
+              2. Text should be readable in 1 second or less
+              3. Use text to create curiosity, not to explain the video
+              4. Contrast text color against background (white or yellow 
+                 work well)
+              
+              **Here's the key insight:** Your thumbnail and title work 
+              TOGETHER. Don't repeat the same info in both. Your thumbnail 
+              should complement your title, not duplicate it.
+              
+              The "Question Hook" and "Shocking Stat" templates in your 
+              pack use text effectively. Notice how little text there is, 
+              and how impactful each word is.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Try These Templates"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Questions about thumbnail text? Hit reply and let me know.
+              
+              - The Thumbnail Pro Academy Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  ytt-email-tip3:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Template Tip 3 - Color Psychology"
+      Subject: "The colors that get the most clicks (and which to avoid)"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Color Psychology for Thumbnails"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Color isn't just about making your thumbnail look good. It's 
+              about making it STAND OUT in a sea of other videos.
+              
+              **Colors that perform best:**
+              
+              - Yellow: Grabs attention, creates urgency
+              - Red: Creates excitement, signals importance
+              - Blue: Builds trust (great for educational content)
+              - Green: Associated with money, growth, success
+              
+              **Colors to use carefully:**
+              
+              - White/Gray: Can look washed out or boring
+              - Black: Can be too dark, hard to see details
+              - Purple: Less common, can work for luxury/creative niches
+              
+              **The secret:** Look at what other creators in your niche 
+              are using, then do the OPPOSITE. If everyone uses blue 
+              thumbnails, try red or yellow. You want to stand out, not 
+              blend in.
+              
+              Check your recent thumbnails: Do they stand out in your 
+              niche's typical color palette? If not, try something different 
+              on your next video.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Apply These Principles"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Next email: I'll share how to know when a thumbnail is 
+              working (and when to change it).
+              
+              - The Thumbnail Pro Academy Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  ytt-email-upsell:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Template Upsell"
+      Subject: "Want help growing your channel faster?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Ready to Take Your Channel to the Next Level?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              By now you've had a chance to use the YouTube Thumbnail 
+              Templates on a few videos. I hope you're seeing improvements 
+              in your CTR!
+              
+              But here's the thing: thumbnails are just ONE piece of the 
+              YouTube growth puzzle.
+              
+              If you're serious about growing your channel, you also need:
+              
+              - A content strategy that attracts the right viewers
+              - Titles that work WITH your thumbnails
+              - Retention techniques to keep viewers watching
+              - Analytics knowledge to know what's working
+              - A consistent upload schedule that builds momentum
+              
+              **Want personalized help with your channel?**
+              
+              I'm offering a **free 30-minute strategy call** where we can:
+              
+              - Review your channel and thumbnails
+              - Identify your biggest growth opportunities
+              - Create a simple plan for the next 90 days
+              - Answer any questions you have
+              
+              No pitch, no pressure. Just real help for your channel.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Free Strategy Call"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Already seeing great results with the templates?**
+              
+              I'd love to hear about it! Reply to this email and share 
+              your wins. I read every response.
+              
+              Keep creating!
+              
+              - The Thumbnail Pro Academy Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  ytt-business:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "Thumbnail Pro Academy LLC"
+      Email: "support@thumbnailpro.academy"
+      Phone: "+1-555-YT-THUMB"
+      Timezone: "America/Los_Angeles"
+      BusinessType: "LLC"
+      Industry: "Content Creator Education"
+      SignatureText: "The Thumbnail Pro Academy Team"

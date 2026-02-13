@@ -1,0 +1,1238 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFERS
+  # ============================================
+  fcb-templates-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "YouTube Thumbnail Templates"
+      Description: "20 proven thumbnail templates for higher CTR"
+      DefaultPortal: !Ref fcb-starter-portal
+      Items:
+        - Product: !Ref fcb-templates
+      PricingPlans:
+        - !Ref fcb-templates-price
+
+  fcb-community-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Creator Club Membership"
+      Description: "Monthly community with templates, collabs, and weekly calls"
+      DefaultPortal: !Ref fcb-member-portal
+      OnboardingFlowSlug: !Ref fcb-community-onboarding
+      Items:
+        - Product: !Ref fcb-community
+      PricingPlans:
+        - !Ref fcb-community-monthly
+
+  fcb-course-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "YouTube Academy: 0 to 100K"
+      Description: "Complete YouTube growth system"
+      DefaultPortal: !Ref fcb-student-portal
+      OnboardingFlowSlug: !Ref fcb-course-onboarding
+      Items:
+        - Product: !Ref fcb-course
+        - Product: !Ref fcb-community
+      PricingPlans:
+        - !Ref fcb-course-pif
+        - !Ref fcb-course-split
+
+  fcb-coaching-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "1:1 Channel Strategy Coaching"
+      Description: "Personalized coaching for serious creators"
+      DefaultPortal: !Ref fcb-coaching-portal
+      OnboardingFlowSlug: !Ref fcb-coaching-onboarding
+      Items:
+        - Product: !Ref fcb-coaching
+        - Product: !Ref fcb-community
+        - Product: !Ref fcb-resources
+      PricingPlans:
+        - !Ref fcb-coaching-pif
+        - !Ref fcb-coaching-split
+
+  # ============================================
+  # 📦 PRODUCTS
+  # ============================================
+  fcb-templates:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Thumbnail Template Pack"
+      ProductType: page
+      Description: "20 proven thumbnail templates"
+      Page:
+        Title: "Your Thumbnail Templates"
+        Content: |
+          ## Welcome to Your Templates!
+          
+          Download your 20 proven thumbnail templates below.
+          
+          ---
+          
+          **[Download Canva Templates](https://canva.com/your-templates)**
+          
+          **[Download Photoshop Templates](https://drive.google.com/your-psd)**
+          
+          ---
+          
+          ## Tutorial Video
+          
+          Watch how to customize these templates for your niche.
+
+  fcb-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Creator Club Community"
+      ProductType: community
+      Description: "Private community for creators"
+      Community:
+        Name: "Creator Club"
+        Description: "Connect with fellow creators"
+        Spaces:
+          - Name: "Introductions"
+            Slug: intros
+            Description: "Introduce yourself"
+            Order: 1
+          - Name: "Templates"
+            Slug: templates
+            Description: "Monthly template drops"
+            Order: 2
+          - Name: "Collaborations"
+            Slug: collabs
+            Description: "Find collab partners"
+            Order: 3
+          - Name: "Wins"
+            Slug: wins
+            Description: "Celebrate milestones"
+            Order: 4
+          - Name: "Q&A"
+            Slug: qa
+            Description: "Get help"
+            Order: 5
+        Events:
+          - Title: "Weekly Creator Q&A"
+            Description: "Live Q&A session"
+            StartAt: "2025-02-07T19:00:00Z"
+            EndAt: "2025-02-07T20:00:00Z"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/fcb-weekly"
+            HostUserEmail: "coach@fullcreatorbusiness.com"
+            RecurrenceRule:
+              Frequency: weekly
+              Interval: 1
+              DaysOfWeek: [5]
+              EndType: never
+
+  fcb-course:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "YouTube Academy Course"
+      ProductType: course
+      Description: "8-module YouTube growth course"
+      Course:
+        Title: "YouTube Academy: 0 to 100K"
+        Description: "Your complete roadmap to YouTube success"
+        Modules:
+          - Title: "YouTube Foundations"
+            Order: 1
+            Lessons:
+              - Title: "Welcome"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/FCB_WELCOME"
+              - Title: "How the Algorithm Works"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/FCB_ALGO"
+          - Title: "Finding Your Niche"
+            Order: 2
+            Lessons:
+              - Title: "Niche Research"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/FCB_NICHE"
+          - Title: "Content Strategy"
+            Order: 3
+            Lessons:
+              - Title: "Content Planning"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/FCB_CONTENT"
+          - Title: "Thumbnails & Titles"
+            Order: 4
+            Lessons:
+              - Title: "CTR Optimization"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/FCB_CTR"
+          - Title: "SEO & Discovery"
+            Order: 5
+            Lessons:
+              - Title: "YouTube SEO"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/FCB_SEO"
+          - Title: "Building Audience"
+            Order: 6
+            Lessons:
+              - Title: "Engagement"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/FCB_ENGAGE"
+          - Title: "Monetization"
+            Order: 7
+            Lessons:
+              - Title: "Revenue Streams"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/FCB_MONEY"
+          - Title: "Scaling"
+            Order: 8
+            Lessons:
+              - Title: "Next Steps"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/FCB_SCALE"
+
+  fcb-coaching:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "1:1 Coaching Sessions"
+      ProductType: coaching
+      Description: "6 private coaching sessions"
+      Coaching:
+        Title: "Coaching Session"
+        Description: "60-minute private session"
+        Quantity: 6
+        BookingLink: !Ref fcb-coaching-session
+
+  fcb-resources:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Coaching Resources"
+      ProductType: page
+      Description: "Resources for coaching clients"
+      Page:
+        Title: "Coaching Resources"
+        Content: |
+          ## Your Coaching Resources
+          
+          Access your exclusive coaching resources here.
+          
+          **[Channel Audit Template](https://docs.google.com/your-audit)**
+          
+          **[Strategy Worksheet](https://docs.google.com/your-strategy)**
+
+  # ============================================
+  # 💰 PRICING PLANS
+  # ============================================
+  fcb-templates-price:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Thumbnail Templates"
+      Amount: 4700
+      Currency: USD
+      BillingType: one_time
+
+  fcb-community-monthly:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Creator Club - Monthly"
+      Amount: 9700
+      Currency: USD
+      BillingType: subscription
+      BillingInterval: monthly
+
+  fcb-course-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "YouTube Academy - Pay in Full"
+      Amount: 49700
+      Currency: USD
+      BillingType: one_time
+
+  fcb-course-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "YouTube Academy - 3 Payments"
+      Amount: 59100
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  fcb-coaching-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Coaching - Pay in Full"
+      Amount: 300000
+      Currency: USD
+      BillingType: one_time
+
+  fcb-coaching-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Coaching - 3 Payments"
+      Amount: 359100
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  # ============================================
+  # 🚀 FUNNELS
+  # ============================================
+  fcb-templates-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Templates Sales Page"
+      Description: "Sales page for templates"
+      Steps:
+        - Name: "Sales"
+          Slug: sales
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "20 Thumbnail Templates That Get Clicks"
+                - Type: checkout
+                  Order: 2
+                  Content:
+                    OfferSlug: !Ref fcb-templates-offer
+                    PricingPlanSlug: !Ref fcb-templates-price
+                    ButtonText: "Get Templates - $47"
+
+  fcb-coaching-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Coaching Application"
+      Description: "Application funnel for coaching"
+      Steps:
+        - Name: "Apply"
+          Slug: apply
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Apply for 1:1 Coaching"
+            - Type: form
+              Order: 2
+              Elements:
+                - Type: form
+                  Order: 1
+                  Content:
+                    FormSlug: !Ref fcb-application
+        - Name: "Book"
+          Slug: book
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Book Your Discovery Call"
+                - Type: booking_link
+                  Order: 2
+                  Content:
+                    BookingLinkSlug: !Ref fcb-discovery-call
+
+  # ============================================
+  # 📋 FORMS
+  # ============================================
+  fcb-lead-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Lead Capture"
+      Description: "Capture leads"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+        - Type: standard
+          FieldName: email
+          Required: true
+      SubmitButton:
+        Text: "Get Free Training"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        MaxWidth: 400
+
+  fcb-application:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Coaching Application"
+      Description: "Application for coaching"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+        - Type: standard
+          FieldName: email
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref fcb-cf-channel-size
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref fcb-cf-goals
+          Required: true
+      SubmitButton:
+        Text: "Submit Application"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        MaxWidth: 500
+
+  fcb-onboarding-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Client Intake"
+      Description: "Intake for new clients"
+      Fields:
+        - Type: custom
+          CustomFieldSlug: !Ref fcb-cf-challenge
+          Required: true
+      SubmitButton:
+        Text: "Complete"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        MaxWidth: 500
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  fcb-cf-channel-size:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Subscriber count"
+      FieldType: select
+      Options:
+        - "Under 1,000"
+        - "1,000 - 10,000"
+        - "10,000 - 100,000"
+        - "100,000+"
+      HelpText: "Current subscribers"
+
+  fcb-cf-goals:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Primary goal"
+      FieldType: textarea
+      Placeholder: "What do you want to achieve?"
+      HelpText: "Be specific"
+
+  fcb-cf-challenge:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Biggest challenge"
+      FieldType: textarea
+      Placeholder: "What's holding you back?"
+      HelpText: "This helps us prepare"
+
+  # ============================================
+  # 📅 BOOKING LINKS
+  # ============================================
+  fcb-discovery-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Discovery Call"
+      OwnerUserEmail: "coach@fullcreatorbusiness.com"
+      Description: "30-minute discovery call"
+      DurationMinutes: 30
+      MinNoticeHours: 24
+      MaxAdvanceDays: 14
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  fcb-coaching-session:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Coaching Session"
+      OwnerUserEmail: "coach@fullcreatorbusiness.com"
+      Description: "60-minute coaching session"
+      DurationMinutes: 60
+      MinNoticeHours: 48
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  fcb-office-hours:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Weekly Q&A"
+      OwnerUserEmail: "coach@fullcreatorbusiness.com"
+      Description: "Weekly community Q&A"
+      DurationMinutes: 60
+      MinNoticeHours: 1
+      MaxAdvanceDays: 7
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTALS
+  # ============================================
+  fcb-starter-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Starter Portal"
+      Description: "Portal for template buyers"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  fcb-member-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Member Portal"
+      Description: "Portal for community members"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  fcb-student-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Student Portal"
+      Description: "Portal for course students"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  fcb-coaching-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Coaching Portal"
+      Description: "Portal for coaching clients"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 📜 AGREEMENTS
+  # ============================================
+  fcb-community-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Community Agreement"
+      Title: "CREATOR CLUB AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        ## Community Guidelines
+        
+        - Be respectful and constructive
+        - No spam or excessive self-promotion
+        - Keep discussions relevant
+        - Help others when you can
+        
+        ## Content Sharing
+        
+        - Don't share community content outside
+        - Credit others when sharing their work
+        
+        By signing, you agree to these terms.
+
+  fcb-coaching-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Coaching Agreement"
+      Title: "COACHING AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        ## Coaching Includes
+        
+        - 6 private sessions over 3 months
+        - Channel audit
+        - Strategy review
+        - Email support
+        
+        ## Terms
+        
+        - Payment before first session
+        - 24-hour reschedule notice
+        - Results depend on effort
+        
+        By signing, you agree to these terms.
+
+  # ============================================
+  # 🎓 ONBOARDING FLOWS
+  # ============================================
+  fcb-community-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Community Onboarding"
+      Description: "Onboarding for community"
+      Steps:
+        - Name: "Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to Creator Club!"
+                - Type: agreement
+                  Order: 2
+                  Content:
+                    AgreementSlug: !Ref fcb-community-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Ready"
+          Slug: ready
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're In!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Head to the community and introduce yourself!"
+
+  fcb-course-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Course Onboarding"
+      Description: "Onboarding for course"
+      Steps:
+        - Name: "Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to YouTube Academy!"
+                - Type: agreement
+                  Order: 2
+                  Content:
+                    AgreementSlug: !Ref fcb-community-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Ready"
+          Slug: ready
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Let's Go!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Start Module 1 and join the community!"
+
+  fcb-coaching-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Coaching Onboarding"
+      Description: "Onboarding for coaching"
+      Steps:
+        - Name: "Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to Coaching!"
+                - Type: agreement
+                  Order: 2
+                  Content:
+                    AgreementSlug: !Ref fcb-coaching-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Intake"
+          Slug: intake
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Quick Intake"
+                - Type: form
+                  Order: 2
+                  Content:
+                    FormSlug: !Ref fcb-onboarding-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Ready"
+          Slug: ready
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Book your first session!"
+
+  # ============================================
+  # 🔄 PIPELINES
+  # ============================================
+  fcb-customer-journey:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Customer Journey"
+      Description: "Track customers through value ladder"
+      Stages:
+        - Name: "Lead"
+          Slug: lead
+          Order: 1
+          Description: "New lead"
+        - Name: "Template Buyer"
+          Slug: template-buyer
+          Order: 2
+          Description: "Purchased templates"
+        - Name: "Community Member"
+          Slug: member
+          Order: 3
+          Description: "Joined community"
+        - Name: "Course Student"
+          Slug: student
+          Order: 4
+          Description: "Enrolled in course"
+        - Name: "Coaching Client"
+          Slug: coaching
+          Order: 5
+          Description: "Coaching client"
+
+  fcb-coaching-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Coaching Sales"
+      Description: "Track coaching applications"
+      Stages:
+        - Name: "Applied"
+          Slug: applied
+          Order: 1
+          Description: "Submitted application"
+        - Name: "Call Scheduled"
+          Slug: scheduled
+          Order: 2
+          Description: "Call booked"
+        - Name: "Call Complete"
+          Slug: complete
+          Order: 3
+          Description: "Call done"
+        - Name: "Won"
+          Slug: won
+          Order: 4
+          Description: "Enrolled"
+        - Name: "Lost"
+          Slug: lost
+          Order: 5
+          Description: "Did not enroll"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  fcb-tag-lead:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Lead"
+      Description: "Captured lead"
+
+  fcb-tag-template-buyer:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Template Buyer"
+      Description: "Purchased templates"
+
+  fcb-tag-member:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Community Member"
+      Description: "Active community member"
+
+  fcb-tag-student:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Course Student"
+      Description: "Enrolled in course"
+
+  fcb-tag-course-complete:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Course Complete"
+      Description: "Finished course"
+
+  fcb-tag-coaching:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Coaching Client"
+      Description: "Active coaching client"
+
+  fcb-tag-upsell-community:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Upsell: Community"
+      Description: "Ready for community upsell"
+
+  fcb-tag-upsell-course:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Upsell: Course"
+      Description: "Ready for course upsell"
+
+  fcb-tag-upsell-coaching:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Upsell: Coaching"
+      Description: "Ready for coaching upsell"
+
+  fcb-tag-engaged:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Engaged"
+      Description: "Highly engaged"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  fcb-workflow-templates:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Template Purchase"
+      Description: "Triggers on template purchase"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref fcb-templates-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref fcb-tag-template-buyer
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref fcb-seq-templates
+
+  fcb-workflow-community:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Community Purchase"
+      Description: "Triggers on community join"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref fcb-community-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref fcb-tag-member
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref fcb-seq-community
+
+  fcb-workflow-course:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Course Purchase"
+      Description: "Triggers on course enrollment"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref fcb-course-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref fcb-tag-student
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref fcb-seq-course
+
+  fcb-workflow-coaching:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Coaching Purchase"
+      Description: "Triggers on coaching enrollment"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref fcb-coaching-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref fcb-tag-coaching
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref fcb-seq-coaching
+
+  fcb-workflow-upsell-community:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Upsell to Community"
+      Description: "Tag engaged template buyers"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref fcb-lead-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref fcb-tag-upsell-community
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref fcb-seq-upsell-community
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCES
+  # ============================================
+  fcb-seq-templates:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Template Onboarding"
+      Description: "Onboarding for template buyers"
+      Steps:
+        - TemplateSlug: !Ref fcb-email-templates-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref fcb-email-templates-tip
+          DelayAmount: 3
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref fcb-email-upsell-community
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 3
+
+  fcb-seq-community:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Community Onboarding"
+      Description: "Onboarding for members"
+      Steps:
+        - TemplateSlug: !Ref fcb-email-community-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+
+  fcb-seq-course:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Course Onboarding"
+      Description: "Onboarding for students"
+      Steps:
+        - TemplateSlug: !Ref fcb-email-course-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+
+  fcb-seq-coaching:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Coaching Welcome"
+      Description: "Welcome for coaching clients"
+      Steps:
+        - TemplateSlug: !Ref fcb-email-coaching-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+
+  fcb-seq-upsell-community:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Upsell to Community"
+      Description: "Upsell template buyers to community"
+      Steps:
+        - TemplateSlug: !Ref fcb-email-upsell-community
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  fcb-email-templates-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Templates Welcome"
+      Subject: "Your templates are ready!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Your Templates Are Ready!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Your thumbnail templates are ready! Log in to download.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Download Templates"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fcb-email-templates-tip:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Templates Tip"
+      Subject: "Quick tip for your thumbnails"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Quick Thumbnail Tip"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Here's a tip: the best thumbnails have 3 or fewer words. Let the image do the talking!
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fcb-email-upsell-community:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Upsell Community"
+      Subject: "Want more templates every month?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Want More Templates?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Loving the templates? Join Creator Club for NEW templates every month, plus:
+              
+              - Weekly Q&A calls
+              - Collaboration opportunities
+              - Private community
+              
+              Just $97/month!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Join Creator Club"
+            LinkUrl: "{{funnel.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fcb-email-community-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Community Welcome"
+      Subject: "Welcome to Creator Club!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Creator Club!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You're in! Complete your onboarding to access the community.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Portal"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fcb-email-course-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Course Welcome"
+      Subject: "Welcome to YouTube Academy!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to YouTube Academy!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You're in! Complete onboarding and start Module 1.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Start Learning"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fcb-email-coaching-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Welcome"
+      Subject: "Welcome to coaching!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Coaching!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Excited to work with you! Complete onboarding and book your first session.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Get Started"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  fcb-business:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "Full Creator Business LLC"
+      Email: "support@fullcreatorbusiness.com"
+      Phone: "+1-555-CREATOR"
+      Timezone: "America/Los_Angeles"
+      BusinessType: "LLC"
+      Industry: "Content Creator Education"
+      SignatureText: "Full Creator Business"

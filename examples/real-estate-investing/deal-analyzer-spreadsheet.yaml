@@ -1,0 +1,850 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFER
+  # ============================================
+  da-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Deal Analyzer Spreadsheet"
+      Description: "The same spreadsheet I use to analyze every deal - now yours for instant download"
+      DefaultPortal: !Ref da-portal
+      Items:
+        - Product: !Ref da-product
+      PricingPlans:
+        - !Ref da-price
+
+  # ============================================
+  # 📦 PRODUCT
+  # ============================================
+  da-product:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Deal Analyzer Spreadsheet"
+      ProductType: page
+      Description: "Your deal analyzer spreadsheet with tutorial and resources"
+      Page:
+        Title: "Your Deal Analyzer Spreadsheet"
+        Content: |
+          ## Welcome to the Deal Analyzer Spreadsheet!
+          
+          Congratulations on getting the same tool I use to analyze every single deal that crosses my desk. This spreadsheet has helped me avoid dozens of bad deals and confidently pull the trigger on winners.
+          
+          ---
+          
+          ## Download Your Spreadsheet
+          
+          **[Download Deal Analyzer Spreadsheet (Google Sheets)](https://docs.google.com/spreadsheets/your-link-here)**
+          
+          Click the link above to make a copy of the spreadsheet to your own Google Drive. You can also download it as an Excel file if you prefer.
+          
+          ---
+          
+          ## How to Use the Spreadsheet
+          
+          Watch this 15-minute tutorial where I walk you through exactly how to use every section of the spreadsheet:
+          
+          **[Watch Tutorial Video](https://your-video-link-here)**
+          
+          In this video, you'll learn:
+          - How to input property details and purchase price
+          - Calculating repair costs using the built-in estimator
+          - Understanding the ARV (After Repair Value) calculator
+          - Reading the profit analysis section
+          - When to walk away vs. when to make an offer
+          
+          ---
+          
+          ## Quick Start Guide
+          
+          1. **Make a copy** of the spreadsheet to your Google Drive
+          2. **Watch the tutorial** to understand each section
+          3. **Input your first deal** to see the numbers
+          4. **Use the decision framework** to know if it's a go or no-go
+          
+          ---
+          
+          ## Complete Your Profile
+          
+          Help us personalize your experience by filling out a quick form about your investing goals. This helps us send you relevant tips and resources.
+          
+          ---
+          
+          ## Book a Strategy Call
+          
+          Want personalized help analyzing a specific deal or building your investing strategy? Book a free 30-minute strategy call with our team.
+          
+          ---
+          
+          ## Questions?
+          
+          Reply to any of our emails or contact us at support@reidealmastery.com
+
+  # ============================================
+  # 💰 PRICING PLAN
+  # ============================================
+  da-price:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Deal Analyzer - One-Time"
+      Description: "Instant access to the Deal Analyzer Spreadsheet"
+      Amount: 4700
+      Currency: USD
+      BillingType: one_time
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  da-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Deal Analyzer Sales Page"
+      Description: "Sales page for the Deal Analyzer Spreadsheet"
+      Steps:
+        - Name: "Sales Page"
+          Slug: sales
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Stop Guessing on Real Estate Deals. Start Knowing."
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "The exact spreadsheet I use to analyze every deal - so you can make confident, profitable decisions in minutes"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                    Provider: youtube
+                - Type: checkout
+                  Order: 4
+                  Content:
+                    OfferSlug: !Ref da-offer
+                    PricingPlanSlug: !Ref da-price
+                    ButtonText: "Get Instant Access - $47"
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Sound familiar?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You found a property that looks like a good deal. The seller seems motivated. The numbers look okay... maybe?
+                      
+                      But then the doubt creeps in:
+                      
+                      - Is the ARV estimate realistic, or am I being too optimistic?
+                      - Did I account for ALL the repair costs?
+                      - What about holding costs, closing costs, and unexpected expenses?
+                      - Is there actually profit here, or am I about to lose my shirt?
+                      
+                      You've seen the horror stories. Investors who bought "great deals" that turned into money pits. Wholesalers who assigned contracts only to have buyers back out when the numbers didn't work.
+                      
+                      **The difference between successful investors and struggling ones? They know their numbers BEFORE they make offers.**
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "What if you could analyze any deal in 5 minutes?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Imagine plugging in a few numbers and instantly knowing:
+                      
+                      ✓ Your maximum allowable offer (MAO)
+                      ✓ Projected profit on a flip
+                      ✓ Cash-on-cash return for a rental
+                      ✓ Assignment fee potential for wholesale
+                      ✓ Whether to pursue or pass
+                      
+                      That's exactly what the Deal Analyzer Spreadsheet does.
+                      
+                      I've used this exact spreadsheet to analyze over 200 deals in the past 3 years. It's helped me close 47 profitable deals and avoid dozens of losers.
+                      
+                      Now I'm making it available to you.
+            - Type: content
+              Order: 4
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's what you get"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      ✓ **Deal Analyzer Spreadsheet** (Value: $97)
+                      The exact Google Sheets/Excel spreadsheet I use to analyze every deal
+                      
+                      ✓ **Repair Cost Estimator** (Value: $47)
+                      Built-in calculator for common repair items so you don't forget anything
+                      
+                      ✓ **ARV Calculator** (Value: $47)
+                      Formulas to estimate after-repair value using comp data
+                      
+                      ✓ **Wholesale, Flip, and Rental Modes** (Value: $47)
+                      Toggle between deal types to see different profit scenarios
+                      
+                      ✓ **15-Minute Video Tutorial** (Value: $47)
+                      Watch me walk through exactly how to use every feature
+                      
+                      ✓ **Decision Framework** (Value: $27)
+                      Clear go/no-go criteria so you never second-guess yourself
+                      
+                      **Total Value: $312**
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: "**Your Investment: Just $47**"
+            - Type: testimonials
+              Order: 5
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "I was about to put an offer on a house that looked like a slam dunk. Ran it through the spreadsheet and realized I'd be underwater by $15K. This thing paid for itself 100x over."
+                    Author: "Marcus J., Wholesaler"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "Finally, a spreadsheet that accounts for EVERYTHING. Holding costs, closing costs, realtor fees - it's all in there. No more surprises at closing."
+                    Author: "Rachel T., House Flipper"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 3
+                  Content:
+                    Quote: "I used to spend hours analyzing deals with pen and paper. Now I can run 10 deals in the time it used to take me to do one. Game changer."
+                    Author: "David L., Rental Investor"
+                    Rating: 5
+            - Type: faq
+              Order: 6
+              Elements:
+                - Type: faq_item
+                  Order: 1
+                  Content:
+                    Question: "Does this work for wholesaling, flipping, AND rentals?"
+                    Answer: "Yes! The spreadsheet has different modes for each strategy. Toggle between wholesale, flip, and rental analysis to see the relevant numbers for your deal type."
+                - Type: faq_item
+                  Order: 2
+                  Content:
+                    Question: "Do I need Google Sheets or Excel?"
+                    Answer: "The spreadsheet works in Google Sheets (free) and can be downloaded as an Excel file. I recommend Google Sheets since it's free and accessible anywhere."
+                - Type: faq_item
+                  Order: 3
+                  Content:
+                    Question: "What if I'm a complete beginner?"
+                    Answer: "Perfect! The spreadsheet is designed to be beginner-friendly. The video tutorial walks you through every section, and the built-in formulas do the heavy lifting for you."
+                - Type: faq_item
+                  Order: 4
+                  Content:
+                    Question: "Is this customizable for my market?"
+                    Answer: "Absolutely. You can adjust closing costs, realtor fees, holding costs, and other variables to match your local market. The spreadsheet comes with typical defaults, but everything is editable."
+            - Type: cta
+              Order: 7
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Stop Losing Money on Bad Deals"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "For less than the cost of a nice dinner, get the same tool professional investors use to analyze deals and make confident decisions."
+                - Type: checkout
+                  Order: 3
+                  Content:
+                    OfferSlug: !Ref da-offer
+                    PricingPlanSlug: !Ref da-price
+                    ButtonText: "Get Instant Access - $47"
+        - Name: "Thank You"
+          Slug: thank-you
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're In! Check Your Email."
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=THANKYOU_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Congratulations on getting the Deal Analyzer Spreadsheet!
+                      
+                      Check your email for login details to your client portal where you can:
+                      
+                      - Download your spreadsheet
+                      - Watch the tutorial video
+                      - Complete your investor profile
+                      - Book a strategy call (optional)
+                      
+                      **Your first step:** Log in and download the spreadsheet. Then run your first deal through it today!
+
+  # ============================================
+  # 📋 FORM
+  # ============================================
+  da-intake-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Deal Analyzer Intake"
+      Description: "Capture investor profile information"
+      Fields:
+        - Type: custom
+          CustomFieldSlug: !Ref da-cf-investment-type
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref da-cf-target-market
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref da-cf-deal-budget
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref da-cf-timeline
+          Required: true
+      SubmitButton:
+        Text: "Submit Profile"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  da-cf-investment-type:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What type of investing are you focused on?"
+      FieldType: select
+      Options:
+        - "Wholesaling"
+        - "Fix and Flip"
+        - "Buy and Hold Rentals"
+        - "BRRRR Strategy"
+        - "Multiple strategies"
+      HelpText: "Select your primary investment strategy"
+
+  da-cf-target-market:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What market are you investing in?"
+      FieldType: text
+      Placeholder: "e.g., Dallas, TX or Nationwide virtual"
+      HelpText: "City, state, or region you're targeting"
+
+  da-cf-deal-budget:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your typical deal budget?"
+      FieldType: select
+      Options:
+        - "Under $50,000"
+        - "$50,000 - $100,000"
+        - "$100,000 - $250,000"
+        - "$250,000 - $500,000"
+        - "$500,000+"
+      HelpText: "Average purchase price or assignment fee target"
+
+  da-cf-timeline:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "When do you plan to do your next deal?"
+      FieldType: select
+      Options:
+        - "Actively looking now"
+        - "Within 30 days"
+        - "Within 90 days"
+        - "Just learning for now"
+      HelpText: "This helps us send relevant resources"
+
+  # ============================================
+  # 📅 BOOKING LINK
+  # ============================================
+  da-strategy-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Deal Strategy Call"
+      OwnerUserEmail: "coach@reidealmastery.com"
+      Description: "30-minute call to discuss your investing goals and analyze a specific deal"
+      DurationMinutes: 30
+      BufferAfterMinutes: 10
+      MinNoticeHours: 24
+      MaxAdvanceDays: 14
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  da-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "REI Deal Mastery Portal"
+      Description: "Client portal for Deal Analyzer Spreadsheet customers"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  da-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Spreadsheet Buyers"
+      Description: "Track Deal Analyzer Spreadsheet buyers through engagement stages"
+      Stages:
+        - Name: "New"
+          Slug: new
+          Order: 1
+          Description: "Just purchased, hasn't engaged yet"
+        - Name: "Engaged"
+          Slug: engaged
+          Order: 2
+          Description: "Completed intake form or watched tutorial"
+        - Name: "Upsell Candidate"
+          Slug: upsell-candidate
+          Order: 3
+          Description: "Good fit for coaching or course"
+        - Name: "Converted"
+          Slug: converted
+          Order: 4
+          Description: "Purchased higher-ticket offer"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  da-tag-buyer:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Spreadsheet Buyer"
+      Description: "Purchased the Deal Analyzer Spreadsheet"
+
+  da-tag-wholesaler:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Wholesaler"
+      Description: "Interested in wholesaling deals"
+
+  da-tag-flipper:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Flipper"
+      Description: "Interested in fix and flip"
+
+  da-tag-upsell-ready:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Upsell Ready"
+      Description: "Ready for higher-ticket offer"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  da-workflow-purchase:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Spreadsheet Purchase"
+      Description: "Triggers when someone purchases the Deal Analyzer Spreadsheet"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref da-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref da-tag-buyer
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref da-seq-onboarding
+
+  da-workflow-upsell-tag:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Spreadsheet Intake Submitted"
+      Description: "Triggers when buyer completes intake form - marks as engaged"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref da-intake-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref da-tag-upsell-ready
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCE
+  # ============================================
+  da-seq-onboarding:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Spreadsheet Onboarding"
+      Description: "5-email onboarding sequence for Deal Analyzer buyers"
+      Steps:
+        - TemplateSlug: !Ref da-email-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref da-email-tip1
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref da-email-tip2
+          DelayAmount: 4
+          DelayUnit: days
+          Order: 3
+        - TemplateSlug: !Ref da-email-tip3
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 4
+        - TemplateSlug: !Ref da-email-upsell
+          DelayAmount: 10
+          DelayUnit: days
+          Order: 5
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  da-email-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Spreadsheet Welcome"
+      Subject: "Your Deal Analyzer is Ready - Here's How to Use It"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome! Your Deal Analyzer is Ready"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thanks for getting the Deal Analyzer Spreadsheet! You now have 
+              the same tool I use to analyze every single deal.
+              
+              **Here's how to get started:**
+              
+              1. Log in to your portal (link below)
+              2. Download the spreadsheet to your Google Drive
+              3. Watch the 15-minute tutorial video
+              4. Run your first deal through it TODAY
+              
+              The sooner you use it, the sooner you'll be making confident, 
+              profitable decisions.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Your Spreadsheet"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Quick tip:** Complete your investor profile in the portal. 
+              This helps me send you relevant tips based on your strategy 
+              (wholesale, flip, or rental).
+              
+              Talk soon!
+              
+              - The REI Deal Mastery Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  da-email-tip1:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Spreadsheet Tip 1 - ARV"
+      Subject: "The #1 mistake investors make with ARV (and how to avoid it)"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Don't Make This ARV Mistake"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              The biggest mistake I see new investors make? **Overestimating ARV.**
+              
+              It's easy to do. You find the highest comp in the neighborhood 
+              and assume your property will sell for the same price. But that's 
+              a recipe for losing money.
+              
+              **Here's what I do instead:**
+              
+              1. Find 3-5 SOLD comps (not active listings) within 0.5 miles
+              2. Adjust for differences (beds, baths, square footage, condition)
+              3. Use the AVERAGE of adjusted values, not the highest
+              4. Subtract 5% as a safety margin
+              
+              The Deal Analyzer has an ARV calculator built in that helps you 
+              do this systematically. Make sure you're using it!
+              
+              **Your homework:** Find a property on Zillow or Redfin and run 
+              it through the spreadsheet using conservative ARV assumptions.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Open Your Spreadsheet"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              More tips coming soon!
+              
+              - The REI Deal Mastery Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  da-email-tip2:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Spreadsheet Tip 2 - Repair Costs"
+      Subject: "How to estimate repair costs without being a contractor"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Repair Estimates Made Simple"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              "But I'm not a contractor - how do I estimate repair costs?"
+              
+              I hear this all the time. Here's the truth: you don't need to be 
+              a contractor to get repair estimates in the right ballpark.
+              
+              **My simple system:**
+              
+              1. **Light cosmetic:** $10-15/sq ft (paint, carpet, fixtures)
+              2. **Medium rehab:** $25-35/sq ft (kitchen/bath updates, some systems)
+              3. **Heavy rehab:** $45-60/sq ft (gut renovation, major systems)
+              
+              The Deal Analyzer has a repair estimator with common line items 
+              and typical costs. Use it as a starting point, then adjust based 
+              on your market.
+              
+              **Pro tip:** Get 2-3 contractor bids on your first few deals. 
+              This helps you calibrate your estimates for future deals.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Try the Repair Estimator"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Questions about estimating repairs? Hit reply and let me know.
+              
+              - The REI Deal Mastery Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  da-email-tip3:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Spreadsheet Tip 3 - Hidden Costs"
+      Subject: "The hidden costs that kill deals (don't forget these)"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Hidden Costs That Kill Deals"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I've seen investors lose money on deals that SHOULD have been 
+              profitable. The culprit? Hidden costs they forgot to account for.
+              
+              **Costs most beginners forget:**
+              
+              - **Holding costs:** Mortgage, insurance, taxes, utilities while 
+                you own the property (typically $1,500-3,000/month)
+              - **Closing costs (buy side):** Title, attorney, transfer taxes 
+                (1-2% of purchase price)
+              - **Closing costs (sell side):** Agent commissions, title, 
+                transfer taxes (8-10% of sale price)
+              - **Contingency:** Always add 10-15% buffer for surprises
+              
+              The Deal Analyzer accounts for ALL of these. Make sure you're 
+              filling in every section, not just purchase price and ARV.
+              
+              **Reality check:** A deal that looks like $30K profit on the 
+              surface might only be $10K after all costs. Know your numbers!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Review Your Numbers"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Next email: I'll share how to know when a deal is worth pursuing 
+              vs. when to walk away.
+              
+              - The REI Deal Mastery Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  da-email-upsell:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Spreadsheet Upsell"
+      Subject: "Want help analyzing a specific deal?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Need Help With a Specific Deal?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              By now you've had a chance to use the Deal Analyzer Spreadsheet 
+              on a few potential deals. Here's my question:
+              
+              **Are you stuck on a specific deal?**
+              
+              Maybe you're not sure if the ARV is realistic. Or the repair 
+              estimate feels off. Or you just want a second set of eyes before 
+              making an offer.
+              
+              I'm offering a **free 30-minute strategy call** where we can:
+              
+              - Analyze a specific deal together
+              - Review your numbers and assumptions
+              - Discuss your investing goals and next steps
+              - Answer any questions you have
+              
+              No pitch, no pressure. Just real help with your real deals.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Free Strategy Call"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Already confident with the spreadsheet?**
+              
+              If you're ready to take your investing to the next level, 
+              reply to this email and let me know. I have some resources 
+              that might help.
+              
+              Keep analyzing deals!
+              
+              - The REI Deal Mastery Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  da-business:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "REI Deal Mastery LLC"
+      Email: "support@reidealmastery.com"
+      Phone: "+1-555-REI-DEAL"
+      Timezone: "America/Chicago"
+      BusinessType: "LLC"
+      Industry: "Real Estate Education"
+      SignatureText: "The REI Deal Mastery Team"

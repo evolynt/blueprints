@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://docs.evolynt.com/schemas/pipeline.json",
+  "title": "Evolynt::CRM::Pipeline",
+  "description": "JSON Schema for Evolynt::CRM::Pipeline Blueprint resource",
+  "type": "object",
+  "properties": {
+    "Type": {
+      "type": "string",
+      "const": "Evolynt::CRM::Pipeline"
+    },
+    "Properties": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Description": {
+          "type": "string"
+        },
+        "Stages": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "Slug": {
+                "type": "string",
+                "minLength": 1
+              },
+              "Order": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 9007199254740991
+              },
+              "Description": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "Name",
+              "Slug",
+              "Order"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "Name",
+        "Stages"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "Type",
+    "Properties"
+  ],
+  "additionalProperties": false
+}

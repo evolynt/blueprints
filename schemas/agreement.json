@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://docs.evolynt.com/schemas/agreement.json",
+  "title": "Evolynt::CRM::Agreement",
+  "description": "JSON Schema for Evolynt::CRM::Agreement Blueprint resource",
+  "type": "object",
+  "properties": {
+    "Type": {
+      "type": "string",
+      "const": "Evolynt::CRM::Agreement"
+    },
+    "Properties": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Content": {
+          "type": "string",
+          "minLength": 1
+        },
+        "SignatureType": {
+          "default": "typed",
+          "type": "string",
+          "enum": [
+            "typed",
+            "checkbox"
+          ]
+        },
+        "CheckboxLabel": {
+          "type": "string"
+        },
+        "CollectFields": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Field": {
+                "type": "string",
+                "enum": [
+                  "initials",
+                  "companyName",
+                  "billingAddress",
+                  "dateOfBirth",
+                  "phone"
+                ]
+              },
+              "Required": {
+                "default": false,
+                "type": "boolean"
+              },
+              "Label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "Field",
+              "Required"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "IncludeCompanySignature": {
+          "default": false,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "Name",
+        "Title",
+        "Content",
+        "SignatureType",
+        "IncludeCompanySignature"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "Type",
+    "Properties"
+  ],
+  "additionalProperties": false
+}

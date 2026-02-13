@@ -1,0 +1,601 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFER
+  # ============================================
+  inner-circle-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Fitness Inner Circle"
+      Description: "Monthly membership with community access, weekly coaching calls, and workout library"
+      DefaultPortal: !Ref inner-circle-portal
+      Items:
+        - Product: !Ref inner-circle-community
+        - Product: !Ref workout-library
+      PricingPlans:
+        - !Ref inner-circle-monthly
+
+  # ============================================
+  # 📦 PRODUCT (Community)
+  # ============================================
+  inner-circle-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Fitness Inner Circle Community"
+      ProductType: community
+      Description: "Private community with weekly group coaching calls"
+      Community:
+        Name: "Fitness Inner Circle"
+        Description: "Your private community for accountability, support, and expert coaching"
+        Spaces:
+          - Name: "General"
+            Slug: general
+            Description: "Introduce yourself and connect with other members"
+            Order: 1
+          - Name: "Wins & Progress"
+            Slug: wins
+            Description: "Share your victories, big and small"
+            Order: 2
+          - Name: "Q&A"
+            Slug: qa
+            Description: "Ask questions and get answers from coaches and members"
+            Order: 3
+          - Name: "Resources"
+            Slug: resources
+            Description: "Guides, templates, and helpful materials"
+            Order: 4
+        Events:
+          - Title: "Weekly Group Coaching Call"
+            Description: "Live Q&A and coaching with Coach Sarah. Bring your questions!"
+            StartAt: "2025-01-07T19:00:00-05:00"
+            EndAt: "2025-01-07T20:00:00-05:00"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/example"
+            HostUserEmail: "sarah@fitlifecoaching.com"
+            RecurrenceRule:
+              Frequency: weekly
+              Interval: 1
+              DaysOfWeek: [2]
+              EndType: never
+
+  # ============================================
+  # 📦 PRODUCT (Course - Workout Library)
+  # ============================================
+  workout-library:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Workout Library"
+      ProductType: course
+      Description: "Complete workout library with upper body, lower body, full body, and recovery routines"
+      Course:
+        Title: "Workout Library"
+        Description: "Your complete collection of follow-along workout routines"
+        Modules:
+          - Title: "Upper Body Workouts"
+            Order: 1
+            Lessons:
+              - Title: "Push Day - Chest, Shoulders & Triceps"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/upper-push"
+              - Title: "Pull Day - Back & Biceps"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/upper-pull"
+          - Title: "Lower Body Workouts"
+            Order: 2
+            Lessons:
+              - Title: "Quad-Focused Leg Day"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/lower-quads"
+              - Title: "Glute & Hamstring Focus"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/lower-glutes"
+          - Title: "Full Body Workouts"
+            Order: 3
+            Lessons:
+              - Title: "30-Minute Full Body Blast"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/full-body-30"
+              - Title: "45-Minute Strength Builder"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/full-body-45"
+          - Title: "Recovery & Mobility"
+            Order: 4
+            Lessons:
+              - Title: "Active Recovery Day"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/recovery-active"
+              - Title: "Full Body Stretch Routine"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/recovery-stretch"
+
+  # ============================================
+  # 💰 PRICING PLAN
+  # ============================================
+  inner-circle-monthly:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Monthly Membership"
+      Description: "Recurring monthly access to the Fitness Inner Circle"
+      Amount: 9700
+      Currency: USD
+      BillingType: subscription
+      BillingInterval: monthly
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  inner-circle-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Fitness Inner Circle Sales Page"
+      Description: "Sales page for the Fitness Inner Circle membership"
+      Steps:
+        - Name: "Sales Page"
+          Slug: sales
+          Order: 1
+          Sections:
+            # Hero - VSL video + headline + CTA
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Stop Working Out Alone (And Finally Get the Results You Deserve)"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Join hundreds of members getting expert coaching, accountability, and proven workouts for just $97/month"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                    Provider: youtube
+                - Type: two_step_checkout
+                  Order: 4
+                  Content:
+                    OfferSlug: !Ref inner-circle-offer
+                    PricingPlanSlug: !Ref inner-circle-monthly
+                    ButtonText: "Join the Inner Circle - $97/month"
+            # Pain amplification - specific frustrations
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Does this sound familiar?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You start a new workout program, excited and motivated. Week one goes great.
+                      
+                      Then life happens. You miss a day. Then two. Before you know it, you're back to square one, wondering why you can't stick to anything.
+                      
+                      Here's what's really going on:
+                      
+                      - You're working out alone with no one to hold you accountable
+                      - When you hit a plateau, you have no idea what to change
+                      - You're not sure if you're doing exercises correctly (and you're worried about injury)
+                      - You don't have anyone to celebrate your wins with
+                      
+                      The truth is, fitness isn't just about having a program. It's about having support.
+                - Type: spacer
+                  Order: 3
+                  Content:
+                    Height: 20
+            # Solution - why this is different
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "What if you never had to figure it out alone?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Imagine having a certified coach available every week to answer your questions, fix your form, and adjust your program.
+                      
+                      Imagine being part of a community where everyone is working toward the same goals, cheering each other on, and sharing what's working.
+                      
+                      That's the Fitness Inner Circle.
+                      
+                      It's not just another membership with videos you'll never watch. It's a complete support system designed to keep you consistent, motivated, and making progress month after month.
+            # Value stack - what they get with perceived value
+            - Type: content
+              Order: 4
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's everything you get as a member"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      ✓ Private Community Access (Value: $197/month)
+                      Connect with members who get it. Share wins, ask questions, and stay accountable with people on the same journey.
+                      
+                      ✓ Weekly Live Coaching Calls (Value: $297/month)
+                      Every Tuesday at 7pm ET, get your questions answered live. Form checks, program adjustments, mindset coaching. No question is too small.
+                      
+                      ✓ Complete Workout Library (Value: $97)
+                      Upper body, lower body, full body, and recovery routines you can follow along anytime. New workouts added monthly.
+                      
+                      ✓ Direct Access to Coach Sarah
+                      Post in the Q&A space anytime and get a response within 24 hours. It's like having a personal trainer in your pocket.
+                      
+                      Total Value: $591+/month
+                - Type: spacer
+                  Order: 3
+                  Content:
+                    Height: 10
+                - Type: text
+                  Order: 4
+                  Content:
+                    Text: "Your investment: Just $97/month (cancel anytime)"
+            # Social proof - specific results
+            - Type: testimonials
+              Order: 5
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "I've joined gyms and bought programs before, but I always quit after a few weeks. The Inner Circle is different. The weekly calls keep me accountable and the community actually cares. Down 23lbs and still going strong!"
+                    Author: "Michelle K., 38, Marketing Manager"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "The live calls are worth the membership alone. Coach Sarah helped me fix my squat form and my knee pain is completely gone. Plus I've made real friends in the community."
+                    Author: "James T., 45, Dad of 3"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 3
+                  Content:
+                    Quote: "I was skeptical about an online community, but these people actually show up for each other. When I hit my first pull-up, I had 50+ people celebrating with me. That's priceless."
+                    Author: "Andrea L., 29, Nurse"
+                    Rating: 5
+            # FAQ - objection handling
+            - Type: faq
+              Order: 6
+              Elements:
+                - Type: faq_item
+                  Order: 1
+                  Content:
+                    Question: "I'm a complete beginner. Is this right for me?"
+                    Answer: "Absolutely. The workout library has routines for all levels, and Coach Sarah specializes in helping beginners build proper foundations. Many of our most successful members started with zero gym experience."
+                - Type: faq_item
+                  Order: 2
+                  Content:
+                    Question: "What if I can't make the live calls?"
+                    Answer: "All calls are recorded and posted in the community within 24 hours. You can also submit questions in advance and get them answered even if you can't attend live."
+                - Type: faq_item
+                  Order: 3
+                  Content:
+                    Question: "Can I cancel anytime?"
+                    Answer: "Yes, no contracts or commitments. Cancel anytime with one click in your account. We want you here because you're getting results, not because you're locked in."
+                - Type: faq_item
+                  Order: 4
+                  Content:
+                    Question: "I don't have access to a gym. Can I still participate?"
+                    Answer: "Yes! Our workout library includes home-friendly routines with minimal equipment. Many members work out with just dumbbells or resistance bands."
+            # Final CTA with checkout
+            - Type: cta
+              Order: 7
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Your Fitness Journey Shouldn't Be a Solo Mission"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "For less than a single personal training session per month, get expert coaching, a supportive community, and a complete workout library. Join today and see what's possible when you stop going it alone."
+                - Type: two_step_checkout
+                  Order: 3
+                  Content:
+                    OfferSlug: !Ref inner-circle-offer
+                    PricingPlanSlug: !Ref inner-circle-monthly
+                    ButtonText: "Join the Inner Circle - $97/month"
+        - Name: "Thank You"
+          Slug: thank-you
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to the Inner Circle!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You're officially part of the Fitness Inner Circle. Check your email for login details.
+                      
+                      Here's what to do first:
+                      
+                      1. Log into your portal and introduce yourself in the General space
+                      2. Check out the workout library and pick your first routine
+                      3. Mark your calendar for Tuesday at 7pm ET for the live coaching call
+                      
+                      Welcome to the team. We can't wait to see your progress!
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  inner-circle-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Fitness Inner Circle Portal"
+      Description: "Member portal for Fitness Inner Circle"
+      ThemeConfig:
+        PrimaryColor: "#10b981"
+
+  # ============================================
+  # 🏷️ TAG
+  # ============================================
+  inner-circle-member:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Inner Circle Member"
+      Description: "Active Fitness Inner Circle subscriber"
+
+  # ============================================
+  # ⚡ WORKFLOW
+  # ============================================
+  inner-circle-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Inner Circle Purchase"
+      Description: "Triggers when someone subscribes to the Fitness Inner Circle"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref inner-circle-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref inner-circle-member
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref inner-circle-sequence
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCE
+  # ============================================
+  inner-circle-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Inner Circle Welcome Sequence"
+      Description: "2-week welcome and engagement sequence for new members"
+      Steps:
+        - TemplateSlug: !Ref inner-circle-welcome-email
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref inner-circle-engagement-email
+          DelayAmount: 3
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref inner-circle-value-email
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 3
+
+  # ============================================
+  # 📧 EMAIL TEMPLATE
+  # ============================================
+  inner-circle-welcome-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Inner Circle Welcome"
+      Subject: "Welcome to the Fitness Inner Circle, {{contact.name}}!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "You're In! Welcome to the Inner Circle"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Welcome to the Fitness Inner Circle! You've just joined a 
+              community of people committed to getting stronger, healthier, 
+              and more confident.
+              
+              Here's how to make the most of your membership:
+              
+              **Step 1: Introduce Yourself**
+              Head to the General space and tell us a bit about yourself 
+              and your fitness goals. The community loves welcoming new 
+              members!
+              
+              **Step 2: Explore the Workout Library**
+              Browse our collection of follow-along workouts and pick one 
+              to try this week. Start wherever feels right for your level.
+              
+              **Step 3: Join the Live Call**
+              Every Tuesday at 7pm ET, we meet for live Q&A and coaching. 
+              Bring your questions! Replays are always available if you 
+              can't make it live.
+              
+              This is your time. Let's make it count.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Enter Your Portal"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#10b981"
+        - Type: spacer
+          Order: 4
+          Settings:
+            Height: 30
+        - Type: text
+          Order: 5
+          Content:
+            Text: "Questions? Just reply to this email. We're here to help."
+        - Type: divider
+          Order: 6
+        - Type: text
+          Order: 7
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  inner-circle-engagement-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Inner Circle Engagement Check-in"
+      Subject: "Have you posted in the community yet?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Quick Check-in"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've been a member for a few days now. How's it going?
+              
+              I wanted to remind you about tomorrow's live coaching call. 
+              It's happening Tuesday at 7pm ET, and it's a great chance to:
+              
+              - Get your form checked on any exercise
+              - Ask questions about your program
+              - Connect with other members live
+              
+              If you haven't introduced yourself in the community yet, now's 
+              a perfect time. The members here are incredibly supportive, and 
+              you'll get way more out of your membership when you engage.
+              
+              Remember: You don't have to go through this alone anymore.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Join the Community"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#10b981"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  inner-circle-value-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Inner Circle Value Reminder"
+      Subject: "One week in - how are you feeling?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "One Week Down!"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've been part of the Inner Circle for a week now. 
+              Congrats on taking action!
+              
+              I wanted to share a quick win from the community:
+              
+              "I've tried so many programs but always quit. The 
+              accountability here is different. I actually look forward 
+              to posting my workouts because I know people will celebrate 
+              with me. Finally seeing real progress!" - Sarah M.
+              
+              That's what this community is all about. Real people, real 
+              support, real results.
+              
+              If you haven't been as active as you'd like, that's okay. 
+              Every day is a fresh start. Here's a simple challenge:
+              
+              1. Do one workout from the library this week
+              2. Post about it in Wins & Progress
+              3. Celebrate someone else's win
+              
+              Small steps lead to big transformations.
+              
+              See you inside!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Check Out Member Wins"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#10b981"
+        - Type: spacer
+          Order: 4
+          Settings:
+            Height: 20
+        - Type: text
+          Order: 5
+          Content:
+            Text: |
+              P.S. If the Inner Circle isn't what you expected, you can 
+              cancel anytime with one click. But I hope you'll give it a 
+              real shot first. The members who stick around for 30 days 
+              almost never leave.
+        - Type: divider
+          Order: 6
+        - Type: text
+          Order: 7
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  business-profile:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "FitLife Coaching LLC"
+      Email: "hello@fitlifecoaching.com"
+      Phone: "+1-555-987-6543"
+      Timezone: "America/New_York"
+      BusinessType: "LLC"
+      Industry: "Fitness & Health"
+      SignatureText: "Coach Sarah, FitLife Coaching"

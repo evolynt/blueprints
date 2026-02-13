@@ -1,0 +1,1140 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFERS
+  # ============================================
+  cct-starter-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Creator Coaching - Starter"
+      Description: "3-month coaching program with 6 sessions and channel audit"
+      DefaultPortal: !Ref cct-starter-portal
+      OnboardingFlowSlug: !Ref cct-starter-onboarding
+      Items:
+        - Product: !Ref cct-starter-coaching
+        - Product: !Ref cct-resources
+      PricingPlans:
+        - !Ref cct-starter-pif
+        - !Ref cct-starter-split
+
+  cct-growth-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Creator Coaching - Growth"
+      Description: "6-month intensive coaching with 12 sessions and weekly Slack access"
+      DefaultPortal: !Ref cct-growth-portal
+      OnboardingFlowSlug: !Ref cct-growth-onboarding
+      Items:
+        - Product: !Ref cct-growth-coaching
+        - Product: !Ref cct-growth-community
+        - Product: !Ref cct-resources
+      PricingPlans:
+        - !Ref cct-growth-pif
+        - !Ref cct-growth-split
+
+  cct-vip-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Creator Coaching - VIP"
+      Description: "12-month VIP coaching with 24 sessions, direct phone access, and quarterly retreats"
+      DefaultPortal: !Ref cct-vip-portal
+      OnboardingFlowSlug: !Ref cct-vip-onboarding
+      Items:
+        - Product: !Ref cct-vip-coaching
+        - Product: !Ref cct-vip-community
+        - Product: !Ref cct-resources
+      PricingPlans:
+        - !Ref cct-vip-pif
+        - !Ref cct-vip-split
+
+  # ============================================
+  # 📦 PRODUCTS
+  # ============================================
+  cct-starter-coaching:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Starter Coaching Sessions"
+      ProductType: coaching
+      Description: "6 private coaching sessions over 3 months"
+      Coaching:
+        Title: "Starter Coaching Session"
+        Description: "60-minute private coaching session"
+        Quantity: 6
+        BookingLink: !Ref cct-coaching-session
+
+  cct-growth-coaching:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Growth Coaching Sessions"
+      ProductType: coaching
+      Description: "12 private coaching sessions over 6 months"
+      Coaching:
+        Title: "Growth Coaching Session"
+        Description: "60-minute private coaching session with priority booking"
+        Quantity: 12
+        BookingLink: !Ref cct-coaching-session
+
+  cct-vip-coaching:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "VIP Coaching Sessions"
+      ProductType: coaching
+      Description: "24 private coaching sessions over 12 months"
+      Coaching:
+        Title: "VIP Coaching Session"
+        Description: "90-minute VIP coaching session with direct phone access"
+        Quantity: 24
+        BookingLink: !Ref cct-vip-session
+
+  cct-growth-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Growth Client Community"
+      ProductType: community
+      Description: "Private community for Growth tier clients"
+      Community:
+        Name: "Growth Coaching Community"
+        Description: "Connect with fellow Growth tier clients"
+        Spaces:
+          - Name: "Wins"
+            Slug: wins
+            Description: "Share your wins and milestones"
+            Order: 1
+          - Name: "Questions"
+            Slug: questions
+            Description: "Get support from peers and coach"
+            Order: 2
+          - Name: "Resources"
+            Slug: resources
+            Description: "Exclusive resources for Growth clients"
+            Order: 3
+
+  cct-vip-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "VIP Client Community"
+      ProductType: community
+      Description: "Exclusive community for VIP clients"
+      Community:
+        Name: "VIP Inner Circle"
+        Description: "Elite community for VIP coaching clients"
+        Spaces:
+          - Name: "Announcements"
+            Slug: announcements
+            Description: "VIP-only announcements and opportunities"
+            Order: 1
+          - Name: "Wins"
+            Slug: wins
+            Description: "Celebrate major milestones"
+            Order: 2
+          - Name: "Mastermind"
+            Slug: mastermind
+            Description: "Peer mastermind discussions"
+            Order: 3
+          - Name: "Retreats"
+            Slug: retreats
+            Description: "Quarterly retreat planning and recaps"
+            Order: 4
+
+  cct-resources:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Coaching Resource Library"
+      ProductType: page
+      Description: "Templates and resources for coaching clients"
+      Page:
+        Title: "Your Coaching Resources"
+        Content: |
+          ## Welcome to Your Resource Library
+          
+          Access all your coaching resources below.
+          
+          ---
+          
+          ## Channel Audit Template
+          
+          **[Download Channel Audit Template](https://docs.google.com/spreadsheets/your-audit)**
+          
+          Track your channel metrics and identify growth opportunities.
+          
+          ---
+          
+          ## Content Strategy Worksheet
+          
+          **[Download Strategy Worksheet](https://docs.google.com/document/your-strategy)**
+          
+          Plan your content pillars and publishing schedule.
+          
+          ---
+          
+          ## Thumbnail Checklist
+          
+          **[Download Thumbnail Checklist](https://docs.google.com/document/your-checklist)**
+          
+          Optimize every thumbnail before publishing.
+
+  # ============================================
+  # 💰 PRICING PLANS
+  # ============================================
+  cct-starter-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Starter - Pay in Full"
+      Description: "One-time payment"
+      Amount: 300000
+      Currency: USD
+      BillingType: one_time
+
+  cct-starter-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Starter - 3 Payments"
+      Description: "Split into 3 monthly payments"
+      Amount: 359100
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  cct-growth-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Growth - Pay in Full"
+      Description: "One-time payment"
+      Amount: 500000
+      Currency: USD
+      BillingType: one_time
+
+  cct-growth-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Growth - 6 Payments"
+      Description: "Split into 6 monthly payments"
+      Amount: 599400
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 6
+
+  cct-vip-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "VIP - Pay in Full"
+      Description: "One-time payment"
+      Amount: 1000000
+      Currency: USD
+      BillingType: one_time
+
+  cct-vip-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "VIP - 12 Payments"
+      Description: "Split into 12 monthly payments"
+      Amount: 1199988
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 12
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  cct-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Creator Coaching Application"
+      Description: "Application funnel for tiered coaching"
+      Steps:
+        - Name: "Overview"
+          Slug: overview
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Accelerate Your Channel Growth with Expert Coaching"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Personalized 1:1 coaching for serious creators ready to level up"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=CCT_VSL"
+                    Provider: youtube
+                - Type: button
+                  Order: 4
+                  Content:
+                    Text: "See Coaching Options"
+                    Action: next_step
+        - Name: "Compare Tiers"
+          Slug: compare
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Choose Your Coaching Level"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      **STARTER - $3,000** (3 months)
+                      - 6 private coaching sessions
+                      - Full channel audit
+                      - Content strategy roadmap
+                      - Thumbnail & title reviews
+                      - Email support between calls
+                      
+                      ---
+                      
+                      **GROWTH - $5,000** (6 months)
+                      Everything in Starter, PLUS:
+                      - 12 coaching sessions (2x more)
+                      - Weekly Slack access
+                      - Video script reviews
+                      - Priority session booking
+                      - Growth client community
+                      
+                      ---
+                      
+                      **VIP - $10,000** (12 months)
+                      Everything in Growth, PLUS:
+                      - 24 coaching sessions (4x more)
+                      - Direct phone access
+                      - Done-for-you strategy docs
+                      - Quarterly in-person retreats
+                      - VIP inner circle community
+                      - Lifetime alumni access
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Apply Now"
+                    Action: next_step
+        - Name: "Apply"
+          Slug: apply
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Apply for Coaching"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Tell me about your channel and goals. I'll review your application and reach out if we're a good fit.
+            - Type: form
+              Order: 2
+              Elements:
+                - Type: form
+                  Order: 1
+                  Content:
+                    FormSlug: !Ref cct-application
+        - Name: "Book Call"
+          Slug: book
+          Order: 4
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Book Your Discovery Call"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Thanks for applying! Let's hop on a quick call to discuss your goals and find the right tier for you.
+                - Type: booking_link
+                  Order: 3
+                  Content:
+                    BookingLinkSlug: !Ref cct-discovery-call
+        - Name: "Confirmed"
+          Slug: confirmed
+          Order: 5
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're Booked!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Check your email for the calendar invite. I'm looking forward to learning about your channel!
+
+  # ============================================
+  # 📋 FORMS
+  # ============================================
+  cct-application:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Coaching Application"
+      Description: "Application for tiered coaching"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@email.com"
+        - Type: custom
+          CustomFieldSlug: !Ref cct-cf-channel-url
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cct-cf-channel-size
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cct-cf-goals
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cct-cf-tier-interest
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cct-cf-commitment
+          Required: true
+      SubmitButton:
+        Text: "Submit Application"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+
+  cct-onboarding-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Coaching Client Intake"
+      Description: "Intake form for new coaching clients"
+      Fields:
+        - Type: custom
+          CustomFieldSlug: !Ref cct-cf-biggest-challenge
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cct-cf-availability
+          Required: true
+      SubmitButton:
+        Text: "Complete Intake"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  cct-cf-channel-url:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "YouTube Channel URL"
+      FieldType: text
+      Placeholder: "https://youtube.com/@yourchannel"
+      HelpText: "Link to your main channel"
+
+  cct-cf-channel-size:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Subscriber Count"
+      FieldType: select
+      Options:
+        - "Under 1,000"
+        - "1,000 - 10,000"
+        - "10,000 - 50,000"
+        - "50,000 - 100,000"
+        - "100,000+"
+      HelpText: "Current subscriber count"
+
+  cct-cf-goals:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your primary goal?"
+      FieldType: textarea
+      Placeholder: "Tell me about your goals..."
+      HelpText: "Be specific about what you want to achieve"
+
+  cct-cf-tier-interest:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Which tier interests you most?"
+      FieldType: select
+      Options:
+        - "Starter ($3,000)"
+        - "Growth ($5,000)"
+        - "VIP ($10,000)"
+        - "Not sure - help me decide"
+      HelpText: "We can discuss on our call"
+
+  cct-cf-commitment:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Time commitment"
+      FieldType: select
+      Options:
+        - "Part-time (10-20 hrs/week)"
+        - "Serious (20-40 hrs/week)"
+        - "Full-time (40+ hrs/week)"
+      HelpText: "How much time do you dedicate to content?"
+
+  cct-cf-biggest-challenge:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Biggest challenge"
+      FieldType: textarea
+      Placeholder: "What's holding you back?"
+      HelpText: "This helps me prepare for our sessions"
+
+  cct-cf-availability:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Preferred coaching time"
+      FieldType: select
+      Options:
+        - "Weekday mornings"
+        - "Weekday afternoons"
+        - "Weekday evenings"
+        - "Weekends"
+        - "Flexible"
+      HelpText: "When can you do coaching calls?"
+
+  # ============================================
+  # 📅 BOOKING LINKS
+  # ============================================
+  cct-discovery-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Coaching Discovery Call"
+      OwnerUserEmail: "coach@creatorcoachingpro.com"
+      Description: "30-minute call to discuss coaching options"
+      DurationMinutes: 30
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 14
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  cct-coaching-session:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Coaching Session"
+      OwnerUserEmail: "coach@creatorcoachingpro.com"
+      Description: "60-minute private coaching session"
+      DurationMinutes: 60
+      BufferAfterMinutes: 15
+      MinNoticeHours: 48
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  cct-vip-session:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "VIP Coaching Session"
+      OwnerUserEmail: "coach@creatorcoachingpro.com"
+      Description: "90-minute VIP coaching session"
+      DurationMinutes: 90
+      BufferAfterMinutes: 30
+      MinNoticeHours: 24
+      MaxAdvanceDays: 60
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTALS
+  # ============================================
+  cct-starter-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Starter Coaching Portal"
+      Description: "Portal for Starter tier clients"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  cct-growth-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Growth Coaching Portal"
+      Description: "Portal for Growth tier clients"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  cct-vip-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "VIP Coaching Portal"
+      Description: "Portal for VIP tier clients"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 📜 AGREEMENTS
+  # ============================================
+  cct-starter-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Starter Coaching Agreement"
+      Title: "STARTER COACHING AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Coaching Agreement is between Creator Coaching Pro LLC ("Coach") and the undersigned ("Client").
+        
+        ## STARTER TIER INCLUDES
+        
+        - 6 private coaching sessions (60 min each) over 3 months
+        - Full channel audit and strategy review
+        - Thumbnail and title feedback
+        - Email support between sessions
+        - Access to resource library
+        
+        ## TERMS
+        
+        - Payment due before first session
+        - 24-hour notice for reschedules
+        - Sessions expire after 6 months
+        - Results depend on client effort
+        
+        By signing, Client agrees to these terms.
+
+  cct-growth-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Growth Coaching Agreement"
+      Title: "GROWTH COACHING AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Coaching Agreement is between Creator Coaching Pro LLC ("Coach") and the undersigned ("Client").
+        
+        ## GROWTH TIER INCLUDES
+        
+        Everything in Starter, PLUS:
+        - 12 coaching sessions over 6 months
+        - Weekly Slack access (24hr response)
+        - Video script reviews
+        - Priority session booking
+        - Growth client community access
+        
+        ## TERMS
+        
+        - Payment due before first session (or active split-pay)
+        - 24-hour notice for reschedules
+        - Sessions expire after 9 months
+        - Slack access during business hours
+        - Results depend on client effort
+        
+        By signing, Client agrees to these terms.
+
+  cct-vip-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "VIP Coaching Agreement"
+      Title: "VIP COACHING AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Coaching Agreement is between Creator Coaching Pro LLC ("Coach") and the undersigned ("Client").
+        
+        ## VIP TIER INCLUDES
+        
+        Everything in Growth, PLUS:
+        - 24 coaching sessions over 12 months
+        - Direct phone access (emergencies)
+        - Done-for-you strategy documents
+        - Quarterly in-person retreats (travel not included)
+        - VIP inner circle community
+        - Lifetime alumni access after completion
+        
+        ## TERMS
+        
+        - Payment due before first session (or active split-pay)
+        - 24-hour notice for reschedules (phone access for urgent matters)
+        - Sessions expire after 15 months
+        - Retreat attendance optional but encouraged
+        - Results depend on client effort
+        
+        ## CONFIDENTIALITY
+        
+        Both parties agree to keep coaching content, strategies, and discussions confidential.
+        
+        By signing, Client agrees to these terms.
+
+  # ============================================
+  # 🎓 ONBOARDING FLOWS
+  # ============================================
+  cct-starter-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Starter Onboarding"
+      Description: "Onboarding for Starter tier"
+      Steps:
+        - Name: "Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to Starter Coaching!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Please review and sign your coaching agreement."
+                - Type: agreement
+                  Order: 3
+                  Content:
+                    AgreementSlug: !Ref cct-starter-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Intake"
+          Slug: intake
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Quick Intake"
+                - Type: form
+                  Order: 2
+                  Content:
+                    FormSlug: !Ref cct-onboarding-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Ready"
+          Slug: ready
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Book your first coaching session to get started!"
+
+  cct-growth-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Growth Onboarding"
+      Description: "Onboarding for Growth tier"
+      Steps:
+        - Name: "Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to Growth Coaching!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Please review and sign your coaching agreement."
+                - Type: agreement
+                  Order: 3
+                  Content:
+                    AgreementSlug: !Ref cct-growth-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Intake"
+          Slug: intake
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Quick Intake"
+                - Type: form
+                  Order: 2
+                  Content:
+                    FormSlug: !Ref cct-onboarding-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Ready"
+          Slug: ready
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Book your first session and join the Growth community!"
+
+  cct-vip-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "VIP Onboarding"
+      Description: "Onboarding for VIP tier"
+      Steps:
+        - Name: "Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to VIP Coaching!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Please review and sign your VIP coaching agreement."
+                - Type: agreement
+                  Order: 3
+                  Content:
+                    AgreementSlug: !Ref cct-vip-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Intake"
+          Slug: intake
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Quick Intake"
+                - Type: form
+                  Order: 2
+                  Content:
+                    FormSlug: !Ref cct-onboarding-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Ready"
+          Slug: ready
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to the VIP Inner Circle!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Book your first session, join the VIP community, and check your email for retreat info!"
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  cct-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Coaching Applications"
+      Description: "Track coaching applicants"
+      Stages:
+        - Name: "Applied"
+          Slug: applied
+          Order: 1
+          Description: "Submitted application"
+        - Name: "Call Scheduled"
+          Slug: call-scheduled
+          Order: 2
+          Description: "Discovery call booked"
+        - Name: "Call Complete"
+          Slug: call-complete
+          Order: 3
+          Description: "Call finished"
+        - Name: "Won"
+          Slug: won
+          Order: 4
+          Description: "Enrolled"
+        - Name: "Lost"
+          Slug: lost
+          Order: 5
+          Description: "Did not enroll"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  cct-tag-applicant:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Coaching Applicant"
+      Description: "Applied for coaching"
+
+  cct-tag-starter:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Starter Client"
+      Description: "Enrolled in Starter tier"
+
+  cct-tag-growth:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Growth Client"
+      Description: "Enrolled in Growth tier"
+
+  cct-tag-vip:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "VIP Client"
+      Description: "Enrolled in VIP tier"
+
+  cct-tag-active:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Active Client"
+      Description: "Currently in coaching"
+
+  cct-tag-completed:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Coaching Completed"
+      Description: "Finished coaching program"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  cct-workflow-application:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Coaching Application"
+      Description: "Triggers on application submit"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref cct-application
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref cct-tag-applicant
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref cct-seq-applicant
+
+  cct-workflow-starter:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Starter Enrollment"
+      Description: "Triggers on Starter purchase"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref cct-starter-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref cct-tag-starter
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref cct-tag-active
+
+  cct-workflow-growth:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Growth Enrollment"
+      Description: "Triggers on Growth purchase"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref cct-growth-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref cct-tag-growth
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref cct-tag-active
+
+  cct-workflow-vip:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "VIP Enrollment"
+      Description: "Triggers on VIP purchase"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref cct-vip-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref cct-tag-vip
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref cct-tag-active
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCE
+  # ============================================
+  cct-seq-applicant:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Applicant Follow-up"
+      Description: "Follow-up for coaching applicants"
+      Steps:
+        - TemplateSlug: !Ref cct-email-application
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref cct-email-reminder
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  cct-email-application:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Application Received"
+      Subject: "Got your application!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Thanks for Applying!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I received your coaching application! Next step: book your discovery call.
+              
+              On our call, we'll discuss your goals and find the right tier for you.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Discovery Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: "Talk soon!"
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  cct-email-reminder:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Call Reminder"
+      Subject: "Did you book your call?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Quick Reminder"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Just checking - did you book your discovery call yet?
+              
+              I only take on a few clients at a time. If you're serious about growing your channel, let's chat!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  cct-business:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "Creator Coaching Pro LLC"
+      Email: "coach@creatorcoachingpro.com"
+      Phone: "+1-555-CREATOR"
+      Timezone: "America/Los_Angeles"
+      BusinessType: "LLC"
+      Industry: "Content Creator Coaching"
+      SignatureText: "Creator Coaching Pro"

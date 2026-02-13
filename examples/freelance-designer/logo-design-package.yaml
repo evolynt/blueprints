@@ -1,0 +1,921 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFER
+  # ============================================
+  ldp-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Logo Design Package"
+      Description: "Professional logo design with 3 concepts and revisions"
+      DefaultPortal: !Ref ldp-portal
+      OnboardingFlowSlug: !Ref ldp-onboarding
+      Items:
+        - Product: !Ref ldp-service
+        - Product: !Ref ldp-guidelines
+      PricingPlans:
+        - !Ref ldp-pif
+        - !Ref ldp-split
+
+  # ============================================
+  # 📦 PRODUCTS
+  # ============================================
+  ldp-service:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Logo Design Service"
+      ProductType: page
+      Description: "Professional logo design package"
+      Page:
+        Title: "Your Logo Design Project"
+        Content: |
+          ## Welcome to Your Logo Project!
+          
+          I'm excited to work on your new logo. Here's what happens next:
+          
+          ---
+          
+          ## Project Timeline
+          
+          **Week 1:** I review your questionnaire and research your industry
+          
+          **Week 2:** You receive 3 unique logo concepts
+          
+          **Week 3-4:** We refine your chosen concept (up to 3 revision rounds)
+          
+          **Week 5:** Final files delivered
+          
+          ---
+          
+          ## What You'll Receive
+          
+          - Primary logo in full color
+          - Logo variations (horizontal, stacked, icon-only)
+          - Color versions (full color, black, white, reversed)
+          - File formats: AI, EPS, PDF, PNG, JPG, SVG
+          - Basic usage guidelines
+          
+          ---
+          
+          ## Questions?
+          
+          Reply to any email or book a revision call below.
+
+  ldp-guidelines:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Logo Usage Guidelines"
+      ProductType: page
+      Description: "Basic guidelines for using your new logo"
+      Page:
+        Title: "Logo Usage Guidelines"
+        Content: |
+          ## Your Logo Guidelines
+          
+          These guidelines will be updated with your final logo files.
+          
+          ---
+          
+          ## Coming Soon
+          
+          Once your logo is finalized, this page will include:
+          
+          - Minimum size requirements
+          - Clear space rules
+          - Color specifications
+          - Do's and don'ts
+          - File format guide
+
+  # ============================================
+  # 💰 PRICING PLANS
+  # ============================================
+  ldp-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Logo Design - Pay in Full"
+      Description: "One-time payment"
+      Amount: 150000
+      Currency: USD
+      BillingType: one_time
+
+  ldp-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Logo Design - 2 Payments"
+      Description: "Split into 2 payments"
+      Amount: 159400
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 2
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  ldp-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Logo Design Inquiry"
+      Description: "Inquiry funnel for logo design services"
+      Steps:
+        - Name: "Services"
+          Slug: services
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Professional Logo Design"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "A logo that captures your brand's essence"
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: text
+                  Order: 1
+                  Content:
+                    Text: |
+                      ## What's Included
+                      
+                      **Discovery & Research**
+                      - Detailed brand questionnaire
+                      - Industry and competitor research
+                      - Mood board development
+                      
+                      **Design & Refinement**
+                      - 3 unique logo concepts
+                      - 3 rounds of revisions
+                      - Collaborative feedback process
+                      
+                      **Final Deliverables**
+                      - Logo files in all formats
+                      - Color and black/white versions
+                      - Basic usage guidelines
+                      
+                      ---
+                      
+                      ## Investment: $1,500
+                      
+                      Payment plans available. Timeline: 4-5 weeks.
+                - Type: button
+                  Order: 2
+                  Content:
+                    Text: "Start Your Project"
+                    Action: next_step
+        - Name: "Inquiry"
+          Slug: inquiry
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Tell Me About Your Project"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Fill out this quick form and I'll reach out to schedule a discovery call.
+            - Type: form
+              Order: 2
+              Elements:
+                - Type: form
+                  Order: 1
+                  Content:
+                    FormSlug: !Ref ldp-inquiry-form
+        - Name: "Book Call"
+          Slug: book
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Book Your Discovery Call"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Thanks for your interest! Let's hop on a quick call to discuss your project and make sure we're a good fit.
+                - Type: booking_link
+                  Order: 3
+                  Content:
+                    BookingLinkSlug: !Ref ldp-discovery-call
+        - Name: "Confirmed"
+          Slug: confirmed
+          Order: 4
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're Booked!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Check your email for the calendar invite. I'm looking forward to learning about your brand!
+                      
+                      **Before our call:**
+                      - Think about brands you admire
+                      - Gather any existing brand materials
+                      - Consider your target audience
+
+  # ============================================
+  # 📋 FORMS
+  # ============================================
+  ldp-inquiry-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Logo Design Inquiry"
+      Description: "Initial inquiry for logo design"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@company.com"
+        - Type: custom
+          CustomFieldSlug: !Ref ldp-cf-business-name
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref ldp-cf-business-type
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref ldp-cf-timeline
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref ldp-cf-budget
+          Required: true
+      SubmitButton:
+        Text: "Submit Inquiry"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+
+  ldp-questionnaire:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Brand Questionnaire"
+      Description: "Detailed questionnaire for logo design clients"
+      Fields:
+        - Type: custom
+          CustomFieldSlug: !Ref ldp-cf-business-description
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref ldp-cf-target-audience
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref ldp-cf-brand-personality
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref ldp-cf-competitors
+          Required: false
+        - Type: custom
+          CustomFieldSlug: !Ref ldp-cf-inspiration
+          Required: false
+      SubmitButton:
+        Text: "Submit Questionnaire"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 600
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  ldp-cf-business-name:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Business name"
+      FieldType: text
+      Placeholder: "Your company name"
+      HelpText: "The name that will appear in the logo"
+
+  ldp-cf-business-type:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Industry"
+      FieldType: select
+      Options:
+        - "Professional Services"
+        - "Creative / Design"
+        - "Technology"
+        - "Health / Wellness"
+        - "Food / Beverage"
+        - "Retail / E-commerce"
+        - "Real Estate"
+        - "Finance"
+        - "Education"
+        - "Non-profit"
+        - "Other"
+      HelpText: "Select your industry"
+
+  ldp-cf-timeline:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "When do you need this?"
+      FieldType: select
+      Options:
+        - "ASAP (rush fee may apply)"
+        - "Within 1 month"
+        - "Within 2-3 months"
+        - "No rush - flexible"
+      HelpText: "Standard timeline is 4-5 weeks"
+
+  ldp-cf-budget:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Budget range"
+      FieldType: select
+      Options:
+        - "Under $1,000"
+        - "$1,000 - $2,000"
+        - "$2,000 - $5,000"
+        - "$5,000+"
+      HelpText: "Logo package starts at $1,500"
+
+  ldp-cf-business-description:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Tell me about your business"
+      FieldType: textarea
+      Placeholder: "What does your business do? What makes it unique?"
+      HelpText: "The more detail, the better I can capture your brand"
+
+  ldp-cf-target-audience:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Who is your target audience?"
+      FieldType: textarea
+      Placeholder: "Describe your ideal customer..."
+      HelpText: "Age, interests, pain points, etc."
+
+  ldp-cf-brand-personality:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Brand personality"
+      FieldType: select
+      Options:
+        - "Professional / Corporate"
+        - "Friendly / Approachable"
+        - "Bold / Edgy"
+        - "Elegant / Luxury"
+        - "Playful / Fun"
+        - "Minimal / Clean"
+        - "Traditional / Classic"
+        - "Modern / Innovative"
+      HelpText: "How should your brand feel?"
+
+  ldp-cf-competitors:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Competitors"
+      FieldType: textarea
+      Placeholder: "List 2-3 competitors and their websites"
+      HelpText: "Helps me understand your market"
+
+  ldp-cf-inspiration:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Logo inspiration"
+      FieldType: textarea
+      Placeholder: "Share links to logos or brands you admire"
+      HelpText: "What styles appeal to you?"
+
+  # ============================================
+  # 📅 BOOKING LINKS
+  # ============================================
+  ldp-discovery-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Logo Design Discovery Call"
+      OwnerUserEmail: "hello@sarahdesigns.co"
+      Description: "30-minute call to discuss your logo project"
+      DurationMinutes: 30
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 14
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  ldp-revision-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Logo Revision Call"
+      OwnerUserEmail: "hello@sarahdesigns.co"
+      Description: "30-minute call to review logo concepts"
+      DurationMinutes: 30
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  ldp-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Logo Design Client Portal"
+      Description: "Portal for logo design clients"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 📜 AGREEMENT
+  # ============================================
+  ldp-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Logo Design Agreement"
+      Title: "LOGO DESIGN SERVICES AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Design Services Agreement is between Sarah Designs LLC ("Designer") and the undersigned ("Client").
+        
+        ## SCOPE OF WORK
+        
+        Designer agrees to provide the following logo design services:
+        
+        - Discovery questionnaire and research
+        - 3 unique logo concepts
+        - Up to 3 rounds of revisions on selected concept
+        - Final logo files in multiple formats
+        - Basic usage guidelines
+        
+        ## TIMELINE
+        
+        Estimated project duration: 4-5 weeks from questionnaire completion.
+        
+        - Week 1: Research and concept development
+        - Week 2: Initial concepts presented
+        - Weeks 3-4: Revisions
+        - Week 5: Final delivery
+        
+        ## PAYMENT
+        
+        Total investment: $1,500 USD
+        
+        - Pay in full, or
+        - 2 payments of $797 (first due before project starts)
+        
+        ## REVISIONS
+        
+        Package includes 3 rounds of revisions on the selected concept. Additional revisions billed at $150/hour.
+        
+        ## COPYRIGHT
+        
+        Upon final payment, Client receives full copyright ownership of the final approved logo. Designer retains the right to display the work in portfolio.
+        
+        ## CANCELLATION
+        
+        If Client cancels after concepts are presented, a 50% kill fee applies. Cancellation before concepts: full refund minus $250 research fee.
+        
+        By signing, Client agrees to these terms.
+
+  # ============================================
+  # 🎓 ONBOARDING FLOW
+  # ============================================
+  ldp-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Logo Design Onboarding"
+      Description: "Onboarding for new logo design clients"
+      Steps:
+        - Name: "Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome! Let's Get Started"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Please review and sign the design services agreement to begin your project."
+                - Type: agreement
+                  Order: 3
+                  Content:
+                    AgreementSlug: !Ref ldp-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Questionnaire"
+          Slug: questionnaire
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Brand Questionnaire"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "This questionnaire helps me understand your brand and create the perfect logo."
+                - Type: form
+                  Order: 3
+                  Content:
+                    FormSlug: !Ref ldp-questionnaire
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Ready"
+          Slug: ready
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Thanks for completing your onboarding! Here's what happens next:
+                      
+                      **This week:** I'll review your questionnaire and begin research
+                      
+                      **Next week:** You'll receive 3 logo concepts to review
+                      
+                      Check your email for updates. Questions? Just reply to any email.
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  ldp-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Logo Design Leads"
+      Description: "Track logo design inquiries"
+      Stages:
+        - Name: "Inquiry"
+          Slug: inquiry
+          Order: 1
+          Description: "Submitted inquiry form"
+        - Name: "Call Scheduled"
+          Slug: call-scheduled
+          Order: 2
+          Description: "Discovery call booked"
+        - Name: "Call Complete"
+          Slug: call-complete
+          Order: 3
+          Description: "Call finished, awaiting decision"
+        - Name: "Proposal Sent"
+          Slug: proposal-sent
+          Order: 4
+          Description: "Proposal/invoice sent"
+        - Name: "Won"
+          Slug: won
+          Order: 5
+          Description: "Client signed and paid"
+        - Name: "Lost"
+          Slug: lost
+          Order: 6
+          Description: "Did not proceed"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  ldp-tag-inquiry:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Logo Inquiry"
+      Description: "Submitted logo design inquiry"
+
+  ldp-tag-client:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Logo Client"
+      Description: "Purchased logo design package"
+
+  ldp-tag-in-progress:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Logo In Progress"
+      Description: "Logo project currently in progress"
+
+  ldp-tag-complete:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Logo Complete"
+      Description: "Logo project completed"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  ldp-workflow-inquiry:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Logo Inquiry Submitted"
+      Description: "Triggers when someone submits an inquiry"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref ldp-inquiry-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref ldp-tag-inquiry
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref ldp-seq-inquiry
+
+  ldp-workflow-purchase:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Logo Package Purchased"
+      Description: "Triggers when someone purchases the package"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref ldp-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref ldp-tag-client
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref ldp-tag-in-progress
+        - Type: enroll_sequence
+          Order: 3
+          Config:
+            SequenceSlug: !Ref ldp-seq-welcome
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCES
+  # ============================================
+  ldp-seq-inquiry:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Logo Inquiry Follow-up"
+      Description: "Follow-up sequence for logo inquiries"
+      Steps:
+        - TemplateSlug: !Ref ldp-email-inquiry
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref ldp-email-reminder
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+
+  ldp-seq-welcome:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Logo Client Welcome"
+      Description: "Welcome sequence for new logo clients"
+      Steps:
+        - TemplateSlug: !Ref ldp-email-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref ldp-email-kickoff
+          DelayAmount: 1
+          DelayUnit: days
+          Order: 2
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  ldp-email-inquiry:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Inquiry Received"
+      Subject: "Got your inquiry - let's chat!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Thanks for Reaching Out!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thanks for your interest in working together on your logo! I received your inquiry and I'm excited to learn more about your project.
+              
+              **Next step:** Book a free 30-minute discovery call so we can discuss your vision and make sure we're a good fit.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Discovery Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Talk soon!
+              
+              Sarah
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  ldp-email-reminder:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Discovery Call Reminder"
+      Subject: "Still thinking about your logo?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Quick Follow-up"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Just checking in - did you have a chance to book your discovery call?
+              
+              I have a few spots open this week if you'd like to chat about your logo project. No pressure, just a quick conversation to see if we're a good fit.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book a Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              If now isn't the right time, no worries. Just reply and let me know!
+              
+              Sarah
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  ldp-email-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Logo Client Welcome"
+      Subject: "Welcome! Your logo project begins"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Your Logo Project!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I'm so excited to work with you! Your payment has been received and your logo project is officially underway.
+              
+              **First step:** Complete your onboarding in the client portal. This includes:
+              
+              1. Signing the design agreement
+              2. Filling out the brand questionnaire
+              
+              The questionnaire is the most important part - it helps me understand your brand and create a logo you'll love.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Complete Onboarding"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Questions? Just reply to this email.
+              
+              Let's create something amazing!
+              
+              Sarah
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  ldp-email-kickoff:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Project Kickoff"
+      Subject: "Your project timeline"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Your Project Timeline"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Here's what to expect over the next few weeks:
+              
+              **This Week**
+              - I review your questionnaire
+              - Research your industry and competitors
+              - Develop initial concepts
+              
+              **Next Week**
+              - You receive 3 logo concepts
+              - We discuss your feedback (via email or call)
+              
+              **Weeks 3-4**
+              - Revisions on your chosen concept
+              - Finalize details
+              
+              **Week 5**
+              - Final files delivered!
+              
+              If you haven't completed your questionnaire yet, please do so ASAP - I can't start designing without it!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Go to Portal"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Excited to get started!
+              
+              Sarah
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"

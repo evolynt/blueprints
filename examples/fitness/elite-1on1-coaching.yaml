@@ -1,0 +1,914 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFER
+  # ============================================
+  elite-coaching-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Elite 1:1 Coaching"
+      Description: "12-week personalized coaching program with private sessions, community access, and client resources"
+      DefaultPortal: !Ref elite-portal
+      Items:
+        - Product: !Ref elite-coaching-sessions
+        - Product: !Ref elite-community
+        - Product: !Ref elite-resources
+      PricingPlans:
+        - !Ref elite-pif
+        - !Ref elite-split
+
+  # ============================================
+  # 📦 PRODUCT (Coaching)
+  # ============================================
+  elite-coaching-sessions:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Elite 1:1 Coaching Sessions"
+      ProductType: coaching
+      Description: "12 private coaching calls with personalized programming and direct access"
+      Coaching:
+        Title: "1:1 Coaching Session"
+        Description: "45-minute private coaching call with personalized programming review, form analysis, and strategy adjustments"
+        Quantity: 12
+        BookingLink: !Ref coaching-call
+        ExpirationDays: 180
+
+  # ============================================
+  # 📦 PRODUCT (Community)
+  # ============================================
+  elite-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Elite Coaching Circle"
+      ProductType: community
+      Description: "Private community for Elite 1:1 Coaching clients"
+      Community:
+        Name: "Elite Coaching Circle"
+        Description: "Your private community for direct coach access, peer support, and accountability"
+        Spaces:
+          - Name: "Announcements"
+            Slug: announcements
+            Description: "Program updates and important information from your coach"
+            Order: 1
+          - Name: "Ask the Coach"
+            Slug: ask-coach
+            Description: "Direct Q&A between sessions - get answers within 24 hours"
+            Order: 2
+          - Name: "Wins & Progress"
+            Slug: wins
+            Description: "Share your victories and celebrate your progress"
+            Order: 3
+          - Name: "Resources"
+            Slug: resources
+            Description: "Guides, templates, and helpful materials"
+            Order: 4
+
+  # ============================================
+  # 📦 PRODUCT (Page)
+  # ============================================
+  elite-resources:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Elite Client Resources"
+      ProductType: page
+      Description: "Welcome guide and program materials for Elite 1:1 Coaching clients"
+      Page:
+        Title: "Client Resources"
+        Content: |
+          ## Welcome to Elite 1:1 Coaching
+          
+          Congratulations on joining the Elite 1:1 Coaching program! This page contains everything you need to get started and make the most of your coaching experience.
+          
+          ### How to Book Your Sessions
+          
+          You have 12 private coaching sessions included in your program. To book a session:
+          
+          1. Click on "Coaching Sessions" in your portal sidebar
+          2. Select an available time slot that works for you
+          3. You'll receive a confirmation email with your Zoom link
+          
+          **Important:** Sessions must be used within 180 days of purchase.
+          
+          ### What to Expect
+          
+          **Before Each Session:**
+          - Complete any assigned homework or tracking
+          - Write down questions you want to discuss
+          - Be ready 5 minutes before the scheduled time
+          
+          **During Sessions:**
+          - Form checks and technique refinement
+          - Program adjustments based on your progress
+          - Goal setting and accountability review
+          - Nutrition and lifestyle optimization
+          
+          **Between Sessions:**
+          - Follow your personalized program
+          - Post questions in the "Ask the Coach" community space
+          - Share wins and progress with fellow clients
+          - Track your workouts and nutrition
+          
+          ### Your Personalized Program
+          
+          After your first session, you'll receive:
+          - Custom workout program tailored to your goals
+          - Nutrition guidelines specific to your needs
+          - Weekly check-in protocol
+          
+          ### Need Help?
+          
+          - **Quick questions:** Post in the "Ask the Coach" community space
+          - **Urgent matters:** Email coach@eliteperformance.com
+          - **Session issues:** Reply to your booking confirmation email
+
+  # ============================================
+  # 💰 PRICING PLAN
+  # ============================================
+  elite-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Pay in Full"
+      Description: "One-time payment for the complete Elite 1:1 Coaching program"
+      Amount: 500000
+      Currency: USD
+      BillingType: one_time
+
+  elite-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "3-Payment Plan"
+      Description: "Split into 3 monthly payments"
+      Amount: 525000
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  elite-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Elite 1:1 Coaching Application"
+      Description: "High-ticket application funnel with qualifying form and booking calendar"
+      Steps:
+        - Name: "Apply Now"
+          Slug: apply
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Apply for Elite 1:1 Coaching"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Limited spots available for serious individuals ready to transform"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=ELITE_APPLICATION_VIDEO"
+                    Provider: youtube
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "This is NOT for everyone"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Elite 1:1 Coaching is for high-performers who are done with cookie-cutter programs and ready for personalized, results-driven coaching.
+                      
+                      **This is for you if:**
+                      
+                      ✓ You're a busy professional who values your time
+                      ✓ You want customized programming, not generic workouts
+                      ✓ You're ready to invest in yourself at a premium level
+                      ✓ You want direct access to an expert coach
+                      ✓ You're committed to showing up and doing the work
+                      
+                      **This is NOT for you if:**
+                      
+                      ✗ You're looking for the cheapest option
+                      ✗ You want someone to do the work for you
+                      ✗ You're not ready to commit to 12 weeks
+                      ✗ You make excuses instead of results
+                - Type: spacer
+                  Order: 3
+                  Content:
+                    Height: 20
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "What you get with Elite 1:1 Coaching:"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      **12 Private Coaching Sessions**
+                      45-minute 1:1 calls via Zoom where we analyze your form, adjust your programming, and keep you accountable. Your sessions, your schedule.
+                      
+                      **Customized Programming**
+                      No templates. Your workout program is built specifically for your goals, equipment, schedule, and experience level. Adjusted based on your progress.
+                      
+                      **Direct Coach Access**
+                      Questions between sessions? Post in the private community and get answers within 24 hours. It's like having a coach in your pocket.
+                      
+                      **Private Client Community**
+                      Connect with other elite clients. Share wins, get support, and stay accountable with people who are serious about results.
+                      
+                      **Client Resources Portal**
+                      Everything you need in one place: program materials, nutrition guidelines, tracking tools, and more.
+                      
+                      Ready to transform? Fill out the application below.
+            - Type: form
+              Order: 4
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Ready to apply? Fill out the form below."
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "We review every application personally. If you're a good fit, we'll reach out to schedule your strategy call."
+                - Type: form
+                  Order: 3
+                  Content:
+                    FormSlug: !Ref elite-application-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Book Your Call"
+          Slug: book
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Application Received!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=ELITE_BOOKING_VIDEO"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Thank you for applying to Elite 1:1 Coaching.
+                      
+                      **Next Step: Book Your Strategy Call**
+                      
+                      This is a 45-minute call where we'll:
+                      
+                      ✓ Discuss your fitness goals and current situation
+                      ✓ Identify what's been holding you back
+                      ✓ Determine if Elite 1:1 Coaching is right for you
+                      ✓ Answer any questions you have about the program
+                      
+                      **Important:** This call is for serious applicants only. Please come prepared to discuss your goals, timeline, and commitment level.
+                - Type: spacer
+                  Order: 4
+                  Content:
+                    Height: 20
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Select a time that works for you:"
+                - Type: booking_link
+                  Order: 2
+                  Content:
+                    BookingLinkSlug: !Ref strategy-call
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're Booked"
+          Slug: confirmed
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Your Strategy Call is Confirmed!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=ELITE_CONFIRMED_VIDEO"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      You're one step closer to transforming your fitness.
+                      
+                      **Check your email for:**
+                      - Calendar invitation with Zoom link
+                      - Call details and what to expect
+                      
+                      **How to prepare for your call:**
+                      
+                      1. **Write down your goals** - Be specific. What do you want to achieve in the next 12 weeks? 6 months? Year?
+                      
+                      2. **Know your "why"** - Why is this important to you right now? What changes when you achieve this goal?
+                      
+                      3. **Be honest about your situation** - Current fitness level, time constraints, past attempts. The more honest you are, the better I can help.
+                      
+                      4. **Prepare your questions** - What do you want to know about the program, the process, or working together?
+                      
+                      5. **Be ready to commit** - If we're a good fit, be prepared to make a decision. Spots are limited and fill quickly.
+                      
+                      I'm looking forward to speaking with you!
+
+  # ============================================
+  # 📋 FORM
+  # ============================================
+  elite-application-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Elite Coaching Application"
+      Description: "Qualifying application for Elite 1:1 Coaching program"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your full name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@example.com"
+        - Type: standard
+          FieldName: phone
+          Required: true
+          Placeholder: "+1 (555) 123-4567"
+        - Type: custom
+          CustomFieldSlug: !Ref fitness-goals
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref current-situation
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref timeline
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref investment-ready
+          Required: true
+      SubmitButton:
+        Text: "Submit Application"
+        BackgroundColor: "#1e40af"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 600
+        Padding: 24
+        BorderRadius: 8
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  elite-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Elite Coaching Portal"
+      Description: "Private portal for Elite 1:1 Coaching clients"
+      ThemeConfig:
+        PrimaryColor: "#1e40af"
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  elite-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Elite Coaching Sales"
+      Description: "Track high-ticket coaching prospects through the sales process"
+      Stages:
+        - Name: "Lead"
+          Slug: lead
+          Order: 1
+          Description: "Initial inquiry or interest"
+        - Name: "Applied"
+          Slug: applied
+          Order: 2
+          Description: "Submitted application form"
+        - Name: "Call Scheduled"
+          Slug: call-scheduled
+          Order: 3
+          Description: "Strategy call booked"
+        - Name: "Call Completed"
+          Slug: call-completed
+          Order: 4
+          Description: "Strategy call finished"
+        - Name: "Proposal Sent"
+          Slug: proposal-sent
+          Order: 5
+          Description: "Payment link or invoice sent"
+        - Name: "Closed Won"
+          Slug: closed-won
+          Order: 6
+          Description: "Enrolled in program"
+        - Name: "Closed Lost"
+          Slug: closed-lost
+          Order: 7
+          Description: "Did not enroll"
+
+  # ============================================
+  # 📅 BOOKING LINKS
+  # ============================================
+  strategy-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Strategy Call"
+      OwnerUserEmail: "coach@eliteperformance.com"
+      Description: "45-minute strategy call to discuss your fitness goals and determine if Elite 1:1 Coaching is right for you"
+      DurationMinutes: 45
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  coaching-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "1:1 Coaching Session"
+      OwnerUserEmail: "coach@eliteperformance.com"
+      Description: "45-minute private coaching session with personalized programming review and strategy adjustments"
+      DurationMinutes: 45
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 60
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🔧 CUSTOM FIELD
+  # ============================================
+  fitness-goals:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What are your primary fitness goals?"
+      FieldType: textarea
+      Placeholder: "Describe what you want to achieve in the next 12 weeks and beyond..."
+      HelpText: "Be specific - the more detail you provide, the better we can determine if we're a good fit"
+
+  current-situation:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Describe your current fitness level"
+      FieldType: textarea
+      Placeholder: "Tell us about your current routine, experience, and any challenges you're facing..."
+      HelpText: "Include how long you've been training, what you've tried before, and what's working (or not)"
+
+  timeline:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "When do you want to achieve your goal?"
+      FieldType: select
+      Options:
+        - "Within 3 months"
+        - "3-6 months"
+        - "6-12 months"
+      HelpText: "This helps us understand your commitment level and set realistic expectations"
+
+  investment-ready:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Are you ready to invest in yourself?"
+      FieldType: select
+      Options:
+        - "Yes, I'm ready to make a significant investment in myself"
+        - "I need to think about it"
+        - "Budget is a concern"
+      HelpText: "Be honest - this helps us determine if Elite 1:1 Coaching is the right fit for you"
+
+  # ============================================
+  # 🏷️ TAG
+  # ============================================
+  elite-applicant:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Elite Applicant"
+      Description: "Applied for Elite 1:1 Coaching program"
+
+  elite-client:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Elite Client"
+      Description: "Active Elite 1:1 Coaching client"
+
+  # ============================================
+  # ⚡ WORKFLOW
+  # ============================================
+  elite-application-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Elite Application Submitted"
+      Description: "Triggers when someone submits the Elite 1:1 Coaching application"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref elite-application-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref elite-applicant
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref elite-applicant-sequence
+
+  elite-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Elite Coaching Purchased"
+      Description: "Triggers when someone purchases Elite 1:1 Coaching"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref elite-coaching-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref elite-client
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref elite-onboarding-sequence
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCE
+  # ============================================
+  elite-applicant-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Elite Applicant Nurture"
+      Description: "Follow-up sequence for Elite 1:1 Coaching applicants"
+      Steps:
+        - TemplateSlug: !Ref elite-application-received
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref elite-application-followup
+          DelayAmount: 3
+          DelayUnit: days
+          Order: 2
+
+  elite-onboarding-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Elite Client Onboarding"
+      Description: "Welcome and onboarding sequence for new Elite 1:1 Coaching clients"
+      Steps:
+        - TemplateSlug: !Ref elite-welcome-email
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref elite-checkin-email
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 2
+
+  # ============================================
+  # 📧 EMAIL TEMPLATE
+  # ============================================
+  elite-application-received:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Elite Application Received"
+      Subject: "Your Elite Coaching Application Has Been Received"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Application Received!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thank you for applying to Elite 1:1 Coaching. I review every 
+              application personally, and I appreciate you taking the time 
+              to share your goals with me.
+              
+              **What happens next:**
+              
+              1. I'll review your application within 24 hours
+              2. If you're a good fit, you'll receive access to book your 
+                 Strategy Call
+              3. On the call, we'll discuss your goals and determine if 
+                 Elite 1:1 Coaching is right for you
+              
+              **Important:** If you haven't booked your Strategy Call yet, 
+              make sure to do that now. Spots fill up quickly, and this is 
+              your next step in the process.
+              
+              I'm looking forward to learning more about your goals!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Strategy Call"
+            LinkUrl: "https://your-funnel-url.com/elite/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#1e40af"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  elite-application-followup:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Elite Application Follow-up"
+      Subject: "Haven't booked your call yet?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Quick Follow-up"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I noticed you applied for Elite 1:1 Coaching a few days ago 
+              but haven't booked your Strategy Call yet.
+              
+              I wanted to check in because:
+              
+              **1. Spots are limited**
+              I only work with a small number of 1:1 clients at a time to 
+              ensure everyone gets my full attention. Right now, I have 
+              availability, but that can change quickly.
+              
+              **2. Momentum matters**
+              The fact that you took time to apply tells me you're serious 
+              about your fitness goals. Don't let that momentum fade. The 
+              sooner we talk, the sooner you can start seeing results.
+              
+              **3. There's no obligation**
+              The Strategy Call is simply a conversation. We'll discuss 
+              your goals, I'll share how I can help, and you can decide 
+              if it's right for you. No pressure, no hard sell.
+              
+              If now isn't the right time, I understand. But if you're 
+              ready to take your fitness to the next level, let's talk.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Strategy Call"
+            LinkUrl: "https://your-funnel-url.com/elite/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#1e40af"
+        - Type: spacer
+          Order: 4
+          Settings:
+            Height: 20
+        - Type: text
+          Order: 5
+          Content:
+            Text: |
+              P.S. If you have questions about the program before booking, 
+              just reply to this email. I read and respond to every message.
+        - Type: divider
+          Order: 6
+        - Type: text
+          Order: 7
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  elite-call-confirmed:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Elite Strategy Call Confirmed"
+      Subject: "Your Strategy Call is Confirmed"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "You're Booked!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Great news! Your Strategy Call is confirmed.
+              
+              Check your calendar for the date, time, and Zoom link.
+              
+              **How to prepare for our call:**
+              
+              **1. Write down your goals**
+              Be specific. What do you want to achieve? By when? Why does 
+              this matter to you?
+              
+              **2. Know your obstacles**
+              What's been holding you back? What have you tried before? 
+              The more honest you are, the more I can help.
+              
+              **3. Clear your schedule**
+              Give yourself 5 minutes before the call to get settled. 
+              Find a quiet place where we can talk without interruptions.
+              
+              **4. Be ready to commit**
+              If we're a good fit, I'll invite you to join the program. 
+              Be prepared to make a decision. Serious applicants don't 
+              wait around, and neither do serious coaches.
+              
+              I'm looking forward to our conversation!
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  elite-welcome-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Elite Welcome"
+      Subject: "Welcome to Elite 1:1 Coaching, {{contact.name}}!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Elite 1:1 Coaching!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Welcome to Elite 1:1 Coaching! I'm thrilled to have you in 
+              the program.
+              
+              You've made an incredible investment in yourself, and I'm 
+              committed to making sure you get results that exceed your 
+              expectations.
+              
+              **Here's what to do right now:**
+              
+              **1. Access Your Portal**
+              Click the button below to log into your private client portal. 
+              You'll find your resources, community access, and session 
+              booking all in one place.
+              
+              **2. Book Your First Session**
+              Don't wait! Book your first coaching session within the next 
+              7 days. We'll use this call to finalize your personalized 
+              program and set you up for success.
+              
+              **3. Introduce Yourself**
+              Head to the "Elite Coaching Circle" community and introduce 
+              yourself. Your fellow clients are successful, motivated 
+              individuals just like you. The community is a huge part of 
+              what makes this program special.
+              
+              **4. Read the Client Resources**
+              In your portal, you'll find a page with everything you need 
+              to know: how sessions work, what to expect, and how to get 
+              the most out of your investment.
+              
+              I can't wait to work with you!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Your Portal"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#1e40af"
+        - Type: spacer
+          Order: 4
+          Settings:
+            Height: 30
+        - Type: text
+          Order: 5
+          Content:
+            Text: "Questions? Reply to this email anytime. I'm here for you."
+        - Type: divider
+          Order: 6
+        - Type: text
+          Order: 7
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  elite-checkin-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Elite Week 1 Check-in"
+      Subject: "How's your first week going?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Week 1 Check-in"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've been in Elite 1:1 Coaching for a week now. How's it 
+              going?
+              
+              Quick check-in:
+              
+              ✓ Have you booked (or completed) your first coaching session?
+              ✓ Have you introduced yourself in the community?
+              ✓ Have you reviewed your personalized program?
+              
+              If you answered "no" to any of these, no judgment. But let's 
+              get you back on track.
+              
+              **Remember why you're here.**
+              
+              You invested in yourself because you're serious about results. 
+              The clients who get the best outcomes are the ones who engage 
+              fully: booking sessions, asking questions, and showing up 
+              consistently.
+              
+              If anything is unclear or you're feeling stuck, post in the 
+              community or reply to this email. That's what I'm here for.
+              
+              Let's make week 2 even better!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Go to Your Portal"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#1e40af"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  business-profile:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "Elite Performance Coaching LLC"
+      Email: "coach@eliteperformance.com"
+      Phone: "+1-555-789-0123"
+      Timezone: "America/Los_Angeles"
+      BusinessType: "LLC"
+      Industry: "Fitness & Health"
+      SignatureText: "Coach Jordan, Elite Performance Coaching"

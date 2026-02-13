@@ -1,0 +1,1312 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFER
+  # ============================================
+  yta-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "YouTube Academy: 0 to 100K"
+      Description: "Complete YouTube growth system to take you from zero to 100K subscribers"
+      DefaultPortal: !Ref yta-portal
+      OnboardingFlowSlug: !Ref yta-onboarding
+      Items:
+        - Product: !Ref yta-course
+        - Product: !Ref yta-community
+      PricingPlans:
+        - !Ref yta-pif
+        - !Ref yta-split
+
+  # ============================================
+  # 📦 PRODUCTS
+  # ============================================
+  yta-course:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "YouTube Academy Course"
+      ProductType: course
+      Description: "8-module course covering everything you need to grow to 100K subscribers"
+      Course:
+        Title: "YouTube Academy: 0 to 100K"
+        Description: "Your complete roadmap to YouTube success"
+        Modules:
+          - Title: "YouTube Foundations"
+            Order: 1
+            Lessons:
+              - Title: "Welcome to YouTube Academy"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_WELCOME"
+              - Title: "How the YouTube Algorithm Actually Works"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_ALGORITHM"
+              - Title: "Setting Up Your Channel for Success"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_SETUP"
+              - Title: "Branding Basics: Logo, Banner, and Colors"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_BRANDING"
+          - Title: "Finding Your Niche"
+            Order: 2
+            Lessons:
+              - Title: "Why Niche Selection Matters"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_NICHE_INTRO"
+              - Title: "Market Research Methods"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_RESEARCH"
+              - Title: "Analyzing Your Competition"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_COMPETITION"
+              - Title: "Positioning Your Unique Angle"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_POSITIONING"
+          - Title: "Content Strategy"
+            Order: 3
+            Lessons:
+              - Title: "The 3 Types of YouTube Content"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_CONTENT_TYPES"
+              - Title: "Building Your Content Pillars"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_PILLARS"
+              - Title: "Generating Endless Video Ideas"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_IDEAS"
+              - Title: "Planning Your Content Calendar"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_CALENDAR"
+          - Title: "Filming & Editing"
+            Order: 4
+            Lessons:
+              - Title: "Equipment You Actually Need"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_EQUIPMENT"
+              - Title: "Lighting for Any Budget"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_LIGHTING"
+              - Title: "My Editing Workflow"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_EDITING"
+              - Title: "B-Roll and Visual Storytelling"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_BROLL"
+          - Title: "Thumbnail & Title Mastery"
+            Order: 5
+            Lessons:
+              - Title: "The Science of Click-Through Rate"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_CTR"
+              - Title: "Thumbnail Design Principles"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_THUMBNAILS"
+              - Title: "Title Formulas That Work"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_TITLES"
+              - Title: "A/B Testing Your Thumbnails"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_ABTESTING"
+          - Title: "SEO & Discovery"
+            Order: 6
+            Lessons:
+              - Title: "YouTube Search vs Suggested"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_DISCOVERY"
+              - Title: "Keyword Research for YouTube"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_KEYWORDS"
+              - Title: "Optimizing Descriptions and Tags"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_OPTIMIZE"
+              - Title: "Playlist Strategy"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_PLAYLISTS"
+          - Title: "Building Your Audience"
+            Order: 7
+            Lessons:
+              - Title: "The Subscriber Mindset"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_SUBSCRIBERS"
+              - Title: "Engagement and Community Building"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_ENGAGEMENT"
+              - Title: "Collaborations and Cross-Promotion"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_COLLABS"
+              - Title: "Using Shorts to Grow"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_SHORTS"
+          - Title: "Monetization"
+            Order: 8
+            Lessons:
+              - Title: "YouTube Partner Program Requirements"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_YPP"
+              - Title: "Maximizing AdSense Revenue"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_ADSENSE"
+              - Title: "Landing Sponsorship Deals"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_SPONSORS"
+              - Title: "Selling Your Own Products"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_PRODUCTS"
+              - Title: "Affiliate Marketing for YouTubers"
+                Order: 5
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_AFFILIATE"
+
+  yta-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "YouTube Academy Community"
+      ProductType: community
+      Description: "Student community for support, feedback, and collaboration"
+      Community:
+        Name: "YouTube Academy Students"
+        Description: "Connect with fellow creators on your YouTube journey"
+        Spaces:
+          - Name: "Introductions"
+            Slug: introductions
+            Description: "Introduce yourself and your channel"
+            Order: 1
+          - Name: "Channel Reviews"
+            Slug: channel-reviews
+            Description: "Get feedback on your channel from peers"
+            Order: 2
+          - Name: "Wins & Milestones"
+            Slug: wins
+            Description: "Celebrate your achievements"
+            Order: 3
+          - Name: "Questions"
+            Slug: questions
+            Description: "Ask questions and get help from the community"
+            Order: 4
+          - Name: "Collaborations"
+            Slug: collabs
+            Description: "Find collaboration partners"
+            Order: 5
+        Events:
+          - Title: "Weekly Office Hours"
+            Description: "Live Q&A session with your instructor"
+            StartAt: "2025-02-07T19:00:00Z"
+            EndAt: "2025-02-07T20:00:00Z"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/yta-office-hours"
+            HostUserEmail: "coach@youtubeacademy.co"
+            RecurrenceRule:
+              Frequency: weekly
+              Interval: 1
+              DaysOfWeek: [5]
+              EndType: never
+
+  # ============================================
+  # 💰 PRICING PLANS
+  # ============================================
+  yta-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "YouTube Academy - Pay in Full"
+      Description: "One-time payment for lifetime access"
+      Amount: 49700
+      Currency: USD
+      BillingType: one_time
+
+  yta-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "YouTube Academy - 3 Payments"
+      Description: "Split into 3 monthly payments"
+      Amount: 59100
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  yta-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "YouTube Academy Sales Page"
+      Description: "Sales page for YouTube Academy course"
+      Steps:
+        - Name: "Sales Page"
+          Slug: sales
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "The Exact System I Used to Grow from 0 to 100K Subscribers in 18 Months"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "No luck. No viral videos. Just a proven, repeatable system that works for any niche."
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=YTA_VSL"
+                    Provider: youtube
+                - Type: checkout
+                  Order: 4
+                  Content:
+                    OfferSlug: !Ref yta-offer
+                    PricingPlanSlug: !Ref yta-pif
+                    ButtonText: "Get Instant Access - $497"
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Does this sound familiar?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You've been uploading videos for months (maybe years), but your channel is stuck.
+                      
+                      - Your videos get 50-100 views no matter how hard you try
+                      - You see other creators blow up while you stay invisible
+                      - You don't know if you should change your niche, your content style, or just give up
+                      - You're frustrated because you KNOW your content is good
+                      
+                      The algorithm feels like a mystery, and you're tired of guessing what works.
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "What if you had a proven system?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Imagine knowing EXACTLY:
+                      
+                      ✓ What videos to make that your niche actually wants
+                      ✓ How to create thumbnails that get clicked
+                      ✓ The SEO strategy that gets you discovered
+                      ✓ How to turn viewers into loyal subscribers
+                      ✓ When to monetize and how much you can make
+                      
+                      That's what YouTube Academy gives you. The same system I used to grow to 100K.
+            - Type: content
+              Order: 4
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's what you get"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      **Module 1: YouTube Foundations** (Value: $97)
+                      How the algorithm actually works, channel setup, branding basics
+                      
+                      **Module 2: Finding Your Niche** (Value: $197)
+                      Market research, competition analysis, positioning your unique angle
+                      
+                      **Module 3: Content Strategy** (Value: $197)
+                      Video ideas, content pillars, planning your calendar
+                      
+                      **Module 4: Filming & Editing** (Value: $147)
+                      Equipment, lighting, editing workflow, B-roll mastery
+                      
+                      **Module 5: Thumbnail & Title Mastery** (Value: $197)
+                      CTR optimization, A/B testing, proven formulas
+                      
+                      **Module 6: SEO & Discovery** (Value: $147)
+                      Keywords, tags, descriptions, playlist strategy
+                      
+                      **Module 7: Building Your Audience** (Value: $147)
+                      Engagement, community, collaborations, Shorts strategy
+                      
+                      **Module 8: Monetization** (Value: $197)
+                      AdSense, sponsorships, products, affiliate marketing
+                      
+                      **BONUS: Student Community** (Value: $297)
+                      Channel reviews, collaboration opportunities, weekly office hours
+                      
+                      **Total Value: $1,623**
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: "**Your Investment: Just $497** (or 3 payments of $197)"
+            - Type: testimonials
+              Order: 5
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "I was stuck at 500 subscribers for 2 years. After implementing the thumbnail strategies from Module 5, I hit 10K in 3 months. The CTR formula alone was worth 10x the price."
+                    Author: "Alex R., Tech Reviewer"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "The niche selection module saved me from making a huge mistake. I was about to start a channel in a dead niche. Now I'm in a growing niche with way less competition."
+                    Author: "Sarah M., Lifestyle Creator"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 3
+                  Content:
+                    Quote: "The community alone is worth the price. Got my first collab from another student, and that video got 50K views - my biggest ever."
+                    Author: "James T., Gaming Channel"
+                    Rating: 5
+            - Type: faq
+              Order: 6
+              Elements:
+                - Type: faq_item
+                  Order: 1
+                  Content:
+                    Question: "Does this work for any niche?"
+                    Answer: "Yes! The principles of YouTube growth are universal. Whether you're in tech, lifestyle, gaming, education, or entertainment, these strategies work. I've had students succeed in 50+ different niches."
+                - Type: faq_item
+                  Order: 2
+                  Content:
+                    Question: "I'm a complete beginner. Is this too advanced?"
+                    Answer: "Not at all. The course starts from the foundations and builds up. Whether you have 0 subscribers or 10,000, you'll find actionable strategies at your level."
+                - Type: faq_item
+                  Order: 3
+                  Content:
+                    Question: "How long do I have access?"
+                    Answer: "Lifetime access. The course, community, and all future updates are yours forever. Pay once, learn forever."
+                - Type: faq_item
+                  Order: 4
+                  Content:
+                    Question: "What if I don't see results?"
+                    Answer: "If you implement the strategies and don't see improvement, reach out in the community. We'll review your channel and help you troubleshoot. Most students see noticeable CTR improvements within the first 30 days."
+            - Type: cta
+              Order: 7
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Ready to Grow Your Channel?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Join 2,000+ creators who've already transformed their YouTube channels with this system."
+                - Type: checkout
+                  Order: 3
+                  Content:
+                    OfferSlug: !Ref yta-offer
+                    PricingPlanSlug: !Ref yta-pif
+                    ButtonText: "Get Instant Access - $497"
+        - Name: "Thank You"
+          Slug: thank-you
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to YouTube Academy!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=YTA_THANKYOU"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Congratulations on investing in your YouTube growth!
+                      
+                      Check your email for login details to your student portal where you can:
+                      
+                      - Complete your onboarding
+                      - Access the course modules
+                      - Join the student community
+                      - Register for weekly office hours
+                      
+                      **Your first step:** Log in and complete the onboarding. Then start Module 1!
+
+  # ============================================
+  # 📋 FORMS
+  # ============================================
+  yta-lead-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "YouTube Academy Waitlist"
+      Description: "Capture leads for the YouTube Academy"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@email.com"
+        - Type: custom
+          CustomFieldSlug: !Ref yta-cf-channel-size
+          Required: true
+      SubmitButton:
+        Text: "Join the Waitlist"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+
+  yta-onboarding-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "YouTube Academy Student Profile"
+      Description: "Capture student profile for personalized experience"
+      Fields:
+        - Type: custom
+          CustomFieldSlug: !Ref yta-cf-channel-size
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref yta-cf-niche
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref yta-cf-posting-frequency
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref yta-cf-goals
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref yta-cf-monetization
+          Required: true
+      SubmitButton:
+        Text: "Complete Profile"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  yta-cf-channel-size:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "How many subscribers do you have?"
+      FieldType: select
+      Options:
+        - "Just starting (0-100)"
+        - "Getting traction (100-1,000)"
+        - "Growing (1,000-10,000)"
+        - "Established (10,000-100,000)"
+        - "Large (100,000+)"
+      HelpText: "Current subscriber count"
+
+  yta-cf-niche:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your channel niche?"
+      FieldType: text
+      Placeholder: "e.g., Tech reviews, Fitness, Gaming, Cooking"
+      HelpText: "Your primary content category"
+
+  yta-cf-posting-frequency:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "How often do you post?"
+      FieldType: select
+      Options:
+        - "Haven't started yet"
+        - "1-2 times per month"
+        - "Weekly"
+        - "2-3 times per week"
+        - "Daily"
+      HelpText: "Your current posting schedule"
+
+  yta-cf-goals:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your 12-month goal?"
+      FieldType: select
+      Options:
+        - "Get my first 1,000 subscribers"
+        - "Reach 10,000 subscribers"
+        - "Hit 100,000 subscribers"
+        - "Get monetized"
+        - "Quit my job and do YouTube full-time"
+      HelpText: "Your primary goal for the next year"
+
+  yta-cf-monetization:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Are you currently monetized?"
+      FieldType: select
+      Options:
+        - "Not yet"
+        - "Yes, Partner Program only"
+        - "Yes, with sponsorships"
+        - "Yes, multiple income streams"
+      HelpText: "Your current monetization status"
+
+  # ============================================
+  # 📅 BOOKING LINK
+  # ============================================
+  yta-office-hours:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Weekly Office Hours"
+      OwnerUserEmail: "coach@youtubeacademy.co"
+      Description: "Weekly live Q&A for YouTube Academy students"
+      DurationMinutes: 60
+      MinNoticeHours: 1
+      MaxAdvanceDays: 7
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  yta-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "YouTube Academy Portal"
+      Description: "Student portal for YouTube Academy"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 📜 AGREEMENT
+  # ============================================
+  yta-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "YouTube Academy Student Agreement"
+      Title: "YOUTUBE ACADEMY STUDENT AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Student Agreement ("Agreement") is entered into between YouTube Academy LLC ("Academy") and the undersigned student ("Student").
+        
+        ## 1. EDUCATIONAL DISCLAIMER
+        
+        Student acknowledges that:
+        
+        - This course is for educational purposes only
+        - Results vary based on effort, niche, consistency, and market conditions
+        - The Academy makes no guarantees about subscriber growth or income
+        - Student is responsible for implementing the strategies taught
+        
+        ## 2. NO SUBSCRIBER GUARANTEES
+        
+        Student understands that:
+        
+        - YouTube growth depends on many factors outside the Academy's control
+        - Past student results do not guarantee future success
+        - The algorithm and platform may change at any time
+        - Consistent effort over time is required for results
+        
+        ## 3. COMMUNITY GUIDELINES
+        
+        Student agrees to:
+        
+        - Provide constructive, respectful feedback to other students
+        - Not spam or self-promote excessively
+        - Keep community discussions relevant and helpful
+        - Report any inappropriate behavior to the Academy
+        
+        ## 4. CONTENT POLICY
+        
+        Student agrees to:
+        
+        - Not share, distribute, or resell course content
+        - Not record or redistribute live sessions
+        - Keep course strategies confidential
+        - Not create competing courses using Academy materials
+        
+        ## 5. REFUND POLICY
+        
+        Student acknowledges that:
+        
+        - This is a digital product with immediate access
+        - No refunds are available after login credentials are issued
+        - Student has reviewed the course outline before purchasing
+        
+        By signing below, Student acknowledges they have read and agree to all terms.
+
+  # ============================================
+  # 🎓 ONBOARDING FLOW
+  # ============================================
+  yta-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "YouTube Academy Onboarding"
+      Description: "Onboarding flow for new students"
+      Steps:
+        - Name: "Accept Terms"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to YouTube Academy!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Before you dive into the course, please review and accept our student agreement.
+                      
+                      This covers:
+                      - Educational disclaimer
+                      - Community guidelines
+                      - Content policy
+                      
+                      We want to make sure everyone has a great experience!
+                - Type: agreement
+                  Order: 3
+                  Content:
+                    AgreementSlug: !Ref yta-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Your Profile"
+          Slug: profile
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Tell Us About Your Channel"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Help us personalize your experience by sharing a bit about where you are on your YouTube journey.
+                - Type: form
+                  Order: 3
+                  Content:
+                    FormSlug: !Ref yta-onboarding-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're Ready!"
+          Slug: complete
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Welcome to YouTube Academy! Here's what to do next:
+                      
+                      **1. Start Module 1**
+                      Begin with "YouTube Foundations" to understand how the platform works.
+                      
+                      **2. Introduce Yourself**
+                      Head to the community and introduce yourself in the Introductions space.
+                      
+                      **3. Register for Office Hours**
+                      Add the weekly Q&A to your calendar - it's every Friday!
+                      
+                      Let's grow your channel! 🚀
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  yta-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "YouTube Academy Progress"
+      Description: "Track students through course progress"
+      Stages:
+        - Name: "Enrolled"
+          Slug: enrolled
+          Order: 1
+          Description: "Just enrolled, hasn't started"
+        - Name: "Module 1"
+          Slug: module-1
+          Order: 2
+          Description: "Working on YouTube Foundations"
+        - Name: "Module 2"
+          Slug: module-2
+          Order: 3
+          Description: "Working on Finding Your Niche"
+        - Name: "Module 3"
+          Slug: module-3
+          Order: 4
+          Description: "Working on Content Strategy"
+        - Name: "Module 4"
+          Slug: module-4
+          Order: 5
+          Description: "Working on Filming & Editing"
+        - Name: "Module 5"
+          Slug: module-5
+          Order: 6
+          Description: "Working on Thumbnail & Title Mastery"
+        - Name: "Module 6"
+          Slug: module-6
+          Order: 7
+          Description: "Working on SEO & Discovery"
+        - Name: "Module 7"
+          Slug: module-7
+          Order: 8
+          Description: "Working on Building Your Audience"
+        - Name: "Module 8"
+          Slug: module-8
+          Order: 9
+          Description: "Working on Monetization"
+        - Name: "Completed"
+          Slug: completed
+          Order: 10
+          Description: "Finished the course"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  yta-tag-student:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "YouTube Academy Student"
+      Description: "Enrolled in YouTube Academy"
+
+  yta-tag-onboarded:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Academy Onboarded"
+      Description: "Completed onboarding flow"
+
+  yta-tag-completed:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Academy Completed"
+      Description: "Finished all modules"
+
+  yta-tag-10k-milestone:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "10K Milestone"
+      Description: "Reached 10,000 subscribers"
+
+  yta-tag-100k-milestone:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "100K Milestone"
+      Description: "Reached 100,000 subscribers"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  yta-workflow-purchase:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "YouTube Academy Purchase"
+      Description: "Triggers when someone purchases YouTube Academy"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref yta-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref yta-tag-student
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref yta-seq-onboarding
+
+  yta-workflow-onboarding-complete:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Academy Onboarding Complete"
+      Description: "Triggers when student completes onboarding form"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref yta-onboarding-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref yta-tag-onboarded
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCE
+  # ============================================
+  yta-seq-onboarding:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "YouTube Academy Onboarding"
+      Description: "7-email onboarding sequence for new students"
+      Steps:
+        - TemplateSlug: !Ref yta-email-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref yta-email-module1
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref yta-email-module2
+          DelayAmount: 5
+          DelayUnit: days
+          Order: 3
+        - TemplateSlug: !Ref yta-email-community
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 4
+        - TemplateSlug: !Ref yta-email-checkin
+          DelayAmount: 14
+          DelayUnit: days
+          Order: 5
+        - TemplateSlug: !Ref yta-email-milestone
+          DelayAmount: 21
+          DelayUnit: days
+          Order: 6
+        - TemplateSlug: !Ref yta-email-coaching
+          DelayAmount: 30
+          DelayUnit: days
+          Order: 7
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  yta-email-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "YouTube Academy Welcome"
+      Subject: "Welcome to YouTube Academy! Start Here 🎬"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to YouTube Academy!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Congratulations on joining YouTube Academy! You've taken the first 
+              step toward building a successful YouTube channel.
+              
+              **Here's what to do right now:**
+              
+              1. Log in to your student portal
+              2. Complete the onboarding (takes 2 minutes)
+              3. Start Module 1: YouTube Foundations
+              
+              Don't try to rush through the course. Take your time with each 
+              module and implement the strategies before moving on.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Your Course"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              See you inside!
+              
+              - The YouTube Academy Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  yta-email-module1:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "YouTube Academy Module 1 Prompt"
+      Subject: "Have you started Module 1 yet?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Time for Module 1"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Quick check-in: Have you started Module 1 (YouTube Foundations)?
+              
+              This module is crucial because it explains how the algorithm 
+              ACTUALLY works. Most creators have it completely wrong.
+              
+              **Key lessons in Module 1:**
+              - Why the algorithm isn't your enemy
+              - The 4 signals YouTube uses to rank videos
+              - How to set up your channel for success
+              - Branding basics that build recognition
+              
+              If you haven't started yet, now is the perfect time!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Start Module 1"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Let's grow your channel!
+              
+              - The YouTube Academy Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  yta-email-module2:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "YouTube Academy Module 2 Prompt"
+      Subject: "The niche mistake that kills channels"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Is Your Niche Right?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Module 2 might save your channel.
+              
+              I've seen SO many creators waste months (or years) in the wrong 
+              niche. They create great content, but the audience just isn't there.
+              
+              **Module 2 covers:**
+              - How to research niche demand
+              - Finding low-competition opportunities
+              - Positioning your unique angle
+              - When to pivot (and when to stay)
+              
+              Even if you think your niche is fine, do the exercises in this 
+              module. You might discover a better positioning.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Watch Module 2"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Your niche matters more than you think.
+              
+              - The YouTube Academy Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  yta-email-community:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "YouTube Academy Community Reminder"
+      Subject: "Have you joined the community yet?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Don't Forget the Community!"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Quick reminder: You have access to our student community!
+              
+              **Here's what you're missing:**
+              
+              🎥 **Channel Reviews** - Get feedback on your channel from peers
+              🤝 **Collaborations** - Find collab partners in your niche
+              🎉 **Wins** - Celebrate milestones with fellow creators
+              📅 **Office Hours** - Weekly live Q&A every Friday
+              
+              The community is where the magic happens. Some of our best 
+              success stories came from connections made inside.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Join the Community"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              See you in there!
+              
+              - The YouTube Academy Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  yta-email-checkin:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "YouTube Academy 2-Week Check-in"
+      Subject: "How's your YouTube journey going?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "2-Week Check-in"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've been a YouTube Academy student for 2 weeks now!
+              
+              **Quick progress check:**
+              
+              - Have you completed Modules 1-4?
+              - Have you applied the thumbnail strategies?
+              - Have you introduced yourself in the community?
+              
+              If you're behind, that's okay! Life happens. But try to carve 
+              out 30 minutes this week to make progress.
+              
+              **Pro tip:** Module 5 (Thumbnail & Title Mastery) is where most 
+              students see their first CTR improvements. Prioritize it!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Continue Your Course"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Keep going - you've got this!
+              
+              - The YouTube Academy Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  yta-email-milestone:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "YouTube Academy Milestone Check"
+      Subject: "Celebrate your wins with us! 🎉"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Celebrate Your Wins!"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              3 weeks in! Have you hit any milestones?
+              
+              **Common wins students share:**
+              - First 100/1,000 subscribers
+              - First viral video (1K+ views)
+              - First positive CTR improvements
+              - First monetization check
+              - First sponsorship inquiry
+              
+              If you've had ANY win - big or small - share it in the Wins 
+              space in the community. We love celebrating with you!
+              
+              And if you're still working toward your first milestone, 
+              keep going. Consistency beats everything.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Share Your Win"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Every milestone matters!
+              
+              - The YouTube Academy Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  yta-email-coaching:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "YouTube Academy Coaching Upsell"
+      Subject: "Want personalized help with your channel?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Ready for 1:1 Coaching?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've been in YouTube Academy for a month now. How's it going?
+              
+              If you're making progress, amazing! Keep at it.
+              
+              But if you want **faster results** with **personalized guidance**, 
+              I have something for you.
+              
+              **1:1 Channel Strategy Coaching**
+              
+              - 6 private coaching calls over 3 months
+              - Full channel audit and strategy session
+              - Personalized content and thumbnail feedback
+              - Direct access via Slack between calls
+              
+              This is for serious creators who want to accelerate their growth 
+              with expert guidance tailored to their specific channel.
+              
+              Interested? Reply to this email and I'll send you the details.
+        - Type: text
+          Order: 3
+          Content:
+            Text: |
+              To your YouTube success!
+              
+              - The YouTube Academy Team
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  yta-business:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "YouTube Academy LLC"
+      Email: "support@youtubeacademy.co"
+      Phone: "+1-555-YOUTUBE"
+      Timezone: "America/Los_Angeles"
+      BusinessType: "LLC"
+      Industry: "Content Creator Education"
+      SignatureText: "The YouTube Academy Team"

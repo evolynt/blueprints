@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://docs.evolynt.com/schemas/email-template.json",
+  "title": "Evolynt::Automation::EmailTemplate",
+  "description": "JSON Schema for Evolynt::Automation::EmailTemplate Blueprint resource",
+  "type": "object",
+  "properties": {
+    "Type": {
+      "type": "string",
+      "const": "Evolynt::Automation::EmailTemplate"
+    },
+    "Properties": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Subject": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Elements": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Type": {
+                "type": "string",
+                "enum": [
+                  "headline",
+                  "subheadline",
+                  "text",
+                  "button",
+                  "spacer",
+                  "divider"
+                ]
+              },
+              "Order": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 9007199254740991
+              },
+              "Content": {
+                "type": "object",
+                "propertyNames": {
+                  "type": "string"
+                },
+                "additionalProperties": {}
+              },
+              "Settings": {
+                "type": "object",
+                "propertyNames": {
+                  "type": "string"
+                },
+                "additionalProperties": {}
+              }
+            },
+            "required": [
+              "Type",
+              "Order"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "Name",
+        "Subject",
+        "Elements"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "Type",
+    "Properties"
+  ],
+  "additionalProperties": false
+}

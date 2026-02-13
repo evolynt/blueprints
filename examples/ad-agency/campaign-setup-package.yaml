@@ -1,0 +1,1016 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFER
+  # ============================================
+  campaign-setup-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Campaign Setup Package"
+      Description: "Done-for-you campaign setup with 30 days of optimization"
+      DefaultPortal: !Ref campaign-portal
+      Items:
+        - Product: !Ref campaign-setup-product
+      PricingPlans:
+        - !Ref campaign-pay-full
+        - !Ref campaign-payment-plan
+
+  # ============================================
+  # 📦 PRODUCT
+  # ============================================
+  campaign-setup-product:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Campaign Setup Deliverables"
+      ProductType: page
+      Description: "Your campaign setup deliverables and documentation"
+      Page:
+        Title: "Your Campaign Setup Package"
+        Content: |
+          ## Welcome to Your Campaign Setup Package
+          
+          Congratulations on investing in professional campaign setup! Here's everything you'll receive over the next 30 days.
+          
+          ---
+          
+          ## Campaign Strategy Document
+          
+          Your custom campaign strategy includes:
+          - Target audience profiles and personas
+          - Campaign objectives and KPIs
+          - Ad creative direction and messaging angles
+          - Budget allocation recommendations
+          - Testing plan and optimization roadmap
+          
+          **Status:** We'll deliver this within 3 business days of your kickoff call.
+          
+          ---
+          
+          ## Weekly Performance Reports
+          
+          Each week during your 30-day optimization period, you'll receive:
+          - Campaign performance metrics (spend, impressions, clicks, conversions)
+          - Cost per result analysis
+          - What's working and what we're testing
+          - Optimization changes made
+          - Recommendations for next week
+          
+          **Delivery:** Every Monday via email + saved here for reference.
+          
+          ---
+          
+          ## Creative Assets
+          
+          Your campaign includes 5-10 ad creatives:
+          - Static images optimized for feed and stories
+          - Video ads (if applicable to your campaign)
+          - Multiple copy variations for A/B testing
+          - All sizes needed for your chosen platforms
+          
+          **Access:** Download links will be added here once approved.
+          
+          ---
+          
+          ## Tracking Setup Documentation
+          
+          We'll configure and document:
+          - Pixel/conversion tracking installation
+          - Conversion events setup
+          - UTM parameter structure
+          - Verification that tracking is working correctly
+          
+          **Included:** Step-by-step documentation so you understand what's tracking and why.
+          
+          ---
+          
+          ## Questions?
+          
+          Reply to any email from us or reach out to team@adscaleagency.com.
+
+  # ============================================
+  # 💰 PRICING PLAN
+  # ============================================
+  campaign-pay-full:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Campaign Setup - Pay in Full"
+      Description: "One-time payment for the complete Campaign Setup Package"
+      Amount: 199700
+      Currency: USD
+      BillingType: one_time
+
+  campaign-payment-plan:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Campaign Setup - 3 Payments"
+      Description: "Split your investment into 3 monthly payments of $749"
+      Amount: 224700
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  campaign-setup-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Campaign Setup Application"
+      Description: "Application funnel for the Campaign Setup Package"
+      Steps:
+        - Name: "Learn More"
+          Slug: interest
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Launch Profitable Ad Campaigns Without the Learning Curve"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "We build your entire campaign from scratch - strategy, audiences, creatives, tracking, and 30 days of optimization. You just approve and watch it perform."
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                    Provider: youtube
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Launching ads shouldn't feel like a second job"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You know ads work. You've seen competitors scale with Meta and TikTok. You're ready to invest in paid acquisition.
+                      
+                      But the thought of actually setting it all up? Overwhelming.
+                      
+                      - Which campaign objective should you use?
+                      - How do you build audiences that actually convert?
+                      - What creatives will work for YOUR business?
+                      - Is your pixel even installed correctly?
+                      - How do you know if your ads are actually profitable?
+                      
+                      You could spend months learning all of this. Or you could have experts build it for you in a week.
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "What if your campaigns were done for you?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Imagine having a team of media buyers handle everything:
+                      
+                      **Week 1:** We create your campaign strategy and build your audiences
+                      **Week 2:** We design your ad creatives and set up tracking
+                      **Week 3:** We launch your campaigns and start optimizing
+                      **Weeks 4-5:** We optimize daily and deliver weekly reports
+                      
+                      At the end of 30 days, you have profitable campaigns running on autopilot.
+                      
+                      No guessing. No wasted budget. No learning curve.
+            - Type: content
+              Order: 4
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's exactly what you get"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      ✓ **Complete Campaign Strategy Document** (Value: $500)
+                      Custom strategy including audience profiles, messaging angles, budget allocation, and testing plan.
+                      
+                      ✓ **Audience Research & Targeting Setup** (Value: $400)
+                      We research your market and build targeting that reaches your ideal customers.
+                      
+                      ✓ **5-10 Ad Creatives** (Value: $750)
+                      Static images, videos, and copy variations designed to convert.
+                      
+                      ✓ **Pixel & Conversion Tracking Setup** (Value: $300)
+                      Proper tracking installed and verified so you know exactly what's working.
+                      
+                      ✓ **Campaign Launch** (Value: $200)
+                      We build and launch everything in your ad account.
+                      
+                      ✓ **30 Days of Daily Optimization** (Value: $1,500)
+                      We monitor and optimize your campaigns every day for 30 days.
+                      
+                      ✓ **Weekly Performance Reports** (Value: $200)
+                      Clear reports showing what's working, what we changed, and what's next.
+                      
+                      **Total Value: $3,850**
+            - Type: content
+              Order: 5
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Is this right for your business?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      The Campaign Setup Package is perfect for businesses that:
+                      
+                      ✓ Have a proven offer that's ready to scale
+                      ✓ Want to run ads on Meta, TikTok, or both
+                      ✓ Have at least $3,000/month for ad spend
+                      ✓ Are ready to invest in professional setup
+                      ✓ Want campaigns done right the first time
+                      
+                      **Not sure if you're ready?** Apply below and we'll discuss your situation on a strategy call.
+            - Type: testimonials
+              Order: 6
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "I wasted $2,000 trying to figure out ads myself. Campaign Setup Package got me profitable in the first month. Should have done this from the start."
+                    Author: "Rachel M., Online Course Creator"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "The tracking setup alone was worth it. I finally understand which ads are actually driving sales. My ROAS went from 1.2 to 3.4 in 30 days."
+                    Author: "Derek T., E-commerce Store Owner"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 3
+                  Content:
+                    Quote: "I'm not a marketer. I needed someone to just handle it. They built everything, explained it in plain English, and now I have a system that works."
+                    Author: "Lisa K., Service Business Owner"
+                    Rating: 5
+            - Type: faq
+              Order: 7
+              Elements:
+                - Type: faq_item
+                  Order: 1
+                  Content:
+                    Question: "Which platforms do you set up campaigns for?"
+                    Answer: "We set up campaigns on Meta (Facebook/Instagram) and TikTok. You can choose one platform or both."
+                - Type: faq_item
+                  Order: 2
+                  Content:
+                    Question: "How much ad spend do I need?"
+                    Answer: "We recommend at least $3,000/month in ad spend to see meaningful results. This is separate from the setup fee."
+                - Type: faq_item
+                  Order: 3
+                  Content:
+                    Question: "What happens after 30 days?"
+                    Answer: "Your campaigns continue running. You can manage them yourself, or we offer ongoing management packages if you want us to keep optimizing."
+                - Type: faq_item
+                  Order: 4
+                  Content:
+                    Question: "Do I need an existing ad account?"
+                    Answer: "We can work with your existing ad account or help you set one up. Either way, you own everything we create."
+                - Type: faq_item
+                  Order: 5
+                  Content:
+                    Question: "Can I pay in installments?"
+                    Answer: "Yes! We offer a 3-payment plan of $749/month. Choose your preferred option when you sign up."
+            - Type: cta
+              Order: 8
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Ready to Launch Campaigns That Actually Work?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Apply now and we'll schedule a strategy call to discuss your business and goals."
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Apply for Campaign Setup"
+                    Action: next_step
+                  Settings:
+                    Alignment: center
+        - Name: "Apply"
+          Slug: apply
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Apply for the Campaign Setup Package"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=APPLICATION_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      We work with a limited number of clients each month to ensure quality and results. Please answer a few questions so we can see if we're a good fit.
+                      
+                      **This takes about 3 minutes.**
+            - Type: form
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Tell us about your business:"
+                - Type: form
+                  Order: 2
+                  Content:
+                    FormSlug: !Ref campaign-setup-application-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Book Your Call"
+          Slug: book
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Great! Let's Talk Strategy."
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=BOOKING_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Thank you for applying for the Campaign Setup Package.
+                      
+                      **Next Step: Book Your Strategy Call**
+                      
+                      On this 60-minute call, we'll:
+                      
+                      ✓ Review your current marketing and ad situation
+                      ✓ Understand your business goals and target customers
+                      ✓ Discuss which platforms make sense for you
+                      ✓ Map out a campaign strategy tailored to your business
+                      ✓ Answer all your questions about the process
+                      
+                      **Please come prepared to discuss:**
+                      - Your current offer(s) and pricing
+                      - Who your ideal customer is
+                      - Any past ad experience (what worked, what didn't)
+                      - Your goals for the next 90 days
+                - Type: booking_link
+                  Order: 4
+                  Content:
+                    BookingLinkSlug: !Ref campaign-strategy-call
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're Booked"
+          Slug: confirmed
+          Order: 4
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=CONFIRMATION_PLACEHOLDER"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Your strategy call is booked. Check your email for calendar details and a Zoom link.
+                      
+                      **Before our call, please:**
+                      
+                      1. **Gather your offer details** - pricing, what's included, who it's for
+                      2. **Know your numbers** - average order value, lifetime customer value if you have it
+                      3. **Note your budget** - how much you're planning to spend on ads monthly
+                      4. **List your goals** - what does success look like in 30/60/90 days?
+                      5. **Think about past ads** - what have you tried? What worked or didn't?
+                      
+                      The more prepared you are, the more value you'll get from our call.
+                      
+                      **Questions before we talk?** Reply to your confirmation email.
+                      
+                      See you soon!
+
+  # ============================================
+  # 📋 FORM
+  # ============================================
+  campaign-setup-application-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Campaign Setup Application"
+      Description: "Qualifying application for the Campaign Setup Package"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your full name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@company.com"
+        - Type: custom
+          CustomFieldSlug: !Ref cf-campaign-business-name
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-campaign-website
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-ad-platforms
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-campaign-ad-budget
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-campaign-primary-goal
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-campaign-timeline
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref cf-campaign-investment-readiness
+          Required: true
+      SubmitButton:
+        Text: "Submit Application"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  # ============================================
+  # 🔧 CUSTOM FIELD
+  # ============================================
+  cf-campaign-business-name:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What is your business name?"
+      FieldType: text
+      Placeholder: "Your company or brand name"
+
+  cf-campaign-website:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What is your website URL?"
+      FieldType: text
+      Placeholder: "https://yourcompany.com"
+
+  cf-ad-platforms:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Which ad platforms do you want to run on?"
+      FieldType: select
+      Options:
+        - "Meta only (Facebook/Instagram)"
+        - "TikTok only"
+        - "Both Meta and TikTok"
+      HelpText: "We specialize in Meta and TikTok advertising"
+
+  cf-campaign-ad-budget:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your monthly ad budget?"
+      FieldType: select
+      Options:
+        - "Under $3,000"
+        - "$3,000 - $5,000"
+        - "$5,000 - $10,000"
+        - "$10,000+"
+      HelpText: "This is your ad spend budget, separate from the setup fee"
+
+  cf-campaign-primary-goal:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your primary goal for these campaigns?"
+      FieldType: select
+      Options:
+        - "Lead generation"
+        - "E-commerce sales"
+        - "Brand awareness"
+      HelpText: "Choose your most important objective"
+
+  cf-campaign-timeline:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "When do you want to launch?"
+      FieldType: select
+      Options:
+        - "ASAP - ready to start this week"
+        - "Within 2 weeks"
+        - "Within 30 days"
+        - "Just exploring options"
+      HelpText: "This helps us plan capacity"
+
+  cf-campaign-investment-readiness:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Are you ready to invest in professional campaign setup?"
+      FieldType: select
+      Options:
+        - "Yes, I'm ready to invest"
+        - "Need to learn about payment plan options"
+        - "Need to discuss on the call first"
+      HelpText: "We offer pay-in-full and 3-payment options"
+
+  # ============================================
+  # 📅 BOOKING LINK
+  # ============================================
+  campaign-strategy-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Campaign Strategy Call"
+      OwnerUserEmail: "team@adscaleagency.com"
+      Description: "60-minute strategy call to discuss your campaign setup needs"
+      DurationMinutes: 60
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  campaign-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "AdScale Client Portal"
+      Description: "Client portal for Campaign Setup Package customers"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  campaign-setup-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Campaign Setup Sales"
+      Description: "Track Campaign Setup Package prospects through the sales process"
+      Stages:
+        - Name: "Lead"
+          Slug: lead
+          Order: 1
+          Description: "Visited interest page but hasn't applied"
+        - Name: "Applied"
+          Slug: applied
+          Order: 2
+          Description: "Submitted application form"
+        - Name: "Call Booked"
+          Slug: call-booked
+          Order: 3
+          Description: "Strategy call scheduled"
+        - Name: "Call Completed"
+          Slug: call-completed
+          Order: 4
+          Description: "Strategy call finished"
+        - Name: "Proposal Sent"
+          Slug: proposal-sent
+          Order: 5
+          Description: "Proposal or payment link sent"
+        - Name: "Won"
+          Slug: won
+          Order: 6
+          Description: "Signed up for Campaign Setup Package"
+        - Name: "Lost"
+          Slug: lost
+          Order: 7
+          Description: "Did not proceed"
+
+  # ============================================
+  # 🏷️ TAG
+  # ============================================
+  campaign-setup-applicant-tag:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Campaign Setup Applicant"
+      Description: "Applied for the Campaign Setup Package"
+
+  campaign-setup-client-tag:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Campaign Setup Client"
+      Description: "Purchased the Campaign Setup Package"
+
+  # ============================================
+  # ⚡ WORKFLOW
+  # ============================================
+  campaign-application-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Campaign Setup Application Submitted"
+      Description: "Triggers when someone submits the Campaign Setup application"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref campaign-setup-application-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref campaign-setup-applicant-tag
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref campaign-applicant-sequence
+
+  campaign-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Campaign Setup Client Onboarding"
+      Description: "Triggers when someone is granted access to the Campaign Setup Package"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref campaign-setup-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref campaign-setup-client-tag
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref campaign-onboarding-sequence
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCE
+  # ============================================
+  campaign-applicant-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Campaign Setup Applicant"
+      Description: "Follow-up sequence for Campaign Setup applicants"
+      Steps:
+        - TemplateSlug: !Ref campaign-application-received-email
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref campaign-call-reminder-email
+          DelayAmount: 1
+          DelayUnit: days
+          Order: 2
+
+  campaign-onboarding-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Campaign Setup Onboarding"
+      Description: "Welcome and onboarding sequence for new Campaign Setup clients"
+      Steps:
+        - TemplateSlug: !Ref campaign-welcome-email
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref campaign-week1-update-email
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref campaign-launch-email
+          DelayAmount: 14
+          DelayUnit: days
+          Order: 3
+
+  # ============================================
+  # 📧 EMAIL TEMPLATE
+  # ============================================
+  campaign-application-received-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Campaign Setup Application Received"
+      Subject: "We received your Campaign Setup application"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Thanks for Applying!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thank you for applying for the Campaign Setup Package. We 
+              review every application personally to make sure we can 
+              deliver great results for your business.
+              
+              **What happens next:**
+              
+              1. You book a strategy call (if you haven't already)
+              2. We hop on a 60-minute call to discuss your business
+              3. If we're a good fit, we'll get you started right away
+              
+              If you haven't booked your call yet, make sure to do that 
+              now. Spots fill up quickly!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Strategy Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Questions before our call?**
+              
+              Just reply to this email and we'll get back to you.
+              
+              Looking forward to learning about your business!
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  campaign-call-reminder-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Campaign Setup Call Reminder"
+      Subject: "Quick reminder: Book your strategy call"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Don't Forget to Book Your Call"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I noticed you applied for the Campaign Setup Package but 
+              haven't booked your strategy call yet.
+              
+              I wanted to check in because:
+              
+              - We only take on a limited number of new clients each month
+              - The sooner we chat, the sooner your campaigns can be live
+              - I have some questions about your application I'd love to discuss
+              
+              If you're serious about launching profitable ad campaigns, 
+              book a time and let's talk strategy.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Call Now"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              If the timing isn't right, no worries. Just reply and let 
+              me know.
+              
+              Talk soon!
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  campaign-welcome-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Campaign Setup Welcome"
+      Subject: "Welcome! Let's launch your campaigns"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to the Campaign Setup Package!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Welcome aboard! We're excited to build and launch your 
+              ad campaigns.
+              
+              **Here's what happens next:**
+              
+              1. **Kickoff call** - We'll schedule a call to finalize 
+                 your strategy and gather everything we need
+              2. **Strategy delivery** - Within 3 business days, you'll 
+                 receive your campaign strategy document
+              3. **Creative production** - We'll create 5-10 ad creatives 
+                 for your review
+              4. **Launch** - Once you approve, we launch your campaigns
+              5. **Optimization** - Daily monitoring and weekly reports 
+                 for 30 days
+              
+              **Your next step:** Check your inbox for a separate email 
+              to schedule your kickoff call.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Your Client Portal"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Questions? Just reply to this email.
+              
+              Let's build something great!
+              
+              The AdScale Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  campaign-week1-update-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Campaign Setup Week 1 Update"
+      Subject: "Week 1 Update: Your campaign progress"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Week 1 Progress Update"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Here's your first weekly update on your Campaign Setup 
+              Package progress.
+              
+              **Completed this week:**
+              ✓ Campaign strategy document delivered
+              ✓ Audience research and targeting built
+              ✓ Ad creatives in production
+              
+              **Coming up next week:**
+              - Creative review and approval
+              - Pixel/tracking verification
+              - Campaign launch
+              
+              **Need to review anything?** Log in to your client portal 
+              to access your strategy document and any materials we've 
+              shared so far.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "View in Portal"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Questions or feedback? Just reply to this email.
+              
+              The AdScale Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  campaign-launch-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Campaign Setup Launch Notification"
+      Subject: "Your campaigns are LIVE! 🚀"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Your Campaigns Are Live!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Great news - your ad campaigns are officially live! 🎉
+              
+              **What's running:**
+              - Campaigns built according to your strategy
+              - All creatives approved and active
+              - Tracking verified and working
+              
+              **What happens now:**
+              - We monitor performance daily
+              - We make optimization tweaks as needed
+              - You receive weekly performance reports (every Monday)
+              
+              **Your 30-day optimization period** starts today. During 
+              this time, we're actively optimizing your campaigns to 
+              improve performance.
+              
+              **First performance report:** You'll receive your first 
+              weekly report next Monday with initial data and insights.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "View Campaign Details"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              **Important reminders:**
+              - Don't make changes in your ad account without checking 
+                with us first
+              - Give campaigns at least 3-5 days before judging results
+              - Reply to this email anytime with questions
+              
+              Here's to profitable campaigns!
+              
+              The AdScale Team
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  business-profile:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "AdScale Agency LLC"
+      Email: "team@adscaleagency.com"
+      Phone: "+1-555-234-5678"
+      Timezone: "America/New_York"
+      BusinessType: "LLC"
+      Industry: "Marketing & Advertising"
+      SignatureText: "The AdScale Team"

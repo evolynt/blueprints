@@ -1,0 +1,1099 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFER
+  # ============================================
+  csc-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "1:1 Channel Strategy Coaching"
+      Description: "6 private coaching sessions over 3 months with full channel audit and personalized strategy"
+      DefaultPortal: !Ref csc-portal
+      OnboardingFlowSlug: !Ref csc-onboarding
+      Items:
+        - Product: !Ref csc-coaching
+        - Product: !Ref csc-resources
+      PricingPlans:
+        - !Ref csc-pif
+        - !Ref csc-split
+
+  # ============================================
+  # 📦 PRODUCTS
+  # ============================================
+  csc-coaching:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Channel Strategy Coaching Sessions"
+      ProductType: coaching
+      Description: "6 private 1:1 coaching sessions over 3 months"
+      Coaching:
+        Title: "Coaching Session"
+        Description: "60-minute private coaching session"
+        Quantity: 6
+        BookingLink: !Ref csc-coaching-session
+
+  csc-resources:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Coaching Resource Library"
+      ProductType: page
+      Description: "Templates, worksheets, and resources for coaching clients"
+      Page:
+        Title: "Your Coaching Resources"
+        Content: |
+          ## Welcome to Your Resource Library
+          
+          As a coaching client, you have access to exclusive resources to support your channel growth.
+          
+          ---
+          
+          ## Channel Audit Template
+          
+          **[Download Channel Audit Template](https://docs.google.com/spreadsheets/your-audit-template)**
+          
+          Use this template to track your channel metrics and identify growth opportunities.
+          
+          ---
+          
+          ## Content Strategy Worksheet
+          
+          **[Download Content Strategy Worksheet](https://docs.google.com/document/your-strategy-worksheet)**
+          
+          Plan your content pillars, video ideas, and publishing schedule.
+          
+          ---
+          
+          ## Thumbnail Review Checklist
+          
+          **[Download Thumbnail Checklist](https://docs.google.com/document/your-thumbnail-checklist)**
+          
+          Use this checklist before publishing to ensure your thumbnails are optimized for CTR.
+          
+          ---
+          
+          ## Call Recordings
+          
+          Your coaching call recordings will appear here after each session.
+          
+          ---
+          
+          ## Book Your Next Session
+          
+          Ready for your next coaching call? Book below:
+
+  # ============================================
+  # 💰 PRICING PLANS
+  # ============================================
+  csc-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Channel Strategy Coaching - Pay in Full"
+      Description: "One-time payment for 6 coaching sessions"
+      Amount: 300000
+      Currency: USD
+      BillingType: one_time
+
+  csc-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Channel Strategy Coaching - 3 Payments"
+      Description: "Split into 3 monthly payments"
+      Amount: 359100
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  csc-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Channel Strategy Coaching Application"
+      Description: "Application funnel for 1:1 coaching"
+      Steps:
+        - Name: "Interest"
+          Slug: interest
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Grow Your Channel Faster with Expert 1:1 Guidance"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Personalized coaching for serious creators who want to accelerate their YouTube growth"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=CSC_VSL"
+                    Provider: youtube
+                - Type: button
+                  Order: 4
+                  Content:
+                    Text: "Apply for Coaching"
+                    Action: next_step
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Is this you?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You've been creating content for a while. You know the basics. But you're stuck.
+                      
+                      - Your views are inconsistent
+                      - You're not sure which videos to make next
+                      - You see competitors growing faster than you
+                      - You want expert eyes on YOUR specific channel
+                      
+                      Generic courses can only take you so far. You need personalized guidance.
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "What you get with 1:1 Coaching"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      **6 Private Coaching Sessions** (Value: $2,400)
+                      60-minute calls every 2 weeks for 3 months
+                      
+                      **Full Channel Audit** (Value: $500)
+                      Deep dive into your analytics, content, thumbnails, and positioning
+                      
+                      **Personalized Growth Strategy** (Value: $500)
+                      Custom roadmap based on YOUR channel and goals
+                      
+                      **Thumbnail & Title Reviews** (Value: $300)
+                      Get feedback before you publish
+                      
+                      **Slack Access Between Calls** (Value: $500)
+                      Quick questions answered within 24 hours
+                      
+                      **Resource Library** (Value: $200)
+                      Templates, worksheets, and checklists
+                      
+                      **Total Value: $4,400**
+            - Type: testimonials
+              Order: 4
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "Before coaching, I was stuck at 5K subs for over a year. After 3 months, I hit 25K. The personalized strategy made all the difference."
+                    Author: "Mike T., Tech Creator"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "The channel audit revealed issues I never would have found on my own. My CTR went from 3% to 8% after implementing the thumbnail feedback."
+                    Author: "Jessica L., Lifestyle Vlogger"
+                    Rating: 5
+            - Type: cta
+              Order: 5
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Ready to Accelerate Your Growth?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "I only work with 5 clients at a time to ensure quality. Apply now to see if we're a good fit."
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Apply for Coaching"
+                    Action: next_step
+        - Name: "Apply"
+          Slug: apply
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Apply for 1:1 Coaching"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Tell me about your channel and goals. This helps me understand if we're a good fit to work together.
+            - Type: form
+              Order: 2
+              Elements:
+                - Type: form
+                  Order: 1
+                  Content:
+                    FormSlug: !Ref csc-application
+        - Name: "Book Call"
+          Slug: book
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Book Your Discovery Call"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Thanks for applying! The next step is a 30-minute discovery call where we'll:
+                      
+                      - Discuss your channel and goals in detail
+                      - Identify your biggest growth opportunities
+                      - See if 1:1 coaching is the right fit
+                      
+                      Book a time that works for you below.
+                - Type: booking_link
+                  Order: 3
+                  Content:
+                    BookingLinkSlug: !Ref csc-discovery-call
+        - Name: "Confirmed"
+          Slug: confirmed
+          Order: 4
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Your discovery call is booked! Here's what happens next:
+                      
+                      1. Check your email for the calendar invite and Zoom link
+                      2. Before our call, think about your top 3 channel challenges
+                      3. Come ready to discuss your goals for the next 6-12 months
+                      
+                      I'm looking forward to learning about your channel!
+
+  # ============================================
+  # 📋 FORMS
+  # ============================================
+  csc-application:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Coaching Application"
+      Description: "Application form for 1:1 coaching"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@email.com"
+        - Type: custom
+          CustomFieldSlug: !Ref csc-cf-channel-url
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref csc-cf-channel-size
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref csc-cf-revenue
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref csc-cf-goals
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref csc-cf-commitment
+          Required: true
+      SubmitButton:
+        Text: "Submit Application"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+
+  csc-onboarding-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Coaching Client Intake"
+      Description: "Detailed intake for new coaching clients"
+      Fields:
+        - Type: custom
+          CustomFieldSlug: !Ref csc-cf-channel-url
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref csc-cf-biggest-challenge
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref csc-cf-past-attempts
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref csc-cf-availability
+          Required: true
+      SubmitButton:
+        Text: "Complete Intake"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  csc-cf-channel-url:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your YouTube channel URL?"
+      FieldType: text
+      Placeholder: "https://youtube.com/@yourchannel"
+      HelpText: "Link to your main YouTube channel"
+
+  csc-cf-channel-size:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "How many subscribers do you have?"
+      FieldType: select
+      Options:
+        - "Under 1,000"
+        - "1,000 - 10,000"
+        - "10,000 - 50,000"
+        - "50,000 - 100,000"
+        - "100,000+"
+      HelpText: "Current subscriber count"
+
+  csc-cf-revenue:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your current monthly YouTube revenue?"
+      FieldType: select
+      Options:
+        - "Not monetized yet"
+        - "Under $500/month"
+        - "$500 - $2,000/month"
+        - "$2,000 - $5,000/month"
+        - "$5,000+/month"
+      HelpText: "All revenue sources (AdSense, sponsors, etc.)"
+
+  csc-cf-goals:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your primary goal for the next 6 months?"
+      FieldType: textarea
+      Placeholder: "Tell me about your goals..."
+      HelpText: "Be specific about subscriber, revenue, or content goals"
+
+  csc-cf-commitment:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "How committed are you to growing your channel?"
+      FieldType: select
+      Options:
+        - "This is a hobby - I post when I can"
+        - "Part-time focus - 10-20 hours/week"
+        - "Primary focus - 20-40 hours/week"
+        - "Full-time - This is my career"
+      HelpText: "Be honest about your time commitment"
+
+  csc-cf-biggest-challenge:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your biggest challenge right now?"
+      FieldType: textarea
+      Placeholder: "Describe your main struggle..."
+      HelpText: "This helps me prepare for our sessions"
+
+  csc-cf-past-attempts:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What have you tried that didn't work?"
+      FieldType: textarea
+      Placeholder: "Courses, strategies, etc."
+      HelpText: "So we don't repeat what hasn't worked"
+
+  csc-cf-availability:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What's your preferred coaching time?"
+      FieldType: select
+      Options:
+        - "Weekday mornings (9am-12pm PT)"
+        - "Weekday afternoons (12pm-5pm PT)"
+        - "Weekday evenings (5pm-8pm PT)"
+        - "Weekends"
+        - "Flexible"
+      HelpText: "When can you typically do coaching calls?"
+
+  # ============================================
+  # 📅 BOOKING LINKS
+  # ============================================
+  csc-discovery-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Coaching Discovery Call"
+      OwnerUserEmail: "coach@channelstrategypro.com"
+      Description: "30-minute call to discuss your channel and see if coaching is right for you"
+      DurationMinutes: 30
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 14
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  csc-coaching-session:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Coaching Session"
+      OwnerUserEmail: "coach@channelstrategypro.com"
+      Description: "60-minute private coaching session"
+      DurationMinutes: 60
+      BufferAfterMinutes: 15
+      MinNoticeHours: 48
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  csc-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Channel Strategy Pro Portal"
+      Description: "Client portal for coaching clients"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 📜 AGREEMENT
+  # ============================================
+  csc-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Coaching Agreement"
+      Title: "1:1 CHANNEL STRATEGY COACHING AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Coaching Agreement ("Agreement") is entered into between Channel Strategy Pro LLC ("Coach") and the undersigned client ("Client").
+        
+        ## 1. COACHING SERVICES
+        
+        Coach agrees to provide:
+        
+        - 6 private coaching sessions (60 minutes each) over 3 months
+        - Full channel audit and strategy review
+        - Thumbnail and title feedback on request
+        - Slack access for questions between sessions
+        - Access to coaching resource library
+        
+        ## 2. CLIENT EXPECTATIONS
+        
+        Client agrees to:
+        
+        - Show up on time for scheduled sessions
+        - Come prepared with questions and updates
+        - Implement strategies discussed in sessions
+        - Communicate openly about challenges and progress
+        - Provide 24-hour notice for session reschedules
+        
+        ## 3. COACH EXPECTATIONS
+        
+        Coach agrees to:
+        
+        - Provide personalized guidance based on Client's goals
+        - Respond to Slack messages within 24 business hours
+        - Review content/thumbnails within 48 hours when requested
+        - Maintain confidentiality of Client's channel strategy
+        
+        ## 4. PAYMENT TERMS
+        
+        - Payment is due before the first coaching session
+        - Split-pay clients must maintain active payments to continue sessions
+        - No sessions will be scheduled with outstanding balances
+        
+        ## 5. CANCELLATION & REFUNDS
+        
+        - Sessions may be rescheduled with 24-hour notice
+        - Missed sessions without notice are forfeited
+        - Refunds are not available after the first session
+        - Unused sessions expire 6 months from purchase date
+        
+        ## 6. RESULTS DISCLAIMER
+        
+        Client acknowledges that:
+        
+        - Results depend on Client's effort, niche, and market conditions
+        - Coach cannot guarantee specific subscriber counts or revenue
+        - YouTube's algorithm and policies may change at any time
+        - Client is responsible for implementing strategies discussed
+        
+        ## 7. CONFIDENTIALITY
+        
+        Both parties agree to keep confidential:
+        
+        - Client's channel strategy and analytics
+        - Coaching session content and recordings
+        - Any proprietary methods or frameworks discussed
+        
+        By signing below, both parties agree to the terms of this Agreement.
+
+  # ============================================
+  # 🎓 ONBOARDING FLOW
+  # ============================================
+  csc-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Coaching Client Onboarding"
+      Description: "Onboarding flow for new coaching clients"
+      Steps:
+        - Name: "Sign Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to Coaching!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Before we begin, please review and sign the coaching agreement.
+                      
+                      This covers:
+                      - What's included in your coaching package
+                      - Expectations for both of us
+                      - Cancellation and rescheduling policies
+                      - Confidentiality terms
+                - Type: agreement
+                  Order: 3
+                  Content:
+                    AgreementSlug: !Ref csc-agreement
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Client Intake"
+          Slug: intake
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Tell Me More About Your Channel"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Help me prepare for our sessions by sharing more details about your channel and challenges.
+                - Type: form
+                  Order: 3
+                  Content:
+                    FormSlug: !Ref csc-onboarding-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're Ready!"
+          Slug: complete
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Let's Get Started!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You're all set! Here's what happens next:
+                      
+                      **1. Book Your First Session**
+                      Head to the portal and book your first coaching call.
+                      
+                      **2. Review Your Resources**
+                      Check out the resource library for templates and worksheets.
+                      
+                      **3. Prepare for Our Call**
+                      Think about your top 3 priorities for our first session.
+                      
+                      I'm excited to help you grow your channel!
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  csc-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Coaching Applications"
+      Description: "Track coaching applicants through sales process"
+      Stages:
+        - Name: "Applied"
+          Slug: applied
+          Order: 1
+          Description: "Submitted application"
+        - Name: "Call Scheduled"
+          Slug: call-scheduled
+          Order: 2
+          Description: "Discovery call booked"
+        - Name: "Call Complete"
+          Slug: call-complete
+          Order: 3
+          Description: "Discovery call finished"
+        - Name: "Proposal Sent"
+          Slug: proposal
+          Order: 4
+          Description: "Sent coaching offer"
+        - Name: "Won"
+          Slug: won
+          Order: 5
+          Description: "Enrolled in coaching"
+        - Name: "Lost"
+          Slug: lost
+          Order: 6
+          Description: "Did not enroll"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  csc-tag-applicant:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Coaching Applicant"
+      Description: "Applied for 1:1 coaching"
+
+  csc-tag-qualified:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Coaching Qualified"
+      Description: "Qualified for coaching based on application"
+
+  csc-tag-client:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Coaching Client"
+      Description: "Active coaching client"
+
+  csc-tag-completed:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Coaching Completed"
+      Description: "Finished coaching program"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  csc-workflow-application:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Coaching Application"
+      Description: "Triggers when someone submits coaching application"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref csc-application
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref csc-tag-applicant
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref csc-seq-applicant
+
+  csc-workflow-call-booked:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Discovery Call Booked"
+      Description: "Triggers when applicant books discovery call"
+      Triggers:
+        - EventType: AppointmentConfirmed
+          FilterConfig:
+            Field: bookingLink.slug
+            Operator: EQUALS
+            Value: !Ref csc-discovery-call
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref csc-tag-qualified
+
+  csc-workflow-enrollment:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Coaching Enrollment"
+      Description: "Triggers when someone purchases coaching"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref csc-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref csc-tag-client
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref csc-seq-welcome
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCES
+  # ============================================
+  csc-seq-applicant:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Coaching Applicant Follow-up"
+      Description: "3-email sequence for coaching applicants"
+      Steps:
+        - TemplateSlug: !Ref csc-email-application
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref csc-email-reminder
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref csc-email-lastchance
+          DelayAmount: 5
+          DelayUnit: days
+          Order: 3
+
+  csc-seq-welcome:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Coaching Client Welcome"
+      Description: "Welcome sequence for new coaching clients"
+      Steps:
+        - TemplateSlug: !Ref csc-email-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref csc-email-prepare
+          DelayAmount: 1
+          DelayUnit: days
+          Order: 2
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  csc-email-application:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Application Received"
+      Subject: "Got your application! Next step inside..."
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Thanks for Applying!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I received your application for 1:1 Channel Strategy Coaching!
+              
+              I've reviewed your answers and I'm excited to learn more about 
+              your channel and goals.
+              
+              **Next Step:** Book your discovery call so we can chat.
+              
+              On the call, we'll:
+              - Discuss your channel in detail
+              - Identify your biggest growth opportunities
+              - See if coaching is the right fit for you
+              
+              No pressure, no hard sell. Just an honest conversation about 
+              whether I can help you.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Discovery Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Talk soon!
+              
+              - Coach
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  csc-email-reminder:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Discovery Call Reminder"
+      Subject: "Did you see my last email?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Quick Follow-up"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Just checking in - did you get a chance to book your discovery call?
+              
+              I only take on 5 coaching clients at a time, and spots fill up 
+              quickly. If you're serious about growing your channel, let's chat.
+              
+              **What we'll cover:**
+              - Your channel's biggest opportunities
+              - What's holding you back
+              - Whether 1:1 coaching is right for you
+              
+              30 minutes. No obligation. Just real talk about your channel.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Let's make it happen.
+              
+              - Coach
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  csc-email-lastchance:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Last Chance"
+      Subject: "Last call for your discovery call"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Final Check-in"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              This is my last follow-up about your coaching application.
+              
+              If the timing isn't right, I totally understand. Growing a 
+              YouTube channel takes serious commitment, and coaching isn't 
+              for everyone.
+              
+              But if you're ready to invest in personalized guidance and 
+              want to accelerate your growth, book that call.
+              
+              After this, I'll assume you're not interested and won't 
+              email about coaching again.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Before Spots Fill"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Either way, good luck with your channel!
+              
+              - Coach
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  csc-email-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Client Welcome"
+      Subject: "Welcome to coaching! Let's get started 🚀"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Coaching!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Congratulations on investing in your channel growth! I'm excited 
+              to work with you over the next 3 months.
+              
+              **Here's what to do now:**
+              
+              1. Log in to your client portal
+              2. Complete the onboarding (agreement + intake form)
+              3. Book your first coaching session
+              4. Check out the resource library
+              
+              The sooner you complete onboarding, the sooner we can dive in!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Your Portal"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Let's grow your channel!
+              
+              - Coach
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  csc-email-prepare:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Prepare for First Session"
+      Subject: "How to prepare for our first call"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Prep for Our First Session"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Excited for our first coaching session! Here's how to make 
+              the most of our time together.
+              
+              **Before our call, please:**
+              
+              1. Make sure your YouTube Studio access is ready to share
+              2. Think about your top 3 priorities for the next 90 days
+              3. Note any specific questions you want answered
+              4. Have 2-3 of your best/worst performing videos in mind
+              
+              **What we'll cover in Session 1:**
+              
+              - Full channel audit (analytics, content, positioning)
+              - Identify your biggest opportunities
+              - Create your 90-day growth roadmap
+              - Set specific goals and milestones
+              
+              Come ready to work!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your First Session"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              See you on the call!
+              
+              - Coach
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  csc-business:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "Channel Strategy Pro LLC"
+      Email: "coach@channelstrategypro.com"
+      Phone: "+1-555-CHANNEL"
+      Timezone: "America/Los_Angeles"
+      BusinessType: "LLC"
+      Industry: "Content Creator Coaching"
+      SignatureText: "Channel Strategy Pro"

@@ -1,0 +1,637 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFERS
+  # ============================================
+  tennis-basics-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Tennis Basics Masterclass"
+      Description: "Learn the fundamental tennis moves - serving, groundstrokes, and solo practice drills"
+      DefaultPortal: !Ref tennis-portal
+      Items:
+        - Product: !Ref tennis-basics-course
+      PricingPlans:
+        - !Ref tennis-basics-price
+
+  silver-coaching-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Silver Tennis Coaching"
+      Description: "4 private tennis lessons plus community access"
+      DefaultPortal: !Ref tennis-portal
+      Items:
+        - Product: !Ref silver-coaching-sessions
+        - Product: !Ref tennis-community
+        - Product: !Ref tennis-basics-course
+      PricingPlans:
+        - !Ref silver-pif
+        - !Ref silver-split
+
+  gold-coaching-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Gold Tennis Coaching"
+      Description: "8 private tennis lessons plus community access and video analysis"
+      DefaultPortal: !Ref tennis-portal
+      Items:
+        - Product: !Ref gold-coaching-sessions
+        - Product: !Ref tennis-community
+        - Product: !Ref tennis-basics-course
+        - Product: !Ref video-analysis-guide
+      PricingPlans:
+        - !Ref gold-pif
+        - !Ref gold-split
+
+  # ============================================
+  # 📦 PRODUCTS
+  # ============================================
+  tennis-basics-course:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Tennis Basics Masterclass"
+      ProductType: course
+      Description: "Master the essential tennis techniques with step-by-step video instruction"
+      Course:
+        Title: "Tennis Basics Masterclass"
+        Description: "Learn proper form for serves, groundstrokes, and solo practice routines"
+        Modules:
+          - Title: "Welcome & Getting Started"
+            Order: 1
+            Lessons:
+              - Title: "Welcome to Tennis Basics"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/tennis-welcome"
+              - Title: "Equipment Essentials"
+                Order: 2
+                ContentType: text
+                TextContent: |
+                  ## What You'll Need
+                  
+                  - A tennis racket (any beginner-friendly racket works)
+                  - Tennis balls (pressureless balls are great for practice)
+                  - Court access or a wall for practice
+                  - Comfortable athletic shoes (tennis shoes recommended)
+                  
+                  Don't overthink equipment when starting out. Focus on 
+                  learning the movements first.
+          - Title: "The Serve"
+            Order: 2
+            Lessons:
+              - Title: "Serve Grip & Stance"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/serve-grip"
+              - Title: "The Toss"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/serve-toss"
+              - Title: "The Motion & Follow Through"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/serve-motion"
+              - Title: "Common Serve Mistakes"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/serve-mistakes"
+          - Title: "Groundstrokes"
+            Order: 3
+            Lessons:
+              - Title: "Forehand Fundamentals"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/forehand"
+              - Title: "Backhand Basics (One & Two-Handed)"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/backhand"
+              - Title: "Footwork & Positioning"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/footwork"
+          - Title: "Solo Practice Drills"
+            Order: 4
+            Lessons:
+              - Title: "Wall Practice Routine"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/wall-practice"
+              - Title: "Shadow Swings & Footwork Drills"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/shadow-swings"
+              - Title: "Ball Machine Tips (If Available)"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/ball-machine"
+              - Title: "Your 30-Day Practice Plan"
+                Order: 4
+                ContentType: text
+                TextContent: |
+                  ## 30-Day Practice Schedule
+                  
+                  **Week 1-2: Foundation**
+                  - 15 min shadow swings daily
+                  - 20 min wall practice (focus on consistency)
+                  - Watch serve videos, practice toss only
+                  
+                  **Week 3-4: Building Consistency**
+                  - 10 min shadow swings
+                  - 30 min wall practice (mix forehand/backhand)
+                  - Practice full serve motion
+                  
+                  Consistency beats intensity. Show up every day, even 
+                  if it's just 15 minutes.
+
+  tennis-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Tennis Tips Community"
+      ProductType: community
+      Description: "Connect with fellow tennis players and share tips"
+      Community:
+        Name: "Tennis Academy Community"
+        Description: "Your home for tennis tips, match discussions, and player connections"
+        Spaces:
+          - Name: "Announcements"
+            Slug: announcements
+            Description: "Academy updates and news"
+            Order: 1
+          - Name: "Technique Tips"
+            Slug: technique-tips
+            Description: "Share and discuss tennis techniques"
+            Order: 2
+          - Name: "Match Stories"
+            Slug: match-stories
+            Description: "Share your match experiences and lessons learned"
+            Order: 3
+          - Name: "Find a Hitting Partner"
+            Slug: hitting-partners
+            Description: "Connect with players in your area"
+            Order: 4
+          - Name: "Gear Talk"
+            Slug: gear-talk
+            Description: "Rackets, strings, shoes, and equipment discussions"
+            Order: 5
+        Events:
+          - Title: "Weekly Q&A Call"
+            Description: "Live Q&A with Coach. Bring your tennis questions!"
+            StartAt: "2025-01-09T18:00:00-05:00"
+            EndAt: "2025-01-09T19:00:00-05:00"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/tennis-qa"
+            HostUserEmail: "coach@tennisacademy.com"
+            RecurrenceRule:
+              Frequency: weekly
+              Interval: 1
+              DaysOfWeek: [4]
+              EndType: never
+
+  silver-coaching-sessions:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Silver Coaching Sessions"
+      ProductType: coaching
+      Description: "4 private 1-hour tennis lessons"
+      Coaching:
+        Title: "Private Tennis Lesson"
+        Description: "1-hour private lesson focusing on your specific needs"
+        Quantity: 4
+        BookingLink: !Ref tennis-lesson
+        ExpirationDays: 90
+
+  gold-coaching-sessions:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Gold Coaching Sessions"
+      ProductType: coaching
+      Description: "8 private 1-hour tennis lessons with video analysis"
+      Coaching:
+        Title: "Private Tennis Lesson"
+        Description: "1-hour private lesson with video analysis and personalized feedback"
+        Quantity: 8
+        BookingLink: !Ref tennis-lesson
+        ExpirationDays: 180
+
+  video-analysis-guide:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Video Analysis Guide"
+      ProductType: page
+      Description: "How to record and analyze your tennis strokes"
+      Page:
+        Title: "Video Analysis Guide"
+        Content: |
+          ## How to Record Your Strokes for Analysis
+          
+          ### Recording Tips
+          - Film from behind (baseline view) for serves
+          - Film from the side for groundstrokes
+          - Use slow-motion if your phone supports it
+          - Record in good lighting
+          
+          ### What to Look For
+          - Racket position at contact point
+          - Footwork and balance
+          - Follow-through path
+          - Body rotation
+          
+          ### Submitting Videos
+          Upload your videos to the community Technique Tips space 
+          or send directly to your coach before your next session.
+
+  # ============================================
+  # 💰 PRICING PLANS
+  # ============================================
+  tennis-basics-price:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Tennis Basics - One Time"
+      Amount: 4700
+      Currency: USD
+      BillingType: one_time
+
+  silver-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Silver Coaching - Pay in Full"
+      Description: "4 private lessons + community"
+      Amount: 59700
+      Currency: USD
+      BillingType: one_time
+
+  silver-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Silver Coaching - 2 Payments"
+      Description: "2 monthly payments"
+      Amount: 62700
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 2
+
+  gold-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Gold Coaching - Pay in Full"
+      Description: "8 private lessons + community + video analysis"
+      Amount: 99700
+      Currency: USD
+      BillingType: one_time
+
+  gold-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Gold Coaching - 3 Payments"
+      Description: "3 monthly payments"
+      Amount: 104700
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  tennis-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Tennis Academy Portal"
+      Description: "Member portal for Tennis Academy students"
+      ThemeConfig:
+        PrimaryColor: "#16a34a"
+
+  # ============================================
+  # 📅 BOOKING LINKS
+  # ============================================
+  tennis-lesson:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Private Tennis Lesson"
+      OwnerUserEmail: "coach@tennisacademy.com"
+      Description: "1-hour private tennis lesson at the academy courts"
+      DurationMinutes: 60
+      BufferAfterMinutes: 30
+      MinNoticeHours: 24
+      MaxAdvanceDays: 60
+      AutoConfirm: true
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  basics-buyer:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Basics Course Buyer"
+      Description: "Purchased Tennis Basics Masterclass"
+
+  silver-client:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Silver Coaching Client"
+      Description: "Active Silver coaching client"
+
+  gold-client:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Gold Coaching Client"
+      Description: "Active Gold coaching client"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  basics-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Basics Course Purchase"
+      Description: "Triggers when someone purchases Tennis Basics"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref tennis-basics-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref basics-buyer
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref basics-sequence
+
+  silver-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Silver Coaching Purchase"
+      Description: "Triggers when someone purchases Silver Coaching"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref silver-coaching-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref silver-client
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref coaching-welcome-sequence
+
+  gold-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Gold Coaching Purchase"
+      Description: "Triggers when someone purchases Gold Coaching"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref gold-coaching-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref gold-client
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref coaching-welcome-sequence
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCES
+  # ============================================
+  basics-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Basics Course Welcome"
+      Description: "Welcome sequence for Tennis Basics buyers"
+      Steps:
+        - TemplateSlug: !Ref basics-welcome-email
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref basics-checkin-email
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 2
+
+  coaching-welcome-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Coaching Welcome"
+      Description: "Welcome sequence for coaching clients"
+      Steps:
+        - TemplateSlug: !Ref coaching-welcome-email
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref book-first-lesson-email
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  basics-welcome-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Basics Welcome"
+      Subject: "Your Tennis Basics course is ready!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Tennis Basics!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Your Tennis Basics Masterclass is ready to go!
+              
+              Start with the Welcome module, then work through the 
+              serve section before moving to groundstrokes. Take your 
+              time with each lesson - proper form beats rushing through.
+              
+              See you on the court!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Start Learning"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#16a34a"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  basics-checkin-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Basics Check-in"
+      Subject: "How's your tennis practice going?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Week 1 Check-in"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              It's been a week since you started Tennis Basics. 
+              How's your practice going?
+              
+              By now, you should have a feel for the serve toss and 
+              basic groundstroke motions. If you're still working on 
+              it, that's perfectly normal.
+              
+              Quick tip: Wall practice is your best friend. 15 minutes 
+              a day builds more consistency than 2-hour sessions once 
+              a week.
+              
+              Ready to take your game further? Check out our private 
+              coaching packages for personalized instruction.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Continue Learning"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#16a34a"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  coaching-welcome-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Welcome"
+      Subject: "Welcome to Tennis Academy Coaching!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Tennis Academy!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Welcome to the Tennis Academy coaching program! You now 
+              have access to:
+              
+              - Private 1-on-1 tennis lessons
+              - The Tennis Basics course library
+              - Our community of tennis players
+              - Weekly Q&A calls
+              
+              **Your first step:** Book your first private lesson. 
+              Click below to see available times.
+              
+              I'm excited to help you improve your game!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your First Lesson"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#16a34a"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  book-first-lesson-email:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Book First Lesson Reminder"
+      Subject: "Have you booked your first lesson?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Quick Reminder"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Just checking in - have you booked your first private 
+              tennis lesson yet?
+              
+              The sooner we start, the sooner you'll see improvement. 
+              I recommend booking your sessions in advance to secure 
+              your preferred times.
+              
+              Click below to schedule your first lesson.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Now"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#16a34a"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  business-profile:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "Tennis Academy LLC"
+      Email: "coach@tennisacademy.com"
+      Phone: "+1-555-TENNIS"
+      Timezone: "America/New_York"
+      BusinessType: "LLC"
+      Industry: "Sports & Recreation"
+      SignatureText: "Your Tennis Academy Coach"

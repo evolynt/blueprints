@@ -1,0 +1,1507 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFERS
+  # ============================================
+  fs-audit-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Ad Account Audit"
+      Description: "Comprehensive audit of your ad account with personalized recommendations"
+      DefaultPortal: !Ref fs-client-portal
+      Items:
+        - Product: !Ref fs-audit-report
+      PricingPlans:
+        - !Ref fs-audit-price
+
+  fs-launch-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Campaign Launch Package"
+      Description: "Complete campaign setup with 30 days of optimization"
+      DefaultPortal: !Ref fs-client-portal
+      Items:
+        - Product: !Ref fs-launch-dashboard
+        - Product: !Ref fs-creative-library
+      PricingPlans:
+        - !Ref fs-launch-price
+        - !Ref fs-launch-split
+
+  fs-growth-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Growth Management"
+      Description: "Monthly ad management with weekly optimization and reporting"
+      DefaultPortal: !Ref fs-client-portal
+      Items:
+        - Product: !Ref fs-growth-dashboard
+        - Product: !Ref fs-creative-library
+      PricingPlans:
+        - !Ref fs-growth-price
+
+  fs-premium-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Full-Service Retainer"
+      Description: "Complete done-for-you ad management with dedicated account manager"
+      DefaultPortal: !Ref fs-client-portal
+      Items:
+        - Product: !Ref fs-premium-dashboard
+        - Product: !Ref fs-creative-library
+      PricingPlans:
+        - !Ref fs-premium-price
+
+  # ============================================
+  # 📦 PRODUCTS
+  # ============================================
+  fs-audit-report:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Audit Report & Walkthrough"
+      ProductType: page
+      Description: "Your audit deliverables and walkthrough booking"
+      Page:
+        Title: "Your Ad Account Audit"
+        Content: |
+          ## Welcome to Your Ad Account Audit
+          
+          Thanks for purchasing your Ad Account Audit! Here's what happens next:
+          
+          **Step 1: Complete Your Intake Form**
+          Fill out the intake form in your portal so we have everything we need.
+          
+          **Step 2: We Review Your Account**
+          Our team will audit your account within 3-5 business days.
+          
+          **Step 3: Book Your Walkthrough**
+          Once ready, you'll receive an email to book your 30-minute walkthrough call.
+          
+          ---
+          
+          ## Book Your Audit Walkthrough
+          
+          Once you've received your audit report, book your 30-minute walkthrough call.
+          
+          [Book Walkthrough Call →](#)
+
+  fs-launch-dashboard:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Campaign Launch Dashboard"
+      ProductType: page
+      Description: "Your campaign setup deliverables and documentation"
+      Page:
+        Title: "Campaign Launch Dashboard"
+        Content: |
+          ## Your Campaign Launch Package
+          
+          Welcome to your Campaign Launch Package dashboard!
+          
+          ### Campaign Strategy Document
+          Your custom strategy including audiences, creatives, and budget allocation.
+          **Status:** Delivered within 3 business days of kickoff.
+          
+          ### Weekly Reports
+          Performance reports delivered every Monday during your 30-day optimization period.
+          
+          ### Creative Assets
+          5-10 ad creatives included. Access your creatives in the Creative Library below.
+          
+          ### Tracking Documentation
+          Pixel setup, conversion events, and UTM structure documentation.
+          
+          ---
+          
+          ## Book Your Monthly Call
+          
+          [Book Monthly Strategy Call →](#)
+
+  fs-growth-dashboard:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Growth Management Dashboard"
+      ProductType: page
+      Description: "Your growth management client dashboard"
+      Page:
+        Title: "Growth Management Dashboard"
+        Content: |
+          ## Welcome to Growth Management
+          
+          Your dedicated hub for everything related to your ad campaigns.
+          
+          ### Weekly Performance Reports
+          Every Monday you'll receive a detailed report covering spend, metrics, optimizations, and recommendations.
+          
+          ### Monthly Strategy Call
+          Book your 30-minute monthly strategy call to review performance and align on next steps.
+          
+          ### Creative Assets
+          Access current and past creatives in the Creative Library section.
+          
+          ### Questions?
+          Email us anytime at team@adscaleagency.com
+          
+          ---
+          
+          ## Book Your Monthly Strategy Call
+          
+          [Book Monthly Strategy Call →](#)
+
+  fs-premium-dashboard:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Full-Service Dashboard"
+      ProductType: page
+      Description: "Your premium full-service client dashboard"
+      Page:
+        Title: "Full-Service Dashboard"
+        Content: |
+          ## Welcome to Full-Service
+          
+          Welcome to our premium Full-Service program. You have a dedicated account manager and priority access to our team.
+          
+          ### Your Dedicated Contact
+          Your account manager is available via email and Slack for any questions or requests.
+          
+          ### Weekly Performance Reports
+          Detailed reports every Monday with full performance analysis.
+          
+          ### Bi-Weekly Strategy Calls
+          As a premium client, you can book strategy calls every two weeks.
+          
+          ### Creative Production
+          Unlimited creative refresh included. Request new creatives anytime.
+          
+          ### Priority Support
+          Same-day response on all requests. Emergency support available.
+          
+          ---
+          
+          ## Book Your Strategy Call
+          
+          [Book Strategy Call →](#)
+
+  fs-creative-library:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Creative Library"
+      ProductType: page
+      Description: "Shared creative assets library for all managed clients"
+      Page:
+        Title: "Creative Library"
+        Content: |
+          ## Your Creative Library
+          
+          All your ad creatives are stored here for easy access.
+          
+          ### Current Creatives
+          Your latest batch of ad creatives. Download and use as needed.
+          
+          ### Creative Archive
+          Past creatives organized by campaign and date.
+          
+          ### Brand Assets
+          Your logo, colors, fonts, and style guidelines on file.
+          
+          ### Request New Creatives
+          Need fresh creatives? Email us or mention it on your next strategy call.
+
+  # ============================================
+  # 💰 PRICING PLANS
+  # ============================================
+  fs-audit-price:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Ad Account Audit"
+      Amount: 49700
+      Currency: USD
+      BillingType: one_time
+
+  fs-launch-price:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Campaign Launch - Pay in Full"
+      Amount: 299700
+      Currency: USD
+      BillingType: one_time
+
+  fs-launch-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Campaign Launch - 3 Payments"
+      Amount: 329100
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  fs-growth-price:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Growth Management Monthly"
+      Amount: 400000
+      Currency: USD
+      BillingType: subscription
+      BillingInterval: monthly
+
+  fs-premium-price:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Full-Service Retainer Monthly"
+      Amount: 800000
+      Currency: USD
+      BillingType: subscription
+      BillingInterval: monthly
+
+  # ============================================
+  # 🚀 FUNNELS
+  # ============================================
+  fs-audit-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Ad Audit Sales Page"
+      Description: "Direct checkout funnel for the Ad Account Audit"
+      Steps:
+        - Name: "Sales Page"
+          Slug: sales
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Find Out Exactly Why Your Ads Aren't Converting"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Get a comprehensive audit of your ad account with specific, actionable recommendations from a media buying expert"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=AUDIT_VSL"
+                    Provider: youtube
+                - Type: checkout
+                  Order: 4
+                  Content:
+                    OfferSlug: !Ref fs-audit-offer
+                    PricingPlanSlug: !Ref fs-audit-price
+                    ButtonText: "Get Your Audit - $497"
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's exactly what you get"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      ✓ Complete Account Structure Review (Value: $150)
+                      ✓ Targeting & Audience Analysis (Value: $150)
+                      ✓ Creative Performance Breakdown (Value: $150)
+                      ✓ Conversion Tracking Audit (Value: $100)
+                      ✓ Prioritized Recommendations Report (Value: $200)
+                      ✓ 30-Minute Walkthrough Call (Value: $150)
+                      
+                      Total Value: $900
+                      **Your Investment: Just $497**
+            - Type: testimonials
+              Order: 3
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "The audit revealed I was burning $800/month on a broken pixel. Fixed it in 20 minutes and my cost per lead dropped 40%."
+                    Author: "Marcus T., E-commerce Owner"
+                    Rating: 5
+            - Type: cta
+              Order: 4
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Stop Guessing. Start Knowing."
+                - Type: checkout
+                  Order: 2
+                  Content:
+                    OfferSlug: !Ref fs-audit-offer
+                    PricingPlanSlug: !Ref fs-audit-price
+                    ButtonText: "Get Your Audit - $497"
+        - Name: "Thank You"
+          Slug: thank-you
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're In! Let's Audit Your Account."
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=AUDIT_THANKYOU"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Thanks for purchasing your Ad Account Audit!
+                      
+                      Check your email for login details to your client portal.
+                      
+                      **Your next step:** Complete the intake form in your portal.
+
+  fs-services-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Managed Services Application"
+      Description: "Application funnel for Campaign Launch, Growth, and Premium services"
+      Steps:
+        - Name: "Services Overview"
+          Slug: services
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Stop Managing Ads. Start Scaling Your Business."
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "From campaign setup to full-service management, we have a solution for every stage of growth"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=SERVICES_VSL"
+                    Provider: youtube
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Choose Your Path to Better Ads"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      **Campaign Launch Package**
+                      Perfect for: Businesses ready to launch or relaunch their ad campaigns
+                      - Complete strategy and setup
+                      - 5-10 ad creatives
+                      - 30 days of optimization
+                      - Weekly performance reports
+                      
+                      **Growth Management**
+                      Perfect for: Businesses spending $5K-$15K/month who want hands-off management
+                      - Daily monitoring and optimization
+                      - Weekly performance reports
+                      - Monthly strategy calls
+                      - Creative refresh as needed
+                      
+                      **Full-Service Retainer**
+                      Perfect for: Businesses spending $15K+/month who want premium, white-glove service
+                      - Dedicated account manager
+                      - Bi-weekly strategy calls
+                      - Unlimited creative production
+                      - Priority support
+            - Type: testimonials
+              Order: 3
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "Started with a Campaign Launch, now I'm on the Growth tier. My ROAS went from 1.2 to 3.8 in 6 months."
+                    Author: "Jennifer M., E-commerce Brand"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "The Full-Service tier is worth every penny. Having a dedicated account manager who knows my business is invaluable."
+                    Author: "Michael R., Course Creator"
+                    Rating: 5
+            - Type: cta
+              Order: 4
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Ready to Hand Off Your Ads?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: "Apply now and we'll help you choose the right tier for your business."
+                - Type: button
+                  Order: 3
+                  Content:
+                    Text: "Apply Now"
+                    Action: next_step
+                  Settings:
+                    Alignment: center
+        - Name: "Apply"
+          Slug: apply
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Apply for Managed Services"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=APPLY_VIDEO"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: "Answer a few questions so we can recommend the right tier for your business."
+            - Type: form
+              Order: 2
+              Elements:
+                - Type: form
+                  Order: 1
+                  Content:
+                    FormSlug: !Ref fs-services-application
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Book Your Call"
+          Slug: book
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Great! Let's Talk Strategy."
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=BOOKING_VIDEO"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      On this 60-minute call, we'll:
+                      
+                      ✓ Review your current ad performance
+                      ✓ Understand your goals and challenges
+                      ✓ Recommend the right tier for your business
+                      ✓ Answer all your questions
+                - Type: booking_link
+                  Order: 4
+                  Content:
+                    BookingLinkSlug: !Ref fs-strategy-call
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're Booked"
+          Slug: confirmed
+          Order: 4
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're All Set!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=CONFIRMED_VIDEO"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Your strategy call is booked. Check your email for calendar details.
+                      
+                      **Before our call, please:**
+                      1. Gather your offer details and pricing
+                      2. Know your monthly ad spend
+                      3. Note what's working and what isn't
+                      
+                      See you soon!
+
+  # ============================================
+  # 📋 FORMS
+  # ============================================
+  fs-audit-intake:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Audit Intake Form"
+      Description: "Intake form to gather client ad account details"
+      Fields:
+        - Type: custom
+          CustomFieldSlug: !Ref fs-cf-business-name
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref fs-cf-website
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref fs-cf-monthly-spend
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref fs-cf-platforms
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref fs-cf-biggest-challenge
+          Required: true
+      SubmitButton:
+        Text: "Submit Intake Form"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+
+  fs-services-application:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Services Application"
+      Description: "Application form for managed ad services"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your full name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@company.com"
+        - Type: custom
+          CustomFieldSlug: !Ref fs-cf-business-name
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref fs-cf-website
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref fs-cf-monthly-spend
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref fs-cf-platforms
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref fs-cf-current-performance
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref fs-cf-biggest-challenge
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref fs-cf-goals
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref fs-cf-investment-level
+          Required: true
+      SubmitButton:
+        Text: "Submit Application"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  fs-cf-business-name:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Business Name"
+      FieldType: text
+      HelpText: "Your business or brand name"
+
+  fs-cf-website:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Website URL"
+      FieldType: text
+      HelpText: "Your business website URL"
+
+  fs-cf-monthly-spend:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Monthly Ad Spend"
+      FieldType: select
+      HelpText: "Your approximate monthly ad spend"
+      Options:
+        - "Under $3,000"
+        - "$3,000 - $5,000"
+        - "$5,000 - $10,000"
+        - "$10,000 - $25,000"
+        - "$25,000+"
+
+  fs-cf-platforms:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Ad Platforms"
+      FieldType: select
+      HelpText: "Which platforms do you run ads on?"
+      Options:
+        - "Meta only (Facebook/Instagram)"
+        - "TikTok only"
+        - "Both Meta and TikTok"
+        - "Other platforms"
+
+  fs-cf-current-performance:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Current Performance"
+      FieldType: select
+      HelpText: "How are your ads performing currently?"
+      Options:
+        - "Profitable and scaling"
+        - "Break-even"
+        - "Losing money"
+        - "Not running ads yet"
+
+  fs-cf-biggest-challenge:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Biggest Challenge"
+      FieldType: textarea
+      HelpText: "What's your biggest challenge with ads right now?"
+
+  fs-cf-goals:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Goals"
+      FieldType: select
+      HelpText: "What's your primary goal?"
+      Options:
+        - "Launch new campaigns"
+        - "Improve existing performance"
+        - "Scale profitably"
+        - "Reduce time spent on ads"
+
+  fs-cf-investment-level:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Investment Level"
+      FieldType: select
+      HelpText: "Are you ready to invest in professional ad management?"
+      Options:
+        - "Yes, ready to invest"
+        - "Need to discuss options"
+        - "Just exploring"
+
+  # ============================================
+  # 📅 BOOKING LINKS
+  # ============================================
+  fs-audit-walkthrough:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Audit Walkthrough"
+      Description: "30-minute call to review your ad account audit findings"
+      DurationMinutes: 30
+      OwnerUserEmail: "team@adscaleagency.com"
+      BufferAfterMinutes: 5
+      MinNoticeHours: 24
+      MaxAdvanceDays: 14
+      AutoConfirm: true
+
+  fs-strategy-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Strategy Call"
+      Description: "60-minute discovery call to discuss your ad management needs"
+      DurationMinutes: 60
+      OwnerUserEmail: "team@adscaleagency.com"
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  fs-monthly-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Monthly Strategy Call"
+      Description: "30-minute monthly strategy call for managed clients"
+      DurationMinutes: 30
+      OwnerUserEmail: "team@adscaleagency.com"
+      BufferAfterMinutes: 10
+      MinNoticeHours: 24
+      MaxAdvanceDays: 60
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  fs-client-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "AdScale Client Portal"
+      Description: "Unified client portal for all service tiers"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 🔄 PIPELINES
+  # ============================================
+  fs-sales-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Ad Services Sales"
+      Description: "Track prospects through the sales process"
+      Stages:
+        - Name: "Lead"
+          Slug: lead
+          Order: 1
+          Description: "Visited but hasn't applied"
+        - Name: "Applied"
+          Slug: applied
+          Order: 2
+          Description: "Submitted application form"
+        - Name: "Call Booked"
+          Slug: call-booked
+          Order: 3
+          Description: "Strategy call scheduled"
+        - Name: "Call Completed"
+          Slug: call-completed
+          Order: 4
+          Description: "Strategy call finished"
+        - Name: "Proposal"
+          Slug: proposal
+          Order: 5
+          Description: "Proposal sent, awaiting decision"
+        - Name: "Won"
+          Slug: won
+          Order: 6
+          Description: "Signed up for services"
+        - Name: "Lost"
+          Slug: lost
+          Order: 7
+          Description: "Did not proceed"
+
+  fs-delivery-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Client Delivery"
+      Description: "Track active clients through delivery stages"
+      Stages:
+        - Name: "Onboarding"
+          Slug: onboarding
+          Order: 1
+          Description: "New client, setting up account"
+        - Name: "In Progress"
+          Slug: in-progress
+          Order: 2
+          Description: "Active management underway"
+        - Name: "Monthly Review"
+          Slug: monthly-review
+          Order: 3
+          Description: "Due for monthly strategy call"
+        - Name: "Renewal"
+          Slug: renewal
+          Order: 4
+          Description: "Contract renewal coming up"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  fs-tag-audit:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Audit Client"
+      Description: "Purchased the Ad Account Audit"
+
+  fs-tag-launch:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Launch Client"
+      Description: "Purchased Campaign Launch Package"
+
+  fs-tag-growth:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Growth Client"
+      Description: "Active Growth Management subscriber"
+
+  fs-tag-premium:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Premium Client"
+      Description: "Active Full-Service Retainer subscriber"
+
+  fs-tag-upsell:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Upsell Candidate"
+      Description: "Good fit for upgrade to higher tier"
+
+  fs-tag-vip:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "VIP Client"
+      Description: "Premium client requiring priority service"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  fs-workflow-audit-purchase:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Audit Purchase"
+      Description: "Triggers when someone purchases the Ad Account Audit"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref fs-audit-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref fs-tag-audit
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref fs-seq-audit
+
+  fs-workflow-audit-upsell:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Audit Upsell Tag"
+      Description: "Tags audit clients as upsell candidates after walkthrough"
+      Triggers:
+        - EventType: AppointmentConfirmed
+          FilterConfig:
+            Field: bookingLink.slug
+            Operator: EQUALS
+            Value: !Ref fs-audit-walkthrough
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref fs-tag-upsell
+
+  fs-workflow-services-application:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Services Application"
+      Description: "Triggers when someone submits the services application"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref fs-services-application
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref fs-tag-upsell
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref fs-seq-applicant
+
+  fs-workflow-growth-purchase:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Growth Purchase"
+      Description: "Triggers when someone subscribes to Growth Management"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref fs-growth-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref fs-tag-growth
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref fs-seq-growth-onboarding
+
+  fs-workflow-premium-purchase:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Premium Purchase"
+      Description: "Triggers when someone subscribes to Full-Service Retainer"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref fs-premium-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref fs-tag-premium
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref fs-tag-vip
+        - Type: enroll_sequence
+          Order: 4
+          Config:
+            SequenceSlug: !Ref fs-seq-premium-onboarding
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCES
+  # ============================================
+  fs-seq-audit:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Audit Welcome Sequence"
+      Description: "Welcome, reminder, and upsell for audit clients"
+      Steps:
+        - TemplateSlug: !Ref fs-email-audit-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref fs-email-audit-reminder
+          DelayAmount: 1
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref fs-email-audit-upsell
+          DelayAmount: 10
+          DelayUnit: days
+          Order: 3
+
+  fs-seq-applicant:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Applicant Nurture"
+      Description: "Follow-up for managed services applicants"
+      Steps:
+        - TemplateSlug: !Ref fs-email-app-received
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref fs-email-app-reminder
+          DelayAmount: 1
+          DelayUnit: days
+          Order: 2
+
+  fs-seq-growth-onboarding:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Growth Onboarding"
+      Description: "Onboarding sequence for Growth Management clients"
+      Steps:
+        - TemplateSlug: !Ref fs-email-growth-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref fs-email-growth-week1
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref fs-email-growth-report
+          DelayAmount: 14
+          DelayUnit: days
+          Order: 3
+
+  fs-seq-premium-onboarding:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Premium Onboarding"
+      Description: "VIP onboarding sequence for Full-Service clients"
+      Steps:
+        - TemplateSlug: !Ref fs-email-premium-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref fs-email-premium-week1
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref fs-email-premium-report
+          DelayAmount: 14
+          DelayUnit: days
+          Order: 3
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  fs-email-audit-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Audit Welcome"
+      Subject: "Your Ad Account Audit - Next Steps"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome! Let's Audit Your Account"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.firstName}},
+              
+              Thanks for purchasing your Ad Account Audit!
+              
+              **Next step:** Complete the intake form in your client portal.
+              
+              Once submitted, we'll deliver your audit within 3-5 business days.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Complete Intake Form"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fs-email-audit-reminder:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Audit Intake Reminder"
+      Subject: "Quick reminder: Complete your intake form"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Don't Forget Your Intake Form"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.firstName}},
+              
+              Just a quick reminder to complete your intake form so we can start your audit.
+              
+              It only takes 5 minutes!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Complete Intake Form"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fs-email-audit-upsell:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Audit Upsell"
+      Subject: "Want us to implement your recommendations?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Want Help Implementing?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.firstName}},
+              
+              Now that you've seen your audit results, you might be wondering 
+              how to implement everything.
+              
+              We offer managed services where we handle everything:
+              
+              - Campaign Launch Package (one-time setup)
+              - Growth Management (monthly)
+              - Full-Service Retainer (premium)
+              
+              Interested? Reply to this email and I'll send details.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Reply to Learn More"
+            LinkUrl: "mailto:team@adscaleagency.com"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fs-email-app-received:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Application Received"
+      Subject: "We received your application"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Thanks for Applying!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.firstName}},
+              
+              Thanks for applying to work with AdScale Agency!
+              
+              **Next step:** Book your strategy call so we can discuss 
+              your business and recommend the right tier.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Strategy Call"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fs-email-app-reminder:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Application Call Reminder"
+      Subject: "Don't forget to book your call"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Book Your Call"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.firstName}},
+              
+              Quick reminder to book your strategy call.
+              
+              Spots fill up fast and I'd hate for you to miss out!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Call Now"
+            LinkUrl: "{{funnel.url}}/book"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fs-email-growth-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Growth Welcome"
+      Subject: "Welcome to Growth Management!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Growth Management!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.firstName}},
+              
+              Welcome aboard! We're excited to manage your ad campaigns.
+              
+              **What happens next:**
+              1. We'll request access to your ad accounts
+              2. Initial audit completed within 48 hours
+              3. Kickoff call to align on strategy
+              4. Weekly reports begin next Monday
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Your Dashboard"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fs-email-growth-week1:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Growth Week 1"
+      Subject: "Week 1 Check-In"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "How's Your First Week?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.firstName}},
+              
+              It's been a few days since we started working together.
+              
+              By now we should have:
+              ✓ Completed initial audit
+              ✓ Set up tracking and reporting
+              ✓ Started implementing strategy
+              
+              Questions? Just reply to this email.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "View Your Dashboard"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fs-email-growth-report:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Growth First Report"
+      Subject: "Your first performance report is ready"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Your First Report is Ready!"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.firstName}},
+              
+              Your first weekly performance report is ready in your dashboard.
+              
+              This is just the beginning. Performance typically improves 
+              significantly over the first 30-60 days.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "View Your Report"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fs-email-premium-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Premium Welcome"
+      Subject: "Welcome to Full-Service - Your VIP Access"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Full-Service!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.firstName}},
+              
+              Welcome to our premium Full-Service program!
+              
+              As a VIP client, you have:
+              - Dedicated account manager
+              - Priority support (same-day response)
+              - Bi-weekly strategy calls
+              - Unlimited creative production
+              
+              Your dedicated account manager will reach out within 
+              24 hours to schedule your kickoff call.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Your VIP Dashboard"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fs-email-premium-week1:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Premium Week 1"
+      Subject: "Week 1 Check-In - Your VIP Update"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Your First Week as a VIP"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.firstName}},
+              
+              Welcome to week 1 of your Full-Service experience.
+              
+              Your account manager has:
+              ✓ Completed comprehensive audit
+              ✓ Set up advanced tracking
+              ✓ Begun strategy implementation
+              
+              **Need anything?** Your account manager is available 
+              via email and Slack. Same-day response guaranteed.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "View Your Dashboard"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  fs-email-premium-report:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Premium First Report"
+      Subject: "Your VIP Performance Report"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Your VIP Report is Ready"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.firstName}},
+              
+              Your first weekly performance report is ready.
+              
+              As a VIP client, you also have access to:
+              - Real-time performance dashboards
+              - Direct Slack channel with your account manager
+              - Priority creative production queue
+              
+              Let us know if you have any questions!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "View Your Report"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  fs-business-profile:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "AdScale Agency LLC"
+      Email: "team@adscaleagency.com"
+      Phone: "+1-555-234-5678"
+      Timezone: "America/New_York"
+      BusinessType: "LLC"
+      Industry: "Marketing & Advertising"
+      SignatureText: "The AdScale Team"

@@ -1,0 +1,462 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFER
+  # ============================================
+  bac-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Brand Audit Checklist"
+      Description: "DIY brand assessment template with video walkthrough"
+      DefaultPortal: !Ref bac-portal
+      Items:
+        - Product: !Ref bac-product
+      PricingPlans:
+        - !Ref bac-price
+
+  # ============================================
+  # 📦 PRODUCT
+  # ============================================
+  bac-product:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Brand Audit Checklist"
+      ProductType: page
+      Description: "Complete DIY brand assessment toolkit"
+      Page:
+        Title: "Your Brand Audit Checklist"
+        Content: |
+          ## Welcome to Your Brand Audit!
+          
+          Use this toolkit to evaluate your current brand and identify areas for improvement.
+          
+          ---
+          
+          ## Video Walkthrough
+          
+          Watch this 15-minute video to learn how to use the checklist effectively.
+          
+          <iframe src="https://www.youtube.com/embed/BAC_WALKTHROUGH" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+          
+          ---
+          
+          ## Download Your Materials
+          
+          **[Download Brand Audit Checklist (PDF)](https://drive.google.com/your-checklist-pdf)**
+          
+          A comprehensive 25-point checklist covering logo, colors, typography, messaging, and consistency.
+          
+          **[Download Scoring Worksheet (Google Sheets)](https://docs.google.com/spreadsheets/your-worksheet)**
+          
+          Score each area of your brand and see your overall brand health rating.
+          
+          **[Download Action Plan Template (PDF)](https://drive.google.com/your-action-plan)**
+          
+          Turn your audit findings into a prioritized improvement plan.
+          
+          ---
+          
+          ## What's Next?
+          
+          After completing your audit, you may discover your brand needs professional help. I offer logo design and full brand identity packages for businesses ready to level up.
+          
+          **[Learn About My Services →](https://sarahdesigns.co/services)**
+
+  # ============================================
+  # 💰 PRICING PLAN
+  # ============================================
+  bac-price:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Brand Audit Checklist"
+      Description: "One-time purchase"
+      Amount: 4700
+      Currency: USD
+      BillingType: one_time
+
+  # ============================================
+  # 🚀 FUNNEL
+  # ============================================
+  bac-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Brand Audit Sales Page"
+      Description: "Sales funnel for Brand Audit Checklist"
+      Steps:
+        - Name: "Sales Page"
+          Slug: sales
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Is Your Brand Working Against You?"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Find out in 30 minutes with the Brand Audit Checklist"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=BAC_PROMO"
+                    Provider: youtube
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "What You'll Discover"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      **The 25-Point Brand Audit Checklist** helps you evaluate:
+                      
+                      ✓ **Logo & Visual Identity** - Is your logo professional and versatile?
+                      
+                      ✓ **Color Palette** - Are your colors consistent and intentional?
+                      
+                      ✓ **Typography** - Do your fonts communicate the right message?
+                      
+                      ✓ **Brand Messaging** - Is your positioning clear and compelling?
+                      
+                      ✓ **Consistency** - Does your brand look cohesive everywhere?
+                      
+                      ---
+                      
+                      **You'll also get:**
+                      
+                      - Scoring worksheet to rate each area
+                      - Video walkthrough (15 min) explaining each criterion
+                      - Action plan template to prioritize improvements
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Get Instant Access - $47"
+                - Type: checkout
+                  Order: 2
+                  Content:
+                    OfferSlug: !Ref bac-offer
+                    PricingPlanSlug: !Ref bac-price
+                    ButtonText: "Get the Checklist"
+        - Name: "Thank You"
+          Slug: thank-you
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're In!"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Thanks for your purchase! Check your email for login details.
+                      
+                      **What's next:**
+                      
+                      1. Log into your portal
+                      2. Watch the video walkthrough
+                      3. Download the checklist and worksheet
+                      4. Complete your brand audit
+                      
+                      Questions? Reply to any email - I read every one.
+
+  # ============================================
+  # 📋 FORM
+  # ============================================
+  bac-lead-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Brand Tips Signup"
+      Description: "Lead capture for brand tips email list"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@company.com"
+      SubmitButton:
+        Text: "Get Free Brand Tips"
+        BackgroundColor: "#2563eb"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 400
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  bac-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Brand Audit Portal"
+      Description: "Portal for Brand Audit Checklist buyers"
+      ThemeConfig:
+        PrimaryColor: "#2563eb"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  bac-tag-buyer:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Brand Audit Buyer"
+      Description: "Purchased Brand Audit Checklist"
+
+  bac-tag-lead:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Brand Tips Subscriber"
+      Description: "Signed up for brand tips"
+
+  bac-tag-engaged:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Engaged Buyer"
+      Description: "Opened multiple emails or clicked links"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  bac-workflow-purchase:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Brand Audit Purchase"
+      Description: "Triggers when someone purchases the checklist"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref bac-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref bac-tag-buyer
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref bac-seq-welcome
+
+  bac-workflow-lead:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Brand Tips Signup"
+      Description: "Triggers when someone signs up for brand tips"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref bac-lead-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref bac-tag-lead
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCE
+  # ============================================
+  bac-seq-welcome:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Brand Audit Welcome"
+      Description: "Welcome sequence for checklist buyers"
+      Steps:
+        - TemplateSlug: !Ref bac-email-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref bac-email-tip
+          DelayAmount: 3
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref bac-email-upsell
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 3
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  bac-email-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Brand Audit Welcome"
+      Subject: "Your Brand Audit Checklist is ready!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Your Brand Audit Checklist is Ready!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thanks for purchasing the Brand Audit Checklist! Here's how to get started:
+              
+              **Step 1:** Log into your portal using the button below
+              
+              **Step 2:** Watch the 15-minute video walkthrough
+              
+              **Step 3:** Download the checklist and scoring worksheet
+              
+              **Step 4:** Set aside 30 minutes to complete your audit
+              
+              Most business owners are surprised by what they discover. The checklist covers areas you probably haven't thought about in a while.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Your Checklist"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Questions? Just reply to this email.
+              
+              Happy auditing!
+              
+              Sarah
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  bac-email-tip:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Brand Audit Tip"
+      Subject: "The #1 brand mistake I see"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "The #1 Brand Mistake"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              After working with 100+ businesses on their brands, the #1 mistake I see is **inconsistency**.
+              
+              Your logo might be great. Your colors might be on point. But if they're applied differently on your website, social media, and business cards... your brand looks amateur.
+              
+              When you complete your Brand Audit, pay special attention to Section 5: Consistency. This is where most brands lose points.
+              
+              **Quick fix:** Create a simple one-page brand guide with your logo, colors, and fonts. Share it with anyone who creates content for your business.
+              
+              Have you completed your audit yet? I'd love to hear what you discovered.
+              
+              Sarah
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  bac-email-upsell:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Logo Package Upsell"
+      Subject: "Need help with your brand?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Ready to Level Up Your Brand?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              How did your Brand Audit go? If you discovered your brand needs more than a few tweaks, I can help.
+              
+              **Logo Design Package - $1,500**
+              
+              Perfect if your audit revealed logo issues:
+              - Discovery questionnaire to understand your business
+              - 3 unique logo concepts
+              - 3 rounds of revisions
+              - Final files in all formats (web, print, social)
+              - Basic usage guidelines
+              
+              **Brand Identity Package - $3,500**
+              
+              Ideal if you need a complete refresh:
+              - Everything in Logo Design, plus:
+              - Full color palette with codes
+              - Typography system
+              - Brand guidelines document
+              - Social media templates
+              - Business card design
+              
+              Interested? Reply to this email or book a free 15-minute discovery call.
+              
+              Sarah
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Learn More About My Services"
+            LinkUrl: "https://sarahdesigns.co/services"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#2563eb"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  bac-business:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "Sarah Designs LLC"
+      Email: "hello@sarahdesigns.co"
+      Phone: "+1-555-DESIGN"
+      Timezone: "America/New_York"
+      BusinessType: "LLC"
+      Industry: "Graphic Design"
+      SignatureText: "Sarah Designs"

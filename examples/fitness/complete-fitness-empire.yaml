@@ -1,0 +1,1742 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFERS
+  # ============================================
+  foundations-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Strength Foundations"
+      Description: "Learn proper form for the 5 essential lifting movements - your entry point to the Empire Fitness ecosystem"
+      DefaultPortal: !Ref empire-portal
+      Items:
+        - Product: !Ref foundations-course
+        - Product: !Ref empire-resources
+      PricingPlans:
+        - !Ref foundations-price
+
+  community-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Fit Community"
+      Description: "Monthly membership with community access, weekly group coaching calls, and bonus resources"
+      DefaultPortal: !Ref empire-portal
+      Items:
+        - Product: !Ref community-membership
+        - Product: !Ref empire-resources
+      PricingPlans:
+        - !Ref community-monthly
+
+  coaching-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Elite Coaching"
+      Description: "12-week personalized coaching program with private sessions, community access, and complete resources"
+      DefaultPortal: !Ref empire-portal
+      Items:
+        - Product: !Ref coaching-sessions
+        - Product: !Ref community-membership
+        - Product: !Ref empire-resources
+      PricingPlans:
+        - !Ref coaching-pif
+        - !Ref coaching-split
+
+  # ============================================
+  # 📦 PRODUCTS
+  # ============================================
+  foundations-course:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Strength Foundations Course"
+      ProductType: course
+      Description: "Master the 5 essential lifting movements with step-by-step video instruction"
+      Course:
+        Title: "Strength Foundations"
+        Description: "Learn proper form for squats, deadlifts, bench press, overhead press, and barbell rows"
+        Modules:
+          - Title: "Welcome & Getting Started"
+            Order: 1
+            Lessons:
+              - Title: "Welcome to Strength Foundations"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/foundations-welcome"
+              - Title: "How to Use This Course"
+                Order: 2
+                ContentType: text
+                TextContent: |
+                  Welcome to Strength Foundations!
+                  
+                  This course teaches you proper form for the 5 essential 
+                  barbell movements. Work through each module in order and 
+                  practice with light weight before adding load.
+                  
+                  **Your learning path:**
+                  1. Watch each video carefully
+                  2. Practice with just the bar or light weight
+                  3. Film yourself to check form
+                  4. Move on once you feel confident
+                  
+                  Take your time. There's no rush.
+          - Title: "The Squat"
+            Order: 2
+            Lessons:
+              - Title: "Squat Setup & Execution"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/squat-full"
+              - Title: "Common Squat Mistakes"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/squat-mistakes"
+          - Title: "The Deadlift"
+            Order: 3
+            Lessons:
+              - Title: "Deadlift Setup & Execution"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/deadlift-full"
+              - Title: "Common Deadlift Mistakes"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/deadlift-mistakes"
+          - Title: "The Bench Press"
+            Order: 4
+            Lessons:
+              - Title: "Bench Press Setup & Execution"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/bench-full"
+              - Title: "Common Bench Press Mistakes"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/bench-mistakes"
+          - Title: "The Overhead Press"
+            Order: 5
+            Lessons:
+              - Title: "Overhead Press Setup & Execution"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/ohp-full"
+              - Title: "Common Overhead Press Mistakes"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/ohp-mistakes"
+
+  community-membership:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Fit Community Membership"
+      ProductType: community
+      Description: "Private community with weekly group coaching calls"
+      Community:
+        Name: "Fit Community"
+        Description: "Your private community for accountability, support, and expert coaching"
+        Spaces:
+          - Name: "General"
+            Slug: general
+            Description: "Introduce yourself and connect with members"
+            Order: 1
+          - Name: "Wins & Progress"
+            Slug: wins
+            Description: "Share your victories big and small"
+            Order: 2
+          - Name: "Q&A"
+            Slug: qa
+            Description: "Ask questions and get answers"
+            Order: 3
+          - Name: "Accountability"
+            Slug: accountability
+            Description: "Daily check-ins and accountability partners"
+            Order: 4
+        Events:
+          - Title: "Weekly Group Coaching Call"
+            Description: "Live Q&A and coaching with Coach Mike. Bring your questions!"
+            StartAt: "2025-01-09T19:00:00-05:00"
+            EndAt: "2025-01-09T20:00:00-05:00"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/empire-group"
+            HostUserEmail: "coach@empirefitness.com"
+            RecurrenceRule:
+              Frequency: weekly
+              Interval: 1
+              DaysOfWeek: [4]
+              EndType: never
+
+  coaching-sessions:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Elite 1:1 Coaching Sessions"
+      ProductType: coaching
+      Description: "12 private coaching calls with personalized programming"
+      Coaching:
+        Title: "1:1 Coaching Session"
+        Description: "45-minute private coaching call with form analysis, program adjustments, and accountability review"
+        Quantity: 12
+        BookingLink: !Ref coaching-call
+        ExpirationDays: 180
+
+  empire-resources:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Empire Fitness Resources"
+      ProductType: page
+      Description: "Shared resources for all Empire Fitness members"
+      Page:
+        Title: "Member Resources"
+        Content: |
+          ## Welcome to Empire Fitness
+          
+          This page contains resources available to all Empire Fitness members.
+          
+          ### Quick Links
+          
+          - **Foundations Course Buyers:** Start with the course modules in order
+          - **Community Members:** Join the weekly calls (Thursdays 7pm ET)
+          - **Coaching Clients:** Book your sessions and engage in the community
+          
+          ### Weekly Schedule
+          
+          **Thursday 7pm ET** - Weekly Group Coaching Call (Community & Coaching members)
+          
+          ### Booking Your Coaching Sessions
+          
+          If you have 1:1 coaching sessions:
+          1. Click "Coaching Sessions" in your portal
+          2. Select an available time
+          3. Receive confirmation with Zoom link
+          
+          ### Questions?
+          
+          - Post in the Q&A community space
+          - Email coach@empirefitness.com
+          - Reply to any email from us
+
+  # ============================================
+  # 💰 PRICING PLANS
+  # ============================================
+  foundations-price:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Strength Foundations"
+      Description: "One-time payment for lifetime access"
+      Amount: 4700
+      Currency: USD
+      BillingType: one_time
+
+  community-monthly:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Monthly Membership"
+      Description: "Recurring monthly access to Fit Community"
+      Amount: 9700
+      Currency: USD
+      BillingType: subscription
+      BillingInterval: monthly
+
+  coaching-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Pay in Full"
+      Description: "One-time payment for Elite Coaching"
+      Amount: 500000
+      Currency: USD
+      BillingType: one_time
+
+  coaching-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "3-Payment Plan"
+      Description: "Split into 3 monthly payments"
+      Amount: 525000
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  # ============================================
+  # 🚀 FUNNELS
+  # ============================================
+  foundations-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Strength Foundations Sales Page"
+      Description: "Low-ticket funnel for Strength Foundations course"
+      Steps:
+        - Name: "Sales Page"
+          Slug: sales
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Finally Learn Proper Lifting Form (Without Hiring a $150/Hour Trainer)"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Master the 5 essential barbell movements with step-by-step video instruction"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=FOUNDATIONS_VSL"
+                    Provider: youtube
+                - Type: checkout
+                  Order: 4
+                  Content:
+                    OfferSlug: !Ref foundations-offer
+                    PricingPlanSlug: !Ref foundations-price
+                    ButtonText: "Get Instant Access - $47"
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Sound familiar?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You walk into the gym and stare at the barbell, wondering if you're about to build muscle or destroy your back.
+                      
+                      You've watched YouTube videos, but when you're actually standing there, you have no idea if your form is right.
+                      
+                      Every week that passes is another week of wasted gym sessions and potential injuries.
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's everything you get:"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      ✓ The Squat Masterclass (Value: $97)
+                      ✓ The Deadlift Masterclass (Value: $97)
+                      ✓ The Bench Press Masterclass (Value: $97)
+                      ✓ The Overhead Press Masterclass (Value: $97)
+                      ✓ The Barbell Row Masterclass (Value: $97)
+                      
+                      Total Value: $485
+                      
+                      **Your investment today: Just $47**
+            - Type: testimonials
+              Order: 4
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "I was terrified of deadlifts. After this course, I pulled 185lbs with zero back pain."
+                    Author: "Mark R., 42"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "Finally stepped into the squat rack with confidence. Down 15lbs and getting stronger!"
+                    Author: "Jennifer T., 34"
+                    Rating: 5
+            - Type: cta
+              Order: 5
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Stop Guessing. Start Lifting."
+                - Type: checkout
+                  Order: 2
+                  Content:
+                    OfferSlug: !Ref foundations-offer
+                    PricingPlanSlug: !Ref foundations-price
+                    ButtonText: "Get Instant Access - $47"
+        - Name: "Thank You"
+          Slug: thank-you
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "You're In!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=FOUNDATIONS_THANKYOU"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Check your email for login details.
+                      
+                      Start with the Welcome module, then work through one movement per day.
+                      
+                      See you inside!
+
+  community-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Fit Community Sales Page"
+      Description: "Subscription funnel for Fit Community membership"
+      Steps:
+        - Name: "Sales Page"
+          Slug: sales
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Stop Working Out Alone (And Finally Get Results)"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Join hundreds of members getting expert coaching, accountability, and proven workouts for just $97/month"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=COMMUNITY_VSL"
+                    Provider: youtube
+                - Type: two_step_checkout
+                  Order: 4
+                  Content:
+                    OfferSlug: !Ref community-offer
+                    PricingPlanSlug: !Ref community-monthly
+                    ButtonText: "Join the Community - $97/month"
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Does this sound familiar?"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      You start a new workout program, excited and motivated.
+                      
+                      Then life happens. You miss a day. Then two. Before you know it, you're back to square one.
+                      
+                      The truth is, fitness isn't just about having a program. It's about having support.
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Here's everything you get as a member:"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      ✓ Private Community Access (Value: $197/month)
+                      Connect with members who get it. Share wins, ask questions, stay accountable.
+                      
+                      ✓ Weekly Live Coaching Calls (Value: $297/month)
+                      Every Thursday at 7pm ET. Get your questions answered live.
+                      
+                      ✓ Member Resources Library (Value: $97)
+                      Guides, templates, and helpful materials.
+                      
+                      ✓ Direct Access to Coach Mike
+                      Post in the Q&A space and get answers within 24 hours.
+                      
+                      Total Value: $591+/month
+                      
+                      **Your investment: Just $97/month (cancel anytime)**
+            - Type: testimonials
+              Order: 4
+              Elements:
+                - Type: testimonial
+                  Order: 1
+                  Content:
+                    Quote: "The weekly calls keep me accountable. Down 23lbs and still going strong!"
+                    Author: "Michelle K., 38"
+                    Rating: 5
+                - Type: testimonial
+                  Order: 2
+                  Content:
+                    Quote: "Coach Mike fixed my squat form and my knee pain disappeared. Plus I've made real friends."
+                    Author: "James T., 45"
+                    Rating: 5
+            - Type: cta
+              Order: 5
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Your Fitness Journey Shouldn't Be Solo"
+                - Type: two_step_checkout
+                  Order: 2
+                  Content:
+                    OfferSlug: !Ref community-offer
+                    PricingPlanSlug: !Ref community-monthly
+                    ButtonText: "Join the Community - $97/month"
+        - Name: "Thank You"
+          Slug: thank-you
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Welcome to the Community!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=COMMUNITY_THANKYOU"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Check your email for login details.
+                      
+                      Here's what to do first:
+                      1. Log in and introduce yourself in General
+                      2. Mark your calendar for Thursday 7pm ET
+                      3. Explore the resources
+                      
+                      Welcome to the team!
+
+  coaching-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Elite Coaching Application"
+      Description: "High-ticket application funnel for Elite Coaching"
+      Steps:
+        - Name: "Apply Now"
+          Slug: apply
+          Order: 1
+          Sections:
+            - Type: hero
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Apply for Elite 1:1 Coaching"
+                - Type: subheadline
+                  Order: 2
+                  Content:
+                    Text: "Limited spots for serious individuals ready for personalized transformation"
+                - Type: video
+                  Order: 3
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=COACHING_APPLICATION"
+                    Provider: youtube
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "This is NOT for everyone"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      Elite 1:1 Coaching is for high-performers who are done with cookie-cutter programs.
+                      
+                      **This is for you if:**
+                      ✓ You're a busy professional who values your time
+                      ✓ You want customized programming, not generic workouts
+                      ✓ You're ready to invest in yourself at a premium level
+                      ✓ You're committed to showing up and doing the work
+                      
+                      **This is NOT for you if:**
+                      ✗ You're looking for the cheapest option
+                      ✗ You're not ready to commit to 12 weeks
+                      ✗ You make excuses instead of results
+            - Type: content
+              Order: 3
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "What you get with Elite 1:1 Coaching:"
+                - Type: text
+                  Order: 2
+                  Content:
+                    Text: |
+                      **12 Private Coaching Sessions**
+                      45-minute 1:1 calls where we analyze your form, adjust programming, and keep you accountable.
+                      
+                      **Customized Programming**
+                      Your workout program built specifically for your goals, equipment, and schedule.
+                      
+                      **Community Access**
+                      Connect with other elite clients and get answers between sessions.
+                      
+                      **Client Resources**
+                      Everything you need in one place.
+                      
+                      Ready to transform? Fill out the application below.
+            - Type: form
+              Order: 4
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Fill out your application:"
+                - Type: form
+                  Order: 2
+                  Content:
+                    FormSlug: !Ref coaching-application-form
+                    OnSuccess:
+                      Action: next_step
+        - Name: "Book Your Call"
+          Slug: book
+          Order: 2
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Application Received!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=COACHING_BOOKING"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      Thank you for applying to Elite 1:1 Coaching.
+                      
+                      **Next Step: Book Your Strategy Call**
+                      
+                      This is a 45-minute call where we'll:
+                      ✓ Discuss your fitness goals and current situation
+                      ✓ Identify what's been holding you back
+                      ✓ Determine if Elite Coaching is right for you
+                      
+                      Please come prepared to discuss your goals and commitment level.
+            - Type: content
+              Order: 2
+              Elements:
+                - Type: subheadline
+                  Order: 1
+                  Content:
+                    Text: "Select a time that works for you:"
+                - Type: booking_link
+                  Order: 2
+                  Content:
+                    BookingLinkSlug: !Ref strategy-call
+                    OnSuccess:
+                      Action: next_step
+        - Name: "You're Booked"
+          Slug: confirmed
+          Order: 3
+          Sections:
+            - Type: content
+              Order: 1
+              Elements:
+                - Type: headline
+                  Order: 1
+                  Content:
+                    Text: "Your Strategy Call is Confirmed!"
+                - Type: video
+                  Order: 2
+                  Content:
+                    Url: "https://www.youtube.com/watch?v=COACHING_CONFIRMED"
+                    Provider: youtube
+                - Type: text
+                  Order: 3
+                  Content:
+                    Text: |
+                      You're one step closer to transforming your fitness.
+                      
+                      **Check your email for:**
+                      - Calendar invitation with Zoom link
+                      - Call details and what to expect
+                      
+                      **How to prepare:**
+                      1. Write down your specific goals
+                      2. Know your "why"
+                      3. Be honest about your current situation
+                      4. Prepare your questions
+                      5. Be ready to commit if we're a good fit
+                      
+                      I'm looking forward to speaking with you!
+
+  # ============================================
+  # 📋 FORMS
+  # ============================================
+  coaching-application-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Elite Coaching Application"
+      Description: "Qualifying application for Elite 1:1 Coaching"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your full name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@example.com"
+        - Type: standard
+          FieldName: phone
+          Required: true
+          Placeholder: "+1 (555) 123-4567"
+        - Type: custom
+          CustomFieldSlug: !Ref fitness-goals
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref experience-level
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref commitment-level
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref how-heard
+          Required: false
+      SubmitButton:
+        Text: "Submit Application"
+        BackgroundColor: "#1e40af"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 600
+        Padding: 24
+        BorderRadius: 8
+
+  # ============================================
+  # 🌐 PORTAL
+  # ============================================
+  empire-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Empire Fitness Portal"
+      Description: "Unified portal for all Empire Fitness members"
+      ThemeConfig:
+        PrimaryColor: "#1e40af"
+
+  # ============================================
+  # 📅 BOOKING LINKS
+  # ============================================
+  strategy-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Strategy Call"
+      OwnerUserEmail: "coach@empirefitness.com"
+      Description: "45-minute strategy call to discuss your fitness goals and determine if Elite Coaching is right for you"
+      DurationMinutes: 45
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  coaching-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "1:1 Coaching Session"
+      OwnerUserEmail: "coach@empirefitness.com"
+      Description: "45-minute private coaching session with form analysis and program adjustments"
+      DurationMinutes: 45
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 60
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🔄 PIPELINE
+  # ============================================
+  coaching-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Elite Coaching Sales"
+      Description: "Track high-ticket coaching prospects"
+      Stages:
+        - Name: "Lead"
+          Slug: lead
+          Order: 1
+          Description: "Initial interest"
+        - Name: "Applied"
+          Slug: applied
+          Order: 2
+          Description: "Submitted application"
+        - Name: "Call Scheduled"
+          Slug: call-scheduled
+          Order: 3
+          Description: "Strategy call booked"
+        - Name: "Call Completed"
+          Slug: call-completed
+          Order: 4
+          Description: "Strategy call finished"
+        - Name: "Closed Won"
+          Slug: closed-won
+          Order: 5
+          Description: "Enrolled in program"
+        - Name: "Closed Lost"
+          Slug: closed-lost
+          Order: 6
+          Description: "Did not enroll"
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  fitness-goals:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What are your primary fitness goals?"
+      FieldType: textarea
+      Placeholder: "Describe what you want to achieve..."
+      HelpText: "Be specific about what transformation looks like for you"
+
+  experience-level:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What is your current fitness experience level?"
+      FieldType: select
+      Options:
+        - "Beginner"
+        - "Intermediate"
+        - "Advanced"
+      HelpText: "This helps us customize your experience"
+
+  commitment-level:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Are you ready to commit to the process?"
+      FieldType: select
+      Options:
+        - "Yes, I'm fully committed and ready to invest in myself"
+        - "I need more information before deciding"
+        - "I'm exploring my options"
+      HelpText: "Be honest about where you are"
+
+  how-heard:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "How did you hear about us?"
+      FieldType: select
+      Options:
+        - "Social Media"
+        - "Referral"
+        - "Google"
+        - "Other"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  foundations-buyer:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Foundations Buyer"
+      Description: "Purchased Strength Foundations course"
+
+  community-member:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Community Member"
+      Description: "Active Fit Community subscriber"
+
+  coaching-applicant:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Coaching Applicant"
+      Description: "Applied for Elite Coaching"
+
+  coaching-client:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Coaching Client"
+      Description: "Active Elite Coaching client"
+
+  upsell-candidate:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Upsell Candidate"
+      Description: "Qualified for upsell nurture"
+
+  vip-customer:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "VIP Customer"
+      Description: "Has purchased multiple offers"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  foundations-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Foundations Purchase"
+      Description: "Triggers when someone purchases Strength Foundations"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref foundations-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref foundations-buyer
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref foundations-onboarding
+
+  community-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Community Purchase"
+      Description: "Triggers when someone subscribes to Fit Community"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref community-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref community-member
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref community-onboarding
+
+  coaching-purchase-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Coaching Purchase"
+      Description: "Triggers when someone purchases Elite Coaching"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref coaching-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref coaching-client
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref vip-customer
+        - Type: enroll_sequence
+          Order: 3
+          Config:
+            SequenceSlug: !Ref coaching-onboarding
+
+  coaching-application-workflow:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Coaching Application Submitted"
+      Description: "Triggers when someone submits the coaching application"
+      Triggers:
+        - EventType: FormSubmitted
+          FilterConfig:
+            Field: form.slug
+            Operator: EQUALS
+            Value: !Ref coaching-application-form
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref coaching-applicant
+
+  foundations-to-community-upsell:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Foundations to Community Upsell"
+      Description: "Nurtures course buyers toward community membership after 14 days"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref foundations-offer
+      Steps:
+        - Type: wait_duration
+          Order: 1
+          Config:
+            Days: 14
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref upsell-candidate
+        - Type: enroll_sequence
+          Order: 3
+          Config:
+            SequenceSlug: !Ref community-upsell-sequence
+
+  community-to-coaching-upsell:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Community to Coaching Upsell"
+      Description: "Nurtures community members toward coaching after 30 days"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref community-offer
+      Steps:
+        - Type: wait_duration
+          Order: 1
+          Config:
+            Days: 30
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref coaching-upsell-sequence
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCES
+  # ============================================
+  foundations-onboarding:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Foundations Onboarding"
+      Description: "Welcome sequence for Strength Foundations buyers"
+      Steps:
+        - TemplateSlug: !Ref foundations-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref foundations-midcourse
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref foundations-complete
+          DelayAmount: 14
+          DelayUnit: days
+          Order: 3
+
+  community-onboarding:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Community Onboarding"
+      Description: "Welcome sequence for Fit Community members"
+      Steps:
+        - TemplateSlug: !Ref community-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref community-engage
+          DelayAmount: 3
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref community-coaching-awareness
+          DelayAmount: 14
+          DelayUnit: days
+          Order: 3
+
+  coaching-onboarding:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Coaching Onboarding"
+      Description: "Welcome sequence for Elite Coaching clients"
+      Steps:
+        - TemplateSlug: !Ref coaching-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref coaching-prep
+          DelayAmount: 1
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref coaching-checkin
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 3
+
+  community-upsell-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Community Upsell"
+      Description: "Pitches community membership to course buyers"
+      Steps:
+        - TemplateSlug: !Ref community-upsell-1
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref community-upsell-2
+          DelayAmount: 3
+          DelayUnit: days
+          Order: 2
+
+  coaching-upsell-sequence:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Coaching Upsell"
+      Description: "Pitches Elite Coaching to community members"
+      Steps:
+        - TemplateSlug: !Ref coaching-upsell-1
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref coaching-upsell-2
+          DelayAmount: 3
+          DelayUnit: days
+          Order: 2
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  foundations-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Foundations Welcome"
+      Subject: "Your Strength Training Foundations course is ready"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Strength Foundations!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thanks for joining Strength Foundations! You now have access 
+              to complete video instruction for the 5 essential barbell 
+              movements.
+              
+              Here's how to get started:
+              
+              1. Start with the Welcome module
+              2. Work through one movement per day
+              3. Practice with light weight
+              
+              Take your time. The goal is to build a foundation you can 
+              rely on for years.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Start the Course"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#1e40af"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  foundations-midcourse:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Foundations Mid-Course"
+      Subject: "How's your first week going?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Week 1 Check-in"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've had a week with Strength Foundations. How's it going?
+              
+              By now you should have worked through at least a few movement 
+              tutorials. If you haven't had a chance yet, that's okay. The 
+              course isn't going anywhere.
+              
+              A few tips as you practice:
+              
+              - Light weight is your friend right now
+              - Film yourself to check your form
+              - Feeling awkward is normal when learning
+              
+              Keep at it!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Continue the Course"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#1e40af"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  foundations-complete:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Foundations Complete"
+      Subject: "What's next for your strength training?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "You've Got the Foundations"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              It's been two weeks since you started Strength Foundations. 
+              By now you should have a solid understanding of the 5 
+              essential movements.
+              
+              So what's next?
+              
+              The foundation you've built is exactly that - a foundation. 
+              Now it's time to build on it with progressive programming, 
+              nutrition guidance, and ongoing accountability.
+              
+              If you're ready for more support, check out our Fit Community 
+              where you get weekly coaching calls and a supportive community.
+              
+              Reply to this email if you'd like to learn more!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Review the Course"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#1e40af"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  community-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Community Welcome"
+      Subject: "Welcome to Fit Community, {{contact.name}}!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Fit Community!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Welcome to Fit Community! You've just joined a supportive 
+              group of people committed to getting stronger and healthier.
+              
+              Here's how to get started:
+              
+              **Step 1: Introduce Yourself**
+              Head to the General space and tell us about yourself and 
+              your fitness goals.
+              
+              **Step 2: Mark Your Calendar**
+              Weekly group coaching calls are every Thursday at 7pm ET.
+              
+              **Step 3: Explore**
+              Check out the resources and start connecting with members.
+              
+              This is your time. Let's make it count.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Enter Your Portal"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#1e40af"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  community-engage:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Community Engagement"
+      Subject: "Have you posted in the community yet?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Quick Check-in"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've been a member for a few days now. How's it going?
+              
+              Reminder: Tomorrow's group coaching call is at 7pm ET. It's 
+              a great chance to:
+              
+              - Get your questions answered live
+              - Connect with other members
+              - Stay accountable
+              
+              If you haven't introduced yourself in the community yet, 
+              now's the time! The members here are incredibly supportive.
+              
+              You don't have to go through this alone anymore.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Join the Community"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#1e40af"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  community-coaching-awareness:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Community Coaching Awareness"
+      Subject: "Taking your training to the next level"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Two Weeks In"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've been part of Fit Community for two weeks now. I hope 
+              you're finding value in the weekly calls and community support.
+              
+              I wanted to let you know about another option we offer for 
+              members who want more personalized attention.
+              
+              **Elite 1:1 Coaching** includes:
+              - 12 private coaching sessions
+              - Customized programming just for you
+              - Direct access between sessions
+              - Plus everything in the community
+              
+              It's our most intensive program for people serious about 
+              transformation.
+              
+              If you're curious, reply to this email and I'll share more 
+              details. No pressure - just want you to know it exists!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Continue in Community"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#1e40af"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  coaching-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Welcome"
+      Subject: "Welcome to Elite 1:1 Coaching, {{contact.name}}!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Elite Coaching!"
+          Settings:
+            Alignment: center
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Welcome to Elite 1:1 Coaching! I'm thrilled to work with you.
+              
+              You've made an incredible investment in yourself, and I'm 
+              committed to delivering results that exceed your expectations.
+              
+              **Here's what to do right now:**
+              
+              1. **Access Your Portal** - Click below to log in
+              2. **Book Your First Session** - Do this within 7 days
+              3. **Introduce Yourself** - Post in the community
+              4. **Read the Resources** - Know what to expect
+              
+              I can't wait to get started!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Your Portal"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#1e40af"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  coaching-prep:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Session Prep"
+      Subject: "Preparing for your first coaching session"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Session Prep"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Your first coaching session is coming up! Here's how to 
+              make the most of it:
+              
+              **Before the session:**
+              - Write down your top 3 goals for the next 12 weeks
+              - List any questions or concerns you have
+              - Have your current workout routine ready to discuss
+              
+              **During the session:**
+              - We'll finalize your personalized program
+              - Cover proper form for key movements
+              - Set clear expectations and milestones
+              
+              **After the session:**
+              - You'll have a custom program to follow
+              - Post questions in the community between sessions
+              - Book your next session before you leave
+              
+              See you soon!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Session"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#1e40af"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  coaching-checkin:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Week 1 Check-in"
+      Subject: "How's your first week going?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Week 1 Check-in"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've been in Elite Coaching for a week. How's it going?
+              
+              Quick check:
+              
+              ✓ Have you completed your first coaching session?
+              ✓ Are you following your personalized program?
+              ✓ Have you engaged in the community?
+              
+              If you answered "no" to any of these, no judgment. But let's 
+              get back on track.
+              
+              Remember why you're here. You invested in yourself because 
+              you're serious about results.
+              
+              Questions? Post in the community or reply to this email.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Go to Your Portal"
+            LinkUrl: "{{portal.url}}"
+          Settings:
+            Alignment: center
+            BackgroundColor: "#1e40af"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  community-upsell-1:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Community Upsell 1"
+      Subject: "Ready for more support?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "What's Next?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've been crushing it with Strength Foundations! By now 
+              you should have a solid grasp of proper form for the 5 
+              essential movements.
+              
+              But here's the thing: knowing the movements is just the 
+              beginning. The real transformation happens when you have 
+              ongoing support, accountability, and progressive programming.
+              
+              That's why I wanted to tell you about **Fit Community**.
+              
+              For just $97/month, you get:
+              
+              ✓ Weekly live coaching calls (every Thursday 7pm ET)
+              ✓ Private community for accountability
+              ✓ Direct Q&A access
+              ✓ All the resources you need
+              
+              It's the natural next step after Foundations.
+              
+              Reply to this email if you have questions!
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  community-upsell-2:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Community Upsell 2"
+      Subject: "Last chance to join"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Quick Follow-up"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I wanted to follow up about Fit Community.
+              
+              Here's what members are saying:
+              
+              "The weekly calls keep me accountable. Down 23lbs and still 
+              going strong!" - Michelle K.
+              
+              "I've made real friends who understand the fitness journey." 
+              - James T.
+              
+              If you're serious about taking your training to the next 
+              level, the community is where it happens.
+              
+              $97/month. Cancel anytime.
+              
+              Reply to this email if you'd like to join!
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  coaching-upsell-1:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Upsell 1"
+      Subject: "Ready for personalized coaching?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "The Next Level"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You've been part of Fit Community for a month now. I hope 
+              the weekly calls and community support have been valuable.
+              
+              I wanted to share something with you.
+              
+              Some members reach a point where they want MORE. More 
+              personalization. More 1:1 attention. More accountability.
+              
+              That's what **Elite 1:1 Coaching** is for.
+              
+              With Elite Coaching, you get:
+              
+              ✓ 12 private coaching sessions
+              ✓ Customized programming just for you
+              ✓ Direct access to me between sessions
+              ✓ Everything in the community (which you already have)
+              
+              It's our most intensive program for people who are serious 
+              about transformation.
+              
+              If you're curious, apply here: [link to coaching funnel]
+              
+              No pressure. Just wanted you to know it exists.
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  coaching-upsell-2:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Upsell 2"
+      Subject: "Is personalized coaching right for you?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Quick Follow-up"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I wanted to follow up about Elite 1:1 Coaching.
+              
+              Here's who it's for:
+              
+              ✓ Busy professionals who want customized programming
+              ✓ People who've hit a plateau and need expert guidance
+              ✓ Those who value personalized attention
+              ✓ Anyone committed to serious transformation
+              
+              Here's who it's NOT for:
+              
+              ✗ People looking for the cheapest option
+              ✗ Those not ready to commit
+              
+              If Elite Coaching sounds like a fit, apply here: [link]
+              
+              We'll hop on a strategy call to see if we're a good match.
+              
+              No pressure. But if you're ready for more, I'm here.
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+          Settings:
+            FontSize: 12
+            TextColor: "#6b7280"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  business-profile:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "Empire Fitness LLC"
+      Email: "coach@empirefitness.com"
+      Phone: "+1-555-EMPIRE"
+      Timezone: "America/New_York"
+      BusinessType: "LLC"
+      Industry: "Fitness & Health"
+      SignatureText: "Coach Mike, Empire Fitness"
