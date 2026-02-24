@@ -879,7 +879,7 @@ Elements are the building blocks inside sections. Each element has `Type`, `Orde
 
 | Type | Content Properties | Description |
 |------|-------------------|-------------|
-| `image` | `Src` (url, required), `Alt` (string) | Display an image |
+| `image` | `Alt` (string) | Display an image (upload via UI after import) |
 | `video` | `Url` (url, required), `Provider` (enum: `youtube`, `vimeo`, `wistia`) | Embed a video |
 
 **Interactive Elements:**
