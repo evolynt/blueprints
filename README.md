@@ -222,7 +222,7 @@ Creates a scheduling page where Contacts can book appointments.
 | Property | Type | Required | Default | Description |
 |----------|------|----------|---------|-------------|
 | Name | string | Yes | - | Display name for the booking link |
-| OwnerUserEmail | string | Yes | - | Email of the staff member who owns this booking link |
+| OwnerUserEmail | string | Yes | - | Email of the team member who owns this booking link |
 | Description | string | No | - | Description shown on the public booking page |
 | DurationMinutes | number | Yes | - | Appointment duration (5-480 minutes) |
 | BufferBeforeMinutes | number | No | 0 | Buffer time before appointments |
@@ -1139,7 +1139,7 @@ Listens for events and automatically takes action: sending emails, adding tags, 
 | Type | Config Properties | Description |
 |------|-------------------|-------------|
 | `send_email` | `TemplateSlug: !Ref slug` | Send email to contact |
-| `send_internal_notification` | `TemplateSlug: !Ref slug`, `RecipientType: 'owner'` or `'specific_user'`, `RecipientUserId?: string` | Send email to staff |
+| `send_internal_notification` | `TemplateSlug: !Ref slug`, `RecipientType: 'owner'` or `'specific_user'`, `RecipientUserId?: string` | Send email to team member |
 | `add_tag` | `TagSlug: string` | Add tag to contact |
 | `remove_tag` | `TagSlug: string` | Remove tag from contact |
 | `grant_offer` | `OfferSlug: !Ref slug` | Give contact access to an Offer |
