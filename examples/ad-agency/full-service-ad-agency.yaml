@@ -267,8 +267,7 @@ Resources:
           Slug: sales
           Order: 1
           Sections:
-            - Type: hero
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -289,8 +288,7 @@ Resources:
                     OfferSlug: !Ref fs-audit-offer
                     PricingPlanSlug: !Ref fs-audit-price
                     ButtonText: "Get Your Audit - $497"
-            - Type: content
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -309,8 +307,7 @@ Resources:
                       
                       Total Value: $900
                       **Your Investment: Just $497**
-            - Type: testimonials
-              Order: 3
+            - Order: 3
               Elements:
                 - Type: testimonial
                   Order: 1
@@ -318,8 +315,7 @@ Resources:
                     Quote: "The audit revealed I was burning $800/month on a broken pixel. Fixed it in 20 minutes and my cost per lead dropped 40%."
                     Author: "Marcus T., E-commerce Owner"
                     Rating: 5
-            - Type: cta
-              Order: 4
+            - Order: 4
               Elements:
                 - Type: headline
                   Order: 1
@@ -335,8 +331,7 @@ Resources:
           Slug: thank-you
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -367,8 +362,7 @@ Resources:
           Slug: services
           Order: 1
           Sections:
-            - Type: hero
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -383,8 +377,7 @@ Resources:
                   Content:
                     Url: "https://www.youtube.com/watch?v=SERVICES_VSL"
                     Provider: youtube
-            - Type: content
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -414,8 +407,7 @@ Resources:
                       - Bi-weekly strategy calls
                       - Unlimited creative production
                       - Priority support
-            - Type: testimonials
-              Order: 3
+            - Order: 3
               Elements:
                 - Type: testimonial
                   Order: 1
@@ -429,8 +421,7 @@ Resources:
                     Quote: "The Full-Service tier is worth every penny. Having a dedicated account manager who knows my business is invaluable."
                     Author: "Michael R., Course Creator"
                     Rating: 5
-            - Type: cta
-              Order: 4
+            - Order: 4
               Elements:
                 - Type: headline
                   Order: 1
@@ -445,14 +436,11 @@ Resources:
                   Content:
                     Text: "Apply Now"
                     Action: next_step
-                  Settings:
-                    Alignment: center
         - Name: "Apply"
           Slug: apply
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -467,8 +455,7 @@ Resources:
                   Order: 3
                   Content:
                     Text: "Answer a few questions so we can recommend the right tier for your business."
-            - Type: form
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: form
                   Order: 1
@@ -480,8 +467,7 @@ Resources:
           Slug: book
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -512,8 +498,7 @@ Resources:
           Slug: confirmed
           Order: 4
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1

@@ -274,8 +274,7 @@ Resources:
           Slug: sales
           Order: 1
           Sections:
-            - Type: hero
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -295,8 +294,7 @@ Resources:
                   Content:
                     OfferSlug: !Ref wmc-offer
                     ButtonText: "Enroll Now - $997 (or 3 payments of $397)"
-            - Type: content
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -321,8 +319,7 @@ Resources:
                       The information is out there, but it's scattered across a hundred different sources. And most of it is theory from people who've never actually done a deal.
                       
                       **What if you could learn from someone who's done 100+ wholesale deals and still does them every month?**
-            - Type: content
-              Order: 3
+            - Order: 3
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -345,8 +342,7 @@ Resources:
                       This isn't another course full of motivational fluff and vague advice.
                       
                       It's the exact system I use in my own wholesaling business, broken down into clear steps you can follow, with real deal breakdowns showing you how it works in practice.
-            - Type: content
-              Order: 4
+            - Order: 4
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -373,8 +369,7 @@ Resources:
                       
                       **Module 6: Closing Deals**
                       Understand assignment vs. double close, work smoothly with title companies, and avoid the common problems that kill deals at the finish line.
-            - Type: content
-              Order: 5
+            - Order: 5
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -395,8 +390,7 @@ Resources:
                       ✓ **Access resources** - Scripts, templates, and tools shared by the community
                       
                       Having a community of people doing the same thing makes all the difference.
-            - Type: testimonials
-              Order: 6
+            - Order: 6
               Elements:
                 - Type: testimonial
                   Order: 1
@@ -422,8 +416,7 @@ Resources:
                     Quote: "Finally, a course by someone who actually does deals. The real deal breakdowns showing actual contracts and numbers gave me the confidence to make my first offer. Closed 3 weeks later."
                     Author: "Sarah M., Columbus, OH"
                     Rating: 5
-            - Type: content
-              Order: 7
+            - Order: 7
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -457,8 +450,7 @@ Resources:
                       
                       - **Pay in Full:** $997 (best value)
                       - **Payment Plan:** 3 payments of $397/month
-            - Type: faq
-              Order: 8
+            - Order: 8
               Elements:
                 - Type: faq_item
                   Order: 1
@@ -490,8 +482,7 @@ Resources:
                   Content:
                     Question: "What if I have questions while going through the course?"
                     Answer: "You'll have access to our private community where you can post questions anytime. Plus, we have weekly live office hours every Wednesday where you can get direct feedback on your deals and questions."
-            - Type: cta
-              Order: 9
+            - Order: 9
               Elements:
                 - Type: headline
                   Order: 1
@@ -515,8 +506,7 @@ Resources:
           Slug: thank-you
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -779,8 +769,7 @@ Resources:
           Slug: agreement
           Order: 1
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -810,8 +799,7 @@ Resources:
           Slug: profile
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -837,8 +825,7 @@ Resources:
           Slug: complete
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1

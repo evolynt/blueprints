@@ -297,8 +297,7 @@ Resources:
           Slug: sales
           Order: 1
           Sections:
-            - Type: hero
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -321,15 +320,13 @@ Resources:
           Slug: apply
           Order: 1
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
                   Content:
                     Text: "Apply for 1:1 Coaching"
-            - Type: form
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: form
                   Order: 1
@@ -339,8 +336,7 @@ Resources:
           Slug: book
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -586,8 +582,7 @@ Resources:
           Slug: agreement
           Order: 1
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -603,8 +598,7 @@ Resources:
           Slug: ready
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -625,8 +619,7 @@ Resources:
           Slug: agreement
           Order: 1
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -642,8 +635,7 @@ Resources:
           Slug: ready
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -664,8 +656,7 @@ Resources:
           Slug: agreement
           Order: 1
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -681,8 +672,7 @@ Resources:
           Slug: intake
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -698,8 +688,7 @@ Resources:
           Slug: ready
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1

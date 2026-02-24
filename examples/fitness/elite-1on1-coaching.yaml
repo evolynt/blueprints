@@ -158,8 +158,7 @@ Resources:
           Slug: apply
           Order: 1
           Sections:
-            - Type: hero
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -174,8 +173,7 @@ Resources:
                   Content:
                     Url: "https://www.youtube.com/watch?v=ELITE_APPLICATION_VIDEO"
                     Provider: youtube
-            - Type: content
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -205,8 +203,7 @@ Resources:
                   Order: 3
                   Content:
                     Height: 20
-            - Type: content
-              Order: 3
+            - Order: 3
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -232,8 +229,7 @@ Resources:
                       Everything you need in one place: program materials, nutrition guidelines, tracking tools, and more.
                       
                       Ready to transform? Fill out the application below.
-            - Type: form
-              Order: 4
+            - Order: 4
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -253,8 +249,7 @@ Resources:
           Slug: book
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -285,8 +280,7 @@ Resources:
                   Order: 4
                   Content:
                     Height: 20
-            - Type: content
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -302,8 +296,7 @@ Resources:
           Slug: confirmed
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1

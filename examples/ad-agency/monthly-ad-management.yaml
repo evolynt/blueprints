@@ -109,8 +109,7 @@ Resources:
           Slug: interest
           Order: 1
           Sections:
-            - Type: hero
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -125,8 +124,7 @@ Resources:
                   Content:
                     Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
                     Provider: youtube
-            - Type: content
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -152,8 +150,7 @@ Resources:
                       - Agencies want 15-20% of ad spend (that's $3K-$6K/month on a $30K budget)
                       
                       What if there was a better way?
-            - Type: content
-              Order: 3
+            - Order: 3
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -172,8 +169,7 @@ Resources:
                       Every month, you hop on a strategy call to discuss what's working and what's next. Then you go back to running your business.
                       
                       That's what full ad management looks like.
-            - Type: content
-              Order: 4
+            - Order: 4
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -203,8 +199,7 @@ Resources:
                       
                       ✓ **Dedicated Account Manager**
                       You have one point of contact who knows your business inside and out.
-            - Type: content
-              Order: 5
+            - Order: 5
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -223,8 +218,7 @@ Resources:
                       ✓ Value expertise and are ready to invest accordingly
                       
                       **Not sure if you're a fit?** Apply below and we'll discuss on a discovery call.
-            - Type: testimonials
-              Order: 6
+            - Order: 6
               Elements:
                 - Type: testimonial
                   Order: 1
@@ -244,8 +238,7 @@ Resources:
                     Quote: "We went from $15K/month to $45K/month in ad spend in 6 months. I couldn't have managed that growth myself. Having a team that knows what they're doing is worth every penny."
                     Author: "Sarah L., DTC Founder"
                     Rating: 5
-            - Type: faq
-              Order: 7
+            - Order: 7
               Elements:
                 - Type: faq_item
                   Order: 1
@@ -272,8 +265,7 @@ Resources:
                   Content:
                     Question: "What if I need to pause my campaigns?"
                     Answer: "Life happens. If you need to pause for a month, let us know. We'll put your account on hold and resume when you're ready."
-            - Type: cta
-              Order: 8
+            - Order: 8
               Elements:
                 - Type: headline
                   Order: 1
@@ -288,14 +280,11 @@ Resources:
                   Content:
                     Text: "Apply for Ad Management"
                     Action: next_step
-                  Settings:
-                    Alignment: center
         - Name: "Apply"
           Slug: apply
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -313,8 +302,7 @@ Resources:
                       We work with a limited number of clients to ensure quality and attention. Please answer a few questions so we can see if we're a good fit for each other.
                       
                       **This takes about 5 minutes.**
-            - Type: form
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -330,8 +318,7 @@ Resources:
           Slug: book
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -373,8 +360,7 @@ Resources:
           Slug: confirmed
           Order: 4
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1

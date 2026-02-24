@@ -327,8 +327,7 @@ Resources:
           Slug: overview
           Order: 1
           Sections:
-            - Type: hero
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -347,8 +346,7 @@ Resources:
           Slug: compare
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -393,8 +391,7 @@ Resources:
           Slug: inquiry
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -405,8 +402,7 @@ Resources:
                   Content:
                     Text: |
                       Fill out this form and I'll reach out to schedule a discovery call.
-            - Type: form
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: form
                   Order: 1
@@ -416,8 +412,7 @@ Resources:
           Slug: book
           Order: 4
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -436,8 +431,7 @@ Resources:
           Slug: confirmed
           Order: 5
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -749,8 +743,7 @@ Resources:
           Slug: agreement
           Order: 1
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -770,8 +763,7 @@ Resources:
           Slug: discovery
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -787,8 +779,7 @@ Resources:
           Slug: ready
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -809,8 +800,7 @@ Resources:
           Slug: agreement
           Order: 1
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -830,8 +820,7 @@ Resources:
           Slug: discovery
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -847,8 +836,7 @@ Resources:
           Slug: ready
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -869,8 +857,7 @@ Resources:
           Slug: agreement
           Order: 1
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -890,8 +877,7 @@ Resources:
           Slug: discovery
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -907,8 +893,7 @@ Resources:
           Slug: ready
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1

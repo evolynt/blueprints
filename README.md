@@ -781,7 +781,6 @@ Steps new customers complete in their Portal after purchasing an Offer. Used to 
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| Type | enum | Yes | `hero`, `content`, `features`, `testimonials`, `faq`, `form`, `cta`, `custom` |
 | Order | integer | Yes | Section order (minimum 1) |
 | Elements | array | No | List of elements |
 
@@ -799,8 +798,7 @@ welcome-flow:
         Slug: welcome
         Order: 1
         Sections:
-          - Type: hero
-            Order: 1
+          - Order: 1
             Elements:
               - Type: headline
                 Order: 1
@@ -819,8 +817,7 @@ welcome-flow:
         Slug: agreement
         Order: 2
         Sections:
-          - Type: content
-            Order: 1
+          - Order: 1
             Elements:
               - Type: agreement
                 Order: 1
@@ -863,7 +860,6 @@ A public set of web pages that turns visitors into Contacts. Each page (step) le
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| Type | enum | Yes | `hero`, `content`, `features`, `testimonials`, `faq`, `form`, `cta`, `custom` |
 | Order | integer | Yes | Display order within step |
 | Elements | array | No | Elements inside this section |
 
@@ -883,7 +879,7 @@ Elements are the building blocks inside sections. Each element has `Type`, `Orde
 
 | Type | Content Properties | Description |
 |------|-------------------|-------------|
-| `image` | `Src` (url, required), `Alt` (string), `LinkUrl` (url) | Display an image |
+| `image` | `Src` (url, required), `Alt` (string) | Display an image |
 | `video` | `Url` (url, required), `Provider` (enum: `youtube`, `vimeo`, `wistia`) | Embed a video |
 
 **Interactive Elements:**
@@ -950,8 +946,7 @@ webinar-funnel:
         Slug: landing
         Order: 1
         Sections:
-          - Type: hero
-            Order: 1
+          - Order: 1
             Elements:
               - Type: headline
                 Order: 1
@@ -966,8 +961,7 @@ webinar-funnel:
         Slug: form
         Order: 2
         Sections:
-          - Type: form
-            Order: 1
+          - Order: 1
             Elements:
               - Type: form
                 Order: 1
@@ -979,8 +973,7 @@ webinar-funnel:
         Slug: thank-you
         Order: 3
         Sections:
-          - Type: content
-            Order: 1
+          - Order: 1
             Elements:
               - Type: headline
                 Order: 1
@@ -1615,8 +1608,7 @@ Resources:
           Slug: sales
           Order: 1
           Sections:
-            - Type: hero
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -1637,8 +1629,7 @@ Resources:
                     OfferSlug: !Ref inner-circle-offer
                     PricingPlanSlug: !Ref inner-circle-monthly
                     ButtonText: "Join the Inner Circle - $97/month"
-            - Type: content
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -1664,8 +1655,7 @@ Resources:
                   Order: 3
                   Content:
                     Height: 20
-            - Type: content
-              Order: 3
+            - Order: 3
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -1682,8 +1672,7 @@ Resources:
                       That's the Fitness Inner Circle.
                       
                       It's not just another membership with videos you'll never watch. It's a complete support system designed to keep you consistent, motivated, and making progress month after month.
-            - Type: content
-              Order: 4
+            - Order: 4
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -1714,8 +1703,7 @@ Resources:
                   Order: 4
                   Content:
                     Text: "Your investment: Just $97/month (cancel anytime)"
-            - Type: testimonials
-              Order: 5
+            - Order: 5
               Elements:
                 - Type: testimonial
                   Order: 1
@@ -1735,8 +1723,7 @@ Resources:
                     Quote: "I was skeptical about an online community, but these people actually show up for each other. When I hit my first pull-up, I had 50+ people celebrating with me. That's priceless."
                     Author: "Andrea L., 29, Nurse"
                     Rating: 5
-            - Type: faq
-              Order: 6
+            - Order: 6
               Elements:
                 - Type: faq_item
                   Order: 1
@@ -1758,8 +1745,7 @@ Resources:
                   Content:
                     Question: "I don't have access to a gym. Can I still participate?"
                     Answer: "Yes! Our workout library includes home-friendly routines with minimal equipment. Many members work out with just dumbbells or resistance bands."
-            - Type: cta
-              Order: 7
+            - Order: 7
               Elements:
                 - Type: headline
                   Order: 1
@@ -1779,8 +1765,7 @@ Resources:
           Slug: thank-you
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1

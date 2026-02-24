@@ -85,8 +85,7 @@ Resources:
           Slug: interest
           Order: 1
           Sections:
-            - Type: hero
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -101,8 +100,7 @@ Resources:
                   Content:
                     Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
                     Provider: youtube
-            - Type: content
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -121,8 +119,7 @@ Resources:
                       What's their secret? They have a network.
                       
                       Not just contacts - a real network of investors who share deals, collaborate on opportunities, and help each other win.
-            - Type: content
-              Order: 3
+            - Order: 3
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -139,8 +136,7 @@ Resources:
                       Or getting your question about a tricky rehab answered by someone who's done 50 of them.
                       
                       That's what the REI Investor Network provides: real deal flow, real connections, and real support from people who are actually doing deals.
-            - Type: content
-              Order: 4
+            - Order: 4
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -164,8 +160,7 @@ Resources:
                       
                       ✓ **Private Community**
                       A curated group of serious investors (no tire-kickers) where you can ask questions, share wins, and get feedback on deals.
-            - Type: content
-              Order: 5
+            - Order: 5
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -189,8 +184,7 @@ Resources:
                       - Anyone who wants everything handed to them
                       
                       We keep the community small and curated. Every member is vetted to ensure they bring value.
-            - Type: testimonials
-              Order: 6
+            - Order: 6
               Elements:
                 - Type: testimonial
                   Order: 1
@@ -210,8 +204,7 @@ Resources:
                     Quote: "As a passive investor with capital, this network connected me with operators I can trust. I've funded four deals with members so far."
                     Author: "David L., Private Lender"
                     Rating: 5
-            - Type: cta
-              Order: 7
+            - Order: 7
               Elements:
                 - Type: headline
                   Order: 1
@@ -226,14 +219,11 @@ Resources:
                   Content:
                     Text: "Apply for Membership"
                     Action: next_step
-                  Settings:
-                    Alignment: center
         - Name: "Apply"
           Slug: apply
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -251,8 +241,7 @@ Resources:
                       We keep the network small and curated to ensure every member gets value. Please answer a few questions so we can see if you're a good fit.
                       
                       **This takes about 3 minutes.**
-            - Type: form
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: form
                   Order: 1
@@ -264,8 +253,7 @@ Resources:
           Slug: book
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -307,8 +295,7 @@ Resources:
           Slug: confirmed
           Order: 4
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -624,8 +611,7 @@ Resources:
           Slug: agreement
           Order: 1
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -654,8 +640,7 @@ Resources:
           Slug: profile
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -676,8 +661,7 @@ Resources:
           Slug: complete
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1

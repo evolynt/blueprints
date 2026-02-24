@@ -118,8 +118,7 @@ Resources:
           Slug: interest
           Order: 1
           Sections:
-            - Type: hero
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -139,8 +138,7 @@ Resources:
                   Content:
                     Text: "Apply for Coaching"
                     Action: next_step
-            - Type: content
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -158,8 +156,7 @@ Resources:
                       - You want expert eyes on YOUR specific channel
                       
                       Generic courses can only take you so far. You need personalized guidance.
-            - Type: content
-              Order: 3
+            - Order: 3
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -188,8 +185,7 @@ Resources:
                       Templates, worksheets, and checklists
                       
                       **Total Value: $4,400**
-            - Type: testimonials
-              Order: 4
+            - Order: 4
               Elements:
                 - Type: testimonial
                   Order: 1
@@ -203,8 +199,7 @@ Resources:
                     Quote: "The channel audit revealed issues I never would have found on my own. My CTR went from 3% to 8% after implementing the thumbnail feedback."
                     Author: "Jessica L., Lifestyle Vlogger"
                     Rating: 5
-            - Type: cta
-              Order: 5
+            - Order: 5
               Elements:
                 - Type: headline
                   Order: 1
@@ -223,8 +218,7 @@ Resources:
           Slug: apply
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -235,8 +229,7 @@ Resources:
                   Content:
                     Text: |
                       Tell me about your channel and goals. This helps me understand if we're a good fit to work together.
-            - Type: form
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: form
                   Order: 1
@@ -246,8 +239,7 @@ Resources:
           Slug: book
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -272,8 +264,7 @@ Resources:
           Slug: confirmed
           Order: 4
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -573,8 +564,7 @@ Resources:
           Slug: agreement
           Order: 1
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -601,8 +591,7 @@ Resources:
           Slug: intake
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -623,8 +612,7 @@ Resources:
           Slug: complete
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1

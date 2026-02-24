@@ -367,8 +367,7 @@ Resources:
           Slug: overview
           Order: 1
           Sections:
-            - Type: hero
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -383,8 +382,7 @@ Resources:
                   Content:
                     Url: "https://www.youtube.com/watch?v=DCT_VSL_PLACEHOLDER"
                     Provider: youtube
-            - Type: content
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -403,8 +401,7 @@ Resources:
                       I work with investors at all levels - from those looking for basic guidance to close their first deal, to experienced investors scaling their portfolios who want JV partnerships and direct access to my network.
                       
                       Whatever level you're at, there's a coaching tier designed for your goals.
-            - Type: content
-              Order: 3
+            - Order: 3
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -427,8 +424,7 @@ Resources:
                       - Complete beginners who haven't done any research
                       - People looking for get-rich-quick schemes
                       - Anyone who wants someone to do the work for them
-            - Type: cta
-              Order: 4
+            - Order: 4
               Elements:
                 - Type: headline
                   Order: 1
@@ -443,14 +439,11 @@ Resources:
                   Content:
                     Text: "Compare Coaching Tiers"
                     Action: next_step
-                  Settings:
-                    Alignment: center
         - Name: "Compare Tiers"
           Slug: compare
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -466,8 +459,7 @@ Resources:
                   Content:
                     Text: |
                       I offer three coaching tiers to match different goals and commitment levels. Each tier includes progressively more support, access, and exclusive benefits.
-            - Type: content
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -490,8 +482,7 @@ Resources:
                       ✓ Email support between sessions
                       
                       **Best For:** New investors who need guidance on the fundamentals - finding deals, analyzing numbers, and making offers.
-            - Type: content
-              Order: 3
+            - Order: 3
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -515,8 +506,7 @@ Resources:
                       ✓ Priority email support
                       
                       **Best For:** Investors who have done a few deals and want intensive support to build a consistent pipeline.
-            - Type: content
-              Order: 4
+            - Order: 4
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -541,8 +531,7 @@ Resources:
                       ✓ Weekly Inner Circle calls
                       
                       **Best For:** Experienced investors who want JV partnerships, network access, and the highest level of support.
-            - Type: testimonials
-              Order: 5
+            - Order: 5
               Elements:
                 - Type: testimonial
                   Order: 1
@@ -562,8 +551,7 @@ Resources:
                     Quote: "I was skeptical about the VIP community, but the deal flow and contractor contacts have saved me thousands. Worth every penny."
                     Author: "David L., Flipper"
                     Rating: 5
-            - Type: cta
-              Order: 6
+            - Order: 6
               Elements:
                 - Type: headline
                   Order: 1
@@ -578,14 +566,11 @@ Resources:
                   Content:
                     Text: "Apply Now"
                     Action: next_step
-                  Settings:
-                    Alignment: center
         - Name: "Apply"
           Slug: apply
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -605,8 +590,7 @@ Resources:
                       I work with a limited number of clients at each tier to ensure everyone gets the attention they need. Please answer a few questions so I can understand your situation and goals.
                       
                       **This takes about 3 minutes.**
-            - Type: form
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: form
                   Order: 1
@@ -618,8 +602,7 @@ Resources:
           Slug: book
           Order: 4
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -662,8 +645,7 @@ Resources:
           Slug: confirmed
           Order: 5
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -1203,8 +1185,7 @@ Resources:
           Slug: agreement
           Order: 1
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -1232,8 +1213,7 @@ Resources:
           Slug: intake
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -1254,8 +1234,7 @@ Resources:
           Slug: complete
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -1291,8 +1270,7 @@ Resources:
           Slug: agreement
           Order: 1
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -1320,8 +1298,7 @@ Resources:
           Slug: intake
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -1342,8 +1319,7 @@ Resources:
           Slug: complete
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -1380,8 +1356,7 @@ Resources:
           Slug: agreement
           Order: 1
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -1412,8 +1387,7 @@ Resources:
           Slug: intake
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -1434,8 +1408,7 @@ Resources:
           Slug: complete
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1

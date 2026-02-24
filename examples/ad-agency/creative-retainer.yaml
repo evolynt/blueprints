@@ -81,8 +81,7 @@ Resources:
           Slug: interest
           Order: 1
           Sections:
-            - Type: hero
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -97,8 +96,7 @@ Resources:
                   Content:
                     Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
                     Provider: youtube
-            - Type: content
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -120,8 +118,7 @@ Resources:
                       - Creative agencies charge $5K+ for a single campaign
                       
                       Meanwhile, your competitors are pumping out fresh creatives every week while your ads get stale.
-            - Type: content
-              Order: 3
+            - Order: 3
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -140,8 +137,7 @@ Resources:
                       No hiring. No managing. No creative bottlenecks.
                       
                       Just a predictable monthly package of high-quality creatives that keep your ads performing.
-            - Type: content
-              Order: 4
+            - Order: 4
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -168,8 +164,7 @@ Resources:
                       
                       ✓ **Creative Strategy Suggestions**
                       We don't just make what you ask for. We suggest hooks, angles, and formats based on what's working.
-            - Type: content
-              Order: 5
+            - Order: 5
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -187,8 +182,7 @@ Resources:
                       ✓ Are ready to invest in professional creative production
                       
                       **Not sure if it's a fit?** Apply below and we'll hop on a quick call to discuss your needs.
-            - Type: testimonials
-              Order: 6
+            - Order: 6
               Elements:
                 - Type: testimonial
                   Order: 1
@@ -208,8 +202,7 @@ Resources:
                     Quote: "The creative suggestions have been game-changers. They suggested a UGC-style format I never would have tried. It's now our best-performing ad."
                     Author: "Jason K., DTC Founder"
                     Rating: 5
-            - Type: cta
-              Order: 7
+            - Order: 7
               Elements:
                 - Type: headline
                   Order: 1
@@ -224,14 +217,11 @@ Resources:
                   Content:
                     Text: "Apply for the Creative Retainer"
                     Action: next_step
-                  Settings:
-                    Alignment: center
         - Name: "Apply"
           Slug: apply
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -249,8 +239,7 @@ Resources:
                       We work with a limited number of clients to ensure quality and turnaround times. Please answer a few questions so we can see if we're a good fit.
                       
                       **This takes about 2 minutes.**
-            - Type: form
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -266,8 +255,7 @@ Resources:
           Slug: book
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -308,8 +296,7 @@ Resources:
           Slug: confirmed
           Order: 4
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1

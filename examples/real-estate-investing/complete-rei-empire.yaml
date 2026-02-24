@@ -478,8 +478,7 @@ Resources:
           Slug: sales
           Order: 1
           Sections:
-            - Type: hero
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -500,8 +499,7 @@ Resources:
                     OfferSlug: !Ref empire-spreadsheet-offer
                     PricingPlanSlug: !Ref empire-spreadsheet-price
                     ButtonText: "Get Instant Access - $47"
-            - Type: content
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -521,8 +519,7 @@ Resources:
                       - Is there actually profit here?
                       
                       **The difference between successful investors and struggling ones? They know their numbers BEFORE they make offers.**
-            - Type: content
-              Order: 3
+            - Order: 3
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -541,8 +538,7 @@ Resources:
                       ✓ Whether to pursue or pass
                       
                       That's exactly what the Deal Analyzer Spreadsheet does.
-            - Type: content
-              Order: 4
+            - Order: 4
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -561,8 +557,7 @@ Resources:
                       **Total Value: $265**
                       
                       **Your Investment: Just $47**
-            - Type: testimonials
-              Order: 5
+            - Order: 5
               Elements:
                 - Type: testimonial
                   Order: 1
@@ -576,8 +571,7 @@ Resources:
                     Quote: "Finally, a spreadsheet that accounts for EVERYTHING. Holding costs, closing costs - it's all there. No more surprises."
                     Author: "Rachel T., Flipper"
                     Rating: 5
-            - Type: cta
-              Order: 6
+            - Order: 6
               Elements:
                 - Type: headline
                   Order: 1
@@ -593,8 +587,7 @@ Resources:
           Slug: thank-you
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -629,8 +622,7 @@ Resources:
           Slug: interest
           Order: 1
           Sections:
-            - Type: hero
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -645,8 +637,7 @@ Resources:
                   Content:
                     Url: "https://www.youtube.com/watch?v=EMPIRE_COACHING_VSL"
                     Provider: youtube
-            - Type: content
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -661,8 +652,7 @@ Resources:
                       Maybe you're not sure if your numbers are right. Maybe you need someone experienced to guide you through your deals.
                       
                       **That's exactly what our coaching provides.**
-            - Type: content
-              Order: 3
+            - Order: 3
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -677,8 +667,7 @@ Resources:
                       
                       **Inner Circle Mastermind**
                       12 months with 24 VIP sessions, JV opportunities, quarterly retreats, and direct phone access. For serious investors ready to scale.
-            - Type: cta
-              Order: 4
+            - Order: 4
               Elements:
                 - Type: headline
                   Order: 1
@@ -689,14 +678,11 @@ Resources:
                   Content:
                     Text: "Apply for Coaching"
                     Action: next_step
-                  Settings:
-                    Alignment: center
         - Name: "Apply"
           Slug: apply
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -714,8 +700,7 @@ Resources:
                       Thanks for your interest! Please answer a few questions so I can understand your situation.
                       
                       **This takes about 3 minutes.**
-            - Type: form
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: form
                   Order: 1
@@ -727,8 +712,7 @@ Resources:
           Slug: book
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -761,8 +745,7 @@ Resources:
           Slug: confirmed
           Order: 4
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -1198,8 +1181,7 @@ Resources:
           Slug: agreement
           Order: 1
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -1222,8 +1204,7 @@ Resources:
           Slug: profile
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -1244,8 +1225,7 @@ Resources:
           Slug: complete
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -1278,8 +1258,7 @@ Resources:
           Slug: agreement
           Order: 1
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -1302,8 +1281,7 @@ Resources:
           Slug: intake
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -1324,8 +1302,7 @@ Resources:
           Slug: complete
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1

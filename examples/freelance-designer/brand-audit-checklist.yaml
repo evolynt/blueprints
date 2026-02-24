@@ -88,8 +88,7 @@ Resources:
           Slug: sales
           Order: 1
           Sections:
-            - Type: hero
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -104,8 +103,7 @@ Resources:
                   Content:
                     Url: "https://www.youtube.com/watch?v=BAC_PROMO"
                     Provider: youtube
-            - Type: content
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: headline
                   Order: 1
@@ -134,8 +132,7 @@ Resources:
                       - Scoring worksheet to rate each area
                       - Video walkthrough (15 min) explaining each criterion
                       - Action plan template to prioritize improvements
-            - Type: content
-              Order: 3
+            - Order: 3
               Elements:
                 - Type: headline
                   Order: 1
@@ -151,8 +148,7 @@ Resources:
           Slug: thank-you
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1

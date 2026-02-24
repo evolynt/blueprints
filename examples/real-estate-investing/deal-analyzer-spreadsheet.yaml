@@ -106,8 +106,7 @@ Resources:
           Slug: sales
           Order: 1
           Sections:
-            - Type: hero
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -128,8 +127,7 @@ Resources:
                     OfferSlug: !Ref da-offer
                     PricingPlanSlug: !Ref da-price
                     ButtonText: "Get Instant Access - $47"
-            - Type: content
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -151,8 +149,7 @@ Resources:
                       You've seen the horror stories. Investors who bought "great deals" that turned into money pits. Wholesalers who assigned contracts only to have buyers back out when the numbers didn't work.
                       
                       **The difference between successful investors and struggling ones? They know their numbers BEFORE they make offers.**
-            - Type: content
-              Order: 3
+            - Order: 3
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -175,8 +172,7 @@ Resources:
                       I've used this exact spreadsheet to analyze over 200 deals in the past 3 years. It's helped me close 47 profitable deals and avoid dozens of losers.
                       
                       Now I'm making it available to you.
-            - Type: content
-              Order: 4
+            - Order: 4
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -209,8 +205,7 @@ Resources:
                   Order: 3
                   Content:
                     Text: "**Your Investment: Just $47**"
-            - Type: testimonials
-              Order: 5
+            - Order: 5
               Elements:
                 - Type: testimonial
                   Order: 1
@@ -230,8 +225,7 @@ Resources:
                     Quote: "I used to spend hours analyzing deals with pen and paper. Now I can run 10 deals in the time it used to take me to do one. Game changer."
                     Author: "David L., Rental Investor"
                     Rating: 5
-            - Type: faq
-              Order: 6
+            - Order: 6
               Elements:
                 - Type: faq_item
                   Order: 1
@@ -253,8 +247,7 @@ Resources:
                   Content:
                     Question: "Is this customizable for my market?"
                     Answer: "Absolutely. You can adjust closing costs, realtor fees, holding costs, and other variables to match your local market. The spreadsheet comes with typical defaults, but everything is editable."
-            - Type: cta
-              Order: 7
+            - Order: 7
               Elements:
                 - Type: headline
                   Order: 1
@@ -274,8 +267,7 @@ Resources:
           Slug: thank-you
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1

@@ -134,8 +134,7 @@ Resources:
           Slug: interest
           Order: 1
           Sections:
-            - Type: hero
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -150,8 +149,7 @@ Resources:
                   Content:
                     Url: "https://www.youtube.com/watch?v=DC_VSL_PLACEHOLDER"
                     Provider: youtube
-            - Type: content
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -174,8 +172,7 @@ Resources:
                       **The gap between learning and doing is where most investors get stuck.**
                       
                       You don't need another course. You need someone who's done hundreds of deals to look at YOUR specific situation and tell you exactly what to do.
-            - Type: content
-              Order: 3
+            - Order: 3
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -198,8 +195,7 @@ Resources:
                       That's what 1:1 Deal Coaching provides.
                       
                       Over 3 months and 10 coaching sessions, we work through your specific deals together. Not generic advice - real guidance on the actual opportunities in front of you.
-            - Type: content
-              Order: 4
+            - Order: 4
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -232,8 +228,7 @@ Resources:
                       **3-Month Timeline**
                       
                       Most clients close their first (or next) deal within the coaching period. The goal is action, not endless learning.
-            - Type: content
-              Order: 5
+            - Order: 5
               Elements:
                 - Type: subheadline
                   Order: 1
@@ -259,8 +254,7 @@ Resources:
                       - Anyone who just wants someone to do the work for them
                       
                       I work with a limited number of coaching clients to ensure everyone gets the attention they need.
-            - Type: testimonials
-              Order: 6
+            - Order: 6
               Elements:
                 - Type: testimonial
                   Order: 1
@@ -280,8 +274,7 @@ Resources:
                     Quote: "The coaching paid for itself on my first flip. I was going to offer way too much until we analyzed the deal together. That single conversation saved me at least $15K."
                     Author: "Chris T., Phoenix, AZ"
                     Rating: 5
-            - Type: faq
-              Order: 7
+            - Order: 7
               Elements:
                 - Type: faq_item
                   Order: 1
@@ -308,8 +301,7 @@ Resources:
                   Content:
                     Question: "What's the time commitment between sessions?"
                     Answer: "That depends on your goals. If you want to close deals quickly, expect to spend 10-20 hours per week on your investing business (marketing, analyzing deals, talking to sellers, etc.). I'll help you prioritize."
-            - Type: cta
-              Order: 8
+            - Order: 8
               Elements:
                 - Type: headline
                   Order: 1
@@ -329,14 +321,11 @@ Resources:
                   Content:
                     Text: "Apply for 1:1 Coaching"
                     Action: next_step
-                  Settings:
-                    Alignment: center
         - Name: "Apply"
           Slug: apply
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -356,8 +345,7 @@ Resources:
                       I work with a limited number of clients to ensure everyone gets the attention they need. Please answer a few questions so I can see if we're a good fit.
                       
                       **This takes about 3 minutes.**
-            - Type: form
-              Order: 2
+            - Order: 2
               Elements:
                 - Type: form
                   Order: 1
@@ -369,8 +357,7 @@ Resources:
           Slug: book
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -412,8 +399,7 @@ Resources:
           Slug: confirmed
           Order: 4
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -744,8 +730,7 @@ Resources:
           Slug: agreement
           Order: 1
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -776,8 +761,7 @@ Resources:
           Slug: intake
           Order: 2
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
@@ -800,8 +784,7 @@ Resources:
           Slug: complete
           Order: 3
           Sections:
-            - Type: content
-              Order: 1
+            - Order: 1
               Elements:
                 - Type: headline
                   Order: 1
