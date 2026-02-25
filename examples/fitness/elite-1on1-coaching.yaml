@@ -159,177 +159,210 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Apply for Elite 1:1 Coaching"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Limited spots available for serious individuals ready to transform"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=ELITE_APPLICATION_VIDEO"
-                    Provider: youtube
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Apply for Elite 1:1 Coaching"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Limited spots available for serious individuals ready to transform"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=ELITE_APPLICATION_VIDEO"
+                            Provider: youtube
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "This is NOT for everyone"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Elite 1:1 Coaching is for high-performers who are done with cookie-cutter programs and ready for personalized, results-driven coaching.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "This is NOT for everyone"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Elite 1:1 Coaching is for high-performers who are done with cookie-cutter programs and ready for personalized, results-driven coaching.
                       
-                      **This is for you if:**
+                              **This is for you if:**
                       
-                      ✓ You're a busy professional who values your time
-                      ✓ You want customized programming, not generic workouts
-                      ✓ You're ready to invest in yourself at a premium level
-                      ✓ You want direct access to an expert coach
-                      ✓ You're committed to showing up and doing the work
+                              ✓ You're a busy professional who values your time
+                              ✓ You want customized programming, not generic workouts
+                              ✓ You're ready to invest in yourself at a premium level
+                              ✓ You want direct access to an expert coach
+                              ✓ You're committed to showing up and doing the work
                       
-                      **This is NOT for you if:**
+                              **This is NOT for you if:**
                       
-                      ✗ You're looking for the cheapest option
-                      ✗ You want someone to do the work for you
-                      ✗ You're not ready to commit to 12 weeks
-                      ✗ You make excuses instead of results
-                - Type: spacer
-                  Order: 3
-                  Content:
-                    Height: 20
+                              ✗ You're looking for the cheapest option
+                              ✗ You want someone to do the work for you
+                              ✗ You're not ready to commit to 12 weeks
+                              ✗ You make excuses instead of results
+                        - Type: spacer
+                          Order: 3
+                          Content:
+                            Height: 20
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "What you get with Elite 1:1 Coaching:"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      **12 Private Coaching Sessions**
-                      45-minute 1:1 calls via Zoom where we analyze your form, adjust your programming, and keep you accountable. Your sessions, your schedule.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "What you get with Elite 1:1 Coaching:"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              **12 Private Coaching Sessions**
+                              45-minute 1:1 calls via Zoom where we analyze your form, adjust your programming, and keep you accountable. Your sessions, your schedule.
                       
-                      **Customized Programming**
-                      No templates. Your workout program is built specifically for your goals, equipment, schedule, and experience level. Adjusted based on your progress.
+                              **Customized Programming**
+                              No templates. Your workout program is built specifically for your goals, equipment, schedule, and experience level. Adjusted based on your progress.
                       
-                      **Direct Coach Access**
-                      Questions between sessions? Post in the private community and get answers within 24 hours. It's like having a coach in your pocket.
+                              **Direct Coach Access**
+                              Questions between sessions? Post in the private community and get answers within 24 hours. It's like having a coach in your pocket.
                       
-                      **Private Client Community**
-                      Connect with other elite clients. Share wins, get support, and stay accountable with people who are serious about results.
+                              **Private Client Community**
+                              Connect with other elite clients. Share wins, get support, and stay accountable with people who are serious about results.
                       
-                      **Client Resources Portal**
-                      Everything you need in one place: program materials, nutrition guidelines, tracking tools, and more.
+                              **Client Resources Portal**
+                              Everything you need in one place: program materials, nutrition guidelines, tracking tools, and more.
                       
-                      Ready to transform? Fill out the application below.
+                              Ready to transform? Fill out the application below.
             - Order: 4
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Ready to apply? Fill out the form below."
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "We review every application personally. If you're a good fit, we'll reach out to schedule your strategy call."
-                - Type: form
-                  Order: 3
-                  Content:
-                    FormSlug: !Ref elite-application-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Ready to apply? Fill out the form below."
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "We review every application personally. If you're a good fit, we'll reach out to schedule your strategy call."
+                        - Type: form
+                          Order: 3
+                          Content:
+                            FormSlug: !Ref elite-application-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "Book Your Call"
           Slug: book
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Application Received!"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=ELITE_BOOKING_VIDEO"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Thank you for applying to Elite 1:1 Coaching.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Application Received!"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=ELITE_BOOKING_VIDEO"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Thank you for applying to Elite 1:1 Coaching.
                       
-                      **Next Step: Book Your Strategy Call**
+                              **Next Step: Book Your Strategy Call**
                       
-                      This is a 45-minute call where we'll:
+                              This is a 45-minute call where we'll:
                       
-                      ✓ Discuss your fitness goals and current situation
-                      ✓ Identify what's been holding you back
-                      ✓ Determine if Elite 1:1 Coaching is right for you
-                      ✓ Answer any questions you have about the program
+                              ✓ Discuss your fitness goals and current situation
+                              ✓ Identify what's been holding you back
+                              ✓ Determine if Elite 1:1 Coaching is right for you
+                              ✓ Answer any questions you have about the program
                       
-                      **Important:** This call is for serious applicants only. Please come prepared to discuss your goals, timeline, and commitment level.
-                - Type: spacer
-                  Order: 4
-                  Content:
-                    Height: 20
+                              **Important:** This call is for serious applicants only. Please come prepared to discuss your goals, timeline, and commitment level.
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: spacer
+                          Order: 1
+                          Content:
+                            Height: 20
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Select a time that works for you:"
-                - Type: booking_link
-                  Order: 2
-                  Content:
-                    BookingLinkSlug: !Ref strategy-call
-                    OnSuccess:
-                      Action: next_step
+            - Order: 2
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Select a time that works for you:"
+                        - Type: booking_link
+                          Order: 2
+                          Content:
+                            BookingLinkSlug: !Ref strategy-call
+                            OnSuccess:
+                              Action: next_step
         - Name: "You're Booked"
           Slug: confirmed
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Your Strategy Call is Confirmed!"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=ELITE_CONFIRMED_VIDEO"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      You're one step closer to transforming your fitness.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Your Strategy Call is Confirmed!"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=ELITE_CONFIRMED_VIDEO"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              You're one step closer to transforming your fitness.
                       
-                      **Check your email for:**
-                      - Calendar invitation with Zoom link
-                      - Call details and what to expect
+                              **Check your email for:**
+                              - Calendar invitation with Zoom link
+                              - Call details and what to expect
                       
-                      **How to prepare for your call:**
+                              **How to prepare for your call:**
                       
-                      1. **Write down your goals** - Be specific. What do you want to achieve in the next 12 weeks? 6 months? Year?
+                              1. **Write down your goals** - Be specific. What do you want to achieve in the next 12 weeks? 6 months? Year?
                       
-                      2. **Know your "why"** - Why is this important to you right now? What changes when you achieve this goal?
+                              2. **Know your "why"** - Why is this important to you right now? What changes when you achieve this goal?
                       
-                      3. **Be honest about your situation** - Current fitness level, time constraints, past attempts. The more honest you are, the better I can help.
+                              3. **Be honest about your situation** - Current fitness level, time constraints, past attempts. The more honest you are, the better I can help.
                       
-                      4. **Prepare your questions** - What do you want to know about the program, the process, or working together?
+                              4. **Prepare your questions** - What do you want to know about the program, the process, or working together?
                       
-                      5. **Be ready to commit** - If we're a good fit, be prepared to make a decision. Spots are limited and fill quickly.
+                              5. **Be ready to commit** - If we're a good fit, be prepared to make a decision. Spots are limited and fill quickly.
                       
-                      I'm looking forward to speaking with you!
+                              I'm looking forward to speaking with you!
 
   # ============================================
   # 📋 FORM

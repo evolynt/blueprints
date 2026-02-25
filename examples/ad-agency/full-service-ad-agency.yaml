@@ -268,89 +268,114 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Find Out Exactly Why Your Ads Aren't Converting"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Get a comprehensive audit of your ad account with specific, actionable recommendations from a media buying expert"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=AUDIT_VSL"
-                    Provider: youtube
-                - Type: checkout
-                  Order: 4
-                  Content:
-                    OfferSlug: !Ref fs-audit-offer
-                    PricingPlanSlug: !Ref fs-audit-price
-                    ButtonText: "Get Your Audit - $497"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Find Out Exactly Why Your Ads Aren't Converting"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Get a comprehensive audit of your ad account with specific, actionable recommendations from a media buying expert"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=AUDIT_VSL"
+                            Provider: youtube
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: checkout
+                          Order: 1
+                          Content:
+                            OfferSlug: !Ref fs-audit-offer
+                            PricingPlanSlug: !Ref fs-audit-price
+                            ButtonText: "Get Your Audit - $497"
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Here's exactly what you get"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      ✓ Complete Account Structure Review (Value: $150)
-                      ✓ Targeting & Audience Analysis (Value: $150)
-                      ✓ Creative Performance Breakdown (Value: $150)
-                      ✓ Conversion Tracking Audit (Value: $100)
-                      ✓ Prioritized Recommendations Report (Value: $200)
-                      ✓ 30-Minute Walkthrough Call (Value: $150)
+            - Order: 2
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Here's exactly what you get"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              ✓ Complete Account Structure Review (Value: $150)
+                              ✓ Targeting & Audience Analysis (Value: $150)
+                              ✓ Creative Performance Breakdown (Value: $150)
+                              ✓ Conversion Tracking Audit (Value: $100)
+                              ✓ Prioritized Recommendations Report (Value: $200)
+                              ✓ 30-Minute Walkthrough Call (Value: $150)
                       
-                      Total Value: $900
-                      **Your Investment: Just $497**
+                              Total Value: $900
+                              **Your Investment: Just $497**
             - Order: 3
-              Elements:
-                - Type: testimonial
-                  Order: 1
-                  Content:
-                    Quote: "The audit revealed I was burning $800/month on a broken pixel. Fixed it in 20 minutes and my cost per lead dropped 40%."
-                    Author: "Marcus T., E-commerce Owner"
-                    Rating: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "The audit revealed I was burning $800/month on a broken pixel. Fixed it in 20 minutes and my cost per lead dropped 40%."
+                            Author: "Marcus T., E-commerce Owner"
+                            Rating: 5
             - Order: 4
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Stop Guessing. Start Knowing."
-                - Type: checkout
-                  Order: 2
-                  Content:
-                    OfferSlug: !Ref fs-audit-offer
-                    PricingPlanSlug: !Ref fs-audit-price
-                    ButtonText: "Get Your Audit - $497"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Stop Guessing. Start Knowing."
+                        - Type: checkout
+                          Order: 2
+                          Content:
+                            OfferSlug: !Ref fs-audit-offer
+                            PricingPlanSlug: !Ref fs-audit-price
+                            ButtonText: "Get Your Audit - $497"
         - Name: "Thank You"
           Slug: thank-you
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're In! Let's Audit Your Account."
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=AUDIT_THANKYOU"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Thanks for purchasing your Ad Account Audit!
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're In! Let's Audit Your Account."
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=AUDIT_THANKYOU"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Thanks for purchasing your Ad Account Audit!
                       
-                      Check your email for login details to your client portal.
+                              Check your email for login details to your client portal.
                       
-                      **Your next step:** Complete the intake form in your portal.
+                              **Your next step:** Complete the intake form in your portal.
 
   fs-services-funnel:
     Type: Evolynt::Funnel::Funnel
@@ -363,164 +388,200 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Stop Managing Ads. Start Scaling Your Business."
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "From campaign setup to full-service management, we have a solution for every stage of growth"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=SERVICES_VSL"
-                    Provider: youtube
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Stop Managing Ads. Start Scaling Your Business."
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "From campaign setup to full-service management, we have a solution for every stage of growth"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=SERVICES_VSL"
+                            Provider: youtube
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Choose Your Path to Better Ads"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      **Campaign Launch Package**
-                      Perfect for: Businesses ready to launch or relaunch their ad campaigns
-                      - Complete strategy and setup
-                      - 5-10 ad creatives
-                      - 30 days of optimization
-                      - Weekly performance reports
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Choose Your Path to Better Ads"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              **Campaign Launch Package**
+                              Perfect for: Businesses ready to launch or relaunch their ad campaigns
+                              - Complete strategy and setup
+                              - 5-10 ad creatives
+                              - 30 days of optimization
+                              - Weekly performance reports
                       
-                      **Growth Management**
-                      Perfect for: Businesses spending $5K-$15K/month who want hands-off management
-                      - Daily monitoring and optimization
-                      - Weekly performance reports
-                      - Monthly strategy calls
-                      - Creative refresh as needed
+                              **Growth Management**
+                              Perfect for: Businesses spending $5K-$15K/month who want hands-off management
+                              - Daily monitoring and optimization
+                              - Weekly performance reports
+                              - Monthly strategy calls
+                              - Creative refresh as needed
                       
-                      **Full-Service Retainer**
-                      Perfect for: Businesses spending $15K+/month who want premium, white-glove service
-                      - Dedicated account manager
-                      - Bi-weekly strategy calls
-                      - Unlimited creative production
-                      - Priority support
+                              **Full-Service Retainer**
+                              Perfect for: Businesses spending $15K+/month who want premium, white-glove service
+                              - Dedicated account manager
+                              - Bi-weekly strategy calls
+                              - Unlimited creative production
+                              - Priority support
             - Order: 3
-              Elements:
-                - Type: testimonial
-                  Order: 1
-                  Content:
-                    Quote: "Started with a Campaign Launch, now I'm on the Growth tier. My ROAS went from 1.2 to 3.8 in 6 months."
-                    Author: "Jennifer M., E-commerce Brand"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 2
-                  Content:
-                    Quote: "The Full-Service tier is worth every penny. Having a dedicated account manager who knows my business is invaluable."
-                    Author: "Michael R., Course Creator"
-                    Rating: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "Started with a Campaign Launch, now I'm on the Growth tier. My ROAS went from 1.2 to 3.8 in 6 months."
+                            Author: "Jennifer M., E-commerce Brand"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 2
+                          Content:
+                            Quote: "The Full-Service tier is worth every penny. Having a dedicated account manager who knows my business is invaluable."
+                            Author: "Michael R., Course Creator"
+                            Rating: 5
             - Order: 4
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Ready to Hand Off Your Ads?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Apply now and we'll help you choose the right tier for your business."
-                - Type: button
-                  Order: 3
-                  Content:
-                    Text: "Apply Now"
-                    Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Ready to Hand Off Your Ads?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Apply now and we'll help you choose the right tier for your business."
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "Apply Now"
+                            Action: next_step
         - Name: "Apply"
           Slug: apply
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Apply for Managed Services"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=APPLY_VIDEO"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: "Answer a few questions so we can recommend the right tier for your business."
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Apply for Managed Services"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=APPLY_VIDEO"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: "Answer a few questions so we can recommend the right tier for your business."
             - Order: 2
-              Elements:
-                - Type: form
-                  Order: 1
-                  Content:
-                    FormSlug: !Ref fs-services-application
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: form
+                          Order: 1
+                          Content:
+                            FormSlug: !Ref fs-services-application
+                            OnSuccess:
+                              Action: next_step
         - Name: "Book Your Call"
           Slug: book
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Great! Let's Talk Strategy."
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=BOOKING_VIDEO"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      On this 60-minute call, we'll:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Great! Let's Talk Strategy."
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=BOOKING_VIDEO"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              On this 60-minute call, we'll:
                       
-                      ✓ Review your current ad performance
-                      ✓ Understand your goals and challenges
-                      ✓ Recommend the right tier for your business
-                      ✓ Answer all your questions
-                - Type: booking_link
-                  Order: 4
-                  Content:
-                    BookingLinkSlug: !Ref fs-strategy-call
-                    OnSuccess:
-                      Action: next_step
+                              ✓ Review your current ad performance
+                              ✓ Understand your goals and challenges
+                              ✓ Recommend the right tier for your business
+                              ✓ Answer all your questions
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: booking_link
+                          Order: 1
+                          Content:
+                            BookingLinkSlug: !Ref fs-strategy-call
+                            OnSuccess:
+                              Action: next_step
         - Name: "You're Booked"
           Slug: confirmed
           Order: 4
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set!"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=CONFIRMED_VIDEO"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Your strategy call is booked. Check your email for calendar details.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set!"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=CONFIRMED_VIDEO"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Your strategy call is booked. Check your email for calendar details.
                       
-                      **Before our call, please:**
-                      1. Gather your offer details and pricing
-                      2. Know your monthly ad spend
-                      3. Note what's working and what isn't
+                              **Before our call, please:**
+                              1. Gather your offer details and pricing
+                              2. Know your monthly ad spend
+                              3. Note what's working and what isn't
                       
-                      See you soon!
+                              See you soon!
 
   # ============================================
   # 📋 FORMS

@@ -269,192 +269,234 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "The Exact System I Used to Grow from 0 to 100K Subscribers in 18 Months"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "No luck. No viral videos. Just a proven, repeatable system that works for any niche."
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=YTA_VSL"
-                    Provider: youtube
-                - Type: checkout
-                  Order: 4
-                  Content:
-                    OfferSlug: !Ref yta-offer
-                    PricingPlanSlug: !Ref yta-pif
-                    ButtonText: "Get Instant Access - $497"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "The Exact System I Used to Grow from 0 to 100K Subscribers in 18 Months"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "No luck. No viral videos. Just a proven, repeatable system that works for any niche."
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=YTA_VSL"
+                            Provider: youtube
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: checkout
+                          Order: 1
+                          Content:
+                            OfferSlug: !Ref yta-offer
+                            PricingPlanSlug: !Ref yta-pif
+                            ButtonText: "Get Instant Access - $497"
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Does this sound familiar?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You've been uploading videos for months (maybe years), but your channel is stuck.
+            - Order: 2
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Does this sound familiar?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You've been uploading videos for months (maybe years), but your channel is stuck.
                       
-                      - Your videos get 50-100 views no matter how hard you try
-                      - You see other creators blow up while you stay invisible
-                      - You don't know if you should change your niche, your content style, or just give up
-                      - You're frustrated because you KNOW your content is good
+                              - Your videos get 50-100 views no matter how hard you try
+                              - You see other creators blow up while you stay invisible
+                              - You don't know if you should change your niche, your content style, or just give up
+                              - You're frustrated because you KNOW your content is good
                       
-                      The algorithm feels like a mystery, and you're tired of guessing what works.
+                              The algorithm feels like a mystery, and you're tired of guessing what works.
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "What if you had a proven system?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Imagine knowing EXACTLY:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "What if you had a proven system?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Imagine knowing EXACTLY:
                       
-                      ✓ What videos to make that your niche actually wants
-                      ✓ How to create thumbnails that get clicked
-                      ✓ The SEO strategy that gets you discovered
-                      ✓ How to turn viewers into loyal subscribers
-                      ✓ When to monetize and how much you can make
+                              ✓ What videos to make that your niche actually wants
+                              ✓ How to create thumbnails that get clicked
+                              ✓ The SEO strategy that gets you discovered
+                              ✓ How to turn viewers into loyal subscribers
+                              ✓ When to monetize and how much you can make
                       
-                      That's what YouTube Academy gives you. The same system I used to grow to 100K.
+                              That's what YouTube Academy gives you. The same system I used to grow to 100K.
             - Order: 4
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Here's what you get"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      **Module 1: YouTube Foundations** (Value: $97)
-                      How the algorithm actually works, channel setup, branding basics
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Here's what you get"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              **Module 1: YouTube Foundations** (Value: $97)
+                              How the algorithm actually works, channel setup, branding basics
                       
-                      **Module 2: Finding Your Niche** (Value: $197)
-                      Market research, competition analysis, positioning your unique angle
+                              **Module 2: Finding Your Niche** (Value: $197)
+                              Market research, competition analysis, positioning your unique angle
                       
-                      **Module 3: Content Strategy** (Value: $197)
-                      Video ideas, content pillars, planning your calendar
+                              **Module 3: Content Strategy** (Value: $197)
+                              Video ideas, content pillars, planning your calendar
                       
-                      **Module 4: Filming & Editing** (Value: $147)
-                      Equipment, lighting, editing workflow, B-roll mastery
+                              **Module 4: Filming & Editing** (Value: $147)
+                              Equipment, lighting, editing workflow, B-roll mastery
                       
-                      **Module 5: Thumbnail & Title Mastery** (Value: $197)
-                      CTR optimization, A/B testing, proven formulas
+                              **Module 5: Thumbnail & Title Mastery** (Value: $197)
+                              CTR optimization, A/B testing, proven formulas
                       
-                      **Module 6: SEO & Discovery** (Value: $147)
-                      Keywords, tags, descriptions, playlist strategy
+                              **Module 6: SEO & Discovery** (Value: $147)
+                              Keywords, tags, descriptions, playlist strategy
                       
-                      **Module 7: Building Your Audience** (Value: $147)
-                      Engagement, community, collaborations, Shorts strategy
+                              **Module 7: Building Your Audience** (Value: $147)
+                              Engagement, community, collaborations, Shorts strategy
                       
-                      **Module 8: Monetization** (Value: $197)
-                      AdSense, sponsorships, products, affiliate marketing
+                              **Module 8: Monetization** (Value: $197)
+                              AdSense, sponsorships, products, affiliate marketing
                       
-                      **BONUS: Student Community** (Value: $297)
-                      Channel reviews, collaboration opportunities, weekly office hours
+                              **BONUS: Student Community** (Value: $297)
+                              Channel reviews, collaboration opportunities, weekly office hours
                       
-                      **Total Value: $1,623**
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: "**Your Investment: Just $497** (or 3 payments of $197)"
+                              **Total Value: $1,623**
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: "**Your Investment: Just $497** (or 3 payments of $197)"
             - Order: 5
-              Elements:
-                - Type: testimonial
-                  Order: 1
-                  Content:
-                    Quote: "I was stuck at 500 subscribers for 2 years. After implementing the thumbnail strategies from Module 5, I hit 10K in 3 months. The CTR formula alone was worth 10x the price."
-                    Author: "Alex R., Tech Reviewer"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 2
-                  Content:
-                    Quote: "The niche selection module saved me from making a huge mistake. I was about to start a channel in a dead niche. Now I'm in a growing niche with way less competition."
-                    Author: "Sarah M., Lifestyle Creator"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 3
-                  Content:
-                    Quote: "The community alone is worth the price. Got my first collab from another student, and that video got 50K views - my biggest ever."
-                    Author: "James T., Gaming Channel"
-                    Rating: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "I was stuck at 500 subscribers for 2 years. After implementing the thumbnail strategies from Module 5, I hit 10K in 3 months. The CTR formula alone was worth 10x the price."
+                            Author: "Alex R., Tech Reviewer"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 2
+                          Content:
+                            Quote: "The niche selection module saved me from making a huge mistake. I was about to start a channel in a dead niche. Now I'm in a growing niche with way less competition."
+                            Author: "Sarah M., Lifestyle Creator"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 3
+                          Content:
+                            Quote: "The community alone is worth the price. Got my first collab from another student, and that video got 50K views - my biggest ever."
+                            Author: "James T., Gaming Channel"
+                            Rating: 5
             - Order: 6
-              Elements:
-                - Type: faq_item
-                  Order: 1
-                  Content:
-                    Question: "Does this work for any niche?"
-                    Answer: "Yes! The principles of YouTube growth are universal. Whether you're in tech, lifestyle, gaming, education, or entertainment, these strategies work. I've had students succeed in 50+ different niches."
-                - Type: faq_item
-                  Order: 2
-                  Content:
-                    Question: "I'm a complete beginner. Is this too advanced?"
-                    Answer: "Not at all. The course starts from the foundations and builds up. Whether you have 0 subscribers or 10,000, you'll find actionable strategies at your level."
-                - Type: faq_item
-                  Order: 3
-                  Content:
-                    Question: "How long do I have access?"
-                    Answer: "Lifetime access. The course, community, and all future updates are yours forever. Pay once, learn forever."
-                - Type: faq_item
-                  Order: 4
-                  Content:
-                    Question: "What if I don't see results?"
-                    Answer: "If you implement the strategies and don't see improvement, reach out in the community. We'll review your channel and help you troubleshoot. Most students see noticeable CTR improvements within the first 30 days."
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: faq_item
+                          Order: 1
+                          Content:
+                            Question: "Does this work for any niche?"
+                            Answer: "Yes! The principles of YouTube growth are universal. Whether you're in tech, lifestyle, gaming, education, or entertainment, these strategies work. I've had students succeed in 50+ different niches."
+                        - Type: faq_item
+                          Order: 2
+                          Content:
+                            Question: "I'm a complete beginner. Is this too advanced?"
+                            Answer: "Not at all. The course starts from the foundations and builds up. Whether you have 0 subscribers or 10,000, you'll find actionable strategies at your level."
+                        - Type: faq_item
+                          Order: 3
+                          Content:
+                            Question: "How long do I have access?"
+                            Answer: "Lifetime access. The course, community, and all future updates are yours forever. Pay once, learn forever."
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: faq_item
+                          Order: 1
+                          Content:
+                            Question: "What if I don't see results?"
+                            Answer: "If you implement the strategies and don't see improvement, reach out in the community. We'll review your channel and help you troubleshoot. Most students see noticeable CTR improvements within the first 30 days."
             - Order: 7
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Ready to Grow Your Channel?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Join 2,000+ creators who've already transformed their YouTube channels with this system."
-                - Type: checkout
-                  Order: 3
-                  Content:
-                    OfferSlug: !Ref yta-offer
-                    PricingPlanSlug: !Ref yta-pif
-                    ButtonText: "Get Instant Access - $497"
+            - Order: 7
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Ready to Grow Your Channel?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Join 2,000+ creators who've already transformed their YouTube channels with this system."
+                        - Type: checkout
+                          Order: 3
+                          Content:
+                            OfferSlug: !Ref yta-offer
+                            PricingPlanSlug: !Ref yta-pif
+                            ButtonText: "Get Instant Access - $497"
         - Name: "Thank You"
           Slug: thank-you
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to YouTube Academy!"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=YTA_THANKYOU"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Congratulations on investing in your YouTube growth!
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to YouTube Academy!"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=YTA_THANKYOU"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Congratulations on investing in your YouTube growth!
                       
-                      Check your email for login details to your student portal where you can:
+                              Check your email for login details to your student portal where you can:
                       
-                      - Complete your onboarding
-                      - Access the course modules
-                      - Join the student community
-                      - Register for weekly office hours
+                              - Complete your onboarding
+                              - Access the course modules
+                              - Join the student community
+                              - Register for weekly office hours
                       
-                      **Your first step:** Log in and complete the onboarding. Then start Module 1!
+                              **Your first step:** Log in and complete the onboarding. Then start Module 1!
 
   # ============================================
   # 📋 FORMS
@@ -747,7 +789,6 @@ Resources:
                       Add the weekly Q&A to your calendar - it's every Friday!
                       
                       Let's grow your channel! 🚀
-
   # ============================================
   # 🔄 PIPELINE
   # ============================================

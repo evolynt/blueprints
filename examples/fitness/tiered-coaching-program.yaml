@@ -370,221 +370,269 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Free Training: The 3 Pillars of Lasting Transformation"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Discover why most fitness programs fail and the proven system that creates permanent change"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=TRANSFORM_OPTIN_VIDEO"
-                    Provider: youtube
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Free Training: The 3 Pillars of Lasting Transformation"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Discover why most fitness programs fail and the proven system that creates permanent change"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=TRANSFORM_OPTIN_VIDEO"
+                            Provider: youtube
             - Order: 2
-              Elements:
-                - Type: text
-                  Order: 1
-                  Content:
-                    Text: |
-                      In this free training, you'll discover:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: text
+                          Order: 1
+                          Content:
+                            Text: |
+                              In this free training, you'll discover:
                       
-                      ✓ Why 95% of fitness programs fail (and what actually works)
-                      ✓ The 3-pillar system used by successful transformations
-                      ✓ How to build habits that stick for life
-                      ✓ The accountability secret that changes everything
+                              ✓ Why 95% of fitness programs fail (and what actually works)
+                              ✓ The 3-pillar system used by successful transformations
+                              ✓ How to build habits that stick for life
+                              ✓ The accountability secret that changes everything
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Enter your details to watch the free training:"
-                - Type: form
-                  Order: 2
-                  Content:
-                    FormSlug: !Ref optin-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Enter your details to watch the free training:"
+                        - Type: form
+                          Order: 2
+                          Content:
+                            FormSlug: !Ref optin-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "Watch Training"
           Slug: training
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "The 3 Pillars of Lasting Transformation"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=TRANSFORM_MASTERCLASS"
-                    Provider: youtube
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "The 3 Pillars of Lasting Transformation"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=TRANSFORM_MASTERCLASS"
+                            Provider: youtube
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "If this resonated with you, here's your next step"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      What you just learned is the foundation of the Transform Fitness Academy.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "If this resonated with you, here's your next step"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              What you just learned is the foundation of the Transform Fitness Academy.
                       
-                      But watching a video won't change your body. Taking action will.
+                              But watching a video won't change your body. Taking action will.
                       
-                      **Transform Fitness Academy** is a complete coaching program designed for people who are serious about results. Not another app. Not another generic program. A real coaching experience with multiple levels to fit your needs.
+                              **Transform Fitness Academy** is a complete coaching program designed for people who are serious about results. Not another app. Not another generic program. A real coaching experience with multiple levels to fit your needs.
                       
-                      We offer three tiers:
+                              We offer three tiers:
                       
-                      **Silver** - Group coaching with weekly calls, community access, and our complete training system
+                              **Silver** - Group coaching with weekly calls, community access, and our complete training system
                       
-                      **Gold** - Everything in Silver PLUS 6 private 1:1 coaching sessions
+                              **Gold** - Everything in Silver PLUS 6 private 1:1 coaching sessions
                       
-                      **Platinum** - The ultimate experience with 12 private 1:1 sessions and our highest level of support
+                              **Platinum** - The ultimate experience with 12 private 1:1 sessions and our highest level of support
                       
-                      Ready to transform? Fill out an application to see which tier is right for you.
+                              Ready to transform? Fill out an application to see which tier is right for you.
             - Order: 3
-              Elements:
-                - Type: button
-                  Order: 1
-                  Content:
-                    Text: "Apply Now"
-                    Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: button
+                          Order: 1
+                          Content:
+                            Text: "Apply Now"
+                            Action: next_step
         - Name: "Apply"
           Slug: apply
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Apply to Transform Fitness Academy"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Tell us about your goals so we can recommend the right program for you"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=TRANSFORM_APPLICATION_VIDEO"
-                    Provider: youtube
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Apply to Transform Fitness Academy"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Tell us about your goals so we can recommend the right program for you"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=TRANSFORM_APPLICATION_VIDEO"
+                            Provider: youtube
             - Order: 2
-              Elements:
-                - Type: text
-                  Order: 1
-                  Content:
-                    Text: |
-                      **Who this is for:**
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: text
+                          Order: 1
+                          Content:
+                            Text: |
+                              **Who this is for:**
                       
-                      ✓ Busy professionals who want a proven system
-                      ✓ People who are done with cookie-cutter programs
-                      ✓ Those ready to invest in themselves and their results
-                      ✓ Anyone committed to making a permanent change
+                              ✓ Busy professionals who want a proven system
+                              ✓ People who are done with cookie-cutter programs
+                              ✓ Those ready to invest in themselves and their results
+                              ✓ Anyone committed to making a permanent change
                       
-                      **Who this is NOT for:**
+                              **Who this is NOT for:**
                       
-                      ✗ People looking for the cheapest option
-                      ✗ Those not ready to commit to the process
-                      ✗ Anyone who wants results without putting in work
+                              ✗ People looking for the cheapest option
+                              ✗ Those not ready to commit to the process
+                              ✗ Anyone who wants results without putting in work
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Fill out your application:"
-                - Type: form
-                  Order: 2
-                  Content:
-                    FormSlug: !Ref transform-application-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Fill out your application:"
+                        - Type: form
+                          Order: 2
+                          Content:
+                            FormSlug: !Ref transform-application-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "Book Your Call"
           Slug: book
           Order: 4
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Application Received!"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=TRANSFORM_BOOKING_VIDEO"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Thank you for applying to Transform Fitness Academy.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Application Received!"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=TRANSFORM_BOOKING_VIDEO"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Thank you for applying to Transform Fitness Academy.
                       
-                      **Next Step: Book Your Strategy Call**
+                              **Next Step: Book Your Strategy Call**
                       
-                      This is a 30-minute call where we'll:
+                              This is a 30-minute call where we'll:
                       
-                      ✓ Discuss your transformation goals
-                      ✓ Review your current situation and challenges
-                      ✓ Determine which tier (Silver, Gold, or Platinum) is right for you
-                      ✓ Answer any questions you have about the program
+                              ✓ Discuss your transformation goals
+                              ✓ Review your current situation and challenges
+                              ✓ Determine which tier (Silver, Gold, or Platinum) is right for you
+                              ✓ Answer any questions you have about the program
                       
-                      Please come prepared to discuss your goals, timeline, and commitment level.
+                              Please come prepared to discuss your goals, timeline, and commitment level.
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Select a time that works for you:"
-                - Type: booking_link
-                  Order: 2
-                  Content:
-                    BookingLinkSlug: !Ref strategy-call
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Select a time that works for you:"
+                        - Type: booking_link
+                          Order: 2
+                          Content:
+                            BookingLinkSlug: !Ref strategy-call
+                            OnSuccess:
+                              Action: next_step
         - Name: "You're Booked"
           Slug: confirmed
           Order: 5
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Your Strategy Call is Confirmed!"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=TRANSFORM_CONFIRMED_VIDEO"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      You're one step closer to your transformation.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Your Strategy Call is Confirmed!"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=TRANSFORM_CONFIRMED_VIDEO"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              You're one step closer to your transformation.
                       
-                      **Check your email for:**
-                      - Calendar invitation with Zoom link
-                      - Call details and what to expect
+                              **Check your email for:**
+                              - Calendar invitation with Zoom link
+                              - Call details and what to expect
                       
-                      **How to prepare for your call:**
+                              **How to prepare for your call:**
                       
-                      1. **Know your goals** - What do you want to achieve in the next 90 days? Be specific.
+                              1. **Know your goals** - What do you want to achieve in the next 90 days? Be specific.
                       
-                      2. **Understand your why** - Why is this transformation important to you right now?
+                              2. **Understand your why** - Why is this transformation important to you right now?
                       
-                      3. **Be honest about your situation** - Current fitness level, time constraints, past attempts.
+                              3. **Be honest about your situation** - Current fitness level, time constraints, past attempts.
                       
-                      4. **Prepare questions** - What do you want to know about the program?
+                              4. **Prepare questions** - What do you want to know about the program?
                       
-                      5. **Be ready to commit** - If we're a good fit, be prepared to make a decision.
+                              5. **Be ready to commit** - If we're a good fit, be prepared to make a decision.
                       
-                      I'm looking forward to speaking with you!
+                              I'm looking forward to speaking with you!
 
   # ============================================
   # 📋 FORMS

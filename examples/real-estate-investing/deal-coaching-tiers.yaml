@@ -368,312 +368,372 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Close More Deals with Expert 1:1 Real Estate Coaching"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Personalized guidance from an investor who's done 200+ deals - choose the level of support that fits your goals"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=DCT_VSL_PLACEHOLDER"
-                    Provider: youtube
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Close More Deals with Expert 1:1 Real Estate Coaching"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Personalized guidance from an investor who's done 200+ deals - choose the level of support that fits your goals"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=DCT_VSL_PLACEHOLDER"
+                            Provider: youtube
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Are you stuck between learning and doing?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You've done the research. You know real estate investing works. But when it comes to actually pulling the trigger on deals, something holds you back.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Are you stuck between learning and doing?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You've done the research. You know real estate investing works. But when it comes to actually pulling the trigger on deals, something holds you back.
                       
-                      Maybe you're not sure if your numbers are right. Maybe you're afraid of making a costly mistake. Maybe you just need someone experienced to guide you through your first (or next) deals.
+                              Maybe you're not sure if your numbers are right. Maybe you're afraid of making a costly mistake. Maybe you just need someone experienced to guide you through your first (or next) deals.
                       
-                      **That's exactly what Deal Coaching provides.**
+                              **That's exactly what Deal Coaching provides.**
                       
-                      I work with investors at all levels - from those looking for basic guidance to close their first deal, to experienced investors scaling their portfolios who want JV partnerships and direct access to my network.
+                              I work with investors at all levels - from those looking for basic guidance to close their first deal, to experienced investors scaling their portfolios who want JV partnerships and direct access to my network.
                       
-                      Whatever level you're at, there's a coaching tier designed for your goals.
+                              Whatever level you're at, there's a coaching tier designed for your goals.
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Who this is for"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Deal Coaching is for serious investors who:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Who this is for"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Deal Coaching is for serious investors who:
                       
-                      ✓ Have done basic education (courses, books, podcasts)
-                      ✓ Have capital or access to funding for deals
-                      ✓ Are ready to take action, not just learn more
-                      ✓ Want personalized guidance, not generic advice
-                      ✓ Are committed to doing the work between sessions
+                              ✓ Have done basic education (courses, books, podcasts)
+                              ✓ Have capital or access to funding for deals
+                              ✓ Are ready to take action, not just learn more
+                              ✓ Want personalized guidance, not generic advice
+                              ✓ Are committed to doing the work between sessions
                       
-                      **This is NOT for:**
+                              **This is NOT for:**
                       
-                      - Complete beginners who haven't done any research
-                      - People looking for get-rich-quick schemes
-                      - Anyone who wants someone to do the work for them
+                              - Complete beginners who haven't done any research
+                              - People looking for get-rich-quick schemes
+                              - Anyone who wants someone to do the work for them
             - Order: 4
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Ready to See Your Options?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Compare the three coaching tiers and find the right fit for your goals."
-                - Type: button
-                  Order: 3
-                  Content:
-                    Text: "Compare Coaching Tiers"
-                    Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Ready to See Your Options?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Compare the three coaching tiers and find the right fit for your goals."
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "Compare Coaching Tiers"
+                            Action: next_step
         - Name: "Compare Tiers"
           Slug: compare
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Choose Your Coaching Level"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=DCT_COMPARE_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      I offer three coaching tiers to match different goals and commitment levels. Each tier includes progressively more support, access, and exclusive benefits.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Choose Your Coaching Level"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=DCT_COMPARE_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              I offer three coaching tiers to match different goals and commitment levels. Each tier includes progressively more support, access, and exclusive benefits.
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "🥉 STARTER - Get the Foundations"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      **Duration:** 3 months | **Sessions:** 6 (60-min each)
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "🥉 STARTER - Get the Foundations"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              **Duration:** 3 months | **Sessions:** 6 (60-min each)
                       
-                      Perfect for investors who want basic guidance to close their first deals.
+                              Perfect for investors who want basic guidance to close their first deals.
                       
-                      **What's Included:**
+                              **What's Included:**
                       
-                      ✓ 6 private 1:1 coaching sessions
-                      ✓ Deal Analyzer spreadsheet and templates
-                      ✓ Student community access
-                      ✓ Monthly group Q&A call
-                      ✓ Email support between sessions
+                              ✓ 6 private 1:1 coaching sessions
+                              ✓ Deal Analyzer spreadsheet and templates
+                              ✓ Student community access
+                              ✓ Monthly group Q&A call
+                              ✓ Email support between sessions
                       
-                      **Best For:** New investors who need guidance on the fundamentals - finding deals, analyzing numbers, and making offers.
+                              **Best For:** New investors who need guidance on the fundamentals - finding deals, analyzing numbers, and making offers.
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "🥈 ACCELERATOR - Scale Faster"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      **Duration:** 6 months | **Sessions:** 12 (60-min each)
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "🥈 ACCELERATOR - Scale Faster"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              **Duration:** 6 months | **Sessions:** 12 (60-min each)
                       
-                      For investors ready to build momentum and close more deals.
+                              For investors ready to build momentum and close more deals.
                       
-                      **Everything in Starter, PLUS:**
+                              **Everything in Starter, PLUS:**
                       
-                      ✓ 12 private 1:1 coaching sessions (2x the support)
-                      ✓ VIP community with deal flow and networking
-                      ✓ Personal deal reviews before you make offers
-                      ✓ Access to my buyer and contractor rolodex
-                      ✓ Bi-weekly VIP group calls
-                      ✓ Priority email support
+                              ✓ 12 private 1:1 coaching sessions (2x the support)
+                              ✓ VIP community with deal flow and networking
+                              ✓ Personal deal reviews before you make offers
+                              ✓ Access to my buyer and contractor rolodex
+                              ✓ Bi-weekly VIP group calls
+                              ✓ Priority email support
                       
-                      **Best For:** Investors who have done a few deals and want intensive support to build a consistent pipeline.
+                              **Best For:** Investors who have done a few deals and want intensive support to build a consistent pipeline.
             - Order: 4
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "🥇 INNER CIRCLE - Elite Partnership"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      **Duration:** 12 months | **Sessions:** 24 (60-min each)
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "🥇 INNER CIRCLE - Elite Partnership"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              **Duration:** 12 months | **Sessions:** 24 (60-min each)
                       
-                      For serious investors who want VIP access and deal partnership opportunities.
+                              For serious investors who want VIP access and deal partnership opportunities.
                       
-                      **Everything in Accelerator, PLUS:**
+                              **Everything in Accelerator, PLUS:**
                       
-                      ✓ 24 VIP coaching sessions with priority scheduling
-                      ✓ Inner Circle community with JV opportunities
-                      ✓ Joint venture deal opportunities with me
-                      ✓ Quarterly in-person retreats (travel not included)
-                      ✓ Direct phone/text access to me
-                      ✓ First access to off-market deals from my network
-                      ✓ Weekly Inner Circle calls
+                              ✓ 24 VIP coaching sessions with priority scheduling
+                              ✓ Inner Circle community with JV opportunities
+                              ✓ Joint venture deal opportunities with me
+                              ✓ Quarterly in-person retreats (travel not included)
+                              ✓ Direct phone/text access to me
+                              ✓ First access to off-market deals from my network
+                              ✓ Weekly Inner Circle calls
                       
-                      **Best For:** Experienced investors who want JV partnerships, network access, and the highest level of support.
+                              **Best For:** Experienced investors who want JV partnerships, network access, and the highest level of support.
             - Order: 5
-              Elements:
-                - Type: testimonial
-                  Order: 1
-                  Content:
-                    Quote: "Started with Starter and upgraded to Accelerator after my third deal. Having someone review every deal before I commit has completely changed my confidence level."
-                    Author: "Marcus T., Wholesaler"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 2
-                  Content:
-                    Quote: "The Inner Circle JV opportunities alone have made this the best investment I've made. We've partnered on three flips this year."
-                    Author: "Jennifer R., Investor"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 3
-                  Content:
-                    Quote: "I was skeptical about the VIP community, but the deal flow and contractor contacts have saved me thousands. Worth every penny."
-                    Author: "David L., Flipper"
-                    Rating: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "Started with Starter and upgraded to Accelerator after my third deal. Having someone review every deal before I commit has completely changed my confidence level."
+                            Author: "Marcus T., Wholesaler"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 2
+                          Content:
+                            Quote: "The Inner Circle JV opportunities alone have made this the best investment I've made. We've partnered on three flips this year."
+                            Author: "Jennifer R., Investor"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 3
+                          Content:
+                            Quote: "I was skeptical about the VIP community, but the deal flow and contractor contacts have saved me thousands. Worth every penny."
+                            Author: "David L., Flipper"
+                            Rating: 5
             - Order: 6
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Ready to Apply?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Complete a quick application and we'll schedule a discovery call to discuss which tier is right for you."
-                - Type: button
-                  Order: 3
-                  Content:
-                    Text: "Apply Now"
-                    Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Ready to Apply?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Complete a quick application and we'll schedule a discovery call to discuss which tier is right for you."
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "Apply Now"
+                            Action: next_step
         - Name: "Apply"
           Slug: apply
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Apply for Deal Coaching"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=DCT_APPLICATION_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Thanks for your interest in Deal Coaching!
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Apply for Deal Coaching"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=DCT_APPLICATION_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Thanks for your interest in Deal Coaching!
                       
-                      I work with a limited number of clients at each tier to ensure everyone gets the attention they need. Please answer a few questions so I can understand your situation and goals.
+                              I work with a limited number of clients at each tier to ensure everyone gets the attention they need. Please answer a few questions so I can understand your situation and goals.
                       
-                      **This takes about 3 minutes.**
+                              **This takes about 3 minutes.**
             - Order: 2
-              Elements:
-                - Type: form
-                  Order: 1
-                  Content:
-                    FormSlug: !Ref dct-application
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: form
+                          Order: 1
+                          Content:
+                            FormSlug: !Ref dct-application
+                            OnSuccess:
+                              Action: next_step
         - Name: "Book Your Call"
           Slug: book
           Order: 4
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Great! Let's Talk."
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=DCT_BOOKING_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Thanks for applying to Deal Coaching!
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Great! Let's Talk."
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=DCT_BOOKING_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Thanks for applying to Deal Coaching!
                       
-                      **Next Step: Book Your Discovery Call**
+                              **Next Step: Book Your Discovery Call**
                       
-                      On this 30-minute call, we'll:
+                              On this 30-minute call, we'll:
                       
-                      ✓ Discuss your investing experience and current situation
-                      ✓ Understand your goals for the next 3-12 months
-                      ✓ Talk through which coaching tier fits your needs
-                      ✓ Answer any questions you have about the programs
-                      ✓ Determine if we're a good fit to work together
+                              ✓ Discuss your investing experience and current situation
+                              ✓ Understand your goals for the next 3-12 months
+                              ✓ Talk through which coaching tier fits your needs
+                              ✓ Answer any questions you have about the programs
+                              ✓ Determine if we're a good fit to work together
                       
-                      **Please come prepared to discuss:**
+                              **Please come prepared to discuss:**
                       
-                      - Your investing background and recent activity
-                      - What's holding you back from closing more deals
-                      - Your goals and timeline
-                      - Which tier you're most interested in
-                - Type: booking_link
-                  Order: 4
-                  Content:
-                    BookingLinkSlug: !Ref dct-discovery-call
-                    OnSuccess:
-                      Action: next_step
+                              - Your investing background and recent activity
+                              - What's holding you back from closing more deals
+                              - Your goals and timeline
+                              - Which tier you're most interested in
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: booking_link
+                          Order: 1
+                          Content:
+                            BookingLinkSlug: !Ref dct-discovery-call
+                            OnSuccess:
+                              Action: next_step
         - Name: "You're Booked"
           Slug: confirmed
           Order: 5
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Your Call is Confirmed!"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=DCT_CONFIRMATION_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Your discovery call is booked. Check your email for calendar details and a Zoom link.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Your Call is Confirmed!"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=DCT_CONFIRMATION_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Your discovery call is booked. Check your email for calendar details and a Zoom link.
                       
-                      **Before our call, think about:**
+                              **Before our call, think about:**
                       
-                      1. **Your experience** - What deals have you done (or tried to do)?
-                      2. **Your challenges** - What's stopping you from closing more deals?
-                      3. **Your goals** - What do you want to achieve in the next year?
-                      4. **Your tier interest** - Which coaching level appeals to you most?
+                              1. **Your experience** - What deals have you done (or tried to do)?
+                              2. **Your challenges** - What's stopping you from closing more deals?
+                              3. **Your goals** - What do you want to achieve in the next year?
+                              4. **Your tier interest** - Which coaching level appeals to you most?
                       
-                      I review every application before our call, so I'll already know a bit about your situation.
+                              I review every application before our call, so I'll already know a bit about your situation.
                       
-                      **Questions before our call?** Reply to your confirmation email.
+                              **Questions before our call?** Reply to your confirmation email.
                       
-                      Talk soon!
+                              Talk soon!
 
   # ============================================
   # 📋 FORMS
@@ -1259,7 +1319,6 @@ Resources:
                   Content:
                     Text: "Enter Your Portal"
                     Action: next_step
-
   dct-accel-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -1345,7 +1404,6 @@ Resources:
                   Content:
                     Text: "Enter Your Portal"
                     Action: next_step
-
   dct-inner-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -1434,7 +1492,6 @@ Resources:
                   Content:
                     Text: "Enter Your Portal"
                     Action: next_step
-
   # ============================================
   # 🔄 PIPELINE
   # ============================================

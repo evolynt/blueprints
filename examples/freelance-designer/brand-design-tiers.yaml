@@ -328,120 +328,144 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Professional Brand Design Services"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "From logo to complete brand suite - choose your level"
-                - Type: button
-                  Order: 3
-                  Content:
-                    Text: "See Packages"
-                    Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Professional Brand Design Services"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "From logo to complete brand suite - choose your level"
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "See Packages"
+                            Action: next_step
         - Name: "Compare"
           Slug: compare
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Choose Your Package"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      **LOGO DESIGN - $1,500** (4-5 weeks)
-                      - 3 logo concepts, 3 revision rounds
-                      - All logo variations and file formats
-                      - Basic usage guidelines
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Choose Your Package"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              **LOGO DESIGN - $1,500** (4-5 weeks)
+                              - 3 logo concepts, 3 revision rounds
+                              - All logo variations and file formats
+                              - Basic usage guidelines
                       
-                      *Best for: Businesses that need a professional logo*
+                              *Best for: Businesses that need a professional logo*
                       
-                      ---
+                              ---
                       
-                      **BRAND IDENTITY - $3,500** (6-8 weeks)
-                      Everything in Logo Design, PLUS:
-                      - Full color palette with specifications
-                      - Typography system (2 fonts)
-                      - Comprehensive brand guidelines (20+ pages)
+                              **BRAND IDENTITY - $3,500** (6-8 weeks)
+                              Everything in Logo Design, PLUS:
+                              - Full color palette with specifications
+                              - Typography system (2 fonts)
+                              - Comprehensive brand guidelines (20+ pages)
                       
-                      *Best for: Businesses ready for a cohesive visual identity*
+                              *Best for: Businesses ready for a cohesive visual identity*
                       
-                      ---
+                              ---
                       
-                      **FULL BRAND SUITE - $7,500** (10-12 weeks)
-                      Everything in Brand Identity, PLUS:
-                      - Business stationery (cards, letterhead, envelope)
-                      - Social media templates (20+ designs)
-                      - Brand collateral (presentation, flyer, icons)
+                              **FULL BRAND SUITE - $7,500** (10-12 weeks)
+                              Everything in Brand Identity, PLUS:
+                              - Business stationery (cards, letterhead, envelope)
+                              - Social media templates (20+ designs)
+                              - Brand collateral (presentation, flyer, icons)
                       
-                      *Best for: Businesses wanting complete brand implementation*
-                - Type: button
-                  Order: 3
-                  Content:
-                    Text: "Start Your Project"
-                    Action: next_step
+                              *Best for: Businesses wanting complete brand implementation*
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "Start Your Project"
+                            Action: next_step
         - Name: "Inquiry"
           Slug: inquiry
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Tell Me About Your Project"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Fill out this form and I'll reach out to schedule a discovery call.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Tell Me About Your Project"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Fill out this form and I'll reach out to schedule a discovery call.
             - Order: 2
-              Elements:
-                - Type: form
-                  Order: 1
-                  Content:
-                    FormSlug: !Ref bdt-inquiry-form
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: form
+                          Order: 1
+                          Content:
+                            FormSlug: !Ref bdt-inquiry-form
         - Name: "Book"
           Slug: book
           Order: 4
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Book Your Discovery Call"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Let's discuss your project and find the right package for your needs.
-                - Type: booking_link
-                  Order: 3
-                  Content:
-                    BookingLinkSlug: !Ref bdt-discovery-call
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Book Your Discovery Call"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Let's discuss your project and find the right package for your needs.
+                        - Type: booking_link
+                          Order: 3
+                          Content:
+                            BookingLinkSlug: !Ref bdt-discovery-call
         - Name: "Confirmed"
           Slug: confirmed
           Order: 5
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're Booked!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Check your email for the calendar invite. Looking forward to discussing your brand!
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're Booked!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Check your email for the calendar invite. Looking forward to discussing your brand!
 
   # ============================================
   # 📋 FORMS
@@ -789,7 +813,6 @@ Resources:
                   Order: 2
                   Content:
                     Text: "I'll begin working on your logo concepts. Check your email for updates!"
-
   bdt-identity-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -846,7 +869,6 @@ Resources:
                   Order: 2
                   Content:
                     Text: "I'll schedule your brand strategy session. Check your email!"
-
   bdt-suite-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -903,7 +925,6 @@ Resources:
                   Order: 2
                   Content:
                     Text: "I'll schedule your brand strategy session. This is going to be great!"
-
   # ============================================
   # 🔄 PIPELINE
   # ============================================

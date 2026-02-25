@@ -89,85 +89,101 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Is Your Brand Working Against You?"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Find out in 30 minutes with the Brand Audit Checklist"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=BAC_PROMO"
-                    Provider: youtube
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Is Your Brand Working Against You?"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Find out in 30 minutes with the Brand Audit Checklist"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=BAC_PROMO"
+                            Provider: youtube
             - Order: 2
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "What You'll Discover"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      **The 25-Point Brand Audit Checklist** helps you evaluate:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "What You'll Discover"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              **The 25-Point Brand Audit Checklist** helps you evaluate:
                       
-                      ✓ **Logo & Visual Identity** - Is your logo professional and versatile?
+                              ✓ **Logo & Visual Identity** - Is your logo professional and versatile?
                       
-                      ✓ **Color Palette** - Are your colors consistent and intentional?
+                              ✓ **Color Palette** - Are your colors consistent and intentional?
                       
-                      ✓ **Typography** - Do your fonts communicate the right message?
+                              ✓ **Typography** - Do your fonts communicate the right message?
                       
-                      ✓ **Brand Messaging** - Is your positioning clear and compelling?
+                              ✓ **Brand Messaging** - Is your positioning clear and compelling?
                       
-                      ✓ **Consistency** - Does your brand look cohesive everywhere?
+                              ✓ **Consistency** - Does your brand look cohesive everywhere?
                       
-                      ---
+                              ---
                       
-                      **You'll also get:**
+                              **You'll also get:**
                       
-                      - Scoring worksheet to rate each area
-                      - Video walkthrough (15 min) explaining each criterion
-                      - Action plan template to prioritize improvements
+                              - Scoring worksheet to rate each area
+                              - Video walkthrough (15 min) explaining each criterion
+                              - Action plan template to prioritize improvements
             - Order: 3
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Get Instant Access - $47"
-                - Type: checkout
-                  Order: 2
-                  Content:
-                    OfferSlug: !Ref bac-offer
-                    PricingPlanSlug: !Ref bac-price
-                    ButtonText: "Get the Checklist"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Get Instant Access - $47"
+                        - Type: checkout
+                          Order: 2
+                          Content:
+                            OfferSlug: !Ref bac-offer
+                            PricingPlanSlug: !Ref bac-price
+                            ButtonText: "Get the Checklist"
         - Name: "Thank You"
           Slug: thank-you
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're In!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Thanks for your purchase! Check your email for login details.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're In!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Thanks for your purchase! Check your email for login details.
                       
-                      **What's next:**
+                              **What's next:**
                       
-                      1. Log into your portal
-                      2. Watch the video walkthrough
-                      3. Download the checklist and worksheet
-                      4. Complete your brand audit
+                              1. Log into your portal
+                              2. Watch the video walkthrough
+                              3. Download the checklist and worksheet
+                              4. Complete your brand audit
                       
-                      Questions? Reply to any email - I read every one.
+                              Questions? Reply to any email - I read every one.
 
   # ============================================
   # 📋 FORM

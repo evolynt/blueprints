@@ -861,7 +861,21 @@ A public set of web pages that turns visitors into Contacts. Each page (step) le
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | Order | integer | Yes | Display order within step |
-| Elements | array | No | Elements inside this section |
+| Rows | array | No | Rows inside this section |
+
+#### Row Properties
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| Order | integer | Yes | Display order within section |
+| Columns | array | No | Columns inside this row |
+
+#### Column Properties
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| Order | integer | Yes | Display order within row |
+| Elements | array | No | Elements inside this column |
 
 #### Element Types (Funnels and OnboardingFlows)
 
@@ -947,38 +961,50 @@ webinar-funnel:
         Order: 1
         Sections:
           - Order: 1
-            Elements:
-              - Type: headline
-                Order: 1
-                Content:
-                  Text: "Scale Your Business in 90 Days"
-              - Type: button
-                Order: 2
-                Content:
-                  Text: "Register Now"
-                  Action: next_step
+            Rows:
+              - Order: 1
+                Columns:
+                  - Order: 1
+                    Elements:
+                      - Type: headline
+                        Order: 1
+                        Content:
+                          Text: "Scale Your Business in 90 Days"
+                      - Type: button
+                        Order: 2
+                        Content:
+                          Text: "Register Now"
+                          Action: next_step
       - Name: "Registration"
         Slug: form
         Order: 2
         Sections:
           - Order: 1
-            Elements:
-              - Type: form
-                Order: 1
-                Content:
-                  FormSlug: !Ref registration-form
-                  OnSuccess:
-                    Action: next_step
+            Rows:
+              - Order: 1
+                Columns:
+                  - Order: 1
+                    Elements:
+                      - Type: form
+                        Order: 1
+                        Content:
+                          FormSlug: !Ref registration-form
+                          OnSuccess:
+                            Action: next_step
       - Name: "Thank You"
         Slug: thank-you
         Order: 3
         Sections:
           - Order: 1
-            Elements:
-              - Type: headline
-                Order: 1
-                Content:
-                  Text: "You're Registered!"
+            Rows:
+              - Order: 1
+                Columns:
+                  - Order: 1
+                    Elements:
+                      - Type: headline
+                        Order: 1
+                        Content:
+                          Text: "You're Registered!"
 ```
 
 ---
@@ -1609,181 +1635,213 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Stop Working Out Alone (And Finally Get the Results You Deserve)"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Join hundreds of members getting expert coaching, accountability, and proven workouts for just $97/month"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
-                    Provider: youtube
-                - Type: two_step_checkout
-                  Order: 4
-                  Content:
-                    OfferSlug: !Ref inner-circle-offer
-                    PricingPlanSlug: !Ref inner-circle-monthly
-                    ButtonText: "Join the Inner Circle - $97/month"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Stop Working Out Alone (And Finally Get the Results You Deserve)"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Join hundreds of members getting expert coaching, accountability, and proven workouts for just $97/month"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: two_step_checkout
+                          Order: 4
+                          Content:
+                            OfferSlug: !Ref inner-circle-offer
+                            PricingPlanSlug: !Ref inner-circle-monthly
+                            ButtonText: "Join the Inner Circle - $97/month"
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Does this sound familiar?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You start a new workout program, excited and motivated. Week one goes great.
-                      
-                      Then life happens. You miss a day. Then two. Before you know it, you're back to square one, wondering why you can't stick to anything.
-                      
-                      Here's what's really going on:
-                      
-                      - You're working out alone with no one to hold you accountable
-                      - When you hit a plateau, you have no idea what to change
-                      - You're not sure if you're doing exercises correctly (and you're worried about injury)
-                      - You don't have anyone to celebrate your wins with
-                      
-                      The truth is, fitness isn't just about having a program. It's about having support.
-                - Type: spacer
-                  Order: 3
-                  Content:
-                    Height: 20
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Does this sound familiar?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You start a new workout program, excited and motivated. Week one goes great.
+                              
+                              Then life happens. You miss a day. Then two. Before you know it, you're back to square one, wondering why you can't stick to anything.
+                              
+                              Here's what's really going on:
+                              
+                              - You're working out alone with no one to hold you accountable
+                              - When you hit a plateau, you have no idea what to change
+                              - You're not sure if you're doing exercises correctly (and you're worried about injury)
+                              - You don't have anyone to celebrate your wins with
+                              
+                              The truth is, fitness isn't just about having a program. It's about having support.
+                        - Type: spacer
+                          Order: 3
+                          Content:
+                            Height: 20
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "What if you never had to figure it out alone?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Imagine having a certified coach available every week to answer your questions, fix your form, and adjust your program.
-                      
-                      Imagine being part of a community where everyone is working toward the same goals, cheering each other on, and sharing what's working.
-                      
-                      That's the Fitness Inner Circle.
-                      
-                      It's not just another membership with videos you'll never watch. It's a complete support system designed to keep you consistent, motivated, and making progress month after month.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "What if you never had to figure it out alone?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Imagine having a certified coach available every week to answer your questions, fix your form, and adjust your program.
+                              
+                              Imagine being part of a community where everyone is working toward the same goals, cheering each other on, and sharing what's working.
+                              
+                              That's the Fitness Inner Circle.
+                              
+                              It's not just another membership with videos you'll never watch. It's a complete support system designed to keep you consistent, motivated, and making progress month after month.
             - Order: 4
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Here's everything you get as a member"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      ✓ Private Community Access (Value: $197/month)
-                      Connect with members who get it. Share wins, ask questions, and stay accountable with people on the same journey.
-                      
-                      ✓ Weekly Live Coaching Calls (Value: $297/month)
-                      Every Tuesday at 7pm ET, get your questions answered live. Form checks, program adjustments, mindset coaching. No question is too small.
-                      
-                      ✓ Complete Workout Library (Value: $97)
-                      Upper body, lower body, full body, and recovery routines you can follow along anytime. New workouts added monthly.
-                      
-                      ✓ Direct Access to Coach Sarah
-                      Post in the Q&A space anytime and get a response within 24 hours. It's like having a personal trainer in your pocket.
-                      
-                      Total Value: $591+/month
-                - Type: spacer
-                  Order: 3
-                  Content:
-                    Height: 10
-                - Type: text
-                  Order: 4
-                  Content:
-                    Text: "Your investment: Just $97/month (cancel anytime)"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Here's everything you get as a member"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              ✓ Private Community Access (Value: $197/month)
+                              Connect with members who get it. Share wins, ask questions, and stay accountable with people on the same journey.
+                              
+                              ✓ Weekly Live Coaching Calls (Value: $297/month)
+                              Every Tuesday at 7pm ET, get your questions answered live. Form checks, program adjustments, mindset coaching. No question is too small.
+                              
+                              ✓ Complete Workout Library (Value: $97)
+                              Upper body, lower body, full body, and recovery routines you can follow along anytime. New workouts added monthly.
+                              
+                              ✓ Direct Access to Coach Sarah
+                              Post in the Q&A space anytime and get a response within 24 hours. It's like having a personal trainer in your pocket.
+                              
+                              Total Value: $591+/month
+                        - Type: spacer
+                          Order: 3
+                          Content:
+                            Height: 10
+                        - Type: text
+                          Order: 4
+                          Content:
+                            Text: "Your investment: Just $97/month (cancel anytime)"
             - Order: 5
-              Elements:
-                - Type: testimonial
-                  Order: 1
-                  Content:
-                    Quote: "I've joined gyms and bought programs before, but I always quit after a few weeks. The Inner Circle is different. The weekly calls keep me accountable and the community actually cares. Down 23lbs and still going strong!"
-                    Author: "Michelle K., 38, Marketing Manager"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 2
-                  Content:
-                    Quote: "The live calls are worth the membership alone. Coach Sarah helped me fix my squat form and my knee pain is completely gone. Plus I've made real friends in the community."
-                    Author: "James T., 45, Dad of 3"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 3
-                  Content:
-                    Quote: "I was skeptical about an online community, but these people actually show up for each other. When I hit my first pull-up, I had 50+ people celebrating with me. That's priceless."
-                    Author: "Andrea L., 29, Nurse"
-                    Rating: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "I've joined gyms and bought programs before, but I always quit after a few weeks. The Inner Circle is different. The weekly calls keep me accountable and the community actually cares. Down 23lbs and still going strong!"
+                            Author: "Michelle K., 38, Marketing Manager"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 2
+                          Content:
+                            Quote: "The live calls are worth the membership alone. Coach Sarah helped me fix my squat form and my knee pain is completely gone. Plus I've made real friends in the community."
+                            Author: "James T., 45, Dad of 3"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 3
+                          Content:
+                            Quote: "I was skeptical about an online community, but these people actually show up for each other. When I hit my first pull-up, I had 50+ people celebrating with me. That's priceless."
+                            Author: "Andrea L., 29, Nurse"
+                            Rating: 5
             - Order: 6
-              Elements:
-                - Type: faq_item
-                  Order: 1
-                  Content:
-                    Question: "I'm a complete beginner. Is this right for me?"
-                    Answer: "Absolutely. The workout library has routines for all levels, and Coach Sarah specializes in helping beginners build proper foundations. Many of our most successful members started with zero gym experience."
-                - Type: faq_item
-                  Order: 2
-                  Content:
-                    Question: "What if I can't make the live calls?"
-                    Answer: "All calls are recorded and posted in the community within 24 hours. You can also submit questions in advance and get them answered even if you can't attend live."
-                - Type: faq_item
-                  Order: 3
-                  Content:
-                    Question: "Can I cancel anytime?"
-                    Answer: "Yes, no contracts or commitments. Cancel anytime with one click in your account. We want you here because you're getting results, not because you're locked in."
-                - Type: faq_item
-                  Order: 4
-                  Content:
-                    Question: "I don't have access to a gym. Can I still participate?"
-                    Answer: "Yes! Our workout library includes home-friendly routines with minimal equipment. Many members work out with just dumbbells or resistance bands."
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: faq_item
+                          Order: 1
+                          Content:
+                            Question: "I'm a complete beginner. Is this right for me?"
+                            Answer: "Absolutely. The workout library has routines for all levels, and Coach Sarah specializes in helping beginners build proper foundations. Many of our most successful members started with zero gym experience."
+                        - Type: faq_item
+                          Order: 2
+                          Content:
+                            Question: "What if I can't make the live calls?"
+                            Answer: "All calls are recorded and posted in the community within 24 hours. You can also submit questions in advance and get them answered even if you can't attend live."
+                        - Type: faq_item
+                          Order: 3
+                          Content:
+                            Question: "Can I cancel anytime?"
+                            Answer: "Yes, no contracts or commitments. Cancel anytime with one click in your account. We want you here because you're getting results, not because you're locked in."
+                        - Type: faq_item
+                          Order: 4
+                          Content:
+                            Question: "I don't have access to a gym. Can I still participate?"
+                            Answer: "Yes! Our workout library includes home-friendly routines with minimal equipment. Many members work out with just dumbbells or resistance bands."
             - Order: 7
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Your Fitness Journey Shouldn't Be a Solo Mission"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "For less than a single personal training session per month, get expert coaching, a supportive community, and a complete workout library. Join today and see what's possible when you stop going it alone."
-                - Type: two_step_checkout
-                  Order: 3
-                  Content:
-                    OfferSlug: !Ref inner-circle-offer
-                    PricingPlanSlug: !Ref inner-circle-monthly
-                    ButtonText: "Join the Inner Circle - $97/month"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Your Fitness Journey Shouldn't Be a Solo Mission"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "For less than a single personal training session per month, get expert coaching, a supportive community, and a complete workout library. Join today and see what's possible when you stop going it alone."
+                        - Type: two_step_checkout
+                          Order: 3
+                          Content:
+                            OfferSlug: !Ref inner-circle-offer
+                            PricingPlanSlug: !Ref inner-circle-monthly
+                            ButtonText: "Join the Inner Circle - $97/month"
         - Name: "Thank You"
           Slug: thank-you
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to the Inner Circle!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You're officially part of the Fitness Inner Circle. Check your email for login details.
-                      
-                      Here's what to do first:
-                      
-                      1. Log into your portal and introduce yourself in the General space
-                      2. Check out the workout library and pick your first routine
-                      3. Mark your calendar for Tuesday at 7pm ET for the live coaching call
-                      
-                      Welcome to the team. We can't wait to see your progress!
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to the Inner Circle!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You're officially part of the Fitness Inner Circle. Check your email for login details.
+                              
+                              Here's what to do first:
+                              
+                              1. Log into your portal and introduce yourself in the General space
+                              2. Check out the workout library and pick your first routine
+                              3. Mark your calendar for Tuesday at 7pm ET for the live coaching call
+                              
+                              Welcome to the team. We can't wait to see your progress!
 
   # ============================================
   # PORTAL

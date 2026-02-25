@@ -275,265 +275,320 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "The Complete A-Z Wholesaling System That's Generated 100+ Deals"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Learn the exact step-by-step process I use to find, analyze, and close wholesale deals - even if you're starting from scratch"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=WMC_VSL_PLACEHOLDER"
-                    Provider: youtube
-                - Type: checkout
-                  Order: 4
-                  Content:
-                    OfferSlug: !Ref wmc-offer
-                    ButtonText: "Enroll Now - $997 (or 3 payments of $397)"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "The Complete A-Z Wholesaling System That's Generated 100+ Deals"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Learn the exact step-by-step process I use to find, analyze, and close wholesale deals - even if you're starting from scratch"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=WMC_VSL_PLACEHOLDER"
+                            Provider: youtube
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: checkout
+                          Order: 1
+                          Content:
+                            OfferSlug: !Ref wmc-offer
+                            ButtonText: "Enroll Now - $997 (or 3 payments of $397)"
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Does this sound familiar?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You've heard wholesaling is the fastest way to get started in real estate without needing your own money or credit.
+            - Order: 2
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Does this sound familiar?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You've heard wholesaling is the fastest way to get started in real estate without needing your own money or credit.
                       
-                      You've watched the YouTube videos. You've read the books. Maybe you've even tried making some offers.
+                              You've watched the YouTube videos. You've read the books. Maybe you've even tried making some offers.
                       
-                      But something's not clicking:
+                              But something's not clicking:
                       
-                      - You don't know where to find motivated sellers who will actually sell below market value
-                      - You're not sure how to analyze deals to know if there's enough margin
-                      - You're terrified of making an offer and getting stuck with a property you can't sell
-                      - You don't have a buyer list, and you don't know where to find cash buyers
-                      - You've heard horror stories of deals falling apart at closing
+                              - You don't know where to find motivated sellers who will actually sell below market value
+                              - You're not sure how to analyze deals to know if there's enough margin
+                              - You're terrified of making an offer and getting stuck with a property you can't sell
+                              - You don't have a buyer list, and you don't know where to find cash buyers
+                              - You've heard horror stories of deals falling apart at closing
                       
-                      The information is out there, but it's scattered across a hundred different sources. And most of it is theory from people who've never actually done a deal.
+                              The information is out there, but it's scattered across a hundred different sources. And most of it is theory from people who've never actually done a deal.
                       
-                      **What if you could learn from someone who's done 100+ wholesale deals and still does them every month?**
+                              **What if you could learn from someone who's done 100+ wholesale deals and still does them every month?**
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Here's What Separates Students Who Close Deals From Those Who Don't"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      After coaching hundreds of students, I've noticed a pattern.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Here's What Separates Students Who Close Deals From Those Who Don't"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              After coaching hundreds of students, I've noticed a pattern.
                       
-                      The students who close deals quickly have three things:
+                              The students who close deals quickly have three things:
                       
-                      1. **A proven system** - Not theory, but actual step-by-step processes they can follow
-                      2. **Real examples** - Seeing how actual deals were found, analyzed, and closed
-                      3. **Support when they get stuck** - Someone to ask when they hit roadblocks
+                              1. **A proven system** - Not theory, but actual step-by-step processes they can follow
+                              2. **Real examples** - Seeing how actual deals were found, analyzed, and closed
+                              3. **Support when they get stuck** - Someone to ask when they hit roadblocks
                       
-                      That's exactly why I created Wholesaling Mastery.
+                              That's exactly why I created Wholesaling Mastery.
                       
-                      This isn't another course full of motivational fluff and vague advice.
+                              This isn't another course full of motivational fluff and vague advice.
                       
-                      It's the exact system I use in my own wholesaling business, broken down into clear steps you can follow, with real deal breakdowns showing you how it works in practice.
+                              It's the exact system I use in my own wholesaling business, broken down into clear steps you can follow, with real deal breakdowns showing you how it works in practice.
             - Order: 4
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Here's What You'll Learn Inside Wholesaling Mastery"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      **Module 1: Wholesaling Foundations**
-                      Understand exactly how wholesaling works, the legal basics you need to know, and how to set up your business the right way from day one.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Here's What You'll Learn Inside Wholesaling Mastery"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              **Module 1: Wholesaling Foundations**
+                              Understand exactly how wholesaling works, the legal basics you need to know, and how to set up your business the right way from day one.
                       
-                      **Module 2: Finding Deals**
-                      Master the marketing channels that generate motivated seller leads: driving for dollars, direct mail, cold calling, SMS, and online marketing. You'll know exactly where deals come from.
+                              **Module 2: Finding Deals**
+                              Master the marketing channels that generate motivated seller leads: driving for dollars, direct mail, cold calling, SMS, and online marketing. You'll know exactly where deals come from.
                       
-                      **Module 3: Analyzing Deals**
-                      Learn to calculate ARV, estimate repairs, and use the MAO formula to know exactly what to offer. Includes the same Deal Analyzer spreadsheet I use on every deal.
+                              **Module 3: Analyzing Deals**
+                              Learn to calculate ARV, estimate repairs, and use the MAO formula to know exactly what to offer. Includes the same Deal Analyzer spreadsheet I use on every deal.
                       
-                      **Module 4: Making Offers**
-                      Get my proven scripts for talking to sellers, making offers, handling objections, and getting contracts signed. No more freezing up on seller calls.
+                              **Module 4: Making Offers**
+                              Get my proven scripts for talking to sellers, making offers, handling objections, and getting contracts signed. No more freezing up on seller calls.
                       
-                      **Module 5: Finding Buyers**
-                      Build a cash buyer list from scratch, learn where to find serious buyers, and how to market your deals so they sell fast.
+                              **Module 5: Finding Buyers**
+                              Build a cash buyer list from scratch, learn where to find serious buyers, and how to market your deals so they sell fast.
                       
-                      **Module 6: Closing Deals**
-                      Understand assignment vs. double close, work smoothly with title companies, and avoid the common problems that kill deals at the finish line.
+                              **Module 6: Closing Deals**
+                              Understand assignment vs. double close, work smoothly with title companies, and avoid the common problems that kill deals at the finish line.
             - Order: 5
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Plus: Lifetime Access to the Student Community"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You won't be learning alone.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Plus: Lifetime Access to the Student Community"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You won't be learning alone.
                       
-                      When you enroll, you also get lifetime access to our private student community where you can:
+                              When you enroll, you also get lifetime access to our private student community where you can:
                       
-                      ✓ **Post deals for review** - Get feedback on your numbers before making offers
-                      ✓ **Ask questions** - Stuck on something? Get answers from students and coaches
-                      ✓ **Join weekly office hours** - Live Q&A every Wednesday to review deals and answer questions
-                      ✓ **Celebrate wins** - Share your progress and get motivated by others' success
-                      ✓ **Access resources** - Scripts, templates, and tools shared by the community
+                              ✓ **Post deals for review** - Get feedback on your numbers before making offers
+                              ✓ **Ask questions** - Stuck on something? Get answers from students and coaches
+                              ✓ **Join weekly office hours** - Live Q&A every Wednesday to review deals and answer questions
+                              ✓ **Celebrate wins** - Share your progress and get motivated by others' success
+                              ✓ **Access resources** - Scripts, templates, and tools shared by the community
                       
-                      Having a community of people doing the same thing makes all the difference.
+                              Having a community of people doing the same thing makes all the difference.
             - Order: 6
-              Elements:
-                - Type: testimonial
-                  Order: 1
-                  Content:
-                    Quote: "I closed my first deal 47 days after starting the course. Made $8,500 on a simple assignment. The deal analyzer alone was worth the price - I would have way underestimated my offer without it."
-                    Author: "Marcus T., Charlotte, NC"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 2
-                  Content:
-                    Quote: "I'd tried wholesaling before this course and failed. The difference was having a real system to follow. Module 4 on making offers completely changed my approach. I've now closed 6 deals in my first year."
-                    Author: "Jennifer L., Phoenix, AZ"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 3
-                  Content:
-                    Quote: "The weekly office hours are incredible. I posted a deal I was nervous about and got detailed feedback within 24 hours. Turns out I was leaving $5K on the table with my offer price."
-                    Author: "David R., Houston, TX"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 4
-                  Content:
-                    Quote: "Finally, a course by someone who actually does deals. The real deal breakdowns showing actual contracts and numbers gave me the confidence to make my first offer. Closed 3 weeks later."
-                    Author: "Sarah M., Columbus, OH"
-                    Rating: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "I closed my first deal 47 days after starting the course. Made $8,500 on a simple assignment. The deal analyzer alone was worth the price - I would have way underestimated my offer without it."
+                            Author: "Marcus T., Charlotte, NC"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 2
+                          Content:
+                            Quote: "I'd tried wholesaling before this course and failed. The difference was having a real system to follow. Module 4 on making offers completely changed my approach. I've now closed 6 deals in my first year."
+                            Author: "Jennifer L., Phoenix, AZ"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 3
+                          Content:
+                            Quote: "The weekly office hours are incredible. I posted a deal I was nervous about and got detailed feedback within 24 hours. Turns out I was leaving $5K on the table with my offer price."
+                            Author: "David R., Houston, TX"
+                            Rating: 5
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "Finally, a course by someone who actually does deals. The real deal breakdowns showing actual contracts and numbers gave me the confidence to make my first offer. Closed 3 weeks later."
+                            Author: "Sarah M., Columbus, OH"
+                            Rating: 5
             - Order: 7
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Everything You Get With Wholesaling Mastery"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      ✓ **The Complete Wholesaling Mastery Course** (Value: $1,997)
-                      6 modules with 35+ video lessons covering every step from finding deals to closing
+            - Order: 7
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Everything You Get With Wholesaling Mastery"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              ✓ **The Complete Wholesaling Mastery Course** (Value: $1,997)
+                              6 modules with 35+ video lessons covering every step from finding deals to closing
                       
-                      ✓ **Deal Analyzer Spreadsheet** (Value: $97)
-                      The same tool I use to analyze every deal - calculate ARV, repairs, and MAO instantly
+                              ✓ **Deal Analyzer Spreadsheet** (Value: $97)
+                              The same tool I use to analyze every deal - calculate ARV, repairs, and MAO instantly
                       
-                      ✓ **Scripts & Templates Library** (Value: $297)
-                      Seller scripts, offer templates, assignment contracts, and more
+                              ✓ **Scripts & Templates Library** (Value: $297)
+                              Seller scripts, offer templates, assignment contracts, and more
                       
-                      ✓ **Real Deal Breakdowns** (Value: $197)
-                      See actual deals from start to finish with real numbers and contracts
+                              ✓ **Real Deal Breakdowns** (Value: $197)
+                              See actual deals from start to finish with real numbers and contracts
                       
-                      ✓ **Lifetime Community Access** (Value: $497)
-                      Private community with deal reviews, Q&A, and weekly office hours
+                              ✓ **Lifetime Community Access** (Value: $497)
+                              Private community with deal reviews, Q&A, and weekly office hours
                       
-                      **Total Value: $3,085**
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      **Your Investment Today:**
+                              **Total Value: $3,085**
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              **Your Investment Today:**
                       
-                      - **Pay in Full:** $997 (best value)
-                      - **Payment Plan:** 3 payments of $397/month
+                              - **Pay in Full:** $997 (best value)
+                              - **Payment Plan:** 3 payments of $397/month
             - Order: 8
-              Elements:
-                - Type: faq_item
-                  Order: 1
-                  Content:
-                    Question: "I'm a complete beginner. Will this work for me?"
-                    Answer: "Absolutely. The course is designed to take you from zero to closing deals. We start with the foundations and build from there. Many of our most successful students started with no real estate experience."
-                - Type: faq_item
-                  Order: 2
-                  Content:
-                    Question: "Do I need money or credit to wholesale?"
-                    Answer: "No. That's the beauty of wholesaling. You're not buying properties - you're assigning contracts. The only costs are your marketing to find deals (which can start at just $100-200/month) and the course investment."
-                - Type: faq_item
-                  Order: 3
-                  Content:
-                    Question: "How long until I can close my first deal?"
-                    Answer: "It depends on your effort and market, but students who follow the system typically close their first deal within 60-90 days. Some have done it faster. The key is taking consistent action on what you learn."
-                - Type: faq_item
-                  Order: 4
-                  Content:
-                    Question: "Is wholesaling legal in my state?"
-                    Answer: "Wholesaling is legal in all 50 states, but some states have specific requirements. Module 1 covers the legal basics, and our community can help you understand your local requirements."
-                - Type: faq_item
-                  Order: 5
-                  Content:
-                    Question: "How much can I make from wholesaling?"
-                    Answer: "Assignment fees typically range from $5,000-$20,000 per deal, depending on your market and the deal size. Students doing 1-2 deals per month are common after getting started. Results vary based on your effort and market conditions."
-                - Type: faq_item
-                  Order: 6
-                  Content:
-                    Question: "What if I have questions while going through the course?"
-                    Answer: "You'll have access to our private community where you can post questions anytime. Plus, we have weekly live office hours every Wednesday where you can get direct feedback on your deals and questions."
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: faq_item
+                          Order: 1
+                          Content:
+                            Question: "I'm a complete beginner. Will this work for me?"
+                            Answer: "Absolutely. The course is designed to take you from zero to closing deals. We start with the foundations and build from there. Many of our most successful students started with no real estate experience."
+                        - Type: faq_item
+                          Order: 2
+                          Content:
+                            Question: "Do I need money or credit to wholesale?"
+                            Answer: "No. That's the beauty of wholesaling. You're not buying properties - you're assigning contracts. The only costs are your marketing to find deals (which can start at just $100-200/month) and the course investment."
+                        - Type: faq_item
+                          Order: 3
+                          Content:
+                            Question: "How long until I can close my first deal?"
+                            Answer: "It depends on your effort and market, but students who follow the system typically close their first deal within 60-90 days. Some have done it faster. The key is taking consistent action on what you learn."
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: faq_item
+                          Order: 1
+                          Content:
+                            Question: "Is wholesaling legal in my state?"
+                            Answer: "Wholesaling is legal in all 50 states, but some states have specific requirements. Module 1 covers the legal basics, and our community can help you understand your local requirements."
+                        - Type: faq_item
+                          Order: 2
+                          Content:
+                            Question: "How much can I make from wholesaling?"
+                            Answer: "Assignment fees typically range from $5,000-$20,000 per deal, depending on your market and the deal size. Students doing 1-2 deals per month are common after getting started. Results vary based on your effort and market conditions."
+                        - Type: faq_item
+                          Order: 3
+                          Content:
+                            Question: "What if I have questions while going through the course?"
+                            Answer: "You'll have access to our private community where you can post questions anytime. Plus, we have weekly live office hours every Wednesday where you can get direct feedback on your deals and questions."
             - Order: 9
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Ready to Close Your First (or Next) Wholesale Deal?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Stop piecing together information from random YouTube videos.
+            - Order: 9
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Ready to Close Your First (or Next) Wholesale Deal?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Stop piecing together information from random YouTube videos.
                       
-                      Get a proven system from someone who's done 100+ deals and is still actively wholesaling.
+                              Get a proven system from someone who's done 100+ deals and is still actively wholesaling.
                       
-                      Join the Wholesaling Mastery community and get the support you need to succeed.
-                - Type: checkout
-                  Order: 3
-                  Content:
-                    OfferSlug: !Ref wmc-offer
-                    ButtonText: "Enroll Now - $997 (or 3 payments of $397)"
+                              Join the Wholesaling Mastery community and get the support you need to succeed.
+                        - Type: checkout
+                          Order: 3
+                          Content:
+                            OfferSlug: !Ref wmc-offer
+                            ButtonText: "Enroll Now - $997 (or 3 payments of $397)"
         - Name: "Thank You"
           Slug: thank-you
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to Wholesaling Mastery!"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=WMC_THANKYOU_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Congratulations on investing in yourself and your wholesaling business!
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to Wholesaling Mastery!"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=WMC_THANKYOU_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Congratulations on investing in yourself and your wholesaling business!
                       
-                      **What happens next:**
+                              **What happens next:**
                       
-                      1. Check your email for your portal login details
-                      2. Complete the quick onboarding flow (sign agreement + profile)
-                      3. Start with Module 1 - watch the first 3 videos today
-                      4. Introduce yourself in the community
-                      5. Join us at the next weekly office hours (Wednesdays 7pm ET)
+                              1. Check your email for your portal login details
+                              2. Complete the quick onboarding flow (sign agreement + profile)
+                              3. Start with Module 1 - watch the first 3 videos today
+                              4. Introduce yourself in the community
+                              5. Join us at the next weekly office hours (Wednesdays 7pm ET)
                       
-                      **Your first goal:** Find your first motivated seller lead within 2 weeks.
+                              **Your first goal:** Find your first motivated seller lead within 2 weeks.
                       
-                      You've got this. Let's close some deals!
+                              You've got this. Let's close some deals!
 
   # ============================================
   # 📋 FORMS
@@ -857,7 +912,6 @@ Resources:
                   Content:
                     Text: "Start Module 1"
                     Action: next_step
-
   # ============================================
   # 🔄 PIPELINE
   # ============================================

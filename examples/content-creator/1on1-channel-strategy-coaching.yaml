@@ -119,168 +119,209 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Grow Your Channel Faster with Expert 1:1 Guidance"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Personalized coaching for serious creators who want to accelerate their YouTube growth"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=CSC_VSL"
-                    Provider: youtube
-                - Type: button
-                  Order: 4
-                  Content:
-                    Text: "Apply for Coaching"
-                    Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Grow Your Channel Faster with Expert 1:1 Guidance"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Personalized coaching for serious creators who want to accelerate their YouTube growth"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=CSC_VSL"
+                            Provider: youtube
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: button
+                          Order: 1
+                          Content:
+                            Text: "Apply for Coaching"
+                            Action: next_step
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Is this you?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You've been creating content for a while. You know the basics. But you're stuck.
+            - Order: 2
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Is this you?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You've been creating content for a while. You know the basics. But you're stuck.
                       
-                      - Your views are inconsistent
-                      - You're not sure which videos to make next
-                      - You see competitors growing faster than you
-                      - You want expert eyes on YOUR specific channel
+                              - Your views are inconsistent
+                              - You're not sure which videos to make next
+                              - You see competitors growing faster than you
+                              - You want expert eyes on YOUR specific channel
                       
-                      Generic courses can only take you so far. You need personalized guidance.
+                              Generic courses can only take you so far. You need personalized guidance.
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "What you get with 1:1 Coaching"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      **6 Private Coaching Sessions** (Value: $2,400)
-                      60-minute calls every 2 weeks for 3 months
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "What you get with 1:1 Coaching"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              **6 Private Coaching Sessions** (Value: $2,400)
+                              60-minute calls every 2 weeks for 3 months
                       
-                      **Full Channel Audit** (Value: $500)
-                      Deep dive into your analytics, content, thumbnails, and positioning
+                              **Full Channel Audit** (Value: $500)
+                              Deep dive into your analytics, content, thumbnails, and positioning
                       
-                      **Personalized Growth Strategy** (Value: $500)
-                      Custom roadmap based on YOUR channel and goals
+                              **Personalized Growth Strategy** (Value: $500)
+                              Custom roadmap based on YOUR channel and goals
                       
-                      **Thumbnail & Title Reviews** (Value: $300)
-                      Get feedback before you publish
+                              **Thumbnail & Title Reviews** (Value: $300)
+                              Get feedback before you publish
                       
-                      **Slack Access Between Calls** (Value: $500)
-                      Quick questions answered within 24 hours
+                              **Slack Access Between Calls** (Value: $500)
+                              Quick questions answered within 24 hours
                       
-                      **Resource Library** (Value: $200)
-                      Templates, worksheets, and checklists
+                              **Resource Library** (Value: $200)
+                              Templates, worksheets, and checklists
                       
-                      **Total Value: $4,400**
+                              **Total Value: $4,400**
             - Order: 4
-              Elements:
-                - Type: testimonial
-                  Order: 1
-                  Content:
-                    Quote: "Before coaching, I was stuck at 5K subs for over a year. After 3 months, I hit 25K. The personalized strategy made all the difference."
-                    Author: "Mike T., Tech Creator"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 2
-                  Content:
-                    Quote: "The channel audit revealed issues I never would have found on my own. My CTR went from 3% to 8% after implementing the thumbnail feedback."
-                    Author: "Jessica L., Lifestyle Vlogger"
-                    Rating: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "Before coaching, I was stuck at 5K subs for over a year. After 3 months, I hit 25K. The personalized strategy made all the difference."
+                            Author: "Mike T., Tech Creator"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 2
+                          Content:
+                            Quote: "The channel audit revealed issues I never would have found on my own. My CTR went from 3% to 8% after implementing the thumbnail feedback."
+                            Author: "Jessica L., Lifestyle Vlogger"
+                            Rating: 5
             - Order: 5
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Ready to Accelerate Your Growth?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "I only work with 5 clients at a time to ensure quality. Apply now to see if we're a good fit."
-                - Type: button
-                  Order: 3
-                  Content:
-                    Text: "Apply for Coaching"
-                    Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Ready to Accelerate Your Growth?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "I only work with 5 clients at a time to ensure quality. Apply now to see if we're a good fit."
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "Apply for Coaching"
+                            Action: next_step
         - Name: "Apply"
           Slug: apply
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Apply for 1:1 Coaching"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Tell me about your channel and goals. This helps me understand if we're a good fit to work together.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Apply for 1:1 Coaching"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Tell me about your channel and goals. This helps me understand if we're a good fit to work together.
             - Order: 2
-              Elements:
-                - Type: form
-                  Order: 1
-                  Content:
-                    FormSlug: !Ref csc-application
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: form
+                          Order: 1
+                          Content:
+                            FormSlug: !Ref csc-application
         - Name: "Book Call"
           Slug: book
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Book Your Discovery Call"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Thanks for applying! The next step is a 30-minute discovery call where we'll:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Book Your Discovery Call"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Thanks for applying! The next step is a 30-minute discovery call where we'll:
                       
-                      - Discuss your channel and goals in detail
-                      - Identify your biggest growth opportunities
-                      - See if 1:1 coaching is the right fit
+                              - Discuss your channel and goals in detail
+                              - Identify your biggest growth opportunities
+                              - See if 1:1 coaching is the right fit
                       
-                      Book a time that works for you below.
-                - Type: booking_link
-                  Order: 3
-                  Content:
-                    BookingLinkSlug: !Ref csc-discovery-call
+                              Book a time that works for you below.
+                        - Type: booking_link
+                          Order: 3
+                          Content:
+                            BookingLinkSlug: !Ref csc-discovery-call
         - Name: "Confirmed"
           Slug: confirmed
           Order: 4
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Your discovery call is booked! Here's what happens next:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Your discovery call is booked! Here's what happens next:
                       
-                      1. Check your email for the calendar invite and Zoom link
-                      2. Before our call, think about your top 3 channel challenges
-                      3. Come ready to discuss your goals for the next 6-12 months
+                              1. Check your email for the calendar invite and Zoom link
+                              2. Before our call, think about your top 3 channel challenges
+                              3. Come ready to discuss your goals for the next 6-12 months
                       
-                      I'm looking forward to learning about your channel!
+                              I'm looking forward to learning about your channel!
 
   # ============================================
   # 📋 FORMS
@@ -634,7 +675,6 @@ Resources:
                       Think about your top 3 priorities for our first session.
                       
                       I'm excited to help you grow your channel!
-
   # ============================================
   # 🔄 PIPELINE
   # ============================================

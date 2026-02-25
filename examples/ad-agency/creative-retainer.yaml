@@ -82,249 +82,297 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Never Run Out of Fresh Ad Creative"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Get 10-15 scroll-stopping ad creatives delivered every month. No hiring. No managing. No creative fatigue."
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
-                    Provider: youtube
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Never Run Out of Fresh Ad Creative"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Get 10-15 scroll-stopping ad creatives delivered every month. No hiring. No managing. No creative fatigue."
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                            Provider: youtube
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Your ads are dying. And you know it."
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Creative fatigue is silently killing your ad performance.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Your ads are dying. And you know it."
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Creative fatigue is silently killing your ad performance.
                       
-                      Your audiences have seen the same images and videos dozens of times. CTRs are dropping. CPAs are climbing. And Meta's algorithm is punishing you for it.
+                              Your audiences have seen the same images and videos dozens of times. CTRs are dropping. CPAs are climbing. And Meta's algorithm is punishing you for it.
                       
-                      You know you need fresh creatives. But...
+                              You know you need fresh creatives. But...
                       
-                      - Hiring a full-time designer costs $50K+/year (and they might not even understand ads)
-                      - Freelancers are unreliable and require constant management
-                      - DIY means spending hours in Canva when you should be running your business
-                      - Creative agencies charge $5K+ for a single campaign
+                              - Hiring a full-time designer costs $50K+/year (and they might not even understand ads)
+                              - Freelancers are unreliable and require constant management
+                              - DIY means spending hours in Canva when you should be running your business
+                              - Creative agencies charge $5K+ for a single campaign
                       
-                      Meanwhile, your competitors are pumping out fresh creatives every week while your ads get stale.
+                              Meanwhile, your competitors are pumping out fresh creatives every week while your ads get stale.
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "What if fresh creatives just showed up in your inbox?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Imagine this:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "What if fresh creatives just showed up in your inbox?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Imagine this:
                       
-                      Every month, you receive 10-15 brand-new ad creatives. Static images, video ads, carousel formats. All designed specifically for your brand and ready to upload.
+                              Every month, you receive 10-15 brand-new ad creatives. Static images, video ads, carousel formats. All designed specifically for your brand and ready to upload.
                       
-                      You submit a brief. We deliver. You test. Your ads stay fresh.
+                              You submit a brief. We deliver. You test. Your ads stay fresh.
                       
-                      No hiring. No managing. No creative bottlenecks.
+                              No hiring. No managing. No creative bottlenecks.
                       
-                      Just a predictable monthly package of high-quality creatives that keep your ads performing.
+                              Just a predictable monthly package of high-quality creatives that keep your ads performing.
             - Order: 4
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Here's exactly what you get"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      ✓ **10-15 Ad Creatives Per Month**
-                      A mix of static images, short-form videos, and carousel ads designed for Meta and TikTok.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Here's exactly what you get"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              ✓ **10-15 Ad Creatives Per Month**
+                              A mix of static images, short-form videos, and carousel ads designed for Meta and TikTok.
                       
-                      ✓ **Multiple Format Variations**
-                      Each creative delivered in sizes optimized for feed, stories, and reels.
+                              ✓ **Multiple Format Variations**
+                              Each creative delivered in sizes optimized for feed, stories, and reels.
                       
-                      ✓ **Unlimited Revisions**
-                      Not quite right? We'll revise until you love it. 48-hour turnaround on all revisions.
+                              ✓ **Unlimited Revisions**
+                              Not quite right? We'll revise until you love it. 48-hour turnaround on all revisions.
                       
-                      ✓ **Brand Asset Management**
-                      We store your logos, colors, fonts, and style preferences so every creative is on-brand.
+                              ✓ **Brand Asset Management**
+                              We store your logos, colors, fonts, and style preferences so every creative is on-brand.
                       
-                      ✓ **Priority Turnaround**
-                      First batch delivered within 7 days. Ongoing batches every 2 weeks.
+                              ✓ **Priority Turnaround**
+                              First batch delivered within 7 days. Ongoing batches every 2 weeks.
                       
-                      ✓ **Creative Strategy Suggestions**
-                      We don't just make what you ask for. We suggest hooks, angles, and formats based on what's working.
+                              ✓ **Creative Strategy Suggestions**
+                              We don't just make what you ask for. We suggest hooks, angles, and formats based on what's working.
             - Order: 5
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Is this right for you?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      The Creative Retainer is perfect for businesses that:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Is this right for you?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              The Creative Retainer is perfect for businesses that:
                       
-                      ✓ Run paid ads on Meta, TikTok, or LinkedIn
-                      ✓ Need consistent, fresh creative to fight ad fatigue
-                      ✓ Want to focus on strategy, not design
-                      ✓ Are ready to invest in professional creative production
+                              ✓ Run paid ads on Meta, TikTok, or LinkedIn
+                              ✓ Need consistent, fresh creative to fight ad fatigue
+                              ✓ Want to focus on strategy, not design
+                              ✓ Are ready to invest in professional creative production
                       
-                      **Not sure if it's a fit?** Apply below and we'll hop on a quick call to discuss your needs.
+                              **Not sure if it's a fit?** Apply below and we'll hop on a quick call to discuss your needs.
             - Order: 6
-              Elements:
-                - Type: testimonial
-                  Order: 1
-                  Content:
-                    Quote: "We were spending $3K/month on a creative agency for half the output. The Creative Retainer gives us more creatives, faster turnaround, and better results. Our CTR is up 40% since switching."
-                    Author: "David R., E-commerce Brand Owner"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 2
-                  Content:
-                    Quote: "I used to dread having to brief freelancers and chase them for deliverables. Now I submit a brief and creatives just appear. It's honestly a relief."
-                    Author: "Amanda S., Marketing Director"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 3
-                  Content:
-                    Quote: "The creative suggestions have been game-changers. They suggested a UGC-style format I never would have tried. It's now our best-performing ad."
-                    Author: "Jason K., DTC Founder"
-                    Rating: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "We were spending $3K/month on a creative agency for half the output. The Creative Retainer gives us more creatives, faster turnaround, and better results. Our CTR is up 40% since switching."
+                            Author: "David R., E-commerce Brand Owner"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 2
+                          Content:
+                            Quote: "I used to dread having to brief freelancers and chase them for deliverables. Now I submit a brief and creatives just appear. It's honestly a relief."
+                            Author: "Amanda S., Marketing Director"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 3
+                          Content:
+                            Quote: "The creative suggestions have been game-changers. They suggested a UGC-style format I never would have tried. It's now our best-performing ad."
+                            Author: "Jason K., DTC Founder"
+                            Rating: 5
             - Order: 7
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Ready to Stop Creative Fatigue?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Apply now and we'll schedule a quick discovery call to see if we're a good fit."
-                - Type: button
-                  Order: 3
-                  Content:
-                    Text: "Apply for the Creative Retainer"
-                    Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Ready to Stop Creative Fatigue?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Apply now and we'll schedule a quick discovery call to see if we're a good fit."
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "Apply for the Creative Retainer"
+                            Action: next_step
         - Name: "Apply"
           Slug: apply
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Apply for the Creative Retainer"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=APPLICATION_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      We work with a limited number of clients to ensure quality and turnaround times. Please answer a few questions so we can see if we're a good fit.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Apply for the Creative Retainer"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=APPLICATION_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              We work with a limited number of clients to ensure quality and turnaround times. Please answer a few questions so we can see if we're a good fit.
                       
-                      **This takes about 2 minutes.**
+                              **This takes about 2 minutes.**
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Tell us about your business:"
-                - Type: form
-                  Order: 2
-                  Content:
-                    FormSlug: !Ref creative-application-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Tell us about your business:"
+                        - Type: form
+                          Order: 2
+                          Content:
+                            FormSlug: !Ref creative-application-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "Book Your Call"
           Slug: book
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Great! Let's Chat."
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=BOOKING_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Thank you for applying to the Creative Retainer.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Great! Let's Chat."
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=BOOKING_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Thank you for applying to the Creative Retainer.
                       
-                      **Next Step: Book Your Discovery Call**
+                              **Next Step: Book Your Discovery Call**
                       
-                      On this 60-minute call, we'll:
+                              On this 60-minute call, we'll:
                       
-                      ✓ Review your current ad creative situation
-                      ✓ Understand your brand and creative needs
-                      ✓ Discuss volume, formats, and turnaround requirements
-                      ✓ Determine if the Creative Retainer is the right fit
-                      ✓ Answer any questions you have
+                              ✓ Review your current ad creative situation
+                              ✓ Understand your brand and creative needs
+                              ✓ Discuss volume, formats, and turnaround requirements
+                              ✓ Determine if the Creative Retainer is the right fit
+                              ✓ Answer any questions you have
                       
-                      **Please come prepared to discuss:**
-                      - Your current ad spend and platforms
-                      - Examples of creatives you like (or don't like)
-                      - Your brand guidelines (if you have them)
-                - Type: booking_link
-                  Order: 4
-                  Content:
-                    BookingLinkSlug: !Ref creative-discovery-call
-                    OnSuccess:
-                      Action: next_step
+                              **Please come prepared to discuss:**
+                              - Your current ad spend and platforms
+                              - Examples of creatives you like (or don't like)
+                              - Your brand guidelines (if you have them)
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: booking_link
+                          Order: 1
+                          Content:
+                            BookingLinkSlug: !Ref creative-discovery-call
+                            OnSuccess:
+                              Action: next_step
         - Name: "You're Booked"
           Slug: confirmed
           Order: 4
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set!"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=CONFIRMATION_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Your discovery call is booked. Check your email for calendar details and a Zoom link.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set!"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=CONFIRMATION_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Your discovery call is booked. Check your email for calendar details and a Zoom link.
                       
-                      **Before our call, please:**
+                              **Before our call, please:**
                       
-                      1. **Gather 3-5 ad examples** you like (competitors, other brands, anything that catches your eye)
-                      2. **Note your current ad spend** and which platforms you're running on
-                      3. **Have your logo and brand colors** handy (if you have brand guidelines, even better)
-                      4. **Think about your biggest creative challenges** (what's not working, what you've tried)
+                              1. **Gather 3-5 ad examples** you like (competitors, other brands, anything that catches your eye)
+                              2. **Note your current ad spend** and which platforms you're running on
+                              3. **Have your logo and brand colors** handy (if you have brand guidelines, even better)
+                              4. **Think about your biggest creative challenges** (what's not working, what you've tried)
                       
-                      The more prepared you are, the more productive our call will be.
+                              The more prepared you are, the more productive our call will be.
                       
-                      **Questions before our call?** Reply to your confirmation email and we'll get back to you.
+                              **Questions before our call?** Reply to your confirmation email and we'll get back to you.
                       
-                      See you soon!
+                              See you soon!
 
   # ============================================
   # 📋 FORM

@@ -107,191 +107,233 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Stop Guessing on Real Estate Deals. Start Knowing."
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "The exact spreadsheet I use to analyze every deal - so you can make confident, profitable decisions in minutes"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
-                    Provider: youtube
-                - Type: checkout
-                  Order: 4
-                  Content:
-                    OfferSlug: !Ref da-offer
-                    PricingPlanSlug: !Ref da-price
-                    ButtonText: "Get Instant Access - $47"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Stop Guessing on Real Estate Deals. Start Knowing."
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "The exact spreadsheet I use to analyze every deal - so you can make confident, profitable decisions in minutes"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                            Provider: youtube
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: checkout
+                          Order: 1
+                          Content:
+                            OfferSlug: !Ref da-offer
+                            PricingPlanSlug: !Ref da-price
+                            ButtonText: "Get Instant Access - $47"
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Sound familiar?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You found a property that looks like a good deal. The seller seems motivated. The numbers look okay... maybe?
+            - Order: 2
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Sound familiar?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You found a property that looks like a good deal. The seller seems motivated. The numbers look okay... maybe?
                       
-                      But then the doubt creeps in:
+                              But then the doubt creeps in:
                       
-                      - Is the ARV estimate realistic, or am I being too optimistic?
-                      - Did I account for ALL the repair costs?
-                      - What about holding costs, closing costs, and unexpected expenses?
-                      - Is there actually profit here, or am I about to lose my shirt?
+                              - Is the ARV estimate realistic, or am I being too optimistic?
+                              - Did I account for ALL the repair costs?
+                              - What about holding costs, closing costs, and unexpected expenses?
+                              - Is there actually profit here, or am I about to lose my shirt?
                       
-                      You've seen the horror stories. Investors who bought "great deals" that turned into money pits. Wholesalers who assigned contracts only to have buyers back out when the numbers didn't work.
+                              You've seen the horror stories. Investors who bought "great deals" that turned into money pits. Wholesalers who assigned contracts only to have buyers back out when the numbers didn't work.
                       
-                      **The difference between successful investors and struggling ones? They know their numbers BEFORE they make offers.**
+                              **The difference between successful investors and struggling ones? They know their numbers BEFORE they make offers.**
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "What if you could analyze any deal in 5 minutes?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Imagine plugging in a few numbers and instantly knowing:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "What if you could analyze any deal in 5 minutes?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Imagine plugging in a few numbers and instantly knowing:
                       
-                      ✓ Your maximum allowable offer (MAO)
-                      ✓ Projected profit on a flip
-                      ✓ Cash-on-cash return for a rental
-                      ✓ Assignment fee potential for wholesale
-                      ✓ Whether to pursue or pass
+                              ✓ Your maximum allowable offer (MAO)
+                              ✓ Projected profit on a flip
+                              ✓ Cash-on-cash return for a rental
+                              ✓ Assignment fee potential for wholesale
+                              ✓ Whether to pursue or pass
                       
-                      That's exactly what the Deal Analyzer Spreadsheet does.
+                              That's exactly what the Deal Analyzer Spreadsheet does.
                       
-                      I've used this exact spreadsheet to analyze over 200 deals in the past 3 years. It's helped me close 47 profitable deals and avoid dozens of losers.
+                              I've used this exact spreadsheet to analyze over 200 deals in the past 3 years. It's helped me close 47 profitable deals and avoid dozens of losers.
                       
-                      Now I'm making it available to you.
+                              Now I'm making it available to you.
             - Order: 4
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Here's what you get"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      ✓ **Deal Analyzer Spreadsheet** (Value: $97)
-                      The exact Google Sheets/Excel spreadsheet I use to analyze every deal
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Here's what you get"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              ✓ **Deal Analyzer Spreadsheet** (Value: $97)
+                              The exact Google Sheets/Excel spreadsheet I use to analyze every deal
                       
-                      ✓ **Repair Cost Estimator** (Value: $47)
-                      Built-in calculator for common repair items so you don't forget anything
+                              ✓ **Repair Cost Estimator** (Value: $47)
+                              Built-in calculator for common repair items so you don't forget anything
                       
-                      ✓ **ARV Calculator** (Value: $47)
-                      Formulas to estimate after-repair value using comp data
+                              ✓ **ARV Calculator** (Value: $47)
+                              Formulas to estimate after-repair value using comp data
                       
-                      ✓ **Wholesale, Flip, and Rental Modes** (Value: $47)
-                      Toggle between deal types to see different profit scenarios
+                              ✓ **Wholesale, Flip, and Rental Modes** (Value: $47)
+                              Toggle between deal types to see different profit scenarios
                       
-                      ✓ **15-Minute Video Tutorial** (Value: $47)
-                      Watch me walk through exactly how to use every feature
+                              ✓ **15-Minute Video Tutorial** (Value: $47)
+                              Watch me walk through exactly how to use every feature
                       
-                      ✓ **Decision Framework** (Value: $27)
-                      Clear go/no-go criteria so you never second-guess yourself
+                              ✓ **Decision Framework** (Value: $27)
+                              Clear go/no-go criteria so you never second-guess yourself
                       
-                      **Total Value: $312**
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: "**Your Investment: Just $47**"
+                              **Total Value: $312**
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: "**Your Investment: Just $47**"
             - Order: 5
-              Elements:
-                - Type: testimonial
-                  Order: 1
-                  Content:
-                    Quote: "I was about to put an offer on a house that looked like a slam dunk. Ran it through the spreadsheet and realized I'd be underwater by $15K. This thing paid for itself 100x over."
-                    Author: "Marcus J., Wholesaler"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 2
-                  Content:
-                    Quote: "Finally, a spreadsheet that accounts for EVERYTHING. Holding costs, closing costs, realtor fees - it's all in there. No more surprises at closing."
-                    Author: "Rachel T., House Flipper"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 3
-                  Content:
-                    Quote: "I used to spend hours analyzing deals with pen and paper. Now I can run 10 deals in the time it used to take me to do one. Game changer."
-                    Author: "David L., Rental Investor"
-                    Rating: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "I was about to put an offer on a house that looked like a slam dunk. Ran it through the spreadsheet and realized I'd be underwater by $15K. This thing paid for itself 100x over."
+                            Author: "Marcus J., Wholesaler"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 2
+                          Content:
+                            Quote: "Finally, a spreadsheet that accounts for EVERYTHING. Holding costs, closing costs, realtor fees - it's all in there. No more surprises at closing."
+                            Author: "Rachel T., House Flipper"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 3
+                          Content:
+                            Quote: "I used to spend hours analyzing deals with pen and paper. Now I can run 10 deals in the time it used to take me to do one. Game changer."
+                            Author: "David L., Rental Investor"
+                            Rating: 5
             - Order: 6
-              Elements:
-                - Type: faq_item
-                  Order: 1
-                  Content:
-                    Question: "Does this work for wholesaling, flipping, AND rentals?"
-                    Answer: "Yes! The spreadsheet has different modes for each strategy. Toggle between wholesale, flip, and rental analysis to see the relevant numbers for your deal type."
-                - Type: faq_item
-                  Order: 2
-                  Content:
-                    Question: "Do I need Google Sheets or Excel?"
-                    Answer: "The spreadsheet works in Google Sheets (free) and can be downloaded as an Excel file. I recommend Google Sheets since it's free and accessible anywhere."
-                - Type: faq_item
-                  Order: 3
-                  Content:
-                    Question: "What if I'm a complete beginner?"
-                    Answer: "Perfect! The spreadsheet is designed to be beginner-friendly. The video tutorial walks you through every section, and the built-in formulas do the heavy lifting for you."
-                - Type: faq_item
-                  Order: 4
-                  Content:
-                    Question: "Is this customizable for my market?"
-                    Answer: "Absolutely. You can adjust closing costs, realtor fees, holding costs, and other variables to match your local market. The spreadsheet comes with typical defaults, but everything is editable."
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: faq_item
+                          Order: 1
+                          Content:
+                            Question: "Does this work for wholesaling, flipping, AND rentals?"
+                            Answer: "Yes! The spreadsheet has different modes for each strategy. Toggle between wholesale, flip, and rental analysis to see the relevant numbers for your deal type."
+                        - Type: faq_item
+                          Order: 2
+                          Content:
+                            Question: "Do I need Google Sheets or Excel?"
+                            Answer: "The spreadsheet works in Google Sheets (free) and can be downloaded as an Excel file. I recommend Google Sheets since it's free and accessible anywhere."
+                        - Type: faq_item
+                          Order: 3
+                          Content:
+                            Question: "What if I'm a complete beginner?"
+                            Answer: "Perfect! The spreadsheet is designed to be beginner-friendly. The video tutorial walks you through every section, and the built-in formulas do the heavy lifting for you."
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: faq_item
+                          Order: 1
+                          Content:
+                            Question: "Is this customizable for my market?"
+                            Answer: "Absolutely. You can adjust closing costs, realtor fees, holding costs, and other variables to match your local market. The spreadsheet comes with typical defaults, but everything is editable."
             - Order: 7
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Stop Losing Money on Bad Deals"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "For less than the cost of a nice dinner, get the same tool professional investors use to analyze deals and make confident decisions."
-                - Type: checkout
-                  Order: 3
-                  Content:
-                    OfferSlug: !Ref da-offer
-                    PricingPlanSlug: !Ref da-price
-                    ButtonText: "Get Instant Access - $47"
+            - Order: 7
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Stop Losing Money on Bad Deals"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "For less than the cost of a nice dinner, get the same tool professional investors use to analyze deals and make confident decisions."
+                        - Type: checkout
+                          Order: 3
+                          Content:
+                            OfferSlug: !Ref da-offer
+                            PricingPlanSlug: !Ref da-price
+                            ButtonText: "Get Instant Access - $47"
         - Name: "Thank You"
           Slug: thank-you
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're In! Check Your Email."
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=THANKYOU_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Congratulations on getting the Deal Analyzer Spreadsheet!
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're In! Check Your Email."
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=THANKYOU_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Congratulations on getting the Deal Analyzer Spreadsheet!
                       
-                      Check your email for login details to your client portal where you can:
+                              Check your email for login details to your client portal where you can:
                       
-                      - Download your spreadsheet
-                      - Watch the tutorial video
-                      - Complete your investor profile
-                      - Book a strategy call (optional)
+                              - Download your spreadsheet
+                              - Watch the tutorial video
+                              - Complete your investor profile
+                              - Book a strategy call (optional)
                       
-                      **Your first step:** Log in and download the spreadsheet. Then run your first deal through it today!
+                              **Your first step:** Log in and download the spreadsheet. Then run your first deal through it today!
 
   # ============================================
   # 📋 FORM

@@ -149,197 +149,239 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Stop Guessing Why Your Videos Aren't Getting Clicked"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Get 20 proven thumbnail templates that consistently hit 10%+ CTR - the same ones I use on my million-subscriber channels"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
-                    Provider: youtube
-                - Type: checkout
-                  Order: 4
-                  Content:
-                    OfferSlug: !Ref ytt-offer
-                    PricingPlanSlug: !Ref ytt-price
-                    ButtonText: "Get Instant Access - $47"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Stop Guessing Why Your Videos Aren't Getting Clicked"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Get 20 proven thumbnail templates that consistently hit 10%+ CTR - the same ones I use on my million-subscriber channels"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                            Provider: youtube
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: checkout
+                          Order: 1
+                          Content:
+                            OfferSlug: !Ref ytt-offer
+                            PricingPlanSlug: !Ref ytt-price
+                            ButtonText: "Get Instant Access - $47"
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Sound familiar?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You spend hours making a great video. The content is solid. The editing is tight.
+            - Order: 2
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Sound familiar?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You spend hours making a great video. The content is solid. The editing is tight.
                       
-                      You hit publish... and crickets.
+                              You hit publish... and crickets.
                       
-                      Your impressions are decent, but nobody's clicking. Your CTR is stuck at 2-4%, while you watch other creators in your niche get 10%+ on every video.
+                              Your impressions are decent, but nobody's clicking. Your CTR is stuck at 2-4%, while you watch other creators in your niche get 10%+ on every video.
                       
-                      You've tried:
+                              You've tried:
                       
-                      - Copying what big creators do (but it doesn't look right)
-                      - Using bright colors and big text (still no clicks)
-                      - Making faces at the camera (feels awkward, doesn't work)
-                      - Spending hours in Canva trying different designs (still guessing)
+                              - Copying what big creators do (but it doesn't look right)
+                              - Using bright colors and big text (still no clicks)
+                              - Making faces at the camera (feels awkward, doesn't work)
+                              - Spending hours in Canva trying different designs (still guessing)
                       
-                      The frustrating part? You KNOW your content is good. But the algorithm won't push it if people don't click.
+                              The frustrating part? You KNOW your content is good. But the algorithm won't push it if people don't click.
                       
-                      **What if you had templates that were already proven to get clicks?**
+                              **What if you had templates that were already proven to get clicks?**
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "The Thumbnail Problem Nobody Talks About"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Here's what I've learned from growing multiple channels to over 1 million subscribers combined:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "The Thumbnail Problem Nobody Talks About"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Here's what I've learned from growing multiple channels to over 1 million subscribers combined:
                       
-                      **Your thumbnail is 80% of whether someone clicks.**
+                              **Your thumbnail is 80% of whether someone clicks.**
                       
-                      Not your title. Not your topic. Your thumbnail.
+                              Not your title. Not your topic. Your thumbnail.
                       
-                      YouTube shows your video to a small test audience first. If they click, you get shown to more people. If they don't, your video dies.
+                              YouTube shows your video to a small test audience first. If they click, you get shown to more people. If they don't, your video dies.
                       
-                      The difference between a 3% CTR and a 10% CTR can be the difference between 10,000 views and 100,000 views. On the same video.
+                              The difference between a 3% CTR and a 10% CTR can be the difference between 10,000 views and 100,000 views. On the same video.
                       
-                      But here's the thing most creators get wrong: good thumbnails follow patterns.
+                              But here's the thing most creators get wrong: good thumbnails follow patterns.
                       
-                      There are specific layouts, color combinations, and psychological triggers that consistently drive clicks. Once you know them, you can use them over and over.
+                              There are specific layouts, color combinations, and psychological triggers that consistently drive clicks. Once you know them, you can use them over and over.
                       
-                      That's exactly what these templates give you.
+                              That's exactly what these templates give you.
             - Order: 4
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Here's What You Get"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      ✓ **10 Canva Templates** (Value: $97)
-                      Ready to customize in Canva Free or Pro - no design skills needed
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Here's What You Get"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              ✓ **10 Canva Templates** (Value: $97)
+                              Ready to customize in Canva Free or Pro - no design skills needed
                       
-                      ✓ **10 Photoshop Templates** (Value: $97)
-                      Same templates in PSD format for advanced customization
+                              ✓ **10 Photoshop Templates** (Value: $97)
+                              Same templates in PSD format for advanced customization
                       
-                      ✓ **20-Minute Tutorial Video** (Value: $47)
-                      Watch me customize each template and explain WHY it works
+                              ✓ **20-Minute Tutorial Video** (Value: $47)
+                              Watch me customize each template and explain WHY it works
                       
-                      ✓ **CTR Optimization Checklist** (Value: $27)
-                      Use before every upload to make sure you're hitting all the click triggers
+                              ✓ **CTR Optimization Checklist** (Value: $27)
+                              Use before every upload to make sure you're hitting all the click triggers
                       
-                      ✓ **Template Style Guide** (Value: $27)
-                      Font pairings, color combinations, and best practices for each template
+                              ✓ **Template Style Guide** (Value: $27)
+                              Font pairings, color combinations, and best practices for each template
                       
-                      **Total Value: $295**
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: "**Your Investment: Just $47**"
+                              **Total Value: $295**
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: "**Your Investment: Just $47**"
             - Order: 5
-              Elements:
-                - Type: testimonial
-                  Order: 1
-                  Content:
-                    Quote: "My CTR went from 3.2% to 8.7% on my very next video using the 'Curiosity Gap' template. These templates just work."
-                    Author: "Alex C., Tech Reviews (45K subs)"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 2
-                  Content:
-                    Quote: "I used to spend 2 hours on thumbnails and still wasn't happy with them. Now I can create scroll-stopping thumbnails in 15 minutes."
-                    Author: "Sarah M., Lifestyle Vlogger (120K subs)"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 3
-                  Content:
-                    Quote: "The tutorial alone was worth the price. Understanding WHY these templates work changed how I think about thumbnails completely."
-                    Author: "David L., Gaming Channel (80K subs)"
-                    Rating: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "My CTR went from 3.2% to 8.7% on my very next video using the 'Curiosity Gap' template. These templates just work."
+                            Author: "Alex C., Tech Reviews (45K subs)"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 2
+                          Content:
+                            Quote: "I used to spend 2 hours on thumbnails and still wasn't happy with them. Now I can create scroll-stopping thumbnails in 15 minutes."
+                            Author: "Sarah M., Lifestyle Vlogger (120K subs)"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 3
+                          Content:
+                            Quote: "The tutorial alone was worth the price. Understanding WHY these templates work changed how I think about thumbnails completely."
+                            Author: "David L., Gaming Channel (80K subs)"
+                            Rating: 5
             - Order: 6
-              Elements:
-                - Type: faq_item
-                  Order: 1
-                  Content:
-                    Question: "Do I need Photoshop, or can I use just Canva?"
-                    Answer: "You can use either! The Canva templates work perfectly in Canva Free (no Pro subscription needed). The Photoshop templates are included for creators who prefer more advanced editing."
-                - Type: faq_item
-                  Order: 2
-                  Content:
-                    Question: "Will these work for my niche?"
-                    Answer: "Yes! These templates are based on psychological principles that work across all niches - tech, gaming, lifestyle, education, fitness, and more. The tutorial shows you how to adapt each template to your specific content style."
-                - Type: faq_item
-                  Order: 3
-                  Content:
-                    Question: "I'm a complete beginner. Can I use these?"
-                    Answer: "Absolutely. The templates are designed to be beginner-friendly. Just swap in your photos and text. The tutorial walks you through every step, and Canva makes it easy even if you've never designed anything before."
-                - Type: faq_item
-                  Order: 4
-                  Content:
-                    Question: "How is this different from free templates online?"
-                    Answer: "These aren't generic templates - they're the exact designs I use on my own channels that have generated over 100 million views. Plus, you get the tutorial explaining the psychology behind each template, so you understand WHY they work."
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: faq_item
+                          Order: 1
+                          Content:
+                            Question: "Do I need Photoshop, or can I use just Canva?"
+                            Answer: "You can use either! The Canva templates work perfectly in Canva Free (no Pro subscription needed). The Photoshop templates are included for creators who prefer more advanced editing."
+                        - Type: faq_item
+                          Order: 2
+                          Content:
+                            Question: "Will these work for my niche?"
+                            Answer: "Yes! These templates are based on psychological principles that work across all niches - tech, gaming, lifestyle, education, fitness, and more. The tutorial shows you how to adapt each template to your specific content style."
+                        - Type: faq_item
+                          Order: 3
+                          Content:
+                            Question: "I'm a complete beginner. Can I use these?"
+                            Answer: "Absolutely. The templates are designed to be beginner-friendly. Just swap in your photos and text. The tutorial walks you through every step, and Canva makes it easy even if you've never designed anything before."
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: faq_item
+                          Order: 1
+                          Content:
+                            Question: "How is this different from free templates online?"
+                            Answer: "These aren't generic templates - they're the exact designs I use on my own channels that have generated over 100 million views. Plus, you get the tutorial explaining the psychology behind each template, so you understand WHY they work."
             - Order: 7
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Stop Leaving Views on the Table"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "For less than the cost of a month of editing software, get templates that can dramatically increase your click-through rate on every video you publish."
-                - Type: checkout
-                  Order: 3
-                  Content:
-                    OfferSlug: !Ref ytt-offer
-                    PricingPlanSlug: !Ref ytt-price
-                    ButtonText: "Get Instant Access - $47"
+            - Order: 7
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Stop Leaving Views on the Table"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "For less than the cost of a month of editing software, get templates that can dramatically increase your click-through rate on every video you publish."
+                        - Type: checkout
+                          Order: 3
+                          Content:
+                            OfferSlug: !Ref ytt-offer
+                            PricingPlanSlug: !Ref ytt-price
+                            ButtonText: "Get Instant Access - $47"
         - Name: "Thank You"
           Slug: thank-you
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're In! Check Your Email."
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=THANKYOU_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Congratulations on getting the YouTube Thumbnail Templates!
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're In! Check Your Email."
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=THANKYOU_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Congratulations on getting the YouTube Thumbnail Templates!
                       
-                      Check your email for login details to your client portal where you can:
+                              Check your email for login details to your client portal where you can:
                       
-                      - Download your Canva and Photoshop templates
-                      - Watch the tutorial video
-                      - Grab the CTR optimization checklist
-                      - Complete your creator profile
-                      - Book a strategy call (optional)
+                              - Download your Canva and Photoshop templates
+                              - Watch the tutorial video
+                              - Grab the CTR optimization checklist
+                              - Complete your creator profile
+                              - Book a strategy call (optional)
                       
-                      **Your first step:** Log in and download the templates. Then create a thumbnail for your next video using one of the templates TODAY.
+                              **Your first step:** Log in and download the templates. Then create a thumbnail for your next video using one of the templates TODAY.
                       
-                      The sooner you use them, the sooner you'll see the difference in your CTR.
+                              The sooner you use them, the sooner you'll see the difference in your CTR.
 
   # ============================================
   # 📋 FORM

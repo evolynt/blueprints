@@ -71,180 +71,222 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Find Out Exactly Why Your Ads Aren't Converting (And How to Fix It)"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Get a comprehensive audit of your Meta, Instagram, or TikTok ad account with specific, actionable recommendations from a media buying expert"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
-                    Provider: youtube
-                - Type: checkout
-                  Order: 4
-                  Content:
-                    OfferSlug: !Ref audit-offer
-                    PricingPlanSlug: !Ref audit-price
-                    ButtonText: "Get Your Audit - $297"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Find Out Exactly Why Your Ads Aren't Converting (And How to Fix It)"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Get a comprehensive audit of your Meta, Instagram, or TikTok ad account with specific, actionable recommendations from a media buying expert"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                            Provider: youtube
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: checkout
+                          Order: 1
+                          Content:
+                            OfferSlug: !Ref audit-offer
+                            PricingPlanSlug: !Ref audit-price
+                            ButtonText: "Get Your Audit - $297"
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Does this sound familiar?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You're spending money on ads every month, but you have no idea if you're doing it right.
+            - Order: 2
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Does this sound familiar?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You're spending money on ads every month, but you have no idea if you're doing it right.
                       
-                      Your cost per lead keeps creeping up. Your ROAS is inconsistent at best. You've watched YouTube tutorials and tried different strategies, but nothing seems to stick.
+                              Your cost per lead keeps creeping up. Your ROAS is inconsistent at best. You've watched YouTube tutorials and tried different strategies, but nothing seems to stick.
                       
-                      You suspect there are problems in your account, but you don't know what you don't know.
+                              You suspect there are problems in your account, but you don't know what you don't know.
                       
-                      Meanwhile, you're watching competitors scale while you're stuck wondering:
-                      - Is my targeting all wrong?
-                      - Are my creatives the problem?
-                      - Is my pixel even firing correctly?
-                      - Am I wasting money on the wrong campaign objectives?
+                              Meanwhile, you're watching competitors scale while you're stuck wondering:
+                              - Is my targeting all wrong?
+                              - Are my creatives the problem?
+                              - Is my pixel even firing correctly?
+                              - Am I wasting money on the wrong campaign objectives?
                       
-                      The worst part? Every day you run ads without knowing what's broken is another day of wasted budget.
+                              The worst part? Every day you run ads without knowing what's broken is another day of wasted budget.
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "What if you knew exactly what to fix?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Imagine having a media buying expert look under the hood of your ad account and tell you:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "What if you knew exactly what to fix?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Imagine having a media buying expert look under the hood of your ad account and tell you:
                       
-                      "Here's what's working. Here's what's broken. And here's exactly how to fix it."
+                              "Here's what's working. Here's what's broken. And here's exactly how to fix it."
                       
-                      That's what you get with an Ad Account Audit.
+                              That's what you get with an Ad Account Audit.
                       
-                      We'll analyze your account structure, targeting, creatives, conversion tracking, and more. Then we'll give you a prioritized list of fixes that will have the biggest impact on your results.
+                              We'll analyze your account structure, targeting, creatives, conversion tracking, and more. Then we'll give you a prioritized list of fixes that will have the biggest impact on your results.
                       
-                      No fluff. No generic advice. Just specific recommendations based on YOUR account.
+                              No fluff. No generic advice. Just specific recommendations based on YOUR account.
             - Order: 4
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Here's exactly what you get"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      ✓ Complete Account Structure Review (Value: $150)
-                      We'll analyze your campaigns, ad sets, and ads to identify structural issues that hurt performance.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Here's exactly what you get"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              ✓ Complete Account Structure Review (Value: $150)
+                              We'll analyze your campaigns, ad sets, and ads to identify structural issues that hurt performance.
                       
-                      ✓ Targeting & Audience Analysis (Value: $150)
-                      Are you reaching the right people? We'll audit your audiences, lookalikes, and exclusions.
+                              ✓ Targeting & Audience Analysis (Value: $150)
+                              Are you reaching the right people? We'll audit your audiences, lookalikes, and exclusions.
                       
-                      ✓ Creative Performance Breakdown (Value: $150)
-                      Which ads are working and why? Which should you kill? We'll tell you.
+                              ✓ Creative Performance Breakdown (Value: $150)
+                              Which ads are working and why? Which should you kill? We'll tell you.
                       
-                      ✓ Conversion Tracking Audit (Value: $100)
-                      Is your pixel set up correctly? Are you tracking the right events? We'll verify everything.
+                              ✓ Conversion Tracking Audit (Value: $100)
+                              Is your pixel set up correctly? Are you tracking the right events? We'll verify everything.
                       
-                      ✓ Prioritized Recommendations Report (Value: $200)
-                      A clear, actionable document with fixes ranked by impact and difficulty.
+                              ✓ Prioritized Recommendations Report (Value: $200)
+                              A clear, actionable document with fixes ranked by impact and difficulty.
                       
-                      ✓ 30-Minute Walkthrough Call (Value: $150)
-                      We'll go through the report together and answer all your questions live.
+                              ✓ 30-Minute Walkthrough Call (Value: $150)
+                              We'll go through the report together and answer all your questions live.
                       
-                      Total Value: $900
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: "Your investment: Just $297"
+                              Total Value: $900
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: "Your investment: Just $297"
             - Order: 5
-              Elements:
-                - Type: testimonial
-                  Order: 1
-                  Content:
-                    Quote: "I thought my ads were fine. The audit revealed I was burning $800/month on a broken pixel. Fixed it in 20 minutes and immediately saw my cost per lead drop by 40%."
-                    Author: "Marcus T., E-commerce Store Owner"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 2
-                  Content:
-                    Quote: "The targeting recommendations alone were worth 10x what I paid. I had no idea I was excluding my best-converting audience."
-                    Author: "Sarah K., Course Creator"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 3
-                  Content:
-                    Quote: "Finally, someone who speaks human and not ad jargon. The walkthrough call made everything crystal clear. Now I actually understand my ad account."
-                    Author: "James L., Local Business Owner"
-                    Rating: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "I thought my ads were fine. The audit revealed I was burning $800/month on a broken pixel. Fixed it in 20 minutes and immediately saw my cost per lead drop by 40%."
+                            Author: "Marcus T., E-commerce Store Owner"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 2
+                          Content:
+                            Quote: "The targeting recommendations alone were worth 10x what I paid. I had no idea I was excluding my best-converting audience."
+                            Author: "Sarah K., Course Creator"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 3
+                          Content:
+                            Quote: "Finally, someone who speaks human and not ad jargon. The walkthrough call made everything crystal clear. Now I actually understand my ad account."
+                            Author: "James L., Local Business Owner"
+                            Rating: 5
             - Order: 6
-              Elements:
-                - Type: faq_item
-                  Order: 1
-                  Content:
-                    Question: "Which platforms do you audit?"
-                    Answer: "We audit Meta (Facebook/Instagram) and TikTok ad accounts. If you're running ads on either platform, we can help."
-                - Type: faq_item
-                  Order: 2
-                  Content:
-                    Question: "How long does the audit take?"
-                    Answer: "You'll receive your audit report within 3-5 business days of submitting your intake form. Then we'll schedule your 30-minute walkthrough call."
-                - Type: faq_item
-                  Order: 3
-                  Content:
-                    Question: "What if my account is really small?"
-                    Answer: "We audit accounts of all sizes. Even if you're only spending $500/month, we can identify quick wins that will improve your results."
-                - Type: faq_item
-                  Order: 4
-                  Content:
-                    Question: "Do you also manage ads?"
-                    Answer: "Yes! If you want us to implement the recommendations and manage your ads ongoing, we offer management packages. Many audit clients upgrade after seeing the results."
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: faq_item
+                          Order: 1
+                          Content:
+                            Question: "Which platforms do you audit?"
+                            Answer: "We audit Meta (Facebook/Instagram) and TikTok ad accounts. If you're running ads on either platform, we can help."
+                        - Type: faq_item
+                          Order: 2
+                          Content:
+                            Question: "How long does the audit take?"
+                            Answer: "You'll receive your audit report within 3-5 business days of submitting your intake form. Then we'll schedule your 30-minute walkthrough call."
+                        - Type: faq_item
+                          Order: 3
+                          Content:
+                            Question: "What if my account is really small?"
+                            Answer: "We audit accounts of all sizes. Even if you're only spending $500/month, we can identify quick wins that will improve your results."
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: faq_item
+                          Order: 1
+                          Content:
+                            Question: "Do you also manage ads?"
+                            Answer: "Yes! If you want us to implement the recommendations and manage your ads ongoing, we offer management packages. Many audit clients upgrade after seeing the results."
             - Order: 7
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Stop Guessing. Start Knowing."
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "For less than what most businesses waste on bad ads in a single week, get expert eyes on your account and a clear roadmap to better results."
-                - Type: checkout
-                  Order: 3
-                  Content:
-                    OfferSlug: !Ref audit-offer
-                    PricingPlanSlug: !Ref audit-price
-                    ButtonText: "Get Your Audit - $297"
+            - Order: 7
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Stop Guessing. Start Knowing."
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "For less than what most businesses waste on bad ads in a single week, get expert eyes on your account and a clear roadmap to better results."
+                        - Type: checkout
+                          Order: 3
+                          Content:
+                            OfferSlug: !Ref audit-offer
+                            PricingPlanSlug: !Ref audit-price
+                            ButtonText: "Get Your Audit - $297"
         - Name: "Thank You"
           Slug: thank-you
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're In! Let's Audit Your Account."
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Thanks for purchasing your Ad Account Audit!
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're In! Let's Audit Your Account."
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Thanks for purchasing your Ad Account Audit!
                       
-                      Check your email for login details to your client portal.
+                              Check your email for login details to your client portal.
                       
-                      **Your next step:** Complete the intake form in your portal so we have everything we need to audit your account.
+                              **Your next step:** Complete the intake form in your portal so we have everything we need to audit your account.
                       
-                      We'll have your audit report ready within 3-5 business days.
+                              We'll have your audit report ready within 3-5 business days.
 
   # ============================================
   # 📋 FORM

@@ -269,110 +269,139 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Finally Learn Proper Lifting Form (Without Hiring a $150/Hour Trainer)"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Master the 5 essential barbell movements with step-by-step video instruction"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=FOUNDATIONS_VSL"
-                    Provider: youtube
-                - Type: checkout
-                  Order: 4
-                  Content:
-                    OfferSlug: !Ref foundations-offer
-                    PricingPlanSlug: !Ref foundations-price
-                    ButtonText: "Get Instant Access - $47"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Finally Learn Proper Lifting Form (Without Hiring a $150/Hour Trainer)"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Master the 5 essential barbell movements with step-by-step video instruction"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=FOUNDATIONS_VSL"
+                            Provider: youtube
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: checkout
+                          Order: 1
+                          Content:
+                            OfferSlug: !Ref foundations-offer
+                            PricingPlanSlug: !Ref foundations-price
+                            ButtonText: "Get Instant Access - $47"
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Sound familiar?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You walk into the gym and stare at the barbell, wondering if you're about to build muscle or destroy your back.
+            - Order: 2
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Sound familiar?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You walk into the gym and stare at the barbell, wondering if you're about to build muscle or destroy your back.
                       
-                      You've watched YouTube videos, but when you're actually standing there, you have no idea if your form is right.
+                              You've watched YouTube videos, but when you're actually standing there, you have no idea if your form is right.
                       
-                      Every week that passes is another week of wasted gym sessions and potential injuries.
+                              Every week that passes is another week of wasted gym sessions and potential injuries.
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Here's everything you get:"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      ✓ The Squat Masterclass (Value: $97)
-                      ✓ The Deadlift Masterclass (Value: $97)
-                      ✓ The Bench Press Masterclass (Value: $97)
-                      ✓ The Overhead Press Masterclass (Value: $97)
-                      ✓ The Barbell Row Masterclass (Value: $97)
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Here's everything you get:"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              ✓ The Squat Masterclass (Value: $97)
+                              ✓ The Deadlift Masterclass (Value: $97)
+                              ✓ The Bench Press Masterclass (Value: $97)
+                              ✓ The Overhead Press Masterclass (Value: $97)
+                              ✓ The Barbell Row Masterclass (Value: $97)
                       
-                      Total Value: $485
+                              Total Value: $485
                       
-                      **Your investment today: Just $47**
+                              **Your investment today: Just $47**
             - Order: 4
-              Elements:
-                - Type: testimonial
-                  Order: 1
-                  Content:
-                    Quote: "I was terrified of deadlifts. After this course, I pulled 185lbs with zero back pain."
-                    Author: "Mark R., 42"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 2
-                  Content:
-                    Quote: "Finally stepped into the squat rack with confidence. Down 15lbs and getting stronger!"
-                    Author: "Jennifer T., 34"
-                    Rating: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "I was terrified of deadlifts. After this course, I pulled 185lbs with zero back pain."
+                            Author: "Mark R., 42"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 2
+                          Content:
+                            Quote: "Finally stepped into the squat rack with confidence. Down 15lbs and getting stronger!"
+                            Author: "Jennifer T., 34"
+                            Rating: 5
             - Order: 5
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Stop Guessing. Start Lifting."
-                - Type: checkout
-                  Order: 2
-                  Content:
-                    OfferSlug: !Ref foundations-offer
-                    PricingPlanSlug: !Ref foundations-price
-                    ButtonText: "Get Instant Access - $47"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Stop Guessing. Start Lifting."
+                        - Type: checkout
+                          Order: 2
+                          Content:
+                            OfferSlug: !Ref foundations-offer
+                            PricingPlanSlug: !Ref foundations-price
+                            ButtonText: "Get Instant Access - $47"
         - Name: "Thank You"
           Slug: thank-you
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're In!"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=FOUNDATIONS_THANKYOU"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Check your email for login details.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're In!"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=FOUNDATIONS_THANKYOU"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Check your email for login details.
                       
-                      Start with the Welcome module, then work through one movement per day.
+                              Start with the Welcome module, then work through one movement per day.
                       
-                      See you inside!
+                              See you inside!
 
   community-funnel:
     Type: Evolynt::Funnel::Funnel
@@ -385,119 +414,148 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Stop Working Out Alone (And Finally Get Results)"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Join hundreds of members getting expert coaching, accountability, and proven workouts for just $97/month"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=COMMUNITY_VSL"
-                    Provider: youtube
-                - Type: two_step_checkout
-                  Order: 4
-                  Content:
-                    OfferSlug: !Ref community-offer
-                    PricingPlanSlug: !Ref community-monthly
-                    ButtonText: "Join the Community - $97/month"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Stop Working Out Alone (And Finally Get Results)"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Join hundreds of members getting expert coaching, accountability, and proven workouts for just $97/month"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=COMMUNITY_VSL"
+                            Provider: youtube
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: two_step_checkout
+                          Order: 1
+                          Content:
+                            OfferSlug: !Ref community-offer
+                            PricingPlanSlug: !Ref community-monthly
+                            ButtonText: "Join the Community - $97/month"
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Does this sound familiar?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You start a new workout program, excited and motivated.
+            - Order: 2
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Does this sound familiar?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You start a new workout program, excited and motivated.
                       
-                      Then life happens. You miss a day. Then two. Before you know it, you're back to square one.
+                              Then life happens. You miss a day. Then two. Before you know it, you're back to square one.
                       
-                      The truth is, fitness isn't just about having a program. It's about having support.
+                              The truth is, fitness isn't just about having a program. It's about having support.
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Here's everything you get as a member:"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      ✓ Private Community Access (Value: $197/month)
-                      Connect with members who get it. Share wins, ask questions, stay accountable.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Here's everything you get as a member:"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              ✓ Private Community Access (Value: $197/month)
+                              Connect with members who get it. Share wins, ask questions, stay accountable.
                       
-                      ✓ Weekly Live Coaching Calls (Value: $297/month)
-                      Every Thursday at 7pm ET. Get your questions answered live.
+                              ✓ Weekly Live Coaching Calls (Value: $297/month)
+                              Every Thursday at 7pm ET. Get your questions answered live.
                       
-                      ✓ Member Resources Library (Value: $97)
-                      Guides, templates, and helpful materials.
+                              ✓ Member Resources Library (Value: $97)
+                              Guides, templates, and helpful materials.
                       
-                      ✓ Direct Access to Coach Mike
-                      Post in the Q&A space and get answers within 24 hours.
+                              ✓ Direct Access to Coach Mike
+                              Post in the Q&A space and get answers within 24 hours.
                       
-                      Total Value: $591+/month
+                              Total Value: $591+/month
                       
-                      **Your investment: Just $97/month (cancel anytime)**
+                              **Your investment: Just $97/month (cancel anytime)**
             - Order: 4
-              Elements:
-                - Type: testimonial
-                  Order: 1
-                  Content:
-                    Quote: "The weekly calls keep me accountable. Down 23lbs and still going strong!"
-                    Author: "Michelle K., 38"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 2
-                  Content:
-                    Quote: "Coach Mike fixed my squat form and my knee pain disappeared. Plus I've made real friends."
-                    Author: "James T., 45"
-                    Rating: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "The weekly calls keep me accountable. Down 23lbs and still going strong!"
+                            Author: "Michelle K., 38"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 2
+                          Content:
+                            Quote: "Coach Mike fixed my squat form and my knee pain disappeared. Plus I've made real friends."
+                            Author: "James T., 45"
+                            Rating: 5
             - Order: 5
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Your Fitness Journey Shouldn't Be Solo"
-                - Type: two_step_checkout
-                  Order: 2
-                  Content:
-                    OfferSlug: !Ref community-offer
-                    PricingPlanSlug: !Ref community-monthly
-                    ButtonText: "Join the Community - $97/month"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Your Fitness Journey Shouldn't Be Solo"
+                        - Type: two_step_checkout
+                          Order: 2
+                          Content:
+                            OfferSlug: !Ref community-offer
+                            PricingPlanSlug: !Ref community-monthly
+                            ButtonText: "Join the Community - $97/month"
         - Name: "Thank You"
           Slug: thank-you
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to the Community!"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=COMMUNITY_THANKYOU"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Check your email for login details.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to the Community!"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=COMMUNITY_THANKYOU"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Check your email for login details.
                       
-                      Here's what to do first:
-                      1. Log in and introduce yourself in General
-                      2. Mark your calendar for Thursday 7pm ET
-                      3. Explore the resources
+                              Here's what to do first:
+                              1. Log in and introduce yourself in General
+                              2. Mark your calendar for Thursday 7pm ET
+                              3. Explore the resources
                       
-                      Welcome to the team!
+                              Welcome to the team!
 
   coaching-funnel:
     Type: Evolynt::Funnel::Funnel
@@ -510,151 +568,179 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Apply for Elite 1:1 Coaching"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Limited spots for serious individuals ready for personalized transformation"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=COACHING_APPLICATION"
-                    Provider: youtube
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Apply for Elite 1:1 Coaching"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Limited spots for serious individuals ready for personalized transformation"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=COACHING_APPLICATION"
+                            Provider: youtube
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "This is NOT for everyone"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Elite 1:1 Coaching is for high-performers who are done with cookie-cutter programs.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "This is NOT for everyone"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Elite 1:1 Coaching is for high-performers who are done with cookie-cutter programs.
                       
-                      **This is for you if:**
-                      ✓ You're a busy professional who values your time
-                      ✓ You want customized programming, not generic workouts
-                      ✓ You're ready to invest in yourself at a premium level
-                      ✓ You're committed to showing up and doing the work
+                              **This is for you if:**
+                              ✓ You're a busy professional who values your time
+                              ✓ You want customized programming, not generic workouts
+                              ✓ You're ready to invest in yourself at a premium level
+                              ✓ You're committed to showing up and doing the work
                       
-                      **This is NOT for you if:**
-                      ✗ You're looking for the cheapest option
-                      ✗ You're not ready to commit to 12 weeks
-                      ✗ You make excuses instead of results
+                              **This is NOT for you if:**
+                              ✗ You're looking for the cheapest option
+                              ✗ You're not ready to commit to 12 weeks
+                              ✗ You make excuses instead of results
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "What you get with Elite 1:1 Coaching:"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      **12 Private Coaching Sessions**
-                      45-minute 1:1 calls where we analyze your form, adjust programming, and keep you accountable.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "What you get with Elite 1:1 Coaching:"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              **12 Private Coaching Sessions**
+                              45-minute 1:1 calls where we analyze your form, adjust programming, and keep you accountable.
                       
-                      **Customized Programming**
-                      Your workout program built specifically for your goals, equipment, and schedule.
+                              **Customized Programming**
+                              Your workout program built specifically for your goals, equipment, and schedule.
                       
-                      **Community Access**
-                      Connect with other elite clients and get answers between sessions.
+                              **Community Access**
+                              Connect with other elite clients and get answers between sessions.
                       
-                      **Client Resources**
-                      Everything you need in one place.
+                              **Client Resources**
+                              Everything you need in one place.
                       
-                      Ready to transform? Fill out the application below.
+                              Ready to transform? Fill out the application below.
             - Order: 4
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Fill out your application:"
-                - Type: form
-                  Order: 2
-                  Content:
-                    FormSlug: !Ref coaching-application-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Fill out your application:"
+                        - Type: form
+                          Order: 2
+                          Content:
+                            FormSlug: !Ref coaching-application-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "Book Your Call"
           Slug: book
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Application Received!"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=COACHING_BOOKING"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Thank you for applying to Elite 1:1 Coaching.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Application Received!"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=COACHING_BOOKING"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Thank you for applying to Elite 1:1 Coaching.
                       
-                      **Next Step: Book Your Strategy Call**
+                              **Next Step: Book Your Strategy Call**
                       
-                      This is a 45-minute call where we'll:
-                      ✓ Discuss your fitness goals and current situation
-                      ✓ Identify what's been holding you back
-                      ✓ Determine if Elite Coaching is right for you
+                              This is a 45-minute call where we'll:
+                              ✓ Discuss your fitness goals and current situation
+                              ✓ Identify what's been holding you back
+                              ✓ Determine if Elite Coaching is right for you
                       
-                      Please come prepared to discuss your goals and commitment level.
+                              Please come prepared to discuss your goals and commitment level.
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Select a time that works for you:"
-                - Type: booking_link
-                  Order: 2
-                  Content:
-                    BookingLinkSlug: !Ref strategy-call
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Select a time that works for you:"
+                        - Type: booking_link
+                          Order: 2
+                          Content:
+                            BookingLinkSlug: !Ref strategy-call
+                            OnSuccess:
+                              Action: next_step
         - Name: "You're Booked"
           Slug: confirmed
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Your Strategy Call is Confirmed!"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=COACHING_CONFIRMED"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      You're one step closer to transforming your fitness.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Your Strategy Call is Confirmed!"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=COACHING_CONFIRMED"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              You're one step closer to transforming your fitness.
                       
-                      **Check your email for:**
-                      - Calendar invitation with Zoom link
-                      - Call details and what to expect
+                              **Check your email for:**
+                              - Calendar invitation with Zoom link
+                              - Call details and what to expect
                       
-                      **How to prepare:**
-                      1. Write down your specific goals
-                      2. Know your "why"
-                      3. Be honest about your current situation
-                      4. Prepare your questions
-                      5. Be ready to commit if we're a good fit
+                              **How to prepare:**
+                              1. Write down your specific goals
+                              2. Know your "why"
+                              3. Be honest about your current situation
+                              4. Prepare your questions
+                              5. Be ready to commit if we're a good fit
                       
-                      I'm looking forward to speaking with you!
+                              I'm looking forward to speaking with you!
 
   # ============================================
   # 📋 FORMS

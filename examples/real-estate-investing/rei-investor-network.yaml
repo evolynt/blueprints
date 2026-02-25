@@ -86,244 +86,292 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Access Off-Market Deals Most Investors Never See"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Join a private network of serious investors who share deal flow, collaborate on opportunities, and build wealth together"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
-                    Provider: youtube
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Access Off-Market Deals Most Investors Never See"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Join a private network of serious investors who share deal flow, collaborate on opportunities, and build wealth together"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                            Provider: youtube
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Tired of fighting over the same MLS deals?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You've done a few deals. You know real estate works. But finding quality opportunities is getting harder.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Tired of fighting over the same MLS deals?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You've done a few deals. You know real estate works. But finding quality opportunities is getting harder.
                       
-                      The MLS is picked over. Wholesalers are sending you the same deals they blast to everyone. And when you do find something good, you're competing against 20 other offers.
+                              The MLS is picked over. Wholesalers are sending you the same deals they blast to everyone. And when you do find something good, you're competing against 20 other offers.
                       
-                      Meanwhile, experienced investors seem to have an endless pipeline of off-market opportunities. They're closing deals you never even knew existed.
+                              Meanwhile, experienced investors seem to have an endless pipeline of off-market opportunities. They're closing deals you never even knew existed.
                       
-                      What's their secret? They have a network.
+                              What's their secret? They have a network.
                       
-                      Not just contacts - a real network of investors who share deals, collaborate on opportunities, and help each other win.
+                              Not just contacts - a real network of investors who share deals, collaborate on opportunities, and help each other win.
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "What if you had access to real deal flow?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Imagine getting a notification that a member just posted a wholesale deal in your target market. Before it hits any list.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "What if you had access to real deal flow?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Imagine getting a notification that a member just posted a wholesale deal in your target market. Before it hits any list.
                       
-                      Or connecting with an investor who has capital but needs boots on the ground - and that's exactly what you bring to the table.
+                              Or connecting with an investor who has capital but needs boots on the ground - and that's exactly what you bring to the table.
                       
-                      Or getting your question about a tricky rehab answered by someone who's done 50 of them.
+                              Or getting your question about a tricky rehab answered by someone who's done 50 of them.
                       
-                      That's what the REI Investor Network provides: real deal flow, real connections, and real support from people who are actually doing deals.
+                              That's what the REI Investor Network provides: real deal flow, real connections, and real support from people who are actually doing deals.
             - Order: 4
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Here's what you get as a member"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      ✓ **Deal Flow Access**
-                      Members post off-market deals, wholesale opportunities, and JV partnerships before they go anywhere else. First look at deals most investors never see.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Here's what you get as a member"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              ✓ **Deal Flow Access**
+                              Members post off-market deals, wholesale opportunities, and JV partnerships before they go anywhere else. First look at deals most investors never see.
                       
-                      ✓ **Weekly Live Q&A Calls**
-                      Every Thursday at 8pm ET, we hop on a live call to discuss deals, strategy, market conditions, and answer your specific questions.
+                              ✓ **Weekly Live Q&A Calls**
+                              Every Thursday at 8pm ET, we hop on a live call to discuss deals, strategy, market conditions, and answer your specific questions.
                       
-                      ✓ **Investor Networking**
-                      Connect with wholesalers, flippers, landlords, private lenders, and contractors. Find JV partners, referral sources, and deal partners.
+                              ✓ **Investor Networking**
+                              Connect with wholesalers, flippers, landlords, private lenders, and contractors. Find JV partners, referral sources, and deal partners.
                       
-                      ✓ **Resource Library**
-                      Access contracts, spreadsheets, scripts, and templates that members have battle-tested on real deals.
+                              ✓ **Resource Library**
+                              Access contracts, spreadsheets, scripts, and templates that members have battle-tested on real deals.
                       
-                      ✓ **Private Community**
-                      A curated group of serious investors (no tire-kickers) where you can ask questions, share wins, and get feedback on deals.
+                              ✓ **Private Community**
+                              A curated group of serious investors (no tire-kickers) where you can ask questions, share wins, and get feedback on deals.
             - Order: 5
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Who this is for"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      The REI Investor Network is for serious investors who:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Who this is for"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              The REI Investor Network is for serious investors who:
                       
-                      ✓ Have done at least one deal (or are actively working on their first)
-                      ✓ Have capital ready to deploy (or access to funding)
-                      ✓ Are willing to share deal flow and help other members
-                      ✓ Understand that investing involves risk
-                      ✓ Are ready to invest in their network
+                              ✓ Have done at least one deal (or are actively working on their first)
+                              ✓ Have capital ready to deploy (or access to funding)
+                              ✓ Are willing to share deal flow and help other members
+                              ✓ Understand that investing involves risk
+                              ✓ Are ready to invest in their network
                       
-                      **This is NOT for:**
-                      - People who just want to "learn about" real estate
-                      - Those who aren't ready to take action
-                      - Anyone who wants everything handed to them
+                              **This is NOT for:**
+                              - People who just want to "learn about" real estate
+                              - Those who aren't ready to take action
+                              - Anyone who wants everything handed to them
                       
-                      We keep the community small and curated. Every member is vetted to ensure they bring value.
+                              We keep the community small and curated. Every member is vetted to ensure they bring value.
             - Order: 6
-              Elements:
-                - Type: testimonial
-                  Order: 1
-                  Content:
-                    Quote: "Found a JV partner in my first week who brought $150K in private money. We've now done three flips together. The membership paid for itself 100x over."
-                    Author: "Jason M., Flipper"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 2
-                  Content:
-                    Quote: "The deal flow alone is worth it. I picked up two wholesale assignments from members that weren't posted anywhere else. Clean deals, smooth closings."
-                    Author: "Maria C., Wholesaler"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 3
-                  Content:
-                    Quote: "As a passive investor with capital, this network connected me with operators I can trust. I've funded four deals with members so far."
-                    Author: "David L., Private Lender"
-                    Rating: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "Found a JV partner in my first week who brought $150K in private money. We've now done three flips together. The membership paid for itself 100x over."
+                            Author: "Jason M., Flipper"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 2
+                          Content:
+                            Quote: "The deal flow alone is worth it. I picked up two wholesale assignments from members that weren't posted anywhere else. Clean deals, smooth closings."
+                            Author: "Maria C., Wholesaler"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 3
+                          Content:
+                            Quote: "As a passive investor with capital, this network connected me with operators I can trust. I've funded four deals with members so far."
+                            Author: "David L., Private Lender"
+                            Rating: 5
             - Order: 7
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Ready to Access Real Deal Flow?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Apply now and we'll schedule a quick discovery call to see if you're a good fit for the network."
-                - Type: button
-                  Order: 3
-                  Content:
-                    Text: "Apply for Membership"
-                    Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Ready to Access Real Deal Flow?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Apply now and we'll schedule a quick discovery call to see if you're a good fit for the network."
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "Apply for Membership"
+                            Action: next_step
         - Name: "Apply"
           Slug: apply
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Apply for REI Investor Network"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=APPLICATION_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      We keep the network small and curated to ensure every member gets value. Please answer a few questions so we can see if you're a good fit.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Apply for REI Investor Network"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=APPLICATION_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              We keep the network small and curated to ensure every member gets value. Please answer a few questions so we can see if you're a good fit.
                       
-                      **This takes about 3 minutes.**
+                              **This takes about 3 minutes.**
             - Order: 2
-              Elements:
-                - Type: form
-                  Order: 1
-                  Content:
-                    FormSlug: !Ref rin-application
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: form
+                          Order: 1
+                          Content:
+                            FormSlug: !Ref rin-application
+                            OnSuccess:
+                              Action: next_step
         - Name: "Book Your Call"
           Slug: book
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Great! Let's Chat."
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=BOOKING_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Thanks for applying to the REI Investor Network!
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Great! Let's Chat."
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=BOOKING_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Thanks for applying to the REI Investor Network!
                       
-                      **Next Step: Book Your Discovery Call**
+                              **Next Step: Book Your Discovery Call**
                       
-                      On this 30-minute call, we'll:
+                              On this 30-minute call, we'll:
                       
-                      ✓ Learn about your investing experience and goals
-                      ✓ Discuss what you're looking for in a network
-                      ✓ Explain how the community works in detail
-                      ✓ Determine if you're a good fit for the network
-                      ✓ Answer any questions you have
+                              ✓ Learn about your investing experience and goals
+                              ✓ Discuss what you're looking for in a network
+                              ✓ Explain how the community works in detail
+                              ✓ Determine if you're a good fit for the network
+                              ✓ Answer any questions you have
                       
-                      **Please come prepared to discuss:**
-                      - Your investing experience and recent deals
-                      - What markets and deal types you focus on
-                      - What you hope to get from the network
-                      - What you can contribute to other members
-                - Type: booking_link
-                  Order: 4
-                  Content:
-                    BookingLinkSlug: !Ref rin-discovery-call
-                    OnSuccess:
-                      Action: next_step
+                              **Please come prepared to discuss:**
+                              - Your investing experience and recent deals
+                              - What markets and deal types you focus on
+                              - What you hope to get from the network
+                              - What you can contribute to other members
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: booking_link
+                          Order: 1
+                          Content:
+                            BookingLinkSlug: !Ref rin-discovery-call
+                            OnSuccess:
+                              Action: next_step
         - Name: "You're Booked"
           Slug: confirmed
           Order: 4
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set!"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=CONFIRMATION_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Your discovery call is booked. Check your email for calendar details and a Zoom link.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set!"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=CONFIRMATION_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Your discovery call is booked. Check your email for calendar details and a Zoom link.
                       
-                      **Before our call, think about:**
+                              **Before our call, think about:**
                       
-                      1. **Your recent deals** - What have you done in the last 12 months?
-                      2. **Your current challenges** - Where are you stuck?
-                      3. **Your goals** - What do you want to achieve in the next year?
-                      4. **Your value** - What can you bring to other members?
+                              1. **Your recent deals** - What have you done in the last 12 months?
+                              2. **Your current challenges** - Where are you stuck?
+                              3. **Your goals** - What do you want to achieve in the next year?
+                              4. **Your value** - What can you bring to other members?
                       
-                      We're selective about who we let in because the quality of the network depends on the quality of the members.
+                              We're selective about who we let in because the quality of the network depends on the quality of the members.
                       
-                      **Questions before our call?** Reply to your confirmation email.
+                              **Questions before our call?** Reply to your confirmation email.
                       
-                      Talk soon!
+                              Talk soon!
 
   # ============================================
   # 📋 FORMS
@@ -691,7 +739,6 @@ Resources:
                   Content:
                     Text: "Enter the Community"
                     Action: next_step
-
   # ============================================
   # 🔄 PIPELINE
   # ============================================

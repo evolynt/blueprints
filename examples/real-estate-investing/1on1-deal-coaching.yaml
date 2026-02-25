@@ -135,299 +135,356 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Close Your First (or Next) Real Estate Deal with Expert 1:1 Guidance"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Get personalized coaching from an investor who's done 200+ deals - we'll work through YOUR specific deals together"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=DC_VSL_PLACEHOLDER"
-                    Provider: youtube
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Close Your First (or Next) Real Estate Deal with Expert 1:1 Guidance"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Get personalized coaching from an investor who's done 200+ deals - we'll work through YOUR specific deals together"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=DC_VSL_PLACEHOLDER"
+                            Provider: youtube
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Are you stuck in learning mode?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You've taken the courses. You've watched the YouTube videos. You know the theory.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Are you stuck in learning mode?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You've taken the courses. You've watched the YouTube videos. You know the theory.
                       
-                      But when it comes to pulling the trigger on an actual deal, something holds you back:
+                              But when it comes to pulling the trigger on an actual deal, something holds you back:
                       
-                      - Is this ARV realistic, or am I being too optimistic?
-                      - Did I estimate repairs correctly?
-                      - What if I miss something and lose money?
-                      - How do I negotiate with this specific seller?
-                      - Is this deal actually as good as it looks?
+                              - Is this ARV realistic, or am I being too optimistic?
+                              - Did I estimate repairs correctly?
+                              - What if I miss something and lose money?
+                              - How do I negotiate with this specific seller?
+                              - Is this deal actually as good as it looks?
                       
-                      **The gap between learning and doing is where most investors get stuck.**
+                              **The gap between learning and doing is where most investors get stuck.**
                       
-                      You don't need another course. You need someone who's done hundreds of deals to look at YOUR specific situation and tell you exactly what to do.
+                              You don't need another course. You need someone who's done hundreds of deals to look at YOUR specific situation and tell you exactly what to do.
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "What if you had a deal partner in your corner?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Imagine having an experienced investor review every deal before you make an offer.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "What if you had a deal partner in your corner?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Imagine having an experienced investor review every deal before you make an offer.
                       
-                      Someone who can:
+                              Someone who can:
                       
-                      ✓ Analyze your deals and tell you if the numbers work
-                      ✓ Help you negotiate with sellers
-                      ✓ Review contracts before you sign
-                      ✓ Walk you through the closing process
-                      ✓ Answer your questions when you're stuck
+                              ✓ Analyze your deals and tell you if the numbers work
+                              ✓ Help you negotiate with sellers
+                              ✓ Review contracts before you sign
+                              ✓ Walk you through the closing process
+                              ✓ Answer your questions when you're stuck
                       
-                      That's what 1:1 Deal Coaching provides.
+                              That's what 1:1 Deal Coaching provides.
                       
-                      Over 3 months and 10 coaching sessions, we work through your specific deals together. Not generic advice - real guidance on the actual opportunities in front of you.
+                              Over 3 months and 10 coaching sessions, we work through your specific deals together. Not generic advice - real guidance on the actual opportunities in front of you.
             - Order: 4
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Here's how it works"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      **10 Private Coaching Sessions (60 minutes each)**
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Here's how it works"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              **10 Private Coaching Sessions (60 minutes each)**
                       
-                      We meet via Zoom to work through whatever you need:
+                              We meet via Zoom to work through whatever you need:
                       
-                      - Analyzing specific deals you're considering
-                      - Reviewing your marketing and lead generation
-                      - Role-playing seller conversations
-                      - Walking through offers and contracts
-                      - Problem-solving when deals get complicated
-                      - Strategizing your next moves
+                              - Analyzing specific deals you're considering
+                              - Reviewing your marketing and lead generation
+                              - Role-playing seller conversations
+                              - Walking through offers and contracts
+                              - Problem-solving when deals get complicated
+                              - Strategizing your next moves
                       
-                      **Resource Library Access**
+                              **Resource Library Access**
                       
-                      You get my personal templates, contracts, and tools:
+                              You get my personal templates, contracts, and tools:
                       
-                      - Deal analyzer spreadsheet
-                      - Repair cost estimator
-                      - Contract templates
-                      - Scripts and negotiation guides
+                              - Deal analyzer spreadsheet
+                              - Repair cost estimator
+                              - Contract templates
+                              - Scripts and negotiation guides
                       
-                      **3-Month Timeline**
+                              **3-Month Timeline**
                       
-                      Most clients close their first (or next) deal within the coaching period. The goal is action, not endless learning.
+                              Most clients close their first (or next) deal within the coaching period. The goal is action, not endless learning.
             - Order: 5
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Who this is for"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      1:1 Deal Coaching is for serious investors who:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Who this is for"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              1:1 Deal Coaching is for serious investors who:
                       
-                      ✓ Have done the basic education (courses, books, podcasts)
-                      ✓ Have capital or access to funding for deals
-                      ✓ Are ready to take action in the next 90 days
-                      ✓ Are committed to doing the work between sessions
-                      ✓ Want personalized guidance, not generic advice
+                              ✓ Have done the basic education (courses, books, podcasts)
+                              ✓ Have capital or access to funding for deals
+                              ✓ Are ready to take action in the next 90 days
+                              ✓ Are committed to doing the work between sessions
+                              ✓ Want personalized guidance, not generic advice
                       
-                      **This is NOT for:**
+                              **This is NOT for:**
                       
-                      - Complete beginners who haven't done any research yet
-                      - People looking for get-rich-quick schemes
-                      - Those who aren't ready to invest time and money
-                      - Anyone who just wants someone to do the work for them
+                              - Complete beginners who haven't done any research yet
+                              - People looking for get-rich-quick schemes
+                              - Those who aren't ready to invest time and money
+                              - Anyone who just wants someone to do the work for them
                       
-                      I work with a limited number of coaching clients to ensure everyone gets the attention they need.
+                              I work with a limited number of coaching clients to ensure everyone gets the attention they need.
             - Order: 6
-              Elements:
-                - Type: testimonial
-                  Order: 1
-                  Content:
-                    Quote: "I'd been paralyzed for months, afraid to make an offer. In our first session, we analyzed a deal together and I made an offer that same day. Closed my first wholesale deal 6 weeks later for $12,000."
-                    Author: "Michael R., Austin, TX"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 2
-                  Content:
-                    Quote: "Having someone review my deals before I commit changed everything. I avoided two bad deals and confidently closed three good ones during our 3 months together."
-                    Author: "Angela P., Atlanta, GA"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 3
-                  Content:
-                    Quote: "The coaching paid for itself on my first flip. I was going to offer way too much until we analyzed the deal together. That single conversation saved me at least $15K."
-                    Author: "Chris T., Phoenix, AZ"
-                    Rating: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "I'd been paralyzed for months, afraid to make an offer. In our first session, we analyzed a deal together and I made an offer that same day. Closed my first wholesale deal 6 weeks later for $12,000."
+                            Author: "Michael R., Austin, TX"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 2
+                          Content:
+                            Quote: "Having someone review my deals before I commit changed everything. I avoided two bad deals and confidently closed three good ones during our 3 months together."
+                            Author: "Angela P., Atlanta, GA"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 3
+                          Content:
+                            Quote: "The coaching paid for itself on my first flip. I was going to offer way too much until we analyzed the deal together. That single conversation saved me at least $15K."
+                            Author: "Chris T., Phoenix, AZ"
+                            Rating: 5
             - Order: 7
-              Elements:
-                - Type: faq_item
-                  Order: 1
-                  Content:
-                    Question: "What types of deals do you help with?"
-                    Answer: "I help with all residential real estate strategies: wholesaling, fix-and-flip, BRRRR, and buy-and-hold rentals. My experience is primarily in single-family and small multifamily (2-4 units)."
-                - Type: faq_item
-                  Order: 2
-                  Content:
-                    Question: "How do the coaching sessions work?"
-                    Answer: "Sessions are 60 minutes via Zoom. You book them through your client portal whenever you need them. Most clients do 1-2 sessions per week, but you can pace them however works for your deal flow."
-                - Type: faq_item
-                  Order: 3
-                  Content:
-                    Question: "What if I don't have any deals to work on yet?"
-                    Answer: "That's totally fine. We'll work on your lead generation strategy, help you find deals, and analyze opportunities as they come up. Many clients close their first deal within the coaching period."
-                - Type: faq_item
-                  Order: 4
-                  Content:
-                    Question: "Do you invest in my deals or provide funding?"
-                    Answer: "No. This is coaching and guidance only. I don't JV on client deals or provide financing. My role is to help you analyze and execute your own deals."
-                - Type: faq_item
-                  Order: 5
-                  Content:
-                    Question: "What's the time commitment between sessions?"
-                    Answer: "That depends on your goals. If you want to close deals quickly, expect to spend 10-20 hours per week on your investing business (marketing, analyzing deals, talking to sellers, etc.). I'll help you prioritize."
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: faq_item
+                          Order: 1
+                          Content:
+                            Question: "What types of deals do you help with?"
+                            Answer: "I help with all residential real estate strategies: wholesaling, fix-and-flip, BRRRR, and buy-and-hold rentals. My experience is primarily in single-family and small multifamily (2-4 units)."
+                        - Type: faq_item
+                          Order: 2
+                          Content:
+                            Question: "How do the coaching sessions work?"
+                            Answer: "Sessions are 60 minutes via Zoom. You book them through your client portal whenever you need them. Most clients do 1-2 sessions per week, but you can pace them however works for your deal flow."
+                        - Type: faq_item
+                          Order: 3
+                          Content:
+                            Question: "What if I don't have any deals to work on yet?"
+                            Answer: "That's totally fine. We'll work on your lead generation strategy, help you find deals, and analyze opportunities as they come up. Many clients close their first deal within the coaching period."
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: faq_item
+                          Order: 1
+                          Content:
+                            Question: "Do you invest in my deals or provide funding?"
+                            Answer: "No. This is coaching and guidance only. I don't JV on client deals or provide financing. My role is to help you analyze and execute your own deals."
+                        - Type: faq_item
+                          Order: 2
+                          Content:
+                            Question: "What's the time commitment between sessions?"
+                            Answer: "That depends on your goals. If you want to close deals quickly, expect to spend 10-20 hours per week on your investing business (marketing, analyzing deals, talking to sellers, etc.). I'll help you prioritize."
             - Order: 8
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Ready to Stop Learning and Start Closing?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      I only work with a handful of coaching clients at a time.
+            - Order: 8
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Ready to Stop Learning and Start Closing?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              I only work with a handful of coaching clients at a time.
                       
-                      If you're serious about closing deals in the next 90 days and want personalized guidance from someone who's done 200+ deals, apply below.
+                              If you're serious about closing deals in the next 90 days and want personalized guidance from someone who's done 200+ deals, apply below.
                       
-                      We'll hop on a quick discovery call to see if we're a good fit.
-                - Type: button
-                  Order: 3
-                  Content:
-                    Text: "Apply for 1:1 Coaching"
-                    Action: next_step
+                              We'll hop on a quick discovery call to see if we're a good fit.
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "Apply for 1:1 Coaching"
+                            Action: next_step
         - Name: "Apply"
           Slug: apply
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Apply for 1:1 Deal Coaching"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=DC_APPLICATION_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Thanks for your interest in 1:1 Deal Coaching!
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Apply for 1:1 Deal Coaching"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=DC_APPLICATION_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Thanks for your interest in 1:1 Deal Coaching!
                       
-                      I work with a limited number of clients to ensure everyone gets the attention they need. Please answer a few questions so I can see if we're a good fit.
+                              I work with a limited number of clients to ensure everyone gets the attention they need. Please answer a few questions so I can see if we're a good fit.
                       
-                      **This takes about 3 minutes.**
+                              **This takes about 3 minutes.**
             - Order: 2
-              Elements:
-                - Type: form
-                  Order: 1
-                  Content:
-                    FormSlug: !Ref dc-application
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: form
+                          Order: 1
+                          Content:
+                            FormSlug: !Ref dc-application
+                            OnSuccess:
+                              Action: next_step
         - Name: "Book Your Call"
           Slug: book
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Great! Let's Talk."
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=DC_BOOKING_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Thanks for applying to 1:1 Deal Coaching!
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Great! Let's Talk."
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=DC_BOOKING_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Thanks for applying to 1:1 Deal Coaching!
                       
-                      **Next Step: Book Your Discovery Call**
+                              **Next Step: Book Your Discovery Call**
                       
-                      On this 30-minute call, we'll:
+                              On this 30-minute call, we'll:
                       
-                      ✓ Discuss your investing experience and current situation
-                      ✓ Understand your goals for the next 90 days
-                      ✓ Talk through any deals you're currently working on
-                      ✓ See if 1:1 coaching is the right fit for you
-                      ✓ Answer any questions you have about the program
+                              ✓ Discuss your investing experience and current situation
+                              ✓ Understand your goals for the next 90 days
+                              ✓ Talk through any deals you're currently working on
+                              ✓ See if 1:1 coaching is the right fit for you
+                              ✓ Answer any questions you have about the program
                       
-                      **Please come prepared to discuss:**
-                      - Your investing background and experience
-                      - What's holding you back from closing deals
-                      - Your goals and timeline
-                      - Your current deal pipeline (if any)
-                - Type: booking_link
-                  Order: 4
-                  Content:
-                    BookingLinkSlug: !Ref dc-discovery-call
-                    OnSuccess:
-                      Action: next_step
+                              **Please come prepared to discuss:**
+                              - Your investing background and experience
+                              - What's holding you back from closing deals
+                              - Your goals and timeline
+                              - Your current deal pipeline (if any)
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: booking_link
+                          Order: 1
+                          Content:
+                            BookingLinkSlug: !Ref dc-discovery-call
+                            OnSuccess:
+                              Action: next_step
         - Name: "You're Booked"
           Slug: confirmed
           Order: 4
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Your Call is Confirmed!"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=DC_CONFIRMATION_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Your discovery call is booked. Check your email for calendar details and a Zoom link.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Your Call is Confirmed!"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=DC_CONFIRMATION_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Your discovery call is booked. Check your email for calendar details and a Zoom link.
                       
-                      **Before our call, think about:**
+                              **Before our call, think about:**
                       
-                      1. **Your experience** - What deals have you done (or tried to do)?
-                      2. **Your roadblocks** - What's stopping you from closing deals?
-                      3. **Your goals** - What do you want to achieve in the next 90 days?
-                      4. **Your commitment** - Are you ready to take action?
+                              1. **Your experience** - What deals have you done (or tried to do)?
+                              2. **Your roadblocks** - What's stopping you from closing deals?
+                              3. **Your goals** - What do you want to achieve in the next 90 days?
+                              4. **Your commitment** - Are you ready to take action?
                       
-                      I'm looking forward to learning about your situation and seeing if I can help.
+                              I'm looking forward to learning about your situation and seeing if I can help.
                       
-                      **Questions before our call?** Reply to your confirmation email.
+                              **Questions before our call?** Reply to your confirmation email.
                       
-                      Talk soon!
+                              Talk soon!
 
   # ============================================
   # 📋 FORMS
@@ -814,7 +871,6 @@ Resources:
                   Content:
                     Text: "Book Your First Session"
                     Action: next_step
-
   # ============================================
   # 🔄 PIPELINE
   # ============================================

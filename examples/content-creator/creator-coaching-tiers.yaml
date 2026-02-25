@@ -251,126 +251,154 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Accelerate Your Channel Growth with Expert Coaching"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Personalized 1:1 coaching for serious creators ready to level up"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=CCT_VSL"
-                    Provider: youtube
-                - Type: button
-                  Order: 4
-                  Content:
-                    Text: "See Coaching Options"
-                    Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Accelerate Your Channel Growth with Expert Coaching"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Personalized 1:1 coaching for serious creators ready to level up"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=CCT_VSL"
+                            Provider: youtube
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: button
+                          Order: 1
+                          Content:
+                            Text: "See Coaching Options"
+                            Action: next_step
         - Name: "Compare Tiers"
           Slug: compare
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Choose Your Coaching Level"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      **STARTER - $3,000** (3 months)
-                      - 6 private coaching sessions
-                      - Full channel audit
-                      - Content strategy roadmap
-                      - Thumbnail & title reviews
-                      - Email support between calls
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Choose Your Coaching Level"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              **STARTER - $3,000** (3 months)
+                              - 6 private coaching sessions
+                              - Full channel audit
+                              - Content strategy roadmap
+                              - Thumbnail & title reviews
+                              - Email support between calls
                       
-                      ---
+                              ---
                       
-                      **GROWTH - $5,000** (6 months)
-                      Everything in Starter, PLUS:
-                      - 12 coaching sessions (2x more)
-                      - Weekly Slack access
-                      - Video script reviews
-                      - Priority session booking
-                      - Growth client community
+                              **GROWTH - $5,000** (6 months)
+                              Everything in Starter, PLUS:
+                              - 12 coaching sessions (2x more)
+                              - Weekly Slack access
+                              - Video script reviews
+                              - Priority session booking
+                              - Growth client community
                       
-                      ---
+                              ---
                       
-                      **VIP - $10,000** (12 months)
-                      Everything in Growth, PLUS:
-                      - 24 coaching sessions (4x more)
-                      - Direct phone access
-                      - Done-for-you strategy docs
-                      - Quarterly in-person retreats
-                      - VIP inner circle community
-                      - Lifetime alumni access
-                - Type: button
-                  Order: 3
-                  Content:
-                    Text: "Apply Now"
-                    Action: next_step
+                              **VIP - $10,000** (12 months)
+                              Everything in Growth, PLUS:
+                              - 24 coaching sessions (4x more)
+                              - Direct phone access
+                              - Done-for-you strategy docs
+                              - Quarterly in-person retreats
+                              - VIP inner circle community
+                              - Lifetime alumni access
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "Apply Now"
+                            Action: next_step
         - Name: "Apply"
           Slug: apply
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Apply for Coaching"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Tell me about your channel and goals. I'll review your application and reach out if we're a good fit.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Apply for Coaching"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Tell me about your channel and goals. I'll review your application and reach out if we're a good fit.
             - Order: 2
-              Elements:
-                - Type: form
-                  Order: 1
-                  Content:
-                    FormSlug: !Ref cct-application
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: form
+                          Order: 1
+                          Content:
+                            FormSlug: !Ref cct-application
         - Name: "Book Call"
           Slug: book
           Order: 4
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Book Your Discovery Call"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Thanks for applying! Let's hop on a quick call to discuss your goals and find the right tier for you.
-                - Type: booking_link
-                  Order: 3
-                  Content:
-                    BookingLinkSlug: !Ref cct-discovery-call
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Book Your Discovery Call"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Thanks for applying! Let's hop on a quick call to discuss your goals and find the right tier for you.
+                        - Type: booking_link
+                          Order: 3
+                          Content:
+                            BookingLinkSlug: !Ref cct-discovery-call
         - Name: "Confirmed"
           Slug: confirmed
           Order: 5
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're Booked!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Check your email for the calendar invite. I'm looking forward to learning about your channel!
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're Booked!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Check your email for the calendar invite. I'm looking forward to learning about your channel!
 
   # ============================================
   # 📋 FORMS
@@ -738,7 +766,6 @@ Resources:
                   Order: 2
                   Content:
                     Text: "Book your first coaching session to get started!"
-
   cct-growth-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -795,7 +822,6 @@ Resources:
                   Order: 2
                   Content:
                     Text: "Book your first session and join the Growth community!"
-
   cct-vip-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -852,7 +878,6 @@ Resources:
                   Order: 2
                   Content:
                     Text: "Book your first session, join the VIP community, and check your email for retreat info!"
-
   # ============================================
   # 🔄 PIPELINE
   # ============================================

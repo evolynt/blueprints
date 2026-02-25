@@ -400,227 +400,277 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Free Training: The 3 Mistakes Keeping You From Your Dream Body"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Discover why 90% of people fail their fitness goals (and the simple fix that changes everything)"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=OPTIN_HOOK_VIDEO"
-                    Provider: youtube
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Free Training: The 3 Mistakes Keeping You From Your Dream Body"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Discover why 90% of people fail their fitness goals (and the simple fix that changes everything)"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=OPTIN_HOOK_VIDEO"
+                            Provider: youtube
             - Order: 2
-              Elements:
-                - Type: text
-                  Order: 1
-                  Content:
-                    Text: "Enter your details below to watch the free training:"
-                - Type: form
-                  Order: 2
-                  Content:
-                    FormSlug: !Ref transformation-lead-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: text
+                          Order: 1
+                          Content:
+                            Text: "Enter your details below to watch the free training:"
+                        - Type: form
+                          Order: 2
+                          Content:
+                            FormSlug: !Ref transformation-lead-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "Watch Training"
           Slug: training
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "The 3 Mistakes Keeping You From Your Dream Body"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=MASTERCLASS_VIDEO"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      In this training, you discovered:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "The 3 Mistakes Keeping You From Your Dream Body"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=MASTERCLASS_VIDEO"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              In this training, you discovered:
                       
-                      ✓ Why willpower-based fitness always fails (and what works instead)
-                      ✓ The "progressive adaptation" secret that guarantees results
-                      ✓ How accountability beats motivation every single time
+                              ✓ Why willpower-based fitness always fails (and what works instead)
+                              ✓ The "progressive adaptation" secret that guarantees results
+                              ✓ How accountability beats motivation every single time
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Sound familiar?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You've tried before. Maybe dozens of times.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Sound familiar?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You've tried before. Maybe dozens of times.
                       
-                      You start strong. The first week feels great. You meal prep, hit the gym, feel motivated.
+                              You start strong. The first week feels great. You meal prep, hit the gym, feel motivated.
                       
-                      Then... life happens.
+                              Then... life happens.
                       
-                      - A stressful week at work and you skip a few workouts
-                      - A social event derails your nutrition
-                      - The scale stops moving and you lose motivation
+                              - A stressful week at work and you skip a few workouts
+                              - A social event derails your nutrition
+                              - The scale stops moving and you lose motivation
                       
-                      Before you know it, you're back where you started. Again.
+                              Before you know it, you're back where you started. Again.
                       
-                      Here's the truth nobody tells you:
+                              Here's the truth nobody tells you:
                       
-                      **The problem isn't you. It's the approach.**
+                              **The problem isn't you. It's the approach.**
                       
-                      Random workouts don't create transformations. Strict diets don't create lasting change. Motivation fades.
+                              Random workouts don't create transformations. Strict diets don't create lasting change. Motivation fades.
                       
-                      What DOES work? A proven system with built-in accountability.
+                              What DOES work? A proven system with built-in accountability.
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Introducing: The 12-Week Body Transformation"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      This isn't another workout program you'll forget about.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Introducing: The 12-Week Body Transformation"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              This isn't another workout program you'll forget about.
                       
-                      It's a complete transformation system that combines:
+                              It's a complete transformation system that combines:
                       
-                      **Structured Programming** - No guessing what to do. Every workout is planned for the full 12 weeks, progressively building on the previous phase.
+                              **Structured Programming** - No guessing what to do. Every workout is planned for the full 12 weeks, progressively building on the previous phase.
                       
-                      **Nutrition That Works** - Not a restrictive diet. Real strategies you can follow for life.
+                              **Nutrition That Works** - Not a restrictive diet. Real strategies you can follow for life.
                       
-                      **Community Accountability** - A private group of people on the same journey. Daily check-ins. Shared wins. Support when you need it.
+                              **Community Accountability** - A private group of people on the same journey. Daily check-ins. Shared wins. Support when you need it.
                       
-                      The result? People who follow this system don't just get results. They keep them.
+                              The result? People who follow this system don't just get results. They keep them.
             - Order: 4
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Here's everything you get:"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      ✓ **12-Week Transformation Course** (Value: $997)
-                      Complete video training covering every phase of your transformation. Workouts, nutrition, mindset - everything you need.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Here's everything you get:"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              ✓ **12-Week Transformation Course** (Value: $997)
+                              Complete video training covering every phase of your transformation. Workouts, nutrition, mindset - everything you need.
                       
-                      ✓ **Private Accountability Community** (Value: $297)
-                      Daily check-ins with fellow transformation members. Share your journey, get support, stay accountable.
+                              ✓ **Private Accountability Community** (Value: $297)
+                              Daily check-ins with fellow transformation members. Share your journey, get support, stay accountable.
                       
-                      ✓ **Weekly Workout Templates** (Value: $197)
-                      Print-ready workout sheets for every week. Take them to the gym and know exactly what to do.
+                              ✓ **Weekly Workout Templates** (Value: $197)
+                              Print-ready workout sheets for every week. Take them to the gym and know exactly what to do.
                       
-                      ✓ **Nutrition Guide & Meal Plans** (Value: $147)
-                      No more guessing what to eat. Simple, flexible meal strategies that fit your lifestyle.
+                              ✓ **Nutrition Guide & Meal Plans** (Value: $147)
+                              No more guessing what to eat. Simple, flexible meal strategies that fit your lifestyle.
                       
-                      **Total Value: $1,638**
-                - Type: spacer
-                  Order: 3
-                  Content:
-                    Height: 10
-                - Type: text
-                  Order: 4
-                  Content:
-                    Text: |
-                      **Your Investment Today:**
+                              **Total Value: $1,638**
+                        - Type: spacer
+                          Order: 3
+                          Content:
+                            Height: 10
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: text
+                          Order: 1
+                          Content:
+                            Text: |
+                              **Your Investment Today:**
                       
-                      💰 Pay in Full: **$497** (save $94)
+                              💰 Pay in Full: **$497** (save $94)
                       
-                      📅 Payment Plan: **3 payments of $197**
+                              📅 Payment Plan: **3 payments of $197**
             - Order: 5
-              Elements:
-                - Type: testimonial
-                  Order: 1
-                  Content:
-                    Quote: "I've done every program out there. This is the first one that actually worked. Down 28 pounds and I've kept it off for 6 months now. The community was the game-changer for me."
-                    Author: "Michael R., 39, Project Manager"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 2
-                  Content:
-                    Quote: "I was skeptical about another fitness program, but the structure made all the difference. I knew exactly what to do every single day. Lost 4 inches off my waist and finally have visible abs at 45!"
-                    Author: "Lisa K., 45, Business Owner"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 3
-                  Content:
-                    Quote: "The daily check-ins kept me accountable in a way I've never experienced. When you know people are rooting for you, you show up. Gained 12 pounds of muscle and feel stronger than I did in my 20s."
-                    Author: "David T., 52, Sales Director"
-                    Rating: 5
+            - Order: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "I've done every program out there. This is the first one that actually worked. Down 28 pounds and I've kept it off for 6 months now. The community was the game-changer for me."
+                            Author: "Michael R., 39, Project Manager"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 2
+                          Content:
+                            Quote: "I was skeptical about another fitness program, but the structure made all the difference. I knew exactly what to do every single day. Lost 4 inches off my waist and finally have visible abs at 45!"
+                            Author: "Lisa K., 45, Business Owner"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 3
+                          Content:
+                            Quote: "The daily check-ins kept me accountable in a way I've never experienced. When you know people are rooting for you, you show up. Gained 12 pounds of muscle and feel stronger than I did in my 20s."
+                            Author: "David T., 52, Sales Director"
+                            Rating: 5
             - Order: 6
-              Elements:
-                - Type: faq_item
-                  Order: 1
-                  Content:
-                    Question: "How much time do I need to commit each day?"
-                    Answer: "The workouts are 45-60 minutes, 3-5 days per week depending on the phase. Meal prep takes about 2 hours on Sunday. Daily community check-ins take 5 minutes. Most members find this fits easily into a busy schedule."
-                - Type: faq_item
-                  Order: 2
-                  Content:
-                    Question: "What equipment do I need?"
-                    Answer: "Access to a basic gym with dumbbells, barbells, and cable machines is ideal. If you're training at home, we include modifications for minimal equipment setups (dumbbells and resistance bands)."
-                - Type: faq_item
-                  Order: 3
-                  Content:
-                    Question: "I'm a complete beginner. Is this too advanced for me?"
-                    Answer: "Not at all! The program starts with a Foundation Phase specifically designed for beginners. Every exercise includes video demonstrations and form cues. Many of our best transformations come from complete beginners."
-                - Type: faq_item
-                  Order: 4
-                  Content:
-                    Question: "What if I can't complete the program?"
-                    Answer: "Life happens, and we understand. If you need to pause, you keep access forever. Plus, if you complete the program and don't see results, we offer a full refund. We're confident in this system."
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: faq_item
+                          Order: 1
+                          Content:
+                            Question: "How much time do I need to commit each day?"
+                            Answer: "The workouts are 45-60 minutes, 3-5 days per week depending on the phase. Meal prep takes about 2 hours on Sunday. Daily community check-ins take 5 minutes. Most members find this fits easily into a busy schedule."
+                        - Type: faq_item
+                          Order: 2
+                          Content:
+                            Question: "What equipment do I need?"
+                            Answer: "Access to a basic gym with dumbbells, barbells, and cable machines is ideal. If you're training at home, we include modifications for minimal equipment setups (dumbbells and resistance bands)."
+                        - Type: faq_item
+                          Order: 3
+                          Content:
+                            Question: "I'm a complete beginner. Is this too advanced for me?"
+                            Answer: "Not at all! The program starts with a Foundation Phase specifically designed for beginners. Every exercise includes video demonstrations and form cues. Many of our best transformations come from complete beginners."
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: faq_item
+                          Order: 1
+                          Content:
+                            Question: "What if I can't complete the program?"
+                            Answer: "Life happens, and we understand. If you need to pause, you keep access forever. Plus, if you complete the program and don't see results, we offer a full refund. We're confident in this system."
             - Order: 7
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Your Transformation Starts Today"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "In 12 weeks, you can be in the best shape of your life. Or you can be in the same place you are now. The choice is yours."
-                - Type: two_step_checkout
-                  Order: 3
-                  Content:
-                    OfferSlug: !Ref transformation-offer
-                    ButtonText: "Start My Transformation - $497"
+            - Order: 7
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Your Transformation Starts Today"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "In 12 weeks, you can be in the best shape of your life. Or you can be in the same place you are now. The choice is yours."
+                        - Type: two_step_checkout
+                          Order: 3
+                          Content:
+                            OfferSlug: !Ref transformation-offer
+                            ButtonText: "Start My Transformation - $497"
         - Name: "Thank You"
           Slug: thank-you
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to Your Transformation!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You just made one of the best decisions of your life.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to Your Transformation!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You just made one of the best decisions of your life.
                       
-                      Check your email for login details to access your portal.
+                              Check your email for login details to access your portal.
                       
-                      **Your first steps:**
+                              **Your first steps:**
                       
-                      1. Log into your portal and watch the Welcome video
-                      2. Take your "before" photos and measurements
-                      3. Introduce yourself in the community
-                      4. Start the Foundation Phase on Monday
+                              1. Log into your portal and watch the Welcome video
+                              2. Take your "before" photos and measurements
+                              3. Introduce yourself in the community
+                              4. Start the Foundation Phase on Monday
                       
-                      The next 12 weeks are going to change everything.
+                              The next 12 weeks are going to change everything.
                       
-                      See you inside!
+                              See you inside!
 
   # ============================================
   # 📋 FORM

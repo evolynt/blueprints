@@ -291,160 +291,188 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Done-For-You Ad Management"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Stop wasting money on underperforming ads. Our team manages your campaigns daily so you can focus on running your business."
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
-                    Provider: youtube
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Done-For-You Ad Management"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Stop wasting money on underperforming ads. Our team manages your campaigns daily so you can focus on running your business."
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                            Provider: youtube
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Choose the Right Tier for Your Business"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      **Growth Starter - $3,000/month**
-                      Best for: Businesses spending up to $10k/month on ads
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Choose the Right Tier for Your Business"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              **Growth Starter - $3,000/month**
+                              Best for: Businesses spending up to $10k/month on ads
                       
-                      - 1 platform (Meta or TikTok)
-                      - Weekly performance reports
-                      - Monthly strategy call
-                      - Email support
+                              - 1 platform (Meta or TikTok)
+                              - Weekly performance reports
+                              - Monthly strategy call
+                              - Email support
                       
-                      ---
+                              ---
                       
-                      **Growth Pro - $5,000/month**
-                      Best for: Businesses spending $10k-$30k/month on ads
+                              **Growth Pro - $5,000/month**
+                              Best for: Businesses spending $10k-$30k/month on ads
                       
-                      - 2 platforms (Meta + TikTok)
-                      - Weekly performance reports
-                      - Bi-weekly strategy calls
-                      - Creative refresh included
-                      - Priority email support
+                              - 2 platforms (Meta + TikTok)
+                              - Weekly performance reports
+                              - Bi-weekly strategy calls
+                              - Creative refresh included
+                              - Priority email support
                       
-                      ---
+                              ---
                       
-                      **Growth Scale - $10,000/month**
-                      Best for: Businesses spending $30k+/month on ads
+                              **Growth Scale - $10,000/month**
+                              Best for: Businesses spending $30k+/month on ads
                       
-                      - All platforms (Meta, TikTok, Google, YouTube)
-                      - Weekly performance reports + real-time dashboard
-                      - Weekly strategy calls
-                      - Unlimited creative refresh
-                      - Dedicated account strategist
-                      - Private Slack channel
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      **Not sure which tier is right for you?**
+                              - All platforms (Meta, TikTok, Google, YouTube)
+                              - Weekly performance reports + real-time dashboard
+                              - Weekly strategy calls
+                              - Unlimited creative refresh
+                              - Dedicated account strategist
+                              - Private Slack channel
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              **Not sure which tier is right for you?**
                       
-                      Apply below and we'll recommend the best fit on our discovery call.
-                - Type: button
-                  Order: 4
-                  Content:
-                    Text: "Apply Now"
-                    Action: next_step
+                              Apply below and we'll recommend the best fit on our discovery call.
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: button
+                          Order: 1
+                          Content:
+                            Text: "Apply Now"
+                            Action: next_step
         - Name: "Apply"
           Slug: apply
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Apply for Ad Management"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Tell us about your business so we can recommend the right tier for you."
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Apply for Ad Management"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Tell us about your business so we can recommend the right tier for you."
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Tell us about your business:"
-                - Type: form
-                  Order: 2
-                  Content:
-                    FormSlug: !Ref tiered-application-form
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Tell us about your business:"
+                        - Type: form
+                          Order: 2
+                          Content:
+                            FormSlug: !Ref tiered-application-form
         - Name: "Book Call"
           Slug: book
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Book Your Discovery Call"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Great! Let's schedule a 60-minute discovery call to:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Book Your Discovery Call"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Great! Let's schedule a 60-minute discovery call to:
                       
-                      - Review your current ad performance
-                      - Understand your business goals
-                      - Recommend the right tier for you
-                      - Answer any questions you have
+                              - Review your current ad performance
+                              - Understand your business goals
+                              - Recommend the right tier for you
+                              - Answer any questions you have
                       
-                      Pick a time that works for you:
-                - Type: booking_link
-                  Order: 3
-                  Content:
-                    BookingLinkSlug: !Ref tiered-discovery-call
+                              Pick a time that works for you:
+                        - Type: booking_link
+                          Order: 3
+                          Content:
+                            BookingLinkSlug: !Ref tiered-discovery-call
         - Name: "Confirmed"
           Slug: confirmed
           Order: 4
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set!"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=CONFIRMATION_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Your discovery call is confirmed! Check your email for the calendar invite.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set!"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=CONFIRMATION_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Your discovery call is confirmed! Check your email for the calendar invite.
                       
-                      **Before our call, please:**
+                              **Before our call, please:**
                       
-                      1. Have access to your ad accounts (or be ready to grant us access)
-                      2. Know your current monthly ad spend
-                      3. Have a sense of your growth goals for the next 90 days
+                              1. Have access to your ad accounts (or be ready to grant us access)
+                              2. Know your current monthly ad spend
+                              3. Have a sense of your growth goals for the next 90 days
                       
-                      **What to expect on the call:**
+                              **What to expect on the call:**
                       
-                      - We'll review your current ad performance
-                      - Discuss what's working and what's not
-                      - Recommend the right tier for your business
-                      - Answer all your questions
-                      - Discuss next steps if there's a fit
+                              - We'll review your current ad performance
+                              - Discuss what's working and what's not
+                              - Recommend the right tier for your business
+                              - Answer all your questions
+                              - Discuss next steps if there's a fit
                       
-                      See you soon!
+                              See you soon!
                       
-                      *The AdScale Team*
+                              *The AdScale Team*
 
   # ============================================
   # 📋 FORM

@@ -276,21 +276,25 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Is Your Brand Working Against You?"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Find out in 30 minutes with the Brand Audit Checklist"
-                - Type: checkout
-                  Order: 3
-                  Content:
-                    OfferSlug: !Ref fds-audit-offer
-                    PricingPlanSlug: !Ref fds-audit-price
-                    ButtonText: "Get the Checklist - $47"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Is Your Brand Working Against You?"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Find out in 30 minutes with the Brand Audit Checklist"
+                        - Type: checkout
+                          Order: 3
+                          Content:
+                            OfferSlug: !Ref fds-audit-offer
+                            PricingPlanSlug: !Ref fds-audit-price
+                            ButtonText: "Get the Checklist - $47"
 
   fds-services-funnel:
     Type: Evolynt::Funnel::Funnel
@@ -303,71 +307,87 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Professional Brand Design Services"
-                - Type: button
-                  Order: 2
-                  Content:
-                    Text: "See Packages"
-                    Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Professional Brand Design Services"
+                        - Type: button
+                          Order: 2
+                          Content:
+                            Text: "See Packages"
+                            Action: next_step
         - Name: "Packages"
           Slug: packages
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Choose Your Package"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      **LOGO DESIGN - $1,500**
-                      Logo with variations and basic guidelines
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Choose Your Package"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              **LOGO DESIGN - $1,500**
+                              Logo with variations and basic guidelines
                       
-                      ---
+                              ---
                       
-                      **BRAND IDENTITY - $3,500**
-                      Logo + colors + typography + brand guidelines
+                              **BRAND IDENTITY - $3,500**
+                              Logo + colors + typography + brand guidelines
                       
-                      ---
+                              ---
                       
-                      **FULL BRAND SUITE - $7,500**
-                      Complete brand package with all deliverables
-                - Type: button
-                  Order: 3
-                  Content:
-                    Text: "Start Your Project"
-                    Action: next_step
+                              **FULL BRAND SUITE - $7,500**
+                              Complete brand package with all deliverables
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "Start Your Project"
+                            Action: next_step
         - Name: "Inquiry"
           Slug: inquiry
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: form
-                  Order: 1
-                  Content:
-                    FormSlug: !Ref fds-inquiry-form
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: form
+                          Order: 1
+                          Content:
+                            FormSlug: !Ref fds-inquiry-form
         - Name: "Book"
           Slug: book
           Order: 4
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Book Your Discovery Call"
-                - Type: booking_link
-                  Order: 2
-                  Content:
-                    BookingLinkSlug: !Ref fds-discovery-call
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Book Your Discovery Call"
+                        - Type: booking_link
+                          Order: 2
+                          Content:
+                            BookingLinkSlug: !Ref fds-discovery-call
 
   # ============================================
   # 📋 FORMS
@@ -683,7 +703,6 @@ Resources:
                   Order: 2
                   Content:
                     Text: "Check your email for next steps!"
-
   fds-identity-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -736,7 +755,6 @@ Resources:
                   Order: 2
                   Content:
                     Text: "I'll schedule your strategy session!"
-
   fds-suite-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -789,7 +807,6 @@ Resources:
                   Order: 2
                   Content:
                     Text: "This is going to be amazing! Check your email."
-
   # ============================================
   # 🔄 PIPELINES
   # ============================================

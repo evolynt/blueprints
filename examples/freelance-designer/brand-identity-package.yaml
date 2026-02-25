@@ -162,115 +162,139 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Complete Brand Identity Design"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "More than a logo - a complete visual system for your brand"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Complete Brand Identity Design"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "More than a logo - a complete visual system for your brand"
             - Order: 2
-              Elements:
-                - Type: text
-                  Order: 1
-                  Content:
-                    Text: |
-                      ## What's Included
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: text
+                          Order: 1
+                          Content:
+                            Text: |
+                              ## What's Included
                       
-                      **Brand Strategy**
-                      - 60-minute brand strategy session
-                      - Competitor and market research
-                      - Brand positioning statement
+                              **Brand Strategy**
+                              - 60-minute brand strategy session
+                              - Competitor and market research
+                              - Brand positioning statement
                       
-                      **Logo Design**
-                      - 3 unique logo concepts
-                      - 3 rounds of revisions
-                      - Logo variations (horizontal, stacked, icon)
-                      - All file formats
+                              **Logo Design**
+                              - 3 unique logo concepts
+                              - 3 rounds of revisions
+                              - Logo variations (horizontal, stacked, icon)
+                              - All file formats
                       
-                      **Visual Identity**
-                      - Full color palette with codes
-                      - Typography system (2 fonts)
-                      - Pattern/texture elements
+                              **Visual Identity**
+                              - Full color palette with codes
+                              - Typography system (2 fonts)
+                              - Pattern/texture elements
                       
-                      **Deliverables**
-                      - 20+ page brand guidelines PDF
-                      - Social media templates
-                      - Business card design
+                              **Deliverables**
+                              - 20+ page brand guidelines PDF
+                              - Social media templates
+                              - Business card design
                       
-                      ---
+                              ---
                       
-                      ## Investment: $3,500
+                              ## Investment: $3,500
                       
-                      Payment plans available. Timeline: 6-8 weeks.
-                - Type: button
-                  Order: 2
-                  Content:
-                    Text: "Start Your Brand Project"
-                    Action: next_step
+                              Payment plans available. Timeline: 6-8 weeks.
+                        - Type: button
+                          Order: 2
+                          Content:
+                            Text: "Start Your Brand Project"
+                            Action: next_step
         - Name: "Inquiry"
           Slug: inquiry
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Tell Me About Your Brand"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Fill out this form and I'll reach out to schedule a discovery call.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Tell Me About Your Brand"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Fill out this form and I'll reach out to schedule a discovery call.
             - Order: 2
-              Elements:
-                - Type: form
-                  Order: 1
-                  Content:
-                    FormSlug: !Ref bip-inquiry-form
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: form
+                          Order: 1
+                          Content:
+                            FormSlug: !Ref bip-inquiry-form
         - Name: "Book Call"
           Slug: book
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Book Your Discovery Call"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Let's chat about your brand vision and goals. This 30-minute call helps me understand if we're a good fit.
-                - Type: booking_link
-                  Order: 3
-                  Content:
-                    BookingLinkSlug: !Ref bip-discovery-call
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Book Your Discovery Call"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Let's chat about your brand vision and goals. This 30-minute call helps me understand if we're a good fit.
+                        - Type: booking_link
+                          Order: 3
+                          Content:
+                            BookingLinkSlug: !Ref bip-discovery-call
         - Name: "Confirmed"
           Slug: confirmed
           Order: 4
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're Booked!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Check your email for the calendar invite.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're Booked!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Check your email for the calendar invite.
                       
-                      **Before our call, think about:**
-                      - Your brand's personality and values
-                      - Brands you admire (and why)
-                      - Your target audience
-                      - What makes your business unique
+                              **Before our call, think about:**
+                              - Your brand's personality and values
+                              - Brands you admire (and why)
+                              - Your target audience
+                              - What makes your business unique
 
   # ============================================
   # 📋 FORMS
@@ -638,7 +662,6 @@ Resources:
                       **Following weeks:** Logo concepts, refinement, and brand system development
                       
                       Check your email for strategy session scheduling. Questions? Just reply to any email.
-
   # ============================================
   # 🔄 PIPELINE
   # ============================================

@@ -110,286 +110,343 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Stop Managing Ads. Start Scaling Your Business."
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Hand your ad accounts to experts who manage millions in ad spend. We handle everything - you focus on running your business."
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
-                    Provider: youtube
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Stop Managing Ads. Start Scaling Your Business."
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Hand your ad accounts to experts who manage millions in ad spend. We handle everything - you focus on running your business."
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                            Provider: youtube
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Running ads is a full-time job. Is that really how you want to spend your time?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You started running ads because you needed customers. But now ads are running you.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Running ads is a full-time job. Is that really how you want to spend your time?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You started running ads because you needed customers. But now ads are running you.
                       
-                      Every day it's the same cycle:
-                      - Check Ads Manager first thing in the morning
-                      - Stress about rising CPAs and inconsistent ROAS
-                      - Wonder if you should kill that campaign or give it more time
-                      - Spend hours creating new audiences and creatives
-                      - Fall behind on actually running your business
+                              Every day it's the same cycle:
+                              - Check Ads Manager first thing in the morning
+                              - Stress about rising CPAs and inconsistent ROAS
+                              - Wonder if you should kill that campaign or give it more time
+                              - Spend hours creating new audiences and creatives
+                              - Fall behind on actually running your business
                       
-                      You've thought about hiring someone, but...
+                              You've thought about hiring someone, but...
                       
-                      - Full-time media buyers cost $60K-$100K+ per year
-                      - Freelancers are hit-or-miss and require constant management
-                      - Agencies want 15-20% of ad spend (that's $3K-$6K/month on a $30K budget)
+                              - Full-time media buyers cost $60K-$100K+ per year
+                              - Freelancers are hit-or-miss and require constant management
+                              - Agencies want 15-20% of ad spend (that's $3K-$6K/month on a $30K budget)
                       
-                      What if there was a better way?
+                              What if there was a better way?
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "What if you never had to log into Ads Manager again?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Imagine this:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "What if you never had to log into Ads Manager again?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Imagine this:
                       
-                      Every morning, you wake up to results - not tasks. Your campaigns are running, optimizing, and scaling while you sleep.
+                              Every morning, you wake up to results - not tasks. Your campaigns are running, optimizing, and scaling while you sleep.
                       
-                      Every week, you get a clear report showing exactly what's happening with your ads. No jargon. No confusion. Just results.
+                              Every week, you get a clear report showing exactly what's happening with your ads. No jargon. No confusion. Just results.
                       
-                      Every month, you hop on a strategy call to discuss what's working and what's next. Then you go back to running your business.
+                              Every month, you hop on a strategy call to discuss what's working and what's next. Then you go back to running your business.
                       
-                      That's what full ad management looks like.
+                              That's what full ad management looks like.
             - Order: 4
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Here's what's included"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      ✓ **Full Ad Account Management**
-                      We take over your Meta, TikTok, or both. You give us access, we handle the rest.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Here's what's included"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              ✓ **Full Ad Account Management**
+                              We take over your Meta, TikTok, or both. You give us access, we handle the rest.
                       
-                      ✓ **Daily Monitoring & Optimization**
-                      Our team checks your campaigns every single day. We catch issues before they become problems and capitalize on opportunities as they emerge.
+                              ✓ **Daily Monitoring & Optimization**
+                              Our team checks your campaigns every single day. We catch issues before they become problems and capitalize on opportunities as they emerge.
                       
-                      ✓ **Weekly Performance Reports**
-                      Every Monday, you get a clear breakdown of performance, optimizations made, and recommendations for the week ahead.
+                              ✓ **Weekly Performance Reports**
+                              Every Monday, you get a clear breakdown of performance, optimizations made, and recommendations for the week ahead.
                       
-                      ✓ **Monthly Strategy Calls (30 min)**
-                      Once a month, we review performance together, discuss upcoming promotions, and align on strategy.
+                              ✓ **Monthly Strategy Calls (30 min)**
+                              Once a month, we review performance together, discuss upcoming promotions, and align on strategy.
                       
-                      ✓ **Creative Refresh as Needed**
-                      When creatives start fatiguing, we produce fresh ads to keep performance strong. No extra charge.
+                              ✓ **Creative Refresh as Needed**
+                              When creatives start fatiguing, we produce fresh ads to keep performance strong. No extra charge.
                       
-                      ✓ **A/B Testing & Experimentation**
-                      We're constantly testing new audiences, creatives, and angles to improve results over time.
+                              ✓ **A/B Testing & Experimentation**
+                              We're constantly testing new audiences, creatives, and angles to improve results over time.
                       
-                      ✓ **Dedicated Account Manager**
-                      You have one point of contact who knows your business inside and out.
+                              ✓ **Dedicated Account Manager**
+                              You have one point of contact who knows your business inside and out.
             - Order: 5
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Is this right for your business?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Monthly Ad Management is perfect for businesses that:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Is this right for your business?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Monthly Ad Management is perfect for businesses that:
                       
-                      ✓ Already spend at least $5,000/month on ads
-                      ✓ Have a proven offer that converts
-                      ✓ Want to scale but don't have time to manage ads
-                      ✓ Are ready for a long-term partnership (not a quick fix)
-                      ✓ Value expertise and are ready to invest accordingly
+                              ✓ Already spend at least $5,000/month on ads
+                              ✓ Have a proven offer that converts
+                              ✓ Want to scale but don't have time to manage ads
+                              ✓ Are ready for a long-term partnership (not a quick fix)
+                              ✓ Value expertise and are ready to invest accordingly
                       
-                      **Not sure if you're a fit?** Apply below and we'll discuss on a discovery call.
+                              **Not sure if you're a fit?** Apply below and we'll discuss on a discovery call.
             - Order: 6
-              Elements:
-                - Type: testimonial
-                  Order: 1
-                  Content:
-                    Quote: "I used to spend 2 hours a day in Ads Manager. Now I spend 30 minutes a month on a strategy call. Our ROAS actually improved because I'm not constantly second-guessing and making emotional changes."
-                    Author: "Jennifer M., E-commerce Brand Owner"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 2
-                  Content:
-                    Quote: "Best business decision I made this year. The weekly reports are clear, the strategy calls are valuable, and I finally have time to work ON my business instead of IN my ad account."
-                    Author: "Michael R., Course Creator"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 3
-                  Content:
-                    Quote: "We went from $15K/month to $45K/month in ad spend in 6 months. I couldn't have managed that growth myself. Having a team that knows what they're doing is worth every penny."
-                    Author: "Sarah L., DTC Founder"
-                    Rating: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "I used to spend 2 hours a day in Ads Manager. Now I spend 30 minutes a month on a strategy call. Our ROAS actually improved because I'm not constantly second-guessing and making emotional changes."
+                            Author: "Jennifer M., E-commerce Brand Owner"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 2
+                          Content:
+                            Quote: "Best business decision I made this year. The weekly reports are clear, the strategy calls are valuable, and I finally have time to work ON my business instead of IN my ad account."
+                            Author: "Michael R., Course Creator"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 3
+                          Content:
+                            Quote: "We went from $15K/month to $45K/month in ad spend in 6 months. I couldn't have managed that growth myself. Having a team that knows what they're doing is worth every penny."
+                            Author: "Sarah L., DTC Founder"
+                            Rating: 5
             - Order: 7
-              Elements:
-                - Type: faq_item
-                  Order: 1
-                  Content:
-                    Question: "Which platforms do you manage?"
-                    Answer: "We specialize in Meta (Facebook/Instagram) and TikTok. We can manage one or both depending on where your audience is."
-                - Type: faq_item
-                  Order: 2
-                  Content:
-                    Question: "What's the minimum ad spend requirement?"
-                    Answer: "We work best with businesses spending at least $5,000/month on ads. This gives us enough data and budget to optimize effectively."
-                - Type: faq_item
-                  Order: 3
-                  Content:
-                    Question: "How long is the commitment?"
-                    Answer: "We ask for a 3-month minimum commitment. Ads take time to optimize, and we want to make sure we can deliver results. After that, it's month-to-month."
-                - Type: faq_item
-                  Order: 4
-                  Content:
-                    Question: "Do you charge a percentage of ad spend?"
-                    Answer: "No. Our fee is a flat monthly rate regardless of your ad spend. This means our incentives are aligned - we want to make your ads more efficient, not encourage you to spend more."
-                - Type: faq_item
-                  Order: 5
-                  Content:
-                    Question: "What if I need to pause my campaigns?"
-                    Answer: "Life happens. If you need to pause for a month, let us know. We'll put your account on hold and resume when you're ready."
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: faq_item
+                          Order: 1
+                          Content:
+                            Question: "Which platforms do you manage?"
+                            Answer: "We specialize in Meta (Facebook/Instagram) and TikTok. We can manage one or both depending on where your audience is."
+                        - Type: faq_item
+                          Order: 2
+                          Content:
+                            Question: "What's the minimum ad spend requirement?"
+                            Answer: "We work best with businesses spending at least $5,000/month on ads. This gives us enough data and budget to optimize effectively."
+                        - Type: faq_item
+                          Order: 3
+                          Content:
+                            Question: "How long is the commitment?"
+                            Answer: "We ask for a 3-month minimum commitment. Ads take time to optimize, and we want to make sure we can deliver results. After that, it's month-to-month."
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: faq_item
+                          Order: 1
+                          Content:
+                            Question: "Do you charge a percentage of ad spend?"
+                            Answer: "No. Our fee is a flat monthly rate regardless of your ad spend. This means our incentives are aligned - we want to make your ads more efficient, not encourage you to spend more."
+                        - Type: faq_item
+                          Order: 2
+                          Content:
+                            Question: "What if I need to pause my campaigns?"
+                            Answer: "Life happens. If you need to pause for a month, let us know. We'll put your account on hold and resume when you're ready."
             - Order: 8
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Ready to Hand Off Your Ads?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Apply now and we'll schedule a discovery call to discuss your business and see if we're a good fit."
-                - Type: button
-                  Order: 3
-                  Content:
-                    Text: "Apply for Ad Management"
-                    Action: next_step
+            - Order: 8
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Ready to Hand Off Your Ads?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Apply now and we'll schedule a discovery call to discuss your business and see if we're a good fit."
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "Apply for Ad Management"
+                            Action: next_step
         - Name: "Apply"
           Slug: apply
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Apply for Monthly Ad Management"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=APPLICATION_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      We work with a limited number of clients to ensure quality and attention. Please answer a few questions so we can see if we're a good fit for each other.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Apply for Monthly Ad Management"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=APPLICATION_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              We work with a limited number of clients to ensure quality and attention. Please answer a few questions so we can see if we're a good fit for each other.
                       
-                      **This takes about 5 minutes.**
+                              **This takes about 5 minutes.**
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Tell us about your business:"
-                - Type: form
-                  Order: 2
-                  Content:
-                    FormSlug: !Ref ad-management-application-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Tell us about your business:"
+                        - Type: form
+                          Order: 2
+                          Content:
+                            FormSlug: !Ref ad-management-application-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "Book Your Call"
           Slug: book
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Great! Let's Talk."
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=BOOKING_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Thank you for applying for Monthly Ad Management.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Great! Let's Talk."
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=BOOKING_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Thank you for applying for Monthly Ad Management.
                       
-                      **Next Step: Book Your Discovery Call**
+                              **Next Step: Book Your Discovery Call**
                       
-                      On this 60-minute call, we'll:
+                              On this 60-minute call, we'll:
                       
-                      ✓ Review your current ad performance and account structure
-                      ✓ Understand your business goals and growth targets
-                      ✓ Discuss your current challenges and what's not working
-                      ✓ Determine if we're a good fit for each other
-                      ✓ Answer all your questions about how we work
+                              ✓ Review your current ad performance and account structure
+                              ✓ Understand your business goals and growth targets
+                              ✓ Discuss your current challenges and what's not working
+                              ✓ Determine if we're a good fit for each other
+                              ✓ Answer all your questions about how we work
                       
-                      **Please come prepared to discuss:**
-                      - Your current monthly ad spend and results
-                      - Access to your ad account (we may do a quick review)
-                      - Your goals for the next 90 days
-                      - Any upcoming promotions or launches
-                - Type: booking_link
-                  Order: 4
-                  Content:
-                    BookingLinkSlug: !Ref ad-management-discovery-call
-                    OnSuccess:
-                      Action: next_step
+                              **Please come prepared to discuss:**
+                              - Your current monthly ad spend and results
+                              - Access to your ad account (we may do a quick review)
+                              - Your goals for the next 90 days
+                              - Any upcoming promotions or launches
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: booking_link
+                          Order: 1
+                          Content:
+                            BookingLinkSlug: !Ref ad-management-discovery-call
+                            OnSuccess:
+                              Action: next_step
         - Name: "You're Booked"
           Slug: confirmed
           Order: 4
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set!"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=CONFIRMATION_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Your discovery call is booked. Check your email for calendar details and a Zoom link.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set!"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=CONFIRMATION_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Your discovery call is booked. Check your email for calendar details and a Zoom link.
                       
-                      **Before our call, please:**
+                              **Before our call, please:**
                       
-                      1. **Have your ad account ready** - We may take a quick look during the call
-                      2. **Know your numbers** - Current monthly spend, average ROAS/CPA, lifetime customer value
-                      3. **List your goals** - What does success look like in 30/60/90 days?
-                      4. **Note your challenges** - What's frustrating you about your current ads?
-                      5. **Think about commitment** - Are you ready to invest in a long-term partnership?
+                              1. **Have your ad account ready** - We may take a quick look during the call
+                              2. **Know your numbers** - Current monthly spend, average ROAS/CPA, lifetime customer value
+                              3. **List your goals** - What does success look like in 30/60/90 days?
+                              4. **Note your challenges** - What's frustrating you about your current ads?
+                              5. **Think about commitment** - Are you ready to invest in a long-term partnership?
                       
-                      The more prepared you are, the more productive our call will be.
+                              The more prepared you are, the more productive our call will be.
                       
-                      **Questions before our call?** Reply to your confirmation email and we'll get back to you.
+                              **Questions before our call?** Reply to your confirmation email and we'll get back to you.
                       
-                      See you soon!
+                              See you soon!
 
   # ============================================
   # 📋 FORM

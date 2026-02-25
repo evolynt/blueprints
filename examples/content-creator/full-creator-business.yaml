@@ -298,17 +298,21 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "20 Thumbnail Templates That Get Clicks"
-                - Type: checkout
-                  Order: 2
-                  Content:
-                    OfferSlug: !Ref fcb-templates-offer
-                    PricingPlanSlug: !Ref fcb-templates-price
-                    ButtonText: "Get Templates - $47"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "20 Thumbnail Templates That Get Clicks"
+                        - Type: checkout
+                          Order: 2
+                          Content:
+                            OfferSlug: !Ref fcb-templates-offer
+                            PricingPlanSlug: !Ref fcb-templates-price
+                            ButtonText: "Get Templates - $47"
 
   fcb-coaching-funnel:
     Type: Evolynt::Funnel::Funnel
@@ -321,31 +325,43 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Apply for 1:1 Coaching"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Apply for 1:1 Coaching"
             - Order: 2
-              Elements:
-                - Type: form
-                  Order: 1
-                  Content:
-                    FormSlug: !Ref fcb-application
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: form
+                          Order: 1
+                          Content:
+                            FormSlug: !Ref fcb-application
         - Name: "Book"
           Slug: book
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Book Your Discovery Call"
-                - Type: booking_link
-                  Order: 2
-                  Content:
-                    BookingLinkSlug: !Ref fcb-discovery-call
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Book Your Discovery Call"
+                        - Type: booking_link
+                          Order: 2
+                          Content:
+                            BookingLinkSlug: !Ref fcb-discovery-call
 
   # ============================================
   # 📋 FORMS
@@ -608,7 +624,6 @@ Resources:
                   Order: 2
                   Content:
                     Text: "Head to the community and introduce yourself!"
-
   fcb-course-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -645,7 +660,6 @@ Resources:
                   Order: 2
                   Content:
                     Text: "Start Module 1 and join the community!"
-
   fcb-coaching-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -698,7 +712,6 @@ Resources:
                   Order: 2
                   Content:
                     Text: "Book your first session!"
-
   # ============================================
   # 🔄 PIPELINES
   # ============================================

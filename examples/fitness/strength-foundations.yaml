@@ -183,188 +183,232 @@ Resources:
           Sections:
             # Hero - VSL video + headline + CTA
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Finally Learn Proper Lifting Form (Without Hiring a $150/Hour Personal Trainer)"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "The exact technique breakdown I use with my 1:1 clients, now available as a self-paced course for beginners who want to lift confidently and safely"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
-                    Provider: youtube
-                - Type: checkout
-                  Order: 4
-                  Content:
-                    OfferSlug: !Ref foundations-offer
-                    PricingPlanSlug: !Ref foundations-price
-                    ButtonText: "Get Instant Access - $47"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Finally Learn Proper Lifting Form (Without Hiring a $150/Hour Personal Trainer)"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "The exact technique breakdown I use with my 1:1 clients, now available as a self-paced course for beginners who want to lift confidently and safely"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                            Provider: youtube
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: checkout
+                          Order: 1
+                          Content:
+                            OfferSlug: !Ref foundations-offer
+                            PricingPlanSlug: !Ref foundations-price
+                            ButtonText: "Get Instant Access - $47"
             # Pain amplification - specific frustrations
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Sound familiar?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You walk into the gym, head over to the free weights section, and immediately feel lost.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Sound familiar?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You walk into the gym, head over to the free weights section, and immediately feel lost.
                       
-                      You've watched YouTube videos, but when you're actually standing in front of the barbell, you have no idea if you're about to build muscle or destroy your lower back.
+                              You've watched YouTube videos, but when you're actually standing in front of the barbell, you have no idea if you're about to build muscle or destroy your lower back.
                       
-                      You see other people lifting with confidence and wonder: "What do they know that I don't?"
+                              You see other people lifting with confidence and wonder: "What do they know that I don't?"
                       
-                      Maybe you've even tried lifting before, but that nagging voice in your head keeps asking: "Am I doing this right? Is this going to hurt me?"
+                              Maybe you've even tried lifting before, but that nagging voice in your head keeps asking: "Am I doing this right? Is this going to hurt me?"
                       
-                      So you stick to the machines. Or the treadmill. Or you skip the gym entirely.
+                              So you stick to the machines. Or the treadmill. Or you skip the gym entirely.
                       
-                      Every week that passes is another week of wasted potential.
-                - Type: spacer
-                  Order: 3
-                  Content:
-                    Height: 20
+                              Every week that passes is another week of wasted potential.
+                        - Type: spacer
+                          Order: 3
+                          Content:
+                            Height: 20
             # Solution - why this is different
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Here's the problem nobody talks about"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Most fitness content shows you WHAT to do, but never teaches you HOW to know if you're doing it right.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Here's the problem nobody talks about"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Most fitness content shows you WHAT to do, but never teaches you HOW to know if you're doing it right.
                       
-                      You can watch a hundred squat tutorials, but if you don't understand what "right" actually feels like in YOUR body, you'll never have confidence in your form.
+                              You can watch a hundred squat tutorials, but if you don't understand what "right" actually feels like in YOUR body, you'll never have confidence in your form.
                       
-                      That's why I created Strength Training Foundations.
+                              That's why I created Strength Training Foundations.
                       
-                      This isn't just another "here's how to squat" video. It's a complete system that teaches you to feel the difference between good form and bad form, so you can self-correct without needing a trainer watching your every rep.
+                              This isn't just another "here's how to squat" video. It's a complete system that teaches you to feel the difference between good form and bad form, so you can self-correct without needing a trainer watching your every rep.
             # Value stack - what they get with perceived value
             - Order: 4
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Here's everything you get today"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      ✓ The Squat Masterclass (Value: $97)
-                      Complete breakdown of the king of all exercises. Setup, descent, depth, and drive. Plus the 3 cues that fix 90% of squat problems.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Here's everything you get today"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              ✓ The Squat Masterclass (Value: $97)
+                              Complete breakdown of the king of all exercises. Setup, descent, depth, and drive. Plus the 3 cues that fix 90% of squat problems.
                       
-                      ✓ The Deadlift Masterclass (Value: $97)
-                      How to pick heavy things off the floor without destroying your back. Includes conventional and sumo variations.
+                              ✓ The Deadlift Masterclass (Value: $97)
+                              How to pick heavy things off the floor without destroying your back. Includes conventional and sumo variations.
                       
-                      ✓ The Bench Press Masterclass (Value: $97)
-                      Proper arch, grip width, bar path, and how to never get stuck under the bar.
+                              ✓ The Bench Press Masterclass (Value: $97)
+                              Proper arch, grip width, bar path, and how to never get stuck under the bar.
                       
-                      ✓ The Overhead Press Masterclass (Value: $97)
-                      The forgotten lift that builds boulder shoulders. Most people do this wrong. You won't.
+                              ✓ The Overhead Press Masterclass (Value: $97)
+                              The forgotten lift that builds boulder shoulders. Most people do this wrong. You won't.
                       
-                      ✓ The Barbell Row Masterclass (Value: $97)
-                      Build a back that fills out your shirts. Includes the "chest to bar" cue that changes everything.
+                              ✓ The Barbell Row Masterclass (Value: $97)
+                              Build a back that fills out your shirts. Includes the "chest to bar" cue that changes everything.
                       
-                      ✓ BONUS: 2-Week Starter Program (Value: $47)
-                      Exactly what to do in the gym your first 14 days. No guessing required.
+                              ✓ BONUS: 2-Week Starter Program (Value: $47)
+                              Exactly what to do in the gym your first 14 days. No guessing required.
                       
-                      Total Value: $532
-                - Type: spacer
-                  Order: 3
-                  Content:
-                    Height: 10
-                - Type: text
-                  Order: 4
-                  Content:
-                    Text: "Your investment today: Just $47"
+                              Total Value: $532
+                        - Type: spacer
+                          Order: 3
+                          Content:
+                            Height: 10
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: text
+                          Order: 1
+                          Content:
+                            Text: "Your investment today: Just $47"
             # Social proof - specific results
             - Order: 5
-              Elements:
-                - Type: testimonial
-                  Order: 1
-                  Content:
-                    Quote: "I was terrified of deadlifts for years. After watching the setup video twice, I pulled 185lbs with zero back pain. The hip hinge cue changed everything for me."
-                    Author: "Mark R., 42, Software Engineer"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 2
-                  Content:
-                    Quote: "Spent 3 years doing machines because barbells intimidated me. This course gave me the confidence to finally step into the squat rack. Now I'm squatting 135lbs and actually enjoying leg day."
-                    Author: "Jennifer T., 34, Mom of 2"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 3
-                  Content:
-                    Quote: "I thought I knew how to bench press. Turns out I'd been flaring my elbows for a decade. Fixed my form in one session and my shoulder pain disappeared."
-                    Author: "David K., 51, Business Owner"
-                    Rating: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "I was terrified of deadlifts for years. After watching the setup video twice, I pulled 185lbs with zero back pain. The hip hinge cue changed everything for me."
+                            Author: "Mark R., 42, Software Engineer"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 2
+                          Content:
+                            Quote: "Spent 3 years doing machines because barbells intimidated me. This course gave me the confidence to finally step into the squat rack. Now I'm squatting 135lbs and actually enjoying leg day."
+                            Author: "Jennifer T., 34, Mom of 2"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 3
+                          Content:
+                            Quote: "I thought I knew how to bench press. Turns out I'd been flaring my elbows for a decade. Fixed my form in one session and my shoulder pain disappeared."
+                            Author: "David K., 51, Business Owner"
+                            Rating: 5
             # FAQ - objection handling
             - Order: 6
-              Elements:
-                - Type: faq_item
-                  Order: 1
-                  Content:
-                    Question: "What if I don't have access to a gym?"
-                    Answer: "Each movement includes home alternatives using dumbbells or a basic barbell setup. You don't need a fancy commercial gym to learn proper form."
-                - Type: faq_item
-                  Order: 2
-                  Content:
-                    Question: "I'm a complete beginner. Will this be too advanced?"
-                    Answer: "This course was built specifically for beginners. I assume zero prior knowledge and break down every movement from scratch. If you've never touched a barbell, you're exactly who this is for."
-                - Type: faq_item
-                  Order: 3
-                  Content:
-                    Question: "What if I'm older or have injuries?"
-                    Answer: "The principles of good form apply regardless of age. In fact, proper technique becomes MORE important as we age. Each video covers modifications and what to watch out for if you have limitations."
-                - Type: faq_item
-                  Order: 4
-                  Content:
-                    Question: "How is this different from free YouTube videos?"
-                    Answer: "YouTube shows you what to do. This course teaches you how to FEEL what's right, so you can self-correct without a trainer. It's the difference between watching someone cook and understanding why each step matters."
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: faq_item
+                          Order: 1
+                          Content:
+                            Question: "What if I don't have access to a gym?"
+                            Answer: "Each movement includes home alternatives using dumbbells or a basic barbell setup. You don't need a fancy commercial gym to learn proper form."
+                        - Type: faq_item
+                          Order: 2
+                          Content:
+                            Question: "I'm a complete beginner. Will this be too advanced?"
+                            Answer: "This course was built specifically for beginners. I assume zero prior knowledge and break down every movement from scratch. If you've never touched a barbell, you're exactly who this is for."
+                        - Type: faq_item
+                          Order: 3
+                          Content:
+                            Question: "What if I'm older or have injuries?"
+                            Answer: "The principles of good form apply regardless of age. In fact, proper technique becomes MORE important as we age. Each video covers modifications and what to watch out for if you have limitations."
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: faq_item
+                          Order: 1
+                          Content:
+                            Question: "How is this different from free YouTube videos?"
+                            Answer: "YouTube shows you what to do. This course teaches you how to FEEL what's right, so you can self-correct without a trainer. It's the difference between watching someone cook and understanding why each step matters."
             # Final CTA with checkout (goes directly to Stripe)
             - Order: 7
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Stop Guessing. Start Lifting."
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "For less than a single personal training session, you'll have lifetime access to the technique foundation that every serious lifter needs."
-                - Type: checkout
-                  Order: 3
-                  Content:
-                    OfferSlug: !Ref foundations-offer
-                    PricingPlanSlug: !Ref foundations-price
-                    ButtonText: "Get Instant Access - $47"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Stop Guessing. Start Lifting."
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "For less than a single personal training session, you'll have lifetime access to the technique foundation that every serious lifter needs."
+                        - Type: checkout
+                          Order: 3
+                          Content:
+                            OfferSlug: !Ref foundations-offer
+                            PricingPlanSlug: !Ref foundations-price
+                            ButtonText: "Get Instant Access - $47"
         - Name: "Thank You"
           Slug: thank-you
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're In. Let's Build Your Foundation."
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Check your email for login details.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're In. Let's Build Your Foundation."
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Check your email for login details.
                       
-                      I recommend starting with the Welcome module, then working through one movement per day. By this time next week, you'll have a solid grasp of all 5 essential lifts.
+                              I recommend starting with the Welcome module, then working through one movement per day. By this time next week, you'll have a solid grasp of all 5 essential lifts.
                       
-                      See you inside.
+                              See you inside.
 
   # ============================================
   # 🌐 PORTAL

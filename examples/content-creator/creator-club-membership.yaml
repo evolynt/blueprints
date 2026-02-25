@@ -90,244 +90,292 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Grow Faster with a Community of Serious Creators"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "Join a private network of creators who share templates, collaborate on content, and help each other hit the algorithm"
-                - Type: video
-                  Order: 3
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=CCM_VSL_PLACEHOLDER"
-                    Provider: youtube
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Grow Faster with a Community of Serious Creators"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Join a private network of creators who share templates, collaborate on content, and help each other hit the algorithm"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=CCM_VSL_PLACEHOLDER"
+                            Provider: youtube
             - Order: 2
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Tired of growing alone?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You've been grinding. Uploading consistently. Trying every strategy you read about.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Tired of growing alone?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You've been grinding. Uploading consistently. Trying every strategy you read about.
                       
-                      But growth feels slow. The algorithm is unpredictable. And you're stuck in the "creator grind" with nobody to bounce ideas off.
+                              But growth feels slow. The algorithm is unpredictable. And you're stuck in the "creator grind" with nobody to bounce ideas off.
                       
-                      Meanwhile, you see other creators blowing up. Getting millions of views. Landing brand deals. And they all seem to know each other.
+                              Meanwhile, you see other creators blowing up. Getting millions of views. Landing brand deals. And they all seem to know each other.
                       
-                      What's their secret? They have a network.
+                              What's their secret? They have a network.
                       
-                      Not just followers - a real network of creators who share strategies, collaborate on content, and help each other win.
+                              Not just followers - a real network of creators who share strategies, collaborate on content, and help each other win.
             - Order: 3
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "What if you had a team behind you?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Imagine getting a DM that a member wants to collab - and they have an audience that's perfect for cross-promotion.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "What if you had a team behind you?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Imagine getting a DM that a member wants to collab - and they have an audience that's perfect for cross-promotion.
                       
-                      Or downloading this month's template pack and creating scroll-stopping content in half the time.
+                              Or downloading this month's template pack and creating scroll-stopping content in half the time.
                       
-                      Or hopping on a weekly call where experienced creators break down exactly what's working right now.
+                              Or hopping on a weekly call where experienced creators break down exactly what's working right now.
                       
-                      That's what Creator Club provides: real templates, real connections, and real support from people who are actually growing.
+                              That's what Creator Club provides: real templates, real connections, and real support from people who are actually growing.
             - Order: 4
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Here's what you get as a member"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      ✓ **Monthly Template Drops**
-                      Fresh thumbnails, titles, hooks, and content frameworks every month. Stop staring at a blank screen and start creating.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Here's what you get as a member"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              ✓ **Monthly Template Drops**
+                              Fresh thumbnails, titles, hooks, and content frameworks every month. Stop staring at a blank screen and start creating.
                       
-                      ✓ **Collaboration Opportunities**
-                      Find collab partners, cross-promotion opportunities, and creators in complementary niches. Grow together instead of alone.
+                              ✓ **Collaboration Opportunities**
+                              Find collab partners, cross-promotion opportunities, and creators in complementary niches. Grow together instead of alone.
                       
-                      ✓ **Weekly Live Q&A Calls**
-                      Every Thursday at 7pm ET, we hop on a live call to discuss strategies, algorithm updates, and answer your specific questions.
+                              ✓ **Weekly Live Q&A Calls**
+                              Every Thursday at 7pm ET, we hop on a live call to discuss strategies, algorithm updates, and answer your specific questions.
                       
-                      ✓ **Creator Networking**
-                      Connect with YouTubers, podcasters, TikTokers, and Instagram creators. Find your people and build real relationships.
+                              ✓ **Creator Networking**
+                              Connect with YouTubers, podcasters, TikTokers, and Instagram creators. Find your people and build real relationships.
                       
-                      ✓ **Resource Library**
-                      Access scripts, templates, checklists, and tools that members have battle-tested on their channels.
+                              ✓ **Resource Library**
+                              Access scripts, templates, checklists, and tools that members have battle-tested on their channels.
             - Order: 5
-              Elements:
-                - Type: subheadline
-                  Order: 1
-                  Content:
-                    Text: "Who this is for"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Creator Club is for serious creators who:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Who this is for"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Creator Club is for serious creators who:
                       
-                      ✓ Have an active channel or account (any size)
-                      ✓ Are posting content consistently
-                      ✓ Want to grow faster through collaboration
-                      ✓ Are willing to help other members succeed
-                      ✓ Are ready to invest in their creator journey
+                              ✓ Have an active channel or account (any size)
+                              ✓ Are posting content consistently
+                              ✓ Want to grow faster through collaboration
+                              ✓ Are willing to help other members succeed
+                              ✓ Are ready to invest in their creator journey
                       
-                      **This is NOT for:**
-                      - People who just want to "learn about" content creation
-                      - Those who aren't actively creating
-                      - Anyone who wants everything handed to them
+                              **This is NOT for:**
+                              - People who just want to "learn about" content creation
+                              - Those who aren't actively creating
+                              - Anyone who wants everything handed to them
                       
-                      We keep the community small and curated. Every member is vetted to ensure they bring value.
+                              We keep the community small and curated. Every member is vetted to ensure they bring value.
             - Order: 6
-              Elements:
-                - Type: testimonial
-                  Order: 1
-                  Content:
-                    Quote: "Found a collab partner in my first week. Our video together got 500K views and I gained 12K subscribers. The membership paid for itself 100x over."
-                    Author: "Marcus T., Tech Reviewer (85K subs)"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 2
-                  Content:
-                    Quote: "The monthly template drops alone are worth it. I used to spend 3 hours on thumbnails. Now I create scroll-stoppers in 20 minutes."
-                    Author: "Jasmine C., Lifestyle Creator (200K followers)"
-                    Rating: 5
-                - Type: testimonial
-                  Order: 3
-                  Content:
-                    Quote: "As a small creator, this community gave me access to strategies that bigger creators use. My views tripled in 3 months."
-                    Author: "Derek L., Gaming Channel (25K subs)"
-                    Rating: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: testimonial
+                          Order: 1
+                          Content:
+                            Quote: "Found a collab partner in my first week. Our video together got 500K views and I gained 12K subscribers. The membership paid for itself 100x over."
+                            Author: "Marcus T., Tech Reviewer (85K subs)"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 2
+                          Content:
+                            Quote: "The monthly template drops alone are worth it. I used to spend 3 hours on thumbnails. Now I create scroll-stoppers in 20 minutes."
+                            Author: "Jasmine C., Lifestyle Creator (200K followers)"
+                            Rating: 5
+                        - Type: testimonial
+                          Order: 3
+                          Content:
+                            Quote: "As a small creator, this community gave me access to strategies that bigger creators use. My views tripled in 3 months."
+                            Author: "Derek L., Gaming Channel (25K subs)"
+                            Rating: 5
             - Order: 7
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Ready to Grow Faster with a Community?"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Apply now and we'll schedule a quick discovery call to see if you're a good fit for Creator Club."
-                - Type: button
-                  Order: 3
-                  Content:
-                    Text: "Apply for Membership"
-                    Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Ready to Grow Faster with a Community?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Apply now and we'll schedule a quick discovery call to see if you're a good fit for Creator Club."
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "Apply for Membership"
+                            Action: next_step
         - Name: "Apply"
           Slug: apply
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Apply for Creator Club"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=CCM_APPLICATION_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      We keep the community small and curated to ensure every member gets value. Please answer a few questions so we can see if you're a good fit.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Apply for Creator Club"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=CCM_APPLICATION_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              We keep the community small and curated to ensure every member gets value. Please answer a few questions so we can see if you're a good fit.
                       
-                      **This takes about 3 minutes.**
+                              **This takes about 3 minutes.**
             - Order: 2
-              Elements:
-                - Type: form
-                  Order: 1
-                  Content:
-                    FormSlug: !Ref ccm-application
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: form
+                          Order: 1
+                          Content:
+                            FormSlug: !Ref ccm-application
+                            OnSuccess:
+                              Action: next_step
         - Name: "Book Your Call"
           Slug: book
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Great! Let's Chat."
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=CCM_BOOKING_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Thanks for applying to Creator Club!
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Great! Let's Chat."
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=CCM_BOOKING_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Thanks for applying to Creator Club!
                       
-                      **Next Step: Book Your Discovery Call**
+                              **Next Step: Book Your Discovery Call**
                       
-                      On this 30-minute call, we'll:
+                              On this 30-minute call, we'll:
                       
-                      ✓ Learn about your channel and content goals
-                      ✓ Discuss what you're looking for in a community
-                      ✓ Explain how the club works in detail
-                      ✓ Determine if you're a good fit for the network
-                      ✓ Answer any questions you have
+                              ✓ Learn about your channel and content goals
+                              ✓ Discuss what you're looking for in a community
+                              ✓ Explain how the club works in detail
+                              ✓ Determine if you're a good fit for the network
+                              ✓ Answer any questions you have
                       
-                      **Please come prepared to discuss:**
-                      - Your current content and channel stats
-                      - What's working (and what's not)
-                      - Your growth goals for the next year
-                      - What you can contribute to other members
-                - Type: booking_link
-                  Order: 4
-                  Content:
-                    BookingLinkSlug: !Ref ccm-discovery-call
-                    OnSuccess:
-                      Action: next_step
+                              **Please come prepared to discuss:**
+                              - Your current content and channel stats
+                              - What's working (and what's not)
+                              - Your growth goals for the next year
+                              - What you can contribute to other members
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: booking_link
+                          Order: 1
+                          Content:
+                            BookingLinkSlug: !Ref ccm-discovery-call
+                            OnSuccess:
+                              Action: next_step
         - Name: "You're Booked"
           Slug: confirmed
           Order: 4
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set!"
-                - Type: video
-                  Order: 2
-                  Content:
-                    Url: "https://www.youtube.com/watch?v=CCM_CONFIRMATION_PLACEHOLDER"
-                    Provider: youtube
-                - Type: text
-                  Order: 3
-                  Content:
-                    Text: |
-                      Your discovery call is booked. Check your email for calendar details and a Zoom link.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set!"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=CCM_CONFIRMATION_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Your discovery call is booked. Check your email for calendar details and a Zoom link.
                       
-                      **Before our call, think about:**
+                              **Before our call, think about:**
                       
-                      1. **Your recent content** - What's been performing well (or not)?
-                      2. **Your current challenges** - Where are you stuck?
-                      3. **Your goals** - What do you want to achieve in the next year?
-                      4. **Your value** - What can you bring to other members?
+                              1. **Your recent content** - What's been performing well (or not)?
+                              2. **Your current challenges** - Where are you stuck?
+                              3. **Your goals** - What do you want to achieve in the next year?
+                              4. **Your value** - What can you bring to other members?
                       
-                      We're selective about who we let in because the quality of the community depends on the quality of the members.
+                              We're selective about who we let in because the quality of the community depends on the quality of the members.
                       
-                      **Questions before our call?** Reply to your confirmation email.
+                              **Questions before our call?** Reply to your confirmation email.
                       
-                      Talk soon!
+                              Talk soon!
 
   # ============================================
   # 📋 FORMS
@@ -685,7 +733,6 @@ Resources:
                       3. Add the weekly Q&A call to your calendar
                       
                       Welcome aboard!
-
   # ============================================
   # 🔄 PIPELINE
   # ============================================

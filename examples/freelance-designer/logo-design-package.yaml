@@ -124,108 +124,132 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Professional Logo Design"
-                - Type: subheadline
-                  Order: 2
-                  Content:
-                    Text: "A logo that captures your brand's essence"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Professional Logo Design"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "A logo that captures your brand's essence"
             - Order: 2
-              Elements:
-                - Type: text
-                  Order: 1
-                  Content:
-                    Text: |
-                      ## What's Included
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: text
+                          Order: 1
+                          Content:
+                            Text: |
+                              ## What's Included
                       
-                      **Discovery & Research**
-                      - Detailed brand questionnaire
-                      - Industry and competitor research
-                      - Mood board development
+                              **Discovery & Research**
+                              - Detailed brand questionnaire
+                              - Industry and competitor research
+                              - Mood board development
                       
-                      **Design & Refinement**
-                      - 3 unique logo concepts
-                      - 3 rounds of revisions
-                      - Collaborative feedback process
+                              **Design & Refinement**
+                              - 3 unique logo concepts
+                              - 3 rounds of revisions
+                              - Collaborative feedback process
                       
-                      **Final Deliverables**
-                      - Logo files in all formats
-                      - Color and black/white versions
-                      - Basic usage guidelines
+                              **Final Deliverables**
+                              - Logo files in all formats
+                              - Color and black/white versions
+                              - Basic usage guidelines
                       
-                      ---
+                              ---
                       
-                      ## Investment: $1,500
+                              ## Investment: $1,500
                       
-                      Payment plans available. Timeline: 4-5 weeks.
-                - Type: button
-                  Order: 2
-                  Content:
-                    Text: "Start Your Project"
-                    Action: next_step
+                              Payment plans available. Timeline: 4-5 weeks.
+                        - Type: button
+                          Order: 2
+                          Content:
+                            Text: "Start Your Project"
+                            Action: next_step
         - Name: "Inquiry"
           Slug: inquiry
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Tell Me About Your Project"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Fill out this quick form and I'll reach out to schedule a discovery call.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Tell Me About Your Project"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Fill out this quick form and I'll reach out to schedule a discovery call.
             - Order: 2
-              Elements:
-                - Type: form
-                  Order: 1
-                  Content:
-                    FormSlug: !Ref ldp-inquiry-form
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: form
+                          Order: 1
+                          Content:
+                            FormSlug: !Ref ldp-inquiry-form
         - Name: "Book Call"
           Slug: book
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Book Your Discovery Call"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Thanks for your interest! Let's hop on a quick call to discuss your project and make sure we're a good fit.
-                - Type: booking_link
-                  Order: 3
-                  Content:
-                    BookingLinkSlug: !Ref ldp-discovery-call
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Book Your Discovery Call"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Thanks for your interest! Let's hop on a quick call to discuss your project and make sure we're a good fit.
+                        - Type: booking_link
+                          Order: 3
+                          Content:
+                            BookingLinkSlug: !Ref ldp-discovery-call
         - Name: "Confirmed"
           Slug: confirmed
           Order: 4
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're Booked!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Check your email for the calendar invite. I'm looking forward to learning about your brand!
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're Booked!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Check your email for the calendar invite. I'm looking forward to learning about your brand!
                       
-                      **Before our call:**
-                      - Think about brands you admire
-                      - Gather any existing brand materials
-                      - Consider your target audience
+                              **Before our call:**
+                              - Think about brands you admire
+                              - Gather any existing brand materials
+                              - Consider your target audience
 
   # ============================================
   # 📋 FORMS
@@ -561,7 +585,6 @@ Resources:
                       **Next week:** You'll receive 3 logo concepts to review
                       
                       Check your email for updates. Questions? Just reply to any email.
-
   # ============================================
   # 🔄 PIPELINE
   # ============================================
