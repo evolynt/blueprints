@@ -571,24 +571,18 @@ Resources:
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "I've done every program out there. This is the first one that actually worked. Down 28 pounds and I've kept it off for 6 months now. The community was the game-changer for me."
-                            Author: "Michael R., 39, Project Manager"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"I've done every program out there. This is the first one that actually worked. Down 28 pounds and I've kept it off for 6 months now. The community was the game-changer for me.\" — Michael R., 39, Project Manager"
+                        - Type: text
                           Order: 2
                           Content:
-                            Quote: "I was skeptical about another fitness program, but the structure made all the difference. I knew exactly what to do every single day. Lost 4 inches off my waist and finally have visible abs at 45!"
-                            Author: "Lisa K., 45, Business Owner"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"I was skeptical about another fitness program, but the structure made all the difference. I knew exactly what to do every single day. Lost 4 inches off my waist and finally have visible abs at 45!\" — Lisa K., 45, Business Owner"
+                        - Type: text
                           Order: 3
                           Content:
-                            Quote: "The daily check-ins kept me accountable in a way I've never experienced. When you know people are rooting for you, you show up. Gained 12 pounds of muscle and feel stronger than I did in my 20s."
-                            Author: "David T., 52, Sales Director"
-                            Rating: 5
+                            Text: "\"The daily check-ins kept me accountable in a way I've never experienced. When you know people are rooting for you, you show up. Gained 12 pounds of muscle and feel stronger than I did in my 20s.\" — David T., 52, Sales Director"
             - Order: 6
               Rows:
                 - Order: 1

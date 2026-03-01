@@ -316,24 +316,18 @@ Resources:
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "I was terrified of deadlifts for years. After watching the setup video twice, I pulled 185lbs with zero back pain. The hip hinge cue changed everything for me."
-                            Author: "Mark R., 42, Software Engineer"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"I was terrified of deadlifts for years. After watching the setup video twice, I pulled 185lbs with zero back pain. The hip hinge cue changed everything for me.\" — Mark R., 42, Software Engineer"
+                        - Type: text
                           Order: 2
                           Content:
-                            Quote: "Spent 3 years doing machines because barbells intimidated me. This course gave me the confidence to finally step into the squat rack. Now I'm squatting 135lbs and actually enjoying leg day."
-                            Author: "Jennifer T., 34, Mom of 2"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"Spent 3 years doing machines because barbells intimidated me. This course gave me the confidence to finally step into the squat rack. Now I'm squatting 135lbs and actually enjoying leg day.\" — Jennifer T., 34, Mom of 2"
+                        - Type: text
                           Order: 3
                           Content:
-                            Quote: "I thought I knew how to bench press. Turns out I'd been flaring my elbows for a decade. Fixed my form in one session and my shoulder pain disappeared."
-                            Author: "David K., 51, Business Owner"
-                            Rating: 5
+                            Text: "\"I thought I knew how to bench press. Turns out I'd been flaring my elbows for a decade. Fixed my form in one session and my shoulder pain disappeared.\" — David K., 51, Business Owner"
             # FAQ - objection handling
             - Order: 6
               Rows:

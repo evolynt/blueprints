@@ -277,24 +277,18 @@ Resources:
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "My CTR went from 3.2% to 8.7% on my very next video using the 'Curiosity Gap' template. These templates just work."
-                            Author: "Alex C., Tech Reviews (45K subs)"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"My CTR went from 3.2% to 8.7% on my very next video using the 'Curiosity Gap' template. These templates just work.\" — Alex C., Tech Reviews (45K subs)"
+                        - Type: text
                           Order: 2
                           Content:
-                            Quote: "I used to spend 2 hours on thumbnails and still wasn't happy with them. Now I can create scroll-stopping thumbnails in 15 minutes."
-                            Author: "Sarah M., Lifestyle Vlogger (120K subs)"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"I used to spend 2 hours on thumbnails and still wasn't happy with them. Now I can create scroll-stopping thumbnails in 15 minutes.\" — Sarah M., Lifestyle Vlogger (120K subs)"
+                        - Type: text
                           Order: 3
                           Content:
-                            Quote: "The tutorial alone was worth the price. Understanding WHY these templates work changed how I think about thumbnails completely."
-                            Author: "David L., Gaming Channel (80K subs)"
-                            Rating: 5
+                            Text: "\"The tutorial alone was worth the price. Understanding WHY these templates work changed how I think about thumbnails completely.\" — David L., Gaming Channel (80K subs)"
             - Order: 6
               Rows:
                 - Order: 1

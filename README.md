@@ -913,8 +913,6 @@ Elements are the building blocks inside sections. Each element has `Type`, `Orde
 
 | Type | Content Properties | Description |
 |------|-------------------|-------------|
-| `testimonial` | `Quote` (required), `Author` (required), `Title`, `ImageUrl`, `Rating` (1-5) | Customer testimonial |
-| `feature_card` | `Title` (required), `Description`, `Icon`, `ImageUrl` | Feature or benefit |
 | `faq_item` | `Question` (required), `Answer` (required) | FAQ entry |
 
 **Form Element:**
@@ -1751,24 +1749,18 @@ Resources:
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "I've joined gyms and bought programs before, but I always quit after a few weeks. The Inner Circle is different. The weekly calls keep me accountable and the community actually cares. Down 23lbs and still going strong!"
-                            Author: "Michelle K., 38, Marketing Manager"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"I've joined gyms and bought programs before, but I always quit after a few weeks. The Inner Circle is different. The weekly calls keep me accountable and the community actually cares. Down 23lbs and still going strong!\" — Michelle K., 38, Marketing Manager"
+                        - Type: text
                           Order: 2
                           Content:
-                            Quote: "The live calls are worth the membership alone. Coach Sarah helped me fix my squat form and my knee pain is completely gone. Plus I've made real friends in the community."
-                            Author: "James T., 45, Dad of 3"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"The live calls are worth the membership alone. Coach Sarah helped me fix my squat form and my knee pain is completely gone. Plus I've made real friends in the community.\" — James T., 45, Dad of 3"
+                        - Type: text
                           Order: 3
                           Content:
-                            Quote: "I was skeptical about an online community, but these people actually show up for each other. When I hit my first pull-up, I had 50+ people celebrating with me. That's priceless."
-                            Author: "Andrea L., 29, Nurse"
-                            Rating: 5
+                            Text: "\"I was skeptical about an online community, but these people actually show up for each other. When I hit my first pull-up, I had 50+ people celebrating with me. That's priceless.\" — Andrea L., 29, Nurse"
             - Order: 6
               Rows:
                 - Order: 1

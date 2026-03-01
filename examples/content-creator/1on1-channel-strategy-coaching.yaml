@@ -208,18 +208,14 @@ Resources:
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "Before coaching, I was stuck at 5K subs for over a year. After 3 months, I hit 25K. The personalized strategy made all the difference."
-                            Author: "Mike T., Tech Creator"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"Before coaching, I was stuck at 5K subs for over a year. After 3 months, I hit 25K. The personalized strategy made all the difference.\" — Mike T., Tech Creator"
+                        - Type: text
                           Order: 2
                           Content:
-                            Quote: "The channel audit revealed issues I never would have found on my own. My CTR went from 3% to 8% after implementing the thumbnail feedback."
-                            Author: "Jessica L., Lifestyle Vlogger"
-                            Rating: 5
+                            Text: "\"The channel audit revealed issues I never would have found on my own. My CTR went from 3% to 8% after implementing the thumbnail feedback.\" — Jessica L., Lifestyle Vlogger"
             - Order: 5
               Rows:
                 - Order: 1

@@ -208,24 +208,18 @@ Resources:
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "We were spending $3K/month on a creative agency for half the output. The Creative Retainer gives us more creatives, faster turnaround, and better results. Our CTR is up 40% since switching."
-                            Author: "David R., E-commerce Brand Owner"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"We were spending $3K/month on a creative agency for half the output. The Creative Retainer gives us more creatives, faster turnaround, and better results. Our CTR is up 40% since switching.\" — David R., E-commerce Brand Owner"
+                        - Type: text
                           Order: 2
                           Content:
-                            Quote: "I used to dread having to brief freelancers and chase them for deliverables. Now I submit a brief and creatives just appear. It's honestly a relief."
-                            Author: "Amanda S., Marketing Director"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"I used to dread having to brief freelancers and chase them for deliverables. Now I submit a brief and creatives just appear. It's honestly a relief.\" — Amanda S., Marketing Director"
+                        - Type: text
                           Order: 3
                           Content:
-                            Quote: "The creative suggestions have been game-changers. They suggested a UGC-style format I never would have tried. It's now our best-performing ad."
-                            Author: "Jason K., DTC Founder"
-                            Rating: 5
+                            Text: "\"The creative suggestions have been game-changers. They suggested a UGC-style format I never would have tried. It's now our best-performing ad.\" — Jason K., DTC Founder"
             - Order: 7
               Rows:
                 - Order: 1

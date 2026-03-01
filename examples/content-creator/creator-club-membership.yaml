@@ -214,24 +214,18 @@ Resources:
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "Found a collab partner in my first week. Our video together got 500K views and I gained 12K subscribers. The membership paid for itself 100x over."
-                            Author: "Marcus T., Tech Reviewer (85K subs)"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"Found a collab partner in my first week. Our video together got 500K views and I gained 12K subscribers. The membership paid for itself 100x over.\" — Marcus T., Tech Reviewer (85K subs)"
+                        - Type: text
                           Order: 2
                           Content:
-                            Quote: "The monthly template drops alone are worth it. I used to spend 3 hours on thumbnails. Now I create scroll-stoppers in 20 minutes."
-                            Author: "Jasmine C., Lifestyle Creator (200K followers)"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"The monthly template drops alone are worth it. I used to spend 3 hours on thumbnails. Now I create scroll-stoppers in 20 minutes.\" — Jasmine C., Lifestyle Creator (200K followers)"
+                        - Type: text
                           Order: 3
                           Content:
-                            Quote: "As a small creator, this community gave me access to strategies that bigger creators use. My views tripled in 3 months."
-                            Author: "Derek L., Gaming Channel (25K subs)"
-                            Rating: 5
+                            Text: "\"As a small creator, this community gave me access to strategies that bigger creators use. My views tripled in 3 months.\" — Derek L., Gaming Channel (25K subs)"
             - Order: 7
               Rows:
                 - Order: 1
@@ -620,7 +614,7 @@ Resources:
         
         - Member retains full ownership of all content they create
         - The Club retains ownership of templates, frameworks, and resources provided
-        - Member grants the Club permission to use their testimonials and success stories (with approval)
+        - Member grants the Club permission to use their success stories and reviews (with approval)
         - Member shall not copy or recreate Club proprietary systems for commercial resale
         
         **MEMBERS OWN THEIR CONTENT. THE CLUB OWNS ITS MATERIALS.**

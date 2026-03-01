@@ -346,18 +346,14 @@ Resources:
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "I was terrified of deadlifts. After this course, I pulled 185lbs with zero back pain."
-                            Author: "Mark R., 42"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"I was terrified of deadlifts. After this course, I pulled 185lbs with zero back pain.\" — Mark R., 42"
+                        - Type: text
                           Order: 2
                           Content:
-                            Quote: "Finally stepped into the squat rack with confidence. Down 15lbs and getting stronger!"
-                            Author: "Jennifer T., 34"
-                            Rating: 5
+                            Text: "\"Finally stepped into the squat rack with confidence. Down 15lbs and getting stronger!\" — Jennifer T., 34"
             - Order: 5
               Rows:
                 - Order: 1
@@ -497,18 +493,14 @@ Resources:
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "The weekly calls keep me accountable. Down 23lbs and still going strong!"
-                            Author: "Michelle K., 38"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"The weekly calls keep me accountable. Down 23lbs and still going strong!\" — Michelle K., 38"
+                        - Type: text
                           Order: 2
                           Content:
-                            Quote: "Coach Mike fixed my squat form and my knee pain disappeared. Plus I've made real friends."
-                            Author: "James T., 45"
-                            Rating: 5
+                            Text: "\"Coach Mike fixed my squat form and my knee pain disappeared. Plus I've made real friends.\" — James T., 45"
             - Order: 5
               Rows:
                 - Order: 1

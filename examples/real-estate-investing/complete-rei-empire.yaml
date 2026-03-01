@@ -584,18 +584,14 @@ Resources:
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "I was about to put an offer on a house that looked great. Ran it through the spreadsheet and realized I'd be underwater. This thing paid for itself 100x over."
-                            Author: "Marcus J., Wholesaler"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"I was about to put an offer on a house that looked great. Ran it through the spreadsheet and realized I'd be underwater. This thing paid for itself 100x over.\" — Marcus J., Wholesaler"
+                        - Type: text
                           Order: 2
                           Content:
-                            Quote: "Finally, a spreadsheet that accounts for EVERYTHING. Holding costs, closing costs - it's all there. No more surprises."
-                            Author: "Rachel T., Flipper"
-                            Rating: 5
+                            Text: "\"Finally, a spreadsheet that accounts for EVERYTHING. Holding costs, closing costs - it's all there. No more surprises.\" — Rachel T., Flipper"
             - Order: 6
               Rows:
                 - Order: 1

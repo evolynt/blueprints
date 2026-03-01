@@ -326,12 +326,10 @@ Resources:
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "The audit revealed I was burning $800/month on a broken pixel. Fixed it in 20 minutes and my cost per lead dropped 40%."
-                            Author: "Marcus T., E-commerce Owner"
-                            Rating: 5
+                            Text: "\"The audit revealed I was burning $800/month on a broken pixel. Fixed it in 20 minutes and my cost per lead dropped 40%.\" — Marcus T., E-commerce Owner"
             - Order: 4
               Rows:
                 - Order: 1
@@ -446,18 +444,14 @@ Resources:
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "Started with a Campaign Launch, now I'm on the Growth tier. My ROAS went from 1.2 to 3.8 in 6 months."
-                            Author: "Jennifer M., E-commerce Brand"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"Started with a Campaign Launch, now I'm on the Growth tier. My ROAS went from 1.2 to 3.8 in 6 months.\" — Jennifer M., E-commerce Brand"
+                        - Type: text
                           Order: 2
                           Content:
-                            Quote: "The Full-Service tier is worth every penny. Having a dedicated account manager who knows my business is invaluable."
-                            Author: "Michael R., Course Creator"
-                            Rating: 5
+                            Text: "\"The Full-Service tier is worth every penny. Having a dedicated account manager who knows my business is invaluable.\" — Michael R., Course Creator"
             - Order: 4
               Rows:
                 - Order: 1

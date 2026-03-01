@@ -232,24 +232,18 @@ Resources:
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "I was about to put an offer on a house that looked like a slam dunk. Ran it through the spreadsheet and realized I'd be underwater by $15K. This thing paid for itself 100x over."
-                            Author: "Marcus J., Wholesaler"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"I was about to put an offer on a house that looked like a slam dunk. Ran it through the spreadsheet and realized I'd be underwater by $15K. This thing paid for itself 100x over.\" — Marcus J., Wholesaler"
+                        - Type: text
                           Order: 2
                           Content:
-                            Quote: "Finally, a spreadsheet that accounts for EVERYTHING. Holding costs, closing costs, realtor fees - it's all in there. No more surprises at closing."
-                            Author: "Rachel T., House Flipper"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"Finally, a spreadsheet that accounts for EVERYTHING. Holding costs, closing costs, realtor fees - it's all in there. No more surprises at closing.\" — Rachel T., House Flipper"
+                        - Type: text
                           Order: 3
                           Content:
-                            Quote: "I used to spend hours analyzing deals with pen and paper. Now I can run 10 deals in the time it used to take me to do one. Game changer."
-                            Author: "David L., Rental Investor"
-                            Rating: 5
+                            Text: "\"I used to spend hours analyzing deals with pen and paper. Now I can run 10 deals in the time it used to take me to do one. Game changer.\" — David L., Rental Investor"
             - Order: 6
               Rows:
                 - Order: 1

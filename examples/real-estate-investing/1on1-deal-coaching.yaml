@@ -280,24 +280,18 @@ Resources:
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "I'd been paralyzed for months, afraid to make an offer. In our first session, we analyzed a deal together and I made an offer that same day. Closed my first wholesale deal 6 weeks later for $12,000."
-                            Author: "Michael R., Austin, TX"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"I'd been paralyzed for months, afraid to make an offer. In our first session, we analyzed a deal together and I made an offer that same day. Closed my first wholesale deal 6 weeks later for $12,000.\" — Michael R., Austin, TX"
+                        - Type: text
                           Order: 2
                           Content:
-                            Quote: "Having someone review my deals before I commit changed everything. I avoided two bad deals and confidently closed three good ones during our 3 months together."
-                            Author: "Angela P., Atlanta, GA"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"Having someone review my deals before I commit changed everything. I avoided two bad deals and confidently closed three good ones during our 3 months together.\" — Angela P., Atlanta, GA"
+                        - Type: text
                           Order: 3
                           Content:
-                            Quote: "The coaching paid for itself on my first flip. I was going to offer way too much until we analyzed the deal together. That single conversation saved me at least $15K."
-                            Author: "Chris T., Phoenix, AZ"
-                            Rating: 5
+                            Text: "\"The coaching paid for itself on my first flip. I was going to offer way too much until we analyzed the deal together. That single conversation saved me at least $15K.\" — Chris T., Phoenix, AZ"
             - Order: 7
               Rows:
                 - Order: 1

@@ -257,24 +257,18 @@ Resources:
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "I wasted $2,000 trying to figure out ads myself. Campaign Setup Package got me profitable in the first month. Should have done this from the start."
-                            Author: "Rachel M., Online Course Creator"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"I wasted $2,000 trying to figure out ads myself. Campaign Setup Package got me profitable in the first month. Should have done this from the start.\" — Rachel M., Online Course Creator"
+                        - Type: text
                           Order: 2
                           Content:
-                            Quote: "The tracking setup alone was worth it. I finally understand which ads are actually driving sales. My ROAS went from 1.2 to 3.4 in 30 days."
-                            Author: "Derek T., E-commerce Store Owner"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"The tracking setup alone was worth it. I finally understand which ads are actually driving sales. My ROAS went from 1.2 to 3.4 in 30 days.\" — Derek T., E-commerce Store Owner"
+                        - Type: text
                           Order: 3
                           Content:
-                            Quote: "I'm not a marketer. I needed someone to just handle it. They built everything, explained it in plain English, and now I have a system that works."
-                            Author: "Lisa K., Service Business Owner"
-                            Rating: 5
+                            Text: "\"I'm not a marketer. I needed someone to just handle it. They built everything, explained it in plain English, and now I have a system that works.\" — Lisa K., Service Business Owner"
             - Order: 7
               Rows:
                 - Order: 1

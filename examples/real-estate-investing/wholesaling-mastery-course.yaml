@@ -421,34 +421,26 @@ Resources:
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "I closed my first deal 47 days after starting the course. Made $8,500 on a simple assignment. The deal analyzer alone was worth the price - I would have way underestimated my offer without it."
-                            Author: "Marcus T., Charlotte, NC"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"I closed my first deal 47 days after starting the course. Made $8,500 on a simple assignment. The deal analyzer alone was worth the price - I would have way underestimated my offer without it.\" — Marcus T., Charlotte, NC"
+                        - Type: text
                           Order: 2
                           Content:
-                            Quote: "I'd tried wholesaling before this course and failed. The difference was having a real system to follow. Module 4 on making offers completely changed my approach. I've now closed 6 deals in my first year."
-                            Author: "Jennifer L., Phoenix, AZ"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"I'd tried wholesaling before this course and failed. The difference was having a real system to follow. Module 4 on making offers completely changed my approach. I've now closed 6 deals in my first year.\" — Jennifer L., Phoenix, AZ"
+                        - Type: text
                           Order: 3
                           Content:
-                            Quote: "The weekly office hours are incredible. I posted a deal I was nervous about and got detailed feedback within 24 hours. Turns out I was leaving $5K on the table with my offer price."
-                            Author: "David R., Houston, TX"
-                            Rating: 5
+                            Text: "\"The weekly office hours are incredible. I posted a deal I was nervous about and got detailed feedback within 24 hours. Turns out I was leaving $5K on the table with my offer price.\" — David R., Houston, TX"
                 - Order: 2
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "Finally, a course by someone who actually does deals. The real deal breakdowns showing actual contracts and numbers gave me the confidence to make my first offer. Closed 3 weeks later."
-                            Author: "Sarah M., Columbus, OH"
-                            Rating: 5
+                            Text: "\"Finally, a course by someone who actually does deals. The real deal breakdowns showing actual contracts and numbers gave me the confidence to make my first offer. Closed 3 weeks later.\" — Sarah M., Columbus, OH"
             - Order: 7
             - Order: 7
               Rows:
@@ -755,7 +747,7 @@ Resources:
         
         - Results vary based on effort, market conditions, skills, and execution
         - The Company makes no guarantees about income, profits, or deal volume
-        - Testimonials and case studies represent individual results, not typical outcomes
+        - Success stories and case studies represent individual results, not typical outcomes
         - Past performance of other students does not guarantee future results
         - Student may not close any deals or may lose money on attempted deals
         - Success requires significant time, effort, and potentially financial investment in marketing

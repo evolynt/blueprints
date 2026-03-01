@@ -244,24 +244,18 @@ Resources:
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "I used to spend 2 hours a day in Ads Manager. Now I spend 30 minutes a month on a strategy call. Our ROAS actually improved because I'm not constantly second-guessing and making emotional changes."
-                            Author: "Jennifer M., E-commerce Brand Owner"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"I used to spend 2 hours a day in Ads Manager. Now I spend 30 minutes a month on a strategy call. Our ROAS actually improved because I'm not constantly second-guessing and making emotional changes.\" — Jennifer M., E-commerce Brand Owner"
+                        - Type: text
                           Order: 2
                           Content:
-                            Quote: "Best business decision I made this year. The weekly reports are clear, the strategy calls are valuable, and I finally have time to work ON my business instead of IN my ad account."
-                            Author: "Michael R., Course Creator"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"Best business decision I made this year. The weekly reports are clear, the strategy calls are valuable, and I finally have time to work ON my business instead of IN my ad account.\" — Michael R., Course Creator"
+                        - Type: text
                           Order: 3
                           Content:
-                            Quote: "We went from $15K/month to $45K/month in ad spend in 6 months. I couldn't have managed that growth myself. Having a team that knows what they're doing is worth every penny."
-                            Author: "Sarah L., DTC Founder"
-                            Rating: 5
+                            Text: "\"We went from $15K/month to $45K/month in ad spend in 6 months. I couldn't have managed that growth myself. Having a team that knows what they're doing is worth every penny.\" — Sarah L., DTC Founder"
             - Order: 7
               Rows:
                 - Order: 1

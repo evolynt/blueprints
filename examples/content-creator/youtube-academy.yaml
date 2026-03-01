@@ -395,24 +395,18 @@ Resources:
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "I was stuck at 500 subscribers for 2 years. After implementing the thumbnail strategies from Module 5, I hit 10K in 3 months. The CTR formula alone was worth 10x the price."
-                            Author: "Alex R., Tech Reviewer"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"I was stuck at 500 subscribers for 2 years. After implementing the thumbnail strategies from Module 5, I hit 10K in 3 months. The CTR formula alone was worth 10x the price.\" — Alex R., Tech Reviewer"
+                        - Type: text
                           Order: 2
                           Content:
-                            Quote: "The niche selection module saved me from making a huge mistake. I was about to start a channel in a dead niche. Now I'm in a growing niche with way less competition."
-                            Author: "Sarah M., Lifestyle Creator"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"The niche selection module saved me from making a huge mistake. I was about to start a channel in a dead niche. Now I'm in a growing niche with way less competition.\" — Sarah M., Lifestyle Creator"
+                        - Type: text
                           Order: 3
                           Content:
-                            Quote: "The community alone is worth the price. Got my first collab from another student, and that video got 50K views - my biggest ever."
-                            Author: "James T., Gaming Channel"
-                            Rating: 5
+                            Text: "\"The community alone is worth the price. Got my first collab from another student, and that video got 50K views - my biggest ever.\" — James T., Gaming Channel"
             - Order: 6
               Rows:
                 - Order: 1

@@ -193,24 +193,18 @@ Resources:
                   Columns:
                     - Order: 1
                       Elements:
-                        - Type: testimonial
+                        - Type: text
                           Order: 1
                           Content:
-                            Quote: "I thought my ads were fine. The audit revealed I was burning $800/month on a broken pixel. Fixed it in 20 minutes and immediately saw my cost per lead drop by 40%."
-                            Author: "Marcus T., E-commerce Store Owner"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"I thought my ads were fine. The audit revealed I was burning $800/month on a broken pixel. Fixed it in 20 minutes and immediately saw my cost per lead drop by 40%.\" — Marcus T., E-commerce Store Owner"
+                        - Type: text
                           Order: 2
                           Content:
-                            Quote: "The targeting recommendations alone were worth 10x what I paid. I had no idea I was excluding my best-converting audience."
-                            Author: "Sarah K., Course Creator"
-                            Rating: 5
-                        - Type: testimonial
+                            Text: "\"The targeting recommendations alone were worth 10x what I paid. I had no idea I was excluding my best-converting audience.\" — Sarah K., Course Creator"
+                        - Type: text
                           Order: 3
                           Content:
-                            Quote: "Finally, someone who speaks human and not ad jargon. The walkthrough call made everything crystal clear. Now I actually understand my ad account."
-                            Author: "James L., Local Business Owner"
-                            Rating: 5
+                            Text: "\"Finally, someone who speaks human and not ad jargon. The walkthrough call made everything crystal clear. Now I actually understand my ad account.\" — James L., Local Business Owner"
             - Order: 6
               Rows:
                 - Order: 1
