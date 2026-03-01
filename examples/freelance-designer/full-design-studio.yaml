@@ -662,47 +662,59 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome!"
-                - Type: agreement
-                  Order: 2
-                  Content:
-                    AgreementSlug: !Ref fds-logo-agreement
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome!"
+                        - Type: agreement
+                          Order: 2
+                          Content:
+                            AgreementSlug: !Ref fds-logo-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Discovery"
           Slug: discovery
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Brand Discovery"
-                - Type: form
-                  Order: 2
-                  Content:
-                    FormSlug: !Ref fds-discovery-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Brand Discovery"
+                        - Type: form
+                          Order: 2
+                          Content:
+                            FormSlug: !Ref fds-discovery-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "Ready"
           Slug: ready
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Check your email for next steps!"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Check your email for next steps!"
   fds-identity-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -714,47 +726,59 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome!"
-                - Type: agreement
-                  Order: 2
-                  Content:
-                    AgreementSlug: !Ref fds-identity-agreement
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome!"
+                        - Type: agreement
+                          Order: 2
+                          Content:
+                            AgreementSlug: !Ref fds-identity-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Discovery"
           Slug: discovery
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Brand Discovery"
-                - Type: form
-                  Order: 2
-                  Content:
-                    FormSlug: !Ref fds-discovery-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Brand Discovery"
+                        - Type: form
+                          Order: 2
+                          Content:
+                            FormSlug: !Ref fds-discovery-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "Ready"
           Slug: ready
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "I'll schedule your strategy session!"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "I'll schedule your strategy session!"
   fds-suite-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -766,47 +790,59 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to Your Brand Suite!"
-                - Type: agreement
-                  Order: 2
-                  Content:
-                    AgreementSlug: !Ref fds-suite-agreement
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to Your Brand Suite!"
+                        - Type: agreement
+                          Order: 2
+                          Content:
+                            AgreementSlug: !Ref fds-suite-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Discovery"
           Slug: discovery
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Brand Discovery"
-                - Type: form
-                  Order: 2
-                  Content:
-                    FormSlug: !Ref fds-discovery-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Brand Discovery"
+                        - Type: form
+                          Order: 2
+                          Content:
+                            FormSlug: !Ref fds-discovery-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "Ready"
           Slug: ready
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "This is going to be amazing! Check your email."
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "This is going to be amazing! Check your email."
   # ============================================
   # 🔄 PIPELINES
   # ============================================

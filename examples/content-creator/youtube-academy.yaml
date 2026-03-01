@@ -713,76 +713,88 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to YouTube Academy!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Before you dive into the course, please review and accept our student agreement.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to YouTube Academy!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Before you dive into the course, please review and accept our student agreement.
                       
-                      This covers:
-                      - Educational disclaimer
-                      - Community guidelines
-                      - Content policy
+                              This covers:
+                              - Educational disclaimer
+                              - Community guidelines
+                              - Content policy
                       
-                      We want to make sure everyone has a great experience!
-                - Type: agreement
-                  Order: 3
-                  Content:
-                    AgreementSlug: !Ref yta-agreement
-                    OnSuccess:
-                      Action: next_step
+                              We want to make sure everyone has a great experience!
+                        - Type: agreement
+                          Order: 3
+                          Content:
+                            AgreementSlug: !Ref yta-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Your Profile"
           Slug: profile
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Tell Us About Your Channel"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Help us personalize your experience by sharing a bit about where you are on your YouTube journey.
-                - Type: form
-                  Order: 3
-                  Content:
-                    FormSlug: !Ref yta-onboarding-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Tell Us About Your Channel"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Help us personalize your experience by sharing a bit about where you are on your YouTube journey.
+                        - Type: form
+                          Order: 3
+                          Content:
+                            FormSlug: !Ref yta-onboarding-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "You're Ready!"
           Slug: complete
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Welcome to YouTube Academy! Here's what to do next:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Welcome to YouTube Academy! Here's what to do next:
                       
-                      **1. Start Module 1**
-                      Begin with "YouTube Foundations" to understand how the platform works.
+                              **1. Start Module 1**
+                              Begin with "YouTube Foundations" to understand how the platform works.
                       
-                      **2. Introduce Yourself**
-                      Head to the community and introduce yourself in the Introductions space.
+                              **2. Introduce Yourself**
+                              Head to the community and introduce yourself in the Introductions space.
                       
-                      **3. Register for Office Hours**
-                      Add the weekly Q&A to your calendar - it's every Friday!
+                              **3. Register for Office Hours**
+                              Add the weekly Q&A to your calendar - it's every Friday!
                       
-                      Let's grow your channel! 🚀
+                              Let's grow your channel! 🚀
   # ============================================
   # 🔄 PIPELINE
   # ============================================

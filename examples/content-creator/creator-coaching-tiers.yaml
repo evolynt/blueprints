@@ -721,51 +721,63 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to Starter Coaching!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Please review and sign your coaching agreement."
-                - Type: agreement
-                  Order: 3
-                  Content:
-                    AgreementSlug: !Ref cct-starter-agreement
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to Starter Coaching!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Please review and sign your coaching agreement."
+                        - Type: agreement
+                          Order: 3
+                          Content:
+                            AgreementSlug: !Ref cct-starter-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Intake"
           Slug: intake
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Quick Intake"
-                - Type: form
-                  Order: 2
-                  Content:
-                    FormSlug: !Ref cct-onboarding-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Quick Intake"
+                        - Type: form
+                          Order: 2
+                          Content:
+                            FormSlug: !Ref cct-onboarding-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "Ready"
           Slug: ready
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Book your first coaching session to get started!"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Book your first coaching session to get started!"
   cct-growth-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -777,51 +789,63 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to Growth Coaching!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Please review and sign your coaching agreement."
-                - Type: agreement
-                  Order: 3
-                  Content:
-                    AgreementSlug: !Ref cct-growth-agreement
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to Growth Coaching!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Please review and sign your coaching agreement."
+                        - Type: agreement
+                          Order: 3
+                          Content:
+                            AgreementSlug: !Ref cct-growth-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Intake"
           Slug: intake
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Quick Intake"
-                - Type: form
-                  Order: 2
-                  Content:
-                    FormSlug: !Ref cct-onboarding-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Quick Intake"
+                        - Type: form
+                          Order: 2
+                          Content:
+                            FormSlug: !Ref cct-onboarding-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "Ready"
           Slug: ready
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Book your first session and join the Growth community!"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Book your first session and join the Growth community!"
   cct-vip-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -833,51 +857,63 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to VIP Coaching!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Please review and sign your VIP coaching agreement."
-                - Type: agreement
-                  Order: 3
-                  Content:
-                    AgreementSlug: !Ref cct-vip-agreement
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to VIP Coaching!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Please review and sign your VIP coaching agreement."
+                        - Type: agreement
+                          Order: 3
+                          Content:
+                            AgreementSlug: !Ref cct-vip-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Intake"
           Slug: intake
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Quick Intake"
-                - Type: form
-                  Order: 2
-                  Content:
-                    FormSlug: !Ref cct-onboarding-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Quick Intake"
+                        - Type: form
+                          Order: 2
+                          Content:
+                            FormSlug: !Ref cct-onboarding-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "Ready"
           Slug: ready
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to the VIP Inner Circle!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Book your first session, join the VIP community, and check your email for retreat info!"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to the VIP Inner Circle!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Book your first session, join the VIP community, and check your email for retreat info!"
   # ============================================
   # 🔄 PIPELINE
   # ============================================

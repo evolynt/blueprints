@@ -782,89 +782,101 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to 1:1 Deal Coaching!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      I'm excited to work with you over the next 3 months.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to 1:1 Deal Coaching!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              I'm excited to work with you over the next 3 months.
                       
-                      Before we dive in, please review and sign the coaching agreement. This covers:
+                              Before we dive in, please review and sign the coaching agreement. This covers:
                       
-                      - Coaching scope (what's included)
-                      - Expectations for both of us
-                      - Payment terms
-                      - Cancellation policy
-                      - Liability and disclaimer
+                              - Coaching scope (what's included)
+                              - Expectations for both of us
+                              - Payment terms
+                              - Cancellation policy
+                              - Liability and disclaimer
                       
-                      This ensures we're aligned on how we'll work together.
-                - Type: agreement
-                  Order: 3
-                  Content:
-                    AgreementSlug: !Ref dc-agreement
-                    OnSuccess:
-                      Action: next_step
+                              This ensures we're aligned on how we'll work together.
+                        - Type: agreement
+                          Order: 3
+                          Content:
+                            AgreementSlug: !Ref dc-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Client Intake"
           Slug: intake
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Tell Me More About Your Situation"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Please complete this quick intake so I can prepare for our first session.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Tell Me More About Your Situation"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Please complete this quick intake so I can prepare for our first session.
                       
-                      The more detail you provide, the better I can tailor our coaching to your specific needs.
-                - Type: form
-                  Order: 3
-                  Content:
-                    FormSlug: !Ref dc-onboarding-form
-                    OnSuccess:
-                      Action: next_step
+                              The more detail you provide, the better I can tailor our coaching to your specific needs.
+                        - Type: form
+                          Order: 3
+                          Content:
+                            FormSlug: !Ref dc-onboarding-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "You're Ready!"
           Slug: complete
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Let's Close Some Deals!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You're all set! Welcome to 1:1 Deal Coaching.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Let's Close Some Deals!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You're all set! Welcome to 1:1 Deal Coaching.
                       
-                      **What to do now:**
+                              **What to do now:**
                       
-                      1. **Book your first session** - Use the booking link in your portal
-                      2. **Download the resources** - Get the deal analyzer and templates
-                      3. **Prepare for our call** - Bring any deals you're currently working on
+                              1. **Book your first session** - Use the booking link in your portal
+                              2. **Download the resources** - Get the deal analyzer and templates
+                              3. **Prepare for our call** - Bring any deals you're currently working on
                       
-                      **Before our first session, think about:**
+                              **Before our first session, think about:**
                       
-                      - What deals are you currently analyzing or considering?
-                      - What's your biggest challenge or roadblock right now?
-                      - What would make this coaching a success for you?
+                              - What deals are you currently analyzing or considering?
+                              - What's your biggest challenge or roadblock right now?
+                              - What would make this coaching a success for you?
                       
-                      I'm looking forward to helping you close deals!
-                - Type: button
-                  Order: 3
-                  Content:
-                    Text: "Book Your First Session"
-                    Action: next_step
+                              I'm looking forward to helping you close deals!
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "Book Your First Session"
+                            Action: next_step
   # ============================================
   # 🔄 PIPELINE
   # ============================================

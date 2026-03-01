@@ -1240,79 +1240,91 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to Starter Coaching!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      I'm excited to work with you over the next 3 months.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to Starter Coaching!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              I'm excited to work with you over the next 3 months.
                       
-                      Before we begin, please review and sign the coaching agreement. This covers:
+                              Before we begin, please review and sign the coaching agreement. This covers:
                       
-                      - Program scope (6 sessions, community access, resources)
-                      - Expectations for both of us
-                      - Payment and cancellation terms
-                      - Liability and confidentiality
-                - Type: agreement
-                  Order: 3
-                  Content:
-                    AgreementSlug: !Ref dct-starter-agreement
-                    OnSuccess:
-                      Action: next_step
+                              - Program scope (6 sessions, community access, resources)
+                              - Expectations for both of us
+                              - Payment and cancellation terms
+                              - Liability and confidentiality
+                        - Type: agreement
+                          Order: 3
+                          Content:
+                            AgreementSlug: !Ref dct-starter-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Client Intake"
           Slug: intake
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Tell Me About Your Situation"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Please complete this quick intake so I can prepare for our first session.
-                - Type: form
-                  Order: 3
-                  Content:
-                    FormSlug: !Ref dct-onboarding-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Tell Me About Your Situation"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Please complete this quick intake so I can prepare for our first session.
+                        - Type: form
+                          Order: 3
+                          Content:
+                            FormSlug: !Ref dct-onboarding-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "You're Ready!"
           Slug: complete
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Let's Close Some Deals!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You're all set! Welcome to Starter Coaching.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Let's Close Some Deals!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You're all set! Welcome to Starter Coaching.
                       
-                      **What to do now:**
+                              **What to do now:**
                       
-                      1. **Book your first session** using the scheduler in your portal
-                      2. **Download the resources** (Deal Analyzer, templates)
-                      3. **Join the student community** and introduce yourself
-                      4. **Prepare for our call** with any deals you're working on
+                              1. **Book your first session** using the scheduler in your portal
+                              2. **Download the resources** (Deal Analyzer, templates)
+                              3. **Join the student community** and introduce yourself
+                              4. **Prepare for our call** with any deals you're working on
                       
-                      I'm looking forward to helping you close deals!
-                - Type: button
-                  Order: 3
-                  Content:
-                    Text: "Enter Your Portal"
-                    Action: next_step
+                              I'm looking forward to helping you close deals!
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "Enter Your Portal"
+                            Action: next_step
   dct-accel-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -1324,80 +1336,92 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to Accelerator Coaching!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      I'm excited to work intensively with you over the next 6 months.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to Accelerator Coaching!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              I'm excited to work intensively with you over the next 6 months.
                       
-                      Before we begin, please review and sign the coaching agreement. This covers:
+                              Before we begin, please review and sign the coaching agreement. This covers:
                       
-                      - Program scope (12 sessions, VIP community, deal reviews, rolodex access)
-                      - Expectations for both of us
-                      - Payment and cancellation terms
-                      - Liability and confidentiality
-                - Type: agreement
-                  Order: 3
-                  Content:
-                    AgreementSlug: !Ref dct-accel-agreement
-                    OnSuccess:
-                      Action: next_step
+                              - Program scope (12 sessions, VIP community, deal reviews, rolodex access)
+                              - Expectations for both of us
+                              - Payment and cancellation terms
+                              - Liability and confidentiality
+                        - Type: agreement
+                          Order: 3
+                          Content:
+                            AgreementSlug: !Ref dct-accel-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Client Intake"
           Slug: intake
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Tell Me About Your Situation"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Please complete this quick intake so I can prepare for our first session and connect you with the right resources.
-                - Type: form
-                  Order: 3
-                  Content:
-                    FormSlug: !Ref dct-onboarding-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Tell Me About Your Situation"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Please complete this quick intake so I can prepare for our first session and connect you with the right resources.
+                        - Type: form
+                          Order: 3
+                          Content:
+                            FormSlug: !Ref dct-onboarding-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "You're Ready!"
           Slug: complete
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Let's Scale Your Investing!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You're all set! Welcome to Accelerator Coaching.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Let's Scale Your Investing!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You're all set! Welcome to Accelerator Coaching.
                       
-                      **What to do now:**
+                              **What to do now:**
                       
-                      1. **Book your first session** using the scheduler in your portal
-                      2. **Download the resources** (Deal Analyzer, templates)
-                      3. **Join the VIP community** and introduce yourself
-                      4. **Check out the Deal Flow space** for current opportunities
-                      5. **Browse the rolodex** for buyers and contractors in your market
+                              1. **Book your first session** using the scheduler in your portal
+                              2. **Download the resources** (Deal Analyzer, templates)
+                              3. **Join the VIP community** and introduce yourself
+                              4. **Check out the Deal Flow space** for current opportunities
+                              5. **Browse the rolodex** for buyers and contractors in your market
                       
-                      Let's build your deal pipeline!
-                - Type: button
-                  Order: 3
-                  Content:
-                    Text: "Enter Your Portal"
-                    Action: next_step
+                              Let's build your deal pipeline!
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "Enter Your Portal"
+                            Action: next_step
   dct-inner-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -1409,83 +1433,95 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to the Inner Circle!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      I'm thrilled to have you join our elite Inner Circle program.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to the Inner Circle!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              I'm thrilled to have you join our elite Inner Circle program.
                       
-                      Before we begin, please review and sign the coaching agreement. This covers:
+                              Before we begin, please review and sign the coaching agreement. This covers:
                       
-                      - Program scope (24 sessions, JV opportunities, retreats, direct access)
-                      - Joint venture deal terms and expectations
-                      - Quarterly retreat participation
-                      - Direct access boundaries
-                      - Payment, liability, and confidentiality terms
+                              - Program scope (24 sessions, JV opportunities, retreats, direct access)
+                              - Joint venture deal terms and expectations
+                              - Quarterly retreat participation
+                              - Direct access boundaries
+                              - Payment, liability, and confidentiality terms
                       
-                      Please read the JV section carefully, as it outlines how deal partnerships work.
-                - Type: agreement
-                  Order: 3
-                  Content:
-                    AgreementSlug: !Ref dct-inner-agreement
-                    OnSuccess:
-                      Action: next_step
+                              Please read the JV section carefully, as it outlines how deal partnerships work.
+                        - Type: agreement
+                          Order: 3
+                          Content:
+                            AgreementSlug: !Ref dct-inner-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Client Intake"
           Slug: intake
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Tell Me About Your Situation"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Please complete this intake so I can prepare for our first session and identify potential JV opportunities for you.
-                - Type: form
-                  Order: 3
-                  Content:
-                    FormSlug: !Ref dct-onboarding-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Tell Me About Your Situation"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Please complete this intake so I can prepare for our first session and identify potential JV opportunities for you.
+                        - Type: form
+                          Order: 3
+                          Content:
+                            FormSlug: !Ref dct-onboarding-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "You're Ready!"
           Slug: complete
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to the Inner Circle!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You're now part of an elite group. Welcome to the Inner Circle.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to the Inner Circle!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You're now part of an elite group. Welcome to the Inner Circle.
                       
-                      **What to do now:**
+                              **What to do now:**
                       
-                      1. **Book your first VIP session** using the scheduler
-                      2. **Save my direct number** (sent to your email) for time-sensitive matters
-                      3. **Join the Inner Circle community** and introduce yourself
-                      4. **Check the JV Opportunities space** for current partnership deals
-                      5. **Save the retreat dates** (details in your welcome email)
+                              1. **Book your first VIP session** using the scheduler
+                              2. **Save my direct number** (sent to your email) for time-sensitive matters
+                              3. **Join the Inner Circle community** and introduce yourself
+                              4. **Check the JV Opportunities space** for current partnership deals
+                              5. **Save the retreat dates** (details in your welcome email)
                       
-                      I'm looking forward to partnering on deals with you!
-                - Type: button
-                  Order: 3
-                  Content:
-                    Text: "Enter Your Portal"
-                    Action: next_step
+                              I'm looking forward to partnering on deals with you!
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "Enter Your Portal"
+                            Action: next_step
   # ============================================
   # 🔄 PIPELINE
   # ============================================

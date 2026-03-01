@@ -768,51 +768,63 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to Your Logo Project!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Please review and sign the agreement."
-                - Type: agreement
-                  Order: 3
-                  Content:
-                    AgreementSlug: !Ref bdt-logo-agreement
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to Your Logo Project!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Please review and sign the agreement."
+                        - Type: agreement
+                          Order: 3
+                          Content:
+                            AgreementSlug: !Ref bdt-logo-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Discovery"
           Slug: discovery
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Brand Discovery"
-                - Type: form
-                  Order: 2
-                  Content:
-                    FormSlug: !Ref bdt-discovery-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Brand Discovery"
+                        - Type: form
+                          Order: 2
+                          Content:
+                            FormSlug: !Ref bdt-discovery-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "Ready"
           Slug: ready
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "I'll begin working on your logo concepts. Check your email for updates!"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "I'll begin working on your logo concepts. Check your email for updates!"
   bdt-identity-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -824,51 +836,63 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to Your Brand Identity Project!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Please review and sign the agreement."
-                - Type: agreement
-                  Order: 3
-                  Content:
-                    AgreementSlug: !Ref bdt-identity-agreement
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to Your Brand Identity Project!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Please review and sign the agreement."
+                        - Type: agreement
+                          Order: 3
+                          Content:
+                            AgreementSlug: !Ref bdt-identity-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Discovery"
           Slug: discovery
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Brand Discovery"
-                - Type: form
-                  Order: 2
-                  Content:
-                    FormSlug: !Ref bdt-discovery-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Brand Discovery"
+                        - Type: form
+                          Order: 2
+                          Content:
+                            FormSlug: !Ref bdt-discovery-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "Ready"
           Slug: ready
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "I'll schedule your brand strategy session. Check your email!"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "I'll schedule your brand strategy session. Check your email!"
   bdt-suite-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -880,51 +904,63 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to Your Full Brand Suite!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Please review and sign the agreement."
-                - Type: agreement
-                  Order: 3
-                  Content:
-                    AgreementSlug: !Ref bdt-suite-agreement
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to Your Full Brand Suite!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Please review and sign the agreement."
+                        - Type: agreement
+                          Order: 3
+                          Content:
+                            AgreementSlug: !Ref bdt-suite-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Discovery"
           Slug: discovery
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Brand Discovery"
-                - Type: form
-                  Order: 2
-                  Content:
-                    FormSlug: !Ref bdt-discovery-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Brand Discovery"
+                        - Type: form
+                          Order: 2
+                          Content:
+                            FormSlug: !Ref bdt-discovery-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "Ready"
           Slug: ready
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "I'll schedule your brand strategy session. This is going to be great!"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "I'll schedule your brand strategy session. This is going to be great!"
   # ============================================
   # 🔄 PIPELINE
   # ============================================

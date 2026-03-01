@@ -599,31 +599,39 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to Creator Club!"
-                - Type: agreement
-                  Order: 2
-                  Content:
-                    AgreementSlug: !Ref fcb-community-agreement
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to Creator Club!"
+                        - Type: agreement
+                          Order: 2
+                          Content:
+                            AgreementSlug: !Ref fcb-community-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Ready"
           Slug: ready
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're In!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Head to the community and introduce yourself!"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're In!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Head to the community and introduce yourself!"
   fcb-course-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -635,31 +643,39 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to YouTube Academy!"
-                - Type: agreement
-                  Order: 2
-                  Content:
-                    AgreementSlug: !Ref fcb-community-agreement
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to YouTube Academy!"
+                        - Type: agreement
+                          Order: 2
+                          Content:
+                            AgreementSlug: !Ref fcb-community-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Ready"
           Slug: ready
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Let's Go!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Start Module 1 and join the community!"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Let's Go!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Start Module 1 and join the community!"
   fcb-coaching-onboarding:
     Type: Evolynt::Portal::OnboardingFlow
     Properties:
@@ -671,47 +687,59 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to Coaching!"
-                - Type: agreement
-                  Order: 2
-                  Content:
-                    AgreementSlug: !Ref fcb-coaching-agreement
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to Coaching!"
+                        - Type: agreement
+                          Order: 2
+                          Content:
+                            AgreementSlug: !Ref fcb-coaching-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Intake"
           Slug: intake
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Quick Intake"
-                - Type: form
-                  Order: 2
-                  Content:
-                    FormSlug: !Ref fcb-onboarding-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Quick Intake"
+                        - Type: form
+                          Order: 2
+                          Content:
+                            FormSlug: !Ref fcb-onboarding-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "Ready"
           Slug: ready
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Book your first session!"
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Book your first session!"
   # ============================================
   # 🔄 PIPELINES
   # ============================================

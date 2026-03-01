@@ -604,64 +604,76 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to Your Brand Identity Project!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Please review and sign the design services agreement to get started."
-                - Type: agreement
-                  Order: 3
-                  Content:
-                    AgreementSlug: !Ref bip-agreement
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to Your Brand Identity Project!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Please review and sign the design services agreement to get started."
+                        - Type: agreement
+                          Order: 3
+                          Content:
+                            AgreementSlug: !Ref bip-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Discovery"
           Slug: discovery
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Brand Discovery Form"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "This form helps me understand your brand deeply. Take your time - detailed answers lead to better results!"
-                - Type: form
-                  Order: 3
-                  Content:
-                    FormSlug: !Ref bip-discovery-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Brand Discovery Form"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "This form helps me understand your brand deeply. Take your time - detailed answers lead to better results!"
+                        - Type: form
+                          Order: 3
+                          Content:
+                            FormSlug: !Ref bip-discovery-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "Ready"
           Slug: ready
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Thanks for completing your onboarding! Here's what happens next:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Thanks for completing your onboarding! Here's what happens next:
                       
-                      **This week:** I'll review your discovery form and schedule our brand strategy session
+                              **This week:** I'll review your discovery form and schedule our brand strategy session
                       
-                      **Strategy session:** We'll deep-dive into your brand vision (60 min)
+                              **Strategy session:** We'll deep-dive into your brand vision (60 min)
                       
-                      **Following weeks:** Logo concepts, refinement, and brand system development
+                              **Following weeks:** Logo concepts, refinement, and brand system development
                       
-                      Check your email for strategy session scheduling. Questions? Just reply to any email.
+                              Check your email for strategy session scheduling. Questions? Just reply to any email.
   # ============================================
   # 🔄 PIPELINE
   # ============================================

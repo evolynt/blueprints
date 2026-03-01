@@ -529,62 +529,74 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome! Let's Get Started"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "Please review and sign the design services agreement to begin your project."
-                - Type: agreement
-                  Order: 3
-                  Content:
-                    AgreementSlug: !Ref ldp-agreement
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome! Let's Get Started"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Please review and sign the design services agreement to begin your project."
+                        - Type: agreement
+                          Order: 3
+                          Content:
+                            AgreementSlug: !Ref ldp-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Questionnaire"
           Slug: questionnaire
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Brand Questionnaire"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: "This questionnaire helps me understand your brand and create the perfect logo."
-                - Type: form
-                  Order: 3
-                  Content:
-                    FormSlug: !Ref ldp-questionnaire
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Brand Questionnaire"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "This questionnaire helps me understand your brand and create the perfect logo."
+                        - Type: form
+                          Order: 3
+                          Content:
+                            FormSlug: !Ref ldp-questionnaire
+                            OnSuccess:
+                              Action: next_step
         - Name: "Ready"
           Slug: ready
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Thanks for completing your onboarding! Here's what happens next:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Thanks for completing your onboarding! Here's what happens next:
                       
-                      **This week:** I'll review your questionnaire and begin research
+                              **This week:** I'll review your questionnaire and begin research
                       
-                      **Next week:** You'll receive 3 logo concepts to review
+                              **Next week:** You'll receive 3 logo concepts to review
                       
-                      Check your email for updates. Questions? Just reply to any email.
+                              Check your email for updates. Questions? Just reply to any email.
   # ============================================
   # 🔄 PIPELINE
   # ============================================

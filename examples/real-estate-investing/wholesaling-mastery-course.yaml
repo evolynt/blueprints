@@ -817,93 +817,105 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to Wholesaling Mastery!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Before you dive into the course, please review and sign our student agreement.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to Wholesaling Mastery!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Before you dive into the course, please review and sign our student agreement.
                       
-                      This agreement covers:
-                      - Educational disclaimer (this is education, not advice)
-                      - No income guarantees (results depend on your effort)
-                      - Community guidelines (how we treat each other)
-                      - Refund policy (digital products, all sales final)
-                      - Acknowledgment of investment risk
+                              This agreement covers:
+                              - Educational disclaimer (this is education, not advice)
+                              - No income guarantees (results depend on your effort)
+                              - Community guidelines (how we treat each other)
+                              - Refund policy (digital products, all sales final)
+                              - Acknowledgment of investment risk
                       
-                      We take these seriously to ensure everyone has a great experience.
-                - Type: agreement
-                  Order: 3
-                  Content:
-                    AgreementSlug: !Ref wmc-agreement
-                    OnSuccess:
-                      Action: next_step
+                              We take these seriously to ensure everyone has a great experience.
+                        - Type: agreement
+                          Order: 3
+                          Content:
+                            AgreementSlug: !Ref wmc-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Complete Profile"
           Slug: profile
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Tell Us About Your Goals"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Help us personalize your experience by sharing a bit about your situation and goals.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Tell Us About Your Goals"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Help us personalize your experience by sharing a bit about your situation and goals.
                       
-                      This information helps us:
-                      - Tailor recommendations to your market
-                      - Connect you with students in similar situations
-                      - Track your progress and celebrate wins
-                - Type: form
-                  Order: 3
-                  Content:
-                    FormSlug: !Ref wmc-onboarding-form
-                    OnSuccess:
-                      Action: next_step
+                              This information helps us:
+                              - Tailor recommendations to your market
+                              - Connect you with students in similar situations
+                              - Track your progress and celebrate wins
+                        - Type: form
+                          Order: 3
+                          Content:
+                            FormSlug: !Ref wmc-onboarding-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "Let's Get Started!"
           Slug: complete
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "You're All Set - Let's Close Some Deals!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Welcome to the Wholesaling Mastery family! You now have full access to:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You're All Set - Let's Close Some Deals!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Welcome to the Wholesaling Mastery family! You now have full access to:
                       
-                      ✓ **6-Module Course** - Start with Module 1 and work through sequentially
-                      ✓ **Deal Analyzer** - Download it from Module 3 resources
-                      ✓ **Scripts & Templates** - Available in each module
-                      ✓ **Student Community** - Introduce yourself and start connecting
-                      ✓ **Weekly Office Hours** - Wednesdays at 7pm ET
+                              ✓ **6-Module Course** - Start with Module 1 and work through sequentially
+                              ✓ **Deal Analyzer** - Download it from Module 3 resources
+                              ✓ **Scripts & Templates** - Available in each module
+                              ✓ **Student Community** - Introduce yourself and start connecting
+                              ✓ **Weekly Office Hours** - Wednesdays at 7pm ET
                       
-                      **Your first action steps:**
+                              **Your first action steps:**
                       
-                      1. Watch the first 3 videos in Module 1 (takes about 45 minutes)
-                      2. Post an introduction in the community
-                      3. Start driving for dollars or building a list this week
+                              1. Watch the first 3 videos in Module 1 (takes about 45 minutes)
+                              2. Post an introduction in the community
+                              3. Start driving for dollars or building a list this week
                       
-                      The students who succeed are the ones who take action immediately.
+                              The students who succeed are the ones who take action immediately.
                       
-                      Let's go close some deals!
-                - Type: button
-                  Order: 3
-                  Content:
-                    Text: "Start Module 1"
-                    Action: next_step
+                              Let's go close some deals!
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "Start Module 1"
+                            Action: next_step
   # ============================================
   # 🔄 PIPELINE
   # ============================================

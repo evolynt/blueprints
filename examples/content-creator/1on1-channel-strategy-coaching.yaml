@@ -602,75 +602,87 @@ Resources:
           Order: 1
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Welcome to Coaching!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Before we begin, please review and sign the coaching agreement.
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to Coaching!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Before we begin, please review and sign the coaching agreement.
                       
-                      This covers:
-                      - What's included in your coaching package
-                      - Expectations for both of us
-                      - Cancellation and rescheduling policies
-                      - Confidentiality terms
-                - Type: agreement
-                  Order: 3
-                  Content:
-                    AgreementSlug: !Ref csc-agreement
-                    OnSuccess:
-                      Action: next_step
+                              This covers:
+                              - What's included in your coaching package
+                              - Expectations for both of us
+                              - Cancellation and rescheduling policies
+                              - Confidentiality terms
+                        - Type: agreement
+                          Order: 3
+                          Content:
+                            AgreementSlug: !Ref csc-agreement
+                            OnSuccess:
+                              Action: next_step
         - Name: "Client Intake"
           Slug: intake
           Order: 2
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Tell Me More About Your Channel"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      Help me prepare for our sessions by sharing more details about your channel and challenges.
-                - Type: form
-                  Order: 3
-                  Content:
-                    FormSlug: !Ref csc-onboarding-form
-                    OnSuccess:
-                      Action: next_step
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Tell Me More About Your Channel"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Help me prepare for our sessions by sharing more details about your channel and challenges.
+                        - Type: form
+                          Order: 3
+                          Content:
+                            FormSlug: !Ref csc-onboarding-form
+                            OnSuccess:
+                              Action: next_step
         - Name: "You're Ready!"
           Slug: complete
           Order: 3
           Sections:
             - Order: 1
-              Elements:
-                - Type: headline
-                  Order: 1
-                  Content:
-                    Text: "Let's Get Started!"
-                - Type: text
-                  Order: 2
-                  Content:
-                    Text: |
-                      You're all set! Here's what happens next:
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Let's Get Started!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You're all set! Here's what happens next:
                       
-                      **1. Book Your First Session**
-                      Head to the portal and book your first coaching call.
+                              **1. Book Your First Session**
+                              Head to the portal and book your first coaching call.
                       
-                      **2. Review Your Resources**
-                      Check out the resource library for templates and worksheets.
+                              **2. Review Your Resources**
+                              Check out the resource library for templates and worksheets.
                       
-                      **3. Prepare for Our Call**
-                      Think about your top 3 priorities for our first session.
+                              **3. Prepare for Our Call**
+                              Think about your top 3 priorities for our first session.
                       
-                      I'm excited to help you grow your channel!
+                              I'm excited to help you grow your channel!
   # ============================================
   # 🔄 PIPELINE
   # ============================================
