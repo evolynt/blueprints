@@ -1136,8 +1136,6 @@ Resources:
           Order: 1
           Content:
             Text: "Your Brand Audit is Ready!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1150,18 +1148,12 @@ Resources:
           Content:
             Text: "Access Your Audit"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fds-email-audit-tip:
     Type: Evolynt::Automation::EmailTemplate
@@ -1188,9 +1180,6 @@ Resources:
           Order: 4
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fds-email-upsell-logo:
     Type: Evolynt::Automation::EmailTemplate
@@ -1222,18 +1211,12 @@ Resources:
           Content:
             Text: "Learn More"
             LinkUrl: "{{funnel.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fds-email-inquiry:
     Type: Evolynt::Automation::EmailTemplate
@@ -1245,8 +1228,6 @@ Resources:
           Order: 1
           Content:
             Text: "Thanks for Reaching Out!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1259,18 +1240,12 @@ Resources:
           Content:
             Text: "Book Discovery Call"
             LinkUrl: "{{funnel.url}}/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fds-email-reminder:
     Type: Evolynt::Automation::EmailTemplate
@@ -1294,18 +1269,12 @@ Resources:
           Content:
             Text: "Book a Call"
             LinkUrl: "{{funnel.url}}/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fds-email-welcome:
     Type: Evolynt::Automation::EmailTemplate
@@ -1317,8 +1286,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1331,18 +1298,12 @@ Resources:
           Content:
             Text: "Go to Portal"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   # ============================================
   # 🏢 BUSINESS PROFILE

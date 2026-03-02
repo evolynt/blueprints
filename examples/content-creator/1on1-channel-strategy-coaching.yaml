@@ -856,8 +856,6 @@ Resources:
           Order: 1
           Content:
             Text: "Thanks for Applying!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -883,9 +881,6 @@ Resources:
           Content:
             Text: "Book Your Discovery Call"
             LinkUrl: "{{funnel.url}}/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -899,9 +894,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   csc-email-reminder:
     Type: Evolynt::Automation::EmailTemplate
@@ -935,9 +927,6 @@ Resources:
           Content:
             Text: "Book Your Call"
             LinkUrl: "{{funnel.url}}/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -951,9 +940,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   csc-email-lastchance:
     Type: Evolynt::Automation::EmailTemplate
@@ -987,9 +973,6 @@ Resources:
           Content:
             Text: "Book Before Spots Fill"
             LinkUrl: "{{funnel.url}}/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -1003,9 +986,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   csc-email-welcome:
     Type: Evolynt::Automation::EmailTemplate
@@ -1017,8 +997,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to Coaching!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1041,9 +1019,6 @@ Resources:
           Content:
             Text: "Access Your Portal"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -1057,9 +1032,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   csc-email-prepare:
     Type: Evolynt::Automation::EmailTemplate
@@ -1100,9 +1072,6 @@ Resources:
           Content:
             Text: "Book Your First Session"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -1116,9 +1085,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   # ============================================
   # 🏢 BUSINESS PROFILE

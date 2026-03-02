@@ -650,8 +650,6 @@ Resources:
           Order: 1
           Content:
             Text: "Thanks for Applying!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -675,9 +673,6 @@ Resources:
           Content:
             Text: "Book Your Discovery Call"
             LinkUrl: "{{funnel.url}}/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -693,9 +688,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   creative-call-reminder-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -729,9 +721,6 @@ Resources:
           Content:
             Text: "Book Your Call Now"
             LinkUrl: "{{funnel.url}}/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -746,9 +735,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   creative-welcome-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -760,8 +746,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to the Creative Retainer!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -790,9 +774,6 @@ Resources:
           Content:
             Text: "Access Your Client Portal"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -812,9 +793,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   creative-first-batch-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -853,9 +831,6 @@ Resources:
           Content:
             Text: "View Your Creatives"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -871,9 +846,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   creative-monthly-rhythm-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -912,9 +884,6 @@ Resources:
           Content:
             Text: "Go to Your Portal"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -928,9 +897,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   # ============================================
   # 🏢 BUSINESS PROFILE

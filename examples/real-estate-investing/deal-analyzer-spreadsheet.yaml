@@ -573,8 +573,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome! Your Deal Analyzer is Ready"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -598,9 +596,6 @@ Resources:
           Content:
             Text: "Access Your Spreadsheet"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -618,9 +613,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   da-email-tip1:
     Type: Evolynt::Automation::EmailTemplate
@@ -661,9 +653,6 @@ Resources:
           Content:
             Text: "Open Your Spreadsheet"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -677,9 +666,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   da-email-tip2:
     Type: Evolynt::Automation::EmailTemplate
@@ -719,9 +705,6 @@ Resources:
           Content:
             Text: "Try the Repair Estimator"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -735,9 +718,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   da-email-tip3:
     Type: Evolynt::Automation::EmailTemplate
@@ -778,9 +758,6 @@ Resources:
           Content:
             Text: "Review Your Numbers"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -795,9 +772,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   da-email-upsell:
     Type: Evolynt::Automation::EmailTemplate
@@ -837,9 +811,6 @@ Resources:
           Content:
             Text: "Book Your Free Strategy Call"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -859,9 +830,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   # ============================================
   # 🏢 BUSINESS PROFILE

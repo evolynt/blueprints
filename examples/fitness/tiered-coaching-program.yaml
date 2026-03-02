@@ -1035,8 +1035,6 @@ Resources:
           Order: 1
           Content:
             Text: "Your Free Training is Ready!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1058,9 +1056,6 @@ Resources:
           Content:
             Text: "Watch Free Training"
             LinkUrl: "https://your-funnel-url.com/transform/training"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#059669"
         - Type: spacer
           Order: 4
           Settings:
@@ -1075,9 +1070,6 @@ Resources:
           Order: 7
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   nurture-followup-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -1114,18 +1106,12 @@ Resources:
           Content:
             Text: "Watch the Training"
             LinkUrl: "https://your-funnel-url.com/transform/training"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#059669"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   apply-reminder-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -1176,9 +1162,6 @@ Resources:
           Content:
             Text: "Apply Now"
             LinkUrl: "https://your-funnel-url.com/transform/apply"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#059669"
         - Type: spacer
           Order: 4
           Settings:
@@ -1193,9 +1176,6 @@ Resources:
           Order: 7
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   application-received-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -1207,8 +1187,6 @@ Resources:
           Order: 1
           Content:
             Text: "Application Received!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1234,9 +1212,6 @@ Resources:
           Content:
             Text: "Book Your Strategy Call"
             LinkUrl: "https://your-funnel-url.com/transform/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#059669"
         - Type: spacer
           Order: 4
           Settings:
@@ -1251,9 +1226,6 @@ Resources:
           Order: 7
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   book-call-reminder-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -1292,18 +1264,12 @@ Resources:
           Content:
             Text: "Book Your Call Now"
             LinkUrl: "https://your-funnel-url.com/transform/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#059669"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   client-welcome-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -1315,8 +1281,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to the Transform Family!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1354,9 +1318,6 @@ Resources:
           Content:
             Text: "Access Your Portal"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#059669"
         - Type: spacer
           Order: 4
           Settings:
@@ -1371,9 +1332,6 @@ Resources:
           Order: 7
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   week1-checkin-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -1417,18 +1375,12 @@ Resources:
           Content:
             Text: "Go to Your Portal"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#059669"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   community-reminder-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -1476,18 +1428,12 @@ Resources:
           Content:
             Text: "Check the Community"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#059669"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   # ============================================
   # 🏢 BUSINESS PROFILE

@@ -632,8 +632,6 @@ Resources:
           Order: 1
           Content:
             Text: "Application Received!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -662,18 +660,12 @@ Resources:
           Content:
             Text: "Book Your Strategy Call"
             LinkUrl: "https://your-funnel-url.com/elite/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#1e40af"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   elite-application-followup:
     Type: Evolynt::Automation::EmailTemplate
@@ -718,9 +710,6 @@ Resources:
           Content:
             Text: "Book Your Strategy Call"
             LinkUrl: "https://your-funnel-url.com/elite/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#1e40af"
         - Type: spacer
           Order: 4
           Settings:
@@ -737,9 +726,6 @@ Resources:
           Order: 7
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   elite-call-confirmed:
     Type: Evolynt::Automation::EmailTemplate
@@ -751,8 +737,6 @@ Resources:
           Order: 1
           Content:
             Text: "You're Booked!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -789,9 +773,6 @@ Resources:
           Order: 4
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   elite-welcome-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -803,8 +784,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to Elite 1:1 Coaching!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -847,9 +826,6 @@ Resources:
           Content:
             Text: "Access Your Portal"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#1e40af"
         - Type: spacer
           Order: 4
           Settings:
@@ -864,9 +840,6 @@ Resources:
           Order: 7
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   elite-checkin-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -912,18 +885,12 @@ Resources:
           Content:
             Text: "Go to Your Portal"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#1e40af"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   # ============================================
   # 🏢 BUSINESS PROFILE

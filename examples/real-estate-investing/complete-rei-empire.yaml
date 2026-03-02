@@ -1889,8 +1889,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome! Your Deal Analyzer is Ready"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1911,9 +1909,6 @@ Resources:
           Content:
             Text: "Access Your Spreadsheet"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -1927,9 +1922,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-spreadsheet-tip1:
     Type: Evolynt::Automation::EmailTemplate
@@ -1963,18 +1955,12 @@ Resources:
           Content:
             Text: "Open Your Spreadsheet"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-spreadsheet-tip2:
     Type: Evolynt::Automation::EmailTemplate
@@ -2007,18 +1993,12 @@ Resources:
           Content:
             Text: "Try the Repair Estimator"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-spreadsheet-tip3:
     Type: Evolynt::Automation::EmailTemplate
@@ -2050,18 +2030,12 @@ Resources:
           Content:
             Text: "Review Your Numbers"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-spreadsheet-upsell:
     Type: Evolynt::Automation::EmailTemplate
@@ -2096,9 +2070,6 @@ Resources:
           Order: 4
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-community-welcome:
     Type: Evolynt::Automation::EmailTemplate
@@ -2110,8 +2081,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to the Network!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -2132,18 +2101,12 @@ Resources:
           Content:
             Text: "Complete Onboarding"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-community-tip1:
     Type: Evolynt::Automation::EmailTemplate
@@ -2174,18 +2137,12 @@ Resources:
           Content:
             Text: "Join the Conversation"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-community-tip2:
     Type: Evolynt::Automation::EmailTemplate
@@ -2216,18 +2173,12 @@ Resources:
           Content:
             Text: "Join the Community"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-community-engage:
     Type: Evolynt::Automation::EmailTemplate
@@ -2257,18 +2208,12 @@ Resources:
           Content:
             Text: "Post Now"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-community-upsell:
     Type: Evolynt::Automation::EmailTemplate
@@ -2301,9 +2246,6 @@ Resources:
           Order: 4
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-course-welcome:
     Type: Evolynt::Automation::EmailTemplate
@@ -2315,8 +2257,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to Wholesaling Mastery!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -2336,18 +2276,12 @@ Resources:
           Content:
             Text: "Access Your Course"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-course-module1:
     Type: Evolynt::Automation::EmailTemplate
@@ -2375,18 +2309,12 @@ Resources:
           Content:
             Text: "Start Module 1"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-course-module2:
     Type: Evolynt::Automation::EmailTemplate
@@ -2413,18 +2341,12 @@ Resources:
           Content:
             Text: "Start Module 2"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-course-community:
     Type: Evolynt::Automation::EmailTemplate
@@ -2452,18 +2374,12 @@ Resources:
           Content:
             Text: "Join the Conversation"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-course-progress:
     Type: Evolynt::Automation::EmailTemplate
@@ -2495,18 +2411,12 @@ Resources:
           Content:
             Text: "Get Back on Track"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-course-complete:
     Type: Evolynt::Automation::EmailTemplate
@@ -2538,18 +2448,12 @@ Resources:
           Content:
             Text: "Continue Your Course"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-course-upsell:
     Type: Evolynt::Automation::EmailTemplate
@@ -2582,9 +2486,6 @@ Resources:
           Order: 4
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-coaching-welcome:
     Type: Evolynt::Automation::EmailTemplate
@@ -2596,8 +2497,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to Coaching!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -2617,18 +2516,12 @@ Resources:
           Content:
             Text: "Complete Onboarding"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-coaching-prep:
     Type: Evolynt::Automation::EmailTemplate
@@ -2658,18 +2551,12 @@ Resources:
           Content:
             Text: "Book Your Session"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-coaching-resources:
     Type: Evolynt::Automation::EmailTemplate
@@ -2696,18 +2583,12 @@ Resources:
           Content:
             Text: "Access Resources"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-coaching-checkin:
     Type: Evolynt::Automation::EmailTemplate
@@ -2739,18 +2620,12 @@ Resources:
           Content:
             Text: "Book Your Next Session"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-coaching-upsell:
     Type: Evolynt::Automation::EmailTemplate
@@ -2786,9 +2661,6 @@ Resources:
           Order: 4
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-inner-welcome:
     Type: Evolynt::Automation::EmailTemplate
@@ -2800,8 +2672,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to the Inner Circle!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -2821,18 +2691,12 @@ Resources:
           Content:
             Text: "Complete Onboarding"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-inner-vip:
     Type: Evolynt::Automation::EmailTemplate
@@ -2864,18 +2728,12 @@ Resources:
           Content:
             Text: "Access Inner Circle"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   empire-email-inner-retreat:
     Type: Evolynt::Automation::EmailTemplate
@@ -2909,18 +2767,12 @@ Resources:
           Content:
             Text: "View Retreat Details"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   # ============================================
   # 🏢 BUSINESS PROFILE

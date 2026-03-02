@@ -1047,8 +1047,6 @@ Resources:
           Order: 1
           Content:
             Text: "Your Templates Are Ready!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1061,18 +1059,12 @@ Resources:
           Content:
             Text: "Download Templates"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fcb-email-templates-tip:
     Type: Evolynt::Automation::EmailTemplate
@@ -1097,9 +1089,6 @@ Resources:
           Order: 4
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fcb-email-upsell-community:
     Type: Evolynt::Automation::EmailTemplate
@@ -1129,18 +1118,12 @@ Resources:
           Content:
             Text: "Join Creator Club"
             LinkUrl: "{{funnel.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fcb-email-community-welcome:
     Type: Evolynt::Automation::EmailTemplate
@@ -1152,8 +1135,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to Creator Club!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1166,18 +1147,12 @@ Resources:
           Content:
             Text: "Access Portal"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fcb-email-course-welcome:
     Type: Evolynt::Automation::EmailTemplate
@@ -1189,8 +1164,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to YouTube Academy!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1203,18 +1176,12 @@ Resources:
           Content:
             Text: "Start Learning"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fcb-email-coaching-welcome:
     Type: Evolynt::Automation::EmailTemplate
@@ -1226,8 +1193,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to Coaching!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1240,18 +1205,12 @@ Resources:
           Content:
             Text: "Get Started"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   # ============================================
   # 🏢 BUSINESS PROFILE

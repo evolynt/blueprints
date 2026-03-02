@@ -630,8 +630,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome! Your Templates Are Ready"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -654,9 +652,6 @@ Resources:
           Content:
             Text: "Access Your Templates"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -674,9 +669,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   ytt-email-tip1:
     Type: Evolynt::Automation::EmailTemplate
@@ -722,9 +714,6 @@ Resources:
           Content:
             Text: "Review Your Templates"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -738,9 +727,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   ytt-email-tip2:
     Type: Evolynt::Automation::EmailTemplate
@@ -786,9 +772,6 @@ Resources:
           Content:
             Text: "Try These Templates"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -802,9 +785,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   ytt-email-tip3:
     Type: Evolynt::Automation::EmailTemplate
@@ -851,9 +831,6 @@ Resources:
           Content:
             Text: "Apply These Principles"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -868,9 +845,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   ytt-email-upsell:
     Type: Evolynt::Automation::EmailTemplate
@@ -918,9 +892,6 @@ Resources:
           Content:
             Text: "Book Your Free Strategy Call"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -939,9 +910,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   # ============================================
   # 🏢 BUSINESS PROFILE

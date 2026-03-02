@@ -752,8 +752,6 @@ Resources:
           Order: 1
           Content:
             Text: "Thanks for Applying!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -777,9 +775,6 @@ Resources:
           Content:
             Text: "Book Your Strategy Call"
             LinkUrl: "{{funnel.url}}/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -795,9 +790,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   campaign-call-reminder-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -831,9 +823,6 @@ Resources:
           Content:
             Text: "Book Your Call Now"
             LinkUrl: "{{funnel.url}}/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -848,9 +837,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   campaign-welcome-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -862,8 +848,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to the Campaign Setup Package!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -892,9 +876,6 @@ Resources:
           Content:
             Text: "Access Your Client Portal"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -910,9 +891,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   campaign-week1-update-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -951,9 +929,6 @@ Resources:
           Content:
             Text: "View in Portal"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -967,9 +942,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   campaign-launch-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -981,8 +953,6 @@ Resources:
           Order: 1
           Content:
             Text: "Your Campaigns Are Live!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1012,9 +982,6 @@ Resources:
           Content:
             Text: "View Campaign Details"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -1034,9 +1001,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   # ============================================
   # 🏢 BUSINESS PROFILE

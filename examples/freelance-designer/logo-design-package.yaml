@@ -753,8 +753,6 @@ Resources:
           Order: 1
           Content:
             Text: "Thanks for Reaching Out!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -769,9 +767,6 @@ Resources:
           Content:
             Text: "Book Discovery Call"
             LinkUrl: "{{funnel.url}}/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -785,9 +780,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   ldp-email-reminder:
     Type: Evolynt::Automation::EmailTemplate
@@ -813,9 +805,6 @@ Resources:
           Content:
             Text: "Book a Call"
             LinkUrl: "{{funnel.url}}/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -829,9 +818,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   ldp-email-welcome:
     Type: Evolynt::Automation::EmailTemplate
@@ -843,8 +829,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to Your Logo Project!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -864,9 +848,6 @@ Resources:
           Content:
             Text: "Complete Onboarding"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -882,9 +863,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   ldp-email-kickoff:
     Type: Evolynt::Automation::EmailTemplate
@@ -926,9 +904,6 @@ Resources:
           Content:
             Text: "Go to Portal"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -942,6 +917,3 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"

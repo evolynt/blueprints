@@ -970,8 +970,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to YouTube Academy!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -994,9 +992,6 @@ Resources:
           Content:
             Text: "Access Your Course"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -1010,9 +1005,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   yta-email-module1:
     Type: Evolynt::Automation::EmailTemplate
@@ -1047,9 +1039,6 @@ Resources:
           Content:
             Text: "Start Module 1"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -1063,9 +1052,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   yta-email-module2:
     Type: Evolynt::Automation::EmailTemplate
@@ -1101,9 +1087,6 @@ Resources:
           Content:
             Text: "Watch Module 2"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -1117,9 +1100,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   yta-email-community:
     Type: Evolynt::Automation::EmailTemplate
@@ -1153,9 +1133,6 @@ Resources:
           Content:
             Text: "Join the Community"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -1169,9 +1146,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   yta-email-checkin:
     Type: Evolynt::Automation::EmailTemplate
@@ -1207,9 +1181,6 @@ Resources:
           Content:
             Text: "Continue Your Course"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -1223,9 +1194,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   yta-email-milestone:
     Type: Evolynt::Automation::EmailTemplate
@@ -1262,9 +1230,6 @@ Resources:
           Content:
             Text: "Share Your Win"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -1278,9 +1243,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   yta-email-coaching:
     Type: Evolynt::Automation::EmailTemplate
@@ -1329,9 +1291,6 @@ Resources:
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   # ============================================
   # 🏢 BUSINESS PROFILE

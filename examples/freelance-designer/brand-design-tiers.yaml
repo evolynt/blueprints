@@ -1148,8 +1148,6 @@ Resources:
           Order: 1
           Content:
             Text: "Thanks for Reaching Out!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1164,9 +1162,6 @@ Resources:
           Content:
             Text: "Book Discovery Call"
             LinkUrl: "{{funnel.url}}/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -1180,9 +1175,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   bdt-email-reminder:
     Type: Evolynt::Automation::EmailTemplate
@@ -1208,9 +1200,6 @@ Resources:
           Content:
             Text: "Book a Call"
             LinkUrl: "{{funnel.url}}/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -1222,6 +1211,3 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"

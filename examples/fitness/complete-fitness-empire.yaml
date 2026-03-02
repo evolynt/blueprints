@@ -1170,8 +1170,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to Strength Foundations!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1195,18 +1193,12 @@ Resources:
           Content:
             Text: "Start the Course"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#1e40af"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   foundations-midcourse:
     Type: Evolynt::Automation::EmailTemplate
@@ -1242,18 +1234,12 @@ Resources:
           Content:
             Text: "Continue the Course"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#1e40af"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   foundations-complete:
     Type: Evolynt::Automation::EmailTemplate
@@ -1290,18 +1276,12 @@ Resources:
           Content:
             Text: "Review the Course"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#1e40af"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   community-welcome:
     Type: Evolynt::Automation::EmailTemplate
@@ -1313,8 +1293,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to Fit Community!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1342,18 +1320,12 @@ Resources:
           Content:
             Text: "Enter Your Portal"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#1e40af"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   community-engage:
     Type: Evolynt::Automation::EmailTemplate
@@ -1389,18 +1361,12 @@ Resources:
           Content:
             Text: "Join the Community"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#1e40af"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   community-coaching-awareness:
     Type: Evolynt::Automation::EmailTemplate
@@ -1440,18 +1406,12 @@ Resources:
           Content:
             Text: "Continue in Community"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#1e40af"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   coaching-welcome:
     Type: Evolynt::Automation::EmailTemplate
@@ -1463,8 +1423,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to Elite Coaching!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1489,18 +1447,12 @@ Resources:
           Content:
             Text: "Access Your Portal"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#1e40af"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   coaching-prep:
     Type: Evolynt::Automation::EmailTemplate
@@ -1542,18 +1494,12 @@ Resources:
           Content:
             Text: "Book Your Session"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#1e40af"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   coaching-checkin:
     Type: Evolynt::Automation::EmailTemplate
@@ -1591,18 +1537,12 @@ Resources:
           Content:
             Text: "Go to Your Portal"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#1e40af"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   community-upsell-1:
     Type: Evolynt::Automation::EmailTemplate
@@ -1646,9 +1586,6 @@ Resources:
           Order: 4
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   community-upsell-2:
     Type: Evolynt::Automation::EmailTemplate
@@ -1688,9 +1625,6 @@ Resources:
           Order: 4
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   coaching-upsell-1:
     Type: Evolynt::Automation::EmailTemplate
@@ -1737,9 +1671,6 @@ Resources:
           Order: 4
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   coaching-upsell-2:
     Type: Evolynt::Automation::EmailTemplate
@@ -1782,9 +1713,6 @@ Resources:
           Order: 4
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   # ============================================
   # 🏢 BUSINESS PROFILE

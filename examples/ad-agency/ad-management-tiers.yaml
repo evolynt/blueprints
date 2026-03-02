@@ -883,9 +883,6 @@ Resources:
           Content:
             Text: "Book Your Discovery Call"
             LinkUrl: "{{funnel.url}}/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -903,9 +900,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   tiered-call-reminder-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -934,9 +928,6 @@ Resources:
           Content:
             Text: "Book Your Call Now"
             LinkUrl: "{{funnel.url}}/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -953,9 +944,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   tiered-welcome-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -992,9 +980,6 @@ Resources:
           Content:
             Text: "Go to Your Dashboard"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -1010,9 +995,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   tiered-week-one-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -1046,9 +1028,6 @@ Resources:
           Content:
             Text: "View Your Dashboard"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -1062,9 +1041,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   tiered-first-report-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -1097,9 +1073,6 @@ Resources:
           Content:
             Text: "View Your Report"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -1117,7 +1090,4 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 

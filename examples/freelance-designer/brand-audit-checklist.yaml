@@ -318,8 +318,6 @@ Resources:
           Order: 1
           Content:
             Text: "Your Brand Audit Checklist is Ready!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -342,9 +340,6 @@ Resources:
           Content:
             Text: "Access Your Checklist"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -360,9 +355,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   bac-email-tip:
     Type: Evolynt::Automation::EmailTemplate
@@ -397,9 +389,6 @@ Resources:
           Order: 4
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   bac-email-upsell:
     Type: Evolynt::Automation::EmailTemplate
@@ -446,18 +435,12 @@ Resources:
           Content:
             Text: "Learn More About My Services"
             LinkUrl: "https://sarahdesigns.co/services"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   # ============================================
   # 🏢 BUSINESS PROFILE

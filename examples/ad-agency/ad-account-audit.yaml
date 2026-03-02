@@ -515,8 +515,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome! Let's Audit Your Ad Account"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -544,9 +542,6 @@ Resources:
           Content:
             Text: "Complete Intake Form"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: spacer
           Order: 4
           Settings:
@@ -561,9 +556,6 @@ Resources:
           Order: 7
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   audit-reminder-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -597,18 +589,12 @@ Resources:
           Content:
             Text: "Complete Intake Form"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   audit-delivered-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -645,9 +631,6 @@ Resources:
           Content:
             Text: "Book Walkthrough Call"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -665,9 +648,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   audit-upsell-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -714,18 +694,12 @@ Resources:
           Content:
             Text: "Reply to Learn More"
             LinkUrl: "mailto:team@adscaleagency.com"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   # ============================================
   # 🏢 BUSINESS PROFILE

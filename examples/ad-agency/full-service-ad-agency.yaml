@@ -1089,8 +1089,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome! Let's Audit Your Account"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1107,18 +1105,12 @@ Resources:
           Content:
             Text: "Complete Intake Form"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fs-email-audit-reminder:
     Type: Evolynt::Automation::EmailTemplate
@@ -1144,18 +1136,12 @@ Resources:
           Content:
             Text: "Complete Intake Form"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fs-email-audit-upsell:
     Type: Evolynt::Automation::EmailTemplate
@@ -1188,18 +1174,12 @@ Resources:
           Content:
             Text: "Reply to Learn More"
             LinkUrl: "mailto:team@adscaleagency.com"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fs-email-app-received:
     Type: Evolynt::Automation::EmailTemplate
@@ -1211,8 +1191,6 @@ Resources:
           Order: 1
           Content:
             Text: "Thanks for Applying!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1228,18 +1206,12 @@ Resources:
           Content:
             Text: "Book Your Strategy Call"
             LinkUrl: "{{funnel.url}}/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fs-email-app-reminder:
     Type: Evolynt::Automation::EmailTemplate
@@ -1265,18 +1237,12 @@ Resources:
           Content:
             Text: "Book Your Call Now"
             LinkUrl: "{{funnel.url}}/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fs-email-growth-welcome:
     Type: Evolynt::Automation::EmailTemplate
@@ -1288,8 +1254,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to Growth Management!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1308,18 +1272,12 @@ Resources:
           Content:
             Text: "Access Your Dashboard"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fs-email-growth-week1:
     Type: Evolynt::Automation::EmailTemplate
@@ -1350,18 +1308,12 @@ Resources:
           Content:
             Text: "View Your Dashboard"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fs-email-growth-report:
     Type: Evolynt::Automation::EmailTemplate
@@ -1388,18 +1340,12 @@ Resources:
           Content:
             Text: "View Your Report"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fs-email-premium-welcome:
     Type: Evolynt::Automation::EmailTemplate
@@ -1411,8 +1357,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to Full-Service!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -1434,18 +1378,12 @@ Resources:
           Content:
             Text: "Access Your VIP Dashboard"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fs-email-premium-week1:
     Type: Evolynt::Automation::EmailTemplate
@@ -1477,18 +1415,12 @@ Resources:
           Content:
             Text: "View Your Dashboard"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   fs-email-premium-report:
     Type: Evolynt::Automation::EmailTemplate
@@ -1519,18 +1451,12 @@ Resources:
           Content:
             Text: "View Your Report"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: divider
           Order: 4
         - Type: text
           Order: 5
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   # ============================================
   # 🏢 BUSINESS PROFILE

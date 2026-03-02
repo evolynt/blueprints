@@ -757,8 +757,6 @@ Resources:
           Order: 1
           Content:
             Text: "Thanks for Applying!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -783,9 +781,6 @@ Resources:
           Content:
             Text: "Book Your Discovery Call"
             LinkUrl: "{{funnel.url}}/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -801,9 +796,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   ad-management-call-reminder-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -838,9 +830,6 @@ Resources:
           Content:
             Text: "Book Your Call Now"
             LinkUrl: "{{funnel.url}}/book"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -855,9 +844,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   ad-management-welcome-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -869,8 +855,6 @@ Resources:
           Order: 1
           Content:
             Text: "Welcome to Monthly Ad Management!"
-          Settings:
-            Alignment: center
         - Type: text
           Order: 2
           Content:
@@ -898,9 +882,6 @@ Resources:
           Content:
             Text: "Access Your Client Dashboard"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -924,9 +905,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   ad-management-first-week-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -968,9 +946,6 @@ Resources:
           Content:
             Text: "Book Monthly Strategy Call"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -985,9 +960,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   ad-management-first-month-email:
     Type: Evolynt::Automation::EmailTemplate
@@ -1024,9 +996,6 @@ Resources:
           Content:
             Text: "Book Strategy Call"
             LinkUrl: "{{portal.url}}"
-          Settings:
-            Alignment: center
-            BackgroundColor: "#2563eb"
         - Type: text
           Order: 4
           Content:
@@ -1047,9 +1016,6 @@ Resources:
           Order: 6
           Content:
             Text: "{{unsubscribe_url}}"
-          Settings:
-            FontSize: 12
-            TextColor: "#6b7280"
 
   # ============================================
   # 🏢 BUSINESS PROFILE
