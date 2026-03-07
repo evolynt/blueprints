@@ -28,7 +28,7 @@ Resources:
       Items:
         - Product: !Ref cct-growth-coaching
         - Product: !Ref cct-growth-community
-        - Product: !Ref cct-resources
+        - Product: !Ref cct-growth-resources
       PricingPlans:
         - !Ref cct-growth-pif
         - !Ref cct-growth-split
@@ -43,7 +43,7 @@ Resources:
       Items:
         - Product: !Ref cct-vip-coaching
         - Product: !Ref cct-vip-community
-        - Product: !Ref cct-resources
+        - Product: !Ref cct-vip-resources
       PricingPlans:
         - !Ref cct-vip-pif
         - !Ref cct-vip-split
@@ -143,6 +143,80 @@ Resources:
       Name: "Coaching Resource Library"
       ProductType: page
       Description: "Templates and resources for coaching clients"
+      Page:
+        Title: "Your Coaching Resources"
+        Content: |
+          ## Welcome to Your Resource Library
+          
+          Access all your coaching resources below.
+          
+          ---
+          
+          ## Channel Audit Template
+          
+          **[Download Channel Audit Template](https://docs.google.com/spreadsheets/your-audit)**
+          
+          Track your channel metrics and identify growth opportunities.
+          
+          ---
+          
+          ## Content Strategy Worksheet
+          
+          **[Download Strategy Worksheet](https://docs.google.com/document/your-strategy)**
+          
+          Plan your content pillars and publishing schedule.
+          
+          ---
+          
+          ## Thumbnail Checklist
+          
+          **[Download Thumbnail Checklist](https://docs.google.com/document/your-checklist)**
+          
+          Optimize every thumbnail before publishing.
+
+  cct-growth-resources:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Growth Coaching Resource Library"
+      ProductType: page
+      Description: "Templates and resources for Growth tier coaching clients"
+      Page:
+        Title: "Your Coaching Resources"
+        Content: |
+          ## Welcome to Your Resource Library
+          
+          Access all your coaching resources below.
+          
+          ---
+          
+          ## Channel Audit Template
+          
+          **[Download Channel Audit Template](https://docs.google.com/spreadsheets/your-audit)**
+          
+          Track your channel metrics and identify growth opportunities.
+          
+          ---
+          
+          ## Content Strategy Worksheet
+          
+          **[Download Strategy Worksheet](https://docs.google.com/document/your-strategy)**
+          
+          Plan your content pillars and publishing schedule.
+          
+          ---
+          
+          ## Thumbnail Checklist
+          
+          **[Download Thumbnail Checklist](https://docs.google.com/document/your-checklist)**
+          
+          Optimize every thumbnail before publishing.
+
+  cct-vip-resources:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "VIP Coaching Resource Library"
+      ProductType: page
+      Description: "Templates and resources for VIP tier coaching clients"
       Page:
         Title: "Your Coaching Resources"
         Content: |

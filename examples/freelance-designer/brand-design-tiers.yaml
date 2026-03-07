@@ -26,7 +26,7 @@ Resources:
       DefaultPortal: !Ref bdt-identity-portal
       OnboardingFlowSlug: !Ref bdt-identity-onboarding
       Items:
-        - Product: !Ref bdt-logo-product
+        - Product: !Ref bdt-identity-logo-product
         - Product: !Ref bdt-identity-system
         - Product: !Ref bdt-brand-guidelines
       PricingPlans:
@@ -41,9 +41,9 @@ Resources:
       DefaultPortal: !Ref bdt-suite-portal
       OnboardingFlowSlug: !Ref bdt-suite-onboarding
       Items:
-        - Product: !Ref bdt-logo-product
-        - Product: !Ref bdt-identity-system
-        - Product: !Ref bdt-brand-guidelines
+        - Product: !Ref bdt-suite-logo-product
+        - Product: !Ref bdt-suite-identity-system
+        - Product: !Ref bdt-suite-brand-guidelines
         - Product: !Ref bdt-stationery
         - Product: !Ref bdt-templates
         - Product: !Ref bdt-collateral
@@ -250,6 +250,149 @@ Resources:
           - Flyer/one-pager design
           - Icon set (10 custom icons)
           - Pattern/texture library
+
+  # Portal-specific product duplicates (product-portal exclusivity)
+  bdt-identity-logo-product:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Logo Design"
+      ProductType: page
+      Description: "Professional logo design"
+      Page:
+        Title: "Your Logo Design"
+        Content: |
+          ## Logo Design Deliverables
+          
+          Your logo design project includes:
+          
+          ---
+          
+          ## Concepts & Revisions
+          
+          - 3 unique logo concepts
+          - 3 rounds of revisions on selected concept
+          - Final approved logo
+          
+          ---
+          
+          ## Logo Variations
+          
+          - Primary logo (full color)
+          - Horizontal lockup
+          - Stacked/vertical lockup
+          - Icon/mark only
+          - Black version
+          - White/reversed version
+          
+          ---
+          
+          ## File Formats
+          
+          - AI (Adobe Illustrator source)
+          - EPS (vector)
+          - PDF (print-ready)
+          - SVG (web vector)
+          - PNG (transparent background)
+          - JPG (web use)
+
+  bdt-suite-logo-product:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Logo Design"
+      ProductType: page
+      Description: "Professional logo design"
+      Page:
+        Title: "Your Logo Design"
+        Content: |
+          ## Logo Design Deliverables
+          
+          Your logo design project includes:
+          
+          ---
+          
+          ## Concepts & Revisions
+          
+          - 3 unique logo concepts
+          - 3 rounds of revisions on selected concept
+          - Final approved logo
+          
+          ---
+          
+          ## Logo Variations
+          
+          - Primary logo (full color)
+          - Horizontal lockup
+          - Stacked/vertical lockup
+          - Icon/mark only
+          - Black version
+          - White/reversed version
+          
+          ---
+          
+          ## File Formats
+          
+          - AI (Adobe Illustrator source)
+          - EPS (vector)
+          - PDF (print-ready)
+          - SVG (web vector)
+          - PNG (transparent background)
+          - JPG (web use)
+
+  bdt-suite-identity-system:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Visual Identity System"
+      ProductType: page
+      Description: "Color palette and typography system"
+      Page:
+        Title: "Visual Identity System"
+        Content: |
+          ## Your Visual Identity
+          
+          Your complete visual identity system.
+          
+          ---
+          
+          ## Color Palette
+          
+          - Primary colors (2-3)
+          - Secondary colors (2-3)
+          - Neutral colors
+          - Color codes: HEX, RGB, CMYK, Pantone
+          
+          ---
+          
+          ## Typography
+          
+          - Primary typeface (headings)
+          - Secondary typeface (body)
+          - Font weights and sizes
+          - Hierarchy guidelines
+
+  bdt-suite-brand-guidelines:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Brand Guidelines Document"
+      ProductType: page
+      Description: "Comprehensive brand guidelines"
+      Page:
+        Title: "Brand Guidelines"
+        Content: |
+          ## Comprehensive Brand Guidelines
+          
+          Your complete brand guidelines document (20+ pages).
+          
+          ---
+          
+          ## Included Sections
+          
+          - Brand story and positioning
+          - Logo usage and variations
+          - Color palette specifications
+          - Typography system
+          - Imagery style guidelines
+          - Application examples
+          - Do's and don'ts
 
   # ============================================
   # 💰 PRICING PLANS

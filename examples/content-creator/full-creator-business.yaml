@@ -36,7 +36,7 @@ Resources:
       OnboardingFlowSlug: !Ref fcb-course-onboarding
       Items:
         - Product: !Ref fcb-course
-        - Product: !Ref fcb-community
+        - Product: !Ref fcb-student-community
       PricingPlans:
         - !Ref fcb-course-pif
         - !Ref fcb-course-split
@@ -50,7 +50,7 @@ Resources:
       OnboardingFlowSlug: !Ref fcb-coaching-onboarding
       Items:
         - Product: !Ref fcb-coaching
-        - Product: !Ref fcb-community
+        - Product: !Ref fcb-coaching-community
         - Product: !Ref fcb-resources
       PricingPlans:
         - !Ref fcb-coaching-pif
@@ -88,6 +88,94 @@ Resources:
     Type: Evolynt::Commerce::Product
     Properties:
       Name: "Creator Club Community"
+      ProductType: community
+      Description: "Private community for creators"
+      Community:
+        Name: "Creator Club"
+        Description: "Connect with fellow creators"
+        Spaces:
+          - Name: "Introductions"
+            Slug: intros
+            Description: "Introduce yourself"
+            Order: 1
+          - Name: "Templates"
+            Slug: templates
+            Description: "Monthly template drops"
+            Order: 2
+          - Name: "Collaborations"
+            Slug: collabs
+            Description: "Find collab partners"
+            Order: 3
+          - Name: "Wins"
+            Slug: wins
+            Description: "Celebrate milestones"
+            Order: 4
+          - Name: "Q&A"
+            Slug: qa
+            Description: "Get help"
+            Order: 5
+        Events:
+          - Title: "Weekly Creator Q&A"
+            Description: "Live Q&A session"
+            StartAt: "2025-02-07T19:00:00Z"
+            EndAt: "2025-02-07T20:00:00Z"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/fcb-weekly"
+            HostUserEmail: "coach@fullcreatorbusiness.com"
+            RecurrenceRule:
+              Frequency: weekly
+              Interval: 1
+              DaysOfWeek: [5]
+              EndType: never
+
+  fcb-student-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Creator Club Student Community"
+      ProductType: community
+      Description: "Private community for creators"
+      Community:
+        Name: "Creator Club"
+        Description: "Connect with fellow creators"
+        Spaces:
+          - Name: "Introductions"
+            Slug: intros
+            Description: "Introduce yourself"
+            Order: 1
+          - Name: "Templates"
+            Slug: templates
+            Description: "Monthly template drops"
+            Order: 2
+          - Name: "Collaborations"
+            Slug: collabs
+            Description: "Find collab partners"
+            Order: 3
+          - Name: "Wins"
+            Slug: wins
+            Description: "Celebrate milestones"
+            Order: 4
+          - Name: "Q&A"
+            Slug: qa
+            Description: "Get help"
+            Order: 5
+        Events:
+          - Title: "Weekly Creator Q&A"
+            Description: "Live Q&A session"
+            StartAt: "2025-02-07T19:00:00Z"
+            EndAt: "2025-02-07T20:00:00Z"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/fcb-weekly"
+            HostUserEmail: "coach@fullcreatorbusiness.com"
+            RecurrenceRule:
+              Frequency: weekly
+              Interval: 1
+              DaysOfWeek: [5]
+              EndType: never
+
+  fcb-coaching-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Creator Club Coaching Community"
       ProductType: community
       Description: "Private community for creators"
       Community:

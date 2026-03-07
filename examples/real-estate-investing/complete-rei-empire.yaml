@@ -37,8 +37,8 @@ Resources:
       OnboardingFlowSlug: !Ref empire-community-onboarding
       Items:
         - Product: !Ref empire-course
-        - Product: !Ref empire-community
-        - Product: !Ref empire-resources
+        - Product: !Ref empire-student-community
+        - Product: !Ref empire-student-resources
       PricingPlans:
         - !Ref empire-course-pif
         - !Ref empire-course-split
@@ -52,8 +52,8 @@ Resources:
       OnboardingFlowSlug: !Ref empire-coaching-onboarding
       Items:
         - Product: !Ref empire-coaching
-        - Product: !Ref empire-community
-        - Product: !Ref empire-resources
+        - Product: !Ref empire-vip-community
+        - Product: !Ref empire-vip-resources
       PricingPlans:
         - !Ref empire-coaching-pif
         - !Ref empire-coaching-split
@@ -67,8 +67,8 @@ Resources:
       OnboardingFlowSlug: !Ref empire-coaching-onboarding
       Items:
         - Product: !Ref empire-inner-coaching
-        - Product: !Ref empire-community
-        - Product: !Ref empire-resources
+        - Product: !Ref empire-vip-community
+        - Product: !Ref empire-vip-resources
       PricingPlans:
         - !Ref empire-inner-pif
         - !Ref empire-inner-split
@@ -343,6 +343,194 @@ Resources:
       Name: "Resource Library"
       ProductType: page
       Description: "Templates, contracts, and tools for all members"
+      Page:
+        Title: "Resource Library"
+        Content: |
+          ## Your Resource Library
+          
+          This page contains all the tools, templates, and resources you need.
+          
+          ---
+          
+          ## Deal Analysis Tools
+          
+          **[Deal Analyzer Spreadsheet](https://docs.google.com/spreadsheets/deal-analyzer)**
+          Comprehensive spreadsheet for wholesale, flip, and rental deals.
+          
+          **[Repair Cost Estimator](https://docs.google.com/spreadsheets/repair-estimator)**
+          Detailed repair calculator with line items.
+          
+          ---
+          
+          ## Contract Templates
+          
+          **[Purchase Agreement](https://docs.google.com/document/purchase-agreement)**
+          Standard purchase agreement.
+          
+          **[Assignment Contract](https://docs.google.com/document/assignment-contract)**
+          For wholesale assignments.
+          
+          **[JV Agreement](https://docs.google.com/document/jv-agreement)**
+          Joint venture agreement.
+          
+          ---
+          
+          ## Scripts & Guides
+          
+          **[Seller Call Script](https://docs.google.com/document/seller-script)**
+          Word-for-word script for seller calls.
+          
+          **[Negotiation Playbook](https://docs.google.com/document/negotiation)**
+          Tactics for negotiating better deals.
+
+  empire-student-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "REI Student Community"
+      ProductType: community
+      Description: "Private community for course students"
+      Community:
+        Name: "REI Student Community"
+        Description: "Off-market deals, weekly Q&A, and networking with serious investors"
+        Spaces:
+          - Name: "Announcements"
+            Slug: announcements
+            Description: "Updates and important news"
+            Order: 1
+          - Name: "Deal Flow"
+            Slug: deal-flow
+            Description: "Off-market deals and opportunities"
+            Order: 2
+          - Name: "Q&A"
+            Slug: qa
+            Description: "Ask questions and get answers"
+            Order: 3
+          - Name: "Networking"
+            Slug: networking
+            Description: "Connect with other investors for partnerships"
+            Order: 4
+          - Name: "Wins"
+            Slug: wins
+            Description: "Celebrate your progress and closed deals"
+            Order: 5
+          - Name: "Resources"
+            Slug: resources
+            Description: "Templates, contracts, and tools"
+            Order: 6
+        Events:
+          - Title: "Weekly Investor Q&A"
+            Description: "Live Q&A session covering deals, strategies, and market updates"
+            StartAt: "2025-02-06T20:00:00Z"
+            EndAt: "2025-02-06T21:00:00Z"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/empire-weekly-qa"
+            HostUserEmail: "coach@reieducationempire.com"
+            RecurrenceRule:
+              Frequency: weekly
+              Interval: 1
+              DaysOfWeek: [4]
+              EndType: never
+
+  empire-vip-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "REI VIP Community"
+      ProductType: community
+      Description: "Private community for coaching and Inner Circle members"
+      Community:
+        Name: "REI VIP Community"
+        Description: "Off-market deals, weekly Q&A, and networking with serious investors"
+        Spaces:
+          - Name: "Announcements"
+            Slug: announcements
+            Description: "Updates and important news"
+            Order: 1
+          - Name: "Deal Flow"
+            Slug: deal-flow
+            Description: "Off-market deals and opportunities"
+            Order: 2
+          - Name: "Q&A"
+            Slug: qa
+            Description: "Ask questions and get answers"
+            Order: 3
+          - Name: "Networking"
+            Slug: networking
+            Description: "Connect with other investors for partnerships"
+            Order: 4
+          - Name: "Wins"
+            Slug: wins
+            Description: "Celebrate your progress and closed deals"
+            Order: 5
+          - Name: "Resources"
+            Slug: resources
+            Description: "Templates, contracts, and tools"
+            Order: 6
+        Events:
+          - Title: "Weekly Investor Q&A"
+            Description: "Live Q&A session covering deals, strategies, and market updates"
+            StartAt: "2025-02-06T20:00:00Z"
+            EndAt: "2025-02-06T21:00:00Z"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/empire-weekly-qa"
+            HostUserEmail: "coach@reieducationempire.com"
+            RecurrenceRule:
+              Frequency: weekly
+              Interval: 1
+              DaysOfWeek: [4]
+              EndType: never
+
+  empire-student-resources:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Student Resource Library"
+      ProductType: page
+      Description: "Templates, contracts, and tools for course students"
+      Page:
+        Title: "Resource Library"
+        Content: |
+          ## Your Resource Library
+          
+          This page contains all the tools, templates, and resources you need.
+          
+          ---
+          
+          ## Deal Analysis Tools
+          
+          **[Deal Analyzer Spreadsheet](https://docs.google.com/spreadsheets/deal-analyzer)**
+          Comprehensive spreadsheet for wholesale, flip, and rental deals.
+          
+          **[Repair Cost Estimator](https://docs.google.com/spreadsheets/repair-estimator)**
+          Detailed repair calculator with line items.
+          
+          ---
+          
+          ## Contract Templates
+          
+          **[Purchase Agreement](https://docs.google.com/document/purchase-agreement)**
+          Standard purchase agreement.
+          
+          **[Assignment Contract](https://docs.google.com/document/assignment-contract)**
+          For wholesale assignments.
+          
+          **[JV Agreement](https://docs.google.com/document/jv-agreement)**
+          Joint venture agreement.
+          
+          ---
+          
+          ## Scripts & Guides
+          
+          **[Seller Call Script](https://docs.google.com/document/seller-script)**
+          Word-for-word script for seller calls.
+          
+          **[Negotiation Playbook](https://docs.google.com/document/negotiation)**
+          Tactics for negotiating better deals.
+
+  empire-vip-resources:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "VIP Resource Library"
+      ProductType: page
+      Description: "Templates, contracts, and tools for coaching and Inner Circle members"
       Page:
         Title: "Resource Library"
         Content: |

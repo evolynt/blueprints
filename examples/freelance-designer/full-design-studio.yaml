@@ -37,7 +37,7 @@ Resources:
       DefaultPortal: !Ref fds-identity-portal
       OnboardingFlowSlug: !Ref fds-identity-onboarding
       Items:
-        - Product: !Ref fds-logo-product
+        - Product: !Ref fds-identity-logo-product
         - Product: !Ref fds-identity-system
         - Product: !Ref fds-brand-guidelines
       PricingPlans:
@@ -52,9 +52,9 @@ Resources:
       DefaultPortal: !Ref fds-suite-portal
       OnboardingFlowSlug: !Ref fds-suite-onboarding
       Items:
-        - Product: !Ref fds-logo-product
-        - Product: !Ref fds-identity-system
-        - Product: !Ref fds-brand-guidelines
+        - Product: !Ref fds-suite-logo-product
+        - Product: !Ref fds-suite-identity-system
+        - Product: !Ref fds-suite-brand-guidelines
         - Product: !Ref fds-stationery
         - Product: !Ref fds-templates
         - Product: !Ref fds-collateral
@@ -196,6 +196,69 @@ Resources:
           - Proposal template
           - Flyer design
           - Icon set
+
+  # Portal-specific product duplicates (product-portal exclusivity)
+  fds-identity-logo-product:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Logo Design"
+      ProductType: page
+      Description: "Professional logo design"
+      Page:
+        Title: "Your Logo Design"
+        Content: |
+          ## Logo Deliverables
+          
+          - 3 logo concepts
+          - 3 revision rounds
+          - All variations and file formats
+          
+          Files will be uploaded here as completed.
+
+  fds-suite-logo-product:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Logo Design"
+      ProductType: page
+      Description: "Professional logo design"
+      Page:
+        Title: "Your Logo Design"
+        Content: |
+          ## Logo Deliverables
+          
+          - 3 logo concepts
+          - 3 revision rounds
+          - All variations and file formats
+          
+          Files will be uploaded here as completed.
+
+  fds-suite-identity-system:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Visual Identity System"
+      ProductType: page
+      Description: "Color palette and typography"
+      Page:
+        Title: "Visual Identity"
+        Content: |
+          ## Your Visual Identity
+          
+          - Full color palette
+          - Typography system
+          - Pattern elements
+
+  fds-suite-brand-guidelines:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Brand Guidelines"
+      ProductType: page
+      Description: "Comprehensive brand guidelines"
+      Page:
+        Title: "Brand Guidelines"
+        Content: |
+          ## Brand Guidelines Document
+          
+          Your comprehensive 20+ page brand guidelines.
 
   # ============================================
   # 💰 PRICING PLANS

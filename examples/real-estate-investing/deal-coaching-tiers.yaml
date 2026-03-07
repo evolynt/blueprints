@@ -29,7 +29,7 @@ Resources:
       Items:
         - Product: !Ref dct-accel-coaching
         - Product: !Ref dct-vip-community
-        - Product: !Ref dct-resources
+        - Product: !Ref dct-accel-resources
       PricingPlans:
         - !Ref dct-accel-pif
         - !Ref dct-accel-split
@@ -44,7 +44,7 @@ Resources:
       Items:
         - Product: !Ref dct-inner-coaching
         - Product: !Ref dct-inner-community
-        - Product: !Ref dct-resources
+        - Product: !Ref dct-inner-resources
       PricingPlans:
         - !Ref dct-inner-pif
         - !Ref dct-inner-split
@@ -242,6 +242,116 @@ Resources:
       Name: "Deal Coaching Resource Library"
       ProductType: page
       Description: "Templates, contracts, and resources for all coaching clients"
+      Page:
+        Title: "Your Resource Library"
+        Content: |
+          ## Welcome to Your Resource Library!
+          
+          This page contains all the tools, templates, and resources you need to analyze and close deals.
+          
+          ---
+          
+          ## Deal Analysis Tools
+          
+          **[Deal Analyzer Spreadsheet](https://docs.google.com/spreadsheets/deal-analyzer)**
+          Comprehensive spreadsheet for analyzing wholesale, flip, and rental deals.
+          
+          **[Repair Cost Estimator](https://docs.google.com/spreadsheets/repair-estimator)**
+          Detailed repair cost calculator with line items for common rehab projects.
+          
+          **[Rental Property Calculator](https://docs.google.com/spreadsheets/rental-calc)**
+          Cash flow analysis tool for buy-and-hold investments.
+          
+          ---
+          
+          ## Contract Templates
+          
+          **[Purchase Agreement Template](https://docs.google.com/document/purchase-agreement)**
+          Standard purchase agreement for acquiring properties.
+          
+          **[Assignment Contract Template](https://docs.google.com/document/assignment-contract)**
+          For wholesale assignments to your buyers.
+          
+          **[JV Agreement Template](https://docs.google.com/document/jv-agreement)**
+          Joint venture agreement for partnership deals.
+          
+          ---
+          
+          ## Scripts & Guides
+          
+          **[Seller Call Script](https://docs.google.com/document/seller-script)**
+          Word-for-word script for talking to motivated sellers.
+          
+          **[Negotiation Playbook](https://docs.google.com/document/negotiation)**
+          Tactics for negotiating better deals with sellers.
+          
+          ---
+          
+          ## Questions?
+          
+          Contact us at support@reicoachingpro.com
+
+  dct-accel-resources:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Accelerator Resource Library"
+      ProductType: page
+      Description: "Templates, contracts, and resources for Accelerator coaching clients"
+      Page:
+        Title: "Your Resource Library"
+        Content: |
+          ## Welcome to Your Resource Library!
+          
+          This page contains all the tools, templates, and resources you need to analyze and close deals.
+          
+          ---
+          
+          ## Deal Analysis Tools
+          
+          **[Deal Analyzer Spreadsheet](https://docs.google.com/spreadsheets/deal-analyzer)**
+          Comprehensive spreadsheet for analyzing wholesale, flip, and rental deals.
+          
+          **[Repair Cost Estimator](https://docs.google.com/spreadsheets/repair-estimator)**
+          Detailed repair cost calculator with line items for common rehab projects.
+          
+          **[Rental Property Calculator](https://docs.google.com/spreadsheets/rental-calc)**
+          Cash flow analysis tool for buy-and-hold investments.
+          
+          ---
+          
+          ## Contract Templates
+          
+          **[Purchase Agreement Template](https://docs.google.com/document/purchase-agreement)**
+          Standard purchase agreement for acquiring properties.
+          
+          **[Assignment Contract Template](https://docs.google.com/document/assignment-contract)**
+          For wholesale assignments to your buyers.
+          
+          **[JV Agreement Template](https://docs.google.com/document/jv-agreement)**
+          Joint venture agreement for partnership deals.
+          
+          ---
+          
+          ## Scripts & Guides
+          
+          **[Seller Call Script](https://docs.google.com/document/seller-script)**
+          Word-for-word script for talking to motivated sellers.
+          
+          **[Negotiation Playbook](https://docs.google.com/document/negotiation)**
+          Tactics for negotiating better deals with sellers.
+          
+          ---
+          
+          ## Questions?
+          
+          Contact us at support@reicoachingpro.com
+
+  dct-inner-resources:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Inner Circle Resource Library"
+      ProductType: page
+      Description: "Templates, contracts, and resources for Inner Circle coaching clients"
       Page:
         Title: "Your Resource Library"
         Content: |
