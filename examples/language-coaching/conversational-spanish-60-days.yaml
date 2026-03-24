@@ -1,0 +1,3170 @@
+EvolyntVersion: "1.0"
+
+Resources:
+  # ============================================
+  # 🎁 OFFERS
+  # ============================================
+  spanish-starter-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Spanish Starter Kit"
+      Description: "100+ essential phrases, pronunciation cheat sheet, and daily practice guide - your first step to conversational Spanish"
+      DefaultPortal: !Ref spanish-starter-portal
+      Items:
+        - Product: !Ref spanish-starter-kit
+      PricingPlans:
+        - !Ref spanish-starter-price
+
+  spanish-community-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "Habla Community"
+      Description: "Monthly membership with daily practice sessions, weekly group conversation calls, and immersion accountability"
+      DefaultPortal: !Ref spanish-starter-portal
+      OnboardingFlowSlug: !Ref spanish-community-onboarding
+      Items:
+        - Product: !Ref spanish-community
+        - Product: !Ref spanish-community-resources
+      PricingPlans:
+        - !Ref spanish-community-monthly
+
+  spanish-course-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "60-Day Spanish Fluency Accelerator"
+      Description: "The complete 8-week system to go from zero to conversational Spanish with structured lessons, practice frameworks, and student community"
+      DefaultPortal: !Ref spanish-student-portal
+      OnboardingFlowSlug: !Ref spanish-community-onboarding
+      Items:
+        - Product: !Ref spanish-accelerator-course
+        - Product: !Ref spanish-student-community
+        - Product: !Ref spanish-student-resources
+      PricingPlans:
+        - !Ref spanish-course-pif
+        - !Ref spanish-course-split
+
+  spanish-coaching-offer:
+    Type: Evolynt::Commerce::Offer
+    Properties:
+      Name: "1:1 Spanish Mastery Coaching"
+      Description: "Personalized coaching with 12 private sessions, immersion strategy, community access, and full resource library"
+      DefaultPortal: !Ref spanish-coaching-portal
+      OnboardingFlowSlug: !Ref spanish-coaching-onboarding
+      Items:
+        - Product: !Ref spanish-coaching-sessions
+        - Product: !Ref spanish-coaching-community
+        - Product: !Ref spanish-coaching-resources
+      PricingPlans:
+        - !Ref spanish-coaching-pif
+        - !Ref spanish-coaching-split
+
+  # ============================================
+  # 📦 PRODUCTS
+  # ============================================
+  spanish-starter-kit:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Spanish Starter Kit"
+      ProductType: page
+      Description: "100+ essential phrases, pronunciation guide, and daily practice checklist"
+      Page:
+        Title: "Your Spanish Starter Kit"
+        Content: |
+          ## Welcome to Your Spanish Starter Kit!
+          
+          You just took the first step toward conversational Spanish. Here are your resources.
+          
+          ---
+          
+          ## Download Your Resources
+          
+          **[100+ Essential Spanish Phrases (PDF)](https://drive.google.com/your-phrases-pdf)**
+          The exact phrases you need for real conversations, organized by situation.
+          
+          **[Pronunciation Cheat Sheet (PDF)](https://drive.google.com/your-pronunciation-pdf)**
+          Master Spanish pronunciation with this visual guide to every sound.
+          
+          **[Daily Practice Checklist (PDF)](https://drive.google.com/your-checklist-pdf)**
+          A simple 15-minute daily routine to build your Spanish habit.
+          
+          ---
+          
+          ## Quick Start Video
+          
+          Watch this 10-minute walkthrough to get the most out of your Starter Kit.
+          
+          ---
+          
+          ## How to Use These Resources
+          
+          1. **Start with the Pronunciation Cheat Sheet** to nail the sounds
+          2. **Learn 5 phrases per day** from the Essential Phrases guide
+          3. **Follow the Daily Practice Checklist** every morning
+          4. **Say everything out loud** - reading silently does not build speaking skills
+          
+          ---
+          
+          ## Ready for More?
+          
+          If you want daily practice partners, weekly group conversation sessions, and an immersion environment, check out the Habla Community.
+          
+          ---
+          
+          ## Questions?
+          
+          Email us at support@hablaespanol.com
+
+  spanish-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Habla Community"
+      ProductType: community
+      Description: "Private Spanish immersion community with daily practice and weekly group calls"
+      Community:
+        Name: "Habla Community"
+        Description: "Your daily Spanish immersion environment with practice partners and live conversation sessions"
+        Spaces:
+          - Name: "Bienvenidos"
+            Slug: bienvenidos
+            Description: "Introduce yourself and share your Spanish goals"
+            Order: 1
+          - Name: "Daily Practice"
+            Slug: daily-practice
+            Description: "Post your daily practice log and practice prompts"
+            Order: 2
+          - Name: "Wins & Progress"
+            Slug: wins
+            Description: "Share your breakthroughs and victories"
+            Order: 3
+          - Name: "Q&A"
+            Slug: qa
+            Description: "Ask grammar questions and get help from the community"
+            Order: 4
+          - Name: "Study Partners"
+            Slug: study-partners
+            Description: "Find a practice partner for conversation sessions"
+            Order: 5
+          - Name: "Resources"
+            Slug: resources
+            Description: "Shared podcasts, music, shows, and learning tools"
+            Order: 6
+        Events:
+          - Title: "Weekly Group Conversation Practice"
+            Description: "Live conversation practice session in Spanish. All levels welcome. We break into small groups for maximum speaking time."
+            StartAt: "2025-02-05T19:00:00-05:00"
+            EndAt: "2025-02-05T20:00:00-05:00"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/habla-weekly"
+            HostUserEmail: "coach@hablaespanol.com"
+            RecurrenceRule:
+              Frequency: weekly
+              Interval: 1
+              DaysOfWeek: [3]
+              EndType: never
+
+  spanish-student-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Accelerator Student Community"
+      ProductType: community
+      Description: "Private community for 60-Day Accelerator students"
+      Community:
+        Name: "Accelerator Students"
+        Description: "Your cohort of fellow 60-Day Accelerator students"
+        Spaces:
+          - Name: "Bienvenidos"
+            Slug: bienvenidos
+            Description: "Introduce yourself and share your goals"
+            Order: 1
+          - Name: "Daily Practice"
+            Slug: daily-practice
+            Description: "Post your daily practice log"
+            Order: 2
+          - Name: "Wins & Progress"
+            Slug: wins
+            Description: "Celebrate your breakthroughs"
+            Order: 3
+          - Name: "Q&A"
+            Slug: qa
+            Description: "Ask questions about the course material"
+            Order: 4
+          - Name: "Study Partners"
+            Slug: study-partners
+            Description: "Find a conversation practice partner"
+            Order: 5
+        Events:
+          - Title: "Weekly Student Q&A Call"
+            Description: "Live Q&A for Accelerator students. Bring your questions about the course material and practice challenges."
+            StartAt: "2025-02-06T19:00:00-05:00"
+            EndAt: "2025-02-06T20:00:00-05:00"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/habla-student-qa"
+            HostUserEmail: "coach@hablaespanol.com"
+            RecurrenceRule:
+              Frequency: weekly
+              Interval: 1
+              DaysOfWeek: [4]
+              EndType: never
+
+  spanish-coaching-community:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Coaching Client Community"
+      ProductType: community
+      Description: "Private community for coaching clients"
+      Community:
+        Name: "Spanish Mastery Circle"
+        Description: "Exclusive community for 1:1 coaching clients"
+        Spaces:
+          - Name: "Bienvenidos"
+            Slug: bienvenidos
+            Description: "Introduce yourself"
+            Order: 1
+          - Name: "Daily Practice"
+            Slug: daily-practice
+            Description: "Daily practice logs and immersion updates"
+            Order: 2
+          - Name: "Wins & Progress"
+            Slug: wins
+            Description: "Share your breakthroughs"
+            Order: 3
+          - Name: "Q&A"
+            Slug: qa
+            Description: "Direct access to coach for questions"
+            Order: 4
+          - Name: "Study Partners"
+            Slug: study-partners
+            Description: "Connect with other coaching clients for practice"
+            Order: 5
+        Events:
+          - Title: "Weekly Group Conversation Practice"
+            Description: "Live conversation practice for coaching clients. Small group format for maximum speaking time."
+            StartAt: "2025-02-05T19:00:00-05:00"
+            EndAt: "2025-02-05T20:00:00-05:00"
+            LocationType: virtual
+            MeetingUrl: "https://zoom.us/j/habla-coaching-group"
+            HostUserEmail: "coach@hablaespanol.com"
+            RecurrenceRule:
+              Frequency: weekly
+              Interval: 1
+              DaysOfWeek: [3]
+              EndType: never
+
+  spanish-accelerator-course:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "60-Day Spanish Fluency Accelerator"
+      ProductType: course
+      Description: "8-module course taking you from zero to conversational Spanish in 60 days"
+      Course:
+        Title: "60-Day Spanish Fluency Accelerator"
+        Description: "Your complete roadmap to conversational Spanish in just 60 days"
+        Modules:
+          - Title: "Welcome & Spanish Foundations"
+            Order: 1
+            Lessons:
+              - Title: "Welcome to the Accelerator"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_WELCOME"
+              - Title: "How to Use This Course for Maximum Results"
+                Order: 2
+                ContentType: text
+                TextContent: |
+                  Welcome to the 60-Day Spanish Fluency Accelerator!
+                  
+                  Here is how this program works:
+                  
+                  **The 60-Day Structure:**
+                  - 8 modules across 8 weeks (roughly 2-week phases)
+                  - Each module builds on the previous one
+                  - Do NOT skip ahead. The progression is intentional.
+                  
+                  **Your Daily Commitment:**
+                  - 30 minutes of structured lessons
+                  - 15 minutes of speaking practice (out loud!)
+                  - 15 minutes of immersion (music, podcasts, or shows)
+                  
+                  **Keys to Success:**
+                  1. Speak out loud from Day 1. Do not just read silently.
+                  2. Practice every single day. Consistency beats intensity.
+                  3. Post in the community daily for accountability.
+                  4. Find a practice partner in the Study Partners space.
+                  5. Attend the weekly Q&A calls.
+                  
+                  **Progress Tracking:**
+                  - Record a 30-second video of yourself speaking Spanish on Day 1
+                  - Record again at Day 30 and Day 60
+                  - You will be amazed at the difference
+                  
+                  Let's get started!
+              - Title: "The Spanish Sound System"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_SOUNDS"
+              - Title: "Your First 20 Words"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_FIRST_WORDS"
+              - Title: "The Mindset of a Language Learner"
+                Order: 5
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_MINDSET"
+          - Title: "Week 1-2: Essential Building Blocks"
+            Order: 2
+            Lessons:
+              - Title: "Greetings & Introductions"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_GREETINGS"
+              - Title: "Numbers, Days, and Time"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_NUMBERS"
+              - Title: "Essential Verbs: Ser, Estar, Tener, Ir"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_VERBS_1"
+              - Title: "Building Simple Sentences"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_SENTENCES"
+              - Title: "Practice: Your First Conversation"
+                Order: 5
+                ContentType: text
+                TextContent: |
+                  ## Practice Exercise: Your First Conversation
+                  
+                  **Goal:** Hold a 2-minute conversation introducing yourself
+                  
+                  **Practice Script:**
+                  
+                  A: Hola, me llamo [your name]. Mucho gusto.
+                  B: Hola, me llamo [name]. Mucho gusto tambien.
+                  A: Soy de [your city]. Y tu, de donde eres?
+                  B: Soy de [city].
+                  A: Que haces? (What do you do?)
+                  B: Soy [profession]. Y tu?
+                  A: Soy [profession].
+                  
+                  **Your Assignment:**
+                  1. Practice this script out loud 5 times
+                  2. Record yourself doing it
+                  3. Find a partner in the Study Partners space and practice live
+                  4. Post your recording in the Daily Practice space
+          - Title: "Week 3-4: Everyday Conversations"
+            Order: 3
+            Lessons:
+              - Title: "Ordering Food & Drinks"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_FOOD"
+              - Title: "Asking for Directions"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_DIRECTIONS"
+              - Title: "Shopping & Negotiating Prices"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_SHOPPING"
+              - Title: "Present Tense Mastery"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_PRESENT_TENSE"
+              - Title: "Practice: Real-World Scenarios"
+                Order: 5
+                ContentType: text
+                TextContent: |
+                  ## Practice Exercise: Real-World Scenarios
+                  
+                  **Goal:** Navigate 3 everyday situations entirely in Spanish
+                  
+                  **Scenario 1: At a Restaurant**
+                  Practice ordering a meal, asking about the menu, and requesting the check.
+                  
+                  **Scenario 2: Getting Directions**
+                  Practice asking how to get to the library, the market, and the bus stop.
+                  
+                  **Scenario 3: At a Store**
+                  Practice asking for prices, sizes, and colors.
+                  
+                  **Your Assignment:**
+                  1. Write out your responses for each scenario
+                  2. Practice speaking them out loud
+                  3. Role-play with a study partner on a video call
+                  4. Post about your experience in Daily Practice
+          - Title: "Week 5-6: Expanding Your World"
+            Order: 4
+            Lessons:
+              - Title: "Talking About the Past (Preterite)"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_PAST_TENSE"
+              - Title: "Talking About the Future"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_FUTURE"
+              - Title: "Sharing Opinions & Preferences"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_OPINIONS"
+              - Title: "Storytelling in Spanish"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_STORYTELLING"
+              - Title: "Practice: Tell Your Story"
+                Order: 5
+                ContentType: text
+                TextContent: |
+                  ## Practice Exercise: Tell Your Story
+                  
+                  **Goal:** Tell a 3-minute story about yourself in Spanish
+                  
+                  **Structure:**
+                  
+                  1. **Your past:** Where you grew up, what you studied, a memorable experience
+                  2. **Your present:** What you do now, what you enjoy, why you are learning Spanish
+                  3. **Your future:** What you want to do, where you want to travel, your goals
+                  
+                  **Your Assignment:**
+                  1. Write out your story (it is okay to look up words)
+                  2. Practice telling it without reading
+                  3. Record a 3-minute video of yourself telling your story
+                  4. Share it in the Wins space. This is a major milestone!
+          - Title: "Week 7-8: Real-World Fluency"
+            Order: 5
+            Lessons:
+              - Title: "Phone Calls & Video Chats in Spanish"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_PHONE"
+              - Title: "Slang, Fillers, and Sounding Natural"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_SLANG"
+              - Title: "Understanding Native Speakers at Full Speed"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_NATIVE_SPEED"
+              - Title: "Cultural Context & Regional Differences"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_CULTURE"
+              - Title: "Practice: 10-Minute Conversation Challenge"
+                Order: 5
+                ContentType: text
+                TextContent: |
+                  ## Practice Exercise: The 10-Minute Conversation Challenge
+                  
+                  **Goal:** Hold a 10-minute unscripted conversation entirely in Spanish
+                  
+                  **Rules:**
+                  - No English allowed
+                  - If you do not know a word, describe it in Spanish
+                  - Use filler words (bueno, pues, a ver) to stay in the flow
+                  - It is okay to make mistakes. Keep talking.
+                  
+                  **Suggested Topics:**
+                  - Your weekend plans
+                  - A trip you took recently
+                  - Your favorite movie or show
+                  - What you would do with a million dollars
+                  
+                  **Your Assignment:**
+                  1. Find a partner in Study Partners
+                  2. Set a timer for 10 minutes
+                  3. Talk about anything. Stay in Spanish the entire time.
+                  4. Post about the experience in Wins
+                  
+                  If you can do this, you are conversational. Congratulations!
+          - Title: "Immersion Techniques"
+            Order: 6
+            Lessons:
+              - Title: "Building Your Spanish Media Diet"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_MEDIA"
+              - Title: "Music & Podcasts for Language Learning"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_MUSIC"
+              - Title: "Shows, Movies & YouTube in Spanish"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_SHOWS"
+              - Title: "Thinking in Spanish (The Ultimate Skill)"
+                Order: 4
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_THINKING"
+          - Title: "Conversation Practice Frameworks"
+            Order: 7
+            Lessons:
+              - Title: "The 5 Conversation Frameworks"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_FRAMEWORKS"
+              - Title: "Role-Play Scripts for Every Situation"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_ROLEPLAY"
+              - Title: "How to Keep a Conversation Going"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_KEEP_GOING"
+              - Title: "Conversation Starters & Icebreakers"
+                Order: 4
+                ContentType: text
+                TextContent: |
+                  ## 30 Conversation Starters in Spanish
+                  
+                  Use these to start conversations with native speakers or practice partners:
+                  
+                  **Getting to Know Someone:**
+                  1. De donde eres? (Where are you from?)
+                  2. A que te dedicas? (What do you do for a living?)
+                  3. Que te gusta hacer en tu tiempo libre? (What do you like to do in your free time?)
+                  4. Tienes hermanos? (Do you have siblings?)
+                  5. Cual es tu comida favorita? (What is your favorite food?)
+                  
+                  **Opinions & Preferences:**
+                  6. Que piensas de...? (What do you think about...?)
+                  7. Prefieres... o...? (Do you prefer... or...?)
+                  8. Cual fue la ultima pelicula que viste? (What was the last movie you watched?)
+                  9. Te gusta viajar? A donde? (Do you like to travel? Where?)
+                  10. Que tipo de musica te gusta? (What kind of music do you like?)
+                  
+                  **Deeper Conversations:**
+                  11. Si pudieras vivir en cualquier pais, cual seria? (If you could live in any country, which would it be?)
+                  12. Cual es tu recuerdo favorito? (What is your favorite memory?)
+                  13. Que quieres hacer el proximo ano? (What do you want to do next year?)
+                  14. Que es lo mas interesante que has aprendido? (What is the most interesting thing you have learned?)
+                  15. Como te describirias en tres palabras? (How would you describe yourself in three words?)
+                  
+                  **Practice:** Pick 5 of these and practice answering them in Spanish. Then use them with a conversation partner this week.
+          - Title: "Maintaining & Growing Your Spanish"
+            Order: 8
+            Lessons:
+              - Title: "Your Post-Program Practice Plan"
+                Order: 1
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_POST_PLAN"
+              - Title: "Moving from Conversational to Fluent"
+                Order: 2
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_FLUENT"
+              - Title: "Finding Native Speakers to Practice With"
+                Order: 3
+                ContentType: video
+                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_NATIVE_PRACTICE"
+              - Title: "Congratulations & Next Steps"
+                Order: 4
+                ContentType: text
+                TextContent: |
+                  ## Congratulations! You Did It!
+                  
+                  You have completed the 60-Day Spanish Fluency Accelerator.
+                  
+                  60 days ago, you could not hold a conversation in Spanish. Now you can.
+                  
+                  **What You Have Accomplished:**
+                  - Mastered essential grammar and vocabulary
+                  - Built the habit of daily Spanish practice
+                  - Held real conversations with real people
+                  - Developed listening skills for native speakers
+                  - Created an immersion environment in your daily life
+                  
+                  **Record Your Day 60 Video:**
+                  Remember the 30-second video you recorded on Day 1? Record a new one. Compare them. Share it in the Wins space.
+                  
+                  **What Is Next:**
+                  - Continue your daily immersion practice
+                  - Stay active in the community
+                  - Find native speakers to practice with regularly
+                  - Consider 1:1 coaching for personalized acceleration
+                  
+                  Your Spanish journey is not over. It is just beginning. But now you have the foundation and the confidence to keep growing.
+                  
+                  Felicidades!
+
+  spanish-coaching-sessions:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "1:1 Spanish Mastery Coaching Sessions"
+      ProductType: coaching
+      Description: "12 private coaching sessions with personalized curriculum and immersion strategy"
+      Coaching:
+        Title: "Spanish Mastery Coaching Session"
+        Description: "45-minute private coaching call with conversation practice, grammar correction, and personalized study plan adjustments"
+        Quantity: 12
+        BookingLink: !Ref spanish-coaching-session
+        ExpirationDays: 120
+
+  spanish-community-resources:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Member Resources"
+      ProductType: page
+      Description: "Shared resources for all members"
+      Page:
+        Title: "Member Resources"
+        Content: |
+          ## Welcome to Your Resources
+          
+          This page contains resources available to all members.
+          
+          ### Quick Links
+          
+          - **Starter Kit Buyers:** Start with the pronunciation guide and learn 5 phrases per day
+          - **Community Members:** Join the weekly conversation practice (Wednesdays 7pm ET)
+          - **Course Students:** Follow the course modules in order and attend Thursday Q&A
+          - **Coaching Clients:** Book your sessions and engage in the community daily
+          
+          ### Weekly Schedule
+          
+          **Wednesday 7pm ET** - Weekly Group Conversation Practice (Community & Coaching members)
+          **Thursday 7pm ET** - Student Q&A Call (Course students)
+          
+          ### Recommended Tools
+          
+          - **Anki** - Flashcard app for vocabulary review
+          - **SpanishPod101** - Supplementary podcast lessons
+          - **Netflix** - Change audio/subtitles to Spanish on shows you already know
+          - **Language Exchange Apps** - Find native speakers to practice with
+          
+          ### Questions?
+          
+          - Post in the Q&A community space
+          - Email support@hablaespanol.com
+
+  spanish-student-resources:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Student Resources"
+      ProductType: page
+      Description: "Shared resources for course students"
+      Page:
+        Title: "Member Resources"
+        Content: |
+          ## Welcome to Your Resources
+          
+          This page contains resources available to all members.
+          
+          ### Quick Links
+          
+          - **Starter Kit Buyers:** Start with the pronunciation guide and learn 5 phrases per day
+          - **Community Members:** Join the weekly conversation practice (Wednesdays 7pm ET)
+          - **Course Students:** Follow the course modules in order and attend Thursday Q&A
+          - **Coaching Clients:** Book your sessions and engage in the community daily
+          
+          ### Weekly Schedule
+          
+          **Wednesday 7pm ET** - Weekly Group Conversation Practice (Community & Coaching members)
+          **Thursday 7pm ET** - Student Q&A Call (Course students)
+          
+          ### Recommended Tools
+          
+          - **Anki** - Flashcard app for vocabulary review
+          - **SpanishPod101** - Supplementary podcast lessons
+          - **Netflix** - Change audio/subtitles to Spanish on shows you already know
+          - **Language Exchange Apps** - Find native speakers to practice with
+          
+          ### Questions?
+          
+          - Post in the Q&A community space
+          - Email support@hablaespanol.com
+
+  spanish-coaching-resources:
+    Type: Evolynt::Commerce::Product
+    Properties:
+      Name: "Coaching Resources"
+      ProductType: page
+      Description: "Exclusive resources for coaching clients"
+      Page:
+        Title: "Coaching Resources"
+        Content: |
+          ## Your Coaching Resources
+          
+          Welcome to your exclusive coaching resource library.
+          
+          ### Personalized Materials
+          
+          **[Custom Study Plan Template](https://docs.google.com/your-study-plan)**
+          Your coach will customize this plan for your goals and schedule.
+          
+          **[Progress Tracker](https://docs.google.com/your-progress-tracker)**
+          Track vocabulary, grammar milestones, and conversation confidence.
+          
+          **[Session Prep Worksheet](https://docs.google.com/your-session-prep)**
+          Fill this out before each coaching session for maximum value.
+          
+          ### Immersion Resources
+          
+          **[Curated Podcast List by Level](https://docs.google.com/your-podcasts)**
+          Hand-picked podcasts organized by difficulty.
+          
+          **[Spanish Shows & Movies Guide](https://docs.google.com/your-shows)**
+          What to watch and how to watch it for learning.
+          
+          **[Conversation Partner Guide](https://docs.google.com/your-partner-guide)**
+          How to find and structure practice sessions with native speakers.
+          
+          ### Questions?
+          
+          Post in the coaching community Q&A space or email your coach directly.
+
+  # ============================================
+  # 💰 PRICING PLANS
+  # ============================================
+  spanish-starter-price:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Spanish Starter Kit"
+      Description: "One-time payment for instant access"
+      Amount: 4700
+      Currency: USD
+      BillingType: one_time
+
+  spanish-community-monthly:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "Habla Community - Monthly"
+      Description: "Monthly membership to Habla Community"
+      Amount: 9700
+      Currency: USD
+      BillingType: subscription
+      BillingInterval: monthly
+
+  spanish-course-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "60-Day Accelerator - Pay in Full"
+      Description: "One-time payment for full course access"
+      Amount: 99700
+      Currency: USD
+      BillingType: one_time
+
+  spanish-course-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "60-Day Accelerator - 3 Payments"
+      Description: "Split into 3 monthly payments"
+      Amount: 119100
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  spanish-coaching-pif:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "1:1 Coaching - Pay in Full"
+      Description: "One-time payment for coaching program"
+      Amount: 300000
+      Currency: USD
+      BillingType: one_time
+
+  spanish-coaching-split:
+    Type: Evolynt::Commerce::PricingPlan
+    Properties:
+      Name: "1:1 Coaching - 3 Payments"
+      Description: "Split into 3 monthly payments"
+      Amount: 359100
+      Currency: USD
+      BillingType: split_pay
+      BillingInterval: monthly
+      NumberOfPayments: 3
+
+  # ============================================
+  # 🚀 FUNNELS
+  # ============================================
+  spanish-value-ladder-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Spanish Starter Kit Sales Page"
+      Description: "Low-ticket entry funnel with course upsell"
+      Steps:
+        - Name: "Sales Page"
+          Slug: sales
+          Order: 1
+          Sections:
+            - Order: 1
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Finally Speak Spanish With Confidence (Without Years of Boring Textbooks)"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Get 100+ essential phrases, a pronunciation cheat sheet, and a daily practice plan to start speaking from Day 1"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=HABLA_VSL_PLACEHOLDER"
+                            Provider: youtube
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: checkout
+                          Order: 1
+                          Content:
+                            OfferSlug: !Ref spanish-starter-offer
+                            PricingPlanSlug: !Ref spanish-starter-price
+                            ButtonText: "Get Instant Access - $47"
+            - Order: 2
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Sound familiar?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You have wanted to learn Spanish for years. Maybe decades.
+                              
+                              You have tried apps. You did the lessons for a few weeks, then life got busy.
+                              
+                              You took a class in school but cannot remember anything beyond "Hola" and "Donde esta el bano?"
+                              
+                              You dream about traveling to Spain, Mexico, or South America and actually talking to people. Not pointing at a menu. Not fumbling through Google Translate.
+                              
+                              But every time you try, it feels overwhelming. Too many verb conjugations. Too much grammar. Too little speaking practice.
+                              
+                              **The problem is not your ability. It is the approach.**
+            - Order: 3
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Here is what you get:"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Your Spanish Starter Kit includes everything you need to begin speaking immediately:
+                              
+                              ✓ **100+ Essential Spanish Phrases** (Value: $47)
+                              The exact phrases you need for real conversations, organized by situation. Restaurants, directions, introductions, shopping, and more.
+                              
+                              ✓ **Pronunciation Cheat Sheet** (Value: $27)
+                              Master every Spanish sound with this visual guide. You will sound natural from Day 1.
+                              
+                              ✓ **Daily Practice Checklist** (Value: $27)
+                              A simple 15-minute daily routine that builds your speaking habit. No willpower required.
+                              
+                              ✓ **Quick Start Video Tutorial** (Value: $47)
+                              A 10-minute walkthrough showing you exactly how to use these resources for fastest results.
+                              
+                              **Total Value: $148**
+                              
+                              **Your Investment: Just $47**
+            - Order: 4
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: text
+                          Order: 1
+                          Content:
+                            Text: "\"I bought this before a trip to Mexico and was shocked at how much I could actually communicate. The phrase guide is incredibly practical.\" - Sarah M., 38"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "\"After years of apps that taught me to translate sentences I would never say, this was a breath of fresh air. Real phrases for real situations.\" - James L., 45"
+            - Order: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Stop Dreaming About Speaking Spanish. Start Today."
+                        - Type: checkout
+                          Order: 2
+                          Content:
+                            OfferSlug: !Ref spanish-starter-offer
+                            PricingPlanSlug: !Ref spanish-starter-price
+                            ButtonText: "Get Instant Access - $47"
+        - Name: "Thank You"
+          Slug: thank-you
+          Order: 2
+          Sections:
+            - Order: 1
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "You Are In! Check Your Email."
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=HABLA_THANKYOU_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Check your email for login details to access your Starter Kit.
+                              
+                              **Your first step:** Download the Pronunciation Cheat Sheet and practice the first 5 phrases out loud today.
+                              
+                              Remember: say everything out loud. Reading silently does not build speaking skills.
+                              
+                              Nos vemos! (See you!)
+
+  spanish-coaching-funnel:
+    Type: Evolynt::Funnel::Funnel
+    Properties:
+      Name: "Spanish Mastery Coaching Application"
+      Description: "High-ticket application funnel for 1:1 coaching"
+      Steps:
+        - Name: "Learn More"
+          Slug: interest
+          Order: 1
+          Sections:
+            - Order: 1
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Speak Conversational Spanish in 60 Days With a Personal Coach"
+                        - Type: subheadline
+                          Order: 2
+                          Content:
+                            Text: "Personalized 1:1 coaching with a proven system that has helped hundreds break through the fear of speaking"
+                        - Type: video
+                          Order: 3
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=HABLA_COACHING_VSL"
+                            Provider: youtube
+            - Order: 2
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Are you stuck in the 'studying but not speaking' trap?"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You know grammar rules. You have done the app lessons. You can read Spanish menus.
+                              
+                              But when a native speaker talks to you, you freeze. Your mind goes blank. You switch back to English.
+                              
+                              The gap between "knowing Spanish" and "speaking Spanish" feels impossible to cross on your own.
+                              
+                              **That is exactly what 1:1 coaching solves.**
+                              
+                              With a personal coach, you get real conversation practice, instant correction, and a curriculum built around YOUR goals. Whether you need Spanish for travel, work, family, or personal fulfillment.
+            - Order: 3
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "This is for you if:"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              **This IS for you if:**
+                              ✓ You are serious about becoming conversational in Spanish
+                              ✓ You want personalized attention, not a one-size-fits-all program
+                              ✓ You are willing to practice 30-60 minutes daily
+                              ✓ You value having an expert guide your learning path
+                              ✓ You have a specific reason to learn (travel, family, career, personal growth)
+                              
+                              **This is NOT for you if:**
+                              ✗ You are looking for the cheapest option
+                              ✗ You are not willing to speak out loud and make mistakes
+                              ✗ You want to "learn someday" but not commit now
+            - Order: 4
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "What you get with 1:1 Spanish Mastery Coaching:"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              **12 Private Coaching Sessions**
+                              45-minute 1:1 calls where you practice real conversation, get instant corrections, and build confidence speaking.
+                              
+                              **Personalized Curriculum**
+                              Your study plan built around your goals, schedule, and current level. No wasted time on things you already know.
+                              
+                              **Immersion Strategy**
+                              A custom plan for surrounding yourself with Spanish through music, podcasts, shows, and daily habits.
+                              
+                              **Private Community Access**
+                              Connect with other coaching clients for practice, accountability, and support.
+                              
+                              **Full Resource Library**
+                              Every tool, guide, and framework you need to accelerate your learning.
+            - Order: 5
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Ready to Finally Speak Spanish?"
+                        - Type: button
+                          Order: 2
+                          Content:
+                            Text: "Apply for Coaching"
+                            Action: next_step
+        - Name: "Apply"
+          Slug: apply
+          Order: 2
+          Sections:
+            - Order: 1
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Apply for 1:1 Spanish Mastery Coaching"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Thanks for your interest! Please answer a few questions so I can understand your situation and goals.
+                              
+                              **This takes about 3 minutes.**
+            - Order: 2
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: form
+                          Order: 1
+                          Content:
+                            FormSlug: !Ref spanish-coaching-application
+                            OnSuccess:
+                              Action: next_step
+        - Name: "Book Your Call"
+          Slug: book
+          Order: 3
+          Sections:
+            - Order: 1
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Application Received! Let's Talk."
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=HABLA_BOOKING_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              **Next Step: Book Your Strategy Call**
+                              
+                              On this 30-minute call, we will:
+                              
+                              ✓ Discuss your Spanish goals and timeline
+                              ✓ Assess your current level
+                              ✓ Create a personalized learning roadmap
+                              ✓ Determine if 1:1 coaching is the right fit
+                              
+                              No pressure. Just an honest conversation about your goals.
+            - Order: 2
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: subheadline
+                          Order: 1
+                          Content:
+                            Text: "Select a time that works for you:"
+                        - Type: booking_link
+                          Order: 2
+                          Content:
+                            BookingLinkSlug: !Ref spanish-strategy-call
+                            OnSuccess:
+                              Action: next_step
+        - Name: "You're Booked"
+          Slug: confirmed
+          Order: 4
+          Sections:
+            - Order: 1
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Your Strategy Call is Confirmed!"
+                        - Type: video
+                          Order: 2
+                          Content:
+                            Url: "https://www.youtube.com/watch?v=HABLA_CONFIRMED_PLACEHOLDER"
+                            Provider: youtube
+                        - Type: text
+                          Order: 3
+                          Content:
+                            Text: |
+                              Check your email for calendar details and Zoom link.
+                              
+                              **Before our call, think about:**
+                              
+                              1. Why do you want to learn Spanish? (Be specific)
+                              2. What have you tried before?
+                              3. How much time can you commit daily?
+                              4. What does success look like for you?
+                              5. Any trips or deadlines coming up?
+                              
+                              Nos vemos pronto! (See you soon!)
+
+  # ============================================
+  # 📋 FORMS
+  # ============================================
+  spanish-lead-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Spanish Lead Capture"
+      Description: "Capture leads for free resources"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your full name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@example.com"
+        - Type: custom
+          CustomFieldSlug: !Ref spanish-cf-level
+          Required: true
+      SubmitButton:
+        Text: "Get Free Resources"
+        BackgroundColor: "#dc2626"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  spanish-coaching-application:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Coaching Application"
+      Description: "Qualifying application for 1:1 Spanish Mastery Coaching"
+      Fields:
+        - Type: standard
+          FieldName: name
+          Required: true
+          Placeholder: "Your full name"
+        - Type: standard
+          FieldName: email
+          Required: true
+          Placeholder: "you@example.com"
+        - Type: standard
+          FieldName: phone
+          Required: true
+          Placeholder: "+1 (555) 123-4567"
+        - Type: custom
+          CustomFieldSlug: !Ref spanish-cf-level
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref spanish-cf-goals
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref spanish-cf-time-commitment
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref spanish-cf-challenge
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref spanish-cf-how-heard
+          Required: false
+      SubmitButton:
+        Text: "Submit Application"
+        BackgroundColor: "#dc2626"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  spanish-onboarding-form:
+    Type: Evolynt::Funnel::Form
+    Properties:
+      Name: "Client Intake"
+      Description: "Capture client details for personalized coaching"
+      Fields:
+        - Type: custom
+          CustomFieldSlug: !Ref spanish-cf-goals
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref spanish-cf-challenge
+          Required: true
+        - Type: custom
+          CustomFieldSlug: !Ref spanish-cf-time-commitment
+          Required: true
+      SubmitButton:
+        Text: "Complete Profile"
+        BackgroundColor: "#dc2626"
+        TextColor: "#ffffff"
+      Settings:
+        BackgroundColor: "#ffffff"
+        MaxWidth: 500
+        Padding: 24
+        BorderRadius: 8
+
+  # ============================================
+  # 🔧 CUSTOM FIELDS
+  # ============================================
+  spanish-cf-level:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What is your current Spanish level?"
+      FieldType: select
+      Options:
+        - "Complete beginner - I know almost nothing"
+        - "Some basics - I know common words and phrases"
+        - "Intermediate - I can read/write but struggle speaking"
+        - "Advanced - I can speak but want to improve fluency"
+      HelpText: "Be honest. This helps us customize your experience."
+
+  spanish-cf-goals:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "Why do you want to learn Spanish?"
+      FieldType: textarea
+      Placeholder: "Travel, family, career, personal growth..."
+      HelpText: "Be specific about what you want to achieve and why it matters to you"
+
+  spanish-cf-time-commitment:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "How much time can you commit to practice daily?"
+      FieldType: select
+      Options:
+        - "15-30 minutes per day"
+        - "30-60 minutes per day"
+        - "1-2 hours per day"
+        - "2+ hours per day"
+      HelpText: "Consistency matters more than volume"
+
+  spanish-cf-challenge:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "What is your biggest challenge with learning Spanish?"
+      FieldType: textarea
+      Placeholder: "Fear of speaking, grammar confusion, finding time to practice..."
+      HelpText: "This helps us address your specific blockers"
+
+  spanish-cf-how-heard:
+    Type: Evolynt::CRM::CustomField
+    Properties:
+      Label: "How did you hear about us?"
+      FieldType: select
+      Options:
+        - "Social Media"
+        - "Referral"
+        - "Google Search"
+        - "YouTube"
+        - "Podcast"
+        - "Other"
+
+  # ============================================
+  # 📅 BOOKING LINKS
+  # ============================================
+  spanish-strategy-call:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Strategy Call"
+      OwnerUserEmail: "coach@hablaespanol.com"
+      Description: "30-minute strategy call to discuss your Spanish goals and determine if 1:1 coaching is right for you"
+      DurationMinutes: 30
+      BufferAfterMinutes: 10
+      MinNoticeHours: 24
+      MaxAdvanceDays: 14
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  spanish-coaching-session:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Coaching Session"
+      OwnerUserEmail: "coach@hablaespanol.com"
+      Description: "45-minute private coaching session with conversation practice and curriculum review"
+      DurationMinutes: 45
+      BufferAfterMinutes: 15
+      MinNoticeHours: 24
+      MaxAdvanceDays: 30
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  spanish-office-hours:
+    Type: Evolynt::CRM::BookingLink
+    Properties:
+      Name: "Weekly Q&A"
+      OwnerUserEmail: "coach@hablaespanol.com"
+      Description: "Weekly community Q&A and conversation practice"
+      DurationMinutes: 60
+      MinNoticeHours: 1
+      MaxAdvanceDays: 7
+      CreateZoomMeeting: true
+      AutoConfirm: true
+
+  # ============================================
+  # 🌐 PORTALS
+  # ============================================
+  spanish-starter-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Habla Starter Portal"
+      Description: "Portal for starter kit and community members"
+      ThemeConfig:
+        PrimaryColor: "#dc2626"
+
+  spanish-student-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Habla Student Portal"
+      Description: "Portal for 60-Day Accelerator students"
+      ThemeConfig:
+        PrimaryColor: "#dc2626"
+
+  spanish-coaching-portal:
+    Type: Evolynt::Portal::Portal
+    Properties:
+      Name: "Habla Coaching Portal"
+      Description: "Portal for 1:1 coaching clients"
+      ThemeConfig:
+        PrimaryColor: "#dc2626"
+
+  # ============================================
+  # 📜 AGREEMENTS
+  # ============================================
+  spanish-community-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Community Agreement"
+      Title: "HABLA COMMUNITY MEMBERSHIP AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Community Agreement ("Agreement") is entered into between Habla Espanol LLC ("Company") and the undersigned member ("Member").
+        
+        ## 1. COMMUNITY RULES AND CONDUCT
+        
+        Member agrees to:
+        
+        - Treat all members with respect and encouragement
+        - Practice Spanish in good faith, embracing mistakes as part of learning
+        - Maintain a supportive, judgment-free environment
+        - Not spam, solicit, or promote unrelated products or services
+        - Report any disrespectful behavior
+        
+        Violation may result in removal without refund.
+        
+        ## 2. EDUCATIONAL DISCLAIMER
+        
+        Member acknowledges:
+        
+        - Results vary based on individual effort and consistency
+        - Company does not guarantee any specific level of fluency
+        - Member is responsible for their own practice and commitment
+        - The program provides tools and guidance, but success requires daily effort
+        
+        ## 3. ACKNOWLEDGMENT
+        
+        By signing, Member acknowledges they have read and agree to all terms.
+        
+        ---
+        
+        **Member Signature:**
+
+  spanish-coaching-agreement:
+    Type: Evolynt::CRM::Agreement
+    Properties:
+      Name: "Coaching Agreement"
+      Title: "SPANISH MASTERY COACHING AGREEMENT"
+      SignatureType: typed
+      CollectFields:
+        - Field: initials
+          Required: true
+      IncludeCompanySignature: true
+      Content: |
+        This Coaching Agreement ("Agreement") is entered into between Habla Espanol LLC ("Coach") and the undersigned client ("Client").
+        
+        ## 1. COACHING SCOPE
+        
+        Coach agrees to provide:
+        
+        - 12 private coaching sessions (45 minutes each)
+        - Personalized study plan and curriculum
+        - Community access and group practice sessions
+        - Resource library access
+        - Email support between sessions
+        
+        Sessions must be used within 120 days of purchase.
+        
+        ## 2. CLIENT EXPECTATIONS
+        
+        Client agrees to:
+        
+        - Practice Spanish daily (minimum 30 minutes)
+        - Come prepared to sessions with questions and practice updates
+        - Complete assigned exercises between sessions
+        - Communicate scheduling needs with 24-hour notice
+        - Actively participate in the community
+        
+        ## 3. PAYMENT AND REFUND TERMS
+        
+        - Payment is required before the first session
+        - Coaching fees are non-refundable once sessions begin
+        - Client must provide 24-hour notice to reschedule
+        - Missed sessions without notice cannot be rescheduled
+        
+        ## 4. DISCLAIMER
+        
+        Client acknowledges:
+        
+        - Results depend on individual effort and commitment
+        - Coach does not guarantee any specific fluency level
+        - Consistent daily practice is essential for progress
+        
+        ---
+        
+        **Client Signature:**
+
+  # ============================================
+  # 🎓 ONBOARDING FLOWS
+  # ============================================
+  spanish-community-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Community Onboarding"
+      Description: "Onboarding for community and course members"
+      Steps:
+        - Name: "Sign Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Order: 1
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Bienvenidos!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Welcome! Before you access the community, please review and sign our membership agreement.
+                              
+                              This covers community guidelines and expectations.
+                        - Type: agreement
+                          Order: 3
+                          Content:
+                            AgreementSlug: !Ref spanish-community-agreement
+                            OnSuccess:
+                              Action: next_step
+        - Name: "Complete Profile"
+          Slug: profile
+          Order: 2
+          Sections:
+            - Order: 1
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Tell Us About You"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Help us personalize your experience by sharing your goals."
+                        - Type: form
+                          Order: 3
+                          Content:
+                            FormSlug: !Ref spanish-onboarding-form
+                            OnSuccess:
+                              Action: next_step
+        - Name: "You're In!"
+          Slug: complete
+          Order: 3
+          Sections:
+            - Order: 1
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Estas Listo! (You Are Ready!)"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              Welcome! You now have full access.
+                              
+                              **Your first steps:**
+                              
+                              1. Introduce yourself in the Bienvenidos space
+                              2. Find a study partner in the Study Partners space
+                              3. Join the weekly conversation practice call
+                              4. Post your first daily practice log
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "Enter the Community"
+                            Action: next_step
+
+  spanish-coaching-onboarding:
+    Type: Evolynt::Portal::OnboardingFlow
+    Properties:
+      Name: "Coaching Onboarding"
+      Description: "Onboarding for coaching clients"
+      Steps:
+        - Name: "Sign Agreement"
+          Slug: agreement
+          Order: 1
+          Sections:
+            - Order: 1
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Welcome to Coaching!"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              I am excited to work with you on your Spanish journey!
+                              
+                              Before we begin, please review and sign the coaching agreement.
+                        - Type: agreement
+                          Order: 3
+                          Content:
+                            AgreementSlug: !Ref spanish-coaching-agreement
+                            OnSuccess:
+                              Action: next_step
+        - Name: "Client Intake"
+          Slug: intake
+          Order: 2
+          Sections:
+            - Order: 1
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Tell Me About Your Goals"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: "Please complete this intake so I can prepare your personalized curriculum."
+                        - Type: form
+                          Order: 3
+                          Content:
+                            FormSlug: !Ref spanish-onboarding-form
+                            OnSuccess:
+                              Action: next_step
+        - Name: "You're Ready!"
+          Slug: complete
+          Order: 3
+          Sections:
+            - Order: 1
+              Rows:
+                - Order: 1
+                  Columns:
+                    - Order: 1
+                      Elements:
+                        - Type: headline
+                          Order: 1
+                          Content:
+                            Text: "Vamos! (Let's Go!)"
+                        - Type: text
+                          Order: 2
+                          Content:
+                            Text: |
+                              You are all set!
+                              
+                              **What to do now:**
+                              
+                              1. Book your first coaching session
+                              2. Download the resources
+                              3. Introduce yourself in the community
+                              4. Start your daily practice routine
+                        - Type: button
+                          Order: 3
+                          Content:
+                            Text: "Enter Your Portal"
+                            Action: next_step
+
+  # ============================================
+  # 🔄 PIPELINES
+  # ============================================
+  spanish-customer-journey:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Customer Journey"
+      Description: "Track customers through the value ladder"
+      Stages:
+        - Name: "Lead"
+          Slug: lead
+          Order: 1
+          Description: "Captured lead"
+        - Name: "Starter Buyer"
+          Slug: starter-buyer
+          Order: 2
+          Description: "Purchased Starter Kit"
+        - Name: "Community Member"
+          Slug: community-member
+          Order: 3
+          Description: "Active Habla Community member"
+        - Name: "Course Student"
+          Slug: course-student
+          Order: 4
+          Description: "Enrolled in 60-Day Accelerator"
+        - Name: "Coaching Client"
+          Slug: coaching-client
+          Order: 5
+          Description: "Active 1:1 coaching client"
+
+  spanish-high-ticket-pipeline:
+    Type: Evolynt::CRM::Pipeline
+    Properties:
+      Name: "Coaching Sales"
+      Description: "Track coaching applicants"
+      Stages:
+        - Name: "Applied"
+          Slug: applied
+          Order: 1
+          Description: "Submitted application"
+        - Name: "Call Booked"
+          Slug: call-booked
+          Order: 2
+          Description: "Strategy call scheduled"
+        - Name: "Call Complete"
+          Slug: call-complete
+          Order: 3
+          Description: "Strategy call finished"
+        - Name: "Won"
+          Slug: won
+          Order: 4
+          Description: "Enrolled in coaching"
+        - Name: "Lost"
+          Slug: lost
+          Order: 5
+          Description: "Did not enroll"
+
+  # ============================================
+  # 🏷️ TAGS
+  # ============================================
+  spanish-tag-lead:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Lead"
+      Description: "Captured lead"
+
+  spanish-tag-starter-buyer:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Starter Buyer"
+      Description: "Purchased Spanish Starter Kit"
+
+  spanish-tag-community-member:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Community Member"
+      Description: "Active Habla Community member"
+
+  spanish-tag-course-student:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Course Student"
+      Description: "Enrolled in 60-Day Accelerator"
+
+  spanish-tag-course-complete:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Course Complete"
+      Description: "Completed the 60-Day Accelerator"
+
+  spanish-tag-coaching-client:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Coaching Client"
+      Description: "Active 1:1 coaching client"
+
+  spanish-tag-vip:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "VIP"
+      Description: "VIP customer"
+
+  spanish-tag-upsell-community:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Upsell - Community"
+      Description: "Ready for community upsell"
+
+  spanish-tag-upsell-course:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Upsell - Course"
+      Description: "Ready for course upsell"
+
+  spanish-tag-upsell-coaching:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Upsell - Coaching"
+      Description: "Ready for coaching upsell"
+
+  spanish-tag-engaged:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "Engaged"
+      Description: "Highly engaged customer"
+
+  spanish-tag-at-risk:
+    Type: Evolynt::CRM::Tag
+    Properties:
+      Name: "At Risk"
+      Description: "At risk of disengagement"
+
+  # ============================================
+  # ⚡ WORKFLOWS
+  # ============================================
+  spanish-workflow-starter-purchase:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Starter Kit Purchase"
+      Description: "Triggers when someone purchases the Starter Kit"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref spanish-starter-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref spanish-tag-starter-buyer
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref spanish-seq-starter
+
+  spanish-workflow-community-purchase:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Community Purchase"
+      Description: "Triggers when someone joins the Habla Community"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref spanish-community-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref spanish-tag-community-member
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref spanish-seq-community
+
+  spanish-workflow-course-purchase:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Course Enrollment"
+      Description: "Triggers when someone enrolls in the 60-Day Accelerator"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref spanish-course-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref spanish-tag-course-student
+        - Type: enroll_sequence
+          Order: 2
+          Config:
+            SequenceSlug: !Ref spanish-seq-course
+
+  spanish-workflow-coaching-purchase:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Coaching Enrollment"
+      Description: "Triggers when someone enrolls in 1:1 coaching"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref spanish-coaching-offer
+      Steps:
+        - Type: add_tag
+          Order: 1
+          Config:
+            TagSlug: !Ref spanish-tag-coaching-client
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref spanish-tag-vip
+        - Type: enroll_sequence
+          Order: 3
+          Config:
+            SequenceSlug: !Ref spanish-seq-coaching
+
+  spanish-workflow-upsell-to-community:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Upsell - Starter to Community"
+      Description: "Nurtures Starter Kit buyers toward community membership"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref spanish-starter-offer
+      Steps:
+        - Type: wait_duration
+          Order: 1
+          Config:
+            Days: 10
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref spanish-tag-upsell-community
+        - Type: enroll_sequence
+          Order: 3
+          Config:
+            SequenceSlug: !Ref spanish-seq-upsell-community
+
+  spanish-workflow-upsell-to-course:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Upsell - Community to Course"
+      Description: "Nurtures community members toward the 60-Day Accelerator"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref spanish-community-offer
+      Steps:
+        - Type: wait_duration
+          Order: 1
+          Config:
+            Days: 21
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref spanish-tag-upsell-course
+        - Type: enroll_sequence
+          Order: 3
+          Config:
+            SequenceSlug: !Ref spanish-seq-upsell-course
+
+  spanish-workflow-upsell-to-coaching:
+    Type: Evolynt::Automation::Workflow
+    Properties:
+      Name: "Upsell - Course to Coaching"
+      Description: "Nurtures course students toward 1:1 coaching"
+      Triggers:
+        - EventType: OfferGranted
+          FilterConfig:
+            Field: offer.slug
+            Operator: EQUALS
+            Value: !Ref spanish-course-offer
+      Steps:
+        - Type: wait_duration
+          Order: 1
+          Config:
+            Days: 45
+        - Type: add_tag
+          Order: 2
+          Config:
+            TagSlug: !Ref spanish-tag-upsell-coaching
+        - Type: enroll_sequence
+          Order: 3
+          Config:
+            SequenceSlug: !Ref spanish-seq-upsell-coaching
+
+  # ============================================
+  # ✉️ EMAIL SEQUENCES
+  # ============================================
+  spanish-seq-starter:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Starter Kit Onboarding"
+      Description: "5-email onboarding for Starter Kit buyers with community upsell"
+      Steps:
+        - TemplateSlug: !Ref spanish-email-starter-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref spanish-email-starter-tip1
+          DelayAmount: 2
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref spanish-email-starter-tip2
+          DelayAmount: 5
+          DelayUnit: days
+          Order: 3
+        - TemplateSlug: !Ref spanish-email-starter-tip3
+          DelayAmount: 8
+          DelayUnit: days
+          Order: 4
+        - TemplateSlug: !Ref spanish-email-starter-upsell
+          DelayAmount: 12
+          DelayUnit: days
+          Order: 5
+
+  spanish-seq-community:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Community Welcome"
+      Description: "4-email welcome for community members"
+      Steps:
+        - TemplateSlug: !Ref spanish-email-community-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref spanish-email-community-tip
+          DelayAmount: 3
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref spanish-email-community-engage
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 3
+        - TemplateSlug: !Ref spanish-email-community-upsell
+          DelayAmount: 14
+          DelayUnit: days
+          Order: 4
+
+  spanish-seq-course:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Course Onboarding"
+      Description: "6-email onboarding for 60-Day Accelerator students"
+      Steps:
+        - TemplateSlug: !Ref spanish-email-course-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref spanish-email-course-week1
+          DelayAmount: 7
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref spanish-email-course-midpoint
+          DelayAmount: 30
+          DelayUnit: days
+          Order: 3
+        - TemplateSlug: !Ref spanish-email-course-final-push
+          DelayAmount: 50
+          DelayUnit: days
+          Order: 4
+        - TemplateSlug: !Ref spanish-email-course-completion
+          DelayAmount: 60
+          DelayUnit: days
+          Order: 5
+        - TemplateSlug: !Ref spanish-email-course-upsell
+          DelayAmount: 67
+          DelayUnit: days
+          Order: 6
+
+  spanish-seq-coaching:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Coaching Welcome"
+      Description: "4-email welcome for coaching clients"
+      Steps:
+        - TemplateSlug: !Ref spanish-email-coaching-welcome
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref spanish-email-coaching-prep
+          DelayAmount: 1
+          DelayUnit: days
+          Order: 2
+        - TemplateSlug: !Ref spanish-email-coaching-checkin
+          DelayAmount: 14
+          DelayUnit: days
+          Order: 3
+        - TemplateSlug: !Ref spanish-email-coaching-resources
+          DelayAmount: 3
+          DelayUnit: days
+          Order: 4
+
+  spanish-seq-upsell-community:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Upsell to Community"
+      Description: "Pitches Habla Community to Starter Kit buyers"
+      Steps:
+        - TemplateSlug: !Ref spanish-email-upsell-community-1
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref spanish-email-upsell-community-2
+          DelayAmount: 3
+          DelayUnit: days
+          Order: 2
+
+  spanish-seq-upsell-course:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Upsell to Course"
+      Description: "Pitches 60-Day Accelerator to community members"
+      Steps:
+        - TemplateSlug: !Ref spanish-email-upsell-course-1
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref spanish-email-upsell-course-2
+          DelayAmount: 3
+          DelayUnit: days
+          Order: 2
+
+  spanish-seq-upsell-coaching:
+    Type: Evolynt::Automation::EmailSequence
+    Properties:
+      Name: "Upsell to Coaching"
+      Description: "Pitches 1:1 coaching to course students"
+      Steps:
+        - TemplateSlug: !Ref spanish-email-upsell-coaching-1
+          DelayAmount: 0
+          DelayUnit: minutes
+          Order: 1
+        - TemplateSlug: !Ref spanish-email-upsell-coaching-2
+          DelayAmount: 3
+          DelayUnit: days
+          Order: 2
+
+  # ============================================
+  # 📧 EMAIL TEMPLATES
+  # ============================================
+  spanish-email-starter-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Starter Welcome"
+      Subject: "Your Spanish Starter Kit is ready"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Your Starter Kit is Ready!"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Thanks for getting the Spanish Starter Kit! You just took 
+              the first step toward speaking Spanish.
+              
+              **Here is how to get started right now:**
+              
+              1. Log into your portal
+              2. Download the Pronunciation Cheat Sheet
+              3. Learn your first 5 phrases
+              4. Say them OUT LOUD (this is essential!)
+              
+              Remember: reading silently does not build speaking skills. 
+              From this moment on, everything you learn in Spanish, say 
+              it out loud.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Your Starter Kit"
+            LinkUrl: "{{portal.url}}"
+        - Type: text
+          Order: 4
+          Content:
+            Text: |
+              Nos vemos!
+              
+              - Habla Espanol
+        - Type: divider
+          Order: 5
+        - Type: text
+          Order: 6
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-starter-tip1:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Starter Tip 1"
+      Subject: "The #1 mistake new Spanish learners make"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Avoid This Common Mistake"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              The biggest mistake? Studying grammar instead of speaking.
+              
+              You do not need to conjugate verbs perfectly to have a 
+              conversation. Native speakers understand you even with 
+              mistakes.
+              
+              **Today's challenge:** Take 3 phrases from your Starter Kit 
+              and say them out loud 10 times each. Focus on the sounds, 
+              not the rules.
+              
+              Your mouth needs practice, not your eyes.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Open Your Phrase Guide"
+            LinkUrl: "{{portal.url}}"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-starter-tip2:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Starter Tip 2"
+      Subject: "How to remember vocabulary (without flashcards)"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Remember More, Forget Less"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              The secret to remembering Spanish? Use it in context.
+              
+              Instead of memorizing word lists:
+              
+              1. Label 10 objects in your house with sticky notes (in Spanish)
+              2. Change your phone language to Spanish
+              3. Think of 3 things you do every day and say them in Spanish
+              
+              When you connect words to your real life, they stick.
+              
+              Try it today!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Review Your Resources"
+            LinkUrl: "{{portal.url}}"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-starter-tip3:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Starter Tip 3"
+      Subject: "The 15-minute daily habit that changes everything"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "The 15-Minute Daily Habit"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You do not need hours of study. You need 15 minutes of 
+              the RIGHT practice, every single day.
+              
+              **The 15-Minute Spanish Habit:**
+              
+              - 5 minutes: Review yesterday's phrases out loud
+              - 5 minutes: Learn 3 new phrases from your guide
+              - 5 minutes: Listen to a Spanish song or podcast clip
+              
+              Consistency beats intensity. Every. Single. Time.
+              
+              Have you been following the Daily Practice Checklist? 
+              It is designed exactly for this.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Open Your Checklist"
+            LinkUrl: "{{portal.url}}"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-starter-upsell:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Starter Upsell"
+      Subject: "Want to practice with real people?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Ready for Real Practice?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You have been learning phrases for almost two weeks. 
+              How is it going?
+              
+              Here is the truth: learning alone can only take you so far. 
+              At some point, you need to practice with real people.
+              
+              That is why I created the **Habla Community**.
+              
+              Members get:
+              
+              - Weekly live conversation practice sessions
+              - Daily practice prompts and accountability
+              - Study partners at your level
+              - Direct Q&A support
+              
+              It is $97/month, and members tell me the weekly conversation 
+              calls alone are worth it.
+              
+              Interested? Reply to this email!
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-community-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Community Welcome"
+      Subject: "Bienvenidos to Habla Community!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Bienvenidos to Habla Community!"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Welcome to Habla Community! You just joined a group of 
+              people who are serious about learning Spanish.
+              
+              **Complete your onboarding:**
+              
+              1. Sign the membership agreement
+              2. Complete your profile
+              3. Introduce yourself in Bienvenidos
+              
+              Then explore the community and find a study partner!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Complete Onboarding"
+            LinkUrl: "{{portal.url}}"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-community-tip:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Community Tip"
+      Subject: "How to get the most from the community"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Get More From the Community"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              The members who improve fastest all do these 3 things:
+              
+              1. **Post in Daily Practice every day.** Even just "Hoy 
+              practique por 15 minutos." Accountability works.
+              
+              2. **Attend the weekly conversation call.** Speaking with 
+              real people is where the magic happens.
+              
+              3. **Find a study partner.** The Study Partners space 
+              exists for exactly this. Set up a weekly practice call.
+              
+              Do not be a lurker. The community thrives on participation!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Join the Community"
+            LinkUrl: "{{portal.url}}"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-community-engage:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Community Engagement"
+      Subject: "Have you joined the weekly call yet?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Join the Weekly Call!"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Quick check-in: Have you attended a weekly conversation 
+              practice call yet?
+              
+              Every Wednesday at 7pm ET, we hop on Zoom and actually 
+              speak Spanish together. We break into small groups so 
+              everyone gets speaking time.
+              
+              It does not matter if you make mistakes. That is the 
+              whole point. This is a safe space to practice.
+              
+              Join us this week!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Go to Community"
+            LinkUrl: "{{portal.url}}"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-community-upsell:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Community Upsell"
+      Subject: "Ready for a structured path to fluency?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Ready for Structure?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You have been in the community for a couple weeks. How is 
+              your Spanish coming along?
+              
+              If you are enjoying the community but want a structured, 
+              step-by-step path to conversational Spanish, check out 
+              the **60-Day Spanish Fluency Accelerator**.
+              
+              It is an 8-module course that takes you from wherever you 
+              are to holding real conversations in 60 days. Plus you get 
+              a student community and weekly Q&A calls.
+              
+              Interested? Reply and I will share more details!
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-course-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Course Welcome"
+      Subject: "Welcome to the 60-Day Accelerator!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Your 60-Day Journey Starts Now!"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Congratulations on joining the 60-Day Spanish Fluency 
+              Accelerator! In 60 days, you are going to surprise yourself 
+              with how much Spanish you can speak.
+              
+              **Get started right now:**
+              
+              1. Complete onboarding (agreement + profile)
+              2. Watch the Welcome video in Module 1
+              3. Record your Day 1 video (30 seconds of you speaking Spanish)
+              4. Introduce yourself in the student community
+              5. Mark your calendar for Thursday Q&A calls at 7pm ET
+              
+              The 60-day clock starts today. Let's go!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Start Module 1"
+            LinkUrl: "{{portal.url}}"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-course-week1:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Course Week 1 Check-in"
+      Subject: "Week 1 complete - como te va?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Week 1 Check-in"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You have one week under your belt! Como te va? (How is 
+              it going?)
+              
+              By now you should have:
+              
+              ✓ Completed the Welcome module
+              ✓ Started Week 1-2: Essential Building Blocks
+              ✓ Learned your first greetings and basic verbs
+              ✓ Been practicing out loud daily
+              
+              If you are behind, do not stress. Just pick up where you 
+              left off and keep going. Consistency matters more than 
+              perfection.
+              
+              The hardest part is behind you. Week 2 is where it starts 
+              to click!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Continue Your Course"
+            LinkUrl: "{{portal.url}}"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-course-midpoint:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Course Midpoint"
+      Subject: "Day 30 - you are HALFWAY there!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Day 30: Halfway Point!"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              {{contact.name}}, you are HALFWAY through the Accelerator!
+              
+              Take a moment to appreciate what you have accomplished:
+              
+              - 30 days of consistent Spanish practice
+              - Essential grammar and vocabulary mastered
+              - Real conversations about everyday topics
+              - A growing confidence every time you speak
+              
+              **Time for your Day 30 video:**
+              
+              Record yourself speaking Spanish for 30 seconds. Compare 
+              it to your Day 1 recording. Share the comparison in the 
+              Wins space.
+              
+              The second half is where the real breakthroughs happen. 
+              You are about to go from "knowing phrases" to "thinking 
+              in Spanish."
+              
+              Vamos! (Let's go!)
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Continue to Week 5"
+            LinkUrl: "{{portal.url}}"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-course-final-push:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Course Final Push"
+      Subject: "10 days left - the home stretch!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "The Home Stretch!"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You have 10 days left in the Accelerator. This is where 
+              everything comes together.
+              
+              **Your focus for the final stretch:**
+              
+              1. Complete the Real-World Fluency module
+              2. Do the 10-Minute Conversation Challenge
+              3. Build your post-program practice plan
+              4. Record your Day 60 video
+              
+              You started this program dreaming about speaking Spanish. 
+              Now you are actually doing it.
+              
+              Finish strong!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Finish the Course"
+            LinkUrl: "{{portal.url}}"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-course-completion:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Course Completion"
+      Subject: "Felicidades! You did it!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Felicidades, {{contact.name}}!"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              You did it. 60 days. From wherever you started to 
+              conversational Spanish.
+              
+              Most people quit language learning after a few weeks. You 
+              did not. Most people stay stuck in apps forever. You broke 
+              through. Most people dream about speaking Spanish. You 
+              actually speak it.
+              
+              **Your final steps:**
+              
+              1. Record your Day 60 video
+              2. Compare it to Day 1 (prepare to be amazed)
+              3. Share your transformation in the Wins space
+              4. Complete the Maintaining & Growing module
+              
+              Your Spanish journey is just beginning, but you now have 
+              the foundation and confidence to keep growing.
+              
+              Estoy muy orgulloso de ti. (I am very proud of you.)
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Share Your Transformation"
+            LinkUrl: "{{portal.url}}"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-course-upsell:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Course Upsell"
+      Subject: "Want to keep accelerating your Spanish?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "What Is Next?"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You finished the Accelerator. You can hold conversations 
+              in Spanish. That is incredible.
+              
+              But what if you could go deeper? What if you had a personal 
+              coach to help you:
+              
+              - Eliminate your specific grammar weaknesses
+              - Build vocabulary for YOUR interests and career
+              - Practice real conversations with instant correction
+              - Create a custom immersion plan for your life
+              
+              That is exactly what **1:1 Spanish Mastery Coaching** provides.
+              
+              12 private sessions with a personalized curriculum built 
+              around your goals.
+              
+              Interested? Reply to this email or apply here: [link]
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-coaching-welcome:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Welcome"
+      Subject: "Welcome to 1:1 Spanish Mastery Coaching!"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Welcome to Coaching!"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              I am thrilled to be your Spanish coach!
+              
+              You have made an incredible investment in yourself, and I 
+              am committed to helping you reach your Spanish goals.
+              
+              **First steps:**
+              
+              1. Complete onboarding (agreement + intake form)
+              2. Book your first coaching session
+              3. Download the resources from your portal
+              4. Introduce yourself in the coaching community
+              
+              I will review your intake form and prepare a personalized 
+              curriculum before our first session.
+              
+              Nos vemos pronto!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Complete Onboarding"
+            LinkUrl: "{{portal.url}}"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-coaching-prep:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Prep"
+      Subject: "Preparing for your first coaching session"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Prepare for Your First Session"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Your first coaching session is coming up! Here is how to 
+              make the most of it:
+              
+              **Before the session:**
+              - Fill out the Session Prep Worksheet (in your resources)
+              - Write down your top 3 Spanish goals
+              - List situations where you NEED to speak Spanish
+              - Think about what has frustrated you most about learning
+              
+              **During the session:**
+              - We will assess your current level together
+              - Build your personalized curriculum
+              - Set clear milestones and expectations
+              - Start practicing conversation immediately
+              
+              **After the session:**
+              - You will have a custom study plan
+              - Daily practice assignments
+              - Your next session booked
+              
+              Come ready to speak Spanish. Mistakes welcome!
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Session"
+            LinkUrl: "{{portal.url}}"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-coaching-resources:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Resources"
+      Subject: "Your coaching resources are ready"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Your Resources Are Ready"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Reminder: you have access to the full coaching resource 
+              library in your portal.
+              
+              Download and review:
+              
+              - Custom Study Plan Template
+              - Progress Tracker
+              - Session Prep Worksheet
+              - Curated Podcast List
+              - Spanish Shows & Movies Guide
+              
+              These tools will help you get the most from our sessions.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Access Resources"
+            LinkUrl: "{{portal.url}}"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-coaching-checkin:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Coaching Check-in"
+      Subject: "2 weeks in - how is coaching going?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "2-Week Check-In"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You have been in coaching for 2 weeks. How is it going?
+              
+              Quick check:
+              
+              ✓ Have you completed your first coaching sessions?
+              ✓ Are you following your personalized study plan?
+              ✓ Are you practicing daily (30+ minutes)?
+              ✓ Have you engaged in the community?
+              
+              If you answered "no" to any of these, let's get back on 
+              track. Book your next session and let's talk about it.
+              
+              Remember: you invested in yourself because you are serious 
+              about speaking Spanish. Let's make it happen.
+        - Type: button
+          Order: 3
+          Content:
+            Text: "Book Your Next Session"
+            LinkUrl: "{{portal.url}}"
+        - Type: divider
+          Order: 4
+        - Type: text
+          Order: 5
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-upsell-community-1:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Upsell Community 1"
+      Subject: "Want to practice Spanish with real people?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Practice With Real People"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You have been using the Starter Kit for about 10 days. 
+              You know phrases. You know the sounds. But have you 
+              actually spoken Spanish with another person yet?
+              
+              That is where real learning happens. And it is exactly 
+              what the **Habla Community** provides.
+              
+              For $97/month, you get:
+              
+              ✓ Weekly live conversation practice sessions
+              ✓ Daily practice accountability
+              ✓ Study partners at your level
+              ✓ Direct Q&A support
+              
+              The Starter Kit gave you the foundation. The community 
+              gives you the practice.
+              
+              Reply if you want to learn more!
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-upsell-community-2:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Upsell Community 2"
+      Subject: "What members are saying"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Quick Follow-up"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Here is what Habla Community members are saying:
+              
+              "The weekly conversation calls changed everything. I went 
+              from freezing up to actually enjoying speaking Spanish." 
+              - Maria K.
+              
+              "Having a study partner who is at the same level as me 
+              made practice feel natural instead of intimidating." 
+              - David R.
+              
+              If you are serious about speaking (not just reading) 
+              Spanish, the community is where it happens.
+              
+              $97/month. Cancel anytime.
+              
+              Reply if you are interested!
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-upsell-course-1:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Upsell Course 1"
+      Subject: "Ready for a structured path to fluency?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Go from Practice to Fluency"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You have been practicing in the community, and that is 
+              fantastic. But are you making progress as fast as you 
+              want?
+              
+              The **60-Day Spanish Fluency Accelerator** gives you the 
+              structured, step-by-step path that casual practice cannot.
+              
+              In 60 days, you go from wherever you are to holding real, 
+              unscripted conversations in Spanish.
+              
+              8 modules. Daily practice frameworks. Weekly Q&A calls. 
+              Student community.
+              
+              Interested? Reply to this email!
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-upsell-course-2:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Upsell Course 2"
+      Subject: "What students have achieved in 60 days"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "60 Days. Real Conversations."
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              Here is what our students achieve in just 60 days:
+              
+              "I went from knowing 10 words to having a 15-minute 
+              conversation with my wife's family. They were shocked." 
+              - Tom H.
+              
+              "On Day 1, I could barely say 'hola.' On Day 60, I ordered 
+              an entire meal in Spanish on my trip to Barcelona." 
+              - Amanda S.
+              
+              The Accelerator is $997 (or 3 payments of $397).
+              
+              If you are ready for real, measurable progress, reply 
+              and I will share more details.
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-upsell-coaching-1:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Upsell Coaching 1"
+      Subject: "Want personalized Spanish coaching?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "The Next Level"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              You have made incredible progress with the Accelerator. 
+              You can hold conversations in Spanish. That is a huge 
+              accomplishment.
+              
+              But what if you could go further, faster?
+              
+              With **1:1 Spanish Mastery Coaching**, you get:
+              
+              ✓ 12 private sessions with personalized curriculum
+              ✓ Instant correction and feedback
+              ✓ A custom immersion strategy for your life
+              ✓ Practice conversations tailored to YOUR goals
+              ✓ Coaching community and full resource library
+              
+              Some students want to speak Spanish for travel. Others for 
+              work. Others for family. Your coaching is built around YOUR 
+              reason.
+              
+              Curious? Apply here: [link to coaching funnel]
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  spanish-email-upsell-coaching-2:
+    Type: Evolynt::Automation::EmailTemplate
+    Properties:
+      Name: "Upsell Coaching 2"
+      Subject: "Is 1:1 coaching right for you?"
+      Elements:
+        - Type: headline
+          Order: 1
+          Content:
+            Text: "Quick Follow-up"
+        - Type: text
+          Order: 2
+          Content:
+            Text: |
+              Hi {{contact.name}},
+              
+              1:1 coaching is for you if:
+              
+              ✓ You have specific goals (travel, career, family)
+              ✓ You want personalized attention and curriculum
+              ✓ You learn faster with real-time feedback
+              ✓ You are committed to daily practice
+              
+              It is NOT for you if:
+              
+              ✗ You are not willing to speak and make mistakes
+              ✗ You are looking for the cheapest option
+              ✗ You are not ready to commit
+              
+              If coaching sounds right, apply here: [link]
+              
+              We will hop on a strategy call to see if it is a good fit. 
+              No pressure.
+        - Type: divider
+          Order: 3
+        - Type: text
+          Order: 4
+          Content:
+            Text: "{{unsubscribe_url}}"
+
+  # ============================================
+  # 🏢 BUSINESS PROFILE
+  # ============================================
+  spanish-business:
+    Type: Evolynt::Settings::BusinessProfile
+    Properties:
+      LegalName: "Habla Espanol LLC"
+      Email: "support@hablaespanol.com"
+      Phone: "+1-555-HABLA-ES"
+      Timezone: "America/New_York"
+      BusinessType: "LLC"
+      Industry: "Language Education"
+      SignatureText: "Habla Espanol"
