@@ -63,7 +63,6 @@ Resources:
               - Title: "Welcome to Tennis Basics"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/tennis-welcome"
               - Title: "Equipment Essentials"
                 Order: 2
                 ContentType: text
@@ -83,49 +82,39 @@ Resources:
               - Title: "Serve Grip & Stance"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/serve-grip"
               - Title: "The Toss"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/serve-toss"
               - Title: "The Motion & Follow Through"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/serve-motion"
               - Title: "Common Serve Mistakes"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/serve-mistakes"
           - Title: "Groundstrokes"
             Order: 3
             Lessons:
               - Title: "Forehand Fundamentals"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/forehand"
               - Title: "Backhand Basics (One & Two-Handed)"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/backhand"
               - Title: "Footwork & Positioning"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/footwork"
           - Title: "Solo Practice Drills"
             Order: 4
             Lessons:
               - Title: "Wall Practice Routine"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/wall-practice"
               - Title: "Shadow Swings & Footwork Drills"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/shadow-swings"
               - Title: "Ball Machine Tips (If Available)"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/ball-machine"
               - Title: "Your 30-Day Practice Plan"
                 Order: 4
                 ContentType: text

@@ -137,7 +137,6 @@ Resources:
               - Title: "Welcome to Transform"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/transform-welcome"
               - Title: "How to Get the Most From This Program"
                 Order: 2
                 ContentType: text
@@ -166,83 +165,66 @@ Resources:
               - Title: "Setting Your Transformation Goals"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/transform-goals"
           - Title: "Movement Foundations"
             Order: 2
             Lessons:
               - Title: "The 5 Essential Movement Patterns"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/movement-patterns"
               - Title: "Building Your Weekly Training Schedule"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/training-schedule"
               - Title: "Progressive Overload Explained"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/progressive-overload"
               - Title: "Recovery and Rest Days"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/recovery"
           - Title: "Nutrition for Transformation"
             Order: 3
             Lessons:
               - Title: "Nutrition Fundamentals"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/nutrition-fundamentals"
               - Title: "Calculating Your Calories and Macros"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/macros"
               - Title: "Meal Planning Made Simple"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/meal-planning"
               - Title: "Eating Out and Social Situations"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/eating-out"
           - Title: "Mindset Mastery"
             Order: 4
             Lessons:
               - Title: "The Psychology of Change"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/psychology-change"
               - Title: "Building Habits That Stick"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/habits"
               - Title: "Overcoming Plateaus and Setbacks"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/plateaus"
               - Title: "The Identity Shift"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/identity"
           - Title: "Lifestyle Optimization"
             Order: 5
             Lessons:
               - Title: "Sleep for Performance and Recovery"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/sleep"
               - Title: "Stress Management Strategies"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/stress"
               - Title: "Time Management for Busy People"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/time-management"
               - Title: "Maintaining Your Results Long-Term"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/maintenance"
 
   transform-resources:
     Type: Evolynt::Commerce::Product

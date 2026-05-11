@@ -37,156 +37,123 @@ Resources:
               - Title: "Welcome to YouTube Academy"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_WELCOME"
               - Title: "How the YouTube Algorithm Actually Works"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_ALGORITHM"
               - Title: "Setting Up Your Channel for Success"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_SETUP"
               - Title: "Branding Basics: Logo, Banner, and Colors"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_BRANDING"
           - Title: "Finding Your Niche"
             Order: 2
             Lessons:
               - Title: "Why Niche Selection Matters"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_NICHE_INTRO"
               - Title: "Market Research Methods"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_RESEARCH"
               - Title: "Analyzing Your Competition"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_COMPETITION"
               - Title: "Positioning Your Unique Angle"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_POSITIONING"
           - Title: "Content Strategy"
             Order: 3
             Lessons:
               - Title: "The 3 Types of YouTube Content"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_CONTENT_TYPES"
               - Title: "Building Your Content Pillars"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_PILLARS"
               - Title: "Generating Endless Video Ideas"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_IDEAS"
               - Title: "Planning Your Content Calendar"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_CALENDAR"
           - Title: "Filming & Editing"
             Order: 4
             Lessons:
               - Title: "Equipment You Actually Need"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_EQUIPMENT"
               - Title: "Lighting for Any Budget"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_LIGHTING"
               - Title: "My Editing Workflow"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_EDITING"
               - Title: "B-Roll and Visual Storytelling"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_BROLL"
           - Title: "Thumbnail & Title Mastery"
             Order: 5
             Lessons:
               - Title: "The Science of Click-Through Rate"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_CTR"
               - Title: "Thumbnail Design Principles"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_THUMBNAILS"
               - Title: "Title Formulas That Work"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_TITLES"
               - Title: "A/B Testing Your Thumbnails"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_ABTESTING"
           - Title: "SEO & Discovery"
             Order: 6
             Lessons:
               - Title: "YouTube Search vs Suggested"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_DISCOVERY"
               - Title: "Keyword Research for YouTube"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_KEYWORDS"
               - Title: "Optimizing Descriptions and Tags"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_OPTIMIZE"
               - Title: "Playlist Strategy"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_PLAYLISTS"
           - Title: "Building Your Audience"
             Order: 7
             Lessons:
               - Title: "The Subscriber Mindset"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_SUBSCRIBERS"
               - Title: "Engagement and Community Building"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_ENGAGEMENT"
               - Title: "Collaborations and Cross-Promotion"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_COLLABS"
               - Title: "Using Shorts to Grow"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_SHORTS"
           - Title: "Monetization"
             Order: 8
             Lessons:
               - Title: "YouTube Partner Program Requirements"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_YPP"
               - Title: "Maximizing AdSense Revenue"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_ADSENSE"
               - Title: "Landing Sponsorship Deals"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_SPONSORS"
               - Title: "Selling Your Own Products"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_PRODUCTS"
               - Title: "Affiliate Marketing for YouTubers"
                 Order: 5
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/YTA_AFFILIATE"
 
   yta-community:
     Type: Evolynt::Commerce::Product

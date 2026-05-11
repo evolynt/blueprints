@@ -34,7 +34,6 @@ Resources:
               - Title: "How to Use This Course"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/welcome"
               - Title: "Equipment You'll Need"
                 Order: 2
                 ContentType: text
@@ -51,82 +50,66 @@ Resources:
               - Title: "Safety First: Gym Etiquette & Injury Prevention"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/safety"
           - Title: "The Squat"
             Order: 2
             Lessons:
               - Title: "Squat: Proper Setup & Stance"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/squat-setup"
               - Title: "Squat: The Movement Pattern"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/squat-movement"
               - Title: "Squat: Common Mistakes & How to Fix Them"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/squat-mistakes"
           - Title: "The Deadlift"
             Order: 3
             Lessons:
               - Title: "Deadlift: Proper Setup & Grip"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/deadlift-setup"
               - Title: "Deadlift: The Movement Pattern"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/deadlift-movement"
               - Title: "Deadlift: Common Mistakes & How to Fix Them"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/deadlift-mistakes"
           - Title: "The Bench Press"
             Order: 4
             Lessons:
               - Title: "Bench Press: Proper Setup & Positioning"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/bench-setup"
               - Title: "Bench Press: The Movement Pattern"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/bench-movement"
               - Title: "Bench Press: Common Mistakes & How to Fix Them"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/bench-mistakes"
           - Title: "The Overhead Press"
             Order: 5
             Lessons:
               - Title: "Overhead Press: Proper Setup & Grip"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/ohp-setup"
               - Title: "Overhead Press: The Movement Pattern"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/ohp-movement"
               - Title: "Overhead Press: Common Mistakes & How to Fix Them"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/ohp-mistakes"
           - Title: "The Barbell Row"
             Order: 6
             Lessons:
               - Title: "Barbell Row: Proper Setup & Grip"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/row-setup"
               - Title: "Barbell Row: The Movement Pattern"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/row-movement"
               - Title: "Barbell Row: Common Mistakes & How to Fix Them"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/row-mistakes"
           - Title: "Putting It All Together"
             Order: 7
             Lessons:
@@ -155,7 +138,6 @@ Resources:
               - Title: "What's Next: Continuing Your Strength Journey"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/whats-next"
 
   # ============================================
   # 💰 PRICING PLAN

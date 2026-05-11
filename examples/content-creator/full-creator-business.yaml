@@ -232,60 +232,51 @@ Resources:
               - Title: "Welcome"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/FCB_WELCOME"
               - Title: "How the Algorithm Works"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/FCB_ALGO"
           - Title: "Finding Your Niche"
             Order: 2
             Lessons:
               - Title: "Niche Research"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/FCB_NICHE"
           - Title: "Content Strategy"
             Order: 3
             Lessons:
               - Title: "Content Planning"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/FCB_CONTENT"
           - Title: "Thumbnails & Titles"
             Order: 4
             Lessons:
               - Title: "CTR Optimization"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/FCB_CTR"
           - Title: "SEO & Discovery"
             Order: 5
             Lessons:
               - Title: "YouTube SEO"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/FCB_SEO"
           - Title: "Building Audience"
             Order: 6
             Lessons:
               - Title: "Engagement"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/FCB_ENGAGE"
           - Title: "Monetization"
             Order: 7
             Lessons:
               - Title: "Revenue Streams"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/FCB_MONEY"
           - Title: "Scaling"
             Order: 8
             Lessons:
               - Title: "Next Steps"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/FCB_SCALE"
 
   fcb-coaching:
     Type: Evolynt::Commerce::Product

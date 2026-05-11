@@ -61,7 +61,6 @@ Resources:
               - Title: "Welcome to Strength Foundations"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/foundations-welcome"
               - Title: "How to Use This Course"
                 Order: 2
                 ContentType: text
@@ -85,44 +84,36 @@ Resources:
               - Title: "Squat Setup & Execution"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/squat-full"
               - Title: "Common Squat Mistakes"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/squat-mistakes"
           - Title: "The Deadlift"
             Order: 3
             Lessons:
               - Title: "Deadlift Setup & Execution"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/deadlift-full"
               - Title: "Common Deadlift Mistakes"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/deadlift-mistakes"
           - Title: "The Bench Press"
             Order: 4
             Lessons:
               - Title: "Bench Press Setup & Execution"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/bench-full"
               - Title: "Common Bench Press Mistakes"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/bench-mistakes"
           - Title: "The Overhead Press"
             Order: 5
             Lessons:
               - Title: "Overhead Press Setup & Execution"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/ohp-full"
               - Title: "Common Overhead Press Mistakes"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/ohp-mistakes"
 
   community-membership:
     Type: Evolynt::Commerce::Product

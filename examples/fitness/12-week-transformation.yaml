@@ -36,7 +36,6 @@ Resources:
               - Title: "Welcome to Your Transformation Journey"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/welcome-transformation"
               - Title: "How to Use This Program"
                 Order: 2
                 ContentType: text
@@ -62,18 +61,15 @@ Resources:
               - Title: "Setting Your Transformation Goals"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/goals-setting"
           - Title: "Week 1-2: Foundation Phase"
             Order: 2
             Lessons:
               - Title: "Building Your Training Foundation"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/foundation-training"
               - Title: "Nutrition Fundamentals for Fat Loss"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/nutrition-fundamentals"
               - Title: "Week 1-2 Training Program"
                 Order: 3
                 ContentType: text
@@ -109,11 +105,9 @@ Resources:
               - Title: "Progressive Overload Explained"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/progressive-overload"
               - Title: "Meal Prep Strategies That Work"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/meal-prep"
               - Title: "Week 3-4 Training Program"
                 Order: 3
                 ContentType: text
@@ -157,11 +151,9 @@ Resources:
               - Title: "Pushing Through Plateaus"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/plateaus"
               - Title: "Advanced Nutrition Strategies"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/advanced-nutrition"
               - Title: "Week 5-6 Training Program"
                 Order: 3
                 ContentType: text
@@ -208,11 +200,9 @@ Resources:
               - Title: "Training at Your Peak"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/peak-training"
               - Title: "Recovery and Sleep Optimization"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/recovery-sleep"
               - Title: "Week 7-8 Training Program"
                 Order: 3
                 ContentType: text
@@ -257,11 +247,9 @@ Resources:
               - Title: "The Home Stretch Mindset"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/home-stretch"
               - Title: "Fine-Tuning Your Nutrition"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/fine-tuning-nutrition"
               - Title: "Week 9-10 Training Program"
                 Order: 3
                 ContentType: text
@@ -300,11 +288,9 @@ Resources:
               - Title: "Final Week Protocol"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/final-week"
               - Title: "Maintaining Your Results"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/maintaining-results"
               - Title: "Celebrating Your Transformation"
                 Order: 3
                 ContentType: text

@@ -37,158 +37,123 @@ Resources:
               - Title: "Welcome & Course Overview"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-welcome"
               - Title: "How Wholesaling Works (The Basics)"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-how-it-works"
               - Title: "Legal Basics You Need to Know"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-legal-basics"
               - Title: "Wholesaling Mindset for Success"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-mindset"
               - Title: "Setting Up Your Wholesaling Business"
                 Order: 5
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-setup"
           - Title: "Module 2: Finding Deals"
             Order: 2
             Lessons:
               - Title: "Overview: Where Deals Come From"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-finding-overview"
               - Title: "Driving for Dollars"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-driving-dollars"
               - Title: "Building and Using Lists"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-lists"
               - Title: "Direct Mail Campaigns That Work"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-direct-mail"
               - Title: "Cold Calling and SMS Strategies"
                 Order: 5
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-cold-calling"
               - Title: "Online Marketing for Motivated Sellers"
                 Order: 6
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-online-marketing"
           - Title: "Module 3: Analyzing Deals"
             Order: 3
             Lessons:
               - Title: "The Deal Analysis Framework"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-analysis-framework"
               - Title: "How to Calculate ARV (After Repair Value)"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-arv"
               - Title: "Estimating Repairs Without Being a Contractor"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-repairs"
               - Title: "The MAO Formula (Maximum Allowable Offer)"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-mao"
               - Title: "Using the Deal Analyzer Spreadsheet"
                 Order: 5
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-deal-analyzer"
               - Title: "Red Flags: When to Walk Away"
                 Order: 6
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-red-flags"
           - Title: "Module 4: Making Offers"
             Order: 4
             Lessons:
               - Title: "Talking to Motivated Sellers"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-seller-calls"
               - Title: "The Perfect Offer Script"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-offer-script"
               - Title: "Negotiation Tactics That Work"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-negotiation"
               - Title: "Purchase Contracts Explained"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-contracts"
               - Title: "Getting Contracts Signed"
                 Order: 5
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-signing"
               - Title: "Handling Objections"
                 Order: 6
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-objections"
           - Title: "Module 5: Finding Buyers"
             Order: 5
             Lessons:
               - Title: "Building Your Cash Buyer List"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-buyer-list"
               - Title: "Where to Find Cash Buyers"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-find-buyers"
               - Title: "Networking for Buyers"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-networking"
               - Title: "Marketing Your Deals to Buyers"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-marketing-deals"
               - Title: "Qualifying Buyers (Avoid Tire-Kickers)"
                 Order: 5
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-qualify-buyers"
               - Title: "Building Long-Term Buyer Relationships"
                 Order: 6
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-buyer-relationships"
           - Title: "Module 6: Closing Deals"
             Order: 6
             Lessons:
               - Title: "Assignment vs Double Close"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-assignment-vs-double"
               - Title: "How to Assign a Contract"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-assign-contract"
               - Title: "Working with Title Companies"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-title-companies"
               - Title: "Common Closing Problems (And How to Fix Them)"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-closing-problems"
               - Title: "Getting Paid: Collecting Your Assignment Fee"
                 Order: 5
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-getting-paid"
               - Title: "Scaling to Multiple Deals Per Month"
                 Order: 6
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/wmc-scaling"
 
   wmc-community:
     Type: Evolynt::Commerce::Product

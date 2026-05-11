@@ -266,7 +266,6 @@ Resources:
               - Title: "Welcome to the Accelerator"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_WELCOME"
               - Title: "How to Use This Course for Maximum Results"
                 Order: 2
                 ContentType: text
@@ -301,34 +300,27 @@ Resources:
               - Title: "The Spanish Sound System"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_SOUNDS"
               - Title: "Your First 20 Words"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_FIRST_WORDS"
               - Title: "The Mindset of a Language Learner"
                 Order: 5
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_MINDSET"
           - Title: "Week 1-2: Essential Building Blocks"
             Order: 2
             Lessons:
               - Title: "Greetings & Introductions"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_GREETINGS"
               - Title: "Numbers, Days, and Time"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_NUMBERS"
               - Title: "Essential Verbs: Ser, Estar, Tener, Ir"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_VERBS_1"
               - Title: "Building Simple Sentences"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_SENTENCES"
               - Title: "Practice: Your First Conversation"
                 Order: 5
                 ContentType: text
@@ -358,19 +350,15 @@ Resources:
               - Title: "Ordering Food & Drinks"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_FOOD"
               - Title: "Asking for Directions"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_DIRECTIONS"
               - Title: "Shopping & Negotiating Prices"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_SHOPPING"
               - Title: "Present Tense Mastery"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_PRESENT_TENSE"
               - Title: "Practice: Real-World Scenarios"
                 Order: 5
                 ContentType: text
@@ -399,19 +387,15 @@ Resources:
               - Title: "Talking About the Past (Preterite)"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_PAST_TENSE"
               - Title: "Talking About the Future"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_FUTURE"
               - Title: "Sharing Opinions & Preferences"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_OPINIONS"
               - Title: "Storytelling in Spanish"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_STORYTELLING"
               - Title: "Practice: Tell Your Story"
                 Order: 5
                 ContentType: text
@@ -437,19 +421,15 @@ Resources:
               - Title: "Phone Calls & Video Chats in Spanish"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_PHONE"
               - Title: "Slang, Fillers, and Sounding Natural"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_SLANG"
               - Title: "Understanding Native Speakers at Full Speed"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_NATIVE_SPEED"
               - Title: "Cultural Context & Regional Differences"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_CULTURE"
               - Title: "Practice: 10-Minute Conversation Challenge"
                 Order: 5
                 ContentType: text
@@ -483,34 +463,27 @@ Resources:
               - Title: "Building Your Spanish Media Diet"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_MEDIA"
               - Title: "Music & Podcasts for Language Learning"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_MUSIC"
               - Title: "Shows, Movies & YouTube in Spanish"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_SHOWS"
               - Title: "Thinking in Spanish (The Ultimate Skill)"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_THINKING"
           - Title: "Conversation Practice Frameworks"
             Order: 7
             Lessons:
               - Title: "The 5 Conversation Frameworks"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_FRAMEWORKS"
               - Title: "Role-Play Scripts for Every Situation"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_ROLEPLAY"
               - Title: "How to Keep a Conversation Going"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_KEEP_GOING"
               - Title: "Conversation Starters & Icebreakers"
                 Order: 4
                 ContentType: text
@@ -547,15 +520,12 @@ Resources:
               - Title: "Your Post-Program Practice Plan"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_POST_PLAN"
               - Title: "Moving from Conversational to Fluent"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_FLUENT"
               - Title: "Finding Native Speakers to Practice With"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/HABLA_NATIVE_PRACTICE"
               - Title: "Congratulations & Next Steps"
                 Order: 4
                 ContentType: text

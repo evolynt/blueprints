@@ -190,126 +190,99 @@ Resources:
               - Title: "Welcome & Course Overview"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m1-welcome"
               - Title: "How Wholesaling Works"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m1-how-it-works"
               - Title: "Legal Basics You Need to Know"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m1-legal"
               - Title: "Setting Up Your Business"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m1-setup"
           - Title: "Module 2: Finding Deals"
             Order: 2
             Lessons:
               - Title: "Where Deals Come From"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m2-overview"
               - Title: "Driving for Dollars"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m2-driving"
               - Title: "Building and Using Lists"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m2-lists"
               - Title: "Direct Mail Campaigns"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m2-mail"
               - Title: "Cold Calling and SMS"
                 Order: 5
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m2-calling"
           - Title: "Module 3: Analyzing Deals"
             Order: 3
             Lessons:
               - Title: "The Deal Analysis Framework"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m3-framework"
               - Title: "Calculating ARV"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m3-arv"
               - Title: "Estimating Repairs"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m3-repairs"
               - Title: "The MAO Formula"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m3-mao"
               - Title: "Using the Deal Analyzer"
                 Order: 5
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m3-spreadsheet"
           - Title: "Module 4: Making Offers"
             Order: 4
             Lessons:
               - Title: "Talking to Motivated Sellers"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m4-sellers"
               - Title: "The Perfect Offer Script"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m4-script"
               - Title: "Negotiation Tactics"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m4-negotiation"
               - Title: "Getting Contracts Signed"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m4-contracts"
           - Title: "Module 5: Finding Buyers"
             Order: 5
             Lessons:
               - Title: "Building Your Buyer List"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m5-list"
               - Title: "Where to Find Cash Buyers"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m5-find"
               - Title: "Marketing Your Deals"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m5-marketing"
               - Title: "Qualifying Buyers"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m5-qualify"
           - Title: "Module 6: Closing Deals"
             Order: 6
             Lessons:
               - Title: "Assignment vs Double Close"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m6-assignment"
               - Title: "How to Assign a Contract"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m6-assign"
               - Title: "Working with Title Companies"
                 Order: 3
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m6-title"
               - Title: "Getting Paid"
                 Order: 4
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m6-paid"
               - Title: "Scaling to Multiple Deals"
                 Order: 5
                 ContentType: video
-                VideoEmbedUrl: "https://vimeo.com/empire-m6-scaling"
 
   empire-coaching:
     Type: Evolynt::Commerce::Product

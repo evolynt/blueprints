@@ -414,10 +414,10 @@ Structured training with video lessons organized into modules.
 | Title | string | Yes | Lesson name |
 | Order | integer | Yes | Display order within the module |
 | ContentType | enum | Yes | `video`, `text`, or `video_and_text` |
-| VideoEmbedUrl | string | Conditional | Required when ContentType is `video` or `video_and_text` |
+| Video | string or !Ref | No | Reference to a media video resource (e.g., `!Ref my-video`) |
 | TextContent | string | Conditional | Required when ContentType is `text` or `video_and_text` |
 
-**Supported Video Providers:** YouTube, Vimeo, Wistia, Loom, Bunny Stream.
+**Note:** Videos must be uploaded to the Media Library first, then referenced using `!Ref`. External embed URLs are not supported in blueprints.
 
 ```yaml
 my-course:
@@ -434,11 +434,11 @@ my-course:
             - Title: "Welcome & Overview"
               Order: 1
               ContentType: video
-              VideoEmbedUrl: "https://vimeo.com/123456789"
+              Video: !Ref welcome-video
             - Title: "Setting Your Revenue Goal"
               Order: 2
               ContentType: video_and_text
-              VideoEmbedUrl: "https://vimeo.com/123456790"
+              Video: !Ref revenue-goal-video
               TextContent: |
                 ## Your First Assignment
                 1. Write down your 90-day revenue goal
@@ -1567,44 +1567,36 @@ Resources:
               - Title: "Push Day - Chest, Shoulders & Triceps"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/upper-push"
               - Title: "Pull Day - Back & Biceps"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/upper-pull"
           - Title: "Lower Body Workouts"
             Order: 2
             Lessons:
               - Title: "Quad-Focused Leg Day"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/lower-quads"
               - Title: "Glute & Hamstring Focus"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/lower-glutes"
           - Title: "Full Body Workouts"
             Order: 3
             Lessons:
               - Title: "30-Minute Full Body Blast"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/full-body-30"
               - Title: "45-Minute Strength Builder"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/full-body-45"
           - Title: "Recovery & Mobility"
             Order: 4
             Lessons:
               - Title: "Active Recovery Day"
                 Order: 1
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/recovery-active"
               - Title: "Full Body Stretch Routine"
                 Order: 2
                 ContentType: video
-                VideoEmbedUrl: "https://www.youtube.com/embed/recovery-stretch"
 
   # ============================================
   # PRICING PLAN
