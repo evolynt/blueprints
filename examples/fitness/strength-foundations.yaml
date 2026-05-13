@@ -486,7 +486,7 @@ Resources:
             LinkUrl: "{{portal.url}}"
         - Type: spacer
           Order: 4
-          Settings:
+          Content:
             Height: 30
         - Type: text
           Order: 5

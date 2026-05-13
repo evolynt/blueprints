@@ -470,7 +470,7 @@ Resources:
             LinkUrl: "{{portal.url}}"
         - Type: spacer
           Order: 4
-          Settings:
+          Content:
             Height: 30
         - Type: text
           Order: 5
@@ -571,7 +571,7 @@ Resources:
             LinkUrl: "{{portal.url}}"
         - Type: spacer
           Order: 4
-          Settings:
+          Content:
             Height: 20
         - Type: text
           Order: 5
