@@ -368,7 +368,7 @@ Resources:
                         - Type: video
                           Order: 3
                           Content:
-                            Url: "https://www.youtube.com/watch?v=TRANSFORM_OPTIN_VIDEO"
+                            EmbedUrl: "https://www.youtube.com/watch?v=TRANSFORM_OPTIN_VIDEO"
                             Provider: youtube
             - Order: 2
               Rows:
@@ -419,7 +419,7 @@ Resources:
                         - Type: video
                           Order: 2
                           Content:
-                            Url: "https://www.youtube.com/watch?v=TRANSFORM_MASTERCLASS"
+                            EmbedUrl: "https://www.youtube.com/watch?v=TRANSFORM_MASTERCLASS"
                             Provider: youtube
             - Order: 2
               Rows:
@@ -482,7 +482,7 @@ Resources:
                         - Type: video
                           Order: 3
                           Content:
-                            Url: "https://www.youtube.com/watch?v=TRANSFORM_APPLICATION_VIDEO"
+                            EmbedUrl: "https://www.youtube.com/watch?v=TRANSFORM_APPLICATION_VIDEO"
                             Provider: youtube
             - Order: 2
               Rows:
@@ -539,7 +539,7 @@ Resources:
                         - Type: video
                           Order: 2
                           Content:
-                            Url: "https://www.youtube.com/watch?v=TRANSFORM_BOOKING_VIDEO"
+                            EmbedUrl: "https://www.youtube.com/watch?v=TRANSFORM_BOOKING_VIDEO"
                             Provider: youtube
                         - Type: text
                           Order: 3
@@ -590,7 +590,7 @@ Resources:
                         - Type: video
                           Order: 2
                           Content:
-                            Url: "https://www.youtube.com/watch?v=TRANSFORM_CONFIRMED_VIDEO"
+                            EmbedUrl: "https://www.youtube.com/watch?v=TRANSFORM_CONFIRMED_VIDEO"
                             Provider: youtube
                         - Type: text
                           Order: 3

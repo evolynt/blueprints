@@ -252,7 +252,7 @@ Resources:
                         - Type: video
                           Order: 3
                           Content:
-                            Url: "https://www.youtube.com/watch?v=YTA_VSL"
+                            EmbedUrl: "https://www.youtube.com/watch?v=YTA_VSL"
                             Provider: youtube
                 - Order: 2
                   Columns:
@@ -442,7 +442,7 @@ Resources:
                         - Type: video
                           Order: 2
                           Content:
-                            Url: "https://www.youtube.com/watch?v=YTA_THANKYOU"
+                            EmbedUrl: "https://www.youtube.com/watch?v=YTA_THANKYOU"
                             Provider: youtube
                         - Type: text
                           Order: 3

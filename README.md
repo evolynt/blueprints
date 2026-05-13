@@ -807,7 +807,7 @@ welcome-flow:
               - Type: video
                 Order: 2
                 Content:
-                  Url: "https://vimeo.com/123456789"
+                  EmbedUrl: "https://vimeo.com/123456789"
               - Type: button
                 Order: 3
                 Content:
@@ -1641,7 +1641,7 @@ Resources:
                         - Type: video
                           Order: 3
                           Content:
-                            Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                            EmbedUrl: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
                             Provider: youtube
                         - Type: two_step_checkout
                           Order: 4

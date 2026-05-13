@@ -284,7 +284,7 @@ Resources:
                         - Type: video
                           Order: 3
                           Content:
-                            Url: "https://www.youtube.com/watch?v=AUDIT_VSL"
+                            EmbedUrl: "https://www.youtube.com/watch?v=AUDIT_VSL"
                             Provider: youtube
                 - Order: 2
                   Columns:
@@ -363,7 +363,7 @@ Resources:
                         - Type: video
                           Order: 2
                           Content:
-                            Url: "https://www.youtube.com/watch?v=AUDIT_THANKYOU"
+                            EmbedUrl: "https://www.youtube.com/watch?v=AUDIT_THANKYOU"
                             Provider: youtube
                         - Type: text
                           Order: 3
@@ -402,7 +402,7 @@ Resources:
                         - Type: video
                           Order: 3
                           Content:
-                            Url: "https://www.youtube.com/watch?v=SERVICES_VSL"
+                            EmbedUrl: "https://www.youtube.com/watch?v=SERVICES_VSL"
                             Provider: youtube
             - Order: 2
               Rows:
@@ -488,7 +488,7 @@ Resources:
                         - Type: video
                           Order: 2
                           Content:
-                            Url: "https://www.youtube.com/watch?v=APPLY_VIDEO"
+                            EmbedUrl: "https://www.youtube.com/watch?v=APPLY_VIDEO"
                             Provider: youtube
                         - Type: text
                           Order: 3
@@ -523,7 +523,7 @@ Resources:
                         - Type: video
                           Order: 2
                           Content:
-                            Url: "https://www.youtube.com/watch?v=BOOKING_VIDEO"
+                            EmbedUrl: "https://www.youtube.com/watch?v=BOOKING_VIDEO"
                             Provider: youtube
                         - Type: text
                           Order: 3
@@ -562,7 +562,7 @@ Resources:
                         - Type: video
                           Order: 2
                           Content:
-                            Url: "https://www.youtube.com/watch?v=CONFIRMED_VIDEO"
+                            EmbedUrl: "https://www.youtube.com/watch?v=CONFIRMED_VIDEO"
                             Provider: youtube
                         - Type: text
                           Order: 3

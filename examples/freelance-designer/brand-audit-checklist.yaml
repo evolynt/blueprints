@@ -105,7 +105,7 @@ Resources:
                         - Type: video
                           Order: 3
                           Content:
-                            Url: "https://www.youtube.com/watch?v=BAC_PROMO"
+                            EmbedUrl: "https://www.youtube.com/watch?v=BAC_PROMO"
                             Provider: youtube
             - Order: 2
               Rows:

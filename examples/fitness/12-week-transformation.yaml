@@ -402,7 +402,7 @@ Resources:
                         - Type: video
                           Order: 3
                           Content:
-                            Url: "https://www.youtube.com/watch?v=OPTIN_HOOK_VIDEO"
+                            EmbedUrl: "https://www.youtube.com/watch?v=OPTIN_HOOK_VIDEO"
                             Provider: youtube
             - Order: 2
               Rows:
@@ -437,7 +437,7 @@ Resources:
                         - Type: video
                           Order: 2
                           Content:
-                            Url: "https://www.youtube.com/watch?v=MASTERCLASS_VIDEO"
+                            EmbedUrl: "https://www.youtube.com/watch?v=MASTERCLASS_VIDEO"
                             Provider: youtube
                         - Type: text
                           Order: 3

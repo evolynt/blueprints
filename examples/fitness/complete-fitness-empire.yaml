@@ -276,7 +276,7 @@ Resources:
                         - Type: video
                           Order: 3
                           Content:
-                            Url: "https://www.youtube.com/watch?v=FOUNDATIONS_VSL"
+                            EmbedUrl: "https://www.youtube.com/watch?v=FOUNDATIONS_VSL"
                             Provider: youtube
                 - Order: 2
                   Columns:
@@ -378,7 +378,7 @@ Resources:
                         - Type: video
                           Order: 2
                           Content:
-                            Url: "https://www.youtube.com/watch?v=FOUNDATIONS_THANKYOU"
+                            EmbedUrl: "https://www.youtube.com/watch?v=FOUNDATIONS_THANKYOU"
                             Provider: youtube
                         - Type: text
                           Order: 3
@@ -417,7 +417,7 @@ Resources:
                         - Type: video
                           Order: 3
                           Content:
-                            Url: "https://www.youtube.com/watch?v=COMMUNITY_VSL"
+                            EmbedUrl: "https://www.youtube.com/watch?v=COMMUNITY_VSL"
                             Provider: youtube
                 - Order: 2
                   Columns:
@@ -525,7 +525,7 @@ Resources:
                         - Type: video
                           Order: 2
                           Content:
-                            Url: "https://www.youtube.com/watch?v=COMMUNITY_THANKYOU"
+                            EmbedUrl: "https://www.youtube.com/watch?v=COMMUNITY_THANKYOU"
                             Provider: youtube
                         - Type: text
                           Order: 3
@@ -567,7 +567,7 @@ Resources:
                         - Type: video
                           Order: 3
                           Content:
-                            Url: "https://www.youtube.com/watch?v=COACHING_APPLICATION"
+                            EmbedUrl: "https://www.youtube.com/watch?v=COACHING_APPLICATION"
                             Provider: youtube
             - Order: 2
               Rows:
@@ -655,7 +655,7 @@ Resources:
                         - Type: video
                           Order: 2
                           Content:
-                            Url: "https://www.youtube.com/watch?v=COACHING_BOOKING"
+                            EmbedUrl: "https://www.youtube.com/watch?v=COACHING_BOOKING"
                             Provider: youtube
                         - Type: text
                           Order: 3
@@ -704,7 +704,7 @@ Resources:
                         - Type: video
                           Order: 2
                           Content:
-                            Url: "https://www.youtube.com/watch?v=COACHING_CONFIRMED"
+                            EmbedUrl: "https://www.youtube.com/watch?v=COACHING_CONFIRMED"
                             Provider: youtube
                         - Type: text
                           Order: 3

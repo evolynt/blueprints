@@ -135,7 +135,7 @@ Resources:
                         - Type: video
                           Order: 3
                           Content:
-                            Url: "https://www.youtube.com/watch?v=CSC_VSL"
+                            EmbedUrl: "https://www.youtube.com/watch?v=CSC_VSL"
                             Provider: youtube
                 - Order: 2
                   Columns:

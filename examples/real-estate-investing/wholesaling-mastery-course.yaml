@@ -256,7 +256,7 @@ Resources:
                         - Type: video
                           Order: 3
                           Content:
-                            Url: "https://www.youtube.com/watch?v=WMC_VSL_PLACEHOLDER"
+                            EmbedUrl: "https://www.youtube.com/watch?v=WMC_VSL_PLACEHOLDER"
                             Provider: youtube
                 - Order: 2
                   Columns:
@@ -527,7 +527,7 @@ Resources:
                         - Type: video
                           Order: 2
                           Content:
-                            Url: "https://www.youtube.com/watch?v=WMC_THANKYOU_PLACEHOLDER"
+                            EmbedUrl: "https://www.youtube.com/watch?v=WMC_THANKYOU_PLACEHOLDER"
                             Provider: youtube
                         - Type: text
                           Order: 3

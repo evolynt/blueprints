@@ -126,7 +126,7 @@ Resources:
                         - Type: video
                           Order: 3
                           Content:
-                            Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                            EmbedUrl: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
                             Provider: youtube
             - Order: 2
               Rows:
@@ -328,7 +328,7 @@ Resources:
                         - Type: video
                           Order: 2
                           Content:
-                            Url: "https://www.youtube.com/watch?v=APPLICATION_PLACEHOLDER"
+                            EmbedUrl: "https://www.youtube.com/watch?v=APPLICATION_PLACEHOLDER"
                             Provider: youtube
                         - Type: text
                           Order: 3
@@ -370,7 +370,7 @@ Resources:
                         - Type: video
                           Order: 2
                           Content:
-                            Url: "https://www.youtube.com/watch?v=BOOKING_PLACEHOLDER"
+                            EmbedUrl: "https://www.youtube.com/watch?v=BOOKING_PLACEHOLDER"
                             Provider: youtube
                         - Type: text
                           Order: 3
@@ -420,7 +420,7 @@ Resources:
                         - Type: video
                           Order: 2
                           Content:
-                            Url: "https://www.youtube.com/watch?v=CONFIRMATION_PLACEHOLDER"
+                            EmbedUrl: "https://www.youtube.com/watch?v=CONFIRMATION_PLACEHOLDER"
                             Provider: youtube
                         - Type: text
                           Order: 3

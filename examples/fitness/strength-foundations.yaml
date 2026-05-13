@@ -181,7 +181,7 @@ Resources:
                         - Type: video
                           Order: 3
                           Content:
-                            Url: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
+                            EmbedUrl: "https://www.youtube.com/watch?v=VSL_PLACEHOLDER"
                             Provider: youtube
                 - Order: 2
                   Columns:
