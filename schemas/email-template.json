@@ -48,13 +48,6 @@
                   "type": "string"
                 },
                 "additionalProperties": {}
-              },
-              "Settings": {
-                "type": "object",
-                "propertyNames": {
-                  "type": "string"
-                },
-                "additionalProperties": {}
               }
             },
             "required": [

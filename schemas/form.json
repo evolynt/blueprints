@@ -43,9 +43,6 @@
                     "default": false,
                     "type": "boolean"
                   },
-                  "LabelOverride": {
-                    "type": "string"
-                  },
                   "Placeholder": {
                     "type": "string"
                   }
@@ -91,9 +88,6 @@
                   "Required": {
                     "default": false,
                     "type": "boolean"
-                  },
-                  "LabelOverride": {
-                    "type": "string"
                   },
                   "Placeholder": {
                     "type": "string"
@@ -156,8 +150,7 @@
       },
       "required": [
         "Name",
-        "Fields",
-        "SubmitButton"
+        "Fields"
       ],
       "additionalProperties": false
     }

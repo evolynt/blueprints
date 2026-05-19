@@ -146,6 +146,7 @@
           "type": "string",
           "enum": [
             "send_email",
+            "send_internal_notification",
             "update_deal",
             "enroll_sequence",
             "add_tag",

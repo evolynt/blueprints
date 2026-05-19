@@ -37,183 +37,94 @@
                 "minimum": 1,
                 "maximum": 9007199254740991
               },
-              "Settings": {
-                "type": "object",
-                "properties": {
-                  "BackgroundColor": {
-                    "type": "string"
-                  },
-                  "MaxWidth": {
-                    "type": "string"
-                  },
-                  "OnSubmit": {
-                    "type": "object",
-                    "properties": {
-                      "RedirectUrl": {
-                        "type": "string",
-                        "format": "uri"
-                      }
-                    },
-                    "additionalProperties": false
-                  },
-                  "OfferSlug": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "type": "object",
-                        "properties": {
-                          "__type": {
-                            "type": "string",
-                            "const": "Ref"
-                          },
-                          "slug": {
-                            "type": "string"
-                          }
-                        },
-                        "required": [
-                          "__type",
-                          "slug"
-                        ],
-                        "additionalProperties": false
-                      }
-                    ]
-                  },
-                  "RedirectTo": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "type": "object",
-                        "properties": {
-                          "__type": {
-                            "type": "string",
-                            "const": "Ref"
-                          },
-                          "slug": {
-                            "type": "string"
-                          }
-                        },
-                        "required": [
-                          "__type",
-                          "slug"
-                        ],
-                        "additionalProperties": false
-                      }
-                    ]
-                  }
-                },
-                "additionalProperties": false
-              },
               "Sections": {
+                "maxItems": 30,
                 "type": "array",
                 "items": {
                   "type": "object",
                   "properties": {
-                    "Type": {
-                      "type": "string",
-                      "enum": [
-                        "hero",
-                        "content",
-                        "features",
-                        "faq",
-                        "form",
-                        "cta",
-                        "custom"
-                      ]
-                    },
                     "Order": {
                       "type": "integer",
                       "minimum": 1,
                       "maximum": 9007199254740991
                     },
-                    "Settings": {
-                      "type": "object",
-                      "properties": {
-                        "BackgroundColor": {
-                          "type": "string"
-                        },
-                        "FullWidth": {
-                          "type": "boolean"
-                        },
-                        "Padding": {
-                          "type": "string"
-                        },
-                        "Columns": {
-                          "type": "integer",
-                          "minimum": 1,
-                          "maximum": 4
-                        }
-                      },
-                      "additionalProperties": false
-                    },
-                    "Elements": {
+                    "Rows": {
+                      "maxItems": 3,
                       "type": "array",
                       "items": {
                         "type": "object",
                         "properties": {
-                          "Type": {
-                            "type": "string",
-                            "enum": [
-                              "headline",
-                              "subheadline",
-                              "text",
-                              "image",
-                              "video",
-                              "button",
-                              "spacer",
-                              "divider",
-                              "faq_item",
-                              "form",
-                              "checkout",
-                              "claim_offer",
-                              "booking_link",
-                              "agreement"
-                            ]
-                          },
                           "Order": {
                             "type": "integer",
                             "minimum": 1,
                             "maximum": 9007199254740991
                           },
-                          "Content": {
-                            "type": "object",
-                            "propertyNames": {
-                              "type": "string"
-                            },
-                            "additionalProperties": {}
-                          },
-                          "Settings": {
-                            "type": "object",
-                            "properties": {
-                              "Alignment": {
-                                "type": "string",
-                                "enum": [
-                                  "left",
-                                  "center",
-                                  "right"
-                                ]
+                          "Columns": {
+                            "maxItems": 3,
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "Order": {
+                                  "type": "integer",
+                                  "minimum": 1,
+                                  "maximum": 9007199254740991
+                                },
+                                "Elements": {
+                                  "maxItems": 3,
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "Type": {
+                                        "type": "string",
+                                        "enum": [
+                                          "headline",
+                                          "subheadline",
+                                          "text",
+                                          "image",
+                                          "video",
+                                          "button",
+                                          "spacer",
+                                          "divider",
+                                          "faq_item",
+                                          "form",
+                                          "checkout",
+                                          "two_step_checkout",
+                                          "claim_offer",
+                                          "booking_link",
+                                          "agreement"
+                                        ]
+                                      },
+                                      "Order": {
+                                        "type": "integer",
+                                        "minimum": 1,
+                                        "maximum": 9007199254740991
+                                      },
+                                      "Content": {
+                                        "type": "object",
+                                        "propertyNames": {
+                                          "type": "string"
+                                        },
+                                        "additionalProperties": {}
+                                      }
+                                    },
+                                    "required": [
+                                      "Type",
+                                      "Order"
+                                    ],
+                                    "additionalProperties": false
+                                  }
+                                }
                               },
-                              "FontSize": {
-                                "type": "string"
-                              },
-                              "FontWeight": {
-                                "type": "string"
-                              },
-                              "TextColor": {
-                                "type": "string"
-                              },
-                              "Margin": {
-                                "type": "string"
-                              }
-                            },
-                            "additionalProperties": false
+                              "required": [
+                                "Order"
+                              ],
+                              "additionalProperties": false
+                            }
                           }
                         },
                         "required": [
-                          "Type",
                           "Order"
                         ],
                         "additionalProperties": false
@@ -221,7 +132,6 @@
                     }
                   },
                   "required": [
-                    "Type",
                     "Order"
                   ],
                   "additionalProperties": false

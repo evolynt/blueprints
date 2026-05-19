@@ -77,9 +77,42 @@
                             "video_and_text"
                           ]
                         },
-                        "VideoEmbedUrl": {
-                          "type": "string",
-                          "format": "uri"
+                        "Video": {
+                          "anyOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "__type": {
+                                  "type": "string",
+                                  "const": "Ref"
+                                },
+                                "slug": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "__type",
+                                "slug"
+                              ],
+                              "additionalProperties": false
+                            }
+                          ]
+                        },
+                        "VideoSource": {
+                          "type": "object",
+                          "properties": {
+                            "AssetId": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "AssetId"
+                          ],
+                          "additionalProperties": false
                         },
                         "VideoDurationSeconds": {
                           "type": "integer",
@@ -226,6 +259,11 @@
                           "minimum": 0,
                           "maximum": 6
                         }
+                      },
+                      "DayOfMonth": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 31
                       },
                       "EndType": {
                         "default": "never",
