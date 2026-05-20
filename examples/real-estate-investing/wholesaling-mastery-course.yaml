@@ -266,6 +266,7 @@ Resources:
                           Order: 1
                           Content:
                             OfferSlug: !Ref wmc-offer
+                            PricingPlanSlug: !Ref wmc-pif
                             ButtonText: "Enroll Now - $997 (or 3 payments of $397)"
             - Order: 2
             - Order: 2
@@ -509,6 +510,7 @@ Resources:
                           Order: 3
                           Content:
                             OfferSlug: !Ref wmc-offer
+                            PricingPlanSlug: !Ref wmc-pif
                             ButtonText: "Enroll Now - $997 (or 3 payments of $397)"
         - Name: "Thank You"
           Slug: thank-you

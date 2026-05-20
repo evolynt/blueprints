@@ -618,6 +618,7 @@ Resources:
                           Order: 3
                           Content:
                             OfferSlug: !Ref transformation-offer
+                            PricingPlanSlug: !Ref transformation-pif
                             ButtonText: "Start My Transformation - $497"
         - Name: "Thank You"
           Slug: thank-you
