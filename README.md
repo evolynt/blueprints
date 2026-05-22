@@ -799,32 +799,40 @@ welcome-flow:
         Order: 1
         Sections:
           - Order: 1
-            Elements:
-              - Type: headline
-                Order: 1
-                Content:
-                  Text: "Welcome to the Elite Mastermind!"
-              - Type: video
-                Order: 2
-                Content:
-                  EmbedUrl: "https://vimeo.com/123456789"
-              - Type: button
-                Order: 3
-                Content:
-                  Text: "Continue"
-                  NextStep: agreement
+            Rows:
+              - Order: 1
+                Columns:
+                  - Order: 1
+                    Elements:
+                      - Type: headline
+                        Order: 1
+                        Content:
+                          Text: "Welcome to the Elite Mastermind!"
+                      - Type: video
+                        Order: 2
+                        Content:
+                          EmbedUrl: "https://vimeo.com/123456789"
+                      - Type: button
+                        Order: 3
+                        Content:
+                          Text: "Continue"
+                          NextStep: agreement
       - Name: "Sign Agreement"
         Slug: agreement
         Order: 2
         Sections:
           - Order: 1
-            Elements:
-              - Type: agreement
-                Order: 1
-                Content:
-                  AgreementSlug: !Ref coaching-agreement
-                  OnSuccess:
-                    Action: next_step
+            Rows:
+              - Order: 1
+                Columns:
+                  - Order: 1
+                    Elements:
+                      - Type: agreement
+                        Order: 1
+                        Content:
+                          AgreementSlug: !Ref coaching-agreement
+                          OnSuccess:
+                            Action: next_step
 ```
 
 Note: In OnboardingFlows, buttons support a `NextStep` property (a step slug) for direct navigation between steps.
@@ -893,8 +901,8 @@ Elements are the building blocks inside sections. Each element has `Type`, `Orde
 
 | Type | Content Properties | Description |
 |------|-------------------|-------------|
-| `image` | `Alt` (string) | Display an image (upload via UI after import) |
-| `video` | `Url` (url, required), `Provider` (enum: `youtube`, `vimeo`, `wistia`) | Embed a video |
+| `image` | `MediaImageSlug` (ref) or `MediaImageId` (uuid), optional `Alt` (string) | Display an image from the media library |
+| `video` | `MediaVideoSlug` (ref), `MediaVideoId` (uuid), or `EmbedUrl` (url) + optional `Provider` (`youtube`, `vimeo`, `wistia`) | Embed a video from the media library or external provider |
 
 **Interactive Elements:**
 
@@ -930,6 +938,17 @@ Elements are the building blocks inside sections. Each element has `Type`, `Orde
 | `claim_offer` | `OfferSlug` (!Ref, required), `ButtonText` | Claim a free offer |
 | `booking_link` | `BookingLinkSlug` (!Ref, required), `OnSuccess.Action` | Embedded booking calendar |
 | `agreement` | `AgreementSlug` (!Ref, required), `OnSuccess.Action` | Agreement signing |
+
+**Layout Limits:**
+
+| Container | Max Children |
+|-----------|-------------|
+| Step | 30 sections |
+| Section | 3 rows |
+| Row | 3 columns |
+| Column | 3 elements |
+
+If you need more content, split it across multiple rows or sections rather than exceeding these limits.
 
 #### Example
 
@@ -1727,12 +1746,16 @@ Resources:
                               Post in the Q&A space anytime and get a response within 24 hours. It's like having a personal trainer in your pocket.
                               
                               Total Value: $591+/month
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
                         - Type: spacer
-                          Order: 3
+                          Order: 1
                           Content:
                             Height: 10
                         - Type: text
-                          Order: 4
+                          Order: 2
                           Content:
                             Text: "Your investment: Just $97/month (cancel anytime)"
             - Order: 5
@@ -1774,8 +1797,12 @@ Resources:
                           Content:
                             Question: "Can I cancel anytime?"
                             Answer: "Yes, no contracts or commitments. Cancel anytime with one click in your account. We want you here because you're getting results, not because you're locked in."
+                - Order: 2
+                  Columns:
+                    - Order: 1
+                      Elements:
                         - Type: faq_item
-                          Order: 4
+                          Order: 1
                           Content:
                             Question: "I don't have access to a gym. Can I still participate?"
                             Answer: "Yes! Our workout library includes home-friendly routines with minimal equipment. Many members work out with just dumbbells or resistance bands."
